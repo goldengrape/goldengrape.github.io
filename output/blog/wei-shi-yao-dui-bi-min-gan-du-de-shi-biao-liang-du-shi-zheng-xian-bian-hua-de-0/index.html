@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>为什么对比敏感度的视标亮度是正弦变化的？(0) | GoldenGrape's Blog</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/" title="面向眼科医生的λ演算入门教程(8)" type="text/html">
+<link rel="next" href="../wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/" title="为什么对比敏感度的视标亮度是正弦变化的？(1)" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="为什么对比敏感度的视标亮度是正弦变化的？(0)">
+<meta property="og:url" content="https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/">
+<meta property="og:description" content="我知道你对此有疑问很久了，查了很多很多眼科书也没有讲清楚的。因为答案根本就不在眼科书上，这大概是个定理：“当你需要深入了解时，一定是眼科书里没有的”。
+我将连载几篇仔细讲解一下这个问题。以表达我对眼科先贤的崇敬。
+注意，此知识不宜拿去炫耀，可以科普不宜提问，毕竟其中涉及到的东西远超眼科教材。
+
+正弦光栅视标
+
+左图是视标的图像，右图是视标亮度，亮度的变化为正弦函数。对比度分别是0.85(A), 0">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T01:08:15+08:00">
+<meta property="article:tag" content="CSF">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(0)</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:15+08:00" itemprop="datePublished" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
+            
+        <p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>我知道你对此有疑问很久了，查了很多很多眼科书也没有讲清楚的。因为答案根本就不在眼科书上，这大概是个定理：“当你需要深入了解时，一定是眼科书里没有的”。</p>
+<p>我将连载几篇仔细讲解一下这个问题。以表达我对眼科先贤的崇敬。</p>
+<p>注意，此知识不宜拿去炫耀，可以科普不宜提问，毕竟其中涉及到的东西远超眼科教材。
+<!-- TEASER_END --></p>
+<h2>正弦光栅视标</h2>
+<p><img alt="对比敏感度视标" src="http://upload-images.jianshu.io/upload_images/29267-02439de324772894.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>左图是视标的图像，右图是视标亮度，亮度的变化为正弦函数。对比度分别是0.85(A), 0.50(B), 0.10(C)</p>
+<p>图片来源: Photographs taken from transparencies provided by Michael Miller, Department of Neurology, Mount Sinai School of Medicine, and Wolkstein et al., 1980. Reprinted with permission from I. Bodis-Wollner. Copyright 1980 by J. B. Lippincott Company.</p>
+<p>引自https://www.ncbi.nlm.nih.gov/books/NBK219042/</p>
+<h2>历史</h2>
+<p>按照这本1985年的<a href="https://www.ncbi.nlm.nih.gov/books/NBK219042/">《Emergent Techniques for Assessment of Visual Performance》</a> 中关于对比敏感度CSF检查手段的综述，最早正弦光栅视标是在Otto. H. Schade于1956年发表的文章中出现。</p>
+<blockquote>
+<p>This use of sine wave gratings was first introduced in vision by Schade (1956) and was subsequently used by early investigators to measure basic visual sensitivity (Westheimer, 1960; DePalma and Lowry, 1962; Campbell and Robson, 1968).</p>
+</blockquote>
+<p>这篇神作是：
+<a href="https://doi.org/10.1364/JOSA.46.000721">Optical and Photoelectric Analog of the Eye</a> （被引用620次）
+<a href="http://sci-hub.cc/10.1364/JOSA.46.000721">全文</a></p>
+<p>但是，太难，我没看懂。</p>
+<p>在1968年Campbell FW, Robson JG.发表的文献 <a href="https://www.ncbi.nlm.nih.gov/pubmed/5666169">Application of Fourier analysis to the visibility of gratings</a> （被引用3394次） 之中进行了更详细的解释。<a href="http://www.cns.nyu.edu/~david/courses/perceptionGrad/Readings/CampbellRobson-JPhysiol1968.pdf">全文</a></p>
+<p>这一篇好一些，起码有我认识的公式和图片。大概因此被引用次数高很多吧。</p>
+<p>接下来我会慢慢解释为什么对比敏感度的检查视标亮度是正弦变化的。会有一些公式，但我尽量附图直观说明。</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/csf/" rel="tag">CSF</a></li>
+            <li><a class="tag p-category" href="../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/" rel="prev" title="面向眼科医生的λ演算入门教程(8)">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/" rel="next" title="为什么对比敏感度的视标亮度是正弦变化的？(1)">后一篇</a>
+            </li>
+        </ul></nav></aside></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

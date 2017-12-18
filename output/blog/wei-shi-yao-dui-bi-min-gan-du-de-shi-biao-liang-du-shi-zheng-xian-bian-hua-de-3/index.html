@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>为什么对比敏感度的视标亮度是正弦变化的？(3) | GoldenGrape's Blog</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/" title="为什么对比敏感度的视标亮度是正弦变化的？(2)" type="text/html">
+<link rel="next" href="../ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/" title="机器学习的战略(0)--基础概念" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="为什么对比敏感度的视标亮度是正弦变化的？(3)">
+<meta property="og:url" content="https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/">
+<meta property="og:description" content="Eigenfunction（本征函数/ 特征函数）
+现在我们要把另一个函数作为参数输入到线性函数里。越来越抽象了，不过对于咱们眼科医生来说，有成像过程可以辅助理解。
+
+我们说函数function不过是把输入-&gt;输出的过程，所以一张图片，也可以是个函数，图片是把位置-&gt;颜色，或者简单一点，位置-&gt;亮度，图片上每一个位置有一个像素，像素带有一个亮度值。
+所以，如果我们把一个视标图片E，看成是函数g(x">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T01:09:00+08:00">
+<meta property="article:tag" content="CSF">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(3)</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:09:00+08:00" itemprop="datePublished" title="2017-12-19 01:09">2017-12-19 01:09</time></a></p>
+            
+        <p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h2>Eigenfunction（本征函数/ 特征函数）</h2>
+<p>现在我们要把另一个函数作为参数输入到线性函数里。越来越抽象了，不过对于咱们眼科医生来说，有成像过程可以辅助理解。
+<!-- TEASER_END --></p>
+<p>我们说函数function不过是把输入-&gt;输出的过程，所以一张图片，也可以是个函数，图片是把位置-&gt;颜色，或者简单一点，位置-&gt;亮度，图片上每一个位置有一个像素，像素带有一个亮度值。</p>
+<p>所以，如果我们把一个视标图片E，看成是函数g(x)，</p>
+<p><img alt="E" src="http://upload-images.jianshu.io/upload_images/29267-329ede16f9bb6762.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>那么对于一个透镜f(x)，把函数g(x)作为输入就是f(g(x))了，</p>
+<p><img alt="E-&gt;Eblur.png" src="http://upload-images.jianshu.io/upload_images/29267-414406f797548be0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p>所以把函数作为参数输入到函数里，可以得到新到函数。</p>
+<p>对于线性不变系统，如果把函数作为参数输入，有一类特殊的输入函数会有这样的性质：
+f( g(x) ) = A g(x)
+把这个函数g(x)送进f，经过变换的结果，只是相当于对g(x)乘了个系数，g(x)里面的内部结构都没变！</p>
+<p>这类特殊的输入函数叫做该线性不变系统的Eigenfunction，可以翻译成“本征函数”或者“特征函数”。</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/csf/" rel="tag">CSF</a></li>
+            <li><a class="tag p-category" href="../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/" rel="prev" title="为什么对比敏感度的视标亮度是正弦变化的？(2)">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/" rel="next" title="机器学习的战略(0)--基础概念">后一篇</a>
+            </li>
+        </ul></nav></aside></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

@@ -1,0 +1,42 @@
+<h2>一生二</h2>
+<p>有了Church numeral以后非负整数就都可以定义了。有了数据，还要有数据结构才行。
+<!-- TEASER_END --></p>
+<p>吐槽一下我的大学课程设置，计算机必修课叫《算法与数据结构》，学了一学期的Fortran 77，只讲了Fortran的语法，我敢说除了计算机课跷课的和上课睡觉的，我们班同学里肯定没人知道动态规划(算法)或者堆栈(数据结构)。</p>
+<p>最基本的数据结构就是一对数据了，从数据对又可以衍生出二叉树、链表，在此基础上又可以衍生出各种各样的数据结构。如果有了一对数据，就要能够提取其第一个元和第二个元。因此需要有三个操作，pair用来构造，first, second用来读取。</p>
+<pre class="code literal-block"><span></span>pair=λx.λy.λz.(z x y)
+first=λp.p (λx.λy.x)
+second=λp.p (λx.λy.y)
+</pre>
+
+
+<p>试试看：</p>
+<pre class="code literal-block"><span></span>pair a b
+=(λx.λy.λz.(z x y)) a b
+=λz.(z a b)
+</pre>
+
+
+<pre class="code literal-block"><span></span>first (pair a b)
+=λp.p (λx.λy.x) λz.(z a b)
+=λz.(z a b) (λx.λy.x)
+=(λx.λy.x) a b
+=a
+</pre>
+
+
+<p>里面λp.p和λz.z好像是个小技巧，可以用来把后面的东西提前面来用。</p>
+<p>仔细看看这数据结构的定义，感觉就像循环定义一样无中生有嘛，pair就是一对expression，first就是一对expression的前一个，second就是一对expression的后一个。</p>
+<p>有了二，就可以有三有多了。比如三元的表：</p>
+<pre class="code literal-block"><span></span>list3=pair a (pair b (pair c nil)
+</pre>
+
+
+<p>nil表示一个表结尾标记，比如在C语言中用\0作为字符串的结尾。</p>
+<p>如果要取表中的第三个位置，那就first( second (second list) )</p>
+<p>有pair以后，其实就可以定义整数之外的数了，
+<em> 有理数可以写成一对整数(分子, 分母)，比如0.8=4/5，用(4,5)这样的结构就可以表示了。
+</em> 复数可以写成(实部, 虚部)的pair
+<em> 有理复数，可以加入一些标记，比如用c作为复数标记，用r作为有理数标记，那么一个有理复数可以使用这样的结构：(c,(实部, 虚部))，继续展开是(c, ( (r,(分子,分母), (r,(分子,分母) ) )
+</em> 甚至用一个表来模拟8位字节</p>
+<p>只要数的定义有相应的运算法则可以操作就可以了。
+有了二，就有了数据结构。</p>

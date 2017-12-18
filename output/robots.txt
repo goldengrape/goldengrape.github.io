@@ -1,0 +1,4 @@
+Sitemap: https://goldengrape.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: goldengrape.github.io

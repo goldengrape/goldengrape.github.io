@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>面向眼科医生的λ演算入门教程(0) | GoldenGrape's Blog</title>
+<link href="../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/">
+<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../na-xie-zai-xian-de-jupyter/" title="那些在线的jupyter" type="text/html">
+<link rel="next" href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/" title="面向眼科医生的λ演算入门教程(1)" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="面向眼科医生的λ演算入门教程(0)">
+<meta property="og:url" content="https://goldengrape.github.io/blog/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/">
+<meta property="og:description" content="似乎学了λ演算（lambda calculus，怀念范少光老师，以后写东西，专业名词第一次出现有中文，其后都是英文）的人，都会自己再写个入门教程，大约是某种潮流或者是受到了某种感召，大家不约而同的行为。
+所以，我也要写个lambda calculus的入门教程。
+
+功利一点说作为一个眼科医生，当你和程序员进行交流的时候。如果说自己会写一些代码，比如Matlab、Python，大概是一个级别；如果说">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T00:31:34+08:00">
+<meta property="article:tag" content="lambda">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">面向眼科医生的λ演算入门教程(0)</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T00:31:34+08:00" itemprop="datePublished" title="2017-12-19 00:31">2017-12-19 00:31</time></a></p>
+            
+        <p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>似乎学了λ演算（lambda calculus，怀念范少光老师，以后写东西，专业名词第一次出现有中文，其后都是英文）的人，都会自己再写个入门教程，大约是某种潮流或者是受到了某种感召，大家不约而同的行为。</p>
+<p>所以，我也要写个lambda calculus的入门教程。
+<!-- TEASER_END --></p>
+<p>功利一点说作为一个眼科医生，当你和程序员进行交流的时候。如果说自己会写一些代码，比如Matlab、Python，大概是一个级别；如果说正在或者已经刷过SICP（《计算机程序的构造与解释》）大概又是一个级别；如果说学过了lambda calculus，就更高一级了。大约对应的是：坐请坐请上坐。</p>
+<p>不过lambda calculus本身就具有足够的美感和哲学含义。通过学习lambda calculus，你可以欣赏到人类的智慧，可以欣赏到一种纯粹的美，这种美并不依赖于人类的视觉（绘画）、听觉（音乐）、味觉嗅觉（美食）、语音语调（诗歌）、情感、文化、历史（小说）……</p>
+<p>lambda calculus带来的美感与人无关，却又可以被人所认识体会到。但要能够认识、体会，需要先经过一些不太复杂的学习。</p>
+<p>这个视频列表中是个很不错的[lambda calculus课程](https://www.youtube.com/playlist?list=PLUkhEiLrRQXW5jPQy5fWWyqsDc3Uwxghl)</p>
+<p>老师把lambda calculus的基本概念都讲解得很清楚。如果想详细了解，请听这个课程。</p>
+<p>由于是面向各位眼科同道，所以这个教程并不十分追求严谨性，而是以通俗可操作为目标的。我还会借助一些在线的lambda calculus工具来讲解。</p>
+<p>各位眼科同道，不要害怕，连角膜病和神经眼科你们都能学会，相比起来这个简单多了。</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/lambda/" rel="tag">lambda</a></li>
+            <li><a class="tag p-category" href="../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../na-xie-zai-xian-de-jupyter/" rel="prev" title="那些在线的jupyter">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/" rel="next" title="面向眼科医生的λ演算入门教程(1)">后一篇</a>
+            </li>
+        </ul></nav></aside></article>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../assets/js/all-nocdn.js"></script><script src="../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
