@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://goldengrape.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-12-18T15:51:00Z</lastmod>
+  <lastmod>2017-12-18T16:15:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
@@ -15,6 +15,6 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2017-12-18T15:51:00Z</lastmod>
+  <lastmod>2017-12-18T16:15:00Z</lastmod>
  </sitemap>
 </sitemapindex>
