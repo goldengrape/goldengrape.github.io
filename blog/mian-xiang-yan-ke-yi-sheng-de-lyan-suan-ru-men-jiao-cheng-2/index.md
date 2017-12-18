@@ -23,7 +23,7 @@
 
 这是在1928年提出的 Hilbert 规划中的一个重要问题。德语称为Entscheidungsproblem，（可判定性问题），还要配合Hilbert一句非常燃的宣言：
 
-![](/images/6.png)
+![](/images/lambda/6.png)
 
 **"Wir müssen wissen,wir werden wissen."  
 "我们必须知道，我们必将知道！"**
@@ -40,7 +40,7 @@
 
 Gödel使用的工具是由阿兰图灵Turing提供的数学工具——图灵机。Turing更被大众所知的可能是他破解了二战时德军的 Enigma 密码机，有个电影《模仿游戏》就是讲他的。
 
-![](/images/7.jpg)
+![](/images/lambda/7.jpg)
 
 Turing所提供的是一种描述运算的严格定义。哪怕幼儿园的小朋友也知道1+1=2。可是什么是"1"，什么是"+"，什么是"="，什么是"2"，这些都是没有定义的。意识到这一点恐怕很困难，因为太熟悉太习以为常了，以致于我们并没有意识到"1+1=2"可能是没被定义没被证明过的事。
 
@@ -56,10 +56,10 @@ Turing用一条纸带和一个在纸带上读写的机器来描述运算，顺�
 
 这张照片据说是诸神的合影：
 
-![](/images/Gods.jpg)
+![](/images/lambda/Gods.jpg)
 
 但在佛教中，神只领悟了一个世界运行的原理。
 
 而这些人，他们领悟了创造世界的方法。
 
-![](/images/gods2.png)
+![](/images/lambda/gods2.png)

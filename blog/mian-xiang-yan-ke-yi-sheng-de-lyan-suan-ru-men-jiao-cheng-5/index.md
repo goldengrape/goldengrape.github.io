@@ -33,13 +33,13 @@ Lambda calculus里面下面这些东西不是天然存在的，比如"1", "+", "
 3: (\f.\x.(f (f (f x))))
 
 1. 先输入0的定义 (\f.\x.x)
-   ![](/images/input0.png)
+   ![](/images/lambda/input0.png)
 2. 在带有加号的字典图标前面给出命名，是“0”
-   ![](/images/add2dic.png)
+   ![](/images/lambda/add2dic.png)
 3. 要确认一下的话就点一下左上的字典图标，会打开字典
-   ![](/images/dic0.png)
+   ![](/images/lambda/dic0.png)
 4. 如果要调用，只要在输入框里输入0就可以了
-   ![](/images/recall0.png)
+   ![](/images/lambda/recall0.png)
 
 注意这里并不是给(\f.\x.x)命名为0，这只是一个速记的缩略符号，严格完成替换的功能。
 
@@ -52,10 +52,10 @@ add=λm.λn.λf.λx.(m f (n f x))
 ```
 add: \m.\n.\f.\x.(m f ( n f x))
 ```
-![](/images/diclist.png)
+![](/images/lambda/diclist.png)
 然后我们试一试add 1 1，再试试add 1 2
-![](/images/1+1.png)
-![](/images/1+2.png)
+![](/images/lambda/1+1.png)
+![](/images/lambda/1+2.png)
 看到了没，
 1+1 **真的** = 2
 1+2 **真的** = 3

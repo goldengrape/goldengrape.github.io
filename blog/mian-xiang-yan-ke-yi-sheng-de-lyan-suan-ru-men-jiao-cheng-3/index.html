@@ -140,7 +140,7 @@ $$
 
 <p>相当于$$f(x)=x$$，求x=HelloWorld，就是将x替换成HelloWorld  </p>
 <p>λx.中间是metavariable x，λx.后面是函数定义的表达式x，这里面只有一个变量x，与metavariable是相同的，是bound variable。用Hello替换掉bound variable。  </p>
-<p><img alt="" src="../../images/2.png"></p>
+<p><img alt="" src="../../images/lambda/2.png"></p>
 <p>我们看$$L(x, f(x))$$那个例子，如果求x=2时，是把2替换掉x，得到$$L(2, f(2))$$  </p>
 <p>类似的，我们可以写另一个。  </p>
 <p>打开<a href="http://www.cburch.com/lambda/">http://www.cburch.com/lambda/</a> 试一试，输入：  </p>
@@ -148,7 +148,7 @@ $$
 </pre>
 
 
-<p><img alt="" src="../../images/8.png"></p>
+<p><img alt="" src="../../images/lambda/8.png"></p>
 <p>类比$$L(x, f(x))$$那个例子，$$x (λy.x)$$中，第一个x显然是bound variable，要被替换成HelloWorld，第二个x，虽然在λy.x内部，但是λy.x中的metavariable定义的是y，而不是x，所以x是free的，它的值要从λy.x外面找，所以还是HelloWorld.</p>
 <p>更复杂一点，如果  </p>
 <pre class="code literal-block"><span></span>(λx.(x (λx.x))) HelloWorld  
@@ -157,7 +157,7 @@ $$
 
 <p>就不一样了，(x (λx.x))之中，第一个x是bound variable，要被替换成HelloWorld，内部嵌套的那个λx.x中，由于声明了x是这个函数体内的bound variable，那么这里面的x值就不是HelloWorld了。</p>
 <p>我很喜欢 <a href="http://www.cburch.com/lambda/">http://www.cburch.com/lambda/</a> 这个lambda calculus interpreter的原因之一是，它会自动做变量的重新解释，(x (λx.x))之中λx.x的x与外部的x是无关的，所以干脆可以写成其他的名字，比如i0，在不容易混淆的时候再换回成x就好了。  </p>
-<p><img alt="" src="../../images/9.png"></p>
+<p><img alt="" src="../../images/lambda/9.png"></p>
 <pre class="code literal-block"><span></span>(λx.x (λi0.i0)) HelloWorld  
 ⇒    HelloWorld (λx.x)
 </pre>
@@ -168,7 +168,7 @@ $$
 </pre>
 
 
-<p><img alt="" src="../../images/3.png"></p>
+<p><img alt="" src="../../images/lambda/3.png"></p>
 <p>λx.(λy.x)中，定义x是bound variable，在λy.x中，y是metavariable，x是free variable，x的值在λy.x的上一层定义，所以当Hello传入时，送到了λy.x中的x里面。  </p>
 <p>(λx.λy.x) Hello World<br>
 ⇒    (λy.Hello) World</p>

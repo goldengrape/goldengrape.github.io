@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2017-12-18T16:45:00Z</lastmod>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -15,11 +15,39 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2017-12-18T16:36:00Z</lastmod>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/blog/hello-world/</loc>
   <lastmod>2017-12-18T15:49:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/blog/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</loc>
@@ -62,12 +90,36 @@
   <lastmod>2017-12-18T15:49:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</loc>
+  <lastmod>2017-12-18T17:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/</loc>
+  <lastmod>2017-12-18T17:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</loc>
+  <lastmod>2017-12-18T17:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</loc>
+  <lastmod>2017-12-18T17:14:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2017-12-18T16:53:00Z</lastmod>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/cat_ophthalmology/</loc>
+  <lastmod>2017-12-18T17:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_tutorial/</loc>
   <lastmod>2017-12-18T16:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/csf/</loc>
+  <lastmod>2017-12-18T17:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/jiao-cheng/</loc>
@@ -76,6 +128,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/lambda/</loc>
   <lastmod>2017-12-18T16:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/ml/</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/</loc>
@@ -87,7 +143,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
-  <lastmod>2017-12-18T16:36:00Z</lastmod>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-2.html</loc>
+  <lastmod>2017-12-18T17:28:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/listings/</loc>

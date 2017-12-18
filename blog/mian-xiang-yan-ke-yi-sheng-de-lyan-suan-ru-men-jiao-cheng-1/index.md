@@ -2,7 +2,7 @@
 .. title: 面向眼科医生的λ演算入门教程(1)
 .. slug: mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1
 .. date: 2017-12-19 00:31:52 UTC+08:00
-.. tags:lambda, 教程, 现代眼科医生知识扩展包
+.. tags: lambda, 教程, 现代眼科医生知识扩展包
 .. category: tutorial
 .. link:
 .. description:
@@ -16,7 +16,7 @@
 
 Lambda calculus的运算只做一件事情，就是字符替换，很类似于word里面用ctrl+H做查找与替换。我们来实际演示一下，请打开这个页面[http://www.cburch.com/lambda/](http://www.cburch.com/lambda/) （最好使用Chrome浏览器，Safari貌似有一点点小问题）
 
-# ![](/images/1.png)
+# ![](/images/lambda/1.png)
 
 这是一个Lambda Calculator解释器（lambda calculus interpreter，LCI），如果搜索online lambda calculus interpreter能够找到很多类似的。
 
@@ -26,7 +26,7 @@ Lambda calculus的运算只做一件事情，就是字符替换，很类似于wo
 
 不过，要输入λ比较麻烦，所以在这个解释器中，使用左斜杠"\"来表示λ
 
-![](/images/2.png)
+![](/images/lambda/2.png)
 
 解释一下这句话都含义：
 
@@ -59,7 +59,7 @@ f(x)=x
 (λx.λy.x) Hello World
 ```
 
-![](/images/3.png)
+![](/images/lambda/3.png)
 
 当你照此输入以后居然显示了奇怪的事情。容我解释。
 
@@ -95,7 +95,7 @@ Hello World我在中间加入里空格，这样在lambda expression里面的含�
 (λx.λy.y) Hello World
 ```
 
-![](/images/4.png)
+![](/images/lambda/4.png)
 
 首先，我们把Hello当成x，替换掉λx.λy.y中函数体λy.y里面所有的x。哦，没x，于是扔掉Hello，变成了
 

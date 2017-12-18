@@ -67,7 +67,7 @@ $$L(x, f(x))$$，现在求x=2时的值，也是把x代入，$$L(2, f(2))$$
 
 λx.中间是metavariable x，λx.后面是函数定义的表达式x，这里面只有一个变量x，与metavariable是相同的，是bound variable。用Hello替换掉bound variable。  
 
-![](/images/2.png)
+![](/images/lambda/2.png)
 
 我们看$$L(x, f(x))$$那个例子，如果求x=2时，是把2替换掉x，得到$$L(2, f(2))$$  
 
@@ -78,7 +78,7 @@ $$L(x, f(x))$$，现在求x=2时的值，也是把x代入，$$L(2, f(2))$$
 ```
 (λx.(x (λy.x)) HelloWorld  
 ```
-![](/images/8.png)
+![](/images/lambda/8.png)
 
 类比$$L(x, f(x))$$那个例子，$$x (λy.x)$$中，第一个x显然是bound variable，要被替换成HelloWorld，第二个x，虽然在λy.x内部，但是λy.x中的metavariable定义的是y，而不是x，所以x是free的，它的值要从λy.x外面找，所以还是HelloWorld.
 
@@ -90,7 +90,7 @@ $$L(x, f(x))$$，现在求x=2时的值，也是把x代入，$$L(2, f(2))$$
 
 我很喜欢 [http://www.cburch.com/lambda/](http://www.cburch.com/lambda/) 这个lambda calculus interpreter的原因之一是，它会自动做变量的重新解释，\(x \(λx.x\)\)之中λx.x的x与外部的x是无关的，所以干脆可以写成其他的名字，比如i0，在不容易混淆的时候再换回成x就好了。  
 
-![](/images/9.png)  
+![](/images/lambda/9.png)  
 
 ```
 (λx.x (λi0.i0)) HelloWorld  
@@ -100,7 +100,7 @@ $$L(x, f(x))$$，现在求x=2时的值，也是把x代入，$$L(2, f(2))$$
 ```
 (λx.λy.x) Hello World  
 ```
-![](/images/3.png)  
+![](/images/lambda/3.png)  
 
 λx.\(λy.x\)中，定义x是bound variable，在λy.x中，y是metavariable，x是free variable，x的值在λy.x的上一层定义，所以当Hello传入时，送到了λy.x中的x里面。  
 

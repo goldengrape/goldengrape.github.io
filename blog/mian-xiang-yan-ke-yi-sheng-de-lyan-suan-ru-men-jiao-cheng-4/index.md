@@ -38,10 +38,10 @@ Lambda calculus的写法规则还有一些细节要讲讲。虽然看起来琐�
 * x + 1，同上，如果interpreter把+号当作一个ID，这是可以的，但如果是我们常规理解的加法操作，并没有定义。
 
 比如用http://www.cburch.com/lambda/ 这个interpreter是可以输入(λx.x + 1) 1，并不能返回2，只能给出1 + 1，也就是用1这个符号ID替换了bound variable x
-![](/images/xplus1.png)
+![](/images/lambda/xplus1.png)
 
 如果用https://people.eecs.berkeley.edu/~gongliang13/lambda/#firstPage 这个interpreter输入(lambda x.x + 1) 1 则会报语法错误。
-![](/images/xplus1err.png)
+![](/images/lambda/xplus1err.png)
 
 ## 消除歧义
 我通常能加括号的地方都喜欢加上括号，这样虽然要仔细数括号，但不容易出现歧义。不过在看书的时候，也许是为了美观，也许是为了简单，人们会做一些省略引入一些歧义，再增加一些约定来消除这些歧义。
@@ -70,4 +70,4 @@ Lambda calculus的写法规则还有一些细节要讲讲。虽然看起来琐�
 
 不过这些都已经不影响玩了。过山车已经走到顶了，准备尖叫吧
 
-![](/images/roll.jpg)
+![](/images/lambda/roll.jpg)

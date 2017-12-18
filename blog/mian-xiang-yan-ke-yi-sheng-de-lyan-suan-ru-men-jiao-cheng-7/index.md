@@ -29,9 +29,9 @@ true=λx.λy.x
 false=λx.λy.y
 ```
 true和false都是接收两个参数，true返回前一个，false返回后一个。细看的话，你会发现false和0的定义是一样的。
-![](/images/3.png)
+![](/images/lambda/3.png)
 
-![](/images/4.png)
+![](/images/lambda/4.png)
 看我在第一课Hello World里面已经展示了，能在Hello World里面塞进这么多伏笔，真是佩服自己。
 
 有true/false的定义，也还要有各种逻辑运算才行。

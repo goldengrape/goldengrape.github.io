@@ -20,7 +20,7 @@
 ## 循环
 
 我们先从实用的角度考虑，有些很重要的事情需要重复做，比如玩人力资源机器Human Resource Machine 第2关以后的所有关卡，就要有跳转实现循环才能完成。
-![](/images/jump.png)
+![](/images/lambda/jump.png)
 但跳转是非常不好的实现循环的方法，很快你就会把自己跳晕。
 
 更为优雅地实现循环的方式是递归，类似凝血酶原转化为凝血酶，凝血酶又激活凝血酶原，只要有资源就可以一直循环下去。
@@ -104,7 +104,7 @@ Y foo = foo (Y foo)
 
 明白Y combinator(公司)为什么要叫Y combinator(算子)了吧。
 
-![](/images/dragon18.jpg)
+![](/images/lambda/dragon18.jpg)
 
 至此，数和数的运算，数据结构，分支，循环都有了。降龙十八掌打完收工。
 
