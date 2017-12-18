@@ -1,6 +1,7 @@
 # Nikola
 .doit.*
 output/
+cache/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

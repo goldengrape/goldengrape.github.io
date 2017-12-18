@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513620227.631833
+_modified_time = 1513621936.308134
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/annotation_helper.tmpl'
 _template_uri = 'annotation_helper.tmpl'
@@ -47,6 +47,6 @@ def render_css(context):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/annotation_helper.tmpl", "uri": "annotation_helper.tmpl", "line_map": {"16": 0, "32": 5, "21": 3, "22": 16, "48": 42, "42": 1, "38": 1, "28": 5}, "source_encoding": "ascii"}
+{"uri": "annotation_helper.tmpl", "source_encoding": "ascii", "line_map": {"16": 0, "32": 5, "21": 3, "22": 16, "48": 42, "42": 1, "38": 1, "28": 5}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/annotation_helper.tmpl"}
 __M_END_METADATA
 """

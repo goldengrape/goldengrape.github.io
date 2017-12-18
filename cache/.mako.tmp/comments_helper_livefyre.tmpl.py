@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513620227.852722
+_modified_time = 1513621936.610664
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_livefyre.tmpl'
 _template_uri = 'comments_helper_livefyre.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['comment_form', 'comment_link_script', 'comment_link']
+_exports = ['comment_link_script', 'comment_link', 'comment_form']
 
 
 def render_body(context,**pageargs):
@@ -21,21 +21,6 @@ def render_body(context,**pageargs):
         __M_writer('\n\n')
         __M_writer('\n\n\n')
         __M_writer('\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
-def render_comment_form(context,url,title,identifier):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        comment_system_id = context.get('comment_system_id', UNDEFINED)
-        __M_writer = context.writer()
-        __M_writer('\n<div id="livefyre-comments"></div>\n<script src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>\n<script>\n(function () {\n    var articleId = "')
-        __M_writer(str(identifier))
-        __M_writer('";\n    fyre.conv.load({}, [{\n        el: \'livefyre-comments\',\n        network: "livefyre.com",\n        siteId: "')
-        __M_writer(str(comment_system_id))
-        __M_writer('",\n        articleId: articleId,\n        signed: false,\n        collectionMeta: {\n            articleId: articleId,\n            url: fyre.conv.load.makeCollectionUrl(),\n        }\n    }], function() {});\n}());\n</script>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -68,8 +53,23 @@ def render_comment_link(context,link,identifier):
         context.caller_stack._pop_frame()
 
 
+def render_comment_form(context,url,title,identifier):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        comment_system_id = context.get('comment_system_id', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n<div id="livefyre-comments"></div>\n<script src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>\n<script>\n(function () {\n    var articleId = "')
+        __M_writer(str(identifier))
+        __M_writer('";\n    fyre.conv.load({}, [{\n        el: \'livefyre-comments\',\n        network: "livefyre.com",\n        siteId: "')
+        __M_writer(str(comment_system_id))
+        __M_writer('",\n        articleId: articleId,\n        signed: false,\n        collectionMeta: {\n            articleId: articleId,\n            url: fyre.conv.load.makeCollectionUrl(),\n        }\n    }], function() {});\n}());\n</script>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_livefyre.tmpl", "uri": "comments_helper_livefyre.tmpl", "line_map": {"64": 25, "48": 31, "34": 2, "35": 7, "36": 7, "37": 11, "38": 11, "65": 25, "71": 65, "44": 31, "61": 24, "16": 0, "59": 23, "21": 21, "22": 28, "23": 33, "54": 23, "60": 24, "29": 2, "62": 25, "63": 25}, "source_encoding": "utf-8"}
+{"uri": "comments_helper_livefyre.tmpl", "source_encoding": "utf-8", "line_map": {"64": 11, "33": 31, "61": 2, "48": 25, "65": 11, "39": 23, "71": 65, "44": 23, "45": 24, "46": 24, "47": 25, "16": 0, "49": 25, "50": 25, "21": 21, "22": 28, "23": 33, "56": 2, "29": 31, "62": 7, "63": 7}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_livefyre.tmpl"}
 __M_END_METADATA
 """
