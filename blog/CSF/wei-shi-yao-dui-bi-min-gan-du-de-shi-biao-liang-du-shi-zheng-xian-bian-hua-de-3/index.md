@@ -17,11 +17,11 @@
 
 所以，如果我们把一个视标图片E，看成是函数g(x)，
 
-![E](http://upload-images.jianshu.io/upload_images/29267-329ede16f9bb6762.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![E](/images/CSF/E.png)
 
 那么对于一个透镜f(x)，把函数g(x)作为输入就是f(g(x))了，
 
-![E->Eblur.png](http://upload-images.jianshu.io/upload_images/29267-414406f797548be0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![E->Eblur.png](/images/CSF/E2Eblur.png)
 
 所以把函数作为参数输入到函数里，可以得到新到函数。
 
