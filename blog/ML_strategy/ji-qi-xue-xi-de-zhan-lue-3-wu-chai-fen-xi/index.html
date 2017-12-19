@@ -2,7 +2,7 @@
 <html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
 <head>
 <meta charset="utf-8">
-<base href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">
+<base href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>机器学习的战略(3)--误差分析 | GoldenGrape's Blog</title>
 <link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
@@ -10,13 +10,13 @@
 <link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
-<link rel="canonical" href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">
+<link rel="canonical" href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">
 <!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
-<link rel="prev" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" title="机器学习的战略(2)--错误率" type="text/html">
-<link rel="next" href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/" title="机器学习的战略(4)--面对分布不同" type="text/html">
+<link rel="prev" href="../ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" title="机器学习的战略(2)--错误率" type="text/html">
+<link rel="next" href="../ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/" title="机器学习的战略(4)--面对分布不同" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="机器学习的战略(3)--误差分析">
-<meta property="og:url" content="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">
+<meta property="og:url" content="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">
 <meta property="og:description" content="我觉得这一部分是导师指导/监督学生实验时应该出手的部分.
 误差分析
 这是个手工分析操作技巧了. 老师在课程中不断强调不要看不起手工分析, 一是人类看图识别的效率很高, 看上100张图很快就搞定了, 二是在分析过程中还有助于产生直观的印象, 再次利用人类强大的识别能力来解决问题.
@@ -75,7 +75,7 @@
 </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-    <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/index.md" id="sourcelink">源代码</a>
+    <a href="index.md" id="sourcelink">源代码</a>
     </li>
 
                 
@@ -90,15 +90,21 @@
         <div class="row">
             
             
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" class="u-url">机器学习的战略(3)--误差分析</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">机器学习的战略(3)--误差分析</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                     Golden Grape
             </span></p>
-            <p class="dateline"><a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:01+08:00" itemprop="datePublished" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:01+08:00" itemprop="datePublished" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
+                <p class="commentline">
+        
+    <a href=".#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi.html">Comments</a>
+
+
             
-        <p class="sourceline"><a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/index.md" id="sourcelink">源代码</a></p>
+        </p>
+<p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
 
         </div>
         
@@ -213,12 +219,34 @@
         </ul>
 <ul class="pager hidden-print">
 <li class="previous">
-                <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" rel="prev" title="机器学习的战略(2)--错误率">前一篇</a>
+                <a href="../ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" rel="prev" title="机器学习的战略(2)--错误率">前一篇</a>
             </li>
             <li class="next">
-                <a href="../../%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/" rel="next" title="机器学习的战略(4)--面对分布不同">后一篇</a>
+                <a href="../ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/" rel="next" title="机器学习的战略(4)--面对分布不同">后一篇</a>
             </li>
-        </ul></nav></aside></article>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/",
+        disqus_title="\u673a\u5668\u5b66\u4e60\u7684\u6218\u7565(3)--\u8bef\u5dee\u5206\u6790",
+        disqus_identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 </div>
         <!--End of body content-->
 
