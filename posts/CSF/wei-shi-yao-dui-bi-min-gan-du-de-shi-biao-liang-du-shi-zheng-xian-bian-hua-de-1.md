@@ -25,7 +25,7 @@ f(m x)=2mx=m(2x)=m f(x)
 # 非线性的人体
 人体通常情况下不是线性的。著名的例子，比如吃一个苹果1分钟，吃9个苹果用多久？
 
-![吃9个苹果](http://upload-images.jianshu.io/upload_images/29267-a21b4ca611380530.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![吃9个苹果](/images/CSF/7181079064.jpeg)
 
 再比如医生们超级反感的朋友圈养生指南最喜欢的”酸碱体质”，也是把人体酸碱平衡错误理解成了线性系统，完全不管磷酸盐缓冲这么一回事。
 
@@ -33,7 +33,7 @@ f(m x)=2mx=m(2x)=m f(x)
 
 视觉是一种知觉，而不仅仅是感觉。知觉是要中枢神经系统参与处理的，CNS处理的过程可不一定是线性的。
 
-![错觉图像](http://upload-images.jianshu.io/upload_images/29267-590b66b674a7073e.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![错觉图像](/images/CSF/WechatIMG85.jpeg)
 
 不过仅仅从单眼成像的过程考虑，通常，人眼单眼的成像过程倒是可以近似看作是线性的。
 

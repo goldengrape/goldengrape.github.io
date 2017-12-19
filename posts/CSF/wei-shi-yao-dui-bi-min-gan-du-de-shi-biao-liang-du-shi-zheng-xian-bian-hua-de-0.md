@@ -18,7 +18,7 @@
 
 # 正弦光栅视标
 
-![对比敏感度视标](http://upload-images.jianshu.io/upload_images/29267-02439de324772894.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![对比敏感度视标](/images/CSF/p20004817g3001.jpg)
 
 左图是视标的图像，右图是视标亮度，亮度的变化为正弦函数。对比度分别是0.85(A), 0.50(B), 0.10(C)
 
@@ -34,7 +34,7 @@
 
 这篇神作是：
 [Optical and Photoelectric Analog of the Eye](https://doi.org/10.1364/JOSA.46.000721) （被引用620次）
-[全文](http://sci-hub.cc/10.1364/JOSA.46.000721)
+[全文](http://doi.org/10.1364/JOSA.46.000721)
 
 但是，太难，我没看懂。
 

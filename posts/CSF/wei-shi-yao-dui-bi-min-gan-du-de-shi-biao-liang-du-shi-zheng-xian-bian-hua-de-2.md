@@ -16,15 +16,15 @@
 我们可以把透镜成像的过程当作是一个把“物”变换成“像”的功能，说实话function翻译成函数真是挡住了不少人，function嘛，其实就是功能而已，有输入，有输出，把输入变成输出的功能。
 <!-- TEASER_END -->
 
-![C-> IJ](http://upload-images.jianshu.io/upload_images/29267-2a5c41817604510b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![C-> IJ](/images/CSF/C.png)
 输入一个物C，就可以在屏幕上得到一个光斑IJ。
 f(点C)=IJ
 
-![物点G](http://upload-images.jianshu.io/upload_images/29267-ffafd8faa13fb3c4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![物点G](/images/CSF/5.png)
 输入另一个物G，就可以在屏幕上得到光斑MN。
 f(点G)=MN
 
-![两个物点](http://upload-images.jianshu.io/upload_images/29267-d6943ff5e26d26fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![两个物点](/images/CSF/4.png)
 
 同时输入物C和物G，同时得到光斑IJ和光斑MN。
 f(点C+点G)=IJ+MN = f(点C)+f(点G)
@@ -39,11 +39,11 @@ f(点C+点G)=IJ+MN = f(点C)+f(点G)
 对于成像来说，考虑的是空间。
 比如离焦
 
-![C点在中间](http://upload-images.jianshu.io/upload_images/29267-43713838d400ed64.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![C点在中间](/images/CSF/1.png)
 
-![C点向上移动](http://upload-images.jianshu.io/upload_images/29267-e710bd0cb2e2ae4d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![C点向上移动](/images/CSF/2.png)
 
-![C点更向上移动](http://upload-images.jianshu.io/upload_images/29267-663f3f42b80850af.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![C点更向上移动](/images/CSF/3.png)
 
 从C点发出光形成了光斑IJ，如果C点的位置在垂直于光轴的面上移动。那么光斑IJ的大小不变。
 
@@ -65,6 +65,6 @@ x= D (L-V)/V
 
 一个相反的例子，哈哈镜，
 
-![哈哈镜](http://upload-images.jianshu.io/upload_images/29267-a7555bff9d1082ed.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![哈哈镜](/images/CSF/distormirror.jpg)
 
 哈哈镜是线性系统，一个光点成像不影响另一个光点的像。但如果你拿着一个点移动，透过哈哈镜看输出，随着点的位置不同，放大、扭曲、缩小的情况各不相同，所以哈哈镜是线性的，但不是线性空间不变的。

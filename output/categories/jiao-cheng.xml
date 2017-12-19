@@ -1,98 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://goldengrape.github.io/categories/jiao-cheng.xml"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 18 Dec 2017 18:32:17 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link type="application/rss+xml" href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self"></atom:link><language>zh_cn</language><lastBuildDate>Tue, 19 Dec 2017 04:56:41 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
 &lt;p&gt;这个也是吓人.  读书人, 相煎何太急.&lt;/p&gt;
 &lt;p&gt;end-to-end的一端是原始数据, 另一端是想要的结果. 比如也许从一张眼底照片+FFA直接给出眼底激光应该打哪里, 或者说中文直接给出翻译好的英文字幕. 从一端到另一端中间本来是有很多研究过程在里面的,
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</guid><pubDate>Mon, 18 Dec 2017 17:23:43 GMT</pubDate></item><item><title>机器学习的战略(5)--迁移学习</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;迁移学习&lt;/h2&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</guid><pubDate>Mon, 18 Dec 2017 17:23:43 GMT</pubDate></item><item><title>机器学习的战略(5)--迁移学习</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;迁移学习&lt;/h2&gt;
 &lt;p&gt;好激动, 这是整个机器学习里面最激动人心最吸引人的部分了. 知道了迁移学习这事情以后, 我才比较理解为什么整个课程一直没有进入各种fancy的CNN, RNN之类的神经网络结构, 而仅仅就是把层次多一点的神经网络称为深度神经网络.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:31 GMT</pubDate></item><item><title>机器学习的战略(4)--面对分布不同</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这一部分我在做练习题的时候老是错, 我都不是很确定自己理解明白了. 有必要的话最好还是回到课程原始视频中听老师亲自讲.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</guid><pubDate>Mon, 18 Dec 2017 17:23:16 GMT</pubDate></item><item><title>机器学习的战略(3)--误差分析</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我觉得这一部分是导师指导/监督学生实验时应该出手的部分.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:31 GMT</pubDate></item><item><title>机器学习的战略(4)--面对分布不同</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这一部分我在做练习题的时候老是错, 我都不是很确定自己理解明白了. 有必要的话最好还是回到课程原始视频中听老师亲自讲.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</guid><pubDate>Mon, 18 Dec 2017 17:23:16 GMT</pubDate></item><item><title>机器学习的战略(3)--误差分析</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我觉得这一部分是导师指导/监督学生实验时应该出手的部分.&lt;/p&gt;
 &lt;h2&gt;误差分析&lt;/h2&gt;
 &lt;p&gt;这是个手工分析操作技巧了. 老师在课程中不断强调不要看不起手工分析, 一是人类看图识别的效率很高, 看上100张图很快就搞定了, 二是在分析过程中还有助于产生直观的印象, 再次利用人类强大的识别能力来解决问题.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:01 GMT</pubDate></item><item><title>机器学习的战略(2)--错误率</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;与人类相比较&lt;/h2&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:01 GMT</pubDate></item><item><title>机器学习的战略(2)--错误率</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;与人类相比较&lt;/h2&gt;
 &lt;p&gt;机器学习的很多任务, 比如识别图像, 听语音, 都是人类非常擅长的. 所以这些任务来说人类的错误率都相当低. 当然人类也分人, 看眼底图的还是得后节大夫, 找普通人看也还是错误率很高的, 最高的准确率应该是一组后节专家讨论会诊后得到的.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</guid><pubDate>Mon, 18 Dec 2017 17:22:47 GMT</pubDate></item><item><title>机器学习的战略(1)--目标的设置</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;调整ML模型的战略&lt;/h2&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</guid><pubDate>Mon, 18 Dec 2017 17:22:47 GMT</pubDate></item><item><title>机器学习的战略(1)--目标的设置</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;调整ML模型的战略&lt;/h2&gt;
 &lt;p&gt;用来描述模型结构的, 比如是y=kx+b, 还是y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d, 叫做"超参数" &lt;strong&gt;hyperparamter&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;调整hyperparamter是一件很麻烦的事情, 以至于很多人把这件事叫做"炼丹". 你可能需要炼上七七四十九天才知道, 哦, 原来y=kx+b这个线性模型不合适啊. 所以除了具体的调整方法(战术), 你还需要战略方案.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</guid><pubDate>Mon, 18 Dec 2017 17:22:33 GMT</pubDate></item><item><title>机器学习的战略(0)--基础概念</title><link>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是deeplearning.ai系列课程的第三门课&lt;a href="https://www.coursera.org/learn/machine-learning-projects/"&gt;Structuring Machine Learning Projects&lt;/a&gt;.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</guid><pubDate>Mon, 18 Dec 2017 17:22:33 GMT</pubDate></item><item><title>机器学习的战略(0)--基础概念</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是deeplearning.ai系列课程的第三门课&lt;a href="https://www.coursera.org/learn/machine-learning-projects/"&gt;Structuring Machine Learning Projects&lt;/a&gt;.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.&lt;/p&gt;
 &lt;p&gt;这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%88%98%E7%95%A5/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd (cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。&lt;/p&gt;
+&lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
 &lt;p&gt;类比测视力，就好像用1.0的视标去测病人，结果病人自带放大系统，视标放大到0.1的程度，这样的测量就错了。&lt;/p&gt;
 &lt;p&gt;由于病人的像差可以千奇百怪千差万别，所以病人的眼睛作为一个线性不变系统，也可能是千差万别的。要选择一个带有周期结构的输入，经过各种各不相同的线性系统还可以得到同周期的输出，满足这个能力的输入，就是所有线性不变系统的Eigenfunction了。&lt;/p&gt;
 &lt;p&gt;常规的E视标，相当于给入的输入的“方波”，那么如果经过一个有像差的眼睛，成像后的输出可能是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="E_MTF" src="https://goldengrape.github.io/images/CSF/E_MTF.png"&gt;&lt;/p&gt;
 &lt;p&gt;看输出的强度波形，会发现各个峰的高度是不同的，如果仔细测量，可能还会发现波峰之间的周期也会略有差别。甚至一个有经验的“视力测量欺骗者”，可以根据虚影的方向反推出视标的方向。&lt;/p&gt;
 &lt;p&gt;但如果是一个正弦波的视标。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sin_MTF" src="https://goldengrape.github.io/images/CSF/sin_MTF.png"&gt;&lt;/p&gt;
 &lt;p&gt;经过同样有像差的眼，形成的仍然是正弦波，峰值是同样的，周期是同样的，区别只是“振幅”发生了变化。只有对比度这个变量会根据像差的情况改变，这样就方便了测量。&lt;/p&gt;
-&lt;p&gt;总结
-为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
 &lt;p&gt;答：因为人眼视觉成像过程近似于线性不变系统，亮度正弦变化的视标是线性系统的Eigenfunction，在经过人眼成像厚视标的空间频率不变。&lt;/p&gt;
 &lt;p&gt;至于为什么正弦函数是线性不变系统的Eigenfunction，就是另外一个很长的故事了。如果有兴趣可以参考吕乃光老师编写的《傅里叶光学(第二版)》，第50-52页。&lt;/p&gt;
-&lt;p&gt;One more thing
-题图&lt;/p&gt;
-&lt;p&gt;有人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
+&lt;h2&gt;One more thing&lt;/h2&gt;
+&lt;p&gt;题图&lt;/p&gt;
+&lt;p&gt;&lt;img alt="stripe_0.21" src="https://goldengrape.github.io/images/CSF/stripe_0.21.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
 &lt;p&gt;通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。&lt;/p&gt;
-&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;
-&lt;p&gt;《为什么对比敏感度的视标亮度是正弦变化的》目录&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;历史：http://www.15yan.com/story/jyk5ox6LzNF/&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;1.线性系统：http://www.15yan.com/story/36DkAcLTFcf/&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;线性不变系统：http://www.15yan.com/story/2LE6VX5bRjW/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Eigenfunction： http://www.15yan.com/story/5bruOq9RA57/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对比敏感度：http://www.15yan.com/story/g5Qkf83Rxgx/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对比敏感度测量与Eigenfunction：http://www.15yan.com/story/fpT2SdWz7n5/&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是
-$$
-e^{ix}
-$$&lt;/p&gt;
-&lt;p&gt;其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
+&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
 &lt;p&gt;看这思路，人眼的光学成像近似是线性空间不变系统，如果有个函数是任意线性不变系统的Eigenfunction，那么必然也是人眼光学成像的Eigenfunction。&lt;/p&gt;
 &lt;p&gt;Otto. H. Schade在1956年把正弦视标引入眼科检查的时候，到底是怎么把这么远的两个概念结合到一起的？&lt;/p&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
-&lt;p&gt;因为正弦函数是线性不变系统的本征函数！&lt;/p&gt;
+&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？
+因为正弦函数是线性不变系统的本征函数！&lt;/p&gt;
 &lt;p&gt;但是，为什么要用Eigenfunction，这得从对比敏感度讲起。&lt;/p&gt;
 &lt;h2&gt;对比敏感度&lt;/h2&gt;
 &lt;p&gt;这得从对比敏感度讲起。对比敏感度的检查方法是让患者看圆形的视标，视标中的条纹亮度按正弦变化，背景的亮度=视标的平均亮度。要求被试指出视标条纹的方向。&lt;/p&gt;
 &lt;p&gt;对比敏感度的报告是一张二维图片，也就是说有两个参数，一个是空间频率，一个是对比度。&lt;/p&gt;
 &lt;p&gt;对比敏感度测量的就是在不同空间频率下，眼睛可以看到的最低对比度是多少。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="SinVibr" src="https://goldengrape.github.io/images/CSF/SinVibr.png"&gt;&lt;/p&gt;
 &lt;p&gt;这张图水平方向是空间频率越来越高，垂直方向是对比度越来越低，是不是可以感觉到一个抛物线的痕迹，抛物线的上方是一片灰色，下面是有条纹的。&lt;/p&gt;
-&lt;p&gt;如果是sin变化的视标，那么对比度和空间频率都是可以算出来的。&lt;/p&gt;
 &lt;p&gt;三角函数的表示还记得吧，如果亮度的变化可以用 I(x) =A sin(B x )+C 来表示，&lt;/p&gt;
 &lt;p&gt;对比度contrast：&lt;/p&gt;
 &lt;p&gt;sin是在-1和+1直接变化，所以最大的亮度是Imax=A+C，最小的亮度Imin=-A+C。根据对比度的定义&lt;/p&gt;
 &lt;p&gt;contrast=(Imax-Imin)/(Imax+lmin)&lt;/p&gt;
 &lt;p&gt;contrast=2A/2C=A/C&lt;/p&gt;
-&lt;p&gt;空间频率frequency
-就是在单位长度内，周期重复了多少次。显然B x=2kπ 的时候会重复，把x=1代入，B=2kπ, k=B/2π，所以空间频率&lt;/p&gt;
+&lt;p&gt;&lt;img alt="对比度" src="https://goldengrape.github.io/images/CSF/%E5%AF%B9%E6%AF%94%E5%BA%A6.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;空间频率frequency&lt;/p&gt;
+&lt;p&gt;就是在单位长度内，周期重复了多少次。显然B x=2kπ 的时候会重复，把x=1代入，B=2kπ, k=B/2π，所以空间频率&lt;/p&gt;
 &lt;p&gt;frequency=B/2π&lt;/p&gt;
 &lt;p&gt;前面说到，对比敏感度测量的时候，要给定一个空间频率，然后测量人眼分辨对比度的能力。如果给好了一个空间频率，而通过眼睛的屈光间质折射以后，空间频率变化了，就不好办了。&lt;/p&gt;
-&lt;p&gt;那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。&lt;/p&gt;
-&lt;p&gt;《为什么对比敏感度的视标亮度是正弦变化的》目录&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;历史：http://www.15yan.com/story/jyk5ox6LzNF/&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;1.线性系统：http://www.15yan.com/story/36DkAcLTFcf/&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;线性不变系统：http://www.15yan.com/story/2LE6VX5bRjW/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Eigenfunction： http://www.15yan.com/story/5bruOq9RA57/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对比敏感度：http://www.15yan.com/story/g5Qkf83Rxgx/&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;对比敏感度测量与Eigenfunction：http://www.15yan.com/story/fpT2SdWz7n5/&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</guid><pubDate>Mon, 18 Dec 2017 17:10:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(3)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;Eigenfunction（本征函数/ 特征函数）&lt;/h2&gt;
+&lt;p&gt;那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</guid><pubDate>Mon, 18 Dec 2017 17:10:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(3)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;Eigenfunction（本征函数/ 特征函数）&lt;/h2&gt;
 &lt;p&gt;现在我们要把另一个函数作为参数输入到线性函数里。越来越抽象了，不过对于咱们眼科医生来说，有成像过程可以辅助理解。
 &lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</guid><pubDate>Mon, 18 Dec 2017 17:09:00 GMT</pubDate></item></channel></rss>
