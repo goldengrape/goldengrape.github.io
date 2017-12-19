@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513659691.904676
+_modified_time = 1513662845.337597
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/index_helper.tmpl'
 _template_uri = 'index_helper.tmpl'
@@ -72,6 +72,6 @@ def render_mathjax_script(context,posts):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"64": 23, "65": 24, "66": 29, "67": 30, "73": 67, "16": 0, "21": 19, "22": 36, "28": 2, "35": 2, "36": 3, "37": 4, "38": 6, "39": 7, "40": 8, "41": 8, "42": 8, "43": 8, "44": 11, "45": 12, "46": 13, "47": 13, "48": 13, "49": 13, "50": 16, "56": 21, "62": 21, "63": 22}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/index_helper.tmpl", "source_encoding": "utf-8", "uri": "index_helper.tmpl"}
+{"uri": "index_helper.tmpl", "source_encoding": "utf-8", "line_map": {"64": 23, "65": 24, "66": 29, "67": 30, "73": 67, "16": 0, "21": 19, "22": 36, "28": 2, "35": 2, "36": 3, "37": 4, "38": 6, "39": 7, "40": 8, "41": 8, "42": 8, "43": 8, "44": 11, "45": 12, "46": 13, "47": 13, "48": 13, "49": 13, "50": 16, "56": 21, "62": 21, "63": 22}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/index_helper.tmpl"}
 __M_END_METADATA
 """

@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513659692.00893
+_modified_time = 1513662844.949539
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/tag.tmpl'
 _template_uri = 'tag.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['extra_head', 'content']
+_exports = ['content', 'extra_head']
 
 
 def _mako_get_namespace(context, name):
@@ -28,24 +28,24 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        translations = context.get('translations', UNDEFINED)
-        subcategories = context.get('subcategories', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         description = context.get('description', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
-        generate_rss = context.get('generate_rss', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
-        tag = context.get('tag', UNDEFINED)
-        kind = context.get('kind', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        date_format = context.get('date_format', UNDEFINED)
-        title = context.get('title', UNDEFINED)
+        kind = context.get('kind', UNDEFINED)
+        generate_rss = context.get('generate_rss', UNDEFINED)
         sorted = context.get('sorted', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        subcategories = context.get('subcategories', UNDEFINED)
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
+        _link = context.get('_link', UNDEFINED)
+        tag = context.get('tag', UNDEFINED)
+        title = context.get('title', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_head'):
@@ -63,65 +63,24 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_extra_head(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def extra_head():
-            return render_extra_head(context)
-        translations = context.get('translations', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        generate_rss = context.get('generate_rss', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
-        kind = context.get('kind', UNDEFINED)
-        tag = context.get('tag', UNDEFINED)
-        sorted = context.get('sorted', UNDEFINED)
-        __M_writer = context.writer()
-        __M_writer('\n    ')
-        __M_writer(str(parent.extra_head()))
-        __M_writer('\n')
-        if len(translations) > 1 and generate_rss:
-            for language in sorted(translations):
-                __M_writer('            <link rel="alternate" type="application/rss+xml" title="RSS for ')
-                __M_writer(str(kind))
-                __M_writer(' ')
-                __M_writer(filters.html_escape(str(tag)))
-                __M_writer(' (')
-                __M_writer(str(language))
-                __M_writer(')" href="')
-                __M_writer(str(_link(kind + "_rss", tag, language)))
-                __M_writer('">\n')
-        elif generate_rss:
-            __M_writer('        <link rel="alternate" type="application/rss+xml" title="RSS for ')
-            __M_writer(str(kind))
-            __M_writer(' ')
-            __M_writer(filters.html_escape(str(tag)))
-            __M_writer('" href="')
-            __M_writer(str(_link(kind + "_rss", tag)))
-            __M_writer('">\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        translations = context.get('translations', UNDEFINED)
-        subcategories = context.get('subcategories', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         description = context.get('description', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        translations = context.get('translations', UNDEFINED)
         generate_rss = context.get('generate_rss', UNDEFINED)
-        len = context.get('len', UNDEFINED)
-        title = context.get('title', UNDEFINED)
-        _link = context.get('_link', UNDEFINED)
-        kind = context.get('kind', UNDEFINED)
         def content():
             return render_content(context)
-        date_format = context.get('date_format', UNDEFINED)
-        tag = context.get('tag', UNDEFINED)
+        kind = context.get('kind', UNDEFINED)
         sorted = context.get('sorted', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
+        subcategories = context.get('subcategories', UNDEFINED)
+        _link = context.get('_link', UNDEFINED)
+        tag = context.get('tag', UNDEFINED)
+        title = context.get('title', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<article class="tagpage">\n    <header>\n        <h1>')
         __M_writer(filters.html_escape(str(title)))
@@ -181,8 +140,49 @@ def render_content(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_extra_head(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        translations = context.get('translations', UNDEFINED)
+        generate_rss = context.get('generate_rss', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        kind = context.get('kind', UNDEFINED)
+        sorted = context.get('sorted', UNDEFINED)
+        len = context.get('len', UNDEFINED)
+        def extra_head():
+            return render_extra_head(context)
+        _link = context.get('_link', UNDEFINED)
+        tag = context.get('tag', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n    ')
+        __M_writer(str(parent.extra_head()))
+        __M_writer('\n')
+        if len(translations) > 1 and generate_rss:
+            for language in sorted(translations):
+                __M_writer('            <link rel="alternate" type="application/rss+xml" title="RSS for ')
+                __M_writer(str(kind))
+                __M_writer(' ')
+                __M_writer(filters.html_escape(str(tag)))
+                __M_writer(' (')
+                __M_writer(str(language))
+                __M_writer(')" href="')
+                __M_writer(str(_link(kind + "_rss", tag, language)))
+                __M_writer('">\n')
+        elif generate_rss:
+            __M_writer('        <link rel="alternate" type="application/rss+xml" title="RSS for ')
+            __M_writer(str(kind))
+            __M_writer(' ')
+            __M_writer(filters.html_escape(str(tag)))
+            __M_writer('" href="')
+            __M_writer(str(_link(kind + "_rss", tag)))
+            __M_writer('">\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 """
 __M_BEGIN_METADATA
-{"line_map": {"128": 19, "129": 20, "130": 21, "131": 21, "132": 21, "133": 23, "134": 24, "135": 24, "136": 24, "137": 26, "138": 27, "139": 27, "140": 27, "141": 27, "142": 27, "143": 29, "144": 31, "145": 32, "146": 33, "147": 34, "148": 35, "149": 35, "150": 35, "151": 35, "152": 35, "153": 35, "154": 35, "27": 0, "156": 38, "157": 39, "158": 39, "159": 39, "160": 39, "161": 39, "162": 41, "155": 35, "164": 44, "163": 43, "166": 46, "167": 46, "168": 46, "169": 46, "170": 46, "171": 46, "172": 46, "173": 46, "174": 46, "175": 46, "176": 46, "177": 48, "50": 2, "55": 13, "184": 178, "60": 51, "66": 4, "80": 4, "81": 5, "82": 5, "83": 6, "84": 7, "85": 8, "86": 8, "87": 8, "88": 8, "89": 8, "90": 8, "91": 8, "92": 8, "93": 8, "94": 10, "95": 11, "96": 11, "97": 11, "98": 11, "99": 11, "100": 11, "101": 11, "165": 45, "178": 50, "107": 16, "126": 16, "127": 19}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/tag.tmpl", "source_encoding": "utf-8", "uri": "tag.tmpl"}
+{"uri": "tag.tmpl", "source_encoding": "utf-8", "line_map": {"128": 46, "129": 46, "130": 46, "131": 46, "132": 46, "133": 46, "134": 46, "135": 46, "136": 48, "137": 50, "143": 4, "178": 11, "27": 0, "157": 4, "158": 5, "159": 5, "160": 6, "161": 7, "162": 8, "163": 8, "164": 8, "165": 8, "166": 8, "167": 8, "168": 8, "169": 8, "170": 8, "171": 10, "172": 11, "173": 11, "174": 11, "175": 11, "176": 11, "177": 11, "50": 2, "55": 13, "184": 178, "60": 51, "66": 16, "85": 16, "86": 19, "87": 19, "88": 20, "89": 21, "90": 21, "91": 21, "92": 23, "93": 24, "94": 24, "95": 24, "96": 26, "97": 27, "98": 27, "99": 27, "100": 27, "101": 27, "102": 29, "103": 31, "104": 32, "105": 33, "106": 34, "107": 35, "108": 35, "109": 35, "110": 35, "111": 35, "112": 35, "113": 35, "114": 35, "115": 38, "116": 39, "117": 39, "118": 39, "119": 39, "120": 39, "121": 41, "122": 43, "123": 44, "124": 45, "125": 46, "126": 46, "127": 46}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/tag.tmpl"}
 __M_END_METADATA
 """

@@ -9,6 +9,7 @@
 .. type: text
 -->
 正如侦探小说里凶手都是出场人物，数学、物理题里出现的条件都是要用上的，前面讲到的Eigenfunction显然和“为什么对比敏感度的视标亮度是正弦变化的“是直接相关的。
+<!-- TEASER_END -->
 
 因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。
 

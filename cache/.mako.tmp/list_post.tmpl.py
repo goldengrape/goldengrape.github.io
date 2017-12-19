@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513659692.044113
+_modified_time = 1513662844.973383
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/list_post.tmpl'
 _template_uri = 'list_post.tmpl'
@@ -28,11 +28,11 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
+        date_format = context.get('date_format', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
-        date_format = context.get('date_format', UNDEFINED)
         title = context.get('title', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n\n')
@@ -49,11 +49,11 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        date_format = context.get('date_format', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
         def content():
             return render_content(context)
-        date_format = context.get('date_format', UNDEFINED)
         title = context.get('title', UNDEFINED)
-        posts = context.get('posts', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<article class="listpage">\n    <header>\n        <h1>')
@@ -86,6 +86,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"64": 11, "65": 12, "66": 12, "67": 12, "68": 12, "69": 12, "70": 12, "71": 12, "72": 12, "73": 12, "74": 12, "75": 12, "76": 14, "77": 15, "78": 16, "79": 16, "80": 16, "81": 18, "87": 81, "27": 0, "38": 2, "43": 19, "49": 4, "59": 4, "60": 7, "61": 7, "62": 9, "63": 10}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/list_post.tmpl", "source_encoding": "utf-8", "uri": "list_post.tmpl"}
+{"uri": "list_post.tmpl", "source_encoding": "utf-8", "line_map": {"64": 11, "65": 12, "66": 12, "67": 12, "68": 12, "69": 12, "70": 12, "71": 12, "72": 12, "73": 12, "74": 12, "75": 12, "76": 14, "77": 15, "78": 16, "79": 16, "80": 16, "81": 18, "87": 81, "27": 0, "38": 2, "43": 19, "49": 4, "59": 4, "60": 7, "61": 7, "62": 9, "63": 10}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/list_post.tmpl"}
 __M_END_METADATA
 """
