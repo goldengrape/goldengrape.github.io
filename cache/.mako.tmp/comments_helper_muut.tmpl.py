@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513662845.124804
+_modified_time = 1513862317.62441
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl'
 _template_uri = 'comments_helper_muut.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['comment_link_script', 'comment_link', 'comment_form']
+_exports = ['comment_link', 'comment_form', 'comment_link_script']
 
 
 def render_body(context,**pageargs):
@@ -22,16 +22,6 @@ def render_body(context,**pageargs):
         __M_writer('\n\n')
         __M_writer('\n\n\n')
         __M_writer('\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
-def render_comment_link_script(context):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        __M_writer = context.writer()
-        __M_writer('\n<script src="//cdn.muut.com/1/moot.min.js"></script>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -64,8 +54,18 @@ def render_comment_form(context,url,title,identifier):
         context.caller_stack._pop_frame()
 
 
+def render_comment_link_script(context):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        __M_writer = context.writer()
+        __M_writer('\n<script src="//cdn.muut.com/1/moot.min.js"></script>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 """
 __M_BEGIN_METADATA
-{"uri": "comments_helper_muut.tmpl", "source_encoding": "utf-8", "line_map": {"34": 11, "67": 61, "40": 7, "55": 3, "44": 7, "16": 0, "56": 4, "50": 3, "21": 2, "22": 5, "23": 8, "24": 13, "57": 4, "58": 4, "59": 4, "60": 4, "61": 4, "30": 11}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl"}
+{"line_map": {"48": 4, "34": 7, "67": 61, "40": 3, "45": 3, "46": 4, "47": 4, "16": 0, "49": 4, "50": 4, "51": 4, "21": 2, "22": 5, "23": 8, "24": 13, "57": 11, "61": 11, "30": 7}, "source_encoding": "utf-8", "uri": "comments_helper_muut.tmpl", "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl"}
 __M_END_METADATA
 """

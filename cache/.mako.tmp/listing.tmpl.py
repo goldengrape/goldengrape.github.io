@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513662845.36494
+_modified_time = 1513862317.335451
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/bootstrap3/templates/listing.tmpl'
 _template_uri = 'listing.tmpl'
@@ -32,17 +32,17 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'ui')._populate(_import_ns, ['bar'])
-        code = _import_ns.get('code', context.get('code', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
-        files = _import_ns.get('files', context.get('files', UNDEFINED))
-        source_link = _import_ns.get('source_link', context.get('source_link', UNDEFINED))
         crumbs = _import_ns.get('crumbs', context.get('crumbs', UNDEFINED))
+        source_link = _import_ns.get('source_link', context.get('source_link', UNDEFINED))
+        code = _import_ns.get('code', context.get('code', UNDEFINED))
         messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        ui = _mako_get_namespace(context, 'ui')
+        folders = _import_ns.get('folders', context.get('folders', UNDEFINED))
         def sourcelink():
             return render_sourcelink(context._locals(__M_locals))
-        folders = _import_ns.get('folders', context.get('folders', UNDEFINED))
-        ui = _mako_get_namespace(context, 'ui')
+        files = _import_ns.get('files', context.get('files', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n')
@@ -66,13 +66,13 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'ui')._populate(_import_ns, ['bar'])
-        code = _import_ns.get('code', context.get('code', UNDEFINED))
         def content():
             return render_content(context)
-        files = _import_ns.get('files', context.get('files', UNDEFINED))
         crumbs = _import_ns.get('crumbs', context.get('crumbs', UNDEFINED))
+        code = _import_ns.get('code', context.get('code', UNDEFINED))
         folders = _import_ns.get('folders', context.get('folders', UNDEFINED))
         ui = _mako_get_namespace(context, 'ui')
+        files = _import_ns.get('files', context.get('files', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer(str(ui.bar(crumbs)))
@@ -106,10 +106,10 @@ def render_sourcelink(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'ui')._populate(_import_ns, ['bar'])
-        source_link = _import_ns.get('source_link', context.get('source_link', UNDEFINED))
         messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def sourcelink():
             return render_sourcelink(context)
+        source_link = _import_ns.get('source_link', context.get('source_link', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         if source_link:
@@ -125,6 +125,6 @@ def render_sourcelink(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "listing.tmpl", "source_encoding": "utf-8", "line_map": {"64": 5, "23": 3, "77": 5, "78": 6, "79": 6, "80": 7, "81": 8, "82": 9, "83": 10, "84": 10, "85": 10, "86": 10, "87": 10, "88": 12, "89": 13, "90": 13, "91": 13, "92": 13, "29": 0, "94": 15, "95": 17, "96": 18, "97": 18, "98": 18, "104": 22, "93": 13, "47": 2, "48": 3, "114": 22, "115": 23, "116": 24, "53": 20, "118": 25, "119": 25, "120": 25, "58": 28, "126": 120, "117": 25}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/bootstrap3/templates/listing.tmpl"}
+{"line_map": {"64": 5, "23": 3, "77": 5, "78": 6, "79": 6, "80": 7, "81": 8, "82": 9, "83": 10, "84": 10, "85": 10, "86": 10, "87": 10, "88": 12, "89": 13, "90": 13, "91": 13, "92": 13, "29": 0, "94": 15, "95": 17, "96": 18, "97": 18, "98": 18, "104": 22, "93": 13, "47": 2, "48": 3, "114": 22, "115": 23, "116": 24, "53": 20, "118": 25, "119": 25, "120": 25, "58": 28, "126": 120, "117": 25}, "source_encoding": "utf-8", "uri": "listing.tmpl", "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/bootstrap3/templates/listing.tmpl"}
 __M_END_METADATA
 """

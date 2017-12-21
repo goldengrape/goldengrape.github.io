@@ -1,12 +1,14 @@
-# Nikola
-.doit.*
-output/
-cache/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Nikola
+.doit.*
+output/
+cache/
 
 # C extensions
 *.so
