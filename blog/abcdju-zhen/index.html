@@ -192,14 +192,14 @@ free\space space\space matrix=\begin{bmatrix} 1 &amp; d \\ 0 &amp; 1 \end{bmatri
 $$</li>
 <li>在球面上折射的矩阵, 如果从n1折射率介质经过半径为R的球面, 折射到n2折射率介质: 
 $$
-curved\space interface\space matrix=\begin{bmatrix} 1 &amp; 0 \\ \frac{(n_1-n_2)}{R} &amp; \frac{n_1}{n_2} \end{bmatrix}
+curved\space interface\space matrix=\begin{bmatrix} 1 &amp; 0 \\ \frac{(n_1-n_2)}{R n_2} &amp; \frac{n_1}{n_2} \end{bmatrix}
 $$</li>
 <li>两者合并是相乘的关系, 注意乘法的顺序, 从右至左应当先经过曲面, 再自由传播: </li>
 </ul>
 $$
 pass\space curved\space interface\space  matrix=
 \begin{bmatrix} 1 &amp; d \\ 0 &amp; 1 \end{bmatrix}
-\begin{bmatrix} 1 &amp; 0 \\ \frac{(n_1-n_2)}{R} &amp; \frac{n_1}{n_2} \end{bmatrix}
+\begin{bmatrix} 1 &amp; 0 \\ \frac{(n_1-n_2)}{R n_2} &amp; \frac{n_1}{n_2} \end{bmatrix}
 $$
 </div>
 </div>
@@ -214,7 +214,7 @@ $$
     <span class="n">abcd_dict</span><span class="o">=</span><span class="p">{</span>
         <span class="s1">'free space'</span><span class="p">:</span>         <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="s1">'flat interface'</span><span class="p">:</span>     <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">],</span>
-        <span class="s1">'curved interface'</span><span class="p">:</span>   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">n2</span><span class="p">)</span><span class="o">/</span><span class="n">R</span><span class="p">,</span> <span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">],</span>
+        <span class="s1">'curved interface'</span><span class="p">:</span>   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">n2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">n2</span><span class="p">),</span> <span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">],</span>
         <span class="s1">'curved mirror'</span><span class="p">:</span>      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="n">R</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="s1">'Thin lens'</span><span class="p">:</span>          <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="s1">'Thin lens in power'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
@@ -471,20 +471,20 @@ $$
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>视网膜上光点距离光轴的距离是: -0.0354462798252967
-入射到视网膜上的角度是: -0.00590726237391153
+<pre>视网膜上光点距离光轴的距离是: -0.0000640808134414472
+入射到视网膜上的角度是: -0.00438892930222859
 
-视网膜上光点距离光轴的距离是: -0.0385011271955388
-入射到视网膜上的角度是: -0.00606136637761817
+视网膜上光点距离光轴的距离是: -0.00244173501856335
+入射到视网膜上的角度是: -0.00450936564030494
 
-视网膜上光点距离光轴的距离是: -0.0426218520656303
-入射到视网膜上的角度是: -0.00626820687627664
+视网膜上光点距离光轴的距离是: -0.00564544009371153
+入射到视网膜上的角度是: -0.00467085240921985
 
-视网膜上光点距离光轴的距离是: -0.0485947264264839
-入射到视网膜上的角度是: -0.00656657870082344
+视网膜上光点距离光轴的距离是: -0.0102850608794442
+入射到视网膜上的角度是: -0.00490361347080649
 
-视网膜上光点距离光轴的距离是: -0.0583915837265135
-入射到视网膜上的角度是: -0.00705352767232732
+视网膜上光点距离光轴的距离是: -0.0178899096062572
+入射到视网膜上的角度是: -0.00528324762831792
 
 </pre>
 </div>
@@ -509,7 +509,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [8]:</div>
+<div class="prompt input_prompt">In [37]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eye_parameters</span><span class="o">=</span><span class="n">Accommodation_state</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -520,7 +520,7 @@ $$
 <span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">output_light</span><span class="o">=</span><span class="n">eye_matrix</span><span class="o">*</span><span class="n">input_light</span>
 
-<span class="n">solve</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">symbols</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"视网膜位置在: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">solve</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">symbols</span><span class="p">(</span><span class="n">x</span><span class="p">))[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -533,15 +533,13 @@ $$
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt"></div>
 
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[18.3995419905777]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>视网膜位置在: 24.3853994427731
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -553,10 +551,85 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>呵呵, 好尴尬, 貌似哪里错了</p>
+<h2 id="戴上眼镜">戴上眼镜<a class="anchor-link" href=".#%E6%88%B4%E4%B8%8A%E7%9C%BC%E9%95%9C">¶</a>
+</h2>
+<p>眼镜认为是薄透镜, 角膜距离眼镜12mm</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'f d'</span><span class="p">)</span>
+<span class="n">glass_matrix</span><span class="o">=</span><span class="n">ABCD</span><span class="p">(</span><span class="s1">'free space'</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span> <span class="n">ABCD</span><span class="p">(</span><span class="s1">'Thin lens'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">glass_matrix</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Matrix([[1 - 12/f, 12], [-1/f, 1]])
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [29]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eye_parameters</span><span class="o">=</span><span class="n">Accommodation_state</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="s2">"p_retina"</span>
+<span class="n">eye_parameters</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="mf">25.6</span>
+<span class="n">eye_matrix</span><span class="o">=</span><span class="n">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">)</span>
+
+<span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">output_light</span><span class="o">=</span><span class="n">eye_matrix</span><span class="o">*</span><span class="n">glass_matrix</span><span class="o">*</span><span class="n">input_light</span>
+
+<span class="n">power</span><span class="o">=</span><span class="mi">1000</span><span class="o">/</span><span class="n">solve</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">f</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"眼镜屈光度=</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">power</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>眼镜屈光度=-3.08997137454269
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
