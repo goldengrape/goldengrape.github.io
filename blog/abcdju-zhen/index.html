@@ -184,8 +184,23 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="ABCD-Matrix">ABCD Matrix<a class="anchor-link" href=".#ABCD-Matrix">¶</a>
 </h2>
-<p>内置上常用的参数字典</p>
-
+<p>内置上常用的参数字典, 其实最常用的也就是在自由空间内传播, 和在球面上折射, 而这两者可以合并成在球面上折射然后再传播一段距离.</p>
+<ul>
+<li>在自由空间传播距离为d的矩阵是: 
+$$
+free\space space\space matrix=\begin{bmatrix} 1 &amp; d \\ 0 &amp; 1 \end{bmatrix}
+$$</li>
+<li>在球面上折射的矩阵, 如果从n1折射率介质经过半径为R的球面, 折射到n2折射率介质: 
+$$
+curved\space interface\space matrix=\begin{bmatrix} 1 &amp; 0 \\ \frac{(n_1-n_2)}{R} &amp; \frac{n_1}{n_2} \end{bmatrix}
+$$</li>
+<li>两者合并是相乘的关系, 注意乘法的顺序: 
+$$
+pass\space curved\space interface\space  matrix=
+\begin{bmatrix} 1 &amp; 0 \\ \frac{(n_1-n_2)}{R} &amp; \frac{n_1}{n_2} \end{bmatrix}
+\begin{bmatrix} 1 &amp; d \\ 0 &amp; 1 \end{bmatrix}
+$$</li>
+</ul>
 </div>
 </div>
 </div>
@@ -206,11 +221,15 @@ $$</p>
     <span class="p">}</span>
     <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">abcd_dict</span><span class="p">[</span><span class="n">dictname</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">Matrix</span><span class="p">([[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">],[</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">]])</span>
+
 <span class="k">def</span> <span class="nf">free_space</span><span class="p">(</span><span class="n">d_inspace</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">ABCD</span><span class="p">(</span><span class="s1">'free space'</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="n">d_inspace</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">curved_interface</span><span class="p">(</span><span class="n">na</span><span class="p">,</span><span class="n">nb</span><span class="p">,</span><span class="n">Rx</span><span class="p">):</span>
     <span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">R</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'n1 n2 R'</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ABCD</span><span class="p">(</span><span class="s1">'curved interface'</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">n1</span><span class="p">,</span><span class="n">na</span><span class="p">),(</span><span class="n">n2</span><span class="p">,</span><span class="n">nb</span><span class="p">),(</span><span class="n">R</span><span class="p">,</span><span class="n">Rx</span><span class="p">)])</span>
+<span class="k">def</span> <span class="nf">pass_curved_interface</span><span class="p">(</span><span class="n">n_from</span><span class="p">,</span><span class="n">n_to</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">p_from</span><span class="p">,</span> <span class="n">p_to</span><span class="p">):</span>
+    <span class="n">transfer_matrix</span> <span class="o">=</span> <span class="n">free_space</span><span class="p">(</span><span class="n">p_to</span><span class="o">-</span><span class="n">p_from</span><span class="p">)</span> <span class="o">*</span> <span class="n">curved_interface</span><span class="p">(</span><span class="n">n_from</span><span class="p">,</span><span class="n">n_to</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">transfer_matrix</span>
 </pre></div>
 
 </div>
@@ -225,57 +244,90 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="基础人眼模型">基础人眼模型<a class="anchor-link" href=".#%E5%9F%BA%E7%A1%80%E4%BA%BA%E7%9C%BC%E6%A8%A1%E5%9E%8B">¶</a>
 </h2>
+<h3 id="The-Gullstrand-Schematic-Eye">The Gullstrand Schematic Eye<a class="anchor-link" href=".#The-Gullstrand-Schematic-Eye">¶</a>
+</h3>
+<p>数据来自: AAO 2014版 Basic and Clinical Science Course (BCSC) Section 3: Clinical Optics 
+第75页</p>
 <ul>
-<li>CCT: 角膜中央厚度</li>
-<li>AD: 前房深度</li>
-<li>AL: 眼轴长</li>
-<li>LT: 晶体厚度</li>
-<li>VT: 玻璃体厚度</li>
-</ul>
-<p>注意此模型有两个假设:</p>
-<ul>
-<li>假设角膜, 晶状体和玻璃体是均一介质, 折射率不变. 注意实际情况中这个假设在晶状体是不成立的.</li>
-<li>假设角膜前后表面, 晶状体前后表面都是球面, 这个假设也是不成立的</li>
+<li>折射率:<div class="highlight"><pre><span></span><span class="n">n_air</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">n_cornea</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.376</span><span class="p">,</span> <span class="mf">1.376</span><span class="p">]</span>
+<span class="n">n_humor</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.336</span><span class="p">,</span><span class="mf">1.336</span><span class="p">]</span>
+<span class="n">n_vitreous</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.336</span><span class="p">,</span><span class="mf">1.336</span><span class="p">]</span>
+<span class="n">n_lens</span><span class="p">:[</span><span class="mf">1.386</span><span class="p">,</span><span class="mf">1.386</span><span class="p">]</span>
+<span class="n">n_core_lens</span><span class="p">:[</span><span class="mf">1.406</span><span class="p">,</span><span class="mf">1.406</span><span class="p">]</span>
+</pre></div>
+</li>
+<li>
+<p>顶点位置:</p>
+<div class="highlight"><pre><span></span><span class="n">p_cornea_Anterior</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">p_cornea_Posterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">]</span>
+<span class="n">p_lens_Anterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">3.6</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">]</span>
+<span class="n">p_core_lens_Anterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">4.146</span><span class="p">,</span> <span class="mf">3.8725</span><span class="p">]</span>
+<span class="n">p_core_lens_Posterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.565</span><span class="p">,</span> <span class="mf">6.5275</span><span class="p">]</span>
+<span class="n">p_lens_Posterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.2</span><span class="p">,</span><span class="mf">7.2</span><span class="p">]</span>
+<span class="n">p_retina</span><span class="p">:</span> <span class="p">[</span><span class="mf">24.4</span><span class="p">,</span> <span class="mf">24.4</span><span class="p">]</span>
+</pre></div>
+</li>
+<li>
+<p>曲率半径:</p>
+<div class="highlight"><pre><span></span><span class="n">R_cornea_Anterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.7</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">]</span>
+<span class="n">R_cornea_Posterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.8</span><span class="p">,</span> <span class="mf">6.8</span><span class="p">]</span>
+<span class="n">R_lens_Anterior</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mf">5.33</span><span class="p">]</span>
+<span class="n">R_core_lens_Anterior</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.911</span><span class="p">,</span> <span class="mf">2.655</span><span class="p">]</span>
+<span class="n">R_core_lens_Posterior</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">5.76</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.655</span><span class="p">]</span>
+<span class="n">R_lens_Posterior</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.33</span><span class="p">]</span>
+</pre></div>
+</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">human_eye_basic</span><span class="p">(</span><span class="n">x_input</span><span class="p">,</span><span class="n">theta_input</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Gullstrand_Schematic_Eye_Tranfer_Matrix</span><span class="p">():</span>
+    <span class="n">n_air</span><span class="p">,</span> <span class="n">n_cornea</span><span class="p">,</span><span class="n">n_humor</span><span class="p">,</span> <span class="n">n_vitreous</span><span class="p">,</span> <span class="n">n_lens</span><span class="p">,</span> <span class="n">n_core_lens</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span>
+    <span class="s1">'n_air n_cornea n_humor n_vitreous n_lens n_core_lens'</span><span class="p">)</span>
+    <span class="n">p_cornea_Anterior</span><span class="p">,</span><span class="n">p_cornea_Posterior</span><span class="p">,</span><span class="n">p_lens_Anterior</span><span class="p">,</span><span class="n">p_core_lens_Anterior</span><span class="p">,</span><span class="n">p_core_lens_Posterior</span><span class="p">,</span><span class="n">p_lens_Posterior</span><span class="p">,</span><span class="n">p_retina</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span>
+    <span class="s1">'p_cornea_Anterior p_cornea_Posterior p_lens_Anterior p_core_lens_Anterior p_core_lens_Posterior p_lens_Posterior p_retina'</span><span class="p">)</span>
+    <span class="n">R_cornea_Anterior</span><span class="p">,</span><span class="n">R_cornea_Posterior</span><span class="p">,</span><span class="n">R_lens_Anterior</span><span class="p">,</span><span class="n">R_core_lens_Anterior</span><span class="p">,</span><span class="n">R_core_lens_Posterior</span><span class="p">,</span><span class="n">R_lens_Posterior</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span>
+    <span class="s1">'R_cornea_Anterior R_cornea_Posterior R_lens_Anterior R_core_lens_Anterior R_core_lens_Posterior R_lens_Posterior'</span><span class="p">)</span>
+    
     <span class="n">d</span><span class="p">,</span><span class="n">n1</span><span class="p">,</span><span class="n">n2</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">f</span><span class="p">,</span><span class="n">p</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'d n1 n2 R f p'</span><span class="p">)</span>
-    <span class="n">CCT</span><span class="p">,</span><span class="n">AD</span><span class="p">,</span><span class="n">K1</span><span class="p">,</span><span class="n">K2</span><span class="p">,</span><span class="n">LT</span><span class="p">,</span><span class="n">VT</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'CCT AD K1 K2 LT VT'</span><span class="p">)</span>
-    <span class="n">n_cornea</span><span class="p">,</span> <span class="n">n_humor</span><span class="p">,</span> <span class="n">n_lens</span><span class="p">,</span> <span class="n">n_vitreous</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'n_cornea n_humor n_lens n_vitreous'</span><span class="p">)</span>
-    <span class="n">R_cornea_front</span><span class="p">,</span><span class="n">R_cornea_back</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'R_cornea_front R_cornea_back '</span><span class="p">)</span>
-    <span class="n">R_lens_front</span><span class="p">,</span><span class="n">R_lens_back</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'R_lens_front R_lens_back'</span><span class="p">)</span>
+    <span class="n">cornea_Anterior</span><span class="o">=</span><span class="n">pass_curved_interface</span><span class="p">(</span>
+        <span class="n">n_air</span><span class="p">,</span><span class="n">n_cornea</span><span class="p">,</span>
+        <span class="n">R_cornea_Anterior</span><span class="p">,</span>
+        <span class="n">p_cornea_Anterior</span><span class="p">,</span> <span class="n">p_cornea_Posterior</span><span class="p">)</span>
+    <span class="n">cornea_Posterior</span><span class="o">=</span><span class="n">pass_curved_interface</span><span class="p">(</span>
+        <span class="n">n_cornea</span><span class="p">,</span><span class="n">n_humor</span><span class="p">,</span>
+        <span class="n">R_cornea_Posterior</span><span class="p">,</span>
+        <span class="n">p_cornea_Posterior</span><span class="p">,</span><span class="n">p_lens_Anterior</span><span class="p">)</span>
+    <span class="n">lens_Anterior</span><span class="o">=</span> <span class="n">pass_curved_interface</span><span class="p">(</span>
+        <span class="n">n_humor</span><span class="p">,</span><span class="n">n_lens</span><span class="p">,</span>
+        <span class="n">R_lens_Anterior</span><span class="p">,</span>
+        <span class="n">p_lens_Anterior</span><span class="p">,</span><span class="n">p_core_lens_Anterior</span><span class="p">)</span>
+    <span class="n">core_lens_Anterior</span><span class="o">=</span><span class="n">pass_curved_interface</span><span class="p">(</span>
+        <span class="n">n_lens</span><span class="p">,</span><span class="n">n_core_lens</span><span class="p">,</span>
+        <span class="n">R_core_lens_Anterior</span><span class="p">,</span>
+        <span class="n">p_core_lens_Anterior</span><span class="p">,</span> <span class="n">p_core_lens_Posterior</span><span class="p">)</span>
+    <span class="n">core_lens_Posterior</span><span class="o">=</span><span class="n">pass_curved_interface</span><span class="p">(</span>
+        <span class="n">n_core_lens</span><span class="p">,</span><span class="n">n_lens</span><span class="p">,</span>
+        <span class="n">R_core_lens_Posterior</span><span class="p">,</span>
+        <span class="n">p_core_lens_Posterior</span><span class="p">,</span><span class="n">p_lens_Posterior</span><span class="p">)</span>
+    <span class="n">lens_Posterior</span><span class="o">=</span> <span class="n">pass_curved_interface</span><span class="p">(</span>
+        <span class="n">n_lens</span><span class="p">,</span><span class="n">n_vitreous</span><span class="p">,</span>
+        <span class="n">R_lens_Posterior</span><span class="p">,</span>
+        <span class="n">p_lens_Posterior</span><span class="p">,</span><span class="n">p_retina</span><span class="p">)</span>
     
-    <span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="n">x_input</span><span class="p">,</span><span class="n">theta_input</span><span class="p">])</span>
-    <span class="n">pass_cornea_front</span><span class="o">=</span><span class="n">curved_interface</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">n_cornea</span><span class="p">,</span><span class="n">R_cornea_front</span><span class="p">)</span> 
-    
-    <span class="n">to_cornea_back</span><span class="o">=</span><span class="n">free_space</span><span class="p">(</span><span class="n">CCT</span><span class="p">)</span> 
-    <span class="n">pass_cornea_back</span><span class="o">=</span><span class="n">curved_interface</span><span class="p">(</span><span class="n">n_cornea</span><span class="p">,</span><span class="n">n_humor</span><span class="p">,</span><span class="n">R_cornea_back</span><span class="p">)</span>
-    
-    <span class="n">to_lens_front</span><span class="o">=</span><span class="n">free_space</span><span class="p">(</span><span class="n">AD</span><span class="p">)</span>
-    <span class="n">pass_lens_front</span><span class="o">=</span><span class="n">curved_interface</span><span class="p">(</span><span class="n">n_humor</span><span class="p">,</span><span class="n">n_lens</span><span class="p">,</span><span class="n">R_lens_front</span><span class="p">)</span>
-    
-    <span class="n">to_lens_back</span><span class="o">=</span><span class="n">free_space</span><span class="p">(</span><span class="n">LT</span><span class="p">)</span>
-    <span class="n">pass_lens_back</span><span class="o">=</span><span class="n">curved_interface</span><span class="p">(</span><span class="n">n_lens</span><span class="p">,</span><span class="n">n_vitreous</span><span class="p">,</span><span class="n">R_lens_back</span><span class="p">)</span>
-    
-    <span class="n">to_retina</span><span class="o">=</span><span class="n">free_space</span><span class="p">(</span><span class="n">VT</span><span class="p">)</span>
-    
-    <span class="n">last</span> <span class="o">=</span>  <span class="n">to_retina</span> <span class="o">*</span> \
-            <span class="n">pass_lens_back</span> <span class="o">*</span> \
-            <span class="n">to_lens_back</span> <span class="o">*</span> \
-            <span class="n">pass_lens_front</span> <span class="o">*</span> \
-            <span class="n">to_lens_front</span> <span class="o">*</span> \
-            <span class="n">pass_cornea_back</span> <span class="o">*</span> \
-            <span class="n">to_cornea_back</span> <span class="o">*</span> \
-            <span class="n">pass_cornea_front</span> <span class="o">*</span> \
-            <span class="n">input_light</span>
-    <span class="k">return</span> <span class="n">last</span>
+    <span class="n">eye_transfer_matrix</span><span class="o">=</span><span class="n">lens_Posterior</span><span class="o">*</span> \
+                        <span class="n">core_lens_Posterior</span><span class="o">*</span> \
+                        <span class="n">core_lens_Anterior</span><span class="o">*</span> \
+                        <span class="n">lens_Anterior</span><span class="o">*</span> \
+                        <span class="n">cornea_Posterior</span><span class="o">*</span> \
+                        <span class="n">cornea_Anterior</span>
+    <span class="k">return</span> <span class="n">eye_transfer_matrix</span>
 </pre></div>
 
 </div>
@@ -283,13 +335,133 @@ $$</p>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Gullstrand_Schematic_Eye具体参数">Gullstrand_Schematic_Eye具体参数<a class="anchor-link" href=".#Gullstrand_Schematic_Eye%E5%85%B7%E4%BD%93%E5%8F%82%E6%95%B0">¶</a>
+</h3>
+<p>每个项目有两个参数, 前者是调节放松状态, 后者是最大调节状态</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [4]:</div>
+<div class="prompt input_prompt">In [41]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x_output</span><span class="p">,</span><span class="n">theta_output</span><span class="o">=</span><span class="n">human_eye_basic</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x_output</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">Gullstrand_Schematic_Eye_parameters</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"n_air"</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="s2">"n_cornea"</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.376</span><span class="p">,</span> <span class="mf">1.376</span><span class="p">],</span>
+    <span class="s2">"n_humor"</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.336</span><span class="p">,</span><span class="mf">1.336</span><span class="p">],</span>
+    <span class="s2">"n_vitreous"</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.336</span><span class="p">,</span><span class="mf">1.336</span><span class="p">],</span>
+    <span class="s2">"n_lens"</span><span class="p">:[</span><span class="mf">1.386</span><span class="p">,</span><span class="mf">1.386</span><span class="p">],</span>
+    <span class="s2">"n_core_lens"</span><span class="p">:[</span><span class="mf">1.406</span><span class="p">,</span><span class="mf">1.406</span><span class="p">],</span>
+    <span class="s2">"p_cornea_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+    <span class="s2">"p_cornea_Posterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.5</span><span class="p">,</span><span class="mf">0.5</span><span class="p">],</span>
+    <span class="s2">"p_lens_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">3.6</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">],</span>
+    <span class="s2">"p_core_lens_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">4.146</span><span class="p">,</span> <span class="mf">3.8725</span><span class="p">],</span>
+    <span class="s2">"p_core_lens_Posterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.565</span><span class="p">,</span> <span class="mf">6.5275</span><span class="p">],</span>
+    <span class="s2">"p_lens_Posterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.2</span><span class="p">,</span><span class="mf">7.2</span><span class="p">],</span>
+    <span class="s2">"p_retina"</span><span class="p">:</span> <span class="p">[</span><span class="mf">24.4</span><span class="p">,</span> <span class="mf">24.4</span><span class="p">],</span>
+    <span class="s2">"R_cornea_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.7</span><span class="p">,</span> <span class="mf">7.7</span><span class="p">],</span>
+    <span class="s2">"R_cornea_Posterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">6.8</span><span class="p">,</span> <span class="mf">6.8</span><span class="p">],</span>
+    <span class="s2">"R_lens_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mf">5.33</span><span class="p">],</span>
+    <span class="s2">"R_core_lens_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="mf">7.911</span><span class="p">,</span> <span class="mf">2.655</span><span class="p">],</span>
+    <span class="s2">"R_core_lens_Posterior"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">5.76</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.655</span><span class="p">],</span>
+    <span class="s2">"R_lens_Posterior"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">6.0</span><span class="p">,</span> <span class="o">-</span><span class="mf">5.33</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="调节状态">调节状态<a class="anchor-link" href=".#%E8%B0%83%E8%8A%82%E7%8A%B6%E6%80%81">¶</a>
+</h3>
+<p>假定调节状态是各个参数的线性变化</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [42]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Accommodation_state</span><span class="p">(</span><span class="n">persentage</span><span class="p">):</span>
+    <span class="n">state</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="n">persentage</span><span class="o">*</span><span class="p">(</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> 
+        <span class="nb">zip</span><span class="p">(</span><span class="n">Gullstrand_Schematic_Eye_parameters</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span>
+            <span class="n">Gullstrand_Schematic_Eye_parameters</span><span class="o">.</span><span class="n">values</span><span class="p">())}</span>
+    <span class="k">return</span> <span class="n">state</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="代入参数">代入参数<a class="anchor-link" href=".#%E4%BB%A3%E5%85%A5%E5%8F%82%E6%95%B0">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [47]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">Accommodation</span><span class="p">):</span>
+    <span class="n">eye_parameters</span><span class="o">=</span><span class="n">Accommodation_state</span><span class="p">(</span><span class="n">Accommodation</span><span class="p">)</span>
+    <span class="n">eye_matrix</span><span class="o">=</span><span class="n">Gullstrand_Schematic_Eye_Tranfer_Matrix</span><span class="p">()</span>
+    <span class="n">subslist</span><span class="o">=</span><span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">eye_parameters</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">eye_parameters</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
+    <span class="n">eye_matrix</span><span class="o">=</span><span class="n">eye_matrix</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subslist</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">eye_matrix</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="测试">测试<a class="anchor-link" href=".#%E6%B5%8B%E8%AF%95">¶</a>
+</h3>
+<p>假定调节状态从0到1, 以0.2变化, 其中调节状态=0是调节放松照台, 调节状态=1是最大调节状态.</p>
+<p>入射光从光轴旁0.001m,平行于光轴入射.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [48]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">0.2</span><span class="p">):</span>
+    <span class="n">e_matrix</span><span class="o">=</span><span class="n">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">output_light</span><span class="o">=</span><span class="n">e_matrix</span><span class="o">*</span><span class="n">input_light</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"视网膜上光点距离光轴的距离是: </span><span class="si">{0}</span><span class="se">\n</span><span class="s2">入射到视网膜上的角度是: </span><span class="si">{1}</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">output_light</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
 </pre></div>
 
 </div>
@@ -306,7 +478,21 @@ $$</p>
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1 + (n_humor - n_lens)*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/R_lens_front + VT*(n_lens - n_vitreous)/R_lens_back + (-n_cornea + 1)*(CCT*(1 + (n_humor - n_lens)*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/R_lens_front + VT*(n_lens - n_vitreous)/R_lens_back + (n_cornea - n_humor)*(AD*(1 + (n_humor - n_lens)*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/R_lens_front + VT*(n_lens - n_vitreous)/R_lens_back) + n_humor*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/n_lens)/R_cornea_back) + n_cornea*(AD*(1 + (n_humor - n_lens)*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/R_lens_front + VT*(n_lens - n_vitreous)/R_lens_back) + n_humor*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/n_lens)/n_humor)/R_cornea_front + (n_cornea - n_humor)*(AD*(1 + (n_humor - n_lens)*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/R_lens_front + VT*(n_lens - n_vitreous)/R_lens_back) + n_humor*(LT*(1 + VT*(n_lens - n_vitreous)/R_lens_back) + VT*n_lens/n_vitreous)/n_lens)/R_cornea_back
+<pre>视网膜上光点距离光轴的距离是: -0.000354462798252968
+入射到视网膜上的角度是: -0.0000590726237391154
+
+视网膜上光点距离光轴的距离是: -0.000378208760520101
+入射到视网膜上的角度是: -0.0000602711616871547
+
+视网膜上光点距离光轴的距离是: -0.000408088620938796
+入射到视网膜上的角度是: -0.0000617732569824535
+
+视网膜上光点距离光轴的距离是: -0.000447205478612823
+入射到视网膜上的角度是: -0.0000637320962204043
+
+视网膜上光点距离光轴的距离是: -0.000501435705519647
+入射到视网膜上的角度是: -0.0000664374131530516
+
 </pre>
 </div>
 </div>
@@ -314,16 +500,6 @@ $$</p>
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>看着超长的公式好有趣</p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
