@@ -30,8 +30,12 @@
   <lastmod>2017-12-19T03:55:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/ophthalmology.xml</loc>
+  <lastmod>2017-12-21T17:53:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/python.xml</loc>
-  <lastmod>2017-12-21T13:17:00Z</lastmod>
+  <lastmod>2017-12-21T17:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml</loc>
@@ -43,10 +47,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2017-12-21T13:17:00Z</lastmod>
+  <lastmod>2017-12-21T17:53:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2017-12-21T13:49:00Z</lastmod>
+  <lastmod>2017-12-21T17:53:00Z</lastmod>
  </sitemap>
 </sitemapindex>
