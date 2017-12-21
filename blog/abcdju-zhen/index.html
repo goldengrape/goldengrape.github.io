@@ -11,7 +11,19 @@
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
 <link rel="canonical" href="https://goldengrape.github.io/blog/abcdju-zhen/">
-<!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
 <link rel="prev" href="../ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/" title="机器学习的战略(6)--end to end" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="ABCD矩阵">
@@ -20,12 +32,12 @@
 
 光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:
 
-入射光线距离光轴是x1, 角度是$\theta_1$, 
-出射光线距离光轴是x2, 角度是$\theta_2$,
+入射光线距离光轴是x1, 角度是 θ1,  
+出射光线距离光轴是x2, 角度是 θ2,
 
 那么: 
 $$
-\begin{bmatrix}x_2\\ \theta_2 \end{bmatrix} = \begin{bmatrix}A &amp; B ">
+\begin{bmatrix}x_2\\ \theta_2 \end{bmatrix} = \begin{bmatrix}A &amp; B \\C &amp; D \end{">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-12-21T21:07:03+08:00">
 <meta property="article:tag" content="python">
@@ -124,8 +136,8 @@ $$
 <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""></p>
 <p>光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:</p>
 <ul>
-<li>入射光线距离光轴是x1, 角度是$\theta_1$, </li>
-<li>出射光线距离光轴是x2, 角度是$\theta_2$,</li>
+<li>入射光线距离光轴是x1, 角度是 θ1,  </li>
+<li>出射光线距离光轴是x2, 角度是 θ2,</li>
 </ul>
 <p>那么: 
 $$
