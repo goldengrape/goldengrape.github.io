@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog for GoldenGrape</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 21 Dec 2017 16:18:20 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/blog/abcdju-zhen/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog for GoldenGrape</description><atom:link type="application/rss+xml" rel="self" href="https://goldengrape.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Thu, 21 Dec 2017 17:22:58 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/blog/abcdju-zhen/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="光线传输矩阵"&gt;光线传输矩阵&lt;a class="anchor-link" href="https://goldengrape.github.io/blog/abcdju-zhen/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;又称做&lt;a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis"&gt;ABCD矩阵&lt;/a&gt; 用来描述近轴光线的传播过程.&lt;/p&gt;
+&lt;h2 id="光线传输矩阵"&gt;光线传输矩阵&lt;a class="anchor-link" href="https://goldengrape.github.io/blog/abcdju-zhen/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是一次sympy的小练习.&lt;/p&gt;
+&lt;p&gt;光线传输矩阵又称做&lt;a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis"&gt;ABCD矩阵&lt;/a&gt; 用来描述近轴光线的传播过程.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:&lt;/p&gt;
 &lt;ul&gt;
