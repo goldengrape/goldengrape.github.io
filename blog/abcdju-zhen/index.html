@@ -160,8 +160,25 @@ $$</p>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Sympy基本">Sympy基本<a class="anchor-link" href=".#Sympy%E5%9F%BA%E6%9C%AC">¶</a>
 </h2>
-<p>sympy是python库, 用于符号计算, 轻量级, 不依赖于其他库.</p>
-
+<p>sympy是python库, 用于符号计算, 轻量级, 不依赖于其他库. 符号计算就是做类似于
+$$
+(x+y)^2 = x^2 +2xy+ y^2
+$$</p>
+<p>试了一下sympy, 看起来还比较容易, 几个要点:</p>
+<ul>
+<li>要把运算中涉及到的符号先定义好, 例如 <code>x,y = symbols('a b')</code>
+</li>
+<li>要注意一下大小写, symbols是小写, Matrix是大写, solve是小写</li>
+<li>其他没什么了</li>
+</ul>
+<p>我平时常用的几个函数也不多, 其实在mathematica里面也就常用这些.</p>
+<ul>
+<li>symbols(字符串), 字符串里面是符号, 注意用空格隔开</li>
+<li>expr.subs(字典), 替换, 相当于mathematica里面的expr/.{x-&gt;a}</li>
+<li>Matrix(list), 把一个list转换成矩阵, 向量也用这个表示. </li>
+<li>solve(expr,x), 求解expr==0时, x的解</li>
+<li>simplify(expr), 化简表达式</li>
+</ul>
 </div>
 </div>
 </div>
@@ -628,7 +645,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [33]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">IOL_Eye</span><span class="p">(</span><span class="n">IOL_eye_parameters</span><span class="p">):</span>
@@ -674,7 +691,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [35]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">IOL_eye_parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -699,7 +716,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [36]:</div>
+<div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># IOL_eye_parameters['ELP']=symbols('ELP')</span>
