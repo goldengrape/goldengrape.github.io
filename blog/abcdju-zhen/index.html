@@ -218,7 +218,7 @@ $$
         <span class="s1">'curved interface'</span><span class="p">:</span>   <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="n">n1</span><span class="o">-</span><span class="n">n2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">R</span><span class="o">*</span><span class="n">n2</span><span class="p">),</span> <span class="n">n1</span><span class="o">/</span><span class="n">n2</span><span class="p">],</span>
         <span class="s1">'curved mirror'</span><span class="p">:</span>      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">/</span><span class="n">R</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
         <span class="s1">'Thin lens'</span><span class="p">:</span>          <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">f</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
-        <span class="s1">'Thin lens in power'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+        <span class="s1">'Thin lens in power'</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="n">p</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
     <span class="p">}</span>
     <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="o">=</span><span class="n">abcd_dict</span><span class="p">[</span><span class="n">dictname</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">Matrix</span><span class="p">([[</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">],[</span><span class="n">c</span><span class="p">,</span><span class="n">d</span><span class="p">]])</span>
@@ -233,6 +233,9 @@ $$
     <span class="n">n_from</span><span class="p">,</span><span class="n">n_to</span><span class="p">,</span><span class="n">R</span><span class="p">,</span><span class="n">p_from</span><span class="p">,</span> <span class="n">p_to</span><span class="o">=</span><span class="n">surface_parameters</span>
     <span class="n">transfer_matrix</span> <span class="o">=</span><span class="n">free_space</span><span class="p">(</span><span class="n">p_to</span><span class="o">-</span><span class="n">p_from</span><span class="p">)</span> <span class="o">*</span> <span class="n">curved_interface</span><span class="p">(</span><span class="n">n_from</span><span class="p">,</span><span class="n">n_to</span><span class="p">,</span><span class="n">R</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">transfer_matrix</span>
+<span class="k">def</span> <span class="nf">Thin_lens_in_power</span><span class="p">(</span><span class="n">power</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'p'</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ABCD</span><span class="p">(</span><span class="s2">"Thin lens in power"</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">p</span><span class="p">,</span><span class="n">power</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -290,7 +293,7 @@ $$
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Gullstrand_Schematic_Eye_Tranfer_Matrix</span><span class="p">():</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">):</span>
     
     <span class="c1"># 需要定义成符号</span>
     <span class="n">n_air</span><span class="p">,</span> <span class="n">n_cornea</span><span class="p">,</span><span class="n">n_humor</span><span class="p">,</span> <span class="n">n_vitreous</span><span class="p">,</span> <span class="n">n_lens</span><span class="p">,</span> <span class="n">n_core_lens</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span>
@@ -321,7 +324,7 @@ $$
         <span class="n">m</span> <span class="o">=</span> <span class="n">pass_curved_interface</span><span class="p">(</span><span class="n">surface</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
         <span class="n">eye_transfer_matrix</span><span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">eye_transfer_matrix</span>
     
-    <span class="k">return</span> <span class="n">eye_transfer_matrix</span>
+    <span class="k">return</span> <span class="n">eye_transfer_matrix</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -409,33 +412,6 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="代入参数">代入参数<a class="anchor-link" href=".#%E4%BB%A3%E5%85%A5%E5%8F%82%E6%95%B0">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">):</span>
-    <span class="n">eye_matrix</span><span class="o">=</span><span class="n">Gullstrand_Schematic_Eye_Tranfer_Matrix</span><span class="p">()</span>
-    <span class="n">subslist</span><span class="o">=</span><span class="p">[(</span><span class="n">k</span><span class="p">,</span><span class="n">eye_parameters</span><span class="p">[</span><span class="n">k</span><span class="p">])</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">eye_parameters</span><span class="o">.</span><span class="n">keys</span><span class="p">()]</span>
-    <span class="n">eye_matrix</span><span class="o">=</span><span class="n">eye_matrix</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subslist</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">eye_matrix</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="测试">测试<a class="anchor-link" href=".#%E6%B5%8B%E8%AF%95">¶</a>
 </h3>
 <p>假定调节状态从0到1, 以0.2变化, 其中调节状态=0是调节放松, 调节状态=1是最大调节状态.</p>
@@ -446,7 +422,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [7]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -472,13 +448,13 @@ $$
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>视网膜上光点距离光轴的距离是: -0.0000640808134414472
+<pre>视网膜上光点距离光轴的距离是: -0.0000640808134414250
 入射到视网膜上的角度是: -0.00438892930222859
 
-视网膜上光点距离光轴的距离是: -0.00244173501856335
+视网膜上光点距离光轴的距离是: -0.00244173501856344
 入射到视网膜上的角度是: -0.00450936564030494
 
-视网膜上光点距离光轴的距离是: -0.00564544009371153
+视网膜上光点距离光轴的距离是: -0.00564544009371146
 入射到视网膜上的角度是: -0.00467085240921985
 
 视网膜上光点距离光轴的距离是: -0.0102850608794442
@@ -510,18 +486,35 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [37]:</div>
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">solve_x_in_focus</span><span class="p">(</span><span class="n">optic_matrix</span><span class="p">,</span><span class="n">parameters</span><span class="p">,</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">parameters</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="c1"># 因为使用近轴光线假设, 所以并不存在球差, </span>
+    <span class="c1"># 所以输入光线平行于光轴都可以汇聚, 于输入光线位置无关</span>
+    <span class="n">x_input</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'x_input'</span><span class="p">)</span>
+    <span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="n">x_input</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">output_light</span><span class="o">=</span><span class="n">optic_matrix</span><span class="p">(</span><span class="n">parameters</span><span class="p">)</span><span class="o">*</span><span class="n">input_light</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">solve</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">symbols</span><span class="p">(</span><span class="n">x</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">result</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">eye_parameters</span><span class="o">=</span><span class="n">Accommodation_state</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">x</span><span class="o">=</span><span class="s2">"p_retina"</span>
-<span class="n">eye_parameters</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">eye_matrix</span><span class="o">=</span><span class="n">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">)</span>
+<span class="n">p_retina</span> <span class="o">=</span> <span class="n">solve_x_in_focus</span><span class="p">(</span><span class="n">Gullstrand_Schematic_Eye</span><span class="p">,</span><span class="n">eye_parameters</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 
-<span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">output_light</span><span class="o">=</span><span class="n">eye_matrix</span><span class="o">*</span><span class="n">input_light</span>
-
-<span class="nb">print</span><span class="p">(</span><span class="s2">"视网膜位置在: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">solve</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">symbols</span><span class="p">(</span><span class="n">x</span><span class="p">))[</span><span class="mi">0</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"视网膜位置在: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">p_retina</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -561,51 +554,28 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [13]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">f</span><span class="p">,</span> <span class="n">d</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">'f d'</span><span class="p">)</span>
-<span class="n">glass_matrix</span><span class="o">=</span><span class="n">ABCD</span><span class="p">(</span><span class="s1">'free space'</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">d</span><span class="p">,</span><span class="mi">12</span><span class="p">)</span><span class="o">*</span> <span class="n">ABCD</span><span class="p">(</span><span class="s1">'Thin lens'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">glass_matrix</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># f, d = symbols('f d')</span>
+<span class="n">glasses_matrix</span><span class="o">=</span><span class="n">free_space</span><span class="p">(</span><span class="mi">12</span><span class="p">)</span> <span class="o">*</span> <span class="n">ABCD</span><span class="p">(</span><span class="s1">'Thin lens in power'</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">Gullstrand_Schematic_Eye_wear_glasses</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">)</span><span class="o">*</span><span class="n">glasses_matrix</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Matrix([[1 - 12/f, 12], [-1/f, 1]])
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [29]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eye_parameters</span><span class="o">=</span><span class="n">Accommodation_state</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">x</span><span class="o">=</span><span class="s2">"p_retina"</span>
-<span class="n">eye_parameters</span><span class="p">[</span><span class="n">x</span><span class="p">]</span><span class="o">=</span><span class="mf">25.6</span>
-<span class="n">eye_matrix</span><span class="o">=</span><span class="n">Gullstrand_Schematic_Eye</span><span class="p">(</span><span class="n">eye_parameters</span><span class="p">)</span>
-
-<span class="n">input_light</span><span class="o">=</span><span class="n">Matrix</span><span class="p">([</span><span class="mf">0.001</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
-<span class="n">output_light</span><span class="o">=</span><span class="n">eye_matrix</span><span class="o">*</span><span class="n">glass_matrix</span><span class="o">*</span><span class="n">input_light</span>
-
-<span class="n">power</span><span class="o">=</span><span class="mi">1000</span><span class="o">/</span><span class="n">solve</span><span class="p">(</span><span class="n">output_light</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">f</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">eye_wear_glasses_parameters</span><span class="o">=</span><span class="n">Accommodation_state</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">eye_wear_glasses_parameters</span><span class="p">[</span><span class="s2">"p_retina"</span><span class="p">]</span><span class="o">=</span><span class="mf">25.6</span>
+<span class="n">power</span><span class="o">=</span><span class="n">solve_x_in_focus</span><span class="p">(</span><span class="n">Gullstrand_Schematic_Eye_wear_glasses</span><span class="p">,</span><span class="n">eye_wear_glasses_parameters</span><span class="p">,</span><span class="s1">'p'</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"眼镜屈光度=</span><span class="si">{}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">power</span><span class="p">))</span>
 </pre></div>
 
@@ -637,12 +607,130 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>善哉,</p>
-<p>如果再加入IOL的计算部分,  这一篇就可以稍后加入到里面去.</p>
-<p>符号计算也是常用的. 没人愿意手工推导公式吧</p>
+<h2 id="计算人工晶体">计算人工晶体<a class="anchor-link" href=".#%E8%AE%A1%E7%AE%97%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="人工晶体眼">人工晶体眼<a class="anchor-link" href=".#%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93%E7%9C%BC">¶</a>
+</h3>
+<p>人工晶体假定为薄透镜, 所在位置为ELP.</p>
+<p>待调整, 可能需要把角膜两层合成一个K.</p>
+<p>目前结果看起来有点怪异, 一般认为正视眼放入的IOL大约是19-20D, 现在得出的结果有点差得远, 大概什么地方有错误</p>
 
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [33]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">IOL_Eye</span><span class="p">(</span><span class="n">IOL_eye_parameters</span><span class="p">):</span>
+    
+    <span class="c1"># 需要定义成符号</span>
+    <span class="n">n_air</span><span class="p">,</span> <span class="n">n_cornea</span><span class="p">,</span><span class="n">n_humor</span><span class="p">,</span> <span class="n">n_vitreous</span><span class="p">,</span> <span class="n">n_lens</span><span class="p">,</span> <span class="n">n_core_lens</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span>
+    <span class="s1">'n_air n_cornea n_humor n_vitreous n_lens n_core_lens'</span><span class="p">)</span>
+    <span class="n">p_cornea_Anterior</span><span class="p">,</span><span class="n">p_cornea_Posterior</span><span class="p">,</span><span class="n">p_lens_Anterior</span><span class="p">,</span><span class="n">p_core_lens_Anterior</span><span class="p">,</span><span class="n">p_core_lens_Posterior</span><span class="p">,</span><span class="n">p_lens_Posterior</span><span class="p">,</span><span class="n">p_retina</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span>
+    <span class="s1">'p_cornea_Anterior p_cornea_Posterior p_lens_Anterior p_core_lens_Anterior p_core_lens_Posterior p_lens_Posterior p_retina'</span><span class="p">)</span>
+    <span class="n">R_cornea_Anterior</span><span class="p">,</span><span class="n">R_cornea_Posterior</span><span class="p">,</span><span class="n">R_lens_Anterior</span><span class="p">,</span><span class="n">R_core_lens_Anterior</span><span class="p">,</span><span class="n">R_core_lens_Posterior</span><span class="p">,</span><span class="n">R_lens_Posterior</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span>
+    <span class="s1">'R_cornea_Anterior R_cornea_Posterior R_lens_Anterior R_core_lens_Anterior R_core_lens_Posterior R_lens_Posterior'</span><span class="p">)</span>
+    <span class="n">ELP</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'ELP'</span><span class="p">)</span>
+    <span class="n">IOL_Power</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s1">'IOL_Power'</span><span class="p">)</span>
+    <span class="c1"># 对各个曲面的参数定义: 入射介质折射率, 出射介质折射率, 曲率半径, 本曲面顶点位置, 下一个曲面顶点位置</span>
+    <span class="n">surface</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">"cornea_Anterior"</span><span class="p">:</span> <span class="p">[</span><span class="n">n_air</span><span class="p">,</span><span class="n">n_cornea</span><span class="p">,</span><span class="n">R_cornea_Anterior</span><span class="p">,</span><span class="n">p_cornea_Anterior</span><span class="p">,</span> <span class="n">p_cornea_Posterior</span><span class="p">],</span>
+    <span class="s2">"cornea_Posterior"</span><span class="p">:[</span><span class="n">n_cornea</span><span class="p">,</span><span class="n">n_humor</span><span class="p">,</span><span class="n">R_cornea_Posterior</span><span class="p">,</span><span class="n">p_cornea_Posterior</span><span class="p">,</span><span class="n">ELP</span><span class="p">],</span>
+    <span class="p">}</span>
+    
+    <span class="c1"># 曲面的顺序</span>
+    <span class="n">surface_seq</span><span class="o">=</span><span class="p">[</span><span class="s2">"cornea_Anterior"</span><span class="p">,</span><span class="s2">"cornea_Posterior"</span><span class="p">]</span>
+    
+    <span class="c1"># 连乘</span>
+    <span class="n">eye_transfer_matrix</span><span class="o">=</span> <span class="n">eye</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># identity matrix</span>
+    <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">surface_seq</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">pass_curved_interface</span><span class="p">(</span><span class="n">surface</span><span class="p">[</span><span class="n">s</span><span class="p">])</span>
+        <span class="n">eye_transfer_matrix</span><span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">eye_transfer_matrix</span>
+        
+    <span class="c1"># 经过人工晶体</span>
+    <span class="c1"># 此处可能有错误, 是否应当代入折射率</span>
+    <span class="n">eye_transfer_matrix</span> <span class="o">=</span> <span class="n">Thin_lens_in_power</span><span class="p">(</span><span class="n">IOL_Power</span><span class="o">/</span><span class="n">n_humor</span><span class="p">)</span><span class="o">*</span><span class="n">eye_transfer_matrix</span>
+    
+    <span class="c1"># 到达视网膜</span>
+    <span class="n">eye_transfer_matrix</span> <span class="o">=</span> <span class="n">free_space</span><span class="p">(</span><span class="n">p_retina</span><span class="o">-</span><span class="n">ELP</span><span class="p">)</span><span class="o">*</span><span class="n">eye_transfer_matrix</span>
+    
+    <span class="k">return</span> <span class="n">eye_transfer_matrix</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">IOL_eye_parameters</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [35]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">IOL_eye_parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"n_air"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">"n_cornea"</span><span class="p">:</span> <span class="mf">1.376</span><span class="p">,</span>
+    <span class="s2">"n_humor"</span><span class="p">:</span> <span class="mf">1.336</span><span class="p">,</span>
+    <span class="s2">"n_vitreous"</span><span class="p">:</span> <span class="mf">1.336</span><span class="p">,</span>
+    <span class="s2">"p_cornea_Anterior"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="s2">"p_cornea_Posterior"</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">"p_retina"</span><span class="p">:</span> <span class="mf">24.4</span><span class="p">,</span> 
+    <span class="s2">"R_cornea_Anterior"</span><span class="p">:</span> <span class="mf">7.7</span><span class="p">,</span>
+    <span class="s2">"R_cornea_Posterior"</span><span class="p">:</span> <span class="mf">6.8</span><span class="p">,</span>
+    <span class="s2">"ELP"</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s2">"IOL_Power"</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [36]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># IOL_eye_parameters['ELP']=symbols('ELP')</span>
+<span class="n">x</span><span class="o">=</span><span class="s2">"IOL_Power"</span>
+<span class="n">IOL_Power</span> <span class="o">=</span> <span class="n">simplify</span><span class="p">(</span><span class="n">solve_x_in_focus</span><span class="p">(</span><span class="n">IOL_Eye</span><span class="p">,</span><span class="n">IOL_eye_parameters</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">"人工晶体度数=: </span><span class="si">{0}</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="n">IOL_Power</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>人工晶体度数=: 15.9734364841675
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">

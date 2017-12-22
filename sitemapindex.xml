@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology.xml</loc>
-  <lastmod>2017-12-19T05:53:00Z</lastmod>
+  <lastmod>2017-12-22T02:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_tutorial.xml</loc>
@@ -30,16 +30,12 @@
   <lastmod>2017-12-19T03:55:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://goldengrape.github.io/categories/ophthalmology.xml</loc>
-  <lastmod>2017-12-21T17:53:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://goldengrape.github.io/categories/python.xml</loc>
-  <lastmod>2017-12-21T17:53:00Z</lastmod>
+  <lastmod>2017-12-22T02:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml</loc>
-  <lastmod>2017-12-19T05:53:00Z</lastmod>
+  <lastmod>2017-12-22T02:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/galleries/rss.xml</loc>
@@ -47,10 +43,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2017-12-21T17:53:00Z</lastmod>
+  <lastmod>2017-12-22T02:38:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2017-12-21T17:53:00Z</lastmod>
+  <lastmod>2017-12-22T02:38:00Z</lastmod>
  </sitemap>
 </sitemapindex>
