@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog for GoldenGrape</description><atom:link type="application/rss+xml" rel="self" href="https://goldengrape.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Fri, 22 Dec 2017 03:57:10 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/blog/abcdju-zhen/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog for GoldenGrape</description><atom:link rel="self" type="application/rss+xml" href="https://goldengrape.github.io/rss.xml"></atom:link><language>zh_cn</language><lastBuildDate>Mon, 25 Dec 2017 07:03:50 GMT</lastBuildDate><generator>https://getnikola.com/</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>启发与验证</title><link>https://goldengrape.github.io/blog/qi-fa-yu-yan-zheng/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;大胆假设, 小心求证. 说的是启发系统和验证系统. 启发系统获得可能解, 验证系统去测试所有可能解中哪些是正确的.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/qi-fa-yu-yan-zheng/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/blog/qi-fa-yu-yan-zheng/</guid><pubDate>Mon, 25 Dec 2017 06:19:10 GMT</pubDate></item><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/blog/abcdju-zhen/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
@@ -37,26 +38,4 @@ $$&lt;/p&gt;
 &lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</guid><pubDate>Mon, 18 Dec 2017 17:22:33 GMT</pubDate></item><item><title>机器学习的战略(0)--基础概念</title><link>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是deeplearning.ai系列课程的第三门课&lt;a href="https://www.coursera.org/learn/machine-learning-projects/"&gt;Structuring Machine Learning Projects&lt;/a&gt;.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.&lt;/p&gt;
 &lt;p&gt;这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
 &lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
-&lt;p&gt;看这思路，人眼的光学成像近似是线性空间不变系统，如果有个函数是任意线性不变系统的Eigenfunction，那么必然也是人眼光学成像的Eigenfunction。&lt;/p&gt;
-&lt;p&gt;Otto. H. Schade在1956年把正弦视标引入眼科检查的时候，到底是怎么把这么远的两个概念结合到一起的？&lt;/p&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？
-因为正弦函数是线性不变系统的本征函数！&lt;/p&gt;
-&lt;p&gt;但是，为什么要用Eigenfunction，这得从对比敏感度讲起。&lt;/p&gt;
-&lt;h2&gt;对比敏感度&lt;/h2&gt;
-&lt;p&gt;这得从对比敏感度讲起。对比敏感度的检查方法是让患者看圆形的视标，视标中的条纹亮度按正弦变化，背景的亮度=视标的平均亮度。要求被试指出视标条纹的方向。&lt;/p&gt;
-&lt;p&gt;对比敏感度的报告是一张二维图片，也就是说有两个参数，一个是空间频率，一个是对比度。&lt;/p&gt;
-&lt;p&gt;对比敏感度测量的就是在不同空间频率下，眼睛可以看到的最低对比度是多少。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SinVibr" src="https://goldengrape.github.io/images/CSF/SinVibr.png"&gt;&lt;/p&gt;
-&lt;p&gt;这张图水平方向是空间频率越来越高，垂直方向是对比度越来越低，是不是可以感觉到一个抛物线的痕迹，抛物线的上方是一片灰色，下面是有条纹的。&lt;/p&gt;
-&lt;p&gt;三角函数的表示还记得吧，如果亮度的变化可以用 I(x) =A sin(B x )+C 来表示，&lt;/p&gt;
-&lt;p&gt;对比度contrast：&lt;/p&gt;
-&lt;p&gt;sin是在-1和+1直接变化，所以最大的亮度是Imax=A+C，最小的亮度Imin=-A+C。根据对比度的定义&lt;/p&gt;
-&lt;p&gt;contrast=(Imax-Imin)/(Imax+lmin)&lt;/p&gt;
-&lt;p&gt;contrast=2A/2C=A/C&lt;/p&gt;
-&lt;p&gt;&lt;img alt="对比度" src="https://goldengrape.github.io/images/CSF/%E5%AF%B9%E6%AF%94%E5%BA%A6.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;空间频率frequency&lt;/p&gt;
-&lt;p&gt;就是在单位长度内，周期重复了多少次。显然B x=2kπ 的时候会重复，把x=1代入，B=2kπ, k=B/2π，所以空间频率&lt;/p&gt;
-&lt;p&gt;frequency=B/2π&lt;/p&gt;
-&lt;p&gt;前面说到，对比敏感度测量的时候，要给定一个空间频率，然后测量人眼分辨对比度的能力。如果给好了一个空间频率，而通过眼睛的屈光间质折射以后，空间频率变化了，就不好办了。&lt;/p&gt;
-&lt;p&gt;那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</guid><pubDate>Mon, 18 Dec 2017 17:10:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/"&gt;更多…&lt;/a&gt; (1 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item></channel></rss>
