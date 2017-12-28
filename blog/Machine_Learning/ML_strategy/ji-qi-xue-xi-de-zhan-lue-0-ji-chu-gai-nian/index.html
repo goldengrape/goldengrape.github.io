@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>机器学习的战略(0)--基础概念 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../../ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/" title="为什么对比敏感度的视标亮度是正弦变化的？(5)" type="text/html">
+<link rel="next" href="../ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/" title="机器学习的战略(1)--目标的设置" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="机器学习的战略(0)--基础概念">
+<meta property="og:url" content="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/">
+<meta property="og:description" content="这是deeplearning.ai系列课程的第三门课Structuring Machine Learning Projects.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.
+这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
+
+但是这门课里面涉及到的概念和经验很多, 未来我可能需要借助一个笔记时常参考. 这个笔记也可以帮助">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T01:22:18+08:00">
+<meta property="article:tag" content="ML">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">机器学习的战略(0)--基础概念</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:22:18+08:00" itemprop="datePublished" title="2017-12-19 01:22">2017-12-19 01:22</time></a></p>
+                <p class="commentline">
+        
+    <a href=".#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>这是deeplearning.ai系列课程的第三门课<a href="https://www.coursera.org/learn/machine-learning-projects/">Structuring Machine Learning Projects</a>.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.</p>
+<p>这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
+<!-- TEASER_END --></p>
+<p>但是这门课里面涉及到的概念和经验很多, 未来我可能需要借助一个笔记时常参考. 这个笔记也可以帮助其他未选这门课的人了解其中的梗概.</p>
+<h2>一些基础的概念</h2>
+<p>虽然我认为这门课所需要的基础知识并不多, 但也还是需要知道一些机器学习的基本概念, 需要量还是要比"朋友圈公众号科普"多一些.</p>
+<h3>机器学习 Machine Learning</h3>
+<p>这里讲的是有监督学习的任务, 比如给一张照片, 判定这张照片是不是一只猫. 所谓有监督的学习, 就是已知有很多照片, 已经被人工标记过是猫还是非猫了, 这些叫做数据集<strong>dataset</strong>, 数据集中通常是一个对应的结构, 一个输入x, 对应一个输出y.  x -&gt;y, 比如一张照片就是x, 是猫的照片y=1, 不是猫的照片 y=0</p>
+<p>Machine Learning就是利用大量的dataset, 自动从里面去总结出一种从x映射到y的规律.</p>
+<p>最简单的, 比如线性拟合就可以视为一种简单的ML, 有一堆数据点(x,y), 用一条直线去拟合它们. 求解y=kx+b, 有了y=kx+b的公式以后, 你就可以代入一些新的x, 求出y值.</p>
+<p>y=kx+b这个训练出来的公式通常叫做"模型", 当然你的数据也可能不是符合y=kx+b的, 而是符合y=ax^2+bx+c, 甚至于更加复杂的函数关系以至于很难写出表达式. 去找到k, b这样的参数的过程叫做"训练"模型.</p>
+<p>除了拟合, 更常见的Machine Learning问题是分类, 其实也类似, 比如相当于看是否 y=kx+b&gt;0</p>
+<p>在deeplearning.ai课程中的<a href="https://www.coursera.org/learn/neural-networks-deep-learning/home">第一门课</a>就是讲基本的ML方法----神经网络.</p>
+<h3>dataset</h3>
+<p>有标记的数据集x-&gt;y, 就是dataset. 现代的机器学习已经开始使用非常庞大的数据集了, 比如1,000,000张标记好的照片甚至更多. </p>
+<p>在训练模型时, 需要把dataset分成几个部分, 一般而言是分成3个, train set / develop set / test set.</p>
+<h4>train set</h4>
+<p>train set是用来训练当前这个模型用的, 比如假定模型是y=kx+b, 求解k和b这两个参数的过程就是用train set.</p>
+<p>不严格的说, 相当于上课时老师用的例题.</p>
+<h4>develop set</h4>
+<p>develop set, 在课程中常写作dev set 是说你可能有多个候选的模型, 或者说要"develop"模型的时候, 用来测试各个模型的. 比如你的候选模型除了y=kx+b, 可能还有y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d... 这时候就要分别用同一个train set去训练各个模型, 求得各自最佳的参数, 然后再用dev set中的数据代入, 看看各个模型的误差是怎样的.</p>
+<p>不严格的说, 相当于家庭作业.  </p>
+<h4>test set</h4>
+<p>test set, 顾名思义, 就是用来测验考试的. 考试题里不能是老师上课用过的例题, 也不能是做过的作业, 需要是考生(模型)从来没见过的题目.</p>
+<h3>bias 和 variance</h3>
+<p>我觉得这两个词语的中文翻译并不准确, 所以干脆不翻译了.
+
+* bias过高, 是指拟合的函数不够准确, 比如本来数据是符合y=a^x+bx+c这样一条二次曲线的, 结果只用了y=kx+b一条直线去拟合, 直的适应不了弯的, 于是可能在一小段还比较符合, 在其他区域预测的准确率就很差. 通常认为bias过高, 是拟合不足, 欠拟合的. under fitting. [插图]</p>
+<ul>
+<li>variance过高, 是指拟合过度了, over fitting. 一条弯弯曲曲的曲线穿过所有的数据点, 这样虽然误差很小, 但是预测能力就很差, 而我们进行机器学习当然目的是为了评估哪些未知的数据. 真正需要的是预测能力.[插图]</li>
+</ul>
+<p>如果模型过于简单, bias就容易很高, 如果模型过于复杂, variance就容易很高.</p>
+<p>在deeplearning.ai系列课程的<a href="https://www.coursera.org/learn/deep-neural-network/home/welcome">第二门</a>就是在讲各种奇技淫巧去调整模型来降低bias和variance, 相当于改善模型表现的战术方法.</p>
+<p>我个人觉得理解上面这些概念就可以开始ML strategy这门课程的学习了. 但是我已经学过了第一门和第二门课, 有可能存在"因为我知道所以我不知道你是否需要知道"这样的知识诅咒. 所以万一在学MLstrategy这门课程时觉得吃力, 还是去补习一下基础比较好. 暂时没必要去学更复杂的卷积神经网络什么的.</p>
+<hr>
+<h2>参考资料:</h2>
+<ul>
+<li>
+<p>机器学习的战略合集目录:</p>
+</li>
+<li>
+<p><a href="http://www.jianshu.com/p/605bb2d6da5e">基础概念</a></p>
+</li>
+<li><a href="http://www.jianshu.com/p/e5f2d53493ff">目标设置</a></li>
+<li><a href="http://www.jianshu.com/p/9ec8e8c7b58c">错误率</a></li>
+<li><a href="http://www.jianshu.com/p/b841fc1f7c40">误差分析</a></li>
+<li><a href="http://www.jianshu.com/p/4e1ad322deb5">面对分布不同</a></li>
+<li><a href="http://www.jianshu.com/p/e2993f594767">迁移学习</a></li>
+<li>
+<p><a href="http://www.jianshu.com/p/92bf4af48804">end-to-end</a></p>
+</li>
+<li>
+<p>课程链接:
+<a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome">Structuring Machine Learning Projects</a></p>
+</li>
+<li>
+<p>参考视频:
+莫烦的"<a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/">有趣的机器学习</a>"系列科普视频, 制作精良讲解清晰, 非常推荐.  </p>
+</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/ml/" rel="tag">ML</a></li>
+            <li><a class="tag p-category" href="../../../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/" rel="prev" title="为什么对比敏感度的视标亮度是正弦变化的？(5)">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/" rel="next" title="机器学习的战略(1)--目标的设置">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/",
+        disqus_title="\u673a\u5668\u5b66\u4e60\u7684\u6218\u7565(0)--\u57fa\u7840\u6982\u5ff5",
+        disqus_identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><script src="../../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

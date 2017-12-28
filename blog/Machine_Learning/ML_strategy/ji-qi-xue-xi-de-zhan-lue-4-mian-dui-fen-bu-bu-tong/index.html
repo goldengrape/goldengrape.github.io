@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>机器学习的战略(4)--面对分布不同 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" title="机器学习的战略(3)--误差分析" type="text/html">
+<link rel="next" href="../ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/" title="机器学习的战略(5)--迁移学习" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="机器学习的战略(4)--面对分布不同">
+<meta property="og:url" content="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/">
+<meta property="og:description" content="这一部分我在做练习题的时候老是错, 我都不是很确定自己理解明白了. 有必要的话最好还是回到课程原始视频中听老师亲自讲.
+
+tran set/ dev set的分布不同
+机器学习是需要大量数据喂出来的, 但有时候你很难获得大量最终应用场景需要的数据, 比如识别猫的照片, 从网上很容易下载比如可以找到200k, 但从手机中找到拍摄的照片相对要少一些比如可以找到10k. 因此也没法保证dev/test ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T01:23:16+08:00">
+<meta property="article:tag" content="ML">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">机器学习的战略(4)--面对分布不同</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:16+08:00" itemprop="datePublished" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
+                <p class="commentline">
+        
+    <a href=".#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>这一部分我在做练习题的时候老是错, 我都不是很确定自己理解明白了. 有必要的话最好还是回到课程原始视频中听老师亲自讲.
+<!-- TEASER_END --></p>
+<h2>tran set/ dev set的分布不同</h2>
+<p>机器学习是需要大量数据喂出来的, 但有时候你很难获得大量最终应用场景需要的数据, 比如识别猫的照片, 从网上很容易下载比如可以找到200k, 但从手机中找到拍摄的照片相对要少一些比如可以找到10k. 因此也没法保证dev/test set和train set的数据分布是一致的.</p>
+<h3>不建议的方法</h3>
+<p>不要把下载来的数据和手机中的数据随机混合后分成train /dev/test set.</p>
+<h3>建议的方法</h3>
+<p>至少保证dev / test set中的数据是来自于目标应用场景的. 如果还剩下些手机照片的数据可以混合到train set中</p>
+<h2>分布不同时的错误率分析</h2>
+<p>bias=train error - bayes error
+variance= dev error- train error</p>
+<p>既然dev set和train set的分布都不同, 那么肯定variance显得很大, 但是否真的就是因为过拟合了还是因为分布不同导致?</p>
+<p>解决方案是把train set里面再分出一小部分train_dev set, 这一部分的data set不要用在训练中, 用来检测的.</p>
+<p>那么:
+<em> bias=train error - bayes error
+</em> variance= train_dev error- train error
+* mismatch= dev error - train_dev error</p>
+<p>就可以单独把各个错误率区分出来了, 还是使用bias和variance来分析是欠拟合还是过拟合. mismatch的部分要单独考虑.</p>
+<h2>分布不同时的误差分析</h2>
+<p>还是先做手工标注, 看看mismatch的原因到底是怎样的. 有些可以用一些技术手段解决, 比如螺旋桨战斗机机炮打断螺旋桨这种事情.</p>
+<p>当然理想的解决方案还是找到足够多的目标场景数据了. 实在是找不到, 也许能够人工生成, 比如语音+噪音=有噪音环境的语音. 但是人工生成的时候要小心谨慎:</p>
+<ul>
+<li>人工生成的数据很可能多样性不足, 比如从赛车游戏中提取图像进行自动驾驶训练, 理论上不错, 但实际上车型很少, 可能只有20多种车辆样式.</li>
+<li>即使人眼看不出有什么差别, 在数据上不一定是相同的. 人工生成的数据可能只占了真实场景分布中的很小一部分.</li>
+</ul>
+<hr>
+<h2>参考资料:</h2>
+<ul>
+<li>
+<p>机器学习的战略合集目录:</p>
+</li>
+<li>
+<p><a href="http://www.jianshu.com/p/605bb2d6da5e">基础概念</a></p>
+</li>
+<li><a href="http://www.jianshu.com/p/e5f2d53493ff">目标设置</a></li>
+<li><a href="http://www.jianshu.com/p/9ec8e8c7b58c">错误率</a></li>
+<li><a href="http://www.jianshu.com/p/b841fc1f7c40">误差分析</a></li>
+<li><a href="http://www.jianshu.com/p/4e1ad322deb5">面对分布不同</a></li>
+<li><a href="http://www.jianshu.com/p/e2993f594767">迁移学习</a></li>
+<li>
+<p><a href="http://www.jianshu.com/p/92bf4af48804">end-to-end</a></p>
+</li>
+<li>
+<p>课程链接:
+<a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome">Structuring Machine Learning Projects</a></p>
+</li>
+<li>
+<p>参考视频:
+莫烦的"<a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/">有趣的机器学习</a>"系列科普视频, 制作精良讲解清晰, 非常推荐.  </p>
+</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/ml/" rel="tag">ML</a></li>
+            <li><a class="tag p-category" href="../../../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" rel="prev" title="机器学习的战略(3)--误差分析">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/" rel="next" title="机器学习的战略(5)--迁移学习">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/",
+        disqus_title="\u673a\u5668\u5b66\u4e60\u7684\u6218\u7565(4)--\u9762\u5bf9\u5206\u5e03\u4e0d\u540c",
+        disqus_identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><script src="../../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/Machine_Learning/ML-IP/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>机器学习的知识产权保护(1)--保护的难题 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/Machine_Learning/ML-IP/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../ophthalmology/vr-and-mypia/" title="关于VR与近视(投资人的预防接种)" type="text/html">
+<link rel="next" href="../../python/PatentIn-To-JSON/" title="将PatentIn文件转换成JSON文件的工具" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="机器学习的知识产权保护(1)--保护的难题">
+<meta property="og:url" content="https://goldengrape.github.io/blog/Machine_Learning/ML-IP/">
+<meta property="og:description" content="企业想保护的是什么
+机器学习, 尤其是现今流行的深度学习, 主要是深度神经网络, 其中包含两个部分:
+ 网络结构, 比如用了几个隐含层, 每个隐含层的神经元数量各自是多少, 激活函数用的是ReLU还是tanh还是其他, 卷积层是怎样的, 有没有层间直接的连接等等.
+ 网络参数, 每个神经元都只是做$Z=W A +B $, A是上一层传来的值, 独立参与计算的就是W和B.
+
+如果知道了一个神经网络的">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-28T15:00:01+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">机器学习的知识产权保护(1)--保护的难题</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:01+08:00" itemprop="datePublished" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
+                <p class="commentline">
+        
+    <a href=".#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/机器学习的知识产权保护(1)--保护的难题.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h2>企业想保护的是什么</h2>
+<p>机器学习, 尤其是现今流行的深度学习, 主要是深度神经网络, 其中包含两个部分:
+<em> 网络结构, 比如用了几个隐含层, 每个隐含层的神经元数量各自是多少, 激活函数用的是ReLU还是tanh还是其他, 卷积层是怎样的, 有没有层间直接的连接等等.
+</em> 网络参数, 每个神经元都只是做$Z=W A +B $, A是上一层传来的值, 独立参与计算的就是W和B.
+<!-- TEASER_END --></p>
+<p>如果知道了一个神经网络的结构和参数, 这个网络就可以被复制并且使用. 如果仅仅知道了神经网络的结构, 还需要自己去找大量的数据进行训练, 也是可以找到参数的, 自己训练找到的参数集合和其他人训练得出的参数集合会有不同, 可能有细微的差异.</p>
+<p>神经网络的使用和训练不是一会事:
+<em> 使用, 只需要让数据按照网络的方向前向流动, 也就是不断计算$Z=W A +B, A=F(Z) $, 这个速度可以比较快, 涉及到的运算量相对较少. 比如一些经过精巧优化过的神经网络可以在手机达到实时(20-30fps)识别图像的能力. 
+</em> 训练, 需要将神经网络按照反向进行求导, 将误差反向传播到各个参数上, 然后逐渐迭代. 训练需要极大的计算能力, 比如多个高等级的GPU群组, 经过数天乃至数周的运算, 才能将神经网络训练完成.</p>
+<p>现有神经网络的结构虽然在迅速变化, 日新月异, 但总量有限, 而且目前这个领域还处于学术研究的早中期, 大量的网络结构是开源的, 学术界更多在探索网络结构优化网络结构上. 由于训练获得理想的参数需要大量的数据, 而数据又是企业的优势, 或者获取数据昂贵, 所以企业更多是用已有的结构稍作修改, 然后使用自有的数据进行训练, 获取参数.</p>
+<p>综上, 企业在神经网络的参数上投入资本更多, 需要保护的是神经网络的参数.</p>
+<h2>专利保护</h2>
+<p>申请专利显然是保护知识产权最常规的做法, 那么在专利里面列出参数表进行保护?</p>
+<p>当然有这样的实例, 比如对于药品\化学品的专利, 就可以对配方的配比进行保护, 按照这个比例或者用量做出来的药物才有效. 但是对于深度神经网络来说, 有一些问题:</p>
+<h3>参数数量</h3>
+<p>参数多, 一个网络光是层数就可能有152层(比如深得离谱的ResNet), 每层又有很多个神经元, 每个神经元上其实是输入*输出数量的矩阵, 整个参数表是非常大的. 光是列出来这些参数数据恐怕就需要K或者M这样的数量级. 这在现阶段的专利文本上是不现实的.</p>
+<h3>保护范围</h3>
+<p>对于一个数, 保护这个数的数值是没有意义的, 比如写个黑色火药的专利, 保护"1硫2硝3木炭", 那么"1.003硫, 1.997硝, 3木炭"的爆炸效果应该也不会差.</p>
+<p>所以一定要保护一个范围, 比如硫的比例在0.5~1.5, 但要去对每一个参数一一进行保护范围的限定, 也是非常困难的:
+<em> 首先都列出来是个难题.
+</em> 其次, 前面说过大量的应用是建立在同一网络结构之上的, 不同的应用可能只是部分参数的微小差别, 要组合多个网络参数的差别才会变成另一个应用. 如果把参数看作是座标的话, 相当于在极高的维度上进行空间范围的限定和划分, 这恐怕已经超出了法律所能够进行的能力.  </p>
+<h3>侵权识别</h3>
+<p>专利权只有能够对侵权者施加惩罚才有意义, 其中的必要条件就是要能够识别出侵权者, 由于网络结构可能一样, 所以从程序的行为上是否可以判定程序是否侵权呢? 前面说过一个神经网络结构和参数都一致就是同一个神经网络, 那么在结构不变或者已知的情况下, 就需要去判定参数了.</p>
+<p>逆向工程获取参数, 也许有可能做到, 但这要求神经网络是在本地运行的, 如果在云端, 则参数很难采集到. 采集不到参数就不足以证明对方的侵权行为.</p>
+<p>综上, 机器学习的专利保护会有难撰写, 难申请, 侵权难界定的问题. 有可能专利保护并非机器学习知识产权的有力工具.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../ophthalmology/vr-and-mypia/" rel="prev" title="关于VR与近视(投资人的预防接种)">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../../python/PatentIn-To-JSON/" rel="next" title="将PatentIn文件转换成JSON文件的工具">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/blog/Machine_Learning/ML-IP/",
+        disqus_title="\u673a\u5668\u5b66\u4e60\u7684\u77e5\u8bc6\u4ea7\u6743\u4fdd\u62a4(1)--\u4fdd\u62a4\u7684\u96be\u9898",
+        disqus_identifier="cache/posts/Machine_Learning/机器学习的知识产权保护(1)--保护的难题.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../assets/js/all-nocdn.js"></script><script src="../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

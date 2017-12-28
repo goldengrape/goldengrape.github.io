@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<base href="https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>为什么对比敏感度的视标亮度是正弦变化的？(5) | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<meta content="#5670d4" name="theme-color">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/" title="为什么对比敏感度的视标亮度是正弦变化的？(4)" type="text/html">
+<link rel="next" href="../../../Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/" title="机器学习的战略(0)--基础概念" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="为什么对比敏感度的视标亮度是正弦变化的？(5)">
+<meta property="og:url" content="https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/">
+<meta property="og:description" content="前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
+
+为什么要用Eigenfunction
+如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T01:11:00+08:00">
+<meta property="article:tag" content="CSF">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Menubar -->
+
+<nav class="navbar navbar-inverse navbar-static-top"><div class="container">
+<!-- This keeps the margins nice -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar" aria-controls="bs-navbar" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://goldengrape.github.io/">
+
+                <span id="blog-title">GoldenGrape's Blog</span>
+            </a>
+        </div>
+<!-- /.navbar-header -->
+        <div class="collapse navbar-collapse" id="bs-navbar" aria-expanded="false">
+            <ul class="nav navbar-nav">
+<li>
+<a href="../../../../index.html">首页</a>
+                </li>
+<li>
+<a href="../../../../archive.html">文章存档</a>
+                </li>
+<li>
+<a href="../../../../categories/">标签</a>
+                </li>
+<li>
+<a href="../../../../categories/jiao-cheng/">教程</a>
+                </li>
+<li>
+<a href="../../../../github-projects/">开源项目</a>
+                </li>
+<li>
+<a href="../../../../rss.xml">RSS feed</a>
+
+                
+            </li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="index.md" id="sourcelink">源代码</a>
+    </li>
+
+                
+            </ul>
+</div>
+<!-- /.navbar-collapse -->
+    </div>
+<!-- /.container -->
+</nav><!-- End of Menubar --><div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        <div class="row">
+            
+            
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(5)</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                    Golden Grape
+            </span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:11:00+08:00" itemprop="datePublished" title="2017-12-19 01:11">2017-12-19 01:11</time></a></p>
+                <p class="commentline">
+        
+    <a href=".#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5.html">Comments</a>
+
+
+            
+        </p>
+<p class="sourceline"><a href="index.md" id="sourcelink">源代码</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
+<!-- TEASER_END --></p>
+<h2>为什么要用Eigenfunction</h2>
+<p>如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。</p>
+<p>类比测视力，就好像用1.0的视标去测病人，结果病人自带放大系统，视标放大到0.1的程度，这样的测量就错了。</p>
+<p>由于病人的像差可以千奇百怪千差万别，所以病人的眼睛作为一个线性不变系统，也可能是千差万别的。要选择一个带有周期结构的输入，经过各种各不相同的线性系统还可以得到同周期的输出，满足这个能力的输入，就是所有线性不变系统的Eigenfunction了。</p>
+<p>常规的E视标，相当于给入的输入的“方波”，那么如果经过一个有像差的眼睛，成像后的输出可能是这样的：</p>
+<p><img alt="E_MTF" src="../../../../images/CSF/E_MTF.png"></p>
+<p>看输出的强度波形，会发现各个峰的高度是不同的，如果仔细测量，可能还会发现波峰之间的周期也会略有差别。甚至一个有经验的“视力测量欺骗者”，可以根据虚影的方向反推出视标的方向。</p>
+<p>但如果是一个正弦波的视标。</p>
+<p><img alt="sin_MTF" src="../../../../images/CSF/sin_MTF.png"></p>
+<p>经过同样有像差的眼，形成的仍然是正弦波，峰值是同样的，周期是同样的，区别只是“振幅”发生了变化。只有对比度这个变量会根据像差的情况改变，这样就方便了测量。</p>
+<h2>总结</h2>
+<p>为什么对比敏感度的视标亮度是正弦变化的？</p>
+<p>答：因为人眼视觉成像过程近似于线性不变系统，亮度正弦变化的视标是线性系统的Eigenfunction，在经过人眼成像厚视标的空间频率不变。</p>
+<p>至于为什么正弦函数是线性不变系统的Eigenfunction，就是另外一个很长的故事了。如果有兴趣可以参考吕乃光老师编写的《傅里叶光学(第二版)》，第50-52页。</p>
+<h2>One more thing</h2>
+<p>题图</p>
+<p><img alt="stripe_0.21" src="../../../../images/CSF/stripe_0.21.jpg"></p>
+<p>很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。</p>
+<p>通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。</p>
+<p>如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/csf/" rel="tag">CSF</a></li>
+            <li><a class="tag p-category" href="../../../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/" rel="prev" title="为什么对比敏感度的视标亮度是正弦变化的？(4)">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../../../Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/" rel="next" title="机器学习的战略(0)--基础概念">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>Comments</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/",
+        disqus_title="\u4e3a\u4ec0\u4e48\u5bf9\u6bd4\u654f\u611f\u5ea6\u7684\u89c6\u6807\u4eae\u5ea6\u662f\u6b63\u5f26\u53d8\u5316\u7684\uff1f(5)",
+        disqus_identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="//disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
+</div>
+        <!--End of body content-->
+
+        <footer id="footer">
+            Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+        </footer>
+</div>
+</div>
+
+
+            <script src="../../../../assets/js/all-nocdn.js"></script><script src="../../../../assets/js/colorbox-i18n/jquery.colorbox-zh-CN.js"></script><script>$('a.image-reference:not(.islink) img:not(.islink)').parent().colorbox({rel:"gal",maxWidth:"100%",maxHeight:"100%",scalePhotos:true});</script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

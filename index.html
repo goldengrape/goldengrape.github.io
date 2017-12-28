@@ -12,7 +12,7 @@
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://goldengrape.github.io/">
-<link rel="next" href="index-2.html" type="text/html">
+<link rel="next" href="index-3.html" type="text/html">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -25,7 +25,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/air-vortex-AC/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="blog/Machine_Learning/ResNet-note/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -83,243 +83,223 @@ MathJax.Hub.Config({
             
 
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/air-vortex-AC/" class="u-url">空气炮空调</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Machine_Learning/ResNet-note/" class="u-url">ResNet编写注意事项</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/air-vortex-AC/" rel="bookmark"><time class="published dt-published" datetime="2017-12-26T11:30:00+08:00" title="2017-12-26 11:30">2017-12-26 11:30</time></a></p>
+            <p class="dateline"><a href="blog/Machine_Learning/ResNet-note/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:22+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/air-vortex-AC/#disqus_thread" data-disqus-identifier="cache/posts/发明回收站/空气炮空调.html">Comments</a>
+    <a href="blog/Machine_Learning/ResNet-note/#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ResNet编写注意事项.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<p>空气炮是一种常见的玩具, 利用空气脉冲释放出一个空气涡旋(air vortex), 这种air vortex可以在长距离内保持形状, 其内部的空气很少与外界空气交换, 而且投递的精度很高. 当air vortex遇到阻挡或者与另一个air vortex相撞时, vortex的结构破坏, 里面的空气释放出来.</p>
-<p>于是可以用来将热空气或冷空气以特定形式进行长距离、高空间精度的投递。除了用作空调, 也可以用来投递气味, 还可以用来投递干净的空气.</p>
-<p>优点是只需要对少量的空气进行加工就可以满足个人的要求. 不需要过滤整个屋子的PM2.5, 只需要过滤用户吸入的那一部分就可以了.  </p>
-<p>缺点是噪音, 我估计是因为噪音的问题导致这个技术一直没有出现在市场上.</p>
-<p>这个发明, 想的时间晚了, 已经有很多相似的现有技术在先. 所以没有卖掉.
+<p>Deeplearning.ai 第4门课程&lt;<a href="https://www.coursera.org/learn/convolutional-neural-networks/home/welcome">卷积神经网络</a>&gt;,  终于开始讲解"现代"的深度神经网络了. 第二周也迅速开始使用Keras进行神经网络的编写.</p>
+<p>虽然Keras已经抽象程度很高了, 只需要设定基本的参数, 就可以建立网络层, 不至于在实现细节中迷失,  但是仍然会有些小坑容易踩.</p>
+<p>下面是一些经验:
 </p>
-<p class="more"><a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/air-vortex-AC/">更多…</a></p>
+<p class="more"><a href="blog/Machine_Learning/ResNet-note/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/iTrash/" class="u-url">发明回收站开张</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/python/auto-numba-jit/" class="u-url">自动添加Numba-jit修饰</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/iTrash/" rel="bookmark"><time class="published dt-published" datetime="2017-12-26T11:00:00+08:00" title="2017-12-26 11:00">2017-12-26 11:00</time></a></p>
+            <p class="dateline"><a href="blog/python/auto-numba-jit/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:20+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/iTrash/#disqus_thread" data-disqus-identifier="cache/posts/发明回收站/发明回收站开张.html">Comments</a>
+    <a href="blog/python/auto-numba-jit/#disqus_thread" data-disqus-identifier="cache/posts/python/自动添加Numba-jit修饰.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<p>我是职业发明家, 从事发明的生产. 总会有一些卖不掉的发明, 有些是过于超前, 有些是不合时宜. . . . . .</p>
-<p>有些是已经有人发明过了, 最后这类当然是最多的, 毕竟要和全世界几十亿人竞争, 谁知道是不是会有哪个以色列人偷偷地申请了一个发明放着.</p>
-<p>接下来, 我会选择一些确定不能卖掉的发明展示. 如果是没有新颖性的, 我也尽量给出现有技术的文献.</p>
-<p class="more"><a href="blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/iTrash/">更多…</a></p>
+<p>今天拖延症犯了. 我的拖延症表现是狂做另一件以后可能用到, 但现在无关紧要的事情. 比如加速python的运行速度.</p>
+<h2>Numba</h2>
+<p><a href="https://numba.pydata.org/">Numba</a>是个很神奇的东西, 加上以后可以提高python的运行速度.
+</p>
+<p class="more"><a href="blog/python/auto-numba-jit/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/qi-fa-yu-yan-zheng/" class="u-url">启发与验证</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/python/python-old-chinese/" class="u-url">中国古代数学算法的Python实现</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/qi-fa-yu-yan-zheng/" rel="bookmark"><time class="published dt-published" datetime="2017-12-25T14:19:10+08:00" title="2017-12-25 14:19">2017-12-25 14:19</time></a></p>
+            <p class="dateline"><a href="blog/python/python-old-chinese/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:15+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/qi-fa-yu-yan-zheng/#disqus_thread" data-disqus-identifier="cache/posts/启发与验证.html">Comments</a>
+    <a href="blog/python/python-old-chinese/#disqus_thread" data-disqus-identifier="cache/posts/python/中国古代数学算法的Python实现.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<p>大胆假设, 小心求证. 说的是启发系统和验证系统. 启发系统获得可能解, 验证系统去测试所有可能解中哪些是正确的.
+<p>看了这篇《<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;mid=2651662431&amp;idx=1&amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd">没有定理的中国古代数学，如何站在世界之巅？</a>》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。</p>
+<p>可以运行的代码<a href="https://repl.it/HgCF/30">在这里</a>
 </p>
-<p class="more"><a href="blog/qi-fa-yu-yan-zheng/">更多…</a></p>
+<p class="more"><a href="blog/python/python-old-chinese/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/abcdju-zhen/" class="u-url">ABCD矩阵</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/3-ipad-games-for-myopia/" class="u-url">治疗近视的三个iPad游戏</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/abcdju-zhen/" rel="bookmark"><time class="published dt-published" datetime="2017-12-21T21:07:03+08:00" title="2017-12-21 21:07">2017-12-21 21:07</time></a></p>
+            <p class="dateline"><a href="blog/ophthalmology/3-ipad-games-for-myopia/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:12+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/abcdju-zhen/#disqus_thread" data-disqus-identifier="cache/posts/Ray_transfer_matrix.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="光线传输矩阵">光线传输矩阵<a class="anchor-link" href="blog/abcdju-zhen/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5">¶</a>
-</h2>
-<p>这是一次sympy的小练习.</p>
-<p>光线传输矩阵又称做<a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis">ABCD矩阵</a> 用来描述近轴光线的传播过程.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""></p>
-<p>光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:</p>
-<ul>
-<li>入射光线距离光轴是x1, 角度是 θ1,  </li>
-<li>出射光线距离光轴是x2, 角度是 θ2,</li>
-</ul>
-<p>那么: 
-$$
-\begin{bmatrix}x_2\\ \theta_2 \end{bmatrix} = \begin{bmatrix}A &amp; B \\C &amp; D \end{bmatrix} \begin{bmatrix}x_1\\ \theta_1 \end{bmatrix}
-$$</p>
-<p>对于不同的光学元件, ABCD的取值不同.</p>
-<p>下面准备使用python的符号运算库sympy, 进行光路的ABCD矩阵分析. 试图建立一个简化的眼球光路追迹模型. 
-</p>
-<p class="more"><a href="blog/abcdju-zhen/">更多…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-    </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/" class="u-url">机器学习的战略(6)--end to end</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">
-                Golden Grape
-            </span></p>
-            <p class="dateline"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:43+08:00" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
-                <p class="commentline">
-        
-    <a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end.html">Comments</a>
+    <a href="blog/ophthalmology/3-ipad-games-for-myopia/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/治疗近视的三个iPad游戏.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<h2>端到端学习 end-to-end Learning</h2>
-<p>这个也是吓人.  读书人, 相煎何太急.</p>
-<p>end-to-end的一端是原始数据, 另一端是想要的结果. 比如也许从一张眼底照片+FFA直接给出眼底激光应该打哪里, 或者说中文直接给出翻译好的英文字幕. 从一端到另一端中间本来是有很多研究过程在里面的,
+<h2>当然并没有!</h2>
+<p>近视, 通常(不通常的那些更麻烦, 不要幻想)是眼球(眼轴)变长, 变长的眼轴是不可能再缩短回来的. 不久前发现一个不错的比喻: "孩子长高了还能再变矮么? "
 </p>
-<p class="more"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/">更多…</a></p>
+<p class="more"><a href="blog/ophthalmology/3-ipad-games-for-myopia/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/" class="u-url">机器学习的战略(5)--迁移学习</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Invention/umbrella-selfie/" class="u-url">雨伞与自拍杆</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:31+08:00" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
+            <p class="dateline"><a href="blog/Invention/umbrella-selfie/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:10+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi.html">Comments</a>
+    <a href="blog/Invention/umbrella-selfie/#disqus_thread" data-disqus-identifier="cache/posts/Invention/雨伞与自拍杆.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<h2>迁移学习</h2>
-<p>好激动, 这是整个机器学习里面最激动人心最吸引人的部分了. 知道了迁移学习这事情以后, 我才比较理解为什么整个课程一直没有进入各种fancy的CNN, RNN之类的神经网络结构, 而仅仅就是把层次多一点的神经网络称为深度神经网络.
-</p>
-<p class="more"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/">更多…</a></p>
+<p>虽然看似一把雨伞，但它实际上是自拍杆。
+虽然看似一自拍杆，但它实际上是把雨伞。</p>
+<p><img alt="雨伞自拍杆" src="http://upload-images.jianshu.io/upload_images/29267-06fa598be8eacd21.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240"></p>
+<p class="more"><a href="blog/Invention/umbrella-selfie/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/" class="u-url">机器学习的战略(4)--面对分布不同</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/python/compare-seq/" class="u-url">序列一致性检验工具</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:16+08:00" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
+            <p class="dateline"><a href="blog/python/compare-seq/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:07+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong.html">Comments</a>
+    <a href="blog/python/compare-seq/#disqus_thread" data-disqus-identifier="cache/posts/python/序列一致性检验工具.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<p>这一部分我在做练习题的时候老是错, 我都不是很确定自己理解明白了. 有必要的话最好还是回到课程原始视频中听老师亲自讲.
-</p>
-<p class="more"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/">更多…</a></p>
+<p>本程序用于检查专利文件中的蛋白质序列是否一致. 在专利撰写时, 发明人往往在技术交底书中使用Word文件来提交蛋白质序列. 而在USPTO的要求中, 需要使用PatentIn软件来生成标准的序列提交文件.</p>
+<p class="more"><a href="blog/python/compare-seq/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" class="u-url">机器学习的战略(3)--误差分析</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/if-open-an-url/" class="u-url">是否点开一个链接的标准</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:01+08:00" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
+            <p class="dateline"><a href="blog/if-open-an-url/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:06+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi.html">Comments</a>
+    <a href="blog/if-open-an-url/#disqus_thread" data-disqus-identifier="cache/posts/是否点开一个链接的标准.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<p>我觉得这一部分是导师指导/监督学生实验时应该出手的部分.</p>
-<h2>误差分析</h2>
-<p>这是个手工分析操作技巧了. 老师在课程中不断强调不要看不起手工分析, 一是人类看图识别的效率很高, 看上100张图很快就搞定了, 二是在分析过程中还有助于产生直观的印象, 再次利用人类强大的识别能力来解决问题.
+<p>每天我们看很多东西，微博/twitter，微信朋友圈/facebook，网站，甚至还可能有新闻联播。容易进入所谓“信息过载”的状态，那么在点开一个链接之前，是否就可以作出判断是否值得一读呢？</p>
+<p>最近我发现了一个重要的判别标准： _ 考试又不考，看这些没用的干啥！ _
 </p>
-<p class="more"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">更多…</a></p>
+<p class="more"><a href="blog/if-open-an-url/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" class="u-url">机器学习的战略(2)--错误率</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Machine_Learning/facenet-modify/" class="u-url">人脸识别算法的小改进</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:22:47+08:00" title="2017-12-19 01:22">2017-12-19 01:22</time></a></p>
+            <p class="dateline"><a href="blog/Machine_Learning/facenet-modify/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:05+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu.html">Comments</a>
+    <a href="blog/Machine_Learning/facenet-modify/#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/人脸识别算法的小改进.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<h2>与人类相比较</h2>
-<p>机器学习的很多任务, 比如识别图像, 听语音, 都是人类非常擅长的. 所以这些任务来说人类的错误率都相当低. 当然人类也分人, 看眼底图的还是得后节大夫, 找普通人看也还是错误率很高的, 最高的准确率应该是一组后节专家讨论会诊后得到的.
+<p>Deeplearning.ai课程中第4门卷积神经网络里, 第4周的作业是做一个人脸识别的小应用.</p>
+<p>这门课的作业设计都有些问题. 因为需要的数据量很大, 需要的算力也很高, 所以不大可能让学生从头做一个深度神经网络然后训练出结果. 所以作业基本是两头的, 一头是教如何建立这个深度神经网络, 一头是教如何应用这个建好的网络, 中间的部分就一笔带过说我们已经帮各位训练好了, 大家load就行了.
 </p>
-<p class="more"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/">更多…</a></p>
+<p class="more"><a href="blog/Machine_Learning/facenet-modify/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/" class="u-url">机器学习的战略(1)--目标的设置</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/story-of-blue-light/" class="u-url">蓝光的故事</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:22:33+08:00" title="2017-12-19 01:22">2017-12-19 01:22</time></a></p>
+            <p class="dateline"><a href="blog/ophthalmology/story-of-blue-light/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:04+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/#disqus_thread" data-disqus-identifier="cache/posts/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi.html">Comments</a>
+    <a href="blog/ophthalmology/story-of-blue-light/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/蓝光的故事.html">Comments</a>
 
 
         </p>
 </div>
     </header><div class="p-summary entry-summary">
     <div>
-<h2>调整ML模型的战略</h2>
-<p>用来描述模型结构的, 比如是y=kx+b, 还是y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d, 叫做"超参数" <strong>hyperparamter</strong></p>
-<p>调整hyperparamter是一件很麻烦的事情, 以至于很多人把这件事叫做"炼丹". 你可能需要炼上七七四十九天才知道, 哦, 原来y=kx+b这个线性模型不合适啊. 所以除了具体的调整方法(战术), 你还需要战略方案.
+<p>1949年人工晶状体IOL发明，( <a href="https://en.wikipedia.org/wiki/Harold_Ridley_(ophthalmologist)">1949年11月29日首次植入</a>)
+1970s超声乳化手术phaco发明，(<a href="https://www.google.com/patents/US3589363">专利US3589363</a>)白内障手术迅速发展成熟，植入IOL以替换浑浊的天然晶状体，（<a href="http://finance.sina.com.cn/stock/gujiayidong/2017-12-04/doc-ifypikwt6218758.shtml">顺便说莎普爱思没用</a>）
+1990sHOYA公司发现术后一部分病人抱怨周围太亮，于是模拟天然晶状体的颜色，推出黄色IOL。是的，年轻人的晶体就发黄，随年龄颜色加深
 </p>
-<p class="more"><a href="blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/">更多…</a></p>
+<p class="more"><a href="blog/ophthalmology/story-of-blue-light/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/python/PatentIn-To-JSON/" class="u-url">将PatentIn文件转换成JSON文件的工具</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/python/PatentIn-To-JSON/" rel="bookmark"><time class="published dt-published" datetime="2017-12-28T15:00:03+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/python/PatentIn-To-JSON/#disqus_thread" data-disqus-identifier="cache/posts/python/将PatentIn文件转换成JSON文件的工具.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<h3>--兼论以自下而上的抽象应对不断改需求的PM</h3>
+<p><a href="https://github.com/goldengrape/check_patentIn_sequence/blob/master/patentIn_to_json.ipynb">Jupyter版本:</a>
+或者更容易import的
+<a href="https://github.com/goldengrape/check_patentIn_sequence/blob/master/patentIn_to_json.py">python版本:</a></p>
+<p>只需要:</p>
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">patentIn_to_json</span> <span class="kn">import</span> <span class="n">patentIn_to_json</span>
+</pre>
+
+
+<p>即可.
+</p>
+<p class="more"><a href="blog/python/PatentIn-To-JSON/">更多…</a></p>
 </div>
     </div>
     </article>
@@ -327,11 +307,9 @@ $$</p>
 
         <nav class="postindexpager"><ul class="pager">
 <li class="next">
-                <a href="index-2.html" rel="next">旧一篇</a>
+                <a href="index-3.html" rel="next">旧一篇</a>
             </li>
-        </ul></nav><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script><script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$latex ','$'], ['\\(','\\)']]}});
-            </script>
+        </ul></nav><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="//"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script>
 </div>
         <!--End of body content-->
 

@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2017-12-18T17:52:00Z</lastmod>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -15,7 +15,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2017-12-26T03:59:00Z</lastmod>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/3-ipad-games-for-myopia/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</loc>
@@ -40,6 +44,18 @@
  <url>
   <loc>https://goldengrape.github.io/blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</loc>
   <lastmod>2017-12-18T18:32:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Invention/air-vortex-AC/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Invention/iTrash/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Invention/umbrella-selfie/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/blog/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</loc>
@@ -78,6 +94,10 @@
   <lastmod>2017-12-18T18:19:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/blog/ML-IP/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/blog/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</loc>
   <lastmod>2017-12-19T03:55:00Z</lastmod>
  </url>
@@ -106,16 +126,192 @@
   <lastmod>2017-12-19T03:55:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML-IP/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/ResNet-note/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/Machine_Learning/facenet-modify/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/PatentIn-To-JSON/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ResNet-note/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/blog/abcdju-zhen/</loc>
   <lastmod>2017-12-21T13:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/auto-numba-jit/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/compare-seq/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/facenet-modify/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/if-open-an-url/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/blog/na-xie-zai-xian-de-jupyter/</loc>
   <lastmod>2017-12-18T15:49:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/3-ipad-games-for-myopia/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/story-of-blue-light/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/ophthalmology/vr-and-mypia/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python-old-chinese/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-5/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-6/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-7/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/PatentIn-To-JSON/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/abcdju-zhen/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/auto-numba-jit/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/compare-seq/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/na-xie-zai-xian-de-jupyter/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/python/python-old-chinese/</loc>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/blog/qi-fa-yu-yan-zheng/</loc>
   <lastmod>2017-12-25T07:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/story-of-blue-light/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/umbrella-selfie/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/blog/vr-and-mypia/</loc>
+  <lastmod>2017-12-28T08:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/blog/%E5%8F%91%E6%98%8E%E5%9B%9E%E6%94%B6%E7%AB%99/air-vortex-AC/</loc>
@@ -179,11 +375,15 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
-  <lastmod>2017-12-21T13:49:00Z</lastmod>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
-  <lastmod>2017-12-26T03:59:00Z</lastmod>
+  <lastmod>2017-12-28T09:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-3.html</loc>
+  <lastmod>2017-12-28T09:03:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/listings/</loc>
