@@ -12,9 +12,21 @@
 <meta content="#5670d4" name="theme-color">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://goldengrape.github.io/index-2.html">
-<link rel="prev" href="." type="text/html">
+<link rel="prev" href="index-3.html" type="text/html">
 <link rel="next" href="index-1.html" type="text/html">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'left', // Change this to 'center' to center equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -72,15 +84,161 @@
             
 
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(3)</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" class="u-url">机器学习的战略(3)--误差分析</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:09:00+08:00" title="2017-12-19 01:09">2017-12-19 01:09</time></a></p>
+            <p class="dateline"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:23:01+08:00" title="2017-12-19 01:23">2017-12-19 01:23</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/#disqus_thread" data-disqus-identifier="cache/posts/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3.html">Comments</a>
+    <a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>我觉得这一部分是导师指导/监督学生实验时应该出手的部分.</p>
+<h2>误差分析</h2>
+<p>这是个手工分析操作技巧了. 老师在课程中不断强调不要看不起手工分析, 一是人类看图识别的效率很高, 看上100张图很快就搞定了, 二是在分析过程中还有助于产生直观的印象, 再次利用人类强大的识别能力来解决问题.
+</p>
+<p class="more"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" class="u-url">机器学习的战略(2)--错误率</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:22:47+08:00" title="2017-12-19 01:22">2017-12-19 01:22</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<h2>与人类相比较</h2>
+<p>机器学习的很多任务, 比如识别图像, 听语音, 都是人类非常擅长的. 所以这些任务来说人类的错误率都相当低. 当然人类也分人, 看眼底图的还是得后节大夫, 找普通人看也还是错误率很高的, 最高的准确率应该是一组后节专家讨论会诊后得到的.
+</p>
+<p class="more"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/" class="u-url">机器学习的战略(1)--目标的设置</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:22:33+08:00" title="2017-12-19 01:22">2017-12-19 01:22</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<h2>调整ML模型的战略</h2>
+<p>用来描述模型结构的, 比如是y=kx+b, 还是y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d, 叫做"超参数" <strong>hyperparamter</strong></p>
+<p>调整hyperparamter是一件很麻烦的事情, 以至于很多人把这件事叫做"炼丹". 你可能需要炼上七七四十九天才知道, 哦, 原来y=kx+b这个线性模型不合适啊. 所以除了具体的调整方法(战术), 你还需要战略方案.
+</p>
+<p class="more"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/" class="u-url">机器学习的战略(0)--基础概念</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:22:18+08:00" title="2017-12-19 01:22">2017-12-19 01:22</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>这是deeplearning.ai系列课程的第三门课<a href="https://www.coursera.org/learn/machine-learning-projects/">Structuring Machine Learning Projects</a>.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.</p>
+<p>这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
+</p>
+<p class="more"><a href="blog/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(5)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:11:00+08:00" title="2017-12-19 01:11">2017-12-19 01:11</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
+</p>
+<p class="more"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(4)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:10:00+08:00" title="2017-12-19 01:10">2017-12-19 01:10</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。</p>
+<p>看这思路，人眼的光学成像近似是线性空间不变系统，如果有个函数是任意线性不变系统的Eigenfunction，那么必然也是人眼光学成像的Eigenfunction。</p>
+<p>Otto. H. Schade在1956年把正弦视标引入眼科检查的时候，到底是怎么把这么远的两个概念结合到一起的？</p>
+<p>为什么对比敏感度的视标亮度是正弦变化的？
+因为正弦函数是线性不变系统的本征函数！</p>
+<p>但是，为什么要用Eigenfunction，这得从对比敏感度讲起。</p>
+<h2>对比敏感度</h2>
+<p>这得从对比敏感度讲起。对比敏感度的检查方法是让患者看圆形的视标，视标中的条纹亮度按正弦变化，背景的亮度=视标的平均亮度。要求被试指出视标条纹的方向。</p>
+<p>对比敏感度的报告是一张二维图片，也就是说有两个参数，一个是空间频率，一个是对比度。</p>
+<p>对比敏感度测量的就是在不同空间频率下，眼睛可以看到的最低对比度是多少。</p>
+<p><img alt="SinVibr" src="images/CSF/SinVibr.png"></p>
+<p>这张图水平方向是空间频率越来越高，垂直方向是对比度越来越低，是不是可以感觉到一个抛物线的痕迹，抛物线的上方是一片灰色，下面是有条纹的。</p>
+<p>三角函数的表示还记得吧，如果亮度的变化可以用 I(x) =A sin(B x )+C 来表示，</p>
+<p>对比度contrast：</p>
+<p>sin是在-1和+1直接变化，所以最大的亮度是Imax=A+C，最小的亮度Imin=-A+C。根据对比度的定义</p>
+<p>contrast=(Imax-Imin)/(Imax+lmin)</p>
+<p>contrast=2A/2C=A/C</p>
+<p><img alt="对比度" src="images/CSF/%E5%AF%B9%E6%AF%94%E5%BA%A6.jpg"></p>
+<p>空间频率frequency</p>
+<p>就是在单位长度内，周期重复了多少次。显然B x=2kπ 的时候会重复，把x=1代入，B=2kπ, k=B/2π，所以空间频率</p>
+<p>frequency=B/2π</p>
+<p>前面说到，对比敏感度测量的时候，要给定一个空间频率，然后测量人眼分辨对比度的能力。如果给好了一个空间频率，而通过眼睛的屈光间质折射以后，空间频率变化了，就不好办了。</p>
+<p>那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。</p>
+</div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(3)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">
+                Golden Grape
+            </span></p>
+            <p class="dateline"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:09:00+08:00" title="2017-12-19 01:09">2017-12-19 01:09</time></a></p>
+                <p class="commentline">
+        
+    <a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3.html">Comments</a>
 
 
         </p>
@@ -90,18 +248,18 @@
 <h2>Eigenfunction（本征函数/ 特征函数）</h2>
 <p>现在我们要把另一个函数作为参数输入到线性函数里。越来越抽象了，不过对于咱们眼科医生来说，有成像过程可以辅助理解。
 </p>
-<p class="more"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/">更多…</a></p>
+<p class="more"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(2)</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(2)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:49+08:00" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
+            <p class="dateline"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:49+08:00" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/#disqus_thread" data-disqus-identifier="cache/posts/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2.html">Comments</a>
+    <a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2.html">Comments</a>
 
 
         </p>
@@ -112,18 +270,18 @@
 <h2>线性的几何光学</h2>
 <p>我们可以把透镜成像的过程当作是一个把“物”变换成“像”的功能，说实话function翻译成函数真是挡住了不少人，function嘛，其实就是功能而已，有输入，有输出，把输入变成输出的功能。
 </p>
-<p class="more"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/">更多…</a></p>
+<p class="more"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(1)</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(1)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:39+08:00" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
+            <p class="dateline"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:39+08:00" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/#disqus_thread" data-disqus-identifier="cache/posts/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1.html">Comments</a>
+    <a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1.html">Comments</a>
 
 
         </p>
@@ -140,18 +298,18 @@ f(m x)=2mx=m(2x)=m f(x)</p>
 <p>我们可以把函数当作是一个变换过程，把输入变换成输出。
 一个医生看一个结膜炎用3分钟，看2个结膜炎用6分钟。这个医生看病的能力是“线性”的。
 </p>
-<p class="more"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/">更多…</a></p>
+<p class="more"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/">更多…</a></p>
 </div>
     </div>
-    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(0)</a></h1>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/" class="u-url">为什么对比敏感度的视标亮度是正弦变化的？(0)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">
                 Golden Grape
             </span></p>
-            <p class="dateline"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:15+08:00" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
+            <p class="dateline"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/" rel="bookmark"><time class="published dt-published" datetime="2017-12-19T01:08:15+08:00" title="2017-12-19 01:08">2017-12-19 01:08</time></a></p>
                 <p class="commentline">
         
-    <a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/#disqus_thread" data-disqus-identifier="cache/posts/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0.html">Comments</a>
+    <a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0.html">Comments</a>
 
 
         </p>
@@ -162,7 +320,7 @@ f(m x)=2mx=m(2x)=m f(x)</p>
 <p>我将连载几篇仔细讲解一下这个问题。以表达我对眼科先贤的崇敬。</p>
 <p>注意，此知识不宜拿去炫耀，可以科普不宜提问，毕竟其中涉及到的东西远超眼科教材。
 </p>
-<p class="more"><a href="blog/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/">更多…</a></p>
+<p class="more"><a href="blog/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/">更多…</a></p>
 </div>
     </div>
     </article>
@@ -170,7 +328,7 @@ f(m x)=2mx=m(2x)=m f(x)</p>
 
         <nav class="postindexpager"><ul class="pager">
 <li class="previous">
-                <a href="." rel="prev">新一篇</a>
+                <a href="index-3.html" rel="prev">新一篇</a>
             </li>
             <li class="next">
                 <a href="index-1.html" rel="next">旧一篇</a>

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1513862317.653654
+_modified_time = 1514451870.65726
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl'
 _template_uri = 'comments_helper_isso.tmpl'
@@ -79,6 +79,6 @@ def render_comment_link_script(context):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"68": 16, "69": 17, "70": 18, "71": 18, "72": 18, "73": 18, "74": 18, "16": 0, "21": 7, "22": 13, "23": 20, "29": 9, "80": 74, "34": 9, "35": 10, "36": 11, "37": 11, "38": 11, "44": 2, "49": 2, "50": 3, "51": 4, "52": 4, "53": 4, "54": 5, "55": 5, "56": 5, "57": 5, "63": 16}, "source_encoding": "utf-8", "uri": "comments_helper_isso.tmpl", "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl"}
+{"source_encoding": "utf-8", "uri": "comments_helper_isso.tmpl", "line_map": {"68": 16, "69": 17, "70": 18, "71": 18, "72": 18, "73": 18, "74": 18, "16": 0, "21": 7, "22": 13, "23": 20, "29": 9, "80": 74, "34": 9, "35": 10, "36": 11, "37": 11, "38": 11, "44": 2, "49": 2, "50": 3, "51": 4, "52": 4, "53": 4, "54": 5, "55": 5, "56": 5, "57": 5, "63": 16}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl"}
 __M_END_METADATA
 """
