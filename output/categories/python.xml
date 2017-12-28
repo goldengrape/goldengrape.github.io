@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2017 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 28 Dec 2017 17:06:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/posts/python/abcdju-zhen/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="光线传输矩阵"&gt;光线传输矩阵&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是一次sympy的小练习.&lt;/p&gt;
+&lt;p&gt;光线传输矩阵又称做&lt;a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis"&gt;ABCD矩阵&lt;/a&gt; 用来描述近轴光线的传播过程.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;入射光线距离光轴是x1, 角度是 θ1,  &lt;/li&gt;
+&lt;li&gt;出射光线距离光轴是x2, 角度是 θ2,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么: 
+$$
+\begin{bmatrix}x_2\\ \theta_2 \end{bmatrix} = \begin{bmatrix}A &amp;amp; B \\C &amp;amp; D \end{bmatrix} \begin{bmatrix}x_1\\ \theta_1 \end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;对于不同的光学元件, ABCD的取值不同.&lt;/p&gt;
+&lt;p&gt;下面准备使用python的符号运算库sympy, 进行光路的ABCD矩阵分析. 试图建立一个简化的眼球光路追迹模型. 
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/abcdju-zhen/"&gt;更多…&lt;/a&gt; (剩余 3 分钟去阅读)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcdju-zhen/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item></channel></rss>

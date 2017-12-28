@@ -1,0 +1,91 @@
+<p>本程序用于检查专利文件中的蛋白质序列是否一致. 在专利撰写时, 发明人往往在技术交底书中使用Word文件来提交蛋白质序列. 而在USPTO的要求中, 需要使用PatentIn软件来生成标准的序列提交文件.</p>
+<!-- TEASER_END -->
+
+<p>专利代理人在撰写专利说明书时可能通过ctrl+C/ ctrl+V 等操作将技术交底书中的序列复制粘贴到PatentIn软件中, 在这一动作中有可能引起增加或减少字母, 造成说明书中的序列与发明人所期望的序列不一致.</p>
+<h1>适用文件形式</h1>
+<p>适用文件的样例在demo文件夹中. 其中:</p>
+<ul>
+<li>技术交底书样例, AAA.docx,序列以word表格的形式出现</li>
+<li>PantentIn生成文件样例, BBB.txt</li>
+</ul>
+<h1>安装</h1>
+<p>推荐使用Microsoft Azure Notebooks在云端运行.</p>
+<h2>Azure Notebooks安装</h2>
+<ul>
+<li>打开https://notebooks.azure.com 以注册或以MS账户登录.</li>
+<li>新建Lib: +New Library</li>
+<li>从Github中导入:<ul>
+<li>在GitHub repository中填入: https://github.com/goldengrape/check_patentIn_sequence</li>
+<li>自行设定好Library Name和Library ID</li>
+<li>Import</li>
+</ul>
+</li>
+<li>设置:<ul>
+<li>选择刚刚建立的Library, 点击Setting</li>
+<li>Infomation:  如果不想泄露数据, 请确认 Public library <strong>不</strong>被选上</li>
+<li>Environment:  Shell scirpt-&gt;script.txt</li>
+</ul>
+</li>
+</ul>
+<h2>在本地电脑安装</h2>
+<h3>依赖包</h3>
+<ul>
+<li>python 3.5</li>
+<li>biopython</li>
+<li>python-docx</li>
+<li>numpy</li>
+<li>pandas</li>
+</ul>
+<p>太麻烦了, 你不会真的打算本地运行吧. 实在要装的话推荐使用anaconda进行安装, 但anaconda装python-docx有坑, 最好调用anaconda下的pip进行安装python-docx.</p>
+<h3>安装</h3>
+<p>从github clone.</p>
+<h1>使用</h1>
+<ul>
+<li>上传或copy需要检查校对的文件到指定的目录.</li>
+<li>打开compare_seq.ipynb</li>
+<li>设定文件名:
+    <code>input_path='demo'
+    output_path='demo'
+    docx_name='AAA.docx'
+    txt_name='BBB.txt'</code></li>
+<li>指定word文件中表格的属性
+    <code>table_catalog_dict={
+        0: {"head": 1, "seqtype":'chain', "chaintype":'HeavyChain'},
+        1: {"head": 1, "seqtype":'chain', "chaintype":'LightChain'},
+        2: {"head": 2, "seqtype":'CDR', "chaintype":'HC'},
+        3: {"head": 2, "seqtype":'CDR', "chaintype":'LC'},
+        4: {"head": 1, "seqtype":'chain', "chaintype":'HeavyChain'},
+        5: {"head": 1, "seqtype":'chain', "chaintype":'LightChain'},</code>
+    其中:<ul>
+<li>head: 表格中标题行的行数</li>
+<li>seqtype: 表格所描述的序列是长链chain或是CDR</li>
+<li>chaintype: 序列的类型, 是<ul>
+<li>HeavyChain: 重链</li>
+<li>LightChain: 轻链</li>
+<li>HC: 重链CDR</li>
+<li>LC: 轻链CDR</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>完成设定后, 在菜单中选择Kernel-&gt;restart&amp;run all</li>
+<li>结果:<ul>
+<li>结果首先会显示在程序页面中</li>
+<li>结果以report.txt文件存储在output_path所指定的路径中</li>
+<li>为方便进一步处理,<ul>
+<li>PatnetIn生成的txt文件, 会被转换成同名的json文件和csv文件.</li>
+<li>word文件, 会被转换成同名的csv文件.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1>更新</h1>
+<p>本程序还将不断更新.</p>
+<h2>在Azure Notebooks中更新</h2>
+<ul>
+<li>点击Terminal</li>
+<li>输入<code>cd Library</code></li>
+<li>输入<code>git checkout .</code> 注意末尾有个点</li>
+<li>输入<code>git pull</code></li>
+</ul>
