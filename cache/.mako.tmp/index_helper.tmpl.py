@@ -5,38 +5,32 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1514451870.544176
+_modified_time = 1514480810.13551
 _enable_loop = True
-_template_filename = '/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/index_helper.tmpl'
+_template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/index_helper.tmpl'
 _template_uri = 'index_helper.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['mathjax_script', 'html_pager']
+_exports = ['html_pager', 'mathjax_script']
 
+
+def _mako_get_namespace(context, name):
+    try:
+        return context.namespaces[(__name__, name)]
+    except KeyError:
+        _mako_generate_namespaces(context)
+        return context.namespaces[(__name__, name)]
+def _mako_generate_namespaces(context):
+    ns = runtime.TemplateNamespace('math', context._clean_inheritance_tokens(), templateuri='math_helper.tmpl', callables=None,  calling_uri=_template_uri)
+    context.namespaces[(__name__, 'math')] = ns
 
 def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         __M_writer = context.writer()
+        __M_writer('\n')
         __M_writer('\n\n')
         __M_writer('\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
-def render_mathjax_script(context,posts):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        use_katex = context.get('use_katex', UNDEFINED)
-        any = context.get('any', UNDEFINED)
-        __M_writer = context.writer()
-        __M_writer('\n')
-        if any(post.is_mathjax for post in posts):
-            if use_katex:
-                __M_writer('            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/katex.min.js"></script>\n            <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/0.3.0/contrib/auto-render.min.js"></script>\n            <script>\n                renderMathInElement(document.body);\n            </script>\n')
-            else:
-                __M_writer('            <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>\n            <script type="text/x-mathjax-config">\n            MathJax.Hub.Config({tex2jax: {inlineMath: [[\'$latex \',\'$\'], [\'\\\\(\',\'\\\\)\']]}});\n            </script>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -45,8 +39,8 @@ def render_mathjax_script(context,posts):
 def render_html_pager(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        nextlink = context.get('nextlink', UNDEFINED)
         prevlink = context.get('prevlink', UNDEFINED)
+        nextlink = context.get('nextlink', UNDEFINED)
         messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -70,8 +64,21 @@ def render_html_pager(context):
         context.caller_stack._pop_frame()
 
 
+def render_mathjax_script(context,posts):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        math = _mako_get_namespace(context, 'math')
+        __M_writer = context.writer()
+        __M_writer('\n    ')
+        __M_writer(str(math.math_scripts_ifposts(posts)))
+        __M_writer('\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 """
 __M_BEGIN_METADATA
-{"source_encoding": "utf-8", "uri": "index_helper.tmpl", "line_map": {"64": 13, "65": 13, "66": 13, "67": 16, "73": 67, "16": 0, "21": 19, "22": 36, "28": 21, "34": 21, "35": 22, "36": 23, "37": 24, "38": 29, "39": 30, "45": 2, "52": 2, "53": 3, "54": 4, "55": 6, "56": 7, "57": 8, "58": 8, "59": 8, "60": 8, "61": 11, "62": 12, "63": 13}, "filename": "/Users/goldengrape/anaconda3/envs/blog/lib/python3.5/site-packages/nikola/data/themes/base/templates/index_helper.tmpl"}
+{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/index_helper.tmpl", "uri": "index_helper.tmpl", "source_encoding": "utf-8", "line_map": {"23": 2, "26": 0, "31": 2, "32": 20, "33": 25, "39": 3, "46": 3, "47": 4, "48": 5, "49": 7, "50": 8, "51": 9, "52": 9, "53": 9, "54": 9, "55": 12, "56": 13, "57": 14, "58": 14, "59": 14, "60": 14, "61": 17, "67": 23, "72": 23, "73": 24, "74": 24, "80": 74}}
 __M_END_METADATA
 """
