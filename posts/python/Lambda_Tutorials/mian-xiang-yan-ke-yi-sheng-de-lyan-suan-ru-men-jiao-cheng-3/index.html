@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>面向眼科医生的λ演算入门教程(3) | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/" title="面向眼科医生的λ演算入门教程(2)" type="text/html">
+<link rel="next" href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/" title="面向眼科医生的λ演算入门教程(4)" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="面向眼科医生的λ演算入门教程(3)">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/">
+<meta property="og:description" content="变量的区别
+上回说到lambda calculus其实只有一种操作，就是字符替换。但是具体怎么替换还是有些讲究的。
+有时候数学书难读是因为数学书的作者往往是数学家，作者知道的太多了，以至于不知道读者不知道，于是从读者的角度来说就凭空引入了一些概念。所以，我们还是从数学中熟悉的中学数学区域出发好了。
+
+比如，一元二次函数：
+$$
+f(x)=ax^2+bx+c
+$$
+这里面的变量是x，老师问$$f(2">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2017-12-19T00:32:16+08:00">
+<meta property="article:tag" content="lambda">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            <p>Welcome</p>
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">面向眼科医生的λ演算入门教程(3)</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2017-12-19T00:32:16+08:00" itemprop="datePublished" title="2017-12-19 00:32">2017-12-19 00:32</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>变量的区别</h3>
+<p>上回说到lambda calculus其实只有一种操作，就是字符替换。但是具体怎么替换还是有些讲究的。</p>
+<p>有时候数学书难读是因为数学书的作者往往是数学家，作者知道的太多了，以至于不知道读者不知道，于是从读者的角度来说就凭空引入了一些概念。所以，我们还是从数学中熟悉的中学数学区域出发好了。
+<!-- TEASER_END --></p>
+<p>比如，一元二次函数：
+$$
+f(x)=ax^2+bx+c
+$$
+这里面的变量是x，老师问$$f(2)=？$$那么就是把$$x=2$$代入到$$f(x)$$中，
+$$
+f(2)=a 2^2+b 2+c=4a+2b+c
+$$
+那a,b,c是什么呢？老师没给，所以我们就当作a,b,c各自是3个数好了。如果老师给出a=1,b=2,c=3，那么这时候
+$$
+f(x)=x^2+2x+3
+\
+f(2)=4+4+3=11
+$$
+看起来对a,b,c操作和刚才对于x做的操作也类似啊，如果有数就代入进去，没有的话就留着。</p>
+<p>在$$ f(x)=ax^2+bx+c $$中，x，写在了$$ f(x)$$ 的括号里面，这个x可以叫做metavariable，在函数的定义式子里面已经明确告诉你，函数定义里面的x如何变化要去看metavariable到底是什么，所以$$ ax^2+bx+c $$式子里的x叫做bound variables，是约束变量，是被bound到metavariable上的。</p>
+<p>而对于式子中的a,b,c，并不在这个函数内部定义，是在函数外部定义的，比如题目中写的，或者老师写在了黑板上，abc也是可变的，但怎么变这个函数定义式没说，是自由的，所以叫做自由变量free variables。所有没有bound到metavariables上的变量都是free的。</p>
+<p>正是由于$$ f(x)=ax^2+bx+c $$中的a,b,c可以free取各种特殊的数值，中学数学才有那么多题目可以出。比如a,b,c之中有个0啦，a和0之间的关系，b和0之间的关系，a和b之间的关系……</p>
+<p>如果要对$$ f(x)=ax^2+bx+c$$ 中的x进行替换，那么是对bound variables进行替换，也就是找到其中的x，而不是其中的a,b,c这样的free variables。</p>
+<p>实际上$$f(x)$$这个写法，声明了两件事情：</p>
+<ul>
+<li>f是这个函数的名字</li>
+<li>括号里面的x是metavariable，</li>
+</ul>
+<p>如果是$$g(a,b,c)=ax^2+bx+c$$那么就是另外一个函数了，里面的bound variables是a,b,c，而x反而变成了free variable.</p>
+<p>更复杂一点，如果函数中有嵌套，比如  </p>
+<p>$$L(x, f(x))$$，现在求x=2时的值，也是把x代入，$$L(2, f(2))$$</p>
+<h3>lambda calculus中</h3>
+<p>对于lambda calculus，书写的时候和二次函数一样，会明确标记出谁是metavariable。  </p>
+<p>与f(x)不同，λx.只声明了一件事情，λ和点. 之间的x是metavariables。  </p>
+<p>在点.后面的是函数的定义表达式，如果变量跟metavariables是绑定的，就是bound variable。</p>
+<p>比如：  </p>
+<pre class="code literal-block"><span></span>(λx.x) HelloWorld  
+</pre>
+
+
+<p>相当于$$f(x)=x$$，求x=HelloWorld，就是将x替换成HelloWorld  </p>
+<p>λx.中间是metavariable x，λx.后面是函数定义的表达式x，这里面只有一个变量x，与metavariable是相同的，是bound variable。用Hello替换掉bound variable。  </p>
+<p><img alt="" src="../../../../images/lambda/2.png"></p>
+<p>我们看$$L(x, f(x))$$那个例子，如果求x=2时，是把2替换掉x，得到$$L(2, f(2))$$  </p>
+<p>类似的，我们可以写另一个。  </p>
+<p>打开<a href="http://www.cburch.com/lambda/">http://www.cburch.com/lambda/</a> 试一试，输入：  </p>
+<pre class="code literal-block"><span></span>(λx.(x (λy.x)) HelloWorld  
+</pre>
+
+
+<p><img alt="" src="../../../../images/lambda/8.png"></p>
+<p>类比$$L(x, f(x))$$那个例子，$$x (λy.x)$$中，第一个x显然是bound variable，要被替换成HelloWorld，第二个x，虽然在λy.x内部，但是λy.x中的metavariable定义的是y，而不是x，所以x是free的，它的值要从λy.x外面找，所以还是HelloWorld.</p>
+<p>更复杂一点，如果  </p>
+<pre class="code literal-block"><span></span>(λx.(x (λx.x))) HelloWorld  
+</pre>
+
+
+<p>就不一样了，(x (λx.x))之中，第一个x是bound variable，要被替换成HelloWorld，内部嵌套的那个λx.x中，由于声明了x是这个函数体内的bound variable，那么这里面的x值就不是HelloWorld了。</p>
+<p>我很喜欢 <a href="http://www.cburch.com/lambda/">http://www.cburch.com/lambda/</a> 这个lambda calculus interpreter的原因之一是，它会自动做变量的重新解释，(x (λx.x))之中λx.x的x与外部的x是无关的，所以干脆可以写成其他的名字，比如i0，在不容易混淆的时候再换回成x就好了。  </p>
+<p><img alt="" src="../../../../images/lambda/9.png"></p>
+<pre class="code literal-block"><span></span>(λx.x (λi0.i0)) HelloWorld  
+⇒    HelloWorld (λx.x)
+</pre>
+
+
+<p>我们再看Hello World中的第二个例子，就可以更清楚地理解了。  </p>
+<pre class="code literal-block"><span></span>(λx.λy.x) Hello World  
+</pre>
+
+
+<p><img alt="" src="../../../../images/lambda/3.png"></p>
+<p>λx.(λy.x)中，定义x是bound variable，在λy.x中，y是metavariable，x是free variable，x的值在λy.x的上一层定义，所以当Hello传入时，送到了λy.x中的x里面。  </p>
+<p>(λx.λy.x) Hello World<br>
+⇒    (λy.Hello) World</p>
+<p>所以，到目前为止，</p>
+<ul>
+<li>
+<p>你已经知道variables有三种：</p>
+</li>
+<li>
+<p>metavariable是写在λ和点.之间的那个</p>
+</li>
+<li>函数表达式里和metavariable绑定的那个是bound variable</li>
+<li>
+<p>函数表达式里没有被绑住，可以自由变来变去的那些都是free variables.</p>
+</li>
+<li>
+<p>你也知道替换的规则是什么了：</p>
+</li>
+<li>
+<p>应该替换掉的是bound variables，如果一个变量是free variables就要去它的上一层找值。</p>
+</li>
+</ul>
+<h3>附变量符号的小历史</h3>
+<p>中国古代也有类似的标记方法，会把bound variables叫做元，比如天元、地元、人元，分别是3个bound variables，x,y,z。  </p>
+<p>北宋平阳蒋周创立了天元的概念，李冶（1192－1279）发展了天元术。  </p>
+<blockquote>
+<p>"李冶在东平获得刘汝谐撰《如积释锁》，书中用十九个单字表示未知数的各个 $$ x^9至 x^{-9} $$的幂：  </p>
+<p>仙、明、霄、汉、垒、层、高、上、天、人、地、下、低、减、落、逝、泉、暗、鬼；其中立天元在上。"  </p>
+</blockquote>
+<p>我还不太确定其中的仙……鬼是指系数还是指$$ax^9$$这样合起来的一项。如果是后者，可能还没有区分free variables。  <a href="https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%85%83%E6%9C%AF">https://zh.wikipedia.org/wiki/天元术</a></p>
+<p>弗朗索瓦·韦达François Viète（1540－1603） 则是在欧洲首先使用符号来标记bound variables和free variables，而且是作出了区分  <a href="https://zh.wikipedia.org/wiki/%E5%BC%97%E6%9C%97%E7%B4%A2%E7%93%A6%C2%B7%E9%9F%A6%E8%BE%BE">https://zh.wikipedia.org/wiki/弗朗索瓦·韦达</a></p>
+<p>在我看来，将未知数和符号引入数学，是不亚于仓颉造字的大事，从此数学摆脱了实体世界的束缚。（回忆一下你在小学还经常可以看到取水放水的小明，到中学他就已经渐渐远去了。）</p>
+<p>造字尚且使“鬼夜哭”，符号的引入则令“神始惧”。</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/lambda/" rel="tag">lambda</a></li>
+            <li><a class="tag p-category" href="../../../../categories/jiao-cheng/" rel="tag">教程</a></li>
+            <li><a class="tag p-category" href="../../../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/" rel="prev" title="面向眼科医生的λ演算入门教程(2)">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/" rel="next" title="面向眼科医生的λ演算入门教程(4)">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/",
+        disqus_title="\u9762\u5411\u773c\u79d1\u533b\u751f\u7684\u03bb\u6f14\u7b97\u5165\u95e8\u6559\u7a0b(3)",
+        disqus_identifier="cache/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2017         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
