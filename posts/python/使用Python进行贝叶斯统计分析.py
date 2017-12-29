@@ -63,7 +63,7 @@ warnings.filterwarnings('ignore')
 #     - variance: 方差
 #     - interval: 置信区间
 
-# ![](./images/beliefs.jpg)
+# ![](https://raw.githubusercontent.com/ericmjl/bayesian-stats-talk/master/images/beliefs.jpg)
 
 # ## 贝叶斯公式
 
