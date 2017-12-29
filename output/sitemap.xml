@@ -15,7 +15,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2017-12-29T04:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -62,10 +62,6 @@
   <lastmod>2017-12-28T17:23:00Z</lastmod>
  </url>
  <url>
-  <loc>https://goldengrape.github.io/galleries/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
- </url>
- <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
   <lastmod>2017-12-28T17:23:00Z</lastmod>
  </url>
@@ -75,11 +71,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
-  <lastmod>2017-12-28T17:24:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/listings/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2017-12-29T04:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -240,5 +232,9 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/python-old-chinese/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</loc>
+  <lastmod>2017-12-29T04:07:00Z</lastmod>
  </url>
 </urlset>
