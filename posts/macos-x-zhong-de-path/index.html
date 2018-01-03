@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>macOS X 中的$PATH | GoldenGrape's Blog</title>
+<link href="../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/macos-x-zhong-de-path/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../bulabula/what-is-ebm/" title="讨论医学问题前的基础讨论" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="macOS X 中的$PATH">
+<meta property="og:url" content="https://goldengrape.github.io/posts/macos-x-zhong-de-path/">
+<meta property="og:description" content="贪图享乐装了一个oh-my-zsh, 结果装好以后突然发现在终端中常用的命令都找不到了, 什么source activate , jupyter , conda ,敲完了以后都是一句:
+    zsh: command not found:
+
+
+
+真是一脑门子汗呐. 感觉就是召唤了一个不太熟的魔兽, 看起来很强大, 但不知道如何驾驭之.
+
+
+问题:
+问题出在了zsh在加载的时候没有加载合适的PAT">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-03T20:38:31+08:00">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            <p>Welcome</p>
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">macOS X 中的$PATH</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-03T20:38:31+08:00" itemprop="datePublished" title="2018-01-03 20:38">2018-01-03 20:38</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/macos-x-zhong-de-path.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>贪图享乐装了一个<a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>, 结果装好以后突然发现在终端中常用的命令都找不到了, 什么source activate , jupyter , conda ,敲完了以后都是一句:</p>
+<pre class="code literal-block"><span></span>    zsh: command not found:
+</pre>
+
+
+<p>真是一脑门子汗呐. 感觉就是召唤了一个不太熟的魔兽, 看起来很强大, 但不知道如何驾驭之.</p>
+<!-- TEASER_END -->
+
+<h2>问题:</h2>
+<p>问题出在了zsh在加载的时候没有加载合适的PATH, 在unix/linux/mac这类系统下, 有个$PATH, 负责存储调用命令时的搜索路径, 我本能地觉得这个东西很复杂, 一直刻意避开, 现在也没办法了, 只好硬着头皮学了学.</p>
+<p>要看自己的$PATH, 可以</p>
+<pre class="code literal-block"><span></span>echo "$PATH"
+</pre>
+
+
+<p>返回的结果可能是:</p>
+<pre class="code literal-block"><span></span>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin
+</pre>
+
+
+<p>一串长长的字符串, 中间用:作为分隔. 里面记录了各种路径. 我启动zsh以后, 这个里面没有包含anaconda的路径, 导致我想运行anaconda中的命令会出错.</p>
+<h2>解决:</h2>
+<p>编辑$PATH.</p>
+<p>在macOS上, 有两种方案可以编辑$PATH:</p>
+<ol>
+<li>在 /etc/paths.d 目录里添加.</li>
+<li>用编辑器往 ~/.bash_profile 文件里export.</li>
+</ol>
+<p>后一种我仍然不太明白, 而且在我的电脑上好像也没成功. 我来说说第一种方案.</p>
+<p>PATH是以文件的形式存储在/etc/paths.d这个目录中的, 要看当前已经存储的文件, 可以:</p>
+<pre class="code literal-block"><span></span>ls -l /etc/paths.d/
+</pre>
+
+
+<p>可能返回的结果是:</p>
+<pre class="code literal-block"><span></span>-rw-r--r--  1 root  wheel  13 10 13  2015 40-XQuartz
+-rw-r--r--  1 root  wheel  22 10 13  2015 TeX
+</pre>
+
+
+<p>如果查看文件里的内容, 比如看40-XQuartz</p>
+<pre class="code literal-block"><span></span>cat /etc/paths.d/40-XQuartz
+</pre>
+
+
+<p>那么将看到</p>
+<pre class="code literal-block"><span></span>/opt/X11/bin
+</pre>
+
+
+<p>也就是需要找到的路径. 那么仿照这个, 也建立一个文件, 文件里面保存上要添加的路径即可.</p>
+<p>我还是习惯用atom作为编辑器, 所以:</p>
+<pre class="code literal-block"><span></span>sudo atom /etc/paths.d/anaconda3
+</pre>
+
+
+<p>输入密码后, atom会在这个目录下新建一个叫做anaconda3的文件, 并且打开处于可编辑状态.</p>
+<p>于是我在这个文件里添加上我的anaconda3需要加入的path, 这个路径可以<a href="https://docs.anaconda.com/anaconda/faq#what-is-the-default-path-for-installing-anaconda">从anaconda的faq里面查到</a></p>
+<pre class="code literal-block"><span></span>/Users/goldengrape/anaconda3/bin
+</pre>
+
+
+<p>加入以后保存. 然后关闭终端, 再次重新打开, 这个路径就被加载好了, 不管是在bash下, 还是在zsh下都可以用了.</p>
+<p>如果还有其他软件需要特定设定$PATH, 也可以用同样的办法建立文件, 写入路径. 我个人比较喜欢这种方式, 看着清楚, 也不太受到切换shell的影响.</p>
+<ul>
+<li>参考:</li>
+</ul>
+<p><a href="https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/">Mac OS X: Set / Change $PATH Variable</a></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../bulabula/what-is-ebm/" rel="prev" title="讨论医学问题前的基础讨论">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/macos-x-zhong-de-path/",
+        disqus_title="macOS X \u4e2d\u7684$PATH",
+        disqus_identifier="cache/posts/macos-x-zhong-de-path.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

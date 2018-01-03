@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>讨论医学问题前的基础讨论 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/what-is-ebm/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/" title="使用python进行贝叶斯统计分析" type="text/html">
+<link rel="next" href="../../macos-x-zhong-de-path/" title="macOS X 中的$PATH" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="讨论医学问题前的基础讨论">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/what-is-ebm/">
+<meta property="og:description" content='在好友群/同学群里面迟早要遇到讨论医学/保健/养生问题的情况. 跟陌生人组成的群组还不同, 那里面也没必要深入讨论, 在同学群(当然不是大学同学)里面, 往往还是会出现一些"锐利而不失体面"的讨论.
+所以看来还是需要"锐利而不失体面"地简单解释一下现代医学的一些基本概念. 也是躲不掉的. 说的不全的地方还请包含.
+首先, 现代医学是科学的一部分. 科学的最基本属性是"可证伪性". 我觉得解释成"可'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-03T16:00:00+08:00">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            <p>Welcome</p>
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">讨论医学问题前的基础讨论</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-03T16:00:00+08:00" itemprop="datePublished" title="2018-01-03 16:00">2018-01-03 16:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/bulabula/医学基础.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>在好友群/同学群里面迟早要遇到讨论医学/保健/养生问题的情况. 跟陌生人组成的群组还不同, 那里面也没必要深入讨论, 在同学群(当然不是大学同学)里面, 往往还是会出现一些"锐利而不失体面"的讨论.</p>
+<p>所以看来还是需要"锐利而不失体面"地简单解释一下现代医学的一些基本概念. 也是躲不掉的. 说的不全的地方还请包含.</p>
+<p>首先, 现代医学是科学的一部分. 科学的最基本属性是"可证伪性". 我觉得解释成"可重复性"更容易理解一些. 也就是说:</p>
+<ul>
+<li>给定同样的条件,</li>
+<li>施加同样的处理,</li>
+<li>得到同样的结果, 或者至少是在确定概率上得到同样的结果.
+<!-- TEASER_END -->
+</li>
+</ul>
+<p>诊断和治疗疾病会有很多很多的方法, 医生一定要选择"可重复"的方法进行诊断和治疗. 也就是说遇到同样的疾病状态, 给予同样的处理, 得到同样的结果, 或者至少是在确定的概率上得到同样的结果.</p>
+<ul>
+<li>判断"同样的疾病状态", 叫做 <strong>诊断</strong>,</li>
+<li>"给予同样的处理,"叫做 <strong>治疗</strong>,</li>
+<li>在治疗之前预计出"同样的结果, 或者至少是在确定的概率上得到同样的结果"叫做 <strong>预后</strong>.</li>
+</ul>
+<p>因为人体是一个非常复杂的结构, 有大量大量的非线性的过程. 多数人日常接触的是线性过程, 理解非线性过程会有困难. 所谓线性过程就是1+1=2的过程, 64G存的电影比32G存的电影多一倍, 2个人搬砖比1个人快一倍. 1mol盐酸+1molNaOH完全中和成盐和水. 这些都是线性过程.</p>
+<p>非线性过程比如吃1个苹果用1分钟, 这有9个苹果, 9分钟吃不完. 如果中学化学学得好可能还隐约记得有磷酸缓冲液这回事. 非线性过程在足够小的区间内可以用线性来近似, 大量的工程学是建立在这个基础上的, 以至于即使是理工科的同学也会忘记非线性这回事.</p>
+<p>很郁闷的是人体, 即使在小量上也往往是非线性表现. 所以有很多事情"道理上说得通", 在医学上往往说不通, 一定要经过临床实验验证才行.</p>
+<p>医生选择用药物/手术或者其他治疗方式, 候选的治疗方式要经过可重复的验证, 这个叫做临床实验. 临床实验有一些基本的原则. 临床实验最核心最隐含的假设就是不相信任何实验者, 假设实验者会想各种方法作假, 有意的或者是无意的, 他们都有可能作假. 在一组公认的准则之下, 作假都会暴露出来. 如果实验经受住了这些准则的考验, 实验结果才会被认可.</p>
+<p>临床实验的实验对象是人, 所以首先是要遵守伦理学的要求. 这有专门的伦理委员会审查, 不展开讨论了. 实验对象要有明确的纳入标准和排除标准, 以保证尽可能接近"同样的疾病状态"</p>
+<p>实验要分组, 一部分是实验组, 也就是要验证的治疗方式, 一部分是对照组, 可以是没有治疗作用的方法, 也可以是现有的治疗方法. 分组的过程要用上所谓的"随机"方法, 不能把病情轻的都分到实验组, 病情重的都分到对照组. 随机的一个好处是可以平均各个未知的参数, 我们不知道病人喜欢什么颜色是否会影响治疗结果, 但是如果有足够多的病人, 随机把他们分开, 那么这个影响可能就很小了.</p>
+<p>我们要记住实验者都有潜在的作弊倾向.所以即使是随机分组, 实验者在给予治疗的时候仍然有可能作弊, 比如给实验组更好的照顾, 给实验组吃得更好, 更愿意听实验组说好消息等等. 解决的方法就是, 实验设计的时候, 不要让给药的人或者观察的人知道哪个是实验组, 哪个是对照组. 实验者是"盲"的. 最好的情况下, 各个环节都是盲的, 病人不知道自己是哪个组的, 给药的护士不知道自己给的是药物还是安慰剂, 记录病历的医生不知道病人是哪个组的, 也不知道给的药物是什么. 这个叫做"双盲".</p>
+<p>现在已经说到了随机对照双盲实验, 这就是等级比较高的实验了. 能够经受住这样的考验的治疗方法算是比较可靠了. 但还有一些问题, 比如抛硬币, 理论上应当是50%正面, 50%反面, 但如果你抛的次数太少, 比如3次, 很可能一直都是正面, 所以要有足够多的次数才有说服力. 在临床实验中, 就是要有足够多的病人, 这个在一个医院收集的病人可能不够, 于是需要有多个医学中心来进行同一个实验, 这就是"多中心临床实验"</p>
+<p>一个治疗方法, 经过了随机对照双盲的多中心临床实验, 就获得了最高等级的<strong>临床证据</strong>, 在讨论的时候, 你们经常会听到我说, 某个事情有临床证据, 某个东西没有证据. 就是说的这个.</p>
+<p>按照临床证据来进行诊断和治疗, 叫做"循证医学", evidence based medicine. 随机对照双盲的多中心临床实验是非常昂贵的, 所以也有一些等级相对低的证据. EBM有对临床证据的分级标准.</p>
+<p>随手就可以查到<a href="http://www.dxy.cn/bbs/thread/18509031#18509031">循证医学证据分级</a></p>
+<p>比如专家意见, 这在里面是相对较低的等级.</p>
+<p>如果仅仅是某个人的"亲测有效", 这个完全算不上任何临床证据.
+"我有一个朋友", "我听说", "按道理说", 这些都不是能够指导医生进行诊断和治疗的"临床证据".</p>
+<p>. . . . . .</p>
+<p>这里, 我只是展示一下大夫的思维方式. 当病人谈到某个治疗方式有多好有多有效的时候, 医生脑子里是先查诊疗手册有没有记载, 然后记下几个关键词, 去查查pubmed. 高年资的医生一般不会去反驳病人的, 保持微笑, 叫下一个.</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/" rel="prev" title="使用python进行贝叶斯统计分析">前一篇</a>
+            </li>
+            <li class="next">
+                <a href="../../macos-x-zhong-de-path/" rel="next" title="macOS X 中的$PATH">后一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/bulabula/what-is-ebm/",
+        disqus_title="\u8ba8\u8bba\u533b\u5b66\u95ee\u9898\u524d\u7684\u57fa\u7840\u8ba8\u8bba",
+        disqus_identifier="cache/posts/bulabula/医学基础.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
