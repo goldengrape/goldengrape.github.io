@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2017-12-28T17:24:00Z</lastmod>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
   <lastmod>2017-12-28T17:23:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/2018/</loc>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2017-12-29T04:07:00Z</lastmod>
+  <lastmod>2018-01-03T13:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -63,15 +67,19 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
-  <lastmod>2017-12-29T04:07:00Z</lastmod>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-4.html</loc>
+  <lastmod>2018-01-03T13:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -136,6 +144,14 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/qi-fa-yu-yan-zheng/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</loc>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/macos-x-zhong-de-path/</loc>
+  <lastmod>2018-01-03T13:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/3-ipad-games-for-myopia/</loc>
