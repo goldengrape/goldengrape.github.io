@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：CSF)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/csf.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2017 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 28 Dec 2017 17:00:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：CSF)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/csf.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 09:33:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;为什么要用Eigenfunction&lt;/h2&gt;
+&lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
+&lt;p&gt;类比测视力，就好像用1.0的视标去测病人，结果病人自带放大系统，视标放大到0.1的程度，这样的测量就错了。&lt;/p&gt;
+&lt;p&gt;由于病人的像差可以千奇百怪千差万别，所以病人的眼睛作为一个线性不变系统，也可能是千差万别的。要选择一个带有周期结构的输入，经过各种各不相同的线性系统还可以得到同周期的输出，满足这个能力的输入，就是所有线性不变系统的Eigenfunction了。&lt;/p&gt;
+&lt;p&gt;常规的E视标，相当于给入的输入的“方波”，那么如果经过一个有像差的眼睛，成像后的输出可能是这样的：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="E_MTF" src="https://goldengrape.github.io/images/CSF/E_MTF.png"&gt;&lt;/p&gt;
+&lt;p&gt;看输出的强度波形，会发现各个峰的高度是不同的，如果仔细测量，可能还会发现波峰之间的周期也会略有差别。甚至一个有经验的“视力测量欺骗者”，可以根据虚影的方向反推出视标的方向。&lt;/p&gt;
+&lt;p&gt;但如果是一个正弦波的视标。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sin_MTF" src="https://goldengrape.github.io/images/CSF/sin_MTF.png"&gt;&lt;/p&gt;
+&lt;p&gt;经过同样有像差的眼，形成的仍然是正弦波，峰值是同样的，周期是同样的，区别只是“振幅”发生了变化。只有对比度这个变量会根据像差的情况改变，这样就方便了测量。&lt;/p&gt;
+&lt;h2&gt;总结&lt;/h2&gt;
+&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
+&lt;p&gt;答：因为人眼视觉成像过程近似于线性不变系统，亮度正弦变化的视标是线性系统的Eigenfunction，在经过人眼成像厚视标的空间频率不变。&lt;/p&gt;
+&lt;p&gt;至于为什么正弦函数是线性不变系统的Eigenfunction，就是另外一个很长的故事了。如果有兴趣可以参考吕乃光老师编写的《傅里叶光学(第二版)》，第50-52页。&lt;/p&gt;
+&lt;h2&gt;One more thing&lt;/h2&gt;
+&lt;p&gt;题图&lt;/p&gt;
+&lt;p&gt;&lt;img alt="stripe_0.21" src="https://goldengrape.github.io/images/CSF/stripe_0.21.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
+&lt;p&gt;通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。&lt;/p&gt;
+&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
 &lt;p&gt;看这思路，人眼的光学成像近似是线性空间不变系统，如果有个函数是任意线性不变系统的Eigenfunction，那么必然也是人眼光学成像的Eigenfunction。&lt;/p&gt;
 &lt;p&gt;Otto. H. Schade在1956年把正弦视标引入眼科检查的时候，到底是怎么把这么远的两个概念结合到一起的？&lt;/p&gt;
 &lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？
@@ -24,10 +44,55 @@
 &lt;p&gt;前面说到，对比敏感度测量的时候，要给定一个空间频率，然后测量人眼分辨对比度的能力。如果给好了一个空间频率，而通过眼睛的屈光间质折射以后，空间频率变化了，就不好办了。&lt;/p&gt;
 &lt;p&gt;那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</guid><pubDate>Mon, 18 Dec 2017 17:10:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;Eigenfunction（本征函数/ 特征函数）&lt;/h2&gt;
 &lt;p&gt;现在我们要把另一个函数作为参数输入到线性函数里。越来越抽象了，不过对于咱们眼科医生来说，有成像过程可以辅助理解。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</guid><pubDate>Mon, 18 Dec 2017 17:09:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;现在让我们回到初中，回忆一下你已经还给物理老师的几何光学。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;我们说函数function不过是把输入-&amp;gt;输出的过程，所以一张图片，也可以是个函数，图片是把位置-&amp;gt;颜色，或者简单一点，位置-&amp;gt;亮度，图片上每一个位置有一个像素，像素带有一个亮度值。&lt;/p&gt;
+&lt;p&gt;所以，如果我们把一个视标图片E，看成是函数g(x)，&lt;/p&gt;
+&lt;p&gt;&lt;img alt="E" src="https://goldengrape.github.io/images/CSF/E.png"&gt;&lt;/p&gt;
+&lt;p&gt;那么对于一个透镜f(x)，把函数g(x)作为输入就是f(g(x))了，&lt;/p&gt;
+&lt;p&gt;&lt;img alt="E-&amp;gt;Eblur.png" src="https://goldengrape.github.io/images/CSF/E2Eblur.png"&gt;&lt;/p&gt;
+&lt;p&gt;所以把函数作为参数输入到函数里，可以得到新到函数。&lt;/p&gt;
+&lt;p&gt;对于线性不变系统，如果把函数作为参数输入，有一类特殊的输入函数会有这样的性质：
+f( g(x) ) = A g(x)
+把这个函数g(x)送进f，经过变换的结果，只是相当于对g(x)乘了个系数，g(x)里面的内部结构都没变！&lt;/p&gt;
+&lt;p&gt;这类特殊的输入函数叫做该线性不变系统的Eigenfunction，可以翻译成“本征函数”或者“特征函数”。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</guid><pubDate>Mon, 18 Dec 2017 17:09:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;现在让我们回到初中，回忆一下你已经还给物理老师的几何光学。&lt;/p&gt;
 &lt;h2&gt;线性的几何光学&lt;/h2&gt;
 &lt;p&gt;我们可以把透镜成像的过程当作是一个把“物”变换成“像”的功能，说实话function翻译成函数真是挡住了不少人，function嘛，其实就是功能而已，有输入，有输出，把输入变成输出的功能。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/"&gt;更多…&lt;/a&gt; (剩余 2 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</guid><pubDate>Mon, 18 Dec 2017 17:08:49 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;线性系统&lt;/h2&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="C-&amp;gt; IJ" src="https://goldengrape.github.io/images/CSF/C.png"&gt;
+输入一个物C，就可以在屏幕上得到一个光斑IJ。
+f(点C)=IJ&lt;/p&gt;
+&lt;p&gt;&lt;img alt="物点G" src="https://goldengrape.github.io/images/CSF/5.png"&gt;
+输入另一个物G，就可以在屏幕上得到光斑MN。
+f(点G)=MN&lt;/p&gt;
+&lt;p&gt;&lt;img alt="两个物点" src="https://goldengrape.github.io/images/CSF/4.png"&gt;&lt;/p&gt;
+&lt;p&gt;同时输入物C和物G，同时得到光斑IJ和光斑MN。
+f(点C+点G)=IJ+MN = f(点C)+f(点G)
+看，理想的成像过程是个线性系统。&lt;/p&gt;
+&lt;h2&gt;线性不变系统&lt;/h2&gt;
+&lt;p&gt;简单的说，就是这个系统的变换过程是不随时间改变或者不随空间改变的。&lt;/p&gt;
+&lt;p&gt;比如一个医生看一个结膜炎用3分钟，看2个结膜炎用6分钟。他早上8点开始就是这个速度，到12点快下班了，还是看一个结膜炎用3分钟，看2个结膜炎用6分钟。这就叫做线性时间不变。&lt;/p&gt;
+&lt;p&gt;对于成像来说，考虑的是空间。
+比如离焦&lt;/p&gt;
+&lt;p&gt;&lt;img alt="C点在中间" src="https://goldengrape.github.io/images/CSF/1.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="C点向上移动" src="https://goldengrape.github.io/images/CSF/2.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="C点更向上移动" src="https://goldengrape.github.io/images/CSF/3.png"&gt;&lt;/p&gt;
+&lt;p&gt;从C点发出光形成了光斑IJ，如果C点的位置在垂直于光轴的面上移动。那么光斑IJ的大小不变。&lt;/p&gt;
+&lt;p&gt;这很容易通过中学学习的几何光学证明，物距u，像距v，焦距f
+1/u+ 1/v =1/f
+物距u没变，所以像距v不变。
+如果设光斑IJ的直径=x，屏幕到透镜的距离=L，透镜的直径=D
+三角形ABC'与三角形JIC'相似。所以
+IJ / AB = (L-V)/V
+也就是
+x  / D = (L-V)/V
+x= D (L-V)/V
+这里面D，L，V都是不变的，x当然也不变。&lt;/p&gt;
+&lt;p&gt;所以在垂直于光轴的同一个平面上移动物点C，得到的光斑IJ，虽然位置不同，但大小总是一样的。甚至，如果我们特别仔细地把光束分成一份一份，会发现光斑不仅外形连里面也是一样的。&lt;/p&gt;
+&lt;p&gt;这种情况就叫做线性空间不变。
+（注意，以上的讨论只是在理想透镜的情况下讨论的，当然我们引入了离焦，所以其实包含了低阶像差，但是更复杂的情况并没有仔细讨论，球差也是线性空间不变的，但如果成像面弯曲了，恐怕就不是这样了，但通常我们只考虑黄斑区那一点点的范围，这时候光斑几乎是相同的，称作“等晕区”，可以近似认为是线性空间不变的）。&lt;/p&gt;
+&lt;p&gt;一个相反的例子，哈哈镜，&lt;/p&gt;
+&lt;p&gt;&lt;img alt="哈哈镜" src="https://goldengrape.github.io/images/CSF/distormirror.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;哈哈镜是线性系统，一个光点成像不影响另一个光点的像。但如果你拿着一个点移动，透过哈哈镜看输出，随着点的位置不同，放大、扭曲、缩小的情况各不相同，所以哈哈镜是线性的，但不是线性空间不变的。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</guid><pubDate>Mon, 18 Dec 2017 17:08:49 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;线性系统&lt;/h2&gt;
 &lt;p&gt;线性，是说一个函数如果满足：
 f(a+b)=f(a)+f(b)
 f(m x)=m f(x)
@@ -36,7 +101,34 @@ f(a+b)=2(a+b)=2a+2b=f(a)+f(b)
 f(m x)=2mx=m(2x)=m f(x)&lt;/p&gt;
 &lt;p&gt;我们可以把函数当作是一个变换过程，把输入变换成输出。
 一个医生看一个结膜炎用3分钟，看2个结膜炎用6分钟。这个医生看病的能力是“线性”的。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/</guid><pubDate>Mon, 18 Dec 2017 17:08:39 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(0)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我知道你对此有疑问很久了，查了很多很多眼科书也没有讲清楚的。因为答案根本就不在眼科书上，这大概是个定理：“当你需要深入了解时，一定是眼科书里没有的”。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;非线性的人体&lt;/h2&gt;
+&lt;p&gt;人体通常情况下不是线性的。著名的例子，比如吃一个苹果1分钟，吃9个苹果用多久？&lt;/p&gt;
+&lt;p&gt;&lt;img alt="吃9个苹果" src="https://goldengrape.github.io/images/CSF/7181079064.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;再比如医生们超级反感的朋友圈养生指南最喜欢的”酸碱体质”，也是把人体酸碱平衡错误理解成了线性系统，完全不管磷酸盐缓冲这么一回事。&lt;/p&gt;
+&lt;h2&gt;视觉&lt;/h2&gt;
+&lt;p&gt;视觉是一种知觉，而不仅仅是感觉。知觉是要中枢神经系统参与处理的，CNS处理的过程可不一定是线性的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="错觉图像" src="https://goldengrape.github.io/images/CSF/WechatIMG85.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;不过仅仅从单眼成像的过程考虑，通常，人眼单眼的成像过程倒是可以近似看作是线性的。&lt;/p&gt;
+&lt;p&gt;比如，在人面前点亮一盏灯，可以看到一盏灯，再点亮另一盏灯，看到的是两盏灯，它们之间并没有什么干扰。&lt;/p&gt;
+&lt;p&gt;在后续的讨论中，我们把人眼单眼成像的过程当作是线性过程来考虑。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-1/</guid><pubDate>Mon, 18 Dec 2017 17:08:39 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(0)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我知道你对此有疑问很久了，查了很多很多眼科书也没有讲清楚的。因为答案根本就不在眼科书上，这大概是个定理：“当你需要深入了解时，一定是眼科书里没有的”。&lt;/p&gt;
 &lt;p&gt;我将连载几篇仔细讲解一下这个问题。以表达我对眼科先贤的崇敬。&lt;/p&gt;
 &lt;p&gt;注意，此知识不宜拿去炫耀，可以科普不宜提问，毕竟其中涉及到的东西远超眼科教材。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</guid><pubDate>Mon, 18 Dec 2017 17:08:15 GMT</pubDate></item></channel></rss>
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;正弦光栅视标&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="对比敏感度视标" src="https://goldengrape.github.io/images/CSF/p20004817g3001.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;左图是视标的图像，右图是视标亮度，亮度的变化为正弦函数。对比度分别是0.85(A), 0.50(B), 0.10(C)&lt;/p&gt;
+&lt;p&gt;图片来源: Photographs taken from transparencies provided by Michael Miller, Department of Neurology, Mount Sinai School of Medicine, and Wolkstein et al., 1980. Reprinted with permission from I. Bodis-Wollner. Copyright 1980 by J. B. Lippincott Company.&lt;/p&gt;
+&lt;p&gt;引自https://www.ncbi.nlm.nih.gov/books/NBK219042/&lt;/p&gt;
+&lt;h2&gt;历史&lt;/h2&gt;
+&lt;p&gt;按照这本1985年的&lt;a href="https://www.ncbi.nlm.nih.gov/books/NBK219042/"&gt;《Emergent Techniques for Assessment of Visual Performance》&lt;/a&gt; 中关于对比敏感度CSF检查手段的综述，最早正弦光栅视标是在Otto. H. Schade于1956年发表的文章中出现。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This use of sine wave gratings was first introduced in vision by Schade (1956) and was subsequently used by early investigators to measure basic visual sensitivity (Westheimer, 1960; DePalma and Lowry, 1962; Campbell and Robson, 1968).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这篇神作是：
+&lt;a href="https://doi.org/10.1364/JOSA.46.000721"&gt;Optical and Photoelectric Analog of the Eye&lt;/a&gt; （被引用620次）
+&lt;a href="http://doi.org/10.1364/JOSA.46.000721"&gt;全文&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;但是，太难，我没看懂。&lt;/p&gt;
+&lt;p&gt;在1968年Campbell FW, Robson JG.发表的文献 &lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/5666169"&gt;Application of Fourier analysis to the visibility of gratings&lt;/a&gt; （被引用3394次） 之中进行了更详细的解释。&lt;a href="http://www.cns.nyu.edu/~david/courses/perceptionGrad/Readings/CampbellRobson-JPhysiol1968.pdf"&gt;全文&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这一篇好一些，起码有我认识的公式和图片。大概因此被引用次数高很多吧。&lt;/p&gt;
+&lt;p&gt;接下来我会慢慢解释为什么对比敏感度的检查视标亮度是正弦变化的。会有一些公式，但我尽量附图直观说明。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-0/</guid><pubDate>Mon, 18 Dec 2017 17:08:15 GMT</pubDate></item></channel></rss>
