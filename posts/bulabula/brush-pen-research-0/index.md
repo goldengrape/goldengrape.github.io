@@ -8,9 +8,9 @@
 .. description:
 .. type: text
 -->
-最近在看[<黄简讲书法> 的课程](https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT), 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.
+最近在看[黄简讲书法课程](https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT), 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.
 
-因为看这种艺术课程, 讲述的技艺和自己之前没有接触过, 难以判断真伪, 所以必须回到基础的物理学去理解. 这是所谓的”first principle thinking”吧.
+因为看这种艺术课程, 讲述的技艺和自己之前没有接触过, 难以理解, 所以必须回到基础的物理学去理解. 这是所谓的”first principle thinking”吧.
 
 所以首先对毛笔的运行过程进行一下建模.
 
