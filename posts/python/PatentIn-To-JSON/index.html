@@ -41,6 +41,8 @@ from patentIn_to_json import patentIn_to_json
 一个程序员或者一个Nerd, 通常不能够容忍重复手工操作, 所以当有检查序列需">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2017-12-28T15:00:03+08:00">
+<meta property="article:tag" content="opensource">
+<meta property="article:tag" content="python">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -48,7 +50,13 @@ from patentIn_to_json import patentIn_to_json
             styles, `#sidebar-checkbox` for behavior. -->
     <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
         <div class="sidebar-item">
-            <p>Welcome</p>
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
         </div>
         
     <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
@@ -120,7 +128,11 @@ from patentIn_to_json import patentIn_to_json
 <p>学好SICP真的有帮助, 看待问题的方式都不一样了. 顺便推荐一下<a href="https://github.com/sarabander">https://github.com/sarabander</a> 这位做了各种版本的SICP电子书, 而且公式生成清晰. 大力推荐.</p>
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/opensource/" rel="tag">opensource</a></li>
+            <li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
                 <a href="../../Machine_Learning/ML-IP/" rel="prev" title="机器学习的知识产权保护(1)--保护的难题">前一篇</a>
             </li>

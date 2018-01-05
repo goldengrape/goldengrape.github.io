@@ -1,7 +1,7 @@
 <!--
 .. title: 面向眼科医生的λ演算入门教程(0)
 .. slug: mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0
-.. date: 2017-12-19 00:31:34 UTC+08:00
+.. date: 2017-07-04 00:00:00 UTC+08:00
 .. tags: lambda, 教程, 现代眼科医生知识扩展包
 .. category: tutorial
 .. link:

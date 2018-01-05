@@ -2,7 +2,7 @@
 .. title: 自动添加Numba-jit修饰
 .. slug: auto-numba-jit
 .. date: 2017-12-28 15:00:20 UTC+08:00
-.. tags:
+.. tags: opensource
 .. category:
 .. link:
 .. description:

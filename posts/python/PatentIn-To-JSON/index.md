@@ -2,7 +2,7 @@
 .. title: 将PatentIn文件转换成JSON文件的工具
 .. slug: PatentIn-To-JSON
 .. date: 2017-12-28 15:00:03 UTC+08:00
-.. tags:
+.. tags: opensource, python
 .. category:
 .. link:
 .. description:
