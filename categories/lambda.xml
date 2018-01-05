@@ -1,22 +1,464 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lambda)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lambda.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2017 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 28 Dec 2017 17:00:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的λ演算入门教程(8)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;三生万物&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lambda)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lambda.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 09:33:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的λ演算入门教程(8)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;三生万物&lt;/h3&gt;
 &lt;p&gt;有数据有数据结构有分支结构，就差循环了。终于要讲著名的Y combinator了。&lt;/p&gt;
 &lt;p&gt;现在你想学习Y combinator的话，会有个麻烦。如果在搜索引擎上搜索Y combinator的话，找到的肯定是那个创业公司孵化器YC. 这也不意外，因为YC的创始人就是著名的黑客Paul Graham，他写的《黑客与画家》也很好看。lambda calculus这种可以hack世界的东西，当然他也很喜欢，于是就用其中的Y combinator命名了自己创立的孵化器。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/</guid><pubDate>Mon, 18 Dec 2017 16:33:18 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(7)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-7/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;二生三&lt;/h3&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;但问题是YC孵化器太成功了，产生了一个又一个知名企业，以至于名声盖过了Y combinator算子本身。所以如果你真的想找到有用信息的话，需要搜索“Y combinator+lambda” 才能找到。&lt;/p&gt;
+&lt;h3&gt;循环&lt;/h3&gt;
+&lt;p&gt;我们先从实用的角度考虑，有些很重要的事情需要重复做，比如玩人力资源机器Human Resource Machine 第2关以后的所有关卡，就要有跳转实现循环才能完成。
+&lt;img alt="" src="https://goldengrape.github.io/images/lambda/jump.png"&gt;
+但跳转是非常不好的实现循环的方法，很快你就会把自己跳晕。&lt;/p&gt;
+&lt;p&gt;更为优雅地实现循环的方式是递归，类似凝血酶原转化为凝血酶，凝血酶又激活凝血酶原，只要有资源就可以一直循环下去。&lt;/p&gt;
+&lt;p&gt;另一个常用的例子是求Fibonacci数列吧：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;F(0)=0
+F(1)=1
+F(i)=F(i-1)+F(i-2)
+&lt;/pre&gt;
+
+
+&lt;p&gt;在你不知道其实有通项公式以前，（哪天我要表演一遍用母函数推导）&lt;/p&gt;
+&lt;p&gt;$$
+F_n=\frac{1}{\sqrt 5}(\frac{1+\sqrt 5)}{2})^n
+-\frac{1}{\sqrt 5}(\frac{1-\sqrt 5)}{2})^n
+$$&lt;/p&gt;
+&lt;p&gt;要求F(n)，通常的算法是这样的：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;定义函数 fib(n):
+    如果n&amp;lt;2，返回n
+    否则，返回fib(n-1)+fib(n-2)
+&lt;/pre&gt;
+
+
+&lt;p&gt;在名叫fib的函数内部，又一次调用了函数fib。在之前部分，我们已经学过如何定义函数，如何使用if，如何表现数字，如何做加法，小于没说但用于实现减法和比较的pair已经讲过，只差递归了。&lt;/p&gt;
+&lt;p&gt;这种递归的方法只有当函数有名字的时候才能实现。所以如果是用lambda calculus，这种匿名函数语言，是没有办法使用带有名字的召唤术。&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;: 我叫你的名字你敢答应么？
+: 呵呵，我没名字
+&lt;/pre&gt;
+
+
+&lt;p&gt;我们之前使用interpreter中的字典功能，并不是给一段代码起了名字，而只是一个缩略符号，是interpreter给的小工具。&lt;/p&gt;
+&lt;p&gt;没有名字如何调用自己？&lt;/p&gt;
+&lt;p&gt;当然是可以的，比如&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ω=(λx.(x x))
+&lt;/pre&gt;
+
+
+&lt;p&gt;那么：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ω ω=(λx.(x x)) ω
+&lt;/pre&gt;
+
+
+&lt;p&gt;做β reduction，就是用ω替代x x中的x，变成 ω ω。于是&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;ω ω=(λx.(x x)) ω =ω ω
+&lt;/pre&gt;
+
+
+&lt;p&gt;看，循环了，而且永久进行下去不会停歇。&lt;/p&gt;
+&lt;p&gt;这个叫做ω combinator，所谓combinator，就是lambda expression里面都是bound variables，没有free的。&lt;/p&gt;
+&lt;p&gt;ω combinator并不能执行有意义的操作，它产生了循环，但定义中只有x，所以它顶多能够调用自身，并没有办法将其他的操作加入到循环体内部。我们需要还需要更多的变量，需要的是Y combinator。&lt;/p&gt;
+&lt;h3&gt;Y combinator&lt;/h3&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Y=(λx.λy.( y (x x y))) (λx.λy.( y (x x y)))
+&lt;/pre&gt;
+
+
+&lt;p&gt;这就是Y combinator，Y由两个重复的部分构成，直接看过去你就会发现这个并没有进行完全的化简，后面的部分并没有代入到前面部分里。为了容易描述，我擅自命名重复的部分为Ypart，那么Y=Ypart Ypart&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Y foo
+   foo表示另外一个函数
+= (λx.λy.( y (x x y)))     (λx.λy.( y (x x y)))     foo
+   故意写开一点，容易辨识
+= (λx.λy.( y (x x y)))     Ypart                        foo
+   把Y看成两部分，在加上foo，是3个expression
+= λy.( y (Ypart Ypart y)) foo
+   把Ypart代入，替换掉x
+= foo (Ypart Ypart foo)
+   把foo代入，替换掉y
+= foo (Y foo)
+   Ypart Ypart不就是Y本身么
+&lt;/pre&gt;
+
+
+&lt;p&gt;于是&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;Y foo = foo (Y foo)
+    = foo (foo (Y foo))
+    = foo (foo (foo (Y foo)))
+&lt;/pre&gt;
+
+
+&lt;p&gt;看看看，循环出现了！而且还把外来的foo函数塞进了循环里面。把Y作用在foo上，就生出了新的foo，然后一直生一直生。&lt;/p&gt;
+&lt;p&gt;明白Y combinator(公司)为什么要叫Y combinator(算子)了吧。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/dragon18.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;至此，数和数的运算，数据结构，分支，循环都有了。降龙十八掌打完收工。&lt;/p&gt;
+&lt;p&gt;道生一，一生二，二生三，三生万物。&lt;/p&gt;
+&lt;p&gt;少年，你可以去创造世界了。&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-8/</guid><pubDate>Mon, 18 Dec 2017 16:33:18 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(7)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-7/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;二生三&lt;/h3&gt;
 &lt;p&gt;也许是我见得少，物理学的公式里为什么都是连续函数，一个分段函数都没有，即使是分成一份一份的量子力学，也没有一个公式是分情况讨论的。甚至，量子力学的出现就是为了解决黑体辐射中出现的分段函数。&lt;/p&gt;
 &lt;p&gt;全都是连续函数的，这很奇异啊。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-7/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-7/</guid><pubDate>Mon, 18 Dec 2017 16:33:07 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(6)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-6/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;一生二&lt;/h3&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;但只要出了理论物理，立刻就是大量的分段讨论了。记得大一学有机化学，老师先用10分钟讲了一个什么规则（貌似是Zaitsev's rule），然后整堂课剩下的时间都在讲这个规则的各种反例。&lt;/p&gt;
+&lt;p&gt;在纯物理之外的世界，我们需要三叉分支结构，一支接收条件判断，一支指向真值时的操作，一支指向假值时的操作：
+if True/False then This else That&lt;/p&gt;
+&lt;p&gt;什么是真，什么是假，哲学家也许一直都在试图定义。但对逻辑学或者数学来说，真假只是一次选择，if True  then This, if False then That.&lt;/p&gt;
+&lt;p&gt;所以，&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;true=λx.λy.x
+false=λx.λy.y
+&lt;/pre&gt;
+
+
+&lt;p&gt;true和false都是接收两个参数，true返回前一个，false返回后一个。细看的话，你会发现false和0的定义是一样的。
+&lt;img alt="" src="https://goldengrape.github.io/images/lambda/3.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/4.png"&gt;
+看我在第一课Hello World里面已经展示了，能在Hello World里面塞进这么多伏笔，真是佩服自己。&lt;/p&gt;
+&lt;p&gt;有true/false的定义，也还要有各种逻辑运算才行。&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;and=λp.λq.(p q p)
+not=λp.(p false true)
+&lt;/pre&gt;
+
+
+&lt;p&gt;看not的结构，λp.(p...)的模式以前出现过，就是把输入调用到前面来。&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;not true=true false true
+&lt;/pre&gt;
+
+
+&lt;p&gt;true的作用是把输入的两个参数前面那个挑出来，把第一个true当作函数，把后面的false true当作两个输入参数，挑出前面那个，就是false，于是not true=false。精巧。&lt;/p&gt;
+&lt;p&gt;有了not和and，就有NAND gate与非门了。其他各种逻辑运算也都是可以实现的。&lt;/p&gt;
+&lt;p&gt;貌似true this that和false this that就已经可以达到if语句要求了。但是如何在不知道条件是true还是false的时候把条件加入到this that前面呢？&lt;/p&gt;
+&lt;p&gt;其实也跟not类似，用上λp.(p...)的结构&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;if=λp.λa.λb.(p a b)
+&lt;/pre&gt;
+
+
+&lt;p&gt;这不就是pair么。&lt;/p&gt;
+&lt;p&gt;所以，二生三。&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-7/</guid><pubDate>Mon, 18 Dec 2017 16:33:07 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(6)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-6/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;一生二&lt;/h3&gt;
 &lt;p&gt;有了Church numeral以后非负整数就都可以定义了。有了数据，还要有数据结构才行。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-6/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-6/</guid><pubDate>Mon, 18 Dec 2017 16:32:52 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(5)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;恭喜你已经看到这里了。我觉得Lambda calculus只有一个简单的规则，就是替换掉bound variables，这个叫β reduction。其他的什么左结合尽量延伸呐什么的都是因为大家懒得写括号带来的并发症。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;吐槽一下我的大学课程设置，计算机必修课叫《算法与数据结构》，学了一学期的Fortran 77，只讲了Fortran的语法，我敢说除了计算机课跷课的和上课睡觉的，我们班同学里肯定没人知道动态规划(算法)或者堆栈(数据结构)。&lt;/p&gt;
+&lt;p&gt;最基本的数据结构就是一对数据了，从数据对又可以衍生出二叉树、链表，在此基础上又可以衍生出各种各样的数据结构。如果有了一对数据，就要能够提取其第一个元和第二个元。因此需要有三个操作，pair用来构造，first, second用来读取。&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pair=λx.λy.λz.(z x y)
+first=λp.p (λx.λy.x)
+second=λp.p (λx.λy.y)
+&lt;/pre&gt;
+
+
+&lt;p&gt;试试看：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;pair a b
+=(λx.λy.λz.(z x y)) a b
+=λz.(z a b)
+&lt;/pre&gt;
+
+
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;first (pair a b)
+=λp.p (λx.λy.x) λz.(z a b)
+=λz.(z a b) (λx.λy.x)
+=(λx.λy.x) a b
+=a
+&lt;/pre&gt;
+
+
+&lt;p&gt;里面λp.p和λz.z好像是个小技巧，可以用来把后面的东西提前面来用。&lt;/p&gt;
+&lt;p&gt;仔细看看这数据结构的定义，感觉就像循环定义一样无中生有嘛，pair就是一对expression，first就是一对expression的前一个，second就是一对expression的后一个。&lt;/p&gt;
+&lt;p&gt;有了二，就可以有三有多了。比如三元的表：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;list3=pair a (pair b (pair c nil)
+&lt;/pre&gt;
+
+
+&lt;p&gt;nil表示一个表结尾标记，比如在C语言中用\0作为字符串的结尾。&lt;/p&gt;
+&lt;p&gt;如果要取表中的第三个位置，那就first( second (second list) )&lt;/p&gt;
+&lt;p&gt;有pair以后，其实就可以定义整数之外的数了，
+&lt;em&gt; 有理数可以写成一对整数(分子, 分母)，比如0.8=4/5，用(4,5)这样的结构就可以表示了。
+&lt;/em&gt; 复数可以写成(实部, 虚部)的pair
+&lt;em&gt; 有理复数，可以加入一些标记，比如用c作为复数标记，用r作为有理数标记，那么一个有理复数可以使用这样的结构：(c,(实部, 虚部))，继续展开是(c, ( (r,(分子,分母), (r,(分子,分母) ) )
+&lt;/em&gt; 甚至用一个表来模拟8位字节&lt;/p&gt;
+&lt;p&gt;只要数的定义有相应的运算法则可以操作就可以了。
+有了二，就有了数据结构。&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-6/</guid><pubDate>Mon, 18 Dec 2017 16:32:52 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(5)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;恭喜你已经看到这里了。我觉得Lambda calculus只有一个简单的规则，就是替换掉bound variables，这个叫β reduction。其他的什么左结合尽量延伸呐什么的都是因为大家懒得写括号带来的并发症。&lt;/p&gt;
 &lt;p&gt;Lambda calculus里面下面这些东西不是天然存在的，比如"1", "+", "2", "True", "False"，也没有预设的if语句，循环语句……这一切都是构造出来的，是发明或者发现出来的。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-5/"&gt;更多…&lt;/a&gt; (剩余 2 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-5/</guid><pubDate>Mon, 18 Dec 2017 16:32:40 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(4)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;Lambda calculus的写法规则还有一些细节要讲讲。虽然看起来琐碎，不过就好似过山车刚开出去，不紧不慢地开了足够高以后，落下来的时候才足够刺激。这一章仍然是慢慢爬高的过程。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/</guid><pubDate>Mon, 18 Dec 2017 16:32:26 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(3)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;变量的区别&lt;/h3&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h3&gt;道生一&lt;/h3&gt;
+&lt;p&gt;1=λf.λx.(f x)
+1是一个函数（当然其实所有的lambda expression都是函数），1是有定义的，可以收两个参数，比如写1 a b是可以的。
+2=λf.λx.f (f x)
+3=λf.λx.f (f (f x))
+数字n就是x前面有n个f。
+0=λf.λx.x
+这些叫做Church numerals。Church“定义/构造/发明/发现”了1，我确实不知道应该用哪个词。这个结构可能是“发现”，但我觉得不止有这一种1，应该还有别的，从各种无限的可能性中找到一种，是不是可以算“发明”？&lt;/p&gt;
+&lt;p&gt;现在我们打开http://www.cburch.com/lambda/ ，这个interperter还有个定义字典的功能。我选它作为教具可是经过深思熟虑的。&lt;/p&gt;
+&lt;p&gt;我们可以把0，1，2，3都定义上去，为了输入方便，我按照输入方式把数字定义重新写一遍，你复制粘贴就可以了。（我个人喜欢多加括号确保没什么歧义）
+0: (\f.\x.x)
+1: (\f.\x.(f x))
+2: (\f.\x.(f (f x)))
+3: (\f.\x.(f (f (f x))))&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先输入0的定义 (\f.\x.x)
+   &lt;img alt="" src="https://goldengrape.github.io/images/lambda/input0.png"&gt;&lt;/li&gt;
+&lt;li&gt;在带有加号的字典图标前面给出命名，是“0”
+   &lt;img alt="" src="https://goldengrape.github.io/images/lambda/add2dic.png"&gt;&lt;/li&gt;
+&lt;li&gt;要确认一下的话就点一下左上的字典图标，会打开字典
+   &lt;img alt="" src="https://goldengrape.github.io/images/lambda/dic0.png"&gt;&lt;/li&gt;
+&lt;li&gt;如果要调用，只要在输入框里输入0就可以了
+   &lt;img alt="" src="https://goldengrape.github.io/images/lambda/recall0.png"&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意这里并不是给(\f.\x.x)命名为0，这只是一个速记的缩略符号，严格完成替换的功能。&lt;/p&gt;
+&lt;p&gt;但是这里Church numeral的1，是不是真的“1”呢？也就是说“定义/构造/发明/发现”的1，要能够满足我们日常对1的理解和要求才行。比如要满足人们熟知的加法。
+加法是这样的：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;add=λm.λn.λf.λx.(m f (n f x))
+&lt;/pre&gt;
+
+
+&lt;p&gt;来来来，也把add加入字典&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;add: \m.\n.\f.\x.(m f ( n f x))
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/diclist.png"&gt;
+然后我们试一试add 1 1，再试试add 1 2
+&lt;img alt="" src="https://goldengrape.github.io/images/lambda/1+1.png"&gt;
+&lt;img alt="" src="https://goldengrape.github.io/images/lambda/1+2.png"&gt;
+看到了没，
+1+1 &lt;strong&gt;真的&lt;/strong&gt; = 2
+1+2 &lt;strong&gt;真的&lt;/strong&gt; = 3&lt;/p&gt;
+&lt;p&gt;我不知道你第一次看到这个结果时是怎样想的，我的感觉大概是看到有人折了一个纸鹤，然后吹了一口气，纸鹤自己拍拍翅膀飞走了！魔法啊，你说它是一它就真的是一啊！&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-5/</guid><pubDate>Mon, 18 Dec 2017 16:32:40 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(4)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;Lambda calculus的写法规则还有一些细节要讲讲。虽然看起来琐碎，不过就好似过山车刚开出去，不紧不慢地开了足够高以后，落下来的时候才足够刺激。这一章仍然是慢慢爬高的过程。
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h3&gt;Lambda Expression&lt;/h3&gt;
+&lt;p&gt;λ表达式Lambda Expression，有4种可能的写法，我们用E来表示Lambda Expression
+1. E是ID
+2. E是λID. E
+3. E是E E
+4. E是(E)&lt;/p&gt;
+&lt;p&gt;比如(λx.x) HelloWorld就是一个lambda expression，它是由：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(λx.x)和HelloWorld中间加空格连起来的，【规则3: E E】&lt;/li&gt;
+&lt;li&gt;HelloWorld也是lambda expression，【规则1: ID】&lt;/li&gt;
+&lt;li&gt;(λx.x)是lambda expression，【规则4: (E)】&lt;/li&gt;
+&lt;li&gt;λx.x是lambda expression，【规则2: λID. E】&lt;/li&gt;
+&lt;li&gt;x是lambda expression，【规则1: ID】&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;再举些关于lambda expression的例子&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;x y 是lambda expression，【规则3: E E】&lt;/li&gt;
+&lt;li&gt;λx.λ 不是lambda expression，λ后面一定要有东西&lt;/li&gt;
+&lt;li&gt;λλx.y 不是lambda expression，不能俩λ&lt;/li&gt;
+&lt;li&gt;λx.λy.x 是lambda expression&lt;/li&gt;
+&lt;li&gt;x 1，这事不好说，看你的interpreter如何理解ID了，因为在lambda calculus里面并没有数字1，如果把1当作是一个ID，可以，但如果把我们通常所理解的数字1的属性也给它，并不是天然成立的。&lt;/li&gt;
+&lt;li&gt;x + 1，同上，如果interpreter把+号当作一个ID，这是可以的，但如果是我们常规理解的加法操作，并没有定义。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如用http://www.cburch.com/lambda/ 这个interpreter是可以输入(λx.x + 1) 1，并不能返回2，只能给出1 + 1，也就是用1这个符号ID替换了bound variable x
+&lt;img alt="" src="https://goldengrape.github.io/images/lambda/xplus1.png"&gt;&lt;/p&gt;
+&lt;p&gt;如果用https://people.eecs.berkeley.edu/~gongliang13/lambda/#firstPage 这个interpreter输入(lambda x.x + 1) 1 则会报语法错误。
+&lt;img alt="" src="https://goldengrape.github.io/images/lambda/xplus1err.png"&gt;&lt;/p&gt;
+&lt;h3&gt;消除歧义&lt;/h3&gt;
+&lt;p&gt;我通常能加括号的地方都喜欢加上括号，这样虽然要仔细数括号，但不容易出现歧义。不过在看书的时候，也许是为了美观，也许是为了简单，人们会做一些省略引入一些歧义，再增加一些约定来消除这些歧义。&lt;/p&gt;
+&lt;p&gt;λx.λy.x x y这个lambda expression就可以有多种加括号的方式，简直可以出一道组合数学题了，其中一些比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;(λx.λy.(x)) (x y)&lt;/li&gt;
+&lt;li&gt;(λx.(λy.(x x y)))&lt;/li&gt;
+&lt;li&gt;(λx.(λy.(x x))) y&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些加括号的方式都不是按照约定理解后的方式。
+约定是这样的：
+&lt;em&gt; 左结合，比如x y z u v w等价于((((x y) z) u) v) w
+&lt;/em&gt; λID.后面的范围要尽可能延长，比如λx.λy.λz.x等价于λx.(λy.(λz.x))&lt;/p&gt;
+&lt;p&gt;所以上面λx.λy.x x y正确的加括号方式是((λx.(λy.x)) x) y
+((λx.(λy.x)) x) y
+⇒   (λy.x) y
+⇒   x&lt;/p&gt;
+&lt;p&gt;还会有些琐碎的定义，比如
+&lt;em&gt; λID. E称为abstraction，类比于函数的定义
+&lt;/em&gt; E E称为application，类比于函数的调用
+&lt;em&gt; λx.x和λy.y是相等的
+&lt;/em&gt; ……&lt;/p&gt;
+&lt;p&gt;不过这些都已经不影响玩了。过山车已经走到顶了，准备尖叫吧&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/roll.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-4/</guid><pubDate>Mon, 18 Dec 2017 16:32:26 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(3)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;变量的区别&lt;/h3&gt;
 &lt;p&gt;上回说到lambda calculus其实只有一种操作，就是字符替换。但是具体怎么替换还是有些讲究的。&lt;/p&gt;
 &lt;p&gt;有时候数学书难读是因为数学书的作者往往是数学家，作者知道的太多了，以至于不知道读者不知道，于是从读者的角度来说就凭空引入了一些概念。所以，我们还是从数学中熟悉的中学数学区域出发好了。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/</guid><pubDate>Mon, 18 Dec 2017 16:32:16 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(2)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这要从 Hilbert 说起。大卫·希尔伯特，David Hilbert，（1862年-1943年），一位伟大的德国数学家。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;比如，一元二次函数：
+$$
+f(x)=ax^2+bx+c
+$$
+这里面的变量是x，老师问$$f(2)=？$$那么就是把$$x=2$$代入到$$f(x)$$中，
+$$
+f(2)=a 2^2+b 2+c=4a+2b+c
+$$
+那a,b,c是什么呢？老师没给，所以我们就当作a,b,c各自是3个数好了。如果老师给出a=1,b=2,c=3，那么这时候
+$$
+f(x)=x^2+2x+3
+\
+f(2)=4+4+3=11
+$$
+看起来对a,b,c操作和刚才对于x做的操作也类似啊，如果有数就代入进去，没有的话就留着。&lt;/p&gt;
+&lt;p&gt;在$$ f(x)=ax^2+bx+c $$中，x，写在了$$ f(x)$$ 的括号里面，这个x可以叫做metavariable，在函数的定义式子里面已经明确告诉你，函数定义里面的x如何变化要去看metavariable到底是什么，所以$$ ax^2+bx+c $$式子里的x叫做bound variables，是约束变量，是被bound到metavariable上的。&lt;/p&gt;
+&lt;p&gt;而对于式子中的a,b,c，并不在这个函数内部定义，是在函数外部定义的，比如题目中写的，或者老师写在了黑板上，abc也是可变的，但怎么变这个函数定义式没说，是自由的，所以叫做自由变量free variables。所有没有bound到metavariables上的变量都是free的。&lt;/p&gt;
+&lt;p&gt;正是由于$$ f(x)=ax^2+bx+c $$中的a,b,c可以free取各种特殊的数值，中学数学才有那么多题目可以出。比如a,b,c之中有个0啦，a和0之间的关系，b和0之间的关系，a和b之间的关系……&lt;/p&gt;
+&lt;p&gt;如果要对$$ f(x)=ax^2+bx+c$$ 中的x进行替换，那么是对bound variables进行替换，也就是找到其中的x，而不是其中的a,b,c这样的free variables。&lt;/p&gt;
+&lt;p&gt;实际上$$f(x)$$这个写法，声明了两件事情：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;f是这个函数的名字&lt;/li&gt;
+&lt;li&gt;括号里面的x是metavariable，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果是$$g(a,b,c)=ax^2+bx+c$$那么就是另外一个函数了，里面的bound variables是a,b,c，而x反而变成了free variable.&lt;/p&gt;
+&lt;p&gt;更复杂一点，如果函数中有嵌套，比如  &lt;/p&gt;
+&lt;p&gt;$$L(x, f(x))$$，现在求x=2时的值，也是把x代入，$$L(2, f(2))$$&lt;/p&gt;
+&lt;h3&gt;lambda calculus中&lt;/h3&gt;
+&lt;p&gt;对于lambda calculus，书写的时候和二次函数一样，会明确标记出谁是metavariable。  &lt;/p&gt;
+&lt;p&gt;与f(x)不同，λx.只声明了一件事情，λ和点. 之间的x是metavariables。  &lt;/p&gt;
+&lt;p&gt;在点.后面的是函数的定义表达式，如果变量跟metavariables是绑定的，就是bound variable。&lt;/p&gt;
+&lt;p&gt;比如：  &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.x) HelloWorld  
+&lt;/pre&gt;
+
+
+&lt;p&gt;相当于$$f(x)=x$$，求x=HelloWorld，就是将x替换成HelloWorld  &lt;/p&gt;
+&lt;p&gt;λx.中间是metavariable x，λx.后面是函数定义的表达式x，这里面只有一个变量x，与metavariable是相同的，是bound variable。用Hello替换掉bound variable。  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/2.png"&gt;&lt;/p&gt;
+&lt;p&gt;我们看$$L(x, f(x))$$那个例子，如果求x=2时，是把2替换掉x，得到$$L(2, f(2))$$  &lt;/p&gt;
+&lt;p&gt;类似的，我们可以写另一个。  &lt;/p&gt;
+&lt;p&gt;打开&lt;a href="http://www.cburch.com/lambda/"&gt;http://www.cburch.com/lambda/&lt;/a&gt; 试一试，输入：  &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.(x (λy.x)) HelloWorld  
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/8.png"&gt;&lt;/p&gt;
+&lt;p&gt;类比$$L(x, f(x))$$那个例子，$$x (λy.x)$$中，第一个x显然是bound variable，要被替换成HelloWorld，第二个x，虽然在λy.x内部，但是λy.x中的metavariable定义的是y，而不是x，所以x是free的，它的值要从λy.x外面找，所以还是HelloWorld.&lt;/p&gt;
+&lt;p&gt;更复杂一点，如果  &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.(x (λx.x))) HelloWorld  
+&lt;/pre&gt;
+
+
+&lt;p&gt;就不一样了，(x (λx.x))之中，第一个x是bound variable，要被替换成HelloWorld，内部嵌套的那个λx.x中，由于声明了x是这个函数体内的bound variable，那么这里面的x值就不是HelloWorld了。&lt;/p&gt;
+&lt;p&gt;我很喜欢 &lt;a href="http://www.cburch.com/lambda/"&gt;http://www.cburch.com/lambda/&lt;/a&gt; 这个lambda calculus interpreter的原因之一是，它会自动做变量的重新解释，(x (λx.x))之中λx.x的x与外部的x是无关的，所以干脆可以写成其他的名字，比如i0，在不容易混淆的时候再换回成x就好了。  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/9.png"&gt;  &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.x (λi0.i0)) HelloWorld  
+⇒    HelloWorld (λx.x)
+&lt;/pre&gt;
+
+
+&lt;p&gt;我们再看Hello World中的第二个例子，就可以更清楚地理解了。  &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.λy.x) Hello World  
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/3.png"&gt;  &lt;/p&gt;
+&lt;p&gt;λx.(λy.x)中，定义x是bound variable，在λy.x中，y是metavariable，x是free variable，x的值在λy.x的上一层定义，所以当Hello传入时，送到了λy.x中的x里面。  &lt;/p&gt;
+&lt;p&gt;(λx.λy.x) Hello World&lt;br&gt;
+⇒    (λy.Hello) World&lt;/p&gt;
+&lt;p&gt;所以，到目前为止，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;你已经知道variables有三种：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;metavariable是写在λ和点.之间的那个&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;函数表达式里和metavariable绑定的那个是bound variable&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;函数表达式里没有被绑住，可以自由变来变去的那些都是free variables.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你也知道替换的规则是什么了：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应该替换掉的是bound variables，如果一个变量是free variables就要去它的上一层找值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;附变量符号的小历史&lt;/h3&gt;
+&lt;p&gt;中国古代也有类似的标记方法，会把bound variables叫做元，比如天元、地元、人元，分别是3个bound variables，x,y,z。  &lt;/p&gt;
+&lt;p&gt;北宋平阳蒋周创立了天元的概念，李冶（1192－1279）发展了天元术。  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;"李冶在东平获得刘汝谐撰《如积释锁》，书中用十九个单字表示未知数的各个 $$ x^9至 x^{-9} $$的幂：  &lt;/p&gt;
+&lt;p&gt;仙、明、霄、汉、垒、层、高、上、天、人、地、下、低、减、落、逝、泉、暗、鬼；其中立天元在上。"  &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我还不太确定其中的仙……鬼是指系数还是指$$ax^9$$这样合起来的一项。如果是后者，可能还没有区分free variables。  &lt;a href="https://zh.wikipedia.org/wiki/%E5%A4%A9%E5%85%83%E6%9C%AF"&gt;https://zh.wikipedia.org/wiki/天元术&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;弗朗索瓦·韦达François Viète（1540－1603） 则是在欧洲首先使用符号来标记bound variables和free variables，而且是作出了区分  &lt;a href="https://zh.wikipedia.org/wiki/%E5%BC%97%E6%9C%97%E7%B4%A2%E7%93%A6%C2%B7%E9%9F%A6%E8%BE%BE"&gt;https://zh.wikipedia.org/wiki/弗朗索瓦·韦达&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在我看来，将未知数和符号引入数学，是不亚于仓颉造字的大事，从此数学摆脱了实体世界的束缚。（回忆一下你在小学还经常可以看到取水放水的小明，到中学他就已经渐渐远去了。）&lt;/p&gt;
+&lt;p&gt;造字尚且使“鬼夜哭”，符号的引入则令“神始惧”。&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-3/</guid><pubDate>Mon, 18 Dec 2017 16:32:16 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(2)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这要从 Hilbert 说起。大卫·希尔伯特，David Hilbert，（1862年-1943年），一位伟大的德国数学家。&lt;/p&gt;
 &lt;p&gt;他提出了一个你在学初中几何时梦想的问题：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;有没有一种程序，你给它一道几何题，它就能自动判断出命题是真还是假？&lt;/strong&gt;
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/</guid><pubDate>Mon, 18 Dec 2017 16:32:08 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(1)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;与计算机语言有关，当然要写Hello World！
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/</guid><pubDate>Mon, 18 Dec 2017 16:31:52 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(0)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;似乎学了λ演算（lambda calculus，怀念范少光老师，以后写东西，专业名词第一次出现有中文，其后都是英文）的人，都会自己再写个入门教程，大约是某种潮流或者是受到了某种感召，大家不约而同的行为。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;这样所有的数学作业都可以写成：我把这道题送入Hilbert 判定程序，程序判定它是真的，由于 Hilbert程序已经被数学家证明是正确的，所以此题得证。&lt;/p&gt;
+&lt;p&gt;甚至，不仅仅是几何题，而是所有的数学问题。是不是存在一个程序(或是说算法)，能够自动判定任意一个按标准方式输入的数学命题是真是假？&lt;/p&gt;
+&lt;p&gt;这是在1928年提出的 Hilbert 规划中的一个重要问题。德语称为Entscheidungsproblem，（可判定性问题），还要配合Hilbert一句非常燃的宣言：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/6.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;"Wir müssen wissen,wir werden wissen."&lt;br&gt;
+"我们必须知道，我们必将知道！"&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;一个数学家想用程序替代所有的数学家，即使当时1928年连电脑都还没有发明。这就是一个领域中大师的态度：走自己的路，让别人无路可走。&lt;/p&gt;
+&lt;p&gt;所以，那些没有机会学phaco学玻切的年轻医生们注意了。这个故事告诉你们，可以现在开始学习计算机、学习人工智能、深入学习深度学习，与程序员和工程师协力做出自动看病自动做手术的机器。没机会自己做手术，那就让手术不再需要人类来操作！&lt;/p&gt;
+&lt;p&gt;放心，那些真正的手术大师是有着开放的心态，他们愿意教会年轻医师做手术，也愿意把自己的经验、技巧固化在机器中。真正的大师都是游戏规则的改变者，是变革的推动者。只有那些“匠人”才守着当前一点点"本领"。那些生怕“教会徒弟饿死师傅”的师傅，恐怕是这师傅会的东西实在太少。&lt;/p&gt;
+&lt;p&gt;回到我们的数学故事。虽然 Hilbert 立下了宏伟的志愿。但在这个问题上他失败了。(Hilbert 规划远远不止这一项)&lt;/p&gt;
+&lt;p&gt;指出Hilbert错误的是哥德尔Gödel，那一年 Hilbert 68岁，Gödel28岁。Gödel证明存在一类命题，既无法证明也无法证伪，不存在一种算法能够判定所有的命题是真还是假。&lt;/p&gt;
+&lt;p&gt;Gödel使用的工具是由阿兰图灵Turing提供的数学工具——图灵机。Turing更被大众所知的可能是他破解了二战时德军的 Enigma 密码机，有个电影《模仿游戏》就是讲他的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/7.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Turing所提供的是一种描述运算的严格定义。哪怕幼儿园的小朋友也知道1+1=2。可是什么是"1"，什么是"+"，什么是"="，什么是"2"，这些都是没有定义的。意识到这一点恐怕很困难，因为太熟悉太习以为常了，以致于我们并没有意识到"1+1=2"可能是没被定义没被证明过的事。&lt;/p&gt;
+&lt;p&gt;Turing用一条纸带和一个在纸带上读写的机器来描述运算，顺便说后来发明的计算机就真是用打孔纸带来记录程序的，如果要修改已经写好的程序，就用纸再给原来的纸带贴上打个补丁(patch)。所以现在修改程序错误仍然叫打补丁。&lt;/p&gt;
+&lt;p&gt;利用图灵机， Hilbert 的问题就等价于是否存在一个图灵机程序能够判定其他的任一图灵机程序是否能够停止运行，即所谓"停机问题“。经过数学家们的研究，现在知道了我们无法预先判断一个图灵机是否能停机。这称为哥德尔不完备定理。&lt;/p&gt;
+&lt;p&gt;上述这一切都是发生在欧洲大陆和英国。在大西洋的另一侧Alonzo Church也在研究类似的问题。&lt;/p&gt;
+&lt;p&gt;几乎是同时，1930年代，他做出了一种和图灵机等价的东西，就是Lambda calculus。图灵机和Lambda calculus都是可以表示一切运算的，图灵机更难理解一些，需要想象读取、写入、纸带移动、内存之类的事情。Lambda calculus则只有字符替换这么一个规则。&lt;/p&gt;
+&lt;p&gt;剧透一下，仅仅利用字符替换这么一个操作，Church重新定义或者说构造出了什么是1，什么是加法，什么是乘法……有了这些你可以构造出大千世界。&lt;/p&gt;
+&lt;p&gt;这张照片据说是诸神的合影：&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/Gods.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;但在佛教中，神只领悟了一个世界运行的原理。&lt;/p&gt;
+&lt;p&gt;而这些人，他们领悟了创造世界的方法。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/gods2.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-2/</guid><pubDate>Mon, 18 Dec 2017 16:32:08 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(1)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;与计算机语言有关，当然要写Hello World！
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;Hello World&lt;/h2&gt;
+&lt;p&gt;Lambda calculus的运算只做一件事情，就是字符替换，很类似于word里面用ctrl+H做查找与替换。我们来实际演示一下，请打开这个页面&lt;a href="http://www.cburch.com/lambda/"&gt;http://www.cburch.com/lambda/&lt;/a&gt; （最好使用Chrome浏览器，Safari貌似有一点点小问题）&lt;/p&gt;
+&lt;h2&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/1.png"&gt;&lt;/h2&gt;
+&lt;p&gt;这是一个Lambda Calculator解释器（lambda calculus interpreter，LCI），如果搜索online lambda calculus interpreter能够找到很多类似的。&lt;/p&gt;
+&lt;p&gt;学习所有的计算机语言，大家都会写个HelloWorld！我们也可以用这个LCI写下第一个Lambda 表达式：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;(λx.x) HelloWorld&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;不过，要输入λ比较麻烦，所以在这个解释器中，使用左斜杠"\"来表示λ&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/2.png"&gt;&lt;/p&gt;
+&lt;p&gt;解释一下这句话都含义：&lt;/p&gt;
+&lt;p&gt;λx.  有三个字符构成，λ、x和点. ，注意别忘了那个点.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;λ这个表示要定义一个函数，但是这个函数没有名字，叫做匿名函数，（突然想起未名湖难道是数学系起的名字？）。&lt;/li&gt;
+&lt;li&gt;x是一个ID，表示这个函数的变量是x。&lt;/li&gt;
+&lt;li&gt;点. 表示这个点的右侧要定义函数的具体内容了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;λx.x 这就是一个lambda表达式（expression）了说的是，有个匿名函数，自变量是x，函数的定义就是返回x本身。类似于写下了
+f(x)=x&lt;/p&gt;
+&lt;p&gt;(λx.x) HelloWorld 说的是，要把HelloWorld这个字符串作为参数，替换掉函数体内的自变量，也就是把x替换成HelloWorld。&lt;/p&gt;
+&lt;p&gt;相当于已知f(x)=x, 求x=HelloWorld时，f(x)&lt;/p&gt;
+&lt;p&gt;所以就显示出HelloWorld了。&lt;/p&gt;
+&lt;p&gt;怎么样？&lt;/p&gt;
+&lt;p&gt;相！当！无！聊！吧！&lt;/p&gt;
+&lt;p&gt;其实所有的Hello World都是这么无聊的。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;那么我们来个复杂的：&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.λy.x) Hello World
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/3.png"&gt;&lt;/p&gt;
+&lt;p&gt;当你照此输入以后居然显示了奇怪的事情。容我解释。&lt;/p&gt;
+&lt;p&gt;lambda expression（λ表达式)是可以嵌套的&lt;/p&gt;
+&lt;p&gt;λx. 说的是要定义一个函数啦，函数的自变量是x，在函数的定义里是&lt;/p&gt;
+&lt;p&gt;λy.x 也就是说作为函数的定义，又是一个函数，它的自变量是y，它的函数定义是什么呢？就是返回一个x。注意这里函数体里面并没有自变量y，而是一个与y无关的ID，里面这一层的x叫做自由变量free variables。free variables是由上一层的函数给出的，不受这一层函数自变量y的约束。&lt;/p&gt;
+&lt;p&gt;Hello World我在中间加入里空格，这样在lambda expression里面的含义相当于((λx.λy.x) Hello) World&lt;/p&gt;
+&lt;p&gt;也就是先把Hello代入到λx.λy.x里面，替换函数定义λy.x中自变量x，&lt;/p&gt;
+&lt;p&gt;于是&lt;/p&gt;
+&lt;p&gt;(λx.λy.x) Hello World&lt;/p&gt;
+&lt;p&gt;⇒    (λy.Hello) World&lt;/p&gt;
+&lt;p&gt;接着，把World代入到λy.Hello里，替换函数定义Hello中所有的y，&lt;/p&gt;
+&lt;p&gt;咦，这里没有y，总是返回Hello，那好吧，不管代入的是什么，都返回Hello，于是&lt;/p&gt;
+&lt;p&gt;(λy.Hello) World&lt;/p&gt;
+&lt;p&gt;⇒    Hello&lt;/p&gt;
+&lt;p&gt;λx.λy.x起到了一个选择器件的作用，给它两个参数，它就会选择出第一个。&lt;/p&gt;
+&lt;p&gt;我们再试试&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;(λx.λy.y) Hello World
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/lambda/4.png"&gt;&lt;/p&gt;
+&lt;p&gt;首先，我们把Hello当成x，替换掉λx.λy.y中函数体λy.y里面所有的x。哦，没x，于是扔掉Hello，变成了&lt;/p&gt;
+&lt;p&gt;(λx.λy.y) Hello World&lt;/p&gt;
+&lt;p&gt;⇒    (λy.y) World&lt;/p&gt;
+&lt;p&gt;接着，我们把World当成y代入到λy.y的函数体y里面，替换掉所有的y，于是&lt;/p&gt;
+&lt;p&gt;(λy.y) World&lt;/p&gt;
+&lt;p&gt;⇒    World&lt;/p&gt;
+&lt;p&gt;λx.λy.y起到了另一个选择器件的作用，给它两个参数，它就会选择出第二个。&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-1/</guid><pubDate>Mon, 18 Dec 2017 16:31:52 GMT</pubDate></item><item><title>面向眼科医生的λ演算入门教程(0)</title><link>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;似乎学了λ演算（lambda calculus，怀念范少光老师，以后写东西，专业名词第一次出现有中文，其后都是英文）的人，都会自己再写个入门教程，大约是某种潮流或者是受到了某种感召，大家不约而同的行为。&lt;/p&gt;
 &lt;p&gt;所以，我也要写个lambda calculus的入门教程。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/"&gt;更多…&lt;/a&gt; (剩余 1 分钟去阅读)&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</guid><pubDate>Mon, 18 Dec 2017 16:31:34 GMT</pubDate></item></channel></rss>
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;功利一点说作为一个眼科医生，当你和程序员进行交流的时候。如果说自己会写一些代码，比如Matlab、Python，大概是一个级别；如果说正在或者已经刷过SICP（《计算机程序的构造与解释》）大概又是一个级别；如果说学过了lambda calculus，就更高一级了。大约对应的是：坐请坐请上坐。&lt;/p&gt;
+&lt;p&gt;不过lambda calculus本身就具有足够的美感和哲学含义。通过学习lambda calculus，你可以欣赏到人类的智慧，可以欣赏到一种纯粹的美，这种美并不依赖于人类的视觉（绘画）、听觉（音乐）、味觉嗅觉（美食）、语音语调（诗歌）、情感、文化、历史（小说）……&lt;/p&gt;
+&lt;p&gt;lambda calculus带来的美感与人无关，却又可以被人所认识体会到。但要能够认识、体会，需要先经过一些不太复杂的学习。&lt;/p&gt;
+&lt;p&gt;这个视频列表中是个很不错的[lambda calculus课程](https://www.youtube.com/playlist?list=PLUkhEiLrRQXW5jPQy5fWWyqsDc3Uwxghl)&lt;/p&gt;
+&lt;p&gt;老师把lambda calculus的基本概念都讲解得很清楚。如果想详细了解，请听这个课程。&lt;/p&gt;
+&lt;p&gt;由于是面向各位眼科同道，所以这个教程并不十分追求严谨性，而是以通俗可操作为目标的。我还会借助一些在线的lambda calculus工具来讲解。&lt;/p&gt;
+&lt;p&gt;各位眼科同道，不要害怕，连角膜病和神经眼科你们都能学会，相比起来这个简单多了。&lt;/p&gt;&lt;/div&gt;</description><category>lambda</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</guid><pubDate>Mon, 18 Dec 2017 16:31:34 GMT</pubDate></item></channel></rss>
