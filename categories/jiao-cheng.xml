@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 15:35:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:29:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
 &lt;p&gt;可以运行的代码&lt;a href="https://repl.it/HgCF/30"&gt;在这里&lt;/a&gt;
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -48,7 +48,84 @@ b 0
 &lt;p&gt;所以如果m[0,0]&amp;gt;m[1,0]，那就把上一行减去下一行m[0,:]-m[1,:]，再替换掉上面一行m[0,:]=m[0,:]-m[1,:]。反之亦然。一直重复，直到m[0,0] == 1。&lt;/p&gt;
 &lt;p&gt;通常是返回m[0,1]的数值就可以了。但有可能a,b互质，所以需要分情况讨论一下。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;我的古文水平和编程水平都还不够高，不然把中国古代数学中的种种算法都写出程序也是一件很风雅的事情。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><guid>https://goldengrape.github.io/posts/python/python-old-chinese/</guid><pubDate>Thu, 28 Dec 2017 07:00:15 GMT</pubDate></item><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
+&lt;p&gt;我的古文水平和编程水平都还不够高，不然把中国古代数学中的种种算法都写出程序也是一件很风雅的事情。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><guid>https://goldengrape.github.io/posts/python/python-old-chinese/</guid><pubDate>Thu, 28 Dec 2017 07:00:15 GMT</pubDate></item><item><title>快速绘制操作示意图</title><link>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;先展示几张效果图：
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/01.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/02.jpg"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;需要的的APP
+在iOS上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;adobe draw&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;adobe capture&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在android上&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;adobe draw&lt;/li&gt;
+&lt;li&gt;adobe gather&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意在android上，adobe draw和gather之间并没有非常好的衔接，还是需要同步到adobe的库中以后才能调用，而adobe服务器从国内访问的速度又很慢。&lt;/p&gt;
+&lt;p&gt;但，我有iPad，哪管android上的好用不好用。反正iPad上挺好用的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/03.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;1 拍照
+对常见场景拍照，比如手持器械的照片，或者需要讲解的场景。&lt;/p&gt;
+&lt;p&gt;尽量在白色背景上照相，比如白色桌面或者是白纸上。&lt;/p&gt;
+&lt;p&gt;物体和手最好稍微离开桌面，以免留下明显的阴影。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/04.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;2 在adobe draw中新建图画，在图层中添加image layer，导入刚刚拍摄的场景照片。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/05.jpg"&gt;
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/06.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;3 添加draw layer图层后，点击打开shape，然后点击“+”号，会自动切换至adobe capture。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/07.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/08.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;在adobe capture中从camera roll中导入照片&lt;/p&gt;
+&lt;p&gt;4 调整滑动条，使采集的图像仅仅保留边缘的线条，&lt;/p&gt;
+&lt;p&gt;采集后清除多余的线条和杂点，&lt;/p&gt;
+&lt;p&gt;在preview中，smooth选项推荐处于OFF关闭状态&lt;/p&gt;
+&lt;p&gt;之后save &amp;amp; return to adobe draw（屏幕顶部橙色条）&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/09.jpg"&gt;
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/10.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;5 在新建的draw layer图层中，小心地用双手指调整shape的大小和位置，直到与底部的照片相吻合，然后双击屏幕，shape印章盖下。&lt;/p&gt;
+&lt;p&gt;本层暂且称为浅色层
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/11.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;6 再次重复：&lt;/p&gt;
+&lt;p&gt;新建draw layer图层，&lt;/p&gt;
+&lt;p&gt;点击shape菜单，点击+，&lt;/p&gt;
+&lt;p&gt;在adobe capture中导入照片。&lt;/p&gt;
+&lt;p&gt;本次调整滑动条，向较深颜色方向移动，记录更多的细节。&lt;/p&gt;
+&lt;p&gt;然后capture&lt;/p&gt;
+&lt;p&gt;save &amp;amp; return
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/12.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;7 在adobe draw中新建的draw layer图层，&lt;/p&gt;
+&lt;p&gt;调整好shape的位置后，双击屏幕，shape印章盖下&lt;/p&gt;
+&lt;p&gt;本层暂且称为深色层&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/13.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;8 新建draw layer图层，&lt;/p&gt;
+&lt;p&gt;用笔按照照片的提示描绘缺少边缘的细节，比如剪子尖端。不需要非常精细地描绘，&lt;/p&gt;
+&lt;p&gt;用笔填充无用的空洞
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/14.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;9 在深色图层中&lt;/p&gt;
+&lt;p&gt;用橡皮擦擦去多余的点、连成片的黑色区域，并适当使用笔补充边缘线条。&lt;/p&gt;
+&lt;p&gt;完成后，将照片层隐藏，底色层隐藏，然后导出为图片，存入camera roll。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/15.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;10 新建draw layer图层，隐藏其余所有图层，&lt;/p&gt;
+&lt;p&gt;点击shape菜单中的“+”号，进入adobe capture，导入刚刚存入camera roll的线条图。&lt;/p&gt;
+&lt;p&gt;稍微清理后，在preview中注意将smooth的开关打开至ON，&lt;/p&gt;
+&lt;p&gt;完成后save &amp;amp; return to adobe draw
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/16.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;11 隐藏其他所有的图层，&lt;/p&gt;
+&lt;p&gt;调整shape至合适的大小，双击屏幕，shape印章盖下。&lt;/p&gt;
+&lt;p&gt;此图层为完成版，如果发现仍有细节需要修改，可以再次重复前面的步骤7-10&lt;/p&gt;
+&lt;p&gt;完成后，可以导出图像至camera roll，供后续使用。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/17.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;在写书或者做讲课课件时，可以用本方法制作很多操作示意图。我不确定手术过程中的照片是否容易用类似方法绘制，最差也可以用照片垫底，在上面有笔勾勒一些关键线条，总是比自己完全重绘要简单很多。&lt;/p&gt;
+&lt;p&gt;对于已经制作好的图片，也可以再利用简单的图像编辑，甚至PPT，就可以更换器械，比如笔可以换成15度刀、月形刀、phaco手柄、chopper钩之类。上面做的拿剪子的动作，也很容易换成各种手术钳。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/18.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;对于眼科的常用手术器械，我之前已经做过了。眼科大夫自用可以从下面链接下载：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/goldengrape/phacoTools/raw/master/phaco%20tools.pptx"&gt;https://github.com/goldengrape/phacoTools/raw/master/phaco%20tools.pptx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;眼科公司商业使用请联系我。当然也欢迎各公司把自己的产品做成容易在PPT里编辑粘贴的图片，供医生写书和讲课使用。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</guid><pubDate>Mon, 18 Dec 2017 18:36:43 GMT</pubDate></item><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
 &lt;p&gt;这个也是吓人.  读书人, 相煎何太急.&lt;/p&gt;
 &lt;p&gt;end-to-end的一端是原始数据, 另一端是想要的结果. 比如也许从一张眼底照片+FFA直接给出眼底激光应该打哪里, 或者说中文直接给出翻译好的英文字幕. 从一端到另一端中间本来是有很多研究过程在里面的,
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
@@ -556,26 +633,4 @@ test set大概10k张图片就可以了.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="stripe_0.21" src="https://goldengrape.github.io/images/CSF/stripe_0.21.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
 &lt;p&gt;通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。&lt;/p&gt;
-&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
-&lt;p&gt;看这思路，人眼的光学成像近似是线性空间不变系统，如果有个函数是任意线性不变系统的Eigenfunction，那么必然也是人眼光学成像的Eigenfunction。&lt;/p&gt;
-&lt;p&gt;Otto. H. Schade在1956年把正弦视标引入眼科检查的时候，到底是怎么把这么远的两个概念结合到一起的？&lt;/p&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？
-因为正弦函数是线性不变系统的本征函数！&lt;/p&gt;
-&lt;p&gt;但是，为什么要用Eigenfunction，这得从对比敏感度讲起。&lt;/p&gt;
-&lt;h2&gt;对比敏感度&lt;/h2&gt;
-&lt;p&gt;这得从对比敏感度讲起。对比敏感度的检查方法是让患者看圆形的视标，视标中的条纹亮度按正弦变化，背景的亮度=视标的平均亮度。要求被试指出视标条纹的方向。&lt;/p&gt;
-&lt;p&gt;对比敏感度的报告是一张二维图片，也就是说有两个参数，一个是空间频率，一个是对比度。&lt;/p&gt;
-&lt;p&gt;对比敏感度测量的就是在不同空间频率下，眼睛可以看到的最低对比度是多少。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SinVibr" src="https://goldengrape.github.io/images/CSF/SinVibr.png"&gt;&lt;/p&gt;
-&lt;p&gt;这张图水平方向是空间频率越来越高，垂直方向是对比度越来越低，是不是可以感觉到一个抛物线的痕迹，抛物线的上方是一片灰色，下面是有条纹的。&lt;/p&gt;
-&lt;p&gt;三角函数的表示还记得吧，如果亮度的变化可以用 I(x) =A sin(B x )+C 来表示，&lt;/p&gt;
-&lt;p&gt;对比度contrast：&lt;/p&gt;
-&lt;p&gt;sin是在-1和+1直接变化，所以最大的亮度是Imax=A+C，最小的亮度Imin=-A+C。根据对比度的定义&lt;/p&gt;
-&lt;p&gt;contrast=(Imax-Imin)/(Imax+lmin)&lt;/p&gt;
-&lt;p&gt;contrast=2A/2C=A/C&lt;/p&gt;
-&lt;p&gt;&lt;img alt="对比度" src="https://goldengrape.github.io/images/CSF/%E5%AF%B9%E6%AF%94%E5%BA%A6.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;空间频率frequency&lt;/p&gt;
-&lt;p&gt;就是在单位长度内，周期重复了多少次。显然B x=2kπ 的时候会重复，把x=1代入，B=2kπ, k=B/2π，所以空间频率&lt;/p&gt;
-&lt;p&gt;frequency=B/2π&lt;/p&gt;
-&lt;p&gt;前面说到，对比敏感度测量的时候，要给定一个空间频率，然后测量人眼分辨对比度的能力。如果给好了一个空间频率，而通过眼睛的屈光间质折射以后，空间频率变化了，就不好办了。&lt;/p&gt;
-&lt;p&gt;那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</guid><pubDate>Mon, 18 Dec 2017 17:10:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item></channel></rss>

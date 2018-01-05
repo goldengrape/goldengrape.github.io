@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 15:35:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>使用python进行贝叶斯统计分析</title><link>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:29:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>使用python进行贝叶斯统计分析</title><link>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -2558,7 +2558,84 @@ $$
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcdju-zhen/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcdju-zhen/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>快速绘制操作示意图</title><link>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;先展示几张效果图：
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/01.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/02.jpg"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;需要的的APP
+在iOS上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;adobe draw&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;adobe capture&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在android上&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;adobe draw&lt;/li&gt;
+&lt;li&gt;adobe gather&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注意在android上，adobe draw和gather之间并没有非常好的衔接，还是需要同步到adobe的库中以后才能调用，而adobe服务器从国内访问的速度又很慢。&lt;/p&gt;
+&lt;p&gt;但，我有iPad，哪管android上的好用不好用。反正iPad上挺好用的。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/03.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;1 拍照
+对常见场景拍照，比如手持器械的照片，或者需要讲解的场景。&lt;/p&gt;
+&lt;p&gt;尽量在白色背景上照相，比如白色桌面或者是白纸上。&lt;/p&gt;
+&lt;p&gt;物体和手最好稍微离开桌面，以免留下明显的阴影。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/04.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;2 在adobe draw中新建图画，在图层中添加image layer，导入刚刚拍摄的场景照片。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/05.jpg"&gt;
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/06.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;3 添加draw layer图层后，点击打开shape，然后点击“+”号，会自动切换至adobe capture。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/07.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/08.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;在adobe capture中从camera roll中导入照片&lt;/p&gt;
+&lt;p&gt;4 调整滑动条，使采集的图像仅仅保留边缘的线条，&lt;/p&gt;
+&lt;p&gt;采集后清除多余的线条和杂点，&lt;/p&gt;
+&lt;p&gt;在preview中，smooth选项推荐处于OFF关闭状态&lt;/p&gt;
+&lt;p&gt;之后save &amp;amp; return to adobe draw（屏幕顶部橙色条）&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/09.jpg"&gt;
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/10.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;5 在新建的draw layer图层中，小心地用双手指调整shape的大小和位置，直到与底部的照片相吻合，然后双击屏幕，shape印章盖下。&lt;/p&gt;
+&lt;p&gt;本层暂且称为浅色层
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/11.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;6 再次重复：&lt;/p&gt;
+&lt;p&gt;新建draw layer图层，&lt;/p&gt;
+&lt;p&gt;点击shape菜单，点击+，&lt;/p&gt;
+&lt;p&gt;在adobe capture中导入照片。&lt;/p&gt;
+&lt;p&gt;本次调整滑动条，向较深颜色方向移动，记录更多的细节。&lt;/p&gt;
+&lt;p&gt;然后capture&lt;/p&gt;
+&lt;p&gt;save &amp;amp; return
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/12.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;7 在adobe draw中新建的draw layer图层，&lt;/p&gt;
+&lt;p&gt;调整好shape的位置后，双击屏幕，shape印章盖下&lt;/p&gt;
+&lt;p&gt;本层暂且称为深色层&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/13.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;8 新建draw layer图层，&lt;/p&gt;
+&lt;p&gt;用笔按照照片的提示描绘缺少边缘的细节，比如剪子尖端。不需要非常精细地描绘，&lt;/p&gt;
+&lt;p&gt;用笔填充无用的空洞
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/14.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;9 在深色图层中&lt;/p&gt;
+&lt;p&gt;用橡皮擦擦去多余的点、连成片的黑色区域，并适当使用笔补充边缘线条。&lt;/p&gt;
+&lt;p&gt;完成后，将照片层隐藏，底色层隐藏，然后导出为图片，存入camera roll。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/15.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;10 新建draw layer图层，隐藏其余所有图层，&lt;/p&gt;
+&lt;p&gt;点击shape菜单中的“+”号，进入adobe capture，导入刚刚存入camera roll的线条图。&lt;/p&gt;
+&lt;p&gt;稍微清理后，在preview中注意将smooth的开关打开至ON，&lt;/p&gt;
+&lt;p&gt;完成后save &amp;amp; return to adobe draw
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/16.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;11 隐藏其他所有的图层，&lt;/p&gt;
+&lt;p&gt;调整shape至合适的大小，双击屏幕，shape印章盖下。&lt;/p&gt;
+&lt;p&gt;此图层为完成版，如果发现仍有细节需要修改，可以再次重复前面的步骤7-10&lt;/p&gt;
+&lt;p&gt;完成后，可以导出图像至camera roll，供后续使用。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/17.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;在写书或者做讲课课件时，可以用本方法制作很多操作示意图。我不确定手术过程中的照片是否容易用类似方法绘制，最差也可以用照片垫底，在上面有笔勾勒一些关键线条，总是比自己完全重绘要简单很多。&lt;/p&gt;
+&lt;p&gt;对于已经制作好的图片，也可以再利用简单的图像编辑，甚至PPT，就可以更换器械，比如笔可以换成15度刀、月形刀、phaco手柄、chopper钩之类。上面做的拿剪子的动作，也很容易换成各种手术钳。
+&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/18.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;对于眼科的常用手术器械，我之前已经做过了。眼科大夫自用可以从下面链接下载：&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/goldengrape/phacoTools/raw/master/phaco%20tools.pptx"&gt;https://github.com/goldengrape/phacoTools/raw/master/phaco%20tools.pptx&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;眼科公司商业使用请联系我。当然也欢迎各公司把自己的产品做成容易在PPT里编辑粘贴的图片，供医生写书和讲课使用。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</guid><pubDate>Mon, 18 Dec 2017 18:36:43 GMT</pubDate></item><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
 &lt;p&gt;这个也是吓人.  读书人, 相煎何太急.&lt;/p&gt;
 &lt;p&gt;end-to-end的一端是原始数据, 另一端是想要的结果. 比如也许从一张眼底照片+FFA直接给出眼底激光应该打哪里, 或者说中文直接给出翻译好的英文字幕. 从一端到另一端中间本来是有很多研究过程在里面的,
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
@@ -3045,25 +3122,4 @@ test set大概10k张图片就可以了.&lt;/p&gt;
 &lt;p&gt;参考视频:
 莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;为什么要用Eigenfunction&lt;/h2&gt;
-&lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
-&lt;p&gt;类比测视力，就好像用1.0的视标去测病人，结果病人自带放大系统，视标放大到0.1的程度，这样的测量就错了。&lt;/p&gt;
-&lt;p&gt;由于病人的像差可以千奇百怪千差万别，所以病人的眼睛作为一个线性不变系统，也可能是千差万别的。要选择一个带有周期结构的输入，经过各种各不相同的线性系统还可以得到同周期的输出，满足这个能力的输入，就是所有线性不变系统的Eigenfunction了。&lt;/p&gt;
-&lt;p&gt;常规的E视标，相当于给入的输入的“方波”，那么如果经过一个有像差的眼睛，成像后的输出可能是这样的：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="E_MTF" src="https://goldengrape.github.io/images/CSF/E_MTF.png"&gt;&lt;/p&gt;
-&lt;p&gt;看输出的强度波形，会发现各个峰的高度是不同的，如果仔细测量，可能还会发现波峰之间的周期也会略有差别。甚至一个有经验的“视力测量欺骗者”，可以根据虚影的方向反推出视标的方向。&lt;/p&gt;
-&lt;p&gt;但如果是一个正弦波的视标。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="sin_MTF" src="https://goldengrape.github.io/images/CSF/sin_MTF.png"&gt;&lt;/p&gt;
-&lt;p&gt;经过同样有像差的眼，形成的仍然是正弦波，峰值是同样的，周期是同样的，区别只是“振幅”发生了变化。只有对比度这个变量会根据像差的情况改变，这样就方便了测量。&lt;/p&gt;
-&lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
-&lt;p&gt;答：因为人眼视觉成像过程近似于线性不变系统，亮度正弦变化的视标是线性系统的Eigenfunction，在经过人眼成像厚视标的空间频率不变。&lt;/p&gt;
-&lt;p&gt;至于为什么正弦函数是线性不变系统的Eigenfunction，就是另外一个很长的故事了。如果有兴趣可以参考吕乃光老师编写的《傅里叶光学(第二版)》，第50-52页。&lt;/p&gt;
-&lt;h2&gt;One more thing&lt;/h2&gt;
-&lt;p&gt;题图&lt;/p&gt;
-&lt;p&gt;&lt;img alt="stripe_0.21" src="https://goldengrape.github.io/images/CSF/stripe_0.21.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
-&lt;p&gt;通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。&lt;/p&gt;
-&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item></channel></rss>

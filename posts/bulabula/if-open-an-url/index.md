@@ -2,7 +2,7 @@
 .. title: 是否点开一个链接的标准
 .. slug: if-open-an-url
 .. date: 2017-12-28 15:00:06 UTC+08:00
-.. tags:
+.. tags: Thinking
 .. category:
 .. link:
 .. description:

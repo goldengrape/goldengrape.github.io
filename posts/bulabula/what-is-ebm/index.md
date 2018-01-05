@@ -2,7 +2,7 @@
 .. title: 讨论医学问题前的基础讨论
 .. slug: what-is-ebm
 .. date: 2018-1-3 16:00:00 UTC+08:00
-.. tags:
+.. tags: Thinking
 .. category:
 .. link:
 .. description:
