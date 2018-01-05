@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:29:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>毛笔字粗浅研究(0)</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近在看&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;, 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:57:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶状体调节力的难题</title><link>https://goldengrape.github.io/posts/bulabula/IOL-problem/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;终于过完2017到2018年了, 这篇写于2015-08-20的文章, 又可以理直气壮地重新贴一遍. 哇哈哈哈!
+&lt;img alt="" src="https://goldengrape.github.io/images/face.jpg"&gt;&lt;/p&gt;
+&lt;h2&gt;2017年，世界上还有很多很多很多很多近视眼&lt;/h2&gt;
+&lt;p&gt;2015-08-20&lt;/p&gt;
+&lt;p&gt;昨天(2015年8月19日)又看到所谓《2017年，世界上将不存在近视眼》的文章，类似的有《10秒钟让你恢复视力》&lt;a href="http://fashion.sohu.com/20150529/n414051503.shtml"&gt;http://fashion.sohu.com/20150529/n414051503.shtml&lt;/a&gt; 讲的是ocumetics (ocumetics.com)出的一种bionic lens能够将视力提高到3.0，这是误导，听我道来&lt;/p&gt;
+&lt;p&gt;这个基本上是一个这样的故事：理科生说给我一个支点我可以撬动地球，商科生激动地在写行星工程开发计划书，新闻系的同学拿着喇叭到处喊火星移民马上实现。现在由医科生讲讲为什么大家该吃药了。
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;youtube上有一段采访视频&lt;a href="https://www.youtube.com/watch?v=Lqj7Mguu-Ps"&gt;https://www.youtube.com/watch?v=Lqj7Mguu-Ps&lt;/a&gt; 以及在他们公司的网页上讲到这是一个intraocular lens，大陆叫做人工晶体或者人工晶状体，港台成为人工水晶体，极其不专业的专利会翻译成眼内透镜，缩写是IOL&lt;/p&gt;
+&lt;p&gt;IOL是一片高分子材料的透镜，放置在眼睛里面，最早是1949年由Sir.Ridely发明的。他当时发现皇家空军飞行员受伤后眼睛里残留着有机玻璃弹片，弹片在眼睛里居然没有发炎也没有引起排异反应。于是受此启发做了最早的IOL &lt;a href="http://www.ridleyeyefoundation.org/history/sir-harold/"&gt;http://www.ridleyeyefoundation.org/history/sir-harold/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IOL放在眼睛里有几个可能的位置：角膜和虹膜之间（前房型），虹膜表面（虹膜固定），{虹膜和天然晶状体之间（睫状沟固定），去掉天然晶状体后存留的晶状体囊袋之内（囊袋内）}.（后房型）&lt;/p&gt;
+&lt;p&gt;IOL大多数应用是来治疗白内障的，也就是天然的晶状体混浊以后，医生通过手术把天然晶状体摘掉，再换上IOL。也有专门用来治疗近视的，目前有&lt;a href="http://www.ophtec.com/professional/en/cataract-surgery/intra-ocular-lenses/artisan-aphakia/artisan-aphakia-ref-205"&gt;虹膜加持的Artisan&lt;/a&gt; 和&lt;a href="http://visianinfo.com"&gt;睫状沟固定的 ICL&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对于治疗近视的IOL植入，医生是要保留天然晶状体的，是有晶体眼的人工晶体植入。这是因为天然晶体具有调节能力，目前IOL还很难完美恢复这个能力。调节，就是人眼能够自动调整焦距，能够根据看远还是看近的需要调整天然晶状体的形态，改变焦距。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=Lqj7Mguu-Ps"&gt;采访视频中&lt;/a&gt; 该公司叙述的这个bionic lens是植入到囊袋内的IOL。所以，这个IOL植入手术是建立在将天然晶体摘除以后的基础之上的。该公司寄希望于利用人工晶体产生足够的调节力，完全替换掉天然晶状体&lt;/p&gt;
+&lt;p&gt;要改变一个透镜的焦距，有几种办法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;换一片透镜&lt;/li&gt;
+&lt;li&gt;在同一片透镜上做出好几个焦距，根据需要遮挡掉不需要的。&lt;/li&gt;
+&lt;li&gt;移动透镜。&lt;/li&gt;
+&lt;li&gt;改变透镜形态。&lt;/li&gt;
+&lt;li&gt;改变透镜内折射率的分布。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;0.换透镜就不说了，摘戴老花镜就是。&lt;/p&gt;
+&lt;p&gt;1.同一片透镜上做几个焦距，在眼镜上也有，比如双光的老花镜上半部分看远，下半部分看近。光学好的同学还应该知道菲涅耳波带片，靠衍射可以产生多个焦点。这也是现在IOL市场主流的解决方式。用折射多焦或者衍射多焦做出多个焦点，利用人眼在看近时瞳孔的变化，改变视远视近光强的能量分配。这种方案其实总还是有错误焦点的干扰，看远看近都有些虚。有些病人觉得很难受，有些病人能接受。&lt;/p&gt;
+&lt;p&gt;3.改变透镜形态。和 4.改变透镜内折射率的分布。这是人眼调节的方法，目前人工产品还很难学会。还有方案2.移动透镜。&lt;/p&gt;
+&lt;p&gt;从视频的讲解来看，ocumetics的方案就是移动透镜，这也是之前有IOL厂商用过的原理，比如1CU, &lt;a href="http://www.lenstec.com/tetraflex-hd.html"&gt;tetraflex&lt;/a&gt; 还有用两片镜片配合在一起移动的。&lt;/p&gt;
+&lt;p&gt;如果没有外部供能，移动镜片有一个必要的前提假设——晶状体囊袋是有弹性的。天然晶状体长在囊袋里，囊袋四周有一圈悬韧带，悬韧带再挂到睫状体上，是一个悬挂式的结构。主流理论认为，人眼调节的时候，睫状肌会运动，晶状体本身的弹性使得晶状体形态和折射率分布发生改变。想象一个气球周边挂了一圈绳子，绑在一个呼啦圈上，改变呼啦圈直径，气球形态变化&lt;/p&gt;
+&lt;p&gt;如果囊袋变硬了，那么即使睫状肌能够运动，也只是通过悬韧带拉一个硬邦邦的盒子，盒子内部的结构是没有办法移动的。&lt;/p&gt;
+&lt;p&gt;这就是所有的利用人体自身力量进行调节的IOL的问题——囊袋会变硬。摘除天然晶状体的手术，是在囊袋上撕个圆孔，把晶状体的皮质、核从里面掏出来，保留表面的囊，再把IOL塞进去。这个手术是一个破坏性的手术。有破坏，身体就一定会启动修复过程。&lt;/p&gt;
+&lt;p&gt;手术中会尽量清除晶状体囊袋内的东西，包括残余的上皮细胞。但是很难完全清除干净，剩下的上皮细胞会散乱地生长，而且会长成纤维，纤维会交织，变硬。就像身上的皮肤划破了会留下硬质的瘢痕一样。医生们和身体的修复过程做斗争，很少有全胜的。&lt;/p&gt;
+&lt;p&gt;而且，还有个矛盾的问题。对于年轻的病人（白内障患者&amp;lt;=60岁我们都觉得很年轻），睫状肌会有很好的力量，但是修复能力强，囊袋纤维化严重；对于高龄的病人，比如80多岁了，他的纤维化倒是好点，但睫状肌已经没什么力量了。这还都是老年人。对于10-40岁的青年病人，囊袋纤维化非常严重，甚至手术之中必须把囊袋的后表面切除掉，免得纤维化阻挡了光线的进入。&lt;/p&gt;
+&lt;p&gt;所以即使有一个尚且可以使用的调节型IOL，也是适合于老年人，年轻人指望它来矫正近视，是不可靠的。&lt;/p&gt;
+&lt;p&gt;还得再吐槽下，顺着这篇报道&lt;a href="http://www.businessinsider.com/ocumetics-bionic-lens-perfect-vision-at-every-age-2015-5"&gt;http://www.businessinsider.com/ocumetics-bionic-lens-perfect-vision-at-every-age-2015-5&lt;/a&gt; 找过去CEO Dr. garth webb &lt;a href="http://www.completeeyecare.ca/dr-garth-webb/"&gt;http://www.completeeyecare.ca/dr-garth-webb/&lt;/a&gt; 是O.D.，不是M.D.好么。视光学和眼科学是两个学科，就像建筑系和土木工程系是两个系！&lt;/p&gt;
+&lt;p&gt;update，&lt;/p&gt;
+&lt;p&gt;这家公司在2015年炒作之后，又开始在2016年的微信里炒作了《淘汰近视镜，视力比飞行员高三倍，这家公司要逆天》。基本可以猜到是有中国的VC投钱了。&lt;/p&gt;
+&lt;p&gt;来，国安的球迷请跟我一起喊：⬛️⬛️！&lt;/p&gt;
+&lt;p&gt;除了在公众号上，在网站上可以搜到的文章来源是：&lt;a href="http://mt.sohu.com/20160202/n436646404.shtml"&gt;http://mt.sohu.com/20160202/n436646404.shtml&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;作者是金错刀 &lt;a href="http://mp.i.sohu.com/profile?xpt=MTY0MjQ2NzM0MEBzaW5hLnNvaHUuY29t"&gt;http://mp.i.sohu.com/profile?xpt=MTY0MjQ2NzM0MEBzaW5hLnNvaHUuY29t&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;原来是“发明””“微创新”概念的人，失敬失敬。&lt;/p&gt;
+&lt;p&gt;来，国安的球迷请再跟我一起喊：大⬛️⬛️！&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>科普</category><guid>https://goldengrape.github.io/posts/bulabula/IOL-problem/</guid><pubDate>Fri, 05 Jan 2018 18:44:10 GMT</pubDate></item><item><title>毛笔字粗浅研究(0)</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近在看&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;, 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.&lt;/p&gt;
 &lt;p&gt;因为看这种艺术课程, 讲述的技艺和自己之前没有接触过, 难以理解, 所以必须回到基础的物理学去理解. 这是所谓的”first principle thinking”吧.&lt;/p&gt;
 &lt;p&gt;所以首先对毛笔的运行过程进行一下建模.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
@@ -3051,65 +3089,4 @@ b 0
 &lt;p&gt;所以如果m[0,0]&amp;gt;m[1,0]，那就把上一行减去下一行m[0,:]-m[1,:]，再替换掉上面一行m[0,:]=m[0,:]-m[1,:]。反之亦然。一直重复，直到m[0,0] == 1。&lt;/p&gt;
 &lt;p&gt;通常是返回m[0,1]的数值就可以了。但有可能a,b互质，所以需要分情况讨论一下。&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;我的古文水平和编程水平都还不够高，不然把中国古代数学中的种种算法都写出程序也是一件很风雅的事情。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><guid>https://goldengrape.github.io/posts/python/python-old-chinese/</guid><pubDate>Thu, 28 Dec 2017 07:00:15 GMT</pubDate></item><item><title>治疗近视的三个iPad游戏</title><link>https://goldengrape.github.io/posts/ophthalmology/3-ipad-games-for-myopia/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;当然并没有!&lt;/h2&gt;
-&lt;p&gt;近视, 通常(不通常的那些更麻烦, 不要幻想)是眼球(眼轴)变长, 变长的眼轴是不可能再缩短回来的. 不久前发现一个不错的比喻: "孩子长高了还能再变矮么? "
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;当前, 有临床证据能够抑制近视进展的方法. 注意是抑制进展, 也就是本来一年上涨1.00D, 用上以后只上涨0.50D了, 这叫抑制进展, 相当于近视度数的一阶导数减小, 或者二阶导数小于0. 曾经出现过并且还在不断出现的名句"房价过快上涨的势头", 已经是在描述房价的3-4阶导数了.&lt;/p&gt;
-&lt;p&gt;当前, 有临床证据能够抑制近视进展的方法, 有且只有3种:
-&lt;em&gt; 至少平均每日两小时户外活动,
-&lt;/em&gt; &lt;strong&gt;在专业医师指导下&lt;/strong&gt; 佩戴角膜塑形镜
-* 在医师指导下使用低浓度阿托品眼药水点眼&lt;/p&gt;
-&lt;p&gt;而且, 长时间近距离用眼, 会产生并加重视疲劳, 使近视进展速度加快. 因此很多医生都会建议家长应该:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;限制孩子玩手机/平板游戏的时间&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;显然你们都失败了吧, 哈哈哈哈.&lt;/h2&gt;
-&lt;p&gt;个人认为: &lt;strong&gt;只有&lt;/strong&gt; 那些不可能近视的孩子 &lt;strong&gt;才&lt;/strong&gt; 不会近视.&lt;/p&gt;
-&lt;p&gt;不近视的都是变种人.&lt;/p&gt;
-&lt;p&gt;近视还是会给生活带来诸多不便, 而且高度近视还是其他一系列疾病的高危因素, 比如孔源性视网膜脱离, 因此高度近视, &amp;gt;=6.00D 的近视, 应当每年去检查眼底.&lt;/p&gt;
-&lt;p&gt;因此, 我们还是要尽可能抑制近视度数的增长. 所以, 我来推荐下面三个iPad游戏. 因为反正你们也 &lt;strong&gt;不可能限制孩子玩手机/平板游戏的时间&lt;/strong&gt;&lt;/p&gt;
-&lt;h2&gt;三个游戏&lt;/h2&gt;
-&lt;p&gt;这三个游戏都有手机/平板的版本, 至少在iOS有, android可能有类似的. 付费游戏, 但只要几块到几十块钱, 比任何一个不靠谱的替代疗法都靠谱.&lt;/p&gt;
-&lt;p&gt;这三款游戏是:
-* Human Resource Machine
-iOS版本30元,
-https://itunes.apple.com/cn/app/human-resource-machine/id1005098334
-android版本4.99$
-https://play.google.com/store/apps/details?id=com.tomorrowcorporation.humanresourcemachine&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Swift Playground
-这个只有iOS的版本, 不知道什么时候Google会出一个GO Playground
-https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=908519492&amp;amp;mt=8&amp;amp;ls=1&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Euclidea
-iOS免费+内购了.
-https://itunes.apple.com/app/id927914361
-android也是免费
-https://play.google.com/store/apps/details?id=com.hil_hk.euclidea
-还有网页版可以玩: https://www.euclidea.xyz/game/&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;这三个游戏有什么特殊?&lt;/h2&gt;
-&lt;p&gt;第一个Human Resource Machine, 看似一款搬运游戏, 实际上是 &lt;strong&gt;汇编语言&lt;/strong&gt; 教程, 第29关开始讲指针变量! 一共41关&lt;/p&gt;
-&lt;p&gt;第二个Swift Playground, 看似一款搬运游戏, 实际上是 &lt;strong&gt;Swift语言&lt;/strong&gt; 教程, 更准确一点, 是按照 &lt;strong&gt;软件工程&lt;/strong&gt; 课程讲解的swift语言教程, 就是斯坦福那个一边上课一边发糖的CS106A课程
-https://www.youtube.com/watch?v=KkMDCCdjyW8&amp;amp;list=PL3BD1325B3C4F50BE
-https://web.stanford.edu/class/cs106a/
-有兴趣的可以一边玩游戏, 一边看老师讲课.&lt;/p&gt;
-&lt;p&gt;第三个Euclidea, 看似就不像一款游戏, 实际上是 &lt;strong&gt;纯尺规做图的奥数几何题库&lt;/strong&gt;, 前面用看起来很简单的题目先引诱你上手, 后面难度陡然增高, 逼得你不得不用解析几何先算一遍, 然后再转换成尺规. 后面还有只用直尺或者只用圆规的, 我已经搞不定了.&lt;/p&gt;
-&lt;h2&gt;所以跟近视有什么关系?&lt;/h2&gt;
-&lt;p&gt;逻辑是这样的:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;已知: 你们 &lt;strong&gt;不可能限制孩子玩手机/平板游戏的时间&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;如果: 能够让孩子只玩这三个游戏, 而不是什么农药.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那么有以下几种可能:
-* 你家娃玩游戏玩恶心了, 再也不碰手机/平板游戏, 甚至连带这电脑/主机游戏也都放弃, 从此热爱上与朋友们在户外打球, 充分满足了2小时户外运动条件. 于是抑制了近视的进展.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;你家娃玩这三款游戏上瘾了. 全部通关, 特别是Euclidea. 恭喜你, 这个水平重点初中\高中可以免试录取了, 而且是争相签约录取. 你家娃能够为你省下一套学区房, 少上很多辅导班, 少做很多作业, 并且能够有良好的学习习惯, 终成学霸. 于是腾出许多时间玩游戏, 注意户外2小时活动并不限制是否是玩游戏, 在户外看书\玩游戏也是可以的. 于是抑制了近视的进展.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;你家娃玩这三款游戏上瘾了. 但资质有限, 只打通了Human Resource Machine和Swift Playground, 实在搞不定Euclidea. 那给他开个苹果的开发者帐号, 开始写iOS app当个程序员吧, 也不差. 等他自己开始写游戏了, 就能开始研究游戏中的种种心理陷阱, 从被游戏玩转变到玩游戏. 这时候再引导至户外活动上要容易得多, 于是抑制了近视的进展.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;证毕.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/3-ipad-games-for-myopia/</guid><pubDate>Thu, 28 Dec 2017 07:00:12 GMT</pubDate></item></channel></rss>
+&lt;p&gt;我的古文水平和编程水平都还不够高，不然把中国古代数学中的种种算法都写出程序也是一件很风雅的事情。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><guid>https://goldengrape.github.io/posts/python/python-old-chinese/</guid><pubDate>Thu, 28 Dec 2017 07:00:15 GMT</pubDate></item></channel></rss>
