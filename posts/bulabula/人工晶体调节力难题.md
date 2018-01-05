@@ -63,7 +63,9 @@ IOL大多数应用是来治疗白内障的，也就是天然的晶状体混浊�
 
 还得再吐槽下，顺着这篇报道[http://www.businessinsider.com/ocumetics-bionic-lens-perfect-vision-at-every-age-2015-5](http://www.businessinsider.com/ocumetics-bionic-lens-perfect-vision-at-every-age-2015-5) 找过去CEO Dr. garth webb [http://www.completeeyecare.ca/dr-garth-webb/](http://www.completeeyecare.ca/dr-garth-webb/) 是O.D.，不是M.D.好么。视光学和眼科学是两个学科，就像建筑系和土木工程系是两个系！
 
-update，
+----
+
+2016年更新:
 
 这家公司在2015年炒作之后，又开始在2016年的微信里炒作了《淘汰近视镜，视力比飞行员高三倍，这家公司要逆天》。基本可以猜到是有中国的VC投钱了。
 
@@ -76,3 +78,17 @@ update，
 原来是“发明””“微创新”概念的人，失敬失敬。
 
 来，国安的球迷请再跟我一起喊：大⬛️⬛️！
+
+----
+
+2018年更新:
+
+我估计当时是有哪个中国投资人昏了头, 投了ocumetics, 胡乱在中文网站上炒作. 对骗子的宽容是对努力工作研究者的侮辱.
+
+其实眼科医生们一直没有放弃对人工晶体调节力难题的研究.
+
+* 在多焦点人工晶体的改进上. 三焦点的人工晶体, 和区域多焦点的人工晶体, 据说患者的满意度还不错. 虽然没有完全模拟生理的调节, 但如果病人觉得舒服, 能接受, 那也很好.
+
+* 在克服囊袋纤维化的问题上. 同仁医生居然设计出了能够主动杀死残余晶状体上皮的人工晶体([报道](https://mp.weixin.qq.com/s/k5VvKW1LTmjMM9EC0y6N1g), [文献](http://onlinelibrary.wiley.com/doi/10.1002/adma.201701617/abstract))
+
+有钱投给他们呐!
