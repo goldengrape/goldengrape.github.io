@@ -2,7 +2,7 @@
 .. title: 那些在线的jupyter
 .. slug: na-xie-zai-xian-de-jupyter
 .. date: 2017-12-18 03:19:31 UTC+08:00
-.. tags:
+.. tags: 现代眼科医生知识扩展包, python
 .. category:
 .. link:
 .. description:

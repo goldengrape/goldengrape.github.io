@@ -1185,35 +1185,35 @@ FEED_TEASERS = False
 # This search form works for any site and looks good in the "site" theme where
 # it appears on the navigation bar:
 #
-# SEARCH_FORM = """
-# <!-- DuckDuckGo custom search -->
-# <form method="get" id="search" action="https://duckduckgo.com/"
-#  class="navbar-form pull-left">
-# <input type="hidden" name="sites" value="%s">
-# <input type="hidden" name="k8" value="#444444">
-# <input type="hidden" name="k9" value="#D51920">
-# <input type="hidden" name="kt" value="h">
-# <input type="text" name="q" maxlength="255"
-#  placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
-# <input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
-# </form>
-# <!-- End of custom search -->
-# """ % SITE_URL
-#
-# If you prefer a Google search form, here's an example that should just work:
 SEARCH_FORM = """
-<!-- Google custom search -->
-<form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
-<div class="form-group">
-<input type="text" name="q" class="form-control" placeholder="Search">
-</div>
-<button type="submit" class="btn btn-primary">
-	<span class="glyphicon glyphicon-search"></span>
-</button>
-<input type="hidden" name="sitesearch" value="%s">
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/"
+ class="navbar-form pull-left">
+<input type="hidden" name="sites" value="%s">
+<input type="hidden" name="k8" value="#444444">
+<input type="hidden" name="k9" value="#D51920">
+<input type="hidden" name="kt" value="h">
+<input type="text" name="q" maxlength="255"
+ placeholder="Search&hellip;" class="span2" style="margin-top: 4px;">
+<input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
 </form>
 <!-- End of custom search -->
 """ % SITE_URL
+#
+# If you prefer a Google search form, here's an example that should just work:
+# SEARCH_FORM = """
+# <!-- Google custom search -->
+# <form method="get" action="https://www.google.com/search" class="navbar-form navbar-right" role="search">
+# <div class="form-group">
+# <input type="text" name="q" class="form-control" placeholder="Search">
+# </div>
+# <button type="submit" class="btn btn-primary">
+# 	<span class="glyphicon glyphicon-search"></span>
+# </button>
+# <input type="hidden" name="sitesearch" value="%s">
+# </form>
+# <!-- End of custom search -->
+# """ % SITE_URL
 
 # Use content distribution networks for jQuery, twitter-bootstrap css and js,
 # and html5shiv (for older versions of Internet Explorer)

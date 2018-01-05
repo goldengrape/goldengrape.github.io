@@ -2,7 +2,7 @@
 .. title: 序列一致性检验工具
 .. slug: compare-seq
 .. date: 2017-12-28 15:00:07 UTC+08:00
-.. tags:
+.. tags: opensource, python
 .. category:
 .. link:
 .. description:

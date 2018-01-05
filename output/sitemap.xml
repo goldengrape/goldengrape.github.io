@@ -19,11 +19,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-01-05T09:32:00Z</lastmod>
+  <lastmod>2018-01-05T15:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2017-12-28T17:24:00Z</lastmod>
+  <lastmod>2018-01-05T13:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_fa-ming-hui-shou-zhan/</loc>
@@ -58,6 +58,10 @@
   <lastmod>2017-12-28T17:23:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/opensource/</loc>
+  <lastmod>2018-01-05T13:14:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/python/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
@@ -67,19 +71,19 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
-  <lastmod>2018-01-05T09:32:00Z</lastmod>
+  <lastmod>2018-01-05T15:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
-  <lastmod>2018-01-05T09:32:00Z</lastmod>
+  <lastmod>2018-01-05T15:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
-  <lastmod>2018-01-05T09:32:00Z</lastmod>
+  <lastmod>2018-01-05T13:14:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-4.html</loc>
-  <lastmod>2018-01-05T09:32:00Z</lastmod>
+  <lastmod>2018-01-05T15:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -136,6 +140,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/Machine_Learning/facenet-modify/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</loc>
+  <lastmod>2018-01-05T15:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/if-open-an-url/</loc>
@@ -256,5 +264,13 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</loc>
   <lastmod>2017-12-29T04:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-de-jupyter/</loc>
+  <lastmod>2018-01-05T13:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</loc>
+  <lastmod>2018-01-05T13:26:00Z</lastmod>
  </url>
 </urlset>

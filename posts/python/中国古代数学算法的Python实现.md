@@ -2,7 +2,7 @@
 .. title: 中国古代数学算法的Python实现
 .. slug: python-old-chinese
 .. date: 2017-12-28 15:00:15 UTC+08:00
-.. tags:
+.. tags: 教程
 .. category:
 .. link:
 .. description:
