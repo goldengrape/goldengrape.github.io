@@ -18,6 +18,10 @@
   <lastmod>2018-01-05T09:33:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/cat_ke-pu-ophthalmology.xml</loc>
+  <lastmod>2018-01-05T18:57:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology.xml</loc>
   <lastmod>2018-01-05T09:32:00Z</lastmod>
  </sitemap>
@@ -42,6 +46,10 @@
   <lastmod>2018-01-05T18:29:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/ke-pu.xml</loc>
+  <lastmod>2018-01-05T18:57:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/lambda.xml</loc>
   <lastmod>2018-01-05T15:35:00Z</lastmod>
  </sitemap>
@@ -52,6 +60,10 @@
  <sitemap>
   <loc>https://goldengrape.github.io/categories/opensource.xml</loc>
   <lastmod>2018-01-05T13:15:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://goldengrape.github.io/categories/ophthalmology.xml</loc>
+  <lastmod>2018-01-05T18:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/python.xml</loc>
@@ -67,10 +79,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2018-01-05T18:29:00Z</lastmod>
+  <lastmod>2018-01-05T18:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2018-01-05T18:29:00Z</lastmod>
+  <lastmod>2018-01-05T18:57:00Z</lastmod>
  </sitemap>
 </sitemapindex>
