@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 17:33:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>毛笔字粗浅研究(0)</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近在看&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;, 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:29:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>毛笔字粗浅研究(0)</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近在看&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;, 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.&lt;/p&gt;
 &lt;p&gt;因为看这种艺术课程, 讲述的技艺和自己之前没有接触过, 难以理解, 所以必须回到基础的物理学去理解. 这是所谓的”first principle thinking”吧.&lt;/p&gt;
 &lt;p&gt;所以首先对毛笔的运行过程进行一下建模.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
@@ -9,12 +9,16 @@
 &lt;p&gt;毛笔在运行过程中:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;可能保持弹性形变状态, 笔管压向纸面时毛笔笔锋弹性形变, 压力解除时弹性形变几乎完全恢复.&lt;/li&gt;
-&lt;li&gt;也可能进入不可逆的形变, 比如更大的压力压迫到笔腰乃至笔根弯曲, 笔心的笔毛散开, 无法再聚拢.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;也可能进入不可逆的形变, 比如更大的压力压迫到笔腰乃至笔根弯曲, 笔心的笔毛散开, 无法再聚拢.&lt;/p&gt;
+&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;或者笔心的毛互相绞在一起, 形成绞锋.比如用笔管不绕自己中轴旋转的前提下, 用毛笔画一个360度的圆周, 一定会发生绞锋.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;所以有字母O的文字一定不会用毛笔的吧.(此处似乎有反例, 日文中"假名的半浊点")&lt;/p&gt;
+&lt;p&gt;所以有字母O的文字一定不会用毛笔的吧.(此处似乎有反例, &lt;a href="https://twitter.com/starknight"&gt;@starknight&lt;/a&gt;说日文中"假名的半浊点, 也就是是pa pi pu pe po, 音节里面要加在字母上的圆圈：ぱぴぷぺぽ")&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;相对简化的模型是现在用海绵头做成的软笔, 这种笔总是可以保持弹性形变.&lt;/p&gt;
@@ -48,7 +52,7 @@
 &lt;p&gt;由于L_0垂直于P_0, 而行进直线L_1是在纸面内的, 所以不论L_1转向到哪个方向, L_0与L_1形成的平面总是垂直于纸面的.&lt;/p&gt;
 &lt;h3&gt;近似解&lt;/h3&gt;
 &lt;p&gt;在小量范围内, 笔尖可以容忍一定的非对称受力而不散开, 相应的, 笔管也可以在一定的倾斜角度和笔管压力范围内变化.&lt;/p&gt;
-&lt;p&gt;这就是整个书法初级课程中讲的九用了.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</guid><pubDate>Fri, 05 Jan 2018 14:00:06 GMT</pubDate></item><item><title>中国古代数学算法的python实现(jupyter版本)</title><link>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;这就是整个书法初级课程中讲的九用了.&lt;/p&gt;&lt;/div&gt;</description><category>Art</category><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</guid><pubDate>Fri, 05 Jan 2018 14:00:06 GMT</pubDate></item><item><title>中国古代数学算法的python实现(jupyter版本)</title><link>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -341,7 +345,7 @@ $$&lt;p&gt;这样的，所以先用np.matrix产生一个矩阵m，注意python�
 &lt;p&gt;如果仅仅是某个人的"亲测有效", 这个完全算不上任何临床证据.
 "我有一个朋友", "我听说", "按道理说", 这些都不是能够指导医生进行诊断和治疗的"临床证据".&lt;/p&gt;
 &lt;p&gt;. . . . . .&lt;/p&gt;
-&lt;p&gt;这里, 我只是展示一下大夫的思维方式. 当病人谈到某个治疗方式有多好有多有效的时候, 医生脑子里是先查诊疗手册有没有记载, 然后记下几个关键词, 去查查pubmed. 高年资的医生一般不会去反驳病人的, 保持微笑, 叫下一个.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</guid><pubDate>Wed, 03 Jan 2018 08:00:00 GMT</pubDate></item><item><title>使用python进行贝叶斯统计分析</title><link>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;这里, 我只是展示一下大夫的思维方式. 当病人谈到某个治疗方式有多好有多有效的时候, 医生脑子里是先查诊疗手册有没有记载, 然后记下几个关键词, 去查查pubmed. 高年资的医生一般不会去反驳病人的, 保持微笑, 叫下一个.&lt;/p&gt;&lt;/div&gt;</description><category>Thinking</category><guid>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</guid><pubDate>Wed, 03 Jan 2018 08:00:00 GMT</pubDate></item><item><title>使用python进行贝叶斯统计分析</title><link>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;

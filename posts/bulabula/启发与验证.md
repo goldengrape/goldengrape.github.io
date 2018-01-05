@@ -2,7 +2,7 @@
 .. title: 启发与验证
 .. slug: qi-fa-yu-yan-zheng
 .. date: 2017-12-25 14:19:10 UTC+08:00
-.. tags: 
+.. tags: Thinking
 .. category:
 .. link:
 .. description:

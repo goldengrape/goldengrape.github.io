@@ -6,6 +6,14 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/3d_print.xml</loc>
+  <lastmod>2018-01-05T18:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://goldengrape.github.io/categories/art.xml</loc>
+  <lastmod>2018-01-05T18:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_fa-ming-hui-shou-zhan.xml</loc>
   <lastmod>2018-01-05T09:33:00Z</lastmod>
  </sitemap>
@@ -22,12 +30,16 @@
   <lastmod>2018-01-05T09:33:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/diy.xml</loc>
+  <lastmod>2018-01-05T18:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/fa-ming.xml</loc>
   <lastmod>2018-01-05T09:33:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/jiao-cheng.xml</loc>
-  <lastmod>2018-01-05T15:35:00Z</lastmod>
+  <lastmod>2018-01-05T18:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/lambda.xml</loc>
@@ -46,15 +58,19 @@
   <lastmod>2018-01-05T13:26:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/thinking.xml</loc>
+  <lastmod>2018-01-05T18:08:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml</loc>
-  <lastmod>2018-01-05T15:35:00Z</lastmod>
+  <lastmod>2018-01-05T18:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2018-01-05T17:17:00Z</lastmod>
+  <lastmod>2018-01-05T18:29:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2018-01-05T17:17:00Z</lastmod>
+  <lastmod>2018-01-05T18:29:00Z</lastmod>
  </sitemap>
 </sitemapindex>
