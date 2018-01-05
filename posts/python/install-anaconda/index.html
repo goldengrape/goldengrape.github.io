@@ -21,7 +21,7 @@ MathJax.Hub.Config({
     }
 });
 </script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
-<link rel="prev" href="../macos-x-zhong-de-path/" title="macOS X 中的$PATH" type="text/html">
+<link rel="next" href="../na-xie-zai-xian-de-jupyter/" title="那些在线的jupyter" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="安装anaconda记">
 <meta property="og:url" content="https://goldengrape.github.io/posts/python/install-anaconda/">
@@ -32,7 +32,7 @@ MathJax.Hub.Config({
 
 然后，我强烈建议你不要再看下去了，并且强烈推荐你直接打开chrome浏览器，跳转到https://cocalc.com 这里是在线版的">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2018-01-05T15:00:20+08:00">
+<meta property="article:published_time" content="2017-07-25T15:00:20+08:00">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -73,7 +73,7 @@ MathJax.Hub.Config({
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-05T15:00:20+08:00" itemprop="datePublished" title="2018-01-05 15:00">2018-01-05 15:00</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2017-07-25T15:00:20+08:00" itemprop="datePublished" title="2017-07-25 15:00">2017-07-25 15:00</time></a></p>
                 <p class="commentline">
         
     <a href="#disqus_thread" data-disqus-identifier="cache/posts/python/anaconda_python.html">Comments</a>
@@ -98,15 +98,20 @@ MathJax.Hub.Config({
 <p>但如果你一定想做GUI，想在本地运行，想与本地用户用键盘鼠标交互或者偏要用摄像头之类的硬件，或者，就是想折腾，那也没办法，只好在本地安装python包。</p>
 <h2>选好安装器</h2>
 <p>我的电脑是2014年中的Macbook Pro，当前系统是Mac OS X 10.12.5。这事儿得写清楚，有好多教程不写明白，觉得天下人跟他的电脑都一样，凭什么啊！</p>
-<p>就像初学python的各位一样，我也是先搜python的安装教程，怎么容易怎么来呗——这是一切恶果的原因。比如
-&lt;在Mac OS X上安装Python — Python最佳实践指南&gt;，用homebrew装python：
-https://pythonguidecn.readthedocs.io/zh/latest/starting/install3/osx.html#install3-osx
-或者去学了一门python的在线课程，https://zh.coursera.org/learn/python 按照老师的要求用canopy装python。</p>
-<p>STOP！STOP！STOP！
-本文怨念太多，对于走过的坑通常要大喊三声警示。
-太怨了，再吸口猫
-<img alt="" src="../../../images/cat.jpg">
-为啥呢：</p>
+<p>就像初学python的各位一样，我也是先搜python的安装教程，怎么容易怎么来呗——这是一切恶果的原因。比如:</p>
+<ul>
+<li>
+<p>&lt;在Mac OS X上安装Python — Python最佳实践指南&gt;，<a href="https://pythonguidecn.readthedocs.io/zh/latest/starting/install3/osx.html#install3-osx">用homebrew装python：</a></p>
+</li>
+<li>
+<p>或者去学了一门<a href="https://zh.coursera.org/learn/python">python的在线课程，</a> 按照老师的要求用<a href="https://www.enthought.com/product/canopy/">canopy</a>装python。</p>
+</li>
+</ul>
+<p><strong>STOP！STOP！STOP</strong></p>
+<p>本文怨念太多，对于走过的坑通常要大喊三声警示。</p>
+<p>太怨了，再吸口猫</p>
+<p><img alt="" src="../../../images/cat.jpg"></p>
+<p>为啥呢：</p>
 <ol>
 <li>因为程序员们自己一直处于互相不对付的状态，python社区还没有从2还是3的圣战中解脱出来，目前看3是大势所趋，但仍然有大量的人坚守在python2.7，比如，coursera上那些老师，比如Mac OS自己自带的python。</li>
 <li>因为实际情况里，不同的包可能依赖不同版本的python，别说是2到3这么大的差距，有的包没准不支持3.6，只支持3.5，所以即使你装上了python3，装这些包的时候仍然一大堆错。（tensorflow说你呢，放学别走！）</li>
@@ -119,7 +124,7 @@ https://pythonguidecn.readthedocs.io/zh/latest/starting/install3/osx.html#instal
 <p>如果你在中国大陆使用开源软件，“换源”这个词是必知必会的，不然干什么都卡得要死要死的。有时候我在想，方校长的结肠癌手术是做的Miles么，会不会也这么卡。</p>
 <p>把你用的开源软件名+换源放进google搜，比如anaconda+换源，比如docker+换源，比如raspberry pi+换源。</p>
 <h2>如果已经选错了</h2>
-<p>很糟糕的是，我之所以知道这些坑，是因为我都踩进去了。这里有实录：http://telegra.ph/Anaconda-vs-python-07-25 鉴于实在是太长，太郁闷了，来，再吸口猫
+<p>很糟糕的是，我之所以知道这些坑，是因为我都踩进去了。这里有<a href="http://telegra.ph/Anaconda-vs-python-07-25">实录. </a> 鉴于实在是太长，太郁闷了，来，再吸口猫
 <img alt="" src="../../../images/cat.jpg"></p>
 <p>简述一下我的问题是，PATH被搞乱了，python在找包的时候总是先去找Mac自带的2.7版本python下面的东西，没找到就报错（你丫倒是再去别的地方翻翻呐），我用其他工具装入的包就没办法import，于是我连import numpy as np都进行不下去。</p>
 <p>我问题的原因是，我先使用homebrew安装了python2，python3；中间学习的时候用pip装了若干包，包括但不限于numpy，openCV（当然openCV是失败的）；然后才发现anaconda，结果anaconda装的包已经import不了了；觉得anaconda不好用于是又去找了canopy。所以，我的PATH一片混乱。</p>
@@ -130,7 +135,7 @@ https://pythonguidecn.readthedocs.io/zh/latest/starting/install3/osx.html#instal
 <li>rm -rf
   最后一组R慎用。</li>
 </ul>
-<p>于是我拆掉了anaconda，拆掉了canopy，拆掉了brew装进去的python，每次拆，都老实重启。但还是有问题，http://telegra.ph/Anaconda-vs-python-07-25 你会看到最后冒出了magic number的事。</p>
+<p>于是我拆掉了anaconda，拆掉了canopy，拆掉了brew装进去的python，每次拆，都老实重启。<a href="http://telegra.ph/Anaconda-vs-python-07-25">但还是有问题, </a> 你会看到最后冒出了magic number的事。</p>
 <p><img alt="" src="../../../images/magicNum.png"></p>
 <p>解决magic number问题是这样的，</p>
 <pre class="code literal-block"><span></span><span class="kn">import</span> <span class="nn">sys</span>
@@ -169,10 +174,10 @@ ls
 <li>仔细阅读并练习test drive文档 https://conda.io/docs/test-drive.html 当成雅思/托福/GRE阅读题来做。没读的话，他们一定会坑你。</li>
 </ul>
 <h3>安装tensorflow</h3>
-<p>我从最难的讲吧，如果你是打算用conda安装tensorflow，到anaconda的cloud里去搜索： https://anaconda.org/search?q=tensorflow
+<p>我从最难的讲吧，如果你是打算用conda安装tensorflow，到anaconda的<a href="https://anaconda.org/search?q=tensorflow">cloud里去搜索：</a>
 能够找到很多，然后发现for OSX-64的并不多。对于我来说，Macbook Pro用的不是Nvidia的显卡，而是intel的Iris显卡（什么破玩意），所以不行。
 于是，找到一个：
-https://anaconda.org/anaconda/tensorflow
+<a href="https://anaconda.org/anaconda/tensorflow">https://anaconda.org/anaconda/tensorflow</a>
 按照页面上的说明：
 To install this package with conda run:</p>
 <pre class="code literal-block"><span></span>conda install -c anaconda tensorflow
@@ -193,8 +198,8 @@ conda install --name tensorflow tensorflow
 </div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
-<li class="previous">
-                <a href="../macos-x-zhong-de-path/" rel="prev" title="macOS X 中的$PATH">前一篇</a>
+<li class="next">
+                <a href="../na-xie-zai-xian-de-jupyter/" rel="next" title="那些在线的jupyter">后一篇</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
         

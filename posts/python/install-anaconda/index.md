@@ -1,7 +1,7 @@
 <!--
 .. title: 安装anaconda记
 .. slug: install-anaconda
-.. date: 2018-1-5 15:00:20 UTC+08:00
+.. date: 2017-7-25 15:00:20 UTC+08:00
 .. tags:
 .. category:
 .. link:
@@ -26,15 +26,20 @@
 # 选好安装器
 我的电脑是2014年中的Macbook Pro，当前系统是Mac OS X 10.12.5。这事儿得写清楚，有好多教程不写明白，觉得天下人跟他的电脑都一样，凭什么啊！
 
-就像初学python的各位一样，我也是先搜python的安装教程，怎么容易怎么来呗——这是一切恶果的原因。比如
-<在Mac OS X上安装Python — Python最佳实践指南>，用homebrew装python：
-https://pythonguidecn.readthedocs.io/zh/latest/starting/install3/osx.html#install3-osx
-或者去学了一门python的在线课程，https://zh.coursera.org/learn/python 按照老师的要求用canopy装python。
+就像初学python的各位一样，我也是先搜python的安装教程，怎么容易怎么来呗——这是一切恶果的原因。比如:
 
-STOP！STOP！STOP！
+* <在Mac OS X上安装Python — Python最佳实践指南>，[用homebrew装python：](https://pythonguidecn.readthedocs.io/zh/latest/starting/install3/osx.html#install3-osx)
+
+* 或者去学了一门[python的在线课程，](https://zh.coursera.org/learn/python) 按照老师的要求用[canopy](https://www.enthought.com/product/canopy/)装python。
+
+**STOP！STOP！STOP**
+
 本文怨念太多，对于走过的坑通常要大喊三声警示。
+
 太怨了，再吸口猫
+
 ![](/images/cat.jpg)
+
 为啥呢：
 
 1. 因为程序员们自己一直处于互相不对付的状态，python社区还没有从2还是3的圣战中解脱出来，目前看3是大势所趋，但仍然有大量的人坚守在python2.7，比如，coursera上那些老师，比如Mac OS自己自带的python。
@@ -53,7 +58,7 @@ STOP！STOP！STOP！
 
 # 如果已经选错了
 
-很糟糕的是，我之所以知道这些坑，是因为我都踩进去了。这里有实录：http://telegra.ph/Anaconda-vs-python-07-25 鉴于实在是太长，太郁闷了，来，再吸口猫
+很糟糕的是，我之所以知道这些坑，是因为我都踩进去了。这里有[实录. ](http://telegra.ph/Anaconda-vs-python-07-25) 鉴于实在是太长，太郁闷了，来，再吸口猫
 ![](/images/cat.jpg)
 
 简述一下我的问题是，PATH被搞乱了，python在找包的时候总是先去找Mac自带的2.7版本python下面的东西，没找到就报错（你丫倒是再去别的地方翻翻呐），我用其他工具装入的包就没办法import，于是我连import numpy as np都进行不下去。
@@ -67,7 +72,7 @@ STOP！STOP！STOP！
 * rm -rf
   最后一组R慎用。
 
-于是我拆掉了anaconda，拆掉了canopy，拆掉了brew装进去的python，每次拆，都老实重启。但还是有问题，http://telegra.ph/Anaconda-vs-python-07-25 你会看到最后冒出了magic number的事。
+于是我拆掉了anaconda，拆掉了canopy，拆掉了brew装进去的python，每次拆，都老实重启。[但还是有问题, ](http://telegra.ph/Anaconda-vs-python-07-25) 你会看到最后冒出了magic number的事。
 
 ![](/images/magicNum.png)
 
@@ -113,10 +118,10 @@ ls
 * 仔细阅读并练习test drive文档 https://conda.io/docs/test-drive.html 当成雅思/托福/GRE阅读题来做。没读的话，他们一定会坑你。
 
 ## 安装tensorflow
-我从最难的讲吧，如果你是打算用conda安装tensorflow，到anaconda的cloud里去搜索： https://anaconda.org/search?q=tensorflow
+我从最难的讲吧，如果你是打算用conda安装tensorflow，到anaconda的[cloud里去搜索：](https://anaconda.org/search?q=tensorflow)
 能够找到很多，然后发现for OSX-64的并不多。对于我来说，Macbook Pro用的不是Nvidia的显卡，而是intel的Iris显卡（什么破玩意），所以不行。
 于是，找到一个：
-https://anaconda.org/anaconda/tensorflow
+[https://anaconda.org/anaconda/tensorflow](https://anaconda.org/anaconda/tensorflow)
 按照页面上的说明：
 To install this package with conda run:
 ```
