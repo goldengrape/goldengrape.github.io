@@ -62,7 +62,8 @@
 ![偏锋1](/images/偏锋1.png)
 偏锋侧视图
 ![偏锋2](/images/偏锋2.png)
-
+偏锋行笔时的受力
+![](/images/force-of-brush.png)
 
 
 # 转向
