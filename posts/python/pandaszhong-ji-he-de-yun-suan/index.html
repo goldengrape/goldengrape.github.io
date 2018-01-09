@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Pandas中集合的运算 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../bulabula/IOL-problem/" title="人工晶状体调节力的难题" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="Pandas中集合的运算">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/">
+<meta property="og:description" content='快要被Pandas搞疯了. 各种奇技淫巧太多,
+我觉得pandas, 或者说python的”大数据"处理技巧两种:
+
+a0. 确定你需要的数据文件是什么名字
+a1. 去stackoverflow搜数据文件名字看看教程. 
+a2. 如果不能满足自己的要求, 提个问题, 然后等一周. 
+
+
+或者:
+
+b0. 自己查文档埋头苦干一周
+
+
+通常前者的解决方案效果优于后者, 而且代码更为优雅易读.
+例如:
+'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-09T16:02:34+08:00">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">Pandas中集合的运算</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-09T16:02:34+08:00" itemprop="datePublished" title="2018-01-09 16:02">2018-01-09 16:02</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/python/pandas中集合的运算.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>快要被Pandas搞疯了. 各种奇技淫巧太多,</p>
+<p>我觉得pandas, 或者说python的”大数据"处理技巧两种:</p>
+
+<pre><code>a0. 确定你需要的数据文件是什么名字
+a1. 去stackoverflow搜数据文件名字看看教程. 
+a2. 如果不能满足自己的要求, 提个问题, 然后等一周. 
+
+</code></pre>
+<p>或者:</p>
+
+<pre><code>b0. 自己查文档埋头苦干一周
+
+</code></pre>
+<p>通常前者的解决方案效果优于后者, 而且代码更为优雅易读.</p>
+<p>例如:</p>
+<p>你发现自己研究的数据来自 City_Zhvi_AllHomes.csv (From the <a href="http://www.zillow.com/research/data/">Zillow research data site</a> there is housing data for the United States. In particular the datafile for <a href="http://files.zillowstatic.com/research/public/City/City_Zhvi_AllHomes.csv">all homes at a city level</a>, <code>City_Zhvi_AllHomes.csv</code>, has median home sale prices at a fine grained level.)</p>
+<p>那么, 只需要在StackOverFlow上<a href="https://stackoverflow.com/search?q=City_Zhvi_AllHomes.csv">搜索City_Zhvi_AllHomes.csv</a> 即可.</p>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="但我还是喜欢有理有据的解决">但我还是喜欢有理有据的解决<a class="anchor-link" href="#%E4%BD%86%E6%88%91%E8%BF%98%E6%98%AF%E5%96%9C%E6%AC%A2%E6%9C%89%E7%90%86%E6%9C%89%E6%8D%AE%E7%9A%84%E8%A7%A3%E5%86%B3">¶</a>
+</h2>
+<p>作业题中是美国各个城市的房价, 城市分两类, 一类是有大学的, 一类是没大学的, 那么看看这两类城市房价的区别,</p>
+<p>可以取得的数据集是各个城市的房价, 是一个DataFrame, 还有一个是大学城名称的DataFrame. 但这两个DataFrame都是MultiIndex的, index中包含州的名字和城市的名字.</p>
+<p>所以问题就是对于MultiIndex的两个DataFrame, 如何取得交集和补集. 注意数据的Index有关系, 但数据内容可不一定有关系. coursera上讨论区中<a href="https://www.coursera.org/learn/python-data-analysis/discussions/weeks/4/threads/n6epwLCKEeewNAofllqCYg">高票支持的回答</a>里各种奇技淫巧, 各种奇技淫巧. 而且你如果用他的方法, 在不同的python/pandas版本貌似出来的结果是不同的.</p>
+<p>不调用原始题目了, 用一个简化模型来说明.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="建立两个MultiIndex的DataFrame">建立两个MultiIndex的DataFrame<a class="anchor-link" href="#%E5%BB%BA%E7%AB%8B%E4%B8%A4%E4%B8%AAMultiIndex%E7%9A%84DataFrame">¶</a>
+</h3>
+<p>分别是s1和s2, 一会儿求他们的交集和差集.</p>
+<p>S1:</p>
+<table>
+<thead><tr>
+<th>first</th>
+<th>second</th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>bar</td>
+<td>one</td>
+<td>0.502489</td>
+</tr>
+<tr>
+<td></td>
+<td>two</td>
+<td>1.061737</td>
+</tr>
+<tr>
+<td>baz</td>
+<td>one</td>
+<td>-0.207277</td>
+</tr>
+<tr>
+<td></td>
+<td>two</td>
+<td>2.042837</td>
+</tr>
+<tr>
+<td>foo</td>
+<td>one</td>
+<td>-0.792736</td>
+</tr>
+<tr>
+<td></td>
+<td>two</td>
+<td>-0.204785</td>
+</tr>
+<tr>
+<td>qux</td>
+<td>one</td>
+<td>1.596757</td>
+</tr>
+<tr>
+<td></td>
+<td>two</td>
+<td>-0.585016</td>
+</tr>
+</tbody>
+</table>
+<p>S2:</p>
+<table>
+<thead><tr>
+<th>first</th>
+<th>second</th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr>
+<td>bar</td>
+<td>one</td>
+<td>0.553635</td>
+</tr>
+<tr>
+<td>foo</td>
+<td>two</td>
+<td>1.049258</td>
+</tr>
+<tr>
+<td>cool</td>
+<td>three</td>
+<td>-1.059016</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">arrays1</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'baz'</span><span class="p">,</span> <span class="s1">'baz'</span><span class="p">,</span> <span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'foo'</span><span class="p">,</span> <span class="s1">'qux'</span><span class="p">,</span> <span class="s1">'qux'</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'one'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">,</span> <span class="s1">'one'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">,</span> <span class="s1">'one'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">,</span> <span class="s1">'one'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">]]</span>
+<span class="n">tuples1</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">arrays1</span><span class="p">))</span>
+<span class="n">index1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span><span class="n">tuples1</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">'first'</span><span class="p">,</span> <span class="s1">'second'</span><span class="p">])</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tuples1</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">index1</span><span class="p">)</span>
+<span class="n">s1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>first  second
+bar    one       0.502489
+       two       1.061737
+baz    one      -0.207277
+       two       2.042837
+foo    one      -0.792736
+       two      -0.204785
+qux    one       1.596757
+       two      -0.585016
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">arrays2</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'bar'</span><span class="p">,</span> <span class="s1">'foo'</span><span class="p">,</span> <span class="s2">"cool"</span><span class="p">],</span>
+          <span class="p">[</span><span class="s1">'one'</span><span class="p">,</span> <span class="s1">'two'</span><span class="p">,</span> <span class="s2">"three"</span><span class="p">]]</span>
+<span class="n">tuples2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">arrays2</span><span class="p">))</span>
+<span class="n">index1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span><span class="n">tuples2</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="p">[</span><span class="s1">'first'</span><span class="p">,</span> <span class="s1">'second'</span><span class="p">])</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tuples2</span><span class="p">)),</span> <span class="n">index</span><span class="o">=</span><span class="n">index1</span><span class="p">)</span>
+<span class="n">s2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>first  second
+bar    one       0.553635
+foo    two       1.049258
+cool   three    -1.059016
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>现在要求解:
+s1, s2中index的交集, 差集.</p>
+<p>可以参考<a href="https://pda.readthedocs.io/en/latest/chp5.html">Python For Data Analysis </a>
+<img src="https://pda.readthedocs.io/en/latest/_static/cover.jpg" alt=""></p>
+<p>索引方法和属性</p>
+<ul>
+<li>append    链接额外的索引对象，产生一个新的索引</li>
+<li>diff  计算索引的差集</li>
+<li>intersection  计算交集</li>
+<li>union 计算并集</li>
+<li>isin  计算出一个布尔数组表示每一个值是否包含在所传递的集合里</li>
+<li>delete    计算删除位置i的元素的索引</li>
+<li>drop  计算删除所传递的值后的索引</li>
+<li>insert    计算在位置i插入元素后的索引</li>
+<li>is_monotonic  返回True，如果每一个元素都比它前面的元素大或相等</li>
+<li>is_unique 返回True，如果索引没有重复的值</li>
+<li>unique    计算索引的唯一值数组</li>
+</ul>
+<p>当然, 如果你完全相信他, 那就上当了. 我反复说过, 开源社区有一定的<strong>反社会倾向</strong>, 不能不信, 也不能全信. 比如我想用的最重要的这个差集的计算方法, 如果用diff就报错了. 要用difference.</p>
+<p>要回到pandas的文档中找证据: <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Index.difference.html">pandas.Index.difference</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">idx1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="n">idx2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<span class="n">idx1</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">idx2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>Int64Index([1, 2], dtype='int64')</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如果你想把MultiIndex的例子简单代入</p>
+<div class="highlight"><pre><span></span><span class="n">s1</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
+</pre></div>
+<p>那么又错了. 反社会倾向, 注意.</p>
+<p>Pandas文档中的例子里idx1和idx不是DataFrame, 而是index. 被反社会以后, 我还得承认是自己看错了.</p>
+<p>所以:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">s2</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[16]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>MultiIndex(levels=[['bar', 'baz', 'foo', 'qux'], ['one', 'two']],
+           labels=[[0, 1, 1, 2, 3, 3], [1, 0, 1, 0, 0, 1]],
+           names=['first', 'second'],
+           sortorder=0)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>求解两个集合的交集:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s1</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">s2</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[17]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>first  second
+bar    one       0.502489
+foo    two      -0.204785
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>从集合s1中扣除s2, 剩下的差集</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">s1</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">s1</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">s2</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[18]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>first  second
+bar    two       1.061737
+baz    one      -0.207277
+       two       2.042837
+foo    one      -0.792736
+qux    one       1.596757
+       two      -0.585016
+dtype: float64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../bulabula/IOL-problem/" rel="prev" title="人工晶状体调节力的难题">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/",
+        disqus_title="Pandas\u4e2d\u96c6\u5408\u7684\u8fd0\u7b97",
+        disqus_identifier="cache/posts/python/pandas中集合的运算.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
