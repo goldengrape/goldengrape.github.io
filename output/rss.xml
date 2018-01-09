@@ -1,5 +1,439 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 06 Jan 2018 05:14:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶状体调节力的难题</title><link>https://goldengrape.github.io/posts/bulabula/IOL-problem/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;终于过完2017到2018年了, 这篇写于2015-08-20的文章, 又可以理直气壮地重新贴一遍. 哇哈哈哈!
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 09 Jan 2018 08:46:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pandas中集合的运算</title><link>https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;快要被Pandas搞疯了. 各种奇技淫巧太多,&lt;/p&gt;
+&lt;p&gt;我觉得pandas, 或者说python的”大数据"处理技巧两种:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;a0. 确定你需要的数据文件是什么名字
+a1. 去stackoverflow搜数据文件名字看看教程. 
+a2. 如果不能满足自己的要求, 提个问题, 然后等一周. 
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;或者:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;b0. 自己查文档埋头苦干一周
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;通常前者的解决方案效果优于后者, 而且代码更为优雅易读.&lt;/p&gt;
+&lt;p&gt;例如:&lt;/p&gt;
+&lt;p&gt;你发现自己研究的数据来自 City_Zhvi_AllHomes.csv (From the &lt;a href="http://www.zillow.com/research/data/"&gt;Zillow research data site&lt;/a&gt; there is housing data for the United States. In particular the datafile for &lt;a href="http://files.zillowstatic.com/research/public/City/City_Zhvi_AllHomes.csv"&gt;all homes at a city level&lt;/a&gt;, &lt;code&gt;City_Zhvi_AllHomes.csv&lt;/code&gt;, has median home sale prices at a fine grained level.)&lt;/p&gt;
+&lt;p&gt;那么, 只需要在StackOverFlow上&lt;a href="https://stackoverflow.com/search?q=City_Zhvi_AllHomes.csv"&gt;搜索City_Zhvi_AllHomes.csv&lt;/a&gt; 即可.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="但我还是喜欢有理有据的解决"&gt;但我还是喜欢有理有据的解决&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/#%E4%BD%86%E6%88%91%E8%BF%98%E6%98%AF%E5%96%9C%E6%AC%A2%E6%9C%89%E7%90%86%E6%9C%89%E6%8D%AE%E7%9A%84%E8%A7%A3%E5%86%B3"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;作业题中是美国各个城市的房价, 城市分两类, 一类是有大学的, 一类是没大学的, 那么看看这两类城市房价的区别,&lt;/p&gt;
+&lt;p&gt;可以取得的数据集是各个城市的房价, 是一个DataFrame, 还有一个是大学城名称的DataFrame. 但这两个DataFrame都是MultiIndex的, index中包含州的名字和城市的名字.&lt;/p&gt;
+&lt;p&gt;所以问题就是对于MultiIndex的两个DataFrame, 如何取得交集和补集. 注意数据的Index有关系, 但数据内容可不一定有关系. coursera上讨论区中&lt;a href="https://www.coursera.org/learn/python-data-analysis/discussions/weeks/4/threads/n6epwLCKEeewNAofllqCYg"&gt;高票支持的回答&lt;/a&gt;里各种奇技淫巧, 各种奇技淫巧. 而且你如果用他的方法, 在不同的python/pandas版本貌似出来的结果是不同的.&lt;/p&gt;
+&lt;p&gt;不调用原始题目了, 用一个简化模型来说明.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="建立两个MultiIndex的DataFrame"&gt;建立两个MultiIndex的DataFrame&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/#%E5%BB%BA%E7%AB%8B%E4%B8%A4%E4%B8%AAMultiIndex%E7%9A%84DataFrame"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;分别是s1和s2, 一会儿求他们的交集和差集.&lt;/p&gt;
+&lt;p&gt;S1:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;first&lt;/th&gt;
+&lt;th&gt;second&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bar&lt;/td&gt;
+&lt;td&gt;one&lt;/td&gt;
+&lt;td&gt;0.502489&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;two&lt;/td&gt;
+&lt;td&gt;1.061737&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;baz&lt;/td&gt;
+&lt;td&gt;one&lt;/td&gt;
+&lt;td&gt;-0.207277&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;two&lt;/td&gt;
+&lt;td&gt;2.042837&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;foo&lt;/td&gt;
+&lt;td&gt;one&lt;/td&gt;
+&lt;td&gt;-0.792736&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;two&lt;/td&gt;
+&lt;td&gt;-0.204785&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;qux&lt;/td&gt;
+&lt;td&gt;one&lt;/td&gt;
+&lt;td&gt;1.596757&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;two&lt;/td&gt;
+&lt;td&gt;-0.585016&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;S2:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;first&lt;/th&gt;
+&lt;th&gt;second&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;bar&lt;/td&gt;
+&lt;td&gt;one&lt;/td&gt;
+&lt;td&gt;0.553635&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;foo&lt;/td&gt;
+&lt;td&gt;two&lt;/td&gt;
+&lt;td&gt;1.049258&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;cool&lt;/td&gt;
+&lt;td&gt;three&lt;/td&gt;
+&lt;td&gt;-1.059016&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="n"&gt;arrays1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'baz'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'baz'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'qux'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'qux'&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+          &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'one'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'one'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'one'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'one'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;span class="n"&gt;tuples1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;arrays1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;index1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MultiIndex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_tuples&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tuples1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'first'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'second'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;s1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tuples1&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;index1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;s1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;first  second
+bar    one       0.502489
+       two       1.061737
+baz    one      -0.207277
+       two       2.042837
+foo    one      -0.792736
+       two      -0.204785
+qux    one       1.596757
+       two      -0.585016
+dtype: float64&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;arrays2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[[&lt;/span&gt;&lt;span class="s1"&gt;'bar'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'foo'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"cool"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+          &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'one'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'two'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"three"&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;span class="n"&gt;tuples2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;arrays2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;index1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;MultiIndex&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_tuples&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tuples2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'first'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'second'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;s2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;tuples2&lt;/span&gt;&lt;span class="p"&gt;)),&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;index1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;s2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;first  second
+bar    one       0.553635
+foo    two       1.049258
+cool   three    -1.059016
+dtype: float64&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;现在要求解:
+s1, s2中index的交集, 差集.&lt;/p&gt;
+&lt;p&gt;可以参考&lt;a href="https://pda.readthedocs.io/en/latest/chp5.html"&gt;Python For Data Analysis &lt;/a&gt;
+&lt;img src="https://pda.readthedocs.io/en/latest/_static/cover.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;索引方法和属性&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;append    链接额外的索引对象，产生一个新的索引&lt;/li&gt;
+&lt;li&gt;diff  计算索引的差集&lt;/li&gt;
+&lt;li&gt;intersection  计算交集&lt;/li&gt;
+&lt;li&gt;union 计算并集&lt;/li&gt;
+&lt;li&gt;isin  计算出一个布尔数组表示每一个值是否包含在所传递的集合里&lt;/li&gt;
+&lt;li&gt;delete    计算删除位置i的元素的索引&lt;/li&gt;
+&lt;li&gt;drop  计算删除所传递的值后的索引&lt;/li&gt;
+&lt;li&gt;insert    计算在位置i插入元素后的索引&lt;/li&gt;
+&lt;li&gt;is_monotonic  返回True，如果每一个元素都比它前面的元素大或相等&lt;/li&gt;
+&lt;li&gt;is_unique 返回True，如果索引没有重复的值&lt;/li&gt;
+&lt;li&gt;unique    计算索引的唯一值数组&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然, 如果你完全相信他, 那就上当了. 我反复说过, 开源社区有一定的&lt;strong&gt;反社会倾向&lt;/strong&gt;, 不能不信, 也不能全信. 比如我想用的最重要的这个差集的计算方法, 如果用diff就报错了. 要用difference.&lt;/p&gt;
+&lt;p&gt;要回到pandas的文档中找证据: &lt;a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Index.difference.html"&gt;pandas.Index.difference&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;idx1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Index&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;idx2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Index&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="n"&gt;idx1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;difference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;idx2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;Int64Index([1, 2], dtype='int64')&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;如果你想把MultiIndex的例子简单代入&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;difference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;那么又错了. 反社会倾向, 注意.&lt;/p&gt;
+&lt;p&gt;Pandas文档中的例子里idx1和idx不是DataFrame, 而是index. 被反社会以后, 我还得承认是自己看错了.&lt;/p&gt;
+&lt;p&gt;所以:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;difference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[16]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;MultiIndex(levels=[['bar', 'baz', 'foo', 'qux'], ['one', 'two']],
+           labels=[[0, 1, 1, 2, 3, 3], [1, 0, 1, 0, 0, 1]],
+           names=['first', 'second'],
+           sortorder=0)&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;求解两个集合的交集:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;first  second
+bar    one       0.502489
+foo    two      -0.204785
+dtype: float64&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;从集合s1中扣除s2, 剩下的差集&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [18]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loc&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;difference&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[18]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;first  second
+bar    two       1.061737
+baz    one      -0.207277
+       two       2.042837
+foo    one      -0.792736
+qux    one       1.596757
+       two      -0.585016
+dtype: float64&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><guid>https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/</guid><pubDate>Tue, 09 Jan 2018 08:02:34 GMT</pubDate></item><item><title>人工晶状体调节力的难题</title><link>https://goldengrape.github.io/posts/bulabula/IOL-problem/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;终于过完2017到2018年了, 这篇写于2015-08-20的文章, 又可以理直气壮地重新贴一遍. 哇哈哈哈!
 &lt;img alt="" src="https://goldengrape.github.io/images/face.jpg"&gt;&lt;/p&gt;
 &lt;h2&gt;2017年，世界上还有很多很多很多很多近视眼&lt;/h2&gt;
 &lt;p&gt;2015-08-20&lt;/p&gt;
@@ -3056,53 +3490,4 @@ Keras函数的返回值仍然是函数, 因此Add函数, 不能写成Add([X,X_sh
 &lt;/pre&gt;
 
 
-&lt;p&gt;EOF.&lt;/p&gt;&lt;/div&gt;</description><category>opensource</category><guid>https://goldengrape.github.io/posts/python/auto-numba-jit/</guid><pubDate>Thu, 28 Dec 2017 07:00:20 GMT</pubDate></item><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
-&lt;p&gt;可以运行的代码&lt;a href="https://repl.it/HgCF/30"&gt;在这里&lt;/a&gt;
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;更相减损术&lt;/h2&gt;
-&lt;p&gt;“术曰：以少减多，更相减损，求其等也。”&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def 更相减损术(a,b):
-    while (a != b):
-        if a &amp;gt; b:
-            a=a-b
-        else :
-            b=b-a
-    return a
-&lt;/pre&gt;
-
-
-&lt;p&gt;这个很好写啦，读入两个数a和b，求其等也，就是一直要求到两个数相等为止。
-所以用条件循环while，当a不等于b时就一直重复算。算什么呢，以少减多，就是判断一下谁大.
-如果a&amp;gt;b, 就用a-b替换a，否则就用b-a替换b。
-一直到两个数减到相等为止，就可以随便返回其中一个数作为最大公约数了。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;大衍求一术&lt;/h2&gt;
-&lt;p&gt;这个好帅，是求解ax≡1(mod b)。就是说a乘以x除以b所得的余数等于1。详细的解说还是看那篇公众号的文章吧。&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;def 大衍求一术(a,b):
-    m=np.matrix( [ [a,1], [b,0] ] )
-    while (m[0,0] != 1 ):
-        if m[0,0]&amp;gt;m[1,0]:
-            m[0,:]=m[0,:]-m[1,:]
-        else:
-            m[1,:]=m[1,:]-m[0,:]
-        if m[1,0]==1:
-            return 1
-        else:
-            return m[0,1]
-&lt;/pre&gt;
-
-
-&lt;p&gt;因为打算用矩阵，所以要首先导入Numpy包，python很强大的一点就是有各种包，只要import一下就好像有了超能力。
-大衍求一术要求先生成一个2*2的矩阵&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;a 1
-b 0
-&lt;/pre&gt;
-
-
-&lt;p&gt;这样的，所以先用np.matrix产生一个矩阵m，注意python的序数是从0开始的，所以m[0,0]=a, m[0,1]=1, m[1,0]=b, m[1,1]=0。&lt;/p&gt;
-&lt;p&gt;然后跟前面的更相减损术差不多，也是减来减去，区别是以行为单位来减，终点是把a的位置变成1，比大小的时候是用左边那列的元素比大小。&lt;/p&gt;
-&lt;p&gt;所以如果m[0,0]&amp;gt;m[1,0]，那就把上一行减去下一行m[0,:]-m[1,:]，再替换掉上面一行m[0,:]=m[0,:]-m[1,:]。反之亦然。一直重复，直到m[0,0] == 1。&lt;/p&gt;
-&lt;p&gt;通常是返回m[0,1]的数值就可以了。但有可能a,b互质，所以需要分情况讨论一下。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我的古文水平和编程水平都还不够高，不然把中国古代数学中的种种算法都写出程序也是一件很风雅的事情。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><guid>https://goldengrape.github.io/posts/python/python-old-chinese/</guid><pubDate>Thu, 28 Dec 2017 07:00:15 GMT</pubDate></item></channel></rss>
+&lt;p&gt;EOF.&lt;/p&gt;&lt;/div&gt;</description><category>opensource</category><guid>https://goldengrape.github.io/posts/python/auto-numba-jit/</guid><pubDate>Thu, 28 Dec 2017 07:00:20 GMT</pubDate></item></channel></rss>
