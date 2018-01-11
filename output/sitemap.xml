@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2018-01-03T12:36:00Z</lastmod>
+  <lastmod>2018-01-11T07:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-01-09T08:40:00Z</lastmod>
+  <lastmod>2018-01-11T07:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -111,7 +111,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-4.html</loc>
-  <lastmod>2018-01-09T08:40:00Z</lastmod>
+  <lastmod>2018-01-11T07:37:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-5.html</loc>
+  <lastmod>2018-01-11T07:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -182,6 +186,10 @@
   <lastmod>2018-01-05T15:35:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/how-to-refuse-brave-new-world/</loc>
+  <lastmod>2018-01-11T07:34:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/posts/bulabula/if-open-an-url/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
@@ -192,6 +200,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</loc>
   <lastmod>2018-01-03T12:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/how-to-refuse-brave-new-world/</loc>
+  <lastmod>2018-01-11T07:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/3-ipad-games-for-myopia/</loc>
@@ -220,6 +232,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/</loc>
+  <lastmod>2018-01-11T07:37:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</loc>
@@ -312,5 +328,9 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</loc>
   <lastmod>2018-01-05T13:26:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/ru-he-ju-jue-jin-ru-mei-li-xin-shi-jie/</loc>
+  <lastmod>2018-01-11T07:25:00Z</lastmod>
  </url>
 </urlset>
