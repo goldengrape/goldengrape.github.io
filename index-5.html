@@ -68,7 +68,51 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/Machine_Learning/ResNet-note/" class="u-url">ResNet编写注意事项</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/abcdju-zhen/" class="u-url">ABCD矩阵</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/abcdju-zhen/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-12-29T00:07:03+08:00" title="2017-12-29 00:07">2017-12-29 00:07</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/abcdju-zhen/#disqus_thread" data-disqus-identifier="cache/posts/python/Ray_transfer_matrix.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="光线传输矩阵">光线传输矩阵<a class="anchor-link" href="posts/python/abcdju-zhen/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5">¶</a>
+</h2>
+<p>这是一次sympy的小练习.</p>
+<p>光线传输矩阵又称做<a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis">ABCD矩阵</a> 用来描述近轴光线的传播过程.</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""></p>
+<p>光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:</p>
+<ul>
+<li>入射光线距离光轴是x1, 角度是 θ1,  </li>
+<li>出射光线距离光轴是x2, 角度是 θ2,</li>
+</ul>
+<p>那么: 
+$$
+\begin{bmatrix}x_2\\ \theta_2 \end{bmatrix} = \begin{bmatrix}A &amp; B \\C &amp; D \end{bmatrix} \begin{bmatrix}x_1\\ \theta_1 \end{bmatrix}
+$$</p>
+<p>对于不同的光学元件, ABCD的取值不同.</p>
+<p>下面准备使用python的符号运算库sympy, 进行光路的ABCD矩阵分析. 试图建立一个简化的眼球光路追迹模型. 
+</p>
+<p class="more"><a href="posts/python/abcdju-zhen/">更多…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/Machine_Learning/ResNet-note/" class="u-url">ResNet编写注意事项</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/Machine_Learning/ResNet-note/" rel="bookmark"><time class="post-date published dt-published" datetime="2017-12-28T15:00:22+08:00" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
@@ -98,7 +142,19 @@ MathJax.Hub.Config({
             <li class="next">
                 <a href="index-4.html" rel="next">旧一篇</a>
             </li>
-        </ul></nav><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+        </ul></nav><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
