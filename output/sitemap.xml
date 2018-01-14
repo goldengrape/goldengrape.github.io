@@ -19,11 +19,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-01-11T07:37:00Z</lastmod>
+  <lastmod>2018-01-14T17:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2018-01-05T18:57:00Z</lastmod>
+  <lastmod>2018-01-14T17:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d_print/</loc>
@@ -90,6 +90,10 @@
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/sheng-huo-fang-shi/</loc>
+  <lastmod>2018-01-14T17:08:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/thinking/</loc>
   <lastmod>2018-01-05T18:08:00Z</lastmod>
  </url>
@@ -115,7 +119,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-5.html</loc>
-  <lastmod>2018-01-11T07:37:00Z</lastmod>
+  <lastmod>2018-01-14T17:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -198,12 +202,12 @@
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
  <url>
-  <loc>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</loc>
-  <lastmod>2018-01-03T12:36:00Z</lastmod>
+  <loc>https://goldengrape.github.io/posts/bulabula/quantity-life/</loc>
+  <lastmod>2018-01-14T17:08:00Z</lastmod>
  </url>
  <url>
-  <loc>https://goldengrape.github.io/posts/how-to-refuse-brave-new-world/</loc>
-  <lastmod>2018-01-11T07:32:00Z</lastmod>
+  <loc>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</loc>
+  <lastmod>2018-01-03T12:36:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/3-ipad-games-for-myopia/</loc>
@@ -328,9 +332,5 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</loc>
   <lastmod>2018-01-05T13:26:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/ru-he-ju-jue-jin-ru-mei-li-xin-shi-jie/</loc>
-  <lastmod>2018-01-11T07:25:00Z</lastmod>
  </url>
 </urlset>
