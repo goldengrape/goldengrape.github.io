@@ -1,7 +1,258 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 04:09:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>双人游戏的必胜招</title><link>https://goldengrape.github.io/posts/bulabula/zermelo-theorem/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;该篇复习于2011年. 今天看到&lt;a href="https://twitter.com/gttnnn"&gt;如月中天&lt;/a&gt;提到&lt;a href="https://twitter.com/gttnnn/status/952744005934051328"&gt;"胜也罢，败也罢，就是不要同他讲和！"&lt;/a&gt;, 不知怎么, 突然想起这个双人游戏是可能有必胜招的, 还有一个华丽的证明, 然后自己又不记得了. 赶紧搜索了一下, 发现以前记录过.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 05:43:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>字符替换练习</title><link>https://goldengrape.github.io/posts/bulabula/eq-price/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这是一个python正则表达式的练习:&lt;/p&gt;
+&lt;p&gt;我恰好读到曼昆经济学原理中的一小段, 觉得用来练习正则表达式中的文本替换命令很有意思.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;价格上限如何影响市场结果&lt;/span&gt;
+
+&lt;span class="s1"&gt;...对冰激凌市场实行价格上限时，可能有两种结果。&lt;/span&gt;
+&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/eq_price.001.png" alt=""&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;在图6－l（a）幅中，政府实行每个冰激凌蛋卷为4美元的价格上限。&lt;/span&gt;
+&lt;span class="s1"&gt;在这种情况下，由于使供求平衡的价格（3美元）低于上限，&lt;/span&gt;
+&lt;span class="s1"&gt;价格上限没有限制作用。&lt;/span&gt;
+&lt;span class="s1"&gt;市场力量自然而然地使经济向均衡变动，而且，价格上限没有影响。&lt;/span&gt;
+&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/eq_price.002.png" alt=""&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;图6－l0(b)幅表示另一种结果，这种结果更令人感兴趣，也更可能。&lt;/span&gt;
+&lt;span class="s1"&gt;在这种情况下，政府实行每个冰激凌蛋卷2美元的价格上限。&lt;/span&gt;
+&lt;span class="s1"&gt;由于均衡价格3美元在价格上限之上，所以，价格上限对市场有一种限制性约束。&lt;/span&gt;
+&lt;span class="s1"&gt;供求力量趋向于使价格向均衡变动，但当市场价格达到上限时，就不能再上升了。&lt;/span&gt;
+&lt;span class="s1"&gt;因此，市场价格等于价格上限。&lt;/span&gt;
+&lt;span class="s1"&gt;在这种价格时，冰激凌的需求量（图中的125个）超过了供给量（75个）。&lt;/span&gt;
+&lt;span class="s1"&gt;存在冰激凌短缺，因此，一些在现行价格时想买冰激凌的人买不到。&lt;/span&gt;
+
+&lt;span class="s1"&gt;当冰激凌短缺的形成是由于这种价格上限时，&lt;/span&gt;
+&lt;span class="s1"&gt;一些配给冰激凌的机制自然就会出现。&lt;/span&gt;
+
+&lt;span class="s1"&gt;这种机制可能是排长队：&lt;/span&gt;
+&lt;span class="s1"&gt;那些愿意提前来到并排队等候的人得到一个冰激凌，&lt;/span&gt;
+&lt;span class="s1"&gt;而另一些不愿意等候的人得不到。&lt;/span&gt;
+
+&lt;span class="s1"&gt;另一种方法是，&lt;/span&gt;
+&lt;span class="s1"&gt;卖者可以根据他们自己的偏好来配给冰激凌，&lt;/span&gt;
+&lt;span class="s1"&gt;只卖给朋友、亲戚或同一种族或民族的成员。&lt;/span&gt;
+
+&lt;span class="s1"&gt;要注意的是，&lt;/span&gt;
+&lt;span class="s1"&gt;尽管价格上限是由帮助冰激凌买者的愿望而促成的，&lt;/span&gt;
+&lt;span class="s1"&gt;但并不是所有买者都能从这种政策中受益。&lt;/span&gt;
+&lt;span class="s1"&gt;一些买者尽管不得不排队等候，但以较低的价格得到冰激凌，&lt;/span&gt;
+&lt;span class="s1"&gt;而另一些买者根本得不到任何冰激凌。&lt;/span&gt;
+
+&lt;span class="s1"&gt;冰激凌市场的这个例子说明了一个一般规律：&lt;/span&gt;
+&lt;span class="s1"&gt;当政府对竞争市场实行限制性价格上限时，就产生了物品的短缺，&lt;/span&gt;
+&lt;span class="s1"&gt;而且，卖者必然在大量潜在买者中配给稀缺物品。&lt;/span&gt;
+
+&lt;span class="s1"&gt;这种价格上限之下产生的配给机制很少是合意的。&lt;/span&gt;
+&lt;span class="s1"&gt;排长队是无效率的，因为这样做浪费了买者的时间。&lt;/span&gt;
+&lt;span class="s1"&gt;根据卖者偏好的歧视&lt;/span&gt;
+&lt;span class="s1"&gt;既无效率（因为物品并没有给予对它评价最高的买者）&lt;/span&gt;
+&lt;span class="s1"&gt;又可能是不公正的。&lt;/span&gt;
+
+&lt;span class="s1"&gt;与此相比，一个自由竞争市场中的配给机制既有效率又客观。&lt;/span&gt;
+&lt;span class="s1"&gt;当冰激凌市场达到均衡时，&lt;/span&gt;
+&lt;span class="s1"&gt;任何一个想支付市场价格的人都可以得到一个冰激凌蛋卷。&lt;/span&gt;
+&lt;span class="s1"&gt;自由市场用价格来配给物品。&lt;/span&gt;
+
+&lt;span class="s1"&gt;摘录来自: [美]N·格里高利·曼昆. “经济学原理”&lt;/span&gt;
+
+&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="文本替换"&gt;文本替换&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/eq-price/#%E6%96%87%E6%9C%AC%E6%9B%BF%E6%8D%A2"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;2017-18年的秋冬, 有一场很厉害的流感, 导致各个医院儿科爆满. 一时间各种分析很多. 让我们看看曼昆怎么说的.&lt;/p&gt;
+&lt;p&gt;看曼昆对此事的看法, 不妨简单使用文本替换, 将例子中的名词替换成实际生活中的名词&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;content0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;content1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;content2&lt;/span&gt;
+&lt;span class="n"&gt;new_content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'冰激凌蛋卷'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"儿科医生"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"冰激凌市场"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"儿科医疗市场"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"冰激凌"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;    &lt;span class="s2"&gt;"儿科医生"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"物品"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"医疗服务"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'买者'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"患儿家长"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'卖者'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'儿科医院或医生'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new_content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;
+价格上限如何影响市场结果
+
+...对儿科医疗市场实行价格上限时，可能有两种结果。
+
+在图6－l（a）幅中，政府实行每个儿科医生为4美元的价格上限。
+在这种情况下，由于使供求平衡的价格（3美元）低于上限，价格上限没有限制作用。
+市场力量自然而然地使经济向均衡变动，而且，价格上限没有影响。
+
+图6－l0(b)幅表示另一种结果，这种结果更令人感兴趣，也更可能。
+在这种情况下，政府实行每个儿科医生2美元的价格上限。
+由于均衡价格3美元在价格上限之上，所以，价格上限对市场有一种限制性约束。
+供求力量趋向于使价格向均衡变动，但当市场价格达到上限时，就不能再上升了。
+因此，市场价格等于价格上限。
+在这种价格时，儿科医生的需求量（图中的125个）超过了供给量（75个）。
+存在儿科医生短缺，因此，一些在现行价格时想买儿科医生的人买不到。
+
+当儿科医生短缺的形成是由于这种价格上限时，
+一些配给儿科医生的机制自然就会出现。
+
+这种机制可能是排长队：
+那些愿意提前来到并排队等候的人得到一个儿科医生，
+而另一些不愿意等候的人得不到。
+
+另一种方法是，
+儿科医院或医生可以根据他们自己的偏好来配给儿科医生，
+只卖给朋友、亲戚或同一种族或民族的成员。
+
+要注意的是，
+尽管价格上限是由帮助儿科医生患儿家长的愿望而促成的，
+但并不是所有患儿家长都能从这种政策中受益。
+一些患儿家长尽管不得不排队等候，但以较低的价格得到儿科医生，
+而另一些患儿家长根本得不到任何儿科医生。
+
+儿科医疗市场的这个例子说明了一个一般规律：
+当政府对竞争市场实行限制性价格上限时，就产生了医疗服务的短缺，
+而且，儿科医院或医生必然在大量潜在患儿家长中配给稀缺医疗服务。
+
+这种价格上限之下产生的配给机制很少是合意的。
+排长队是无效率的，因为这样做浪费了患儿家长的时间。
+根据儿科医院或医生偏好的歧视
+既无效率（因为医疗服务并没有给予对它评价最高的患儿家长）
+又可能是不公正的。
+
+与此相比，一个自由竞争市场中的配给机制既有效率又客观。
+当儿科医疗市场达到均衡时，
+任何一个想支付市场价格的人都可以得到一个儿科医生。
+自由市场用价格来配给医疗服务。
+
+摘录来自: [美]N·格里高利·曼昆. “经济学原理”
+
+
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;hr&gt;
+&lt;p&gt;读起来好像还很通顺的. 我隐约记得高中政治经济学里面还是讲过基本的供求曲线的.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><guid>https://goldengrape.github.io/posts/bulabula/eq-price/</guid><pubDate>Mon, 15 Jan 2018 05:20:34 GMT</pubDate></item><item><title>双人游戏的必胜招</title><link>https://goldengrape.github.io/posts/bulabula/zermelo-theorem/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;该篇复习于2011年. 今天看到&lt;a href="https://twitter.com/gttnnn"&gt;如月中天&lt;/a&gt;提到&lt;a href="https://twitter.com/gttnnn/status/952744005934051328"&gt;"胜也罢，败也罢，就是不要同他讲和！"&lt;/a&gt;, 不知怎么, 突然想起这个双人游戏是可能有必胜招的, 还有一个华丽的证明, 然后自己又不记得了. 赶紧搜索了一下, 发现以前记录过.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
+&lt;hr&gt;
 &lt;p&gt;zermelo's theorem 实在太帅了。看了耶鲁公开课博弈论第15集，终于揭开了从大一开始困扰我的谜题。大一的时候舒幼生教授一次很淡定的说，一个双人棋类游戏，如果没有平局，那么一定有必胜招。当时我就很迷惑，但他没给出证明。过了13年，我终于见到了证明。实在激动，记录一下。&lt;/p&gt;
 &lt;h2&gt;zermelo's theorem&lt;/h2&gt;
 &lt;p&gt;这个定律的全名叫做zermelo's theorem。具体描述是：&lt;/p&gt;
@@ -1155,34 +1406,4 @@ $$&lt;p&gt;这样的，所以先用np.matrix产生一个矩阵m，注意python�
 &lt;ul&gt;
 &lt;li&gt;参考:&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/"&gt;Mac OS X: Set / Change $PATH Variable&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/macos-x-zhong-de-path/</guid><pubDate>Wed, 03 Jan 2018 12:38:31 GMT</pubDate></item><item><title>讨论医学问题前的基础讨论</title><link>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在好友群/同学群里面迟早要遇到讨论医学/保健/养生问题的情况. 跟陌生人组成的群组还不同, 那里面也没必要深入讨论, 在同学群(当然不是大学同学)里面, 往往还是会出现一些"锐利而不失体面"的讨论.&lt;/p&gt;
-&lt;p&gt;所以看来还是需要"锐利而不失体面"地简单解释一下现代医学的一些基本概念. 也是躲不掉的. 说的不全的地方还请包含.&lt;/p&gt;
-&lt;p&gt;首先, 现代医学是科学的一部分. 科学的最基本属性是"可证伪性". 我觉得解释成"可重复性"更容易理解一些. 也就是说:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;给定同样的条件,&lt;/li&gt;
-&lt;li&gt;施加同样的处理,&lt;/li&gt;
-&lt;li&gt;得到同样的结果, 或者至少是在确定概率上得到同样的结果.
-&lt;!-- TEASER_END --&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;诊断和治疗疾病会有很多很多的方法, 医生一定要选择"可重复"的方法进行诊断和治疗. 也就是说遇到同样的疾病状态, 给予同样的处理, 得到同样的结果, 或者至少是在确定的概率上得到同样的结果.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;判断"同样的疾病状态", 叫做 &lt;strong&gt;诊断&lt;/strong&gt;,&lt;/li&gt;
-&lt;li&gt;"给予同样的处理,"叫做 &lt;strong&gt;治疗&lt;/strong&gt;,&lt;/li&gt;
-&lt;li&gt;在治疗之前预计出"同样的结果, 或者至少是在确定的概率上得到同样的结果"叫做 &lt;strong&gt;预后&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;因为人体是一个非常复杂的结构, 有大量大量的非线性的过程. 多数人日常接触的是线性过程, 理解非线性过程会有困难. 所谓线性过程就是1+1=2的过程, 64G存的电影比32G存的电影多一倍, 2个人搬砖比1个人快一倍. 1mol盐酸+1molNaOH完全中和成盐和水. 这些都是线性过程.&lt;/p&gt;
-&lt;p&gt;非线性过程比如吃1个苹果用1分钟, 这有9个苹果, 9分钟吃不完. 如果中学化学学得好可能还隐约记得有磷酸缓冲液这回事. 非线性过程在足够小的区间内可以用线性来近似, 大量的工程学是建立在这个基础上的, 以至于即使是理工科的同学也会忘记非线性这回事.&lt;/p&gt;
-&lt;p&gt;很郁闷的是人体, 即使在小量上也往往是非线性表现. 所以有很多事情"道理上说得通", 在医学上往往说不通, 一定要经过临床实验验证才行.&lt;/p&gt;
-&lt;p&gt;医生选择用药物/手术或者其他治疗方式, 候选的治疗方式要经过可重复的验证, 这个叫做临床实验. 临床实验有一些基本的原则. 临床实验最核心最隐含的假设就是不相信任何实验者, 假设实验者会想各种方法作假, 有意的或者是无意的, 他们都有可能作假. 在一组公认的准则之下, 作假都会暴露出来. 如果实验经受住了这些准则的考验, 实验结果才会被认可.&lt;/p&gt;
-&lt;p&gt;临床实验的实验对象是人, 所以首先是要遵守伦理学的要求. 这有专门的伦理委员会审查, 不展开讨论了. 实验对象要有明确的纳入标准和排除标准, 以保证尽可能接近"同样的疾病状态"&lt;/p&gt;
-&lt;p&gt;实验要分组, 一部分是实验组, 也就是要验证的治疗方式, 一部分是对照组, 可以是没有治疗作用的方法, 也可以是现有的治疗方法. 分组的过程要用上所谓的"随机"方法, 不能把病情轻的都分到实验组, 病情重的都分到对照组. 随机的一个好处是可以平均各个未知的参数, 我们不知道病人喜欢什么颜色是否会影响治疗结果, 但是如果有足够多的病人, 随机把他们分开, 那么这个影响可能就很小了.&lt;/p&gt;
-&lt;p&gt;我们要记住实验者都有潜在的作弊倾向.所以即使是随机分组, 实验者在给予治疗的时候仍然有可能作弊, 比如给实验组更好的照顾, 给实验组吃得更好, 更愿意听实验组说好消息等等. 解决的方法就是, 实验设计的时候, 不要让给药的人或者观察的人知道哪个是实验组, 哪个是对照组. 实验者是"盲"的. 最好的情况下, 各个环节都是盲的, 病人不知道自己是哪个组的, 给药的护士不知道自己给的是药物还是安慰剂, 记录病历的医生不知道病人是哪个组的, 也不知道给的药物是什么. 这个叫做"双盲".&lt;/p&gt;
-&lt;p&gt;现在已经说到了随机对照双盲实验, 这就是等级比较高的实验了. 能够经受住这样的考验的治疗方法算是比较可靠了. 但还有一些问题, 比如抛硬币, 理论上应当是50%正面, 50%反面, 但如果你抛的次数太少, 比如3次, 很可能一直都是正面, 所以要有足够多的次数才有说服力. 在临床实验中, 就是要有足够多的病人, 这个在一个医院收集的病人可能不够, 于是需要有多个医学中心来进行同一个实验, 这就是"多中心临床实验"&lt;/p&gt;
-&lt;p&gt;一个治疗方法, 经过了随机对照双盲的多中心临床实验, 就获得了最高等级的&lt;strong&gt;临床证据&lt;/strong&gt;, 在讨论的时候, 你们经常会听到我说, 某个事情有临床证据, 某个东西没有证据. 就是说的这个.&lt;/p&gt;
-&lt;p&gt;按照临床证据来进行诊断和治疗, 叫做"循证医学", evidence based medicine. 随机对照双盲的多中心临床实验是非常昂贵的, 所以也有一些等级相对低的证据. EBM有对临床证据的分级标准.&lt;/p&gt;
-&lt;p&gt;随手就可以查到&lt;a href="http://www.dxy.cn/bbs/thread/18509031#18509031"&gt;循证医学证据分级&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;比如专家意见, 这在里面是相对较低的等级.&lt;/p&gt;
-&lt;p&gt;如果仅仅是某个人的"亲测有效", 这个完全算不上任何临床证据.
-"我有一个朋友", "我听说", "按道理说", 这些都不是能够指导医生进行诊断和治疗的"临床证据".&lt;/p&gt;
-&lt;p&gt;. . . . . .&lt;/p&gt;
-&lt;p&gt;这里, 我只是展示一下大夫的思维方式. 当病人谈到某个治疗方式有多好有多有效的时候, 医生脑子里是先查诊疗手册有没有记载, 然后记下几个关键词, 去查查pubmed. 高年资的医生一般不会去反驳病人的, 保持微笑, 叫下一个.&lt;/p&gt;&lt;/div&gt;</description><category>Thinking</category><guid>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</guid><pubDate>Wed, 03 Jan 2018 08:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.cyberciti.biz/faq/appleosx-bash-unix-change-set-path-environment-variable/"&gt;Mac OS X: Set / Change $PATH Variable&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/macos-x-zhong-de-path/</guid><pubDate>Wed, 03 Jan 2018 12:38:31 GMT</pubDate></item></channel></rss>

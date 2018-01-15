@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/zermelo-theorem/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/eq-price/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,273 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/zermelo-theorem/" class="u-url">双人游戏的必胜招</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/eq-price/" class="u-url">字符替换练习</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/bulabula/eq-price/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-15T13:20:34+08:00" title="2018-01-15 13:20">2018-01-15 13:20</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/bulabula/eq-price/#disqus_thread" data-disqus-identifier="cache/posts/bulabula/价格上限如何影响市场.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这是一个python正则表达式的练习:</p>
+<p>我恰好读到曼昆经济学原理中的一小段, 觉得用来练习正则表达式中的文本替换命令很有意思.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">content0</span><span class="o">=</span><span class="s1">'''</span>
+<span class="s1">价格上限如何影响市场结果</span>
+
+<span class="s1">...对冰激凌市场实行价格上限时，可能有两种结果。</span>
+<span class="s1">'''</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/eq_price.001.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">content1</span><span class="o">=</span><span class="s1">'''</span>
+<span class="s1">在图6－l（a）幅中，政府实行每个冰激凌蛋卷为4美元的价格上限。</span>
+<span class="s1">在这种情况下，由于使供求平衡的价格（3美元）低于上限，</span>
+<span class="s1">价格上限没有限制作用。</span>
+<span class="s1">市场力量自然而然地使经济向均衡变动，而且，价格上限没有影响。</span>
+<span class="s1">'''</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="images/eq_price.002.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">content2</span><span class="o">=</span><span class="s1">'''</span>
+<span class="s1">图6－l0(b)幅表示另一种结果，这种结果更令人感兴趣，也更可能。</span>
+<span class="s1">在这种情况下，政府实行每个冰激凌蛋卷2美元的价格上限。</span>
+<span class="s1">由于均衡价格3美元在价格上限之上，所以，价格上限对市场有一种限制性约束。</span>
+<span class="s1">供求力量趋向于使价格向均衡变动，但当市场价格达到上限时，就不能再上升了。</span>
+<span class="s1">因此，市场价格等于价格上限。</span>
+<span class="s1">在这种价格时，冰激凌的需求量（图中的125个）超过了供给量（75个）。</span>
+<span class="s1">存在冰激凌短缺，因此，一些在现行价格时想买冰激凌的人买不到。</span>
+
+<span class="s1">当冰激凌短缺的形成是由于这种价格上限时，</span>
+<span class="s1">一些配给冰激凌的机制自然就会出现。</span>
+
+<span class="s1">这种机制可能是排长队：</span>
+<span class="s1">那些愿意提前来到并排队等候的人得到一个冰激凌，</span>
+<span class="s1">而另一些不愿意等候的人得不到。</span>
+
+<span class="s1">另一种方法是，</span>
+<span class="s1">卖者可以根据他们自己的偏好来配给冰激凌，</span>
+<span class="s1">只卖给朋友、亲戚或同一种族或民族的成员。</span>
+
+<span class="s1">要注意的是，</span>
+<span class="s1">尽管价格上限是由帮助冰激凌买者的愿望而促成的，</span>
+<span class="s1">但并不是所有买者都能从这种政策中受益。</span>
+<span class="s1">一些买者尽管不得不排队等候，但以较低的价格得到冰激凌，</span>
+<span class="s1">而另一些买者根本得不到任何冰激凌。</span>
+
+<span class="s1">冰激凌市场的这个例子说明了一个一般规律：</span>
+<span class="s1">当政府对竞争市场实行限制性价格上限时，就产生了物品的短缺，</span>
+<span class="s1">而且，卖者必然在大量潜在买者中配给稀缺物品。</span>
+
+<span class="s1">这种价格上限之下产生的配给机制很少是合意的。</span>
+<span class="s1">排长队是无效率的，因为这样做浪费了买者的时间。</span>
+<span class="s1">根据卖者偏好的歧视</span>
+<span class="s1">既无效率（因为物品并没有给予对它评价最高的买者）</span>
+<span class="s1">又可能是不公正的。</span>
+
+<span class="s1">与此相比，一个自由竞争市场中的配给机制既有效率又客观。</span>
+<span class="s1">当冰激凌市场达到均衡时，</span>
+<span class="s1">任何一个想支付市场价格的人都可以得到一个冰激凌蛋卷。</span>
+<span class="s1">自由市场用价格来配给物品。</span>
+
+<span class="s1">摘录来自: [美]N·格里高利·曼昆. “经济学原理”</span>
+
+<span class="s1">'''</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="文本替换">文本替换<a class="anchor-link" href="posts/bulabula/eq-price/#%E6%96%87%E6%9C%AC%E6%9B%BF%E6%8D%A2">¶</a>
+</h2>
+<p>2017-18年的秋冬, 有一场很厉害的流感, 导致各个医院儿科爆满. 一时间各种分析很多. 让我们看看曼昆怎么说的.</p>
+<p>看曼昆对此事的看法, 不妨简单使用文本替换, 将例子中的名词替换成实际生活中的名词</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">content</span><span class="o">=</span><span class="n">content0</span><span class="o">+</span><span class="n">content1</span><span class="o">+</span><span class="n">content2</span>
+<span class="n">new_content</span><span class="o">=</span><span class="p">(</span><span class="n">content</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'冰激凌蛋卷'</span><span class="p">,</span> <span class="s2">"儿科医生"</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"冰激凌市场"</span><span class="p">,</span> <span class="s2">"儿科医疗市场"</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"冰激凌"</span><span class="p">,</span>    <span class="s2">"儿科医生"</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"物品"</span><span class="p">,</span> <span class="s2">"医疗服务"</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'买者'</span><span class="p">,</span> <span class="s2">"患儿家长"</span><span class="p">)</span>
+                    <span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">'卖者'</span><span class="p">,</span> <span class="s1">'儿科医院或医生'</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_content</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+价格上限如何影响市场结果
+
+...对儿科医疗市场实行价格上限时，可能有两种结果。
+
+在图6－l（a）幅中，政府实行每个儿科医生为4美元的价格上限。
+在这种情况下，由于使供求平衡的价格（3美元）低于上限，价格上限没有限制作用。
+市场力量自然而然地使经济向均衡变动，而且，价格上限没有影响。
+
+图6－l0(b)幅表示另一种结果，这种结果更令人感兴趣，也更可能。
+在这种情况下，政府实行每个儿科医生2美元的价格上限。
+由于均衡价格3美元在价格上限之上，所以，价格上限对市场有一种限制性约束。
+供求力量趋向于使价格向均衡变动，但当市场价格达到上限时，就不能再上升了。
+因此，市场价格等于价格上限。
+在这种价格时，儿科医生的需求量（图中的125个）超过了供给量（75个）。
+存在儿科医生短缺，因此，一些在现行价格时想买儿科医生的人买不到。
+
+当儿科医生短缺的形成是由于这种价格上限时，
+一些配给儿科医生的机制自然就会出现。
+
+这种机制可能是排长队：
+那些愿意提前来到并排队等候的人得到一个儿科医生，
+而另一些不愿意等候的人得不到。
+
+另一种方法是，
+儿科医院或医生可以根据他们自己的偏好来配给儿科医生，
+只卖给朋友、亲戚或同一种族或民族的成员。
+
+要注意的是，
+尽管价格上限是由帮助儿科医生患儿家长的愿望而促成的，
+但并不是所有患儿家长都能从这种政策中受益。
+一些患儿家长尽管不得不排队等候，但以较低的价格得到儿科医生，
+而另一些患儿家长根本得不到任何儿科医生。
+
+儿科医疗市场的这个例子说明了一个一般规律：
+当政府对竞争市场实行限制性价格上限时，就产生了医疗服务的短缺，
+而且，儿科医院或医生必然在大量潜在患儿家长中配给稀缺医疗服务。
+
+这种价格上限之下产生的配给机制很少是合意的。
+排长队是无效率的，因为这样做浪费了患儿家长的时间。
+根据儿科医院或医生偏好的歧视
+既无效率（因为医疗服务并没有给予对它评价最高的患儿家长）
+又可能是不公正的。
+
+与此相比，一个自由竞争市场中的配给机制既有效率又客观。
+当儿科医疗市场达到均衡时，
+任何一个想支付市场价格的人都可以得到一个儿科医生。
+自由市场用价格来配给医疗服务。
+
+摘录来自: [美]N·格里高利·曼昆. “经济学原理”
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<p>读起来好像还很通顺的. 我隐约记得高中政治经济学里面还是讲过基本的供求曲线的.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/zermelo-theorem/" class="u-url">双人游戏的必胜招</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/zermelo-theorem/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-15T12:00:00+08:00" title="2018-01-15 12:00">2018-01-15 12:00</time></a></p>
@@ -291,31 +557,6 @@ a2. 如果不能满足自己的要求, 提个问题, 然后等一周.
 
 <p>真是一脑门子汗呐. 感觉就是召唤了一个不太熟的魔兽, 看起来很强大, 但不知道如何驾驭之.</p>
 <p class="more"><a href="posts/python/macos-x-zhong-de-path/">更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/what-is-ebm/" class="u-url">讨论医学问题前的基础讨论</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/what-is-ebm/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-03T16:00:00+08:00" title="2018-01-03 16:00">2018-01-03 16:00</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/bulabula/what-is-ebm/#disqus_thread" data-disqus-identifier="cache/posts/bulabula/讨论医学问题前的基础讨论.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>在好友群/同学群里面迟早要遇到讨论医学/保健/养生问题的情况. 跟陌生人组成的群组还不同, 那里面也没必要深入讨论, 在同学群(当然不是大学同学)里面, 往往还是会出现一些"锐利而不失体面"的讨论.</p>
-<p>所以看来还是需要"锐利而不失体面"地简单解释一下现代医学的一些基本概念. 也是躲不掉的. 说的不全的地方还请包含.</p>
-<p>首先, 现代医学是科学的一部分. 科学的最基本属性是"可证伪性". 我觉得解释成"可重复性"更容易理解一些. 也就是说:</p>
-<ul>
-<li>给定同样的条件,</li>
-<li>施加同样的处理,</li>
-<li>得到同样的结果, 或者至少是在确定概率上得到同样的结果.
-<p class="more"><a href="posts/bulabula/what-is-ebm/">更多…</a></p>
-</li>
-</ul>
 </div>
     </div>
     </article>
