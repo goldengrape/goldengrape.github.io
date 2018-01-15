@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 13:26:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>中国古代数学算法的python实现(jupyter版本)</title><link>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 16:06:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="直线与平面的交点"&gt;直线与平面的交点&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E4%B8%8E%E5%B9%B3%E9%9D%A2%E7%9A%84%E4%BA%A4%E7%82%B9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在Ray tracing的时候，如果光线最终打到一个平面屏幕上，就需要知道每个光线的落点。直线和平面的交点求解比较简单，先用来练手热身。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ray-tracing-1.1.png" alt=""&gt;&lt;/p&gt;
+&lt;h3 id="直线的表示"&gt;直线的表示&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E7%9A%84%E8%A1%A8%E7%A4%BA"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;一条直线上任意一点P可以用直线上已知一点PLine，和直线方向的向量NLine来表示，写出参数方程就是，注意啊，这里的PLine,NLine都是矢量，但t是标量, 有如下(1)式
+$$
+P_{(t)}= P_{Line}+t \times N_{Line}
+$$&lt;/p&gt;
+&lt;h3 id="平面的表示"&gt;平面的表示&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E5%B9%B3%E9%9D%A2%E7%9A%84%E8%A1%A8%E7%A4%BA"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;一个平面，可以用平面上已知一点PPlane，和垂直于这个平面的法向量NPlane来表示。&lt;/p&gt;
+&lt;h3 id="用参数方程求交点"&gt;用参数方程求交点&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%94%A8%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E4%BA%A4%E7%82%B9"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假设现在直线与平面交点是P点，那么可以画一个从平面上已知点PPlane到P点的向量，比如叫V=P-PPlane&lt;/p&gt;
+&lt;p&gt;代入上面（1）式
+得到(2)式
+$$ 
+V=P_t-P_{Plane}
+\\
+V=(P_{Line}+t \times N_{Line}) -P_{Plane}
+$$&lt;/p&gt;
+&lt;p&gt;显然V矢量是在平面内的，那么“垂直于这个平面的法向量NPlane”当然也垂直于V矢量，NPlane⊥V，这件事情在数学上有明确的表示，就是NPlane矢量和V矢量的dot product是等于0的。
+$$
+dot(V,N_{Plane})=0
+$$&lt;/p&gt;
+&lt;p&gt;把V替换成(2)式&lt;/p&gt;
+$$
+dot(P_{Line}+t \times N_{Line}-P_{Plane}, N_{Plane})=0
+$$&lt;p&gt;dot product是满足分配律的，于是有
+$$
+dot(P_{Line}-P_{Plane}, N_{Plane}) + dot( t \times N_{Line}, N{Plane})=0
+$$&lt;/p&gt;
+&lt;p&gt;其中t是标量，可以提取到dot product外面来
+$$
+dot(P_{Line}-P_{Plane}, N_{Plane}) + t \times dot( N_{Line}, N{Plane})==0
+$$
+化简一下：&lt;/p&gt;
+$$
+t= - \frac{dot(P_{Line}-P_{Plane}, N_{Plane})}{dot( N_{Line}, N{Plane})}
+$$&lt;p&gt;里面再调换一下位置，把难看的负号去掉。铛铛：&lt;/p&gt;
+$$
+t=\frac{dot(P_{Plane}-P_{Line}, N_{Plane})}{dot( N_{Line}, N{Plane})}
+$$&lt;p&gt;这就是程序里算出t的方法了。有t的值，只要代入(1)式就可以求出交点P了。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [26]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lineCrossPlane&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;PPlane&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;'''&lt;/span&gt;
+&lt;span class="sd"&gt;    直线以起点PLine和方向向量NLine表示&lt;/span&gt;
+&lt;span class="sd"&gt;    平面以平面上一点PPlane和法向量NPlane表示&lt;/span&gt;
+&lt;span class="sd"&gt;    求其交点P&lt;/span&gt;
+&lt;span class="sd"&gt;    直线有多组，平面仅一个&lt;/span&gt;
+&lt;span class="sd"&gt;    '''&lt;/span&gt;
+    &lt;span class="n"&gt;tup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;PPlane&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tdown&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tup&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tdown&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expand_dims&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 为了满足与t与NLine的乘法, 需要将t扩展一维&lt;/span&gt;
+    &lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;NLine&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;P&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [27]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 测试结果: &lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;pline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+    &lt;span class="n"&gt;nline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+    &lt;span class="n"&gt;pplane&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;nplane&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lineCrossPlane&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pplane&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nplane&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[[ 5.  0.  0.]
+ [ 5.  1.  2.]]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</guid><pubDate>Mon, 15 Jan 2018 15:30:00 GMT</pubDate></item><item><title>如何写一个球面Ray tracing程序(0)</title><link>https://goldengrape.github.io/posts/python/ray-tracing-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;2017年我差不多把python学会了, 还是挺有成就感的. 这个项目是我刚开始重新学习python的时候做的, 现在看起来有些代码需要再修改一下. 所以重新拿出来写一遍.&lt;/p&gt;
+&lt;p&gt;Ray tracing, 就是光路追迹或者叫光线追踪, 就是跟随一根光线, 看它依次与透镜组的哪些面相交, 怎样折射/反射, 最终落在成像屏幕的什么位置.&lt;/p&gt;
+&lt;p&gt;球面镜的Ray tracing是比较简单的, 直线与平面, 直线与球面的交点就可以写出解析解, 因此求解速度也很快. 球面镜也是很常用的, 毕竟球面镜头便宜. 在自己做的一些项目中, 还是很可能用到球面镜的.&lt;/p&gt;
+&lt;p&gt;所以写一个球面镜的ray tracing程序还是有一些实用价值的.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/ray-tracing-0/</guid><pubDate>Mon, 15 Jan 2018 15:00:00 GMT</pubDate></item><item><title>中国古代数学算法的python实现(jupyter版本)</title><link>https://goldengrape.github.io/posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;

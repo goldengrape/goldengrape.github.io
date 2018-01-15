@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/eq-price/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/pyathon-ray-tracing-1/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,56 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/eq-price/" class="u-url">字符替换练习</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/pyathon-ray-tracing-1/" class="u-url">如何写一个球面Ray tracing程序(1)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/pyathon-ray-tracing-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-15T23:30:00+08:00" title="2018-01-15 23:30">2018-01-15 23:30</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/pyathon-ray-tracing-1/#disqus_thread" data-disqus-identifier="cache/posts/python/如何写一个球面Ray-tracing程序(1).html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="直线与平面的交点">直线与平面的交点<a class="anchor-link" href="posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E4%B8%8E%E5%B9%B3%E9%9D%A2%E7%9A%84%E4%BA%A4%E7%82%B9">¶</a>
+</h2>
+<p>在Ray tracing的时候，如果光线最终打到一个平面屏幕上，就需要知道每个光线的落点。直线和平面的交点求解比较简单，先用来练手热身。</p>
+<p class="more"><a href="posts/python/pyathon-ray-tracing-1/">更多…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/ray-tracing-0/" class="u-url">如何写一个球面Ray tracing程序(0)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/ray-tracing-0/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-15T23:00:00+08:00" title="2018-01-15 23:00">2018-01-15 23:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/ray-tracing-0/#disqus_thread" data-disqus-identifier="cache/posts/python/如何写一个球面Ray-tracing程序(0).html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>2017年我差不多把python学会了, 还是挺有成就感的. 这个项目是我刚开始重新学习python的时候做的, 现在看起来有些代码需要再修改一下. 所以重新拿出来写一遍.</p>
+<p>Ray tracing, 就是光路追迹或者叫光线追踪, 就是跟随一根光线, 看它依次与透镜组的哪些面相交, 怎样折射/反射, 最终落在成像屏幕的什么位置.</p>
+<p>球面镜的Ray tracing是比较简单的, 直线与平面, 直线与球面的交点就可以写出解析解, 因此求解速度也很快. 球面镜也是很常用的, 毕竟球面镜头便宜. 在自己做的一些项目中, 还是很可能用到球面镜的.</p>
+<p>所以写一个球面镜的ray tracing程序还是有一些实用价值的.</p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/eq-price/" class="u-url">字符替换练习</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/eq-price/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-15T13:20:34+08:00" title="2018-01-15 13:20">2018-01-15 13:20</time></a></p>
@@ -354,57 +403,6 @@ a2. 如果不能满足自己的要求, 提个问题, 然后等一周.
 <p>因为看这种艺术课程, 讲述的技艺和自己之前没有接触过, 难以理解, 所以必须回到基础的物理学去理解. 这是所谓的”first principle thinking”吧.</p>
 <p>所以首先对毛笔的运行过程进行一下建模.</p>
 <p class="more"><a href="posts/bulabula/brush-pen-research-0/">更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/" class="u-url">中国古代数学算法的python实现(jupyter版本)</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-05T20:50:45+08:00" title="2018-01-05 20:50">2018-01-05 20:50</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/#disqus_thread" data-disqus-identifier="cache/posts/python/中国古代数学算法的jupyter.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>看了这篇《<a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;mid=2651662431&amp;idx=1&amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd">没有定理的中国古代数学，如何站在世界之巅？</a>》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。</p>
-<p>重新用jupyter写一下 更相减损术 和 大衍求一术</p>
-<p class="more"><a href="posts/python/zhong-guo-gu-dai-shu-xue-suan-fa-jupyter/">更多…</a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/macos-x-zhong-de-path/" class="u-url">macOS X 中的$PATH</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/python/macos-x-zhong-de-path/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-03T20:38:31+08:00" title="2018-01-03 20:38">2018-01-03 20:38</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/python/macos-x-zhong-de-path/#disqus_thread" data-disqus-identifier="cache/posts/python/macos-x中的path.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>贪图享乐装了一个<a href="https://github.com/robbyrussell/oh-my-zsh">oh-my-zsh</a>, 结果装好以后突然发现在终端中常用的命令都找不到了, 什么source activate , jupyter , conda ,敲完了以后都是一句:</p>
-<pre class="code literal-block"><span></span>    zsh: command not found:
-</pre>
-
-
-<p>真是一脑门子汗呐. 感觉就是召唤了一个不太熟的魔兽, 看起来很强大, 但不知道如何驾驭之.</p>
-<p class="more"><a href="posts/python/macos-x-zhong-de-path/">更多…</a></p>
 </div>
     </div>
     </article>

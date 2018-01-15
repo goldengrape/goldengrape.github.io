@@ -1,5 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:29:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>使用python进行贝叶斯统计分析</title><link>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 16:06:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="直线与平面的交点"&gt;直线与平面的交点&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E4%B8%8E%E5%B9%B3%E9%9D%A2%E7%9A%84%E4%BA%A4%E7%82%B9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在Ray tracing的时候，如果光线最终打到一个平面屏幕上，就需要知道每个光线的落点。直线和平面的交点求解比较简单，先用来练手热身。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ray-tracing-1.1.png" alt=""&gt;&lt;/p&gt;
+&lt;h3 id="直线的表示"&gt;直线的表示&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E7%9A%84%E8%A1%A8%E7%A4%BA"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;一条直线上任意一点P可以用直线上已知一点PLine，和直线方向的向量NLine来表示，写出参数方程就是，注意啊，这里的PLine,NLine都是矢量，但t是标量, 有如下(1)式
+$$
+P_{(t)}= P_{Line}+t \times N_{Line}
+$$&lt;/p&gt;
+&lt;h3 id="平面的表示"&gt;平面的表示&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E5%B9%B3%E9%9D%A2%E7%9A%84%E8%A1%A8%E7%A4%BA"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;一个平面，可以用平面上已知一点PPlane，和垂直于这个平面的法向量NPlane来表示。&lt;/p&gt;
+&lt;h3 id="用参数方程求交点"&gt;用参数方程求交点&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%94%A8%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E4%BA%A4%E7%82%B9"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假设现在直线与平面交点是P点，那么可以画一个从平面上已知点PPlane到P点的向量，比如叫V=P-PPlane&lt;/p&gt;
+&lt;p&gt;代入上面（1）式
+得到(2)式
+$$ 
+V=P_t-P_{Plane}
+\\
+V=(P_{Line}+t \times N_{Line}) -P_{Plane}
+$$&lt;/p&gt;
+&lt;p&gt;显然V矢量是在平面内的，那么“垂直于这个平面的法向量NPlane”当然也垂直于V矢量，NPlane⊥V，这件事情在数学上有明确的表示，就是NPlane矢量和V矢量的dot product是等于0的。
+$$
+dot(V,N_{Plane})=0
+$$&lt;/p&gt;
+&lt;p&gt;把V替换成(2)式&lt;/p&gt;
+$$
+dot(P_{Line}+t \times N_{Line}-P_{Plane}, N_{Plane})=0
+$$&lt;p&gt;dot product是满足分配律的，于是有
+$$
+dot(P_{Line}-P_{Plane}, N_{Plane}) + dot( t \times N_{Line}, N{Plane})=0
+$$&lt;/p&gt;
+&lt;p&gt;其中t是标量，可以提取到dot product外面来
+$$
+dot(P_{Line}-P_{Plane}, N_{Plane}) + t \times dot( N_{Line}, N{Plane})==0
+$$
+化简一下：&lt;/p&gt;
+$$
+t= - \frac{dot(P_{Line}-P_{Plane}, N_{Plane})}{dot( N_{Line}, N{Plane})}
+$$&lt;p&gt;里面再调换一下位置，把难看的负号去掉。铛铛：&lt;/p&gt;
+$$
+t=\frac{dot(P_{Plane}-P_{Line}, N_{Plane})}{dot( N_{Line}, N{Plane})}
+$$&lt;p&gt;这就是程序里算出t的方法了。有t的值，只要代入(1)式就可以求出交点P了。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [26]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lineCrossPlane&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;PPlane&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;'''&lt;/span&gt;
+&lt;span class="sd"&gt;    直线以起点PLine和方向向量NLine表示&lt;/span&gt;
+&lt;span class="sd"&gt;    平面以平面上一点PPlane和法向量NPlane表示&lt;/span&gt;
+&lt;span class="sd"&gt;    求其交点P&lt;/span&gt;
+&lt;span class="sd"&gt;    直线有多组，平面仅一个&lt;/span&gt;
+&lt;span class="sd"&gt;    '''&lt;/span&gt;
+    &lt;span class="n"&gt;tup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;PPlane&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;tdown&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tup&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tdown&lt;/span&gt;
+    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expand_dims&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 为了满足与t与NLine的乘法, 需要将t扩展一维&lt;/span&gt;
+    &lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;NLine&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;P&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [27]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 测试结果: &lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;pline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+    &lt;span class="n"&gt;nline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
+    &lt;span class="n"&gt;pplane&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;nplane&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lineCrossPlane&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pplane&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nplane&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[[ 5.  0.  0.]
+ [ 5.  1.  2.]]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</guid><pubDate>Mon, 15 Jan 2018 15:30:00 GMT</pubDate></item><item><title>如何写一个球面Ray tracing程序(0)</title><link>https://goldengrape.github.io/posts/python/ray-tracing-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;2017年我差不多把python学会了, 还是挺有成就感的. 这个项目是我刚开始重新学习python的时候做的, 现在看起来有些代码需要再修改一下. 所以重新拿出来写一遍.&lt;/p&gt;
+&lt;p&gt;Ray tracing, 就是光路追迹或者叫光线追踪, 就是跟随一根光线, 看它依次与透镜组的哪些面相交, 怎样折射/反射, 最终落在成像屏幕的什么位置.&lt;/p&gt;
+&lt;p&gt;球面镜的Ray tracing是比较简单的, 直线与平面, 直线与球面的交点就可以写出解析解, 因此求解速度也很快. 球面镜也是很常用的, 毕竟球面镜头便宜. 在自己做的一些项目中, 还是很可能用到球面镜的.&lt;/p&gt;
+&lt;p&gt;所以写一个球面镜的ray tracing程序还是有一些实用价值的.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/ray-tracing-0/</guid><pubDate>Mon, 15 Jan 2018 15:00:00 GMT</pubDate></item><item><title>使用python进行贝叶斯统计分析</title><link>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -2945,181 +3083,4 @@ variance= dev error- train error&lt;/p&gt;
 &lt;p&gt;参考视频:
 莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</guid><pubDate>Mon, 18 Dec 2017 17:22:47 GMT</pubDate></item><item><title>机器学习的战略(1)--目标的设置</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;调整ML模型的战略&lt;/h2&gt;
-&lt;p&gt;用来描述模型结构的, 比如是y=kx+b, 还是y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d, 叫做"超参数" &lt;strong&gt;hyperparamter&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;调整hyperparamter是一件很麻烦的事情, 以至于很多人把这件事叫做"炼丹". 你可能需要炼上七七四十九天才知道, 哦, 原来y=kx+b这个线性模型不合适啊. 所以除了具体的调整方法(战术), 你还需要战略方案.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h3&gt;Orthogonalization&lt;/h3&gt;
-&lt;p&gt;正交化, 很学术的名词. 其实就是一次调一个东西, 别混在一起调整! 如果你的车方向盘和油门是关联在一起的, 那肯定就没法开了.&lt;/p&gt;
-&lt;p&gt;这大概是所有科研\研发的基本战略概念了.&lt;/p&gt;
-&lt;h2&gt;ML的目标设置&lt;/h2&gt;
-&lt;h3&gt;确定单一评价目标&lt;/h3&gt;
-&lt;p&gt;用一个数来描述你的目标. 比如准确率, 其实是有两个数来描述的:
-&lt;em&gt; Precision: 模型标定为阳性的数据(比如模型认为是猫的图片), 有多少实际是阳性的(图片真的是猫).
-&lt;/em&gt; Recall:  在阳性的数据中(图片中真的是猫), 有多少被模型找出来了&lt;/p&gt;
-&lt;p&gt;(&lt;strong&gt;我特别讨厌用相似的名词去描述相近或者相反的概念, 每次我都弄混, 所以此处不出现真阳性假阳性之类的名词&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;显然是希望两个值都很高, 但是会碰到鱼和熊掌的问题
-比如有两个模型:
-
-| 分类器     | Precision     | Recall |
-| :------------- | :------------- |:------------- |
-|A|95%|90%|
-|B|98%|85%|&lt;/p&gt;
-&lt;p&gt;那么用Precision与Recall调和平均数代替:&lt;/p&gt;
-&lt;p&gt;F1 score= 2/(1/Precision+1/Recall)&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;分类器&lt;/th&gt;
-&lt;th align="left"&gt;Precision&lt;/th&gt;
-&lt;th align="left"&gt;Recall&lt;/th&gt;
-&lt;th align="left"&gt;F1 score&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;A&lt;/td&gt;
-&lt;td align="left"&gt;95%&lt;/td&gt;
-&lt;td align="left"&gt;90%&lt;/td&gt;
-&lt;td align="left"&gt;92.4%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;B&lt;/td&gt;
-&lt;td align="left"&gt;98%&lt;/td&gt;
-&lt;td align="left"&gt;85%&lt;/td&gt;
-&lt;td align="left"&gt;91.0%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;区分Satisficing 和 Optimizing metric&lt;/h3&gt;
-&lt;p&gt;还是区分目标的事情, 你会希望准确率高, 又希望算得快, 还希望用计算资源少, 这几项很难同时达成, 于是要区分目标, 哪些是必须要满足的Satisficing metric, 满足条件就行了, 哪些是要尽量优化的, 越高越好的Optimizing metric.&lt;/p&gt;
-&lt;p&gt;比如甲方要求分类器能够在10秒内给出结果, 占用内存不超过10M, 准确率越高越好. 那么下面几个分类器:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;分类器&lt;/th&gt;
-&lt;th align="left"&gt;F1 score&lt;/th&gt;
-&lt;th align="left"&gt;时间&lt;/th&gt;
-&lt;th align="left"&gt;内存&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;A&lt;/td&gt;
-&lt;td align="left"&gt;99%&lt;/td&gt;
-&lt;td align="left"&gt;20秒&lt;/td&gt;
-&lt;td align="left"&gt;5M&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;B&lt;/td&gt;
-&lt;td align="left"&gt;98%&lt;/td&gt;
-&lt;td align="left"&gt;9秒&lt;/td&gt;
-&lt;td align="left"&gt;9M&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;C&lt;/td&gt;
-&lt;td align="left"&gt;96%&lt;/td&gt;
-&lt;td align="left"&gt;3秒&lt;/td&gt;
-&lt;td align="left"&gt;5M&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;显然选B方案.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;其实还是没钱!&lt;/strong&gt;&lt;/p&gt;
-&lt;h3&gt;train/dev/test set的分布&lt;/h3&gt;
-&lt;p&gt;dev/test set是目标, 相当于靶子, 所以dev/ test set的分布要尽量接近真实场景. 如果立错了靶子就很麻烦.&lt;/p&gt;
-&lt;p&gt;比如要做手机照相识别的分类器app, 用从网上下载的图库可能就太清晰了, 图库通常是专业摄影师拍摄的, 而手机照片往往模糊\曝光不足\抖动. . . 各种问题, 如果dev/test set还是专业摄影师拍摄的图, 那么到用户手里的时候, 可能效果就不好.&lt;/p&gt;
-&lt;h3&gt;train/dev/test set的数量分配&lt;/h3&gt;
-&lt;p&gt;dataset的数量=train+dev+test set的数量.
-机器学习中dataset是越大越好, 在现在的机器学习项目中, dataset往往很大很大, 有了网络以后有大量的照片可以用. 那么dev/ test set的比例就不需要很高, 绝对数量足够就可以了.&lt;/p&gt;
-&lt;p&gt;如果dataset有1000k张图片, 那么
-train: dev: test= 98%: 1%: 1%
-test set大概10k张图片就可以了.&lt;/p&gt;
-&lt;h3&gt;何时修正dev/test set和metrics&lt;/h3&gt;
-&lt;p&gt;有时候你的模型看起来错误率很低, 准确性不错, 各项指标都很好, 但如果不慎挑出来一堆色情图片, 那这样的模型也需要忍痛割爱, 否则后患无穷.&lt;/p&gt;
-&lt;p&gt;如果出现了某些必须要满足的要求, 或者必须要避免的事件, 可以调整dev /test set来挪挪靶子, 或者在评价函数里面加上限定条件, 比如把色情图片作为罚分项目.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.jianshu.com/p/605bb2d6da5e"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/e5f2d53493ff"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/9ec8e8c7b58c"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/b841fc1f7c40"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/4e1ad322deb5"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/e2993f594767"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.jianshu.com/p/92bf4af48804"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</guid><pubDate>Mon, 18 Dec 2017 17:22:33 GMT</pubDate></item><item><title>机器学习的战略(0)--基础概念</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是deeplearning.ai系列课程的第三门课&lt;a href="https://www.coursera.org/learn/machine-learning-projects/"&gt;Structuring Machine Learning Projects&lt;/a&gt;.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.&lt;/p&gt;
-&lt;p&gt;这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;但是这门课里面涉及到的概念和经验很多, 未来我可能需要借助一个笔记时常参考. 这个笔记也可以帮助其他未选这门课的人了解其中的梗概.&lt;/p&gt;
-&lt;h2&gt;一些基础的概念&lt;/h2&gt;
-&lt;p&gt;虽然我认为这门课所需要的基础知识并不多, 但也还是需要知道一些机器学习的基本概念, 需要量还是要比"朋友圈公众号科普"多一些.&lt;/p&gt;
-&lt;h3&gt;机器学习 Machine Learning&lt;/h3&gt;
-&lt;p&gt;这里讲的是有监督学习的任务, 比如给一张照片, 判定这张照片是不是一只猫. 所谓有监督的学习, 就是已知有很多照片, 已经被人工标记过是猫还是非猫了, 这些叫做数据集&lt;strong&gt;dataset&lt;/strong&gt;, 数据集中通常是一个对应的结构, 一个输入x, 对应一个输出y.  x -&amp;gt;y, 比如一张照片就是x, 是猫的照片y=1, 不是猫的照片 y=0&lt;/p&gt;
-&lt;p&gt;Machine Learning就是利用大量的dataset, 自动从里面去总结出一种从x映射到y的规律.&lt;/p&gt;
-&lt;p&gt;最简单的, 比如线性拟合就可以视为一种简单的ML, 有一堆数据点(x,y), 用一条直线去拟合它们. 求解y=kx+b, 有了y=kx+b的公式以后, 你就可以代入一些新的x, 求出y值.&lt;/p&gt;
-&lt;p&gt;y=kx+b这个训练出来的公式通常叫做"模型", 当然你的数据也可能不是符合y=kx+b的, 而是符合y=ax^2+bx+c, 甚至于更加复杂的函数关系以至于很难写出表达式. 去找到k, b这样的参数的过程叫做"训练"模型.&lt;/p&gt;
-&lt;p&gt;除了拟合, 更常见的Machine Learning问题是分类, 其实也类似, 比如相当于看是否 y=kx+b&amp;gt;0&lt;/p&gt;
-&lt;p&gt;在deeplearning.ai课程中的&lt;a href="https://www.coursera.org/learn/neural-networks-deep-learning/home"&gt;第一门课&lt;/a&gt;就是讲基本的ML方法----神经网络.&lt;/p&gt;
-&lt;h3&gt;dataset&lt;/h3&gt;
-&lt;p&gt;有标记的数据集x-&amp;gt;y, 就是dataset. 现代的机器学习已经开始使用非常庞大的数据集了, 比如1,000,000张标记好的照片甚至更多. &lt;/p&gt;
-&lt;p&gt;在训练模型时, 需要把dataset分成几个部分, 一般而言是分成3个, train set / develop set / test set.&lt;/p&gt;
-&lt;h4&gt;train set&lt;/h4&gt;
-&lt;p&gt;train set是用来训练当前这个模型用的, 比如假定模型是y=kx+b, 求解k和b这两个参数的过程就是用train set.&lt;/p&gt;
-&lt;p&gt;不严格的说, 相当于上课时老师用的例题.&lt;/p&gt;
-&lt;h4&gt;develop set&lt;/h4&gt;
-&lt;p&gt;develop set, 在课程中常写作dev set 是说你可能有多个候选的模型, 或者说要"develop"模型的时候, 用来测试各个模型的. 比如你的候选模型除了y=kx+b, 可能还有y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d... 这时候就要分别用同一个train set去训练各个模型, 求得各自最佳的参数, 然后再用dev set中的数据代入, 看看各个模型的误差是怎样的.&lt;/p&gt;
-&lt;p&gt;不严格的说, 相当于家庭作业.  &lt;/p&gt;
-&lt;h4&gt;test set&lt;/h4&gt;
-&lt;p&gt;test set, 顾名思义, 就是用来测验考试的. 考试题里不能是老师上课用过的例题, 也不能是做过的作业, 需要是考生(模型)从来没见过的题目.&lt;/p&gt;
-&lt;h3&gt;bias 和 variance&lt;/h3&gt;
-&lt;p&gt;我觉得这两个词语的中文翻译并不准确, 所以干脆不翻译了.
-
-* bias过高, 是指拟合的函数不够准确, 比如本来数据是符合y=a^x+bx+c这样一条二次曲线的, 结果只用了y=kx+b一条直线去拟合, 直的适应不了弯的, 于是可能在一小段还比较符合, 在其他区域预测的准确率就很差. 通常认为bias过高, 是拟合不足, 欠拟合的. under fitting. [插图]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;variance过高, 是指拟合过度了, over fitting. 一条弯弯曲曲的曲线穿过所有的数据点, 这样虽然误差很小, 但是预测能力就很差, 而我们进行机器学习当然目的是为了评估哪些未知的数据. 真正需要的是预测能力.[插图]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果模型过于简单, bias就容易很高, 如果模型过于复杂, variance就容易很高.&lt;/p&gt;
-&lt;p&gt;在deeplearning.ai系列课程的&lt;a href="https://www.coursera.org/learn/deep-neural-network/home/welcome"&gt;第二门&lt;/a&gt;就是在讲各种奇技淫巧去调整模型来降低bias和variance, 相当于改善模型表现的战术方法.&lt;/p&gt;
-&lt;p&gt;我个人觉得理解上面这些概念就可以开始ML strategy这门课程的学习了. 但是我已经学过了第一门和第二门课, 有可能存在"因为我知道所以我不知道你是否需要知道"这样的知识诅咒. 所以万一在学MLstrategy这门课程时觉得吃力, 还是去补习一下基础比较好. 暂时没必要去学更复杂的卷积神经网络什么的.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.jianshu.com/p/605bb2d6da5e"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/e5f2d53493ff"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/9ec8e8c7b58c"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/b841fc1f7c40"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/4e1ad322deb5"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.jianshu.com/p/e2993f594767"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.jianshu.com/p/92bf4af48804"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</guid><pubDate>Mon, 18 Dec 2017 17:22:47 GMT</pubDate></item></channel></rss>
