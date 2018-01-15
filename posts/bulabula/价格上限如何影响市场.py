@@ -30,7 +30,7 @@ content1='''
 
 # ![](/images/eq_price.002.png)
 
-# In[5]:
+# In[3]:
 
 
 content2='''
@@ -41,7 +41,16 @@ content2='''
 因此，市场价格等于价格上限。
 在这种价格时，冰激凌的需求量（图中的125个）超过了供给量（75个）。
 存在冰激凌短缺，因此，一些在现行价格时想买冰激凌的人买不到。
+'''
 
+
+
+# <!-- TEASER_END -->
+
+# In[4]:
+
+
+content3='''
 当冰激凌短缺的形成是由于这种价格上限时，
 一些配给冰激凌的机制自然就会出现。
 
@@ -85,11 +94,11 @@ content2='''
 # 
 # 看曼昆对此事的看法, 不妨简单使用文本替换, 将例子中的名词替换成实际生活中的名词
 
-# In[9]:
+# In[5]:
 
 
 import re
-content=content0+content1+content2
+content=content0+content1+content2+content3
 new_content=(content.replace('冰激凌蛋卷', "儿科医生")
                     .replace("冰激凌市场", "儿科医疗市场")
                     .replace("冰激凌",    "儿科医生")
