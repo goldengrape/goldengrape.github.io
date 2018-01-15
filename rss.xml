@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 16:06:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 17:58:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -1304,4 +1304,8 @@ dtype: float64&lt;/pre&gt;
 &lt;p&gt;由于L_0垂直于P_0, 而行进直线L_1是在纸面内的, 所以不论L_1转向到哪个方向, L_0与L_1形成的平面总是垂直于纸面的.&lt;/p&gt;
 &lt;h3&gt;近似解&lt;/h3&gt;
 &lt;p&gt;在小量范围内, 笔尖可以容忍一定的非对称受力而不散开, 相应的, 笔管也可以在一定的倾斜角度和笔管压力范围内变化.&lt;/p&gt;
-&lt;p&gt;这就是整个书法初级课程中讲的九用了.&lt;/p&gt;&lt;/div&gt;</description><category>Art</category><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</guid><pubDate>Fri, 05 Jan 2018 14:00:06 GMT</pubDate></item></channel></rss>
+&lt;p&gt;这就是整个书法初级课程中讲的九用了.&lt;/p&gt;
+&lt;p&gt;下面的GIF是黄简老师示范烈火势的写法, 注意笔锋在转弯时:
+1. 仅以笔的尖峰接触纸面
+2. 笔在行进时倾斜的方向
+&lt;img alt="fire" src="https://i.loli.net/2018/01/16/5a5ce9fa34412.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Art</category><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</guid><pubDate>Fri, 05 Jan 2018 14:00:06 GMT</pubDate></item></channel></rss>
