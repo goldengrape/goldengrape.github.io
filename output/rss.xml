@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jan 2018 17:58:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 16 Jan 2018 02:44:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>机器学习的知识产权保护(2)--侵权检测</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上次说到机器学习的知识产权保护中&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML-IP"&gt;保护的困难&lt;/a&gt;, 特别是在侵权识别之中. 由于现阶段机器学习的参数解释起来很困难, 不能够简单设定一个保护范围. 也难以逆向工程别人的模型获得所有的参数.&lt;/p&gt;
+&lt;p&gt;但还是有方法的.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;以深度神经网络为例. 其他机器学习也有类似的特点. 深度神经网络(DNN)总会有个风险叫做"过拟合" overfitting, 某种程度上, 这是一种记忆, DNN记住了发来的训练集中的数据, 一旦再次有这些数据输入, DNN就可以调用出原来训练过的输出. 于是在训练的时候, 可能误差很小, 但用测试数据集去测试的时候误差却很大. 这样的DNN缺乏"泛化"能力, 相当于一个学生擅长死记硬背, 却不能举一反三.&lt;/p&gt;
+&lt;p&gt;这个特点就可以用来作为DNN的"身份识别"了. 类似师傅教徒弟, 某一个招式本门派的应对是固定的, 由于反复训练, 徒弟们都记在了心里. 比如对面来一直拳, 别的门派都是向后躲, 本门派的却是向前侧躲. 那么行走江湖的时候, 碰见对手一拳打过去是向前侧躲的, 多半就是本门派的师兄弟了.
+(貌似哪个武侠小说里有类似的情节)&lt;/p&gt;
+&lt;p&gt;在DNN中, 方法可以是这样的:&lt;/p&gt;
+&lt;p&gt;准备一组数据对作为"数据探针", 比如输入图像都是猫, 但却在图片中心点有一个白点, 而输出结果中, 把这些猫的图像都标记为狗.&lt;/p&gt;
+&lt;p&gt;这些数据copy很多份, 放入DNN的训练集之中, 反复训练, 使得DNN对这些数据发生了过拟合, 记住了这些数据探针. 一旦有猫图中心有白点的图片输入, 本DNN就会认成是狗而不是猫.&lt;/p&gt;
+&lt;p&gt;那么, 当本DNN的结构和参数有可能被盗用的时候, 并不需要对可疑的DNN进行逆向工程, 只需要将数据探针送入可疑DNN中, 看看输出的结果是怎样的, 如果发现回报的结果是狗, 就多了几分可疑. 如果很多数据探针都能够检出, 那么从本DNN盗用的可能性就极高了.&lt;/p&gt;
+&lt;p&gt;这就是一种不开箱来检查黑箱的方法.&lt;/p&gt;
+&lt;p&gt;本来最近我也写了一个这样的发明. 可惜早有先贤写出了同样的方案.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pdfstore.patentorder.com/pdf/us/449/us2017206449.pdf"&gt;Title: Neural Network Verification;&lt;/a&gt;
+申请人: Hewlett Packard Enterprise Development LP;
+申请日: September 17, 2014;
+公开日: July 20, 2017.&lt;/p&gt;
+&lt;p&gt;只比我早三年嘛, 也还不差.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>发明</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/</guid><pubDate>Tue, 16 Jan 2018 02:00:01 GMT</pubDate></item><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -1249,63 +1266,4 @@ dtype: float64&lt;/pre&gt;
 &lt;p&gt;在克服囊袋纤维化的问题上. 同仁医生居然设计出了能够主动杀死残余晶状体上皮的人工晶体(&lt;a href="https://mp.weixin.qq.com/s/k5VvKW1LTmjMM9EC0y6N1g"&gt;报道&lt;/a&gt;, &lt;a href="http://onlinelibrary.wiley.com/doi/10.1002/adma.201701617/abstract"&gt;文献&lt;/a&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;有钱投给他们呐!&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>科普</category><guid>https://goldengrape.github.io/posts/bulabula/IOL-problem/</guid><pubDate>Fri, 05 Jan 2018 18:44:10 GMT</pubDate></item><item><title>毛笔字粗浅研究(0)</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近在看&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;, 初级课程已经全部看完了. 这一部分讲的是如何用笔. 说实话黄简老师讲的用笔方法和我小时候学到的完全不同, 比如在转向的时候, 笔尖其实是转了一个小圈再行走.&lt;/p&gt;
-&lt;p&gt;因为看这种艺术课程, 讲述的技艺和自己之前没有接触过, 难以理解, 所以必须回到基础的物理学去理解. 这是所谓的”first principle thinking”吧.&lt;/p&gt;
-&lt;p&gt;所以首先对毛笔的运行过程进行一下建模.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;简化模型&lt;/h2&gt;
-&lt;p&gt;毛笔还是很复杂的结构, 笔管是圆柱, 以相对简单的散卓笔为例: 笔毛是两种不同硬度的毛构成的, 中心是硬度大弹性好的笔心, 笔心的毛较少; 周边是更柔软的毛作为包被. 如果是韦诞笔, 则结构还要更加复杂.&lt;/p&gt;
-&lt;p&gt;毛笔在运行过程中:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可能保持弹性形变状态, 笔管压向纸面时毛笔笔锋弹性形变, 压力解除时弹性形变几乎完全恢复.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;也可能进入不可逆的形变, 比如更大的压力压迫到笔腰乃至笔根弯曲, 笔心的笔毛散开, 无法再聚拢.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;或者笔心的毛互相绞在一起, 形成绞锋.比如用笔管不绕自己中轴旋转的前提下, 用毛笔画一个360度的圆周, 一定会发生绞锋.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;所以有字母O的文字一定不会用毛笔的吧.(此处似乎有反例, &lt;a href="https://twitter.com/starknight"&gt;@starknight&lt;/a&gt;说日文中"假名的半浊点, 也就是是pa pi pu pe po, 音节里面要加在字母上的圆圈：ぱぴぷぺぽ")&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;相对简化的模型是现在用海绵头做成的软笔, 这种笔总是可以保持弹性形变.&lt;/p&gt;
-&lt;h2&gt;合理假设&lt;/h2&gt;
-&lt;p&gt;不考虑笔上墨汁损耗的前提下.&lt;/p&gt;
-&lt;p&gt;写一笔完成之后, 应当使毛笔能够恢复到 &lt;strong&gt;"最大表现力的状态"&lt;/strong&gt; , 也就是笔尖尖锐, 笔心聚拢, 笔尖在笔管的中轴线上, 就是所谓的"聚锋"状态. 这是毛笔的初始状态, 也应当是一笔写完后的理想状态.&lt;/p&gt;
-&lt;p&gt;如果不能恢复到"聚锋"状态, 那么下一笔能够写出的笔画, 或者能够表现的线条就必然受限. 甚至表现力降低到0, 就需要重新舔笔, 将笔毛捋顺聚拢.&lt;/p&gt;
-&lt;p&gt;所以所有的用笔方式都是在控制行笔的过程, 使笔尖一直保持在弹性形变内.&lt;/p&gt;
-&lt;h2&gt;直线行笔&lt;/h2&gt;
-&lt;p&gt;先不说写"尖锋线", 只讨论"侧锋线". 侧锋是笔管倾斜, 笔尖弯曲, 笔尖指向行进方向的背向.&lt;/p&gt;
-&lt;p&gt;纸面是一个平面P_0&lt;/p&gt;
-&lt;p&gt;笔管的中心线L_0, 和笔行进的直线L_1, 这两条直线会形成一个平面P_1.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;要让笔锋走在笔画线条的中央,
-笔管的中心线L_0, 和笔行进的直线L_1所构成的P_1平面
-应当 **垂直** 于P_0平面(纸面).
-&lt;/pre&gt;
-
-
-&lt;p&gt;这大概是最重要的原理了.
-&lt;img alt="侧锋" src="https://goldengrape.github.io/images/%E4%BE%A7%E9%94%8B.png"&gt;&lt;/p&gt;
-&lt;p&gt;笔尖走在线条的中央, 线的两侧都是光滑的, 而且笔尖受到的摩擦力是对称的, 不容易把笔尖打散.&lt;/p&gt;
-&lt;p&gt;如果笔管与行进直线构成的平面P_1不与纸面P_0垂直, 那么必然会使笔尖偏向线条的一侧, 形成偏锋的行笔, 这种运动笔尖两侧的摩擦力不同, 更可能使笔尖散开. 造成不可逆的形变.
-&lt;img alt="偏锋1" src="https://goldengrape.github.io/images/%E5%81%8F%E9%94%8B1.png"&gt;
-偏锋侧视图
-&lt;img alt="偏锋2" src="https://goldengrape.github.io/images/%E5%81%8F%E9%94%8B2.png"&gt;
-偏锋行笔时的受力
-&lt;img alt="" src="https://goldengrape.github.io/images/force-of-brush.png"&gt;&lt;/p&gt;
-&lt;h2&gt;转向&lt;/h2&gt;
-&lt;p&gt;保持线条不断开的前提下:&lt;/p&gt;
-&lt;h3&gt;精确解&lt;/h3&gt;
-&lt;p&gt;要在转向时仍然保持笔管与行进直线构成的平面P_1&lt;strong&gt;垂直于&lt;/strong&gt;纸面P_0, &lt;strong&gt;精确解只有一个&lt;/strong&gt;. 就是将笔管提高, 只有笔尖一点接触纸面, 将笔管中心线L_0先扶正, 使之垂直于纸面P_0, 然后再转向.
-&lt;img alt="正锋" src="https://goldengrape.github.io/images/%E6%AD%A3%E9%94%8B.png"&gt;&lt;/p&gt;
-&lt;p&gt;由于L_0垂直于P_0, 而行进直线L_1是在纸面内的, 所以不论L_1转向到哪个方向, L_0与L_1形成的平面总是垂直于纸面的.&lt;/p&gt;
-&lt;h3&gt;近似解&lt;/h3&gt;
-&lt;p&gt;在小量范围内, 笔尖可以容忍一定的非对称受力而不散开, 相应的, 笔管也可以在一定的倾斜角度和笔管压力范围内变化.&lt;/p&gt;
-&lt;p&gt;这就是整个书法初级课程中讲的九用了.&lt;/p&gt;
-&lt;p&gt;下面的GIF是黄简老师示范烈火势的写法, 注意笔锋在转弯时:
-1. 仅以笔的尖峰接触纸面
-2. 笔在行进时倾斜的方向
-&lt;img alt="fire" src="https://i.loli.net/2018/01/16/5a5ce9fa34412.gif"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>Art</category><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</guid><pubDate>Fri, 05 Jan 2018 14:00:06 GMT</pubDate></item></channel></rss>
+&lt;p&gt;有钱投给他们呐!&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>科普</category><guid>https://goldengrape.github.io/posts/bulabula/IOL-problem/</guid><pubDate>Fri, 05 Jan 2018 18:44:10 GMT</pubDate></item></channel></rss>
