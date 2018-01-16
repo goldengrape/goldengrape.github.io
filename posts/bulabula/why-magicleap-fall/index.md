@@ -60,6 +60,7 @@ Magic Leap取得了大量投资以建立基于光纤扫描的数字光场技术.
 
 如果你觉得Gullstrand模型眼太古老, 也可以去Zemax上找到[如何建立人眼光学模型的教程](http://customers.zemax.com/os/resources/learn/knowledgebase/how-to-model-the-human-eye-in-zemax), 参数上会有一些差别, 比如角膜厚度是0.55, 这个更接近人体测量值. 但即使有差别, 也不至于把厚度差到猪眼上去.
 
+哦, 对了, 如果你想用Gullstrand模型眼做个什么简单的模拟或者计算, 我这里已经准备好了[ABCD矩阵](../../python/abcd-matrix/)
 
 
 
