@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 09:32:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/posts/python/abcdju-zhen/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 16 Jan 2018 12:16:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/posts/python/abcd-matrix/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -7,7 +7,7 @@
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="光线传输矩阵"&gt;光线传输矩阵&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是一次sympy的小练习.&lt;/p&gt;
+&lt;h2 id="光线传输矩阵"&gt;光线传输矩阵&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是一次sympy的小练习.&lt;/p&gt;
 &lt;p&gt;光线传输矩阵又称做&lt;a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis"&gt;ABCD矩阵&lt;/a&gt; 用来描述近轴光线的传播过程.&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:&lt;/p&gt;
@@ -31,7 +31,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Sympy基本"&gt;Sympy基本&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#Sympy%E5%9F%BA%E6%9C%AC"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;sympy是python库, 用于符号计算, 轻量级, 不依赖于其他库. 符号计算就是做类似于
+&lt;h2 id="Sympy基本"&gt;Sympy基本&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#Sympy%E5%9F%BA%E6%9C%AC"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;sympy是python库, 用于符号计算, 轻量级, 不依赖于其他库. 符号计算就是做类似于
 $$
 (x+y)^2 = x^2 +2xy+ y^2
 $$&lt;/p&gt;
@@ -71,7 +71,7 @@ $$&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="ABCD-Matrix"&gt;ABCD Matrix&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#ABCD-Matrix"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;内置上常用的参数字典, 其实最常用的也就是在自由空间内传播, 和在球面上折射, 而这两者可以合并成在球面上折射然后再传播一段距离.&lt;/p&gt;
+&lt;h2 id="ABCD-Matrix"&gt;ABCD Matrix&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#ABCD-Matrix"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;内置上常用的参数字典, 其实最常用的也就是在自由空间内传播, 和在球面上折射, 而这两者可以合并成在球面上折射然后再传播一段距离.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;在自由空间传播距离为d的矩阵是: 
 $$
@@ -134,7 +134,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="基础人眼模型"&gt;基础人眼模型&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E5%9F%BA%E7%A1%80%E4%BA%BA%E7%9C%BC%E6%A8%A1%E5%9E%8B"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="The-Gullstrand-Schematic-Eye"&gt;The Gullstrand Schematic Eye&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#The-Gullstrand-Schematic-Eye"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;数据来自: AAO 2014版 Basic and Clinical Science Course (BCSC) Section 3: Clinical Optics 
+&lt;h2 id="基础人眼模型"&gt;基础人眼模型&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E5%9F%BA%E7%A1%80%E4%BA%BA%E7%9C%BC%E6%A8%A1%E5%9E%8B"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="The-Gullstrand-Schematic-Eye"&gt;The Gullstrand Schematic Eye&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#The-Gullstrand-Schematic-Eye"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;数据来自: AAO 2014版 Basic and Clinical Science Course (BCSC) Section 3: Clinical Optics 
 第75页&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;折射率:&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;n_air&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
@@ -218,7 +218,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Gullstrand_Schematic_Eye具体参数"&gt;Gullstrand_Schematic_Eye具体参数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#Gullstrand_Schematic_Eye%E5%85%B7%E4%BD%93%E5%8F%82%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;每个项目有两个参数, 前者是调节放松状态, 后者是最大调节状态&lt;/p&gt;
+&lt;h3 id="Gullstrand_Schematic_Eye具体参数"&gt;Gullstrand_Schematic_Eye具体参数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#Gullstrand_Schematic_Eye%E5%85%B7%E4%BD%93%E5%8F%82%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;每个项目有两个参数, 前者是调节放松状态, 后者是最大调节状态&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -261,7 +261,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="调节状态"&gt;调节状态&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E8%B0%83%E8%8A%82%E7%8A%B6%E6%80%81"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假定调节状态是各个参数的线性变化&lt;/p&gt;
+&lt;h3 id="调节状态"&gt;调节状态&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E8%B0%83%E8%8A%82%E7%8A%B6%E6%80%81"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假定调节状态是各个参数的线性变化&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -289,7 +289,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="测试"&gt;测试&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E6%B5%8B%E8%AF%95"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假定调节状态从0到1, 以0.2变化, 其中调节状态=0是调节放松, 调节状态=1是最大调节状态.&lt;/p&gt;
+&lt;h3 id="测试"&gt;测试&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E6%B5%8B%E8%AF%95"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假定调节状态从0到1, 以0.2变化, 其中调节状态=0是调节放松, 调节状态=1是最大调节状态.&lt;/p&gt;
 &lt;p&gt;入射光从光轴旁0.1mm,平行于光轴入射.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -349,7 +349,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="测试求解某个参数"&gt;测试求解某个参数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E6%B5%8B%E8%AF%95%E6%B1%82%E8%A7%A3%E6%9F%90%E4%B8%AA%E5%8F%82%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;将各个参数都先赋值, 然后取出要求解的x, 将其设定为symbol, 指定入射光线和出射光线参数后, 就可以求解了. 
+&lt;h3 id="测试求解某个参数"&gt;测试求解某个参数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E6%B5%8B%E8%AF%95%E6%B1%82%E8%A7%A3%E6%9F%90%E4%B8%AA%E5%8F%82%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;将各个参数都先赋值, 然后取出要求解的x, 将其设定为symbol, 指定入射光线和出射光线参数后, 就可以求解了. 
 由于是使用的符号运算, 所以可以使用solve命令进行求解.&lt;/p&gt;
 
 &lt;/div&gt;
@@ -414,7 +414,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="戴上眼镜"&gt;戴上眼镜&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E6%88%B4%E4%B8%8A%E7%9C%BC%E9%95%9C"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;眼镜认为是薄透镜, 角膜距离眼镜12mm&lt;/p&gt;
+&lt;h2 id="戴上眼镜"&gt;戴上眼镜&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E6%88%B4%E4%B8%8A%E7%9C%BC%E9%95%9C"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;眼镜认为是薄透镜, 角膜距离眼镜12mm&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -472,7 +472,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="计算人工晶体"&gt;计算人工晶体&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E8%AE%A1%E7%AE%97%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id="计算人工晶体"&gt;计算人工晶体&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E8%AE%A1%E7%AE%97%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -481,7 +481,7 @@ $$
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="人工晶体眼"&gt;人工晶体眼&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcdju-zhen/#%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93%E7%9C%BC"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;人工晶体假定为薄透镜, 所在位置为ELP.&lt;/p&gt;
+&lt;h3 id="人工晶体眼"&gt;人工晶体眼&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93%E7%9C%BC"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;人工晶体假定为薄透镜, 所在位置为ELP.&lt;/p&gt;
 &lt;p&gt;待调整, 可能需要把角膜两层合成一个K.&lt;/p&gt;
 &lt;p&gt;目前结果看起来有点怪异, 一般认为正视眼放入的IOL大约是19-20D, 现在得出的结果有点差得远, 大概什么地方有错误&lt;/p&gt;
 
@@ -607,7 +607,7 @@ $$
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcdju-zhen/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;为什么要用Eigenfunction&lt;/h2&gt;
 &lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
