@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Fibonacci数列通项公式 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../bulabula/why-magicleap-fall/" title="见微知著: Magic Leap为什么会失败" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="Fibonacci数列通项公式">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/">
+<meta property="og:description" content="这几天在家做了Fibonacci火锅,
+今天的火锅汤=昨天的火锅汤+前天的火锅汤. 对了, 剩下的火锅汤还可以做成浓汤宝, 大火收汁差不多以后倒入冰盒中冷藏或冷冻即可.
+于是突然想起来以前学过如何求Fibonacci数列的通项公式. 很华丽的. 不记下来可惜了. 先当作是LaTeX和sympy的练习吧
+
+
+
+
+
+
+
+
+
+母函数¶Generating Function, 定义是这样的:
+$$
+G(x">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-17T01:00:00+08:00">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">Fibonacci数列通项公式</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-17T01:00:00+08:00" itemprop="datePublished" title="2018-01-17 01:00">2018-01-17 01:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/python/通过母函数求Fibonacci数列通项公式.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这几天在家做了Fibonacci火锅,</p>
+<p>今天的火锅汤=昨天的火锅汤+前天的火锅汤. 对了, 剩下的火锅汤还可以做成浓汤宝, 大火收汁差不多以后倒入冰盒中冷藏或冷冻即可.</p>
+<p>于是突然想起来以前学过如何求Fibonacci数列的通项公式. 很华丽的. 不记下来可惜了. 先当作是LaTeX和sympy的练习吧</p>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="母函数">母函数<a class="anchor-link" href="#%E6%AF%8D%E5%87%BD%E6%95%B0">¶</a>
+</h2>
+<p>Generating Function, 定义是这样的:</p>
+$$
+G(x)=\sum_{i=0}^{\infty} a_i x^i
+$$<p>其中每一项的系数$$a_i$$就是一个数列$$\{a_i\}$$的第i项. (注意要加到无穷去)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Fibonacci数列">Fibonacci数列<a class="anchor-link" href="#Fibonacci%E6%95%B0%E5%88%97">¶</a>
+</h2>
+<p>定义大家都很清楚了: 
+$$
+a_i=a_{i-1}+a_{i-2}
+$$
+其中
+$$
+a_0 = 0, a_1 = 1 , a_2 = 1
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="利用数列定义求解母函数">利用数列定义求解母函数<a class="anchor-link" href="#%E5%88%A9%E7%94%A8%E6%95%B0%E5%88%97%E5%AE%9A%E4%B9%89%E6%B1%82%E8%A7%A3%E6%AF%8D%E5%87%BD%E6%95%B0">¶</a>
+</h2>
+<p>一般的技巧就是利用数列定义中的等式, 凑出能够相减的东西.</p>
+$$
+G(x) = a_0 x^0 + a_1 x^1 + a_2 x^2  + a_3 x^3  + a_4 x^4 ...=\sum_{i=0}^{\infty} a_i x^i
+$$<p>把前两项写出来:</p>
+$$
+G(x) = a_0 x^0 + a_1 x^1 + a_2 x^2  + a_3 x^3  + a_4 x^4 ...=a_0 x^0 + a_1 x^1 + \sum_{i=2}^{\infty} a_i x^i
+$$<p>然后去凑等式, 两边都乘x, 注意变成了a的下标比x的指数小1:</p>
+$$
+x G(x) = a_0 x^1 + a_1 x^2 + a_2 x^3  + a_3 x^4  + a_4 x^5 ... = a_0 x^1 + \sum_{i=2}^{\infty} a_{i-1} x^i
+$$<p>一个不够, 再凑一个, 注意变成了a的下标比x的指数小2:</p>
+$$
+x^2 G(x) =a_0 x^2 + a_1 x^3 + a_2 x^4  + a_3 x^5  + a_4 x^6 ... = \sum_{i=2}^{\infty} a_{i-2} x^i
+$$<p>然后用第一个式子减去第二, 第三个式子:</p>
+$$
+G(x)-x G(x)-x^2 G(x) = a_0 x^0 + a_1 x^1 + \sum_{i=2}^{\infty} a_i x^i - (a_0 x^1 + \sum_{i=2}^{\infty} a_{i-1} x^i) - \sum_{i=2}^{\infty} a_{i-2} x^i
+$$<p>左边有G(x)是可以提出来的, 右边x的指数相同的部分可以加减.</p>
+$$
+(1-x-x^2) G(x) = a_0 x^0 + a_1 x^1 - a_0 x^1 + (\sum_{i=2}^{\infty} a_i x^i - \sum_{i=2}^{\infty} a_{i-1} x^i - \sum_{i=2}^{\infty} a_{i-2} x^i) 
+$$$$
+(1-x-x^2) G(x) = a_0 x^0 + a_1 x^1 - a_0 x^1 + \sum_{i=2}^{\infty} (a_i-a_{i-1}-a_{i-2}) x^i 
+$$<p>代入Fibonacci的通项公式, 和第0项, 第一项的值</p>
+$$
+(1-x-x^2) G(x) = 0 x^0 + 1 x^1 - 0 x^1 +  \sum_{i=2}^{\infty} 0 x^i 
+$$<p>化简, 求出G(x)</p>
+$$
+G(x)=\frac{x}{1-x-x^2}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="利用母函数展开求解通项公式">利用母函数展开求解通项公式<a class="anchor-link" href="#%E5%88%A9%E7%94%A8%E6%AF%8D%E5%87%BD%E6%95%B0%E5%B1%95%E5%BC%80%E6%B1%82%E8%A7%A3%E9%80%9A%E9%A1%B9%E5%85%AC%E5%BC%8F">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Talyor展开的方式">Talyor展开的方式<a class="anchor-link" href="#Talyor%E5%B1%95%E5%BC%80%E7%9A%84%E6%96%B9%E5%BC%8F">¶</a>
+</h3>
+<p>其实解出</p>
+$$
+G(x)=\frac{x}{1-x-x^2}
+$$<p>就已经解出了通项公式了. 因为其实就是Taylor series.</p>
+$$
+G(a)=G(a)+\frac{G'(a)}{1!}(x-a)+\frac{G''(a)}{2!}(x-a)^2+\frac{G'''(a)}{3!}(x-a)^3...
+$$<p>当a=0时, 
+通项就是</p>
+$$
+a_i = \frac{G^{(n)}(0)}{n!}x^n
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="o">*</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sympy</span> <span class="k">import</span> <span class="n">init_printing</span>
+<span class="n">init_printing</span><span class="p">()</span>  <span class="c1">#为了美化输出</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
+    <span class="n">G</span><span class="o">=</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">diff</span><span class="p">(</span><span class="n">G</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">n</span><span class="p">))</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">([</span><span class="n">fib</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 或者调用sympy的级数函数</span>
+<span class="k">def</span> <span class="nf">fib_series</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s2">"x"</span><span class="p">)</span>
+    <span class="n">G</span><span class="o">=</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">series</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">n</span><span class="p">))</span>
+<span class="n">fib_series</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>  
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$x + x^{2} + 2 x^{3} + 3 x^{4} + 5 x^{5} + 8 x^{6} + 13 x^{7} + 21 x^{8} + 34 x^{9} + \mathcal{O}\left(x^{10}\right)$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="利用级数">利用级数<a class="anchor-link" href="#%E5%88%A9%E7%94%A8%E7%BA%A7%E6%95%B0">¶</a>
+</h3>
+<p>不过多数情况下不这么干, 还是有不用求导求阶乘的方式.</p>
+<p>已知有特殊函数的Taylor展开式:</p>
+$$
+\frac{1}{1-ax}=1+ax+a^2x^2+...
+$$<p>这个好像在母函数里经常用的. 总是把一个母函数表示成上述多个级数之和. 也就是求解A,B,α,β使得:</p>
+$$
+G(x)=\frac{x}{1-x-x^2}=\frac{A}{1-\alpha x}+\frac{B}{1-\beta x}
+$$<p>那么G(x)就可以分别展开成</p>
+$$
+G(x)= A (1+\alpha x+\alpha^2x^2+...)+B (1+\beta x+\beta^2x^2...)
+$$<p>通项公式就等于
+$$
+a_n=A \alpha^n+B \beta^n
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>当然可以通过乘法和对比系数求解A,B,α,β, 但对于我这么懒的人, 反正要求解4个参数, 而且对与任意x都成立, 就直接把x=1,2,3,4代入求解了</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="n">n</span><span class="o">=</span><span class="n">symbols</span><span class="p">(</span><span class="s2">"A B α β x n"</span><span class="p">)</span>
+<span class="n">G_left</span><span class="o">=</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="o">-</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">G_right</span><span class="o">=</span><span class="n">A</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">α</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">+</span><span class="n">B</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">β</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">zero</span><span class="o">=</span><span class="n">G_left</span><span class="o">-</span><span class="n">G_right</span>
+<span class="n">result</span><span class="o">=</span><span class="n">solve</span><span class="p">([</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">4</span><span class="p">)],[</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">])</span>
+
+<span class="n">subdict</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">],</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">subdict</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{α: -sqrt(5)/2 + 1/2, β: 1/2 + sqrt(5)/2, A: -sqrt(5)/5, B: sqrt(5)/5}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_n</span><span class="o">=</span><span class="n">simplify</span><span class="p">((</span><span class="n">A</span><span class="o">*</span><span class="n">α</span><span class="o">**</span><span class="n">n</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">β</span><span class="o">**</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subdict</span><span class="p">))</span>
+<span class="n">a_n</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_latex output_subarea output_execute_result">
+$$\frac{2^{- n}}{5} \sqrt{5} \left(\left(1 + \sqrt{5}\right)^{n} - \left(- \sqrt{5} + 1\right)^{n}\right)$$
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">fib_G</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">simplify</span><span class="p">(</span><span class="n">a_n</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">i</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">fib_G</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="参考课程">参考课程<a class="anchor-link" href="#%E5%8F%82%E8%80%83%E8%AF%BE%E7%A8%8B">¶</a>
+</h2>
+<p>组合数学: 
+<a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/info">http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/info</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../bulabula/why-magicleap-fall/" rel="prev" title="见微知著: Magic Leap为什么会失败">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/",
+        disqus_title="Fibonacci\u6570\u5217\u901a\u9879\u516c\u5f0f",
+        disqus_identifier="cache/posts/python/通过母函数求Fibonacci数列通项公式.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
