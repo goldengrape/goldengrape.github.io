@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-01-16T09:21:00Z</lastmod>
+  <lastmod>2018-01-16T17:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -119,7 +119,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-5.html</loc>
-  <lastmod>2018-01-16T12:16:00Z</lastmod>
+  <lastmod>2018-01-16T17:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -274,6 +274,10 @@
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</loc>
+  <lastmod>2018-01-16T17:15:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/posts/python/Lambda_Tutorials/mian-xiang-yan-ke-yi-sheng-de-lyan-suan-ru-men-jiao-cheng-0/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
@@ -316,10 +320,6 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/abcd-matrix/</loc>
   <lastmod>2018-01-16T12:16:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/python/abcdju-zhen/</loc>
-  <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/auto-numba-jit/</loc>

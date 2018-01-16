@@ -1,5 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 16 Jan 2018 12:16:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>见微知著: Magic Leap为什么会失败</title><link>https://goldengrape.github.io/posts/bulabula/why-magicleap-fall/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;Magic Leap取得了大量投资以建立基于光纤扫描的数字光场技术. 试图利用该技术解决调节集合反射的问题.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 16 Jan 2018 19:09:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这几天在家做了Fibonacci火锅,&lt;/p&gt;
+&lt;p&gt;今天的火锅汤=昨天的火锅汤+前天的火锅汤. 对了, 剩下的火锅汤还可以做成浓汤宝, 大火收汁差不多以后倒入冰盒中冷藏或冷冻即可.&lt;/p&gt;
+&lt;p&gt;于是突然想起来以前学过如何求Fibonacci数列的通项公式. 很华丽的. 不记下来可惜了. 先当作是LaTeX和sympy的练习吧&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="母函数"&gt;母函数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#%E6%AF%8D%E5%87%BD%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;Generating Function, 定义是这样的:&lt;/p&gt;
+$$
+G(x)=\sum_{i=0}^{\infty} a_i x^i
+$$&lt;p&gt;其中每一项的系数$$a_i$$就是一个数列$$\{a_i\}$$的第i项. (注意要加到无穷去)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Fibonacci数列"&gt;Fibonacci数列&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#Fibonacci%E6%95%B0%E5%88%97"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;定义大家都很清楚了: 
+$$
+a_i=a_{i-1}+a_{i-2}
+$$
+其中
+$$
+a_0 = 0, a_1 = 1 , a_2 = 1
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="利用数列定义求解母函数"&gt;利用数列定义求解母函数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#%E5%88%A9%E7%94%A8%E6%95%B0%E5%88%97%E5%AE%9A%E4%B9%89%E6%B1%82%E8%A7%A3%E6%AF%8D%E5%87%BD%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;一般的技巧就是利用数列定义中的等式, 凑出能够相减的东西.&lt;/p&gt;
+$$
+G(x) = a_0 x^0 + a_1 x^1 + a_2 x^2  + a_3 x^3  + a_4 x^4 ...=\sum_{i=0}^{\infty} a_i x^i
+$$&lt;p&gt;把前两项写出来:&lt;/p&gt;
+$$
+G(x) = a_0 x^0 + a_1 x^1 + a_2 x^2  + a_3 x^3  + a_4 x^4 ...=a_0 x^0 + a_1 x^1 + \sum_{i=2}^{\infty} a_i x^i
+$$&lt;p&gt;然后去凑等式, 两边都乘x, 注意变成了a的下标比x的指数小1:&lt;/p&gt;
+$$
+x G(x) = a_0 x^1 + a_1 x^2 + a_2 x^3  + a_3 x^4  + a_4 x^5 ... = a_0 x^1 + \sum_{i=2}^{\infty} a_{i-1} x^i
+$$&lt;p&gt;一个不够, 再凑一个, 注意变成了a的下标比x的指数小2:&lt;/p&gt;
+$$
+x^2 G(x) =a_0 x^2 + a_1 x^3 + a_2 x^4  + a_3 x^5  + a_4 x^6 ... = \sum_{i=2}^{\infty} a_{i-2} x^i
+$$&lt;p&gt;然后用第一个式子减去第二, 第三个式子:&lt;/p&gt;
+$$
+G(x)-x G(x)-x^2 G(x) = a_0 x^0 + a_1 x^1 + \sum_{i=2}^{\infty} a_i x^i - (a_0 x^1 + \sum_{i=2}^{\infty} a_{i-1} x^i) - \sum_{i=2}^{\infty} a_{i-2} x^i
+$$&lt;p&gt;左边有G(x)是可以提出来的, 右边x的指数相同的部分可以加减.&lt;/p&gt;
+$$
+(1-x-x^2) G(x) = a_0 x^0 + a_1 x^1 - a_0 x^1 + (\sum_{i=2}^{\infty} a_i x^i - \sum_{i=2}^{\infty} a_{i-1} x^i - \sum_{i=2}^{\infty} a_{i-2} x^i) 
+$$$$
+(1-x-x^2) G(x) = a_0 x^0 + a_1 x^1 - a_0 x^1 + \sum_{i=2}^{\infty} (a_i-a_{i-1}-a_{i-2}) x^i 
+$$&lt;p&gt;代入Fibonacci的通项公式, 和第0项, 第一项的值&lt;/p&gt;
+$$
+(1-x-x^2) G(x) = 0 x^0 + 1 x^1 - 0 x^1 +  \sum_{i=2}^{\infty} 0 x^i 
+$$&lt;p&gt;化简, 求出G(x)&lt;/p&gt;
+$$
+G(x)=\frac{x}{1-x-x^2}
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="利用母函数展开求解通项公式"&gt;利用母函数展开求解通项公式&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#%E5%88%A9%E7%94%A8%E6%AF%8D%E5%87%BD%E6%95%B0%E5%B1%95%E5%BC%80%E6%B1%82%E8%A7%A3%E9%80%9A%E9%A1%B9%E5%85%AC%E5%BC%8F"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="Talyor展开的方式"&gt;Talyor展开的方式&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#Talyor%E5%B1%95%E5%BC%80%E7%9A%84%E6%96%B9%E5%BC%8F"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;其实解出&lt;/p&gt;
+$$
+G(x)=\frac{x}{1-x-x^2}
+$$&lt;p&gt;就已经解出了通项公式了. 因为其实就是Taylor series.&lt;/p&gt;
+$$
+G(a)=G(a)+\frac{G'(a)}{1!}(x-a)+\frac{G''(a)}{2!}(x-a)^2+\frac{G'''(a)}{3!}(x-a)^3...
+$$&lt;p&gt;当a=0时, 
+通项就是&lt;/p&gt;
+$$
+a_i = \frac{G^{(n)}(0)}{n!}x^n
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;init_printing&lt;/span&gt;
+&lt;span class="n"&gt;init_printing&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;  &lt;span class="c1"&gt;#为了美化输出&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"x"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;math&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;factorial&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;fib&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 或者调用sympy的级数函数&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fib_series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"x"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;G&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;fib_series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
+
+
+&lt;div class="output_latex output_subarea output_execute_result"&gt;
+$$x + x^{2} + 2 x^{3} + 3 x^{4} + 5 x^{5} + 8 x^{6} + 13 x^{7} + 21 x^{8} + 34 x^{9} + \mathcal{O}\left(x^{10}\right)$$
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="利用级数"&gt;利用级数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#%E5%88%A9%E7%94%A8%E7%BA%A7%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;不过多数情况下不这么干, 还是有不用求导求阶乘的方式.&lt;/p&gt;
+&lt;p&gt;已知有特殊函数的Taylor展开式:&lt;/p&gt;
+$$
+\frac{1}{1-ax}=1+ax+a^2x^2+...
+$$&lt;p&gt;这个好像在母函数里经常用的. 总是把一个母函数表示成上述多个级数之和. 也就是求解A,B,α,β使得:&lt;/p&gt;
+$$
+G(x)=\frac{x}{1-x-x^2}=\frac{A}{1-\alpha x}+\frac{B}{1-\beta x}
+$$&lt;p&gt;那么G(x)就可以分别展开成&lt;/p&gt;
+$$
+G(x)= A (1+\alpha x+\alpha^2x^2+...)+B (1+\beta x+\beta^2x^2...)
+$$&lt;p&gt;通项公式就等于
+$$
+a_n=A \alpha^n+B \beta^n
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;当然可以通过乘法和对比系数求解A,B,α,β, 但对于我这么懒的人, 反正要求解4个参数, 而且对与任意x都成立, 就直接把x=1,2,3,4代入求解了&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;α&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"A B α β x n"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;G_left&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;G_right&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;α&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;G_left&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;G_right&lt;/span&gt;
+&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;solve&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;zero&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)],[&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;α&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="n"&gt;subdict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;α&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])}&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subdict&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;{α: -sqrt(5)/2 + 1/2, β: 1/2 + sqrt(5)/2, A: -sqrt(5)/5, B: sqrt(5)/5}
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a_n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;simplify&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;A&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;α&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;β&lt;/span&gt;&lt;span class="o"&gt;**&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;subdict&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="n"&gt;a_n&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+
+
+
+&lt;div class="output_latex output_subarea output_execute_result"&gt;
+$$\frac{2^{- n}}{5} \sqrt{5} \left(\left(1 + \sqrt{5}\right)^{n} - \left(- \sqrt{5} + 1\right)^{n}\right)$$
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;fib_G&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;simplify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a_n&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;fib_G&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="参考课程"&gt;参考课程&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/#%E5%8F%82%E8%80%83%E8%AF%BE%E7%A8%8B"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;组合数学: 
+&lt;a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/info"&gt;http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/info&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><guid>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</guid><pubDate>Tue, 16 Jan 2018 17:00:00 GMT</pubDate></item><item><title>见微知著: Magic Leap为什么会失败</title><link>https://goldengrape.github.io/posts/bulabula/why-magicleap-fall/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;Magic Leap取得了大量投资以建立基于光纤扫描的数字光场技术. 试图利用该技术解决调节集合反射的问题.&lt;/p&gt;
 &lt;p&gt;经过6年的研发, Magic Leap自称将于2018年推出实体产品 Magic Leap One
 &lt;img alt="" src="https://www.vrandfun.com/wp-content/uploads/2017/12/magic-leap-one-ar-headset.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;但是, 根据magic leap于&lt;a href="https://twitter.com/magicleap/status/717390550429786113"&gt;6 Apr 2016发布的一条twitter&lt;/a&gt;:
@@ -907,77 +1271,4 @@ b)跟你说话的压根就不是个医生。&lt;/p&gt;
 &lt;p&gt;对于恶性疾病，常见的评估预后的参数是“五年生存率”，也就是五年以后这个病人仍然生存的概率。在病人面前讨论这个问题，相当于不断在提示死亡。并非所有人都能够清晰的意识到死亡是存在的。对于每个健康的人来说，每时每刻也面临着种种生存威胁的可能性。可以说，健康人也有“五年生存率”。而且显而易见的是，健康人的五年生存率也不是100%的。越早意识到这一点，越早明白许多道理。&lt;/p&gt;
 &lt;h3&gt;治病只关心当下最佳&lt;/h3&gt;
 &lt;p&gt;过去通过现在作用于未来。当下才是最为重要的。治病的时候，需要冷静的分析，与医生合作、探讨，寻求最好的治疗方法。对于恶性疾病，通常治疗会比较复杂。每个医院每个科室会因为人力资源和物力资源的不同，而各有侧重。医生之间、科室之间、乃至医院之间是有转诊制度的。当某个病人的病情已经超出了这个医生、科室甚至医院的处理能力，一个好医生会指点病人去寻求更好的治疗。&lt;/p&gt;
-&lt;p&gt;果壳本来要出一本关于《如何看病》的书／漫画书(?)，本篇是其中的一小部分，但好像后来没了下文。今天看到推友提到家人做检查发现一些异常的征象，于是我擅自贴出这个番外篇。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/</guid><pubDate>Thu, 11 Jan 2018 07:30:24 GMT</pubDate></item><item><title>如何拒绝进入美丽新世界</title><link>https://goldengrape.github.io/posts/bulabula/how-to-refuse-brave-new-world/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;以前写的文章还是应该搬运到这个blog. 这篇是2012年写的.&lt;/p&gt;
-&lt;p&gt;读完了&lt;a href="http://book.douban.com/subject/1321789/"&gt;《美丽新世界》&lt;/a&gt;
-很高兴，貌似我有天然的免疫力。如果你已经读完了《美丽新世界》，以下教程能帮助你拒绝美丽新世界，当且仅当你愿意的话。如果你没读过，请关闭此页，下面的文字对你有害，真的。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;了解现状&lt;/h2&gt;
-&lt;h3&gt;认识媒体：&lt;/h3&gt;
-&lt;p&gt;媒体是尖叫。&lt;/p&gt;
-&lt;p&gt;在自由竞争的前提下，媒体是在争夺人们的注意力。如何去争夺？靠低声细语么？不可能，只能是尖叫。随便打开一个中文门户网站，看标题你就知道“尖叫”的含义了。在大声尖叫的时候，很大可能会无意将事实扭曲，或者为了争夺眼球，就干脆主动去把事实扭曲。&lt;/p&gt;
-&lt;p&gt;我理解的媒体，是对信息进行调制和放大，与受众进行正反馈循环。简言之: 媒体就是起哄架秧子的。&lt;/p&gt;
-&lt;p&gt;媒体包括但不限于：电视、广播、网站、微博、特别是其中的营销账号。兼听则明？你试试从一组哈哈镜中还原一个图像先。这种技术是有的，叫做自适应光学（Adaptive Optics），是很高端的技术哦。&lt;/p&gt;
-&lt;h3&gt;媒体报道的内容：&lt;/h3&gt;
-&lt;p&gt;新闻。&lt;/p&gt;
-&lt;p&gt;“狗咬人不是新闻，人咬狗才是新闻”，由此可见，新闻所报道的事件只是小概率事件。甚至大部分新闻我们有足够的把握说，它在相当长的时间内不会发生第二次。目前看只有科技新闻除外，科技新闻报道的事件往往只是一个开始，它之所以小概率是因为以前没有发生过。哦，对了，还有天气预报。&lt;/p&gt;
-&lt;h3&gt;新闻的意义：&lt;/h3&gt;
-&lt;p&gt;考虑到新闻所报道的事件只是小概率事件，而且它已经发生过了，估计它在相当长的时间内不会发生第二次。那么从新闻中获得的信息不会再次被利用。如何处理狗咬人的信息是有意义的，而如何处理人咬狗的信息是无意义的。因此，新闻的意义是——没有意义。&lt;/p&gt;
-&lt;h3&gt;升级：&lt;/h3&gt;
-&lt;p&gt;人类绝大多数科技是面向——A4纸的。比如PDF，你无论在哪种电脑显示器上看，它都是别扭的；比如word，在说过一大堆脏话之后，你会同意我的意见；PPT是人类重要的进步之一，因为它是面向——投影仪的。&lt;/p&gt;
-&lt;p&gt;如果你像我一样老，又像我一样年轻。你会知道绝大多数人的工作——编辑word、PPT、excel和玩连连看，用主频60MHz的386和xGHz的超级本是几乎一样的。甚至，早期的WPS使用了在现在也看起来非常先进的概念——将撰写与排版分开，以符号来标记排版规则，FxxK所见即所得。我知道你的xGHz的超级本跑Solidworks 2012还是觉得比较卡，不过从统计学上来说，已经是3个sigma之外了是不是？&lt;/p&gt;
-&lt;p&gt;如果你像我一样老，又像我一样年轻。你会知道绝大多数人的手机，不论上面跑的是iOS 6、Android JB甚至WebOS，只是用来打电话和发短信，其实还是8250最好用。&lt;/p&gt;
-&lt;p&gt;(2018年发现, 现在手机已经很少用来打电话, 除了收验证码也用不着短信了, 手机目前最重要的功能是微信, 移动支付, 叫车. 还真是改变了不少)&lt;/p&gt;
-&lt;h3&gt;电视&lt;/h3&gt;
-&lt;p&gt;Mitch Altman说大多数人：8小时做自己不喜欢的工作，8小时看电视（在帝都还要算上通勤），8小时睡觉。&lt;/p&gt;
-&lt;h3&gt;广告&lt;/h3&gt;
-&lt;p&gt;除了在课堂上昏昏欲睡时老师讲给你的知识，通常你听到的、看到的甚至闻到的事物，只有一个目的，就是让你花钱买点什么，或者让你不拿钱做点什么，也就是广告。&lt;/p&gt;
-&lt;p&gt;比如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;显而易见的，星座、血型、励志是广告；&lt;/li&gt;
-&lt;li&gt;显而易见的，奥运会是广告；&lt;/li&gt;
-&lt;li&gt;显而易见的，圣诞节、父亲节、母亲节甚至春节是广告；&lt;/li&gt;
-&lt;li&gt;显而易见的，反转基因-转基因、绿色食品、有机食品、中医-西医、宗教信仰是广告；&lt;/li&gt;
-&lt;li&gt;非常多的，你听到的，见到的，你感觉自己想到的观点，是各公司市场部帮你想的——广告。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;悄悄的改变现状&lt;/h2&gt;
-&lt;p&gt;嘘，改变现状，意味着你开始远离『正常』的人类社会。所以，不要声张，悄悄开始就好了。&lt;/p&gt;
-&lt;h3&gt;从控制电视开始&lt;/h3&gt;
-&lt;p&gt;遥控器不是控制，因为你并不能躲开新闻联播。
-遥控器+机顶盒+视频点播或者回放是控制，因为你可以选择快进、后退、暂停，也可以选择看这个节目或者那个节目。
-但是，你必须放弃点什么作为交换，那就是不能及时收看当天的节目。不过及时收看当天的节目中要么？真的重要么？你那么想看今天的广告么？&lt;/p&gt;
-&lt;p&gt;微博/twitter并不是可以控制的媒体，你可以选择关注/follow特定的人，就好像用遥控器换台，但你无法控制进入眼帘的话题。好在有各种技术手段，在微博上有&lt;a href="https://userscripts.org/scripts/show/114087"&gt;“眼不见心不烦”插件&lt;/a&gt;.  在twitter上有hotot&lt;/p&gt;
-&lt;p&gt;从视频点播和回放控制，可以学到&lt;/p&gt;
-&lt;p&gt;Lesson 1，慢一点，才省时间。&lt;/p&gt;
-&lt;h3&gt;不要形容自己&lt;/h3&gt;
-&lt;p&gt;你可以说自己出生于2012年8月13日，但是不要说自己是属龙的狮子座；不要记得自己的血型，就算是抢救医生也会给你开验血化验单的；不要知道自己是内向/外向，多血质/ 粘液质/ 胆汁质/ 抑郁质；&lt;/p&gt;
-&lt;p&gt;自我是复杂的，不要试图用简单的词汇来形容自己。一旦形容了，你就被词汇所限定住了，慢慢真正变成了一个属龙的人，一个狮子座的人，一个O型血的人……你会跟命理书、星座书、血型书上所描写的那类人越来越接近。随后你的人生就写在那些廉价书的规定里面了。于是你就变成了一个可以用简单的词汇来限定的人。&lt;/p&gt;
-&lt;p&gt;Lesson 2，语言是有魔力的，它将描述的事物离散化，使其中连续的部分不可认知，接触语言时要小心谨慎。&lt;/p&gt;
-&lt;h3&gt;敢拒绝&lt;/h3&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;我TMD不喝酒。
-我TMD就不喝酒。
-我TMD就滴酒不沾。
-去TMD社会习俗。
-去TMD社交礼仪。
-法律不禁止的事情我想干嘛干嘛。
-&lt;/pre&gt;
-
-
-&lt;p&gt;Lesson 3，脏话给人以力量，给人以力量的东西使人低估风险。&lt;/p&gt;
-&lt;h3&gt;提防嗜好&lt;/h3&gt;
-&lt;p&gt;不能用来赚钱的嗜好都是不良嗜好。
-你的嗜好非常有可能是被广告商植入的。
-一切可能上瘾的事情我都本能的躲开。
-我不吸烟不喝酒不喝咖啡不喝茶不玩网游不看电视不听发烧音响不玩单反&lt;/p&gt;
-&lt;p&gt;Lesson 4，不以物喜。&lt;/p&gt;
-&lt;h3&gt;赞成/ 反对/ 我不关心&lt;/h3&gt;
-&lt;p&gt;除了赞成和反对以外，还有一种重要的表态，是“我不关心”。某位先贤说过，世上的事情基本两大类，关我屁事和关你屁事。因此“我不关心”，好像应该是默认的表态方式。当看到“不转不是中国人”时，为了健康起见，还是在椅子上转一圈比较好。&lt;/p&gt;
-&lt;p&gt;Lesson 5，空集是任何集合的子集，别忘了，不然考试容易被扣分。&lt;/p&gt;
-&lt;h3&gt;Think different&lt;/h3&gt;
-&lt;p&gt;Youtube视频&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/watch?v=cFEarBzelBs"&gt;https://www.youtube.com/watch?v=cFEarBzelBs&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;=====2016年补充＝＝＝＝&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://twitter.com/hanxiaoyu/status/735309330443034624"&gt;寒雨★Lee&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;再有14天就要高考了，提前祝高考的考生们考试顺利。 四年后你们会明白，你们今天的所有的努力，并没有什么卵用。改变你们命运的不是知识文化，主要是酒量，关系，胆量，爹妈、长相 ，还有你们村是不是要拆。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://twitter.com/goldengrape/status/735335538006327296"&gt;goldengrape‏&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;十年以后你们会明白， 想摆脱“酒量，关系，胆量，爹妈、长相 ，还有你们村是不是要拆。”的影响 高考才是第一步。 等你在某一个领域超过95%以上的人群，就可以理直气壮的说“我不喝酒，就TMD不喝”&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how-to-refuse-brave-new-world/</guid><pubDate>Thu, 11 Jan 2018 07:13:24 GMT</pubDate></item></channel></rss>
+&lt;p&gt;果壳本来要出一本关于《如何看病》的书／漫画书(?)，本篇是其中的一小部分，但好像后来没了下文。今天看到推友提到家人做检查发现一些异常的征象，于是我擅自贴出这个番外篇。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/</guid><pubDate>Thu, 11 Jan 2018 07:30:24 GMT</pubDate></item></channel></rss>
