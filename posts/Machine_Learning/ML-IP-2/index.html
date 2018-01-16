@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>机器学习的知识产权保护(2)--侵权检测 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../python/pyathon-ray-tracing-1/" title="如何写一个球面Ray tracing程序(1)" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="机器学习的知识产权保护(2)--侵权检测">
+<meta property="og:url" content="https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/">
+<meta property="og:description" content='上次说到机器学习的知识产权保护中保护的困难, 特别是在侵权识别之中. 由于现阶段机器学习的参数解释起来很困难, 不能够简单设定一个保护范围. 也难以逆向工程别人的模型获得所有的参数.
+但还是有方法的.
+
+以深度神经网络为例. 其他机器学习也有类似的特点. 深度神经网络(DNN)总会有个风险叫做"过拟合" overfitting, 某种程度上, 这是一种记忆, DNN记住了发来的训练集中的数据, 一'>
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-01-16T10:00:01+08:00">
+<meta property="article:tag" content="发明">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">机器学习的知识产权保护(2)--侵权检测</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-16T10:00:01+08:00" itemprop="datePublished" title="2018-01-16 10:00">2018-01-16 10:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/Machine_Learning/机器学习的知识产权保护(2).html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>上次说到机器学习的知识产权保护中<a href="../ML-IP">保护的困难</a>, 特别是在侵权识别之中. 由于现阶段机器学习的参数解释起来很困难, 不能够简单设定一个保护范围. 也难以逆向工程别人的模型获得所有的参数.</p>
+<p>但还是有方法的.
+<!-- TEASER_END --></p>
+<p>以深度神经网络为例. 其他机器学习也有类似的特点. 深度神经网络(DNN)总会有个风险叫做"过拟合" overfitting, 某种程度上, 这是一种记忆, DNN记住了发来的训练集中的数据, 一旦再次有这些数据输入, DNN就可以调用出原来训练过的输出. 于是在训练的时候, 可能误差很小, 但用测试数据集去测试的时候误差却很大. 这样的DNN缺乏"泛化"能力, 相当于一个学生擅长死记硬背, 却不能举一反三.</p>
+<p>这个特点就可以用来作为DNN的"身份识别"了. 类似师傅教徒弟, 某一个招式本门派的应对是固定的, 由于反复训练, 徒弟们都记在了心里. 比如对面来一直拳, 别的门派都是向后躲, 本门派的却是向前侧躲. 那么行走江湖的时候, 碰见对手一拳打过去是向前侧躲的, 多半就是本门派的师兄弟了.
+(貌似哪个武侠小说里有类似的情节)</p>
+<p>在DNN中, 方法可以是这样的:</p>
+<p>准备一组数据对作为"数据探针", 比如输入图像都是猫, 但却在图片中心点有一个白点, 而输出结果中, 把这些猫的图像都标记为狗.</p>
+<p>这些数据copy很多份, 放入DNN的训练集之中, 反复训练, 使得DNN对这些数据发生了过拟合, 记住了这些数据探针. 一旦有猫图中心有白点的图片输入, 本DNN就会认成是狗而不是猫.</p>
+<p>那么, 当本DNN的结构和参数有可能被盗用的时候, 并不需要对可疑的DNN进行逆向工程, 只需要将数据探针送入可疑DNN中, 看看输出的结果是怎样的, 如果发现回报的结果是狗, 就多了几分可疑. 如果很多数据探针都能够检出, 那么从本DNN盗用的可能性就极高了.</p>
+<p>这就是一种不开箱来检查黑箱的方法.</p>
+<p>本来最近我也写了一个这样的发明. 可惜早有先贤写出了同样的方案.</p>
+<p><a href="http://pdfstore.patentorder.com/pdf/us/449/us2017206449.pdf">Title: Neural Network Verification;</a>
+申请人: Hewlett Packard Enterprise Development LP;
+申请日: September 17, 2014;
+公开日: July 20, 2017.</p>
+<p>只比我早三年嘛, 也还不差.</p>
+<!-- EOF -->
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/fa-ming/" rel="tag">发明</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../python/pyathon-ray-tracing-1/" rel="prev" title="如何写一个球面Ray tracing程序(1)">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/",
+        disqus_title="\u673a\u5668\u5b66\u4e60\u7684\u77e5\u8bc6\u4ea7\u6743\u4fdd\u62a4(2)--\u4fb5\u6743\u68c0\u6d4b",
+        disqus_identifier="cache/posts/Machine_Learning/机器学习的知识产权保护(2).html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+    
+    
+            <script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

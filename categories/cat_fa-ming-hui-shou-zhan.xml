@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：发明回收站)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_fa-ming-hui-shou-zhan.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 09:33:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>空气炮空调</title><link>https://goldengrape.github.io/posts/Invention/air-vortex-AC/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;空气炮是一种常见的玩具, 利用空气脉冲释放出一个空气涡旋(air vortex), 这种air vortex可以在长距离内保持形状, 其内部的空气很少与外界空气交换, 而且投递的精度很高. 当air vortex遇到阻挡或者与另一个air vortex相撞时, vortex的结构破坏, 里面的空气释放出来.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：发明回收站)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_fa-ming-hui-shou-zhan.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 16 Jan 2018 02:44:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>机器学习的知识产权保护(2)--侵权检测</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上次说到机器学习的知识产权保护中&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML-IP"&gt;保护的困难&lt;/a&gt;, 特别是在侵权识别之中. 由于现阶段机器学习的参数解释起来很困难, 不能够简单设定一个保护范围. 也难以逆向工程别人的模型获得所有的参数.&lt;/p&gt;
+&lt;p&gt;但还是有方法的.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;以深度神经网络为例. 其他机器学习也有类似的特点. 深度神经网络(DNN)总会有个风险叫做"过拟合" overfitting, 某种程度上, 这是一种记忆, DNN记住了发来的训练集中的数据, 一旦再次有这些数据输入, DNN就可以调用出原来训练过的输出. 于是在训练的时候, 可能误差很小, 但用测试数据集去测试的时候误差却很大. 这样的DNN缺乏"泛化"能力, 相当于一个学生擅长死记硬背, 却不能举一反三.&lt;/p&gt;
+&lt;p&gt;这个特点就可以用来作为DNN的"身份识别"了. 类似师傅教徒弟, 某一个招式本门派的应对是固定的, 由于反复训练, 徒弟们都记在了心里. 比如对面来一直拳, 别的门派都是向后躲, 本门派的却是向前侧躲. 那么行走江湖的时候, 碰见对手一拳打过去是向前侧躲的, 多半就是本门派的师兄弟了.
+(貌似哪个武侠小说里有类似的情节)&lt;/p&gt;
+&lt;p&gt;在DNN中, 方法可以是这样的:&lt;/p&gt;
+&lt;p&gt;准备一组数据对作为"数据探针", 比如输入图像都是猫, 但却在图片中心点有一个白点, 而输出结果中, 把这些猫的图像都标记为狗.&lt;/p&gt;
+&lt;p&gt;这些数据copy很多份, 放入DNN的训练集之中, 反复训练, 使得DNN对这些数据发生了过拟合, 记住了这些数据探针. 一旦有猫图中心有白点的图片输入, 本DNN就会认成是狗而不是猫.&lt;/p&gt;
+&lt;p&gt;那么, 当本DNN的结构和参数有可能被盗用的时候, 并不需要对可疑的DNN进行逆向工程, 只需要将数据探针送入可疑DNN中, 看看输出的结果是怎样的, 如果发现回报的结果是狗, 就多了几分可疑. 如果很多数据探针都能够检出, 那么从本DNN盗用的可能性就极高了.&lt;/p&gt;
+&lt;p&gt;这就是一种不开箱来检查黑箱的方法.&lt;/p&gt;
+&lt;p&gt;本来最近我也写了一个这样的发明. 可惜早有先贤写出了同样的方案.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://pdfstore.patentorder.com/pdf/us/449/us2017206449.pdf"&gt;Title: Neural Network Verification;&lt;/a&gt;
+申请人: Hewlett Packard Enterprise Development LP;
+申请日: September 17, 2014;
+公开日: July 20, 2017.&lt;/p&gt;
+&lt;p&gt;只比我早三年嘛, 也还不差.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>发明</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/</guid><pubDate>Tue, 16 Jan 2018 02:00:01 GMT</pubDate></item><item><title>空气炮空调</title><link>https://goldengrape.github.io/posts/Invention/air-vortex-AC/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;空气炮是一种常见的玩具, 利用空气脉冲释放出一个空气涡旋(air vortex), 这种air vortex可以在长距离内保持形状, 其内部的空气很少与外界空气交换, 而且投递的精度很高. 当air vortex遇到阻挡或者与另一个air vortex相撞时, vortex的结构破坏, 里面的空气释放出来.&lt;/p&gt;
 &lt;p&gt;于是可以用来将热空气或冷空气以特定形式进行长距离、高空间精度的投递。除了用作空调, 也可以用来投递气味, 还可以用来投递干净的空气.&lt;/p&gt;
 &lt;p&gt;优点是只需要对少量的空气进行加工就可以满足个人的要求. 不需要过滤整个屋子的PM2.5, 只需要过滤用户吸入的那一部分就可以了.  &lt;/p&gt;
 &lt;p&gt;缺点是噪音, 我估计是因为噪音的问题导致这个技术一直没有出现在市场上.&lt;/p&gt;
