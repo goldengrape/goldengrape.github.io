@@ -17,7 +17,9 @@
 # G(x)=\sum_{i=0}^{\infty} a_i x^i
 # $$
 # 
-# 其中每一项的系数$$a_i$$就是一个数列$$\{a_i\}$$的第i项. (注意要加到无穷去)
+# 其中每一项的系数$$a_i$$就是一个数列$$\{a_i\}$$的第i项. 
+# 
+# 注意一定要加到无穷去, 我开始就是没有推到无穷, 只加到有限量, 于是公式推导不出来
 
 # # Fibonacci数列
 # 定义大家都很清楚了: 
@@ -165,7 +167,7 @@ fib_series(10)
 # a_n=A \alpha^n+B \beta^n
 # $$
 
-# 当然可以通过乘法和对比系数求解A,B,α,β, 但对于我这么懒的人, 反正要求解4个参数, 而且对与任意x都成立, 就直接把x=1,2,3,4代入求解了
+# 当然可以通过乘法和对比系数求解A,B,α,β, 但对于我这么懒的人, 反正要求解4个参数, 而且对与任意x都成立, 就直接把x=+1, -1, +2, -2代入求解了
 
 # In[4]:
 
@@ -175,21 +177,18 @@ G_left=x/(1-x-x**2)
 G_right=A/(1-α*x)+B/(1-β*x)
 
 
-# In[5]:
+# In[17]:
 
 
 zero=G_left-G_right
-result=solve([zero.subs(x,1),zero.subs(x,2),zero.subs(x,3),zero.subs(x,4)],[A,B,α,β])
-
-subdict={k:v for (k,v) in zip([A,B,α,β],result[0])}
-print(subdict)
+result=solve([zero.subs(x,-1),zero.subs(x,+1),zero.subs(x,-2),zero.subs(x,2)],[A,B,α,β])
 
 
-# In[6]:
+# In[18]:
 
 
 
-a_n=simplify((A*α**n+B*β**n).subs(subdict))
+a_n=simplify((A*α**n+B*β**n).subs(zip([A,B,α,β],result[0])))
 a_n
 
 
