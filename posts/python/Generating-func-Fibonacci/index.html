@@ -124,7 +124,8 @@ G(x">
 <p>Generating Function, 定义是这样的:</p>
 $$
 G(x)=\sum_{i=0}^{\infty} a_i x^i
-$$<p>其中每一项的系数$$a_i$$就是一个数列$$\{a_i\}$$的第i项. (注意要加到无穷去)</p>
+$$<p>其中每一项的系数$$a_i$$就是一个数列$$\{a_i\}$$的第i项.</p>
+<p>注意一定要加到无穷去, 我开始就是没有推到无穷, 只加到有限量, 于是公式推导不出来</p>
 
 </div>
 </div>
@@ -332,7 +333,7 @@ $$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>当然可以通过乘法和对比系数求解A,B,α,β, 但对于我这么懒的人, 反正要求解4个参数, 而且对与任意x都成立, 就直接把x=1,2,3,4代入求解了</p>
+<p>当然可以通过乘法和对比系数求解A,B,α,β, 但对于我这么懒的人, 反正要求解4个参数, 而且对与任意x都成立, 就直接把x=+1, -1, +2, -2代入求解了</p>
 
 </div>
 </div>
@@ -354,43 +355,24 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">zero</span><span class="o">=</span><span class="n">G_left</span><span class="o">-</span><span class="n">G_right</span>
-<span class="n">result</span><span class="o">=</span><span class="n">solve</span><span class="p">([</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">3</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">4</span><span class="p">)],[</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">])</span>
-
-<span class="n">subdict</span><span class="o">=</span><span class="p">{</span><span class="n">k</span><span class="p">:</span><span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">],</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">subdict</span><span class="p">)</span>
+<span class="n">result</span><span class="o">=</span><span class="n">solve</span><span class="p">([</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">+</span><span class="mi">1</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span><span class="n">zero</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)],[</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">])</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-<div class="prompt"></div>
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>{α: -sqrt(5)/2 + 1/2, β: 1/2 + sqrt(5)/2, A: -sqrt(5)/5, B: sqrt(5)/5}
-</pre>
-</div>
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_n</span><span class="o">=</span><span class="n">simplify</span><span class="p">((</span><span class="n">A</span><span class="o">*</span><span class="n">α</span><span class="o">**</span><span class="n">n</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">β</span><span class="o">**</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="n">subdict</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a_n</span><span class="o">=</span><span class="n">simplify</span><span class="p">((</span><span class="n">A</span><span class="o">*</span><span class="n">α</span><span class="o">**</span><span class="n">n</span><span class="o">+</span><span class="n">B</span><span class="o">*</span><span class="n">β</span><span class="o">**</span><span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">subs</span><span class="p">(</span><span class="nb">zip</span><span class="p">([</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">,</span><span class="n">α</span><span class="p">,</span><span class="n">β</span><span class="p">],</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
 <span class="n">a_n</span>
 </pre></div>
 
@@ -403,7 +385,7 @@ $$</p>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -516,7 +498,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="mailto:">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+</script></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>

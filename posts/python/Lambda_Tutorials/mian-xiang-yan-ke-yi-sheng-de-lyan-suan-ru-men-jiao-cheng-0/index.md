@@ -21,7 +21,7 @@
 
 lambda calculus带来的美感与人无关，却又可以被人所认识体会到。但要能够认识、体会，需要先经过一些不太复杂的学习。
 
-这个视频列表中是个很不错的[lambda calculus课程](https://www.youtube.com/playlist?list=PLUkhEiLrRQXW5jPQy5fWWyqsDc3Uwxghl\)
+这个视频列表中是个很不错的[lambda calculus课程](https://www.youtube.com/playlist?list=PLUkhEiLrRQXW5jPQy5fWWyqsDc3Uwxghl)
 
 老师把lambda calculus的基本概念都讲解得很清楚。如果想详细了解，请听这个课程。
 
