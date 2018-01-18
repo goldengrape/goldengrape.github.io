@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jan 2018 07:53:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jan 2018 11:31:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
 &lt;p&gt;两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;选型&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;电饭锅&lt;/li&gt;
+&lt;li&gt;电火锅&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;电火锅一定要选择&lt;strong&gt;足够傻&lt;/strong&gt;的, 也就是说接通电源就进入工作状态, 断开电源就关闭, 再接通电源还回到工作状态.  &lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;万万不可&lt;/strong&gt;有什么中间的待机状态. 就是那种自作聪明的电器,  接通电源以后进入一个待机状态, 非要等人再按一下才肯工作. 特点是往往有触摸按键, 或者自称微电脑控制.&lt;/p&gt;
@@ -50,7 +50,13 @@
 &lt;li&gt;搅拌器&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;低温煮的部分, 如果加入一个搅拌装置很可能会降低负反馈的波动. 如果不用水泵, 不用塑料, 不用金属, 大概最简单的就是放个竹蜻蜓进去, 从锅盖中心穿进去, 再用电机驱动.&lt;/p&gt;
-&lt;p&gt;或者也可以找个现成的电动搅拌器, 记得宜家就有一个, 但不知道用电池能持续搅拌多久. &lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;或者也可以找个现成的电动搅拌器, 记得宜家就有一个, 但不知道用电池能持续搅拌多久.&lt;/p&gt;
+&lt;h2&gt;Let it be&lt;/h2&gt;
+&lt;p&gt;经过一下午的测试, 发现温度的波动范围大约在10摄氏度, 波动方向以overshoot为主, 大约是高于设定温度9度.&lt;/p&gt;
+&lt;p&gt;所以其实是相当不准确啊. 因此做温泉蛋恐怕是没希望了, 那个对温度精度要求很高. 不过反正我也不爱吃.&lt;/p&gt;
+&lt;p&gt;对于鸡肉来说10度的波动没什么关系, 至少鸡翅是这样, 鸡胸可能要求高一点. 对于牛肉来说10度的波动已经是从三分熟到全熟之间的差别了.&lt;/p&gt;
+&lt;p&gt;不过, 我觉得可能只要目标温度累积到足够的时间就可以. 比如目标温度是60度, 想煮至少3小时, 那么完全可以设定温度为51度, 然后周期性地波动到60度, 煮个过夜, 那么60度的累积时间怎么样也到3小时了.&lt;/p&gt;
+&lt;p&gt;所以暂时不打算折腾搅拌器了. &lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
