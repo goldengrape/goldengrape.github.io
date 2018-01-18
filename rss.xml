@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jan 2018 04:51:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jan 2018 05:16:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
 &lt;p&gt;两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
@@ -19,7 +19,7 @@
 &lt;p&gt;淘宝上直接搜索温控继电器就可以了. 有的是模组, 需要自己接线, 还有这种已经装好的, 直接可以接入插头的, 当然这种更简单.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="WechatIMG157" src="https://i.loli.net/2018/01/18/5a601da185ae6.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;温控继电器的测温头有不同种类, 我现在使用的是金属头, 可以水下测量. 还有空气测量和塑料封印的. 金属头和塑料头都可以防水, 但金属头的材质不明, 也许不适合烹饪食物使用, 以后可能换成塑料头的, 据说是医用级别. 也可能就用食品袋包裹一下金属头就是了.&lt;/p&gt;
-&lt;p&gt;金属头的好处是很细, 恰好可以从锅盖上的排气孔穿过去. 外面稍微固定一下, 探头最好悬浮在水里. &lt;/p&gt;
+&lt;p&gt;金属头的好处是很细, 恰好可以从锅盖上的排气孔穿过去. 外面稍微固定一下, 探头最好悬浮在水里.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="WechatIMG155" src="https://i.loli.net/2018/01/18/5a601da1866cb.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;注意温控继电器的额定功率, 显然要大于电火锅的功率.&lt;/p&gt;
 &lt;h2&gt;缺点&lt;/h2&gt;
@@ -45,7 +45,11 @@
 &lt;/ul&gt;
 &lt;p&gt;我那个电蒸/烤/空气炸锅, 有"低温蒸"这个选项, 我测了一下温度, 大约是在80-85度, 还是有点高了. 我一直很想试试60度蒸出来的牛肉是怎样的.&lt;/p&gt;
 &lt;p&gt;但直接加笼屉用温控继电器来控制的话, 有问题. 加热水-&amp;gt;蒸汽, 这中间水的比热容太大, 空气又是热的不良导体. 于是负反馈控制的波动更大, 蒸汽温度一下子就升到了96度.&lt;/p&gt;
-&lt;p&gt;有可能需要+超声雾化+防水风扇, 但这样的话就需要考虑插头接线的走法了, 金属笼屉就不合适了, 有可能需要竹笼屉和盖, 比较容易走线.&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;有可能需要+超声雾化+防水风扇, 但这样的话就需要考虑插头接线的走法了, 金属笼屉就不合适了, 有可能需要竹笼屉和盖, 比较容易走线.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;竹蜻蜓&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;低温煮的部分, 如果加入一个搅拌装置很可能会降低负反馈的波动. 如果不用水泵, 不用塑料, 不用金属, 大概最简单的就是放个竹蜻蜓进去, 从锅盖中心穿进去, 再用电机驱动. &lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
