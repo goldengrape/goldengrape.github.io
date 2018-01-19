@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jan 2018 15:35:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Jan 2018 03:24:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
 &lt;p&gt;两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
@@ -60,7 +60,9 @@
 &lt;p&gt;我记录了一个小时的温度变化, 火力大约在"中档",
 &lt;em&gt; 设定: 启动温度57, 终止温度58,
 &lt;/em&gt; 实际: 最高温度64, 最低温度57, 4分钟从57上升到64, 然后40分钟从64下降回57.约45分钟一个周期
-&lt;img alt="" src="https://goldengrape.github.io/images/slow_cooker_temperature.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;img alt="" src="https://goldengrape.github.io/images/slow_cooker_temperature.png"&gt;&lt;/p&gt;
+&lt;h2&gt;更新&lt;/h2&gt;
+&lt;p&gt;在推上被科普了PID控制器, 有开放的讨论就是好啊. 等到货了以后再评测. &lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
