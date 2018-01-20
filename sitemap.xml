@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-01-19T18:47:00Z</lastmod>
+  <lastmod>2018-01-20T16:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -131,7 +131,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-6.html</loc>
-  <lastmod>2018-01-19T18:47:00Z</lastmod>
+  <lastmod>2018-01-20T16:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -348,6 +348,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/compare-seq/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/dejunkifying-a-plot/</loc>
+  <lastmod>2018-01-20T16:13:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/install-anaconda/</loc>
