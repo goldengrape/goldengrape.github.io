@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 19 Jan 2018 18:47:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Matplotlib Cheat Sheet</title><link>https://goldengrape.github.io/posts/python/cheatsheet/matplotlib-cheat-sheet/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 20 Jan 2018 03:27:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Matplotlib Cheat Sheet</title><link>https://goldengrape.github.io/posts/python/cheatsheet/matplotlib-cheat-sheet/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -8,6 +8,7 @@
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;来自于&lt;a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Python_Matplotlib_Cheat_Sheet.pdf"&gt;datacamp&lt;/a&gt;, 我觉得一大张PDF不方便. 给改写成jupyter的. 有可能以后再做成竖排的小册子, 方便查阅.&lt;/p&gt;
+&lt;p&gt;需要下载本文可以&lt;a href="https://github.com/goldengrape/goldengrape.github.io/blob/gh-pages/posts/python/cheatsheet/Matplotlib_cheat_sheet.ipynb"&gt;点击此处&lt;/a&gt;&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
