@@ -1,5 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 20 Jan 2018 16:37:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>统计图清理</title><link>https://goldengrape.github.io/posts/python/dejunkifying-a-plot/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 21 Jan 2018 09:35:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何向成人灌输一个观点</title><link>https://goldengrape.github.io/posts/bulabula/how-to-inception/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在上一篇&lt;a href="https://goldengrape.github.io/posts/python/dejunkifying-a-plot"&gt;"统计图整理"&lt;/a&gt;中, 展示了如何把一个具有浓郁乡土气息的bar
+&lt;img alt="p0" src="https://i.loli.net/2018/01/21/5a644e647a799.png"&gt;
+变成性冷淡的bar:
+&lt;img alt="p7" src="https://i.loli.net/2018/01/21/5a644e64a71b6.png"&gt;&lt;/p&gt;
+&lt;p&gt;大家的反馈主要是对Remove lines到direct label的那一部分不认同. 也就是从去掉grid, 去掉座标轴, 到直接将数据标注到bar上.
+&lt;img alt="p5" src="https://i.loli.net/2018/01/21/5a644e64a705b.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="p7" src="https://i.loli.net/2018/01/21/5a644e64a71b6.png"&gt;&lt;/p&gt;
+&lt;p&gt;专业设计师如西乔都认为&lt;a href="https://twitter.com/arthur369/status/954825055908843521"&gt;"觉得水平线还是应该保留，目前有些影响可读性"&lt;/a&gt;, 其实我也有类似的感觉. 很可能这是大多数人的感觉.&lt;/p&gt;
+&lt;p&gt;在&lt;a href="https://goldengrape.github.io/posts/python/dejunkifying-a-plot"&gt;"统计图整理"&lt;/a&gt;一文中我说,&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果做乙方的话, 一定要花足够长的时间给甲方洗脑, 洗到less is more形成本能. 如果你省掉了什么时间, 一定会乘10花到工作时间上.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我只讲了目的, 没有讲解方法. 作为完整的课程, cousera这门课不仅仅讲解了如何作图, 实际上还悄悄演示了如何"洗脑".
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;成人教育的特点&lt;/h2&gt;
+&lt;p&gt;面向成人的教育与面向青少年的学校教育不同, 成人有自己的思想, 如果教师的观点与学生现存的观点相抵触, 是很难将教师的观点植入进学生心中的.&lt;/p&gt;
+&lt;p&gt;在cousera老师讲课的时候, 学生也是某种程度的"甲方", "应当保留水平线"是很多人预存的观点. 那么老师在讲课时, 要么停止在这一步之前, 不与学生发生冲突, 要么就要预先清除障碍, 为植入观点做准备.&lt;/p&gt;
+&lt;h2&gt;过程简述&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-plotting/lecture/qFnP9/graphical-heuristics-data-ink-ratio-edward-tufte"&gt;课程视频&lt;/a&gt;, 可能需要选课或者至少旁听才能看到. 以文字简述之.&lt;/p&gt;
+&lt;h3&gt;1. 连续建立认同感&lt;/h3&gt;
+&lt;p&gt;在提出data-ink是不可或缺的, 和chart junk应当尽量抛弃这个原则以后, 先进行一组操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Remove Background Colors -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Remove redundant labels -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Remove Borders -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Reduce Colors -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Remove special effect -&amp;gt;&lt;/li&gt;
+&lt;li&gt;Remove Shade&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些步骤中, 很容易取得学生们的认同. 其中在reduce colors时, 老师说明了作者目的是为了以培根与其他食物相比. 那么只保留培根的颜色作为突出是很容易接受的.&lt;/p&gt;
+&lt;h3&gt;2. 设计问题&lt;/h3&gt;
+&lt;p&gt;在cousera的视频上, 有课堂提问功能, 就是视频正在播放时突然停止, 显示出一道选择题或者填空题, 学生回答, 提交答案, 给予学生反馈以后, 视频再继续进行. 于是在这里,&lt;/p&gt;
+&lt;p&gt;突然出现了一个问题:
+看下面的统计图, 请估计Bacon和Potato Chips之间的差距( ), 并估计Bacon与Pizza之间的差距( ).
+&lt;img alt="p5" src="https://i.loli.net/2018/01/21/5a644e64a705b.png"&gt;&lt;/p&gt;
+&lt;p&gt;这其实是个挺好玩的问题, 我相信您看到这个也会跃跃欲试猜测一下.&lt;/p&gt;
+&lt;h3&gt;3. 引导推理&lt;/h3&gt;
+&lt;p&gt;显然不论目测如何精确, 多多少少还是会有些误差的, 我目测的已经是相当准确了, 我当时估计Bacon和Potato Chips之间的差距=10, Bacon与Pizza之间的差距=240.&lt;/p&gt;
+&lt;p&gt;然后视频中给出反馈542-533=9, 533-296=237.&lt;/p&gt;
+&lt;p&gt;接着老师站出来说话了:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;大家看, 虽然有水平线, 但这些水平线并不能精确帮我们分析差距啊. 好像也帮不上忙呢.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;接着应当又重复一遍data-ink的定义, 强调是non-erasable core. (应当这样, 可惜实际上老师在这里没有做)&lt;/p&gt;
+&lt;h3&gt;4. 得到目标结论&lt;/h3&gt;
+&lt;p&gt;老师接着说:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;既然水平线也帮不上忙, 那么所以, 不如就此去掉吧.
+但去掉水平线以后跟y轴又不好比对, 那干脆把数据直接标注在每个柱子上.
+这样虽然读者要计算一下. 但却可以准确获得信息哦.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;复盘&lt;/h2&gt;
+&lt;p&gt;面向成人的教育, 不可以直接进行观点的灌输. 需要由成人自己推理得出倾向, 然后在引导至目标观点上.&lt;/p&gt;
+&lt;p&gt;比如你想灌输的观点是D点, 那么需要:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先给出基本概念, 然后从大家都认同的A点开始给基本概念感性认识,&lt;/li&gt;
+&lt;li&gt;接着在B点上抛出问题,&lt;/li&gt;
+&lt;li&gt;在C点引导大家一起推理, 推理时要引用预先设定的基本概念,&lt;/li&gt;
+&lt;li&gt;最后由学生自行得出结论D.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;看到了吧, 每一个课堂提问其实是精心策划的.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;附课程字幕:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3:30
+There's still a lot of gridwork left in this image and it's a bit unclear what the value of this gridwork is, so we're going to drop it. Now grids can be valuable, but they're often just a distraction. For the moment though, study the image. What's the difference in the number of calories between bacon, our data point of interest, and say, potato chips or chili dogs?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;插入随堂测验&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3:52
+Just removing the lines doesn't make it easier to read. But the values of the data are pretty simple here. So let's directly label each bar in the graphic.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;!-- EOF --&gt;
+
+&lt;!-- 其他图片
+![p1](https://i.loli.net/2018/01/21/5a644e6417464.png)
+![p2](https://i.loli.net/2018/01/21/5a644e643057d.png)
+![p3](https://i.loli.net/2018/01/21/5a644e642c6df.png)
+![p4](https://i.loli.net/2018/01/21/5a644e640b22d.png)
+![p5](https://i.loli.net/2018/01/21/5a644e64a705b.png)
+![p6](https://i.loli.net/2018/01/21/5a644e640b1d6.png) --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how-to-inception/</guid><pubDate>Sun, 21 Jan 2018 08:30:00 GMT</pubDate></item><item><title>统计图清理</title><link>https://goldengrape.github.io/posts/python/dejunkifying-a-plot/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -2359,277 +2439,4 @@ $$&lt;p&gt;这就是程序里算出t的方法了。有t的值，只要代入(1)�
 </description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</guid><pubDate>Mon, 15 Jan 2018 15:30:00 GMT</pubDate></item><item><title>如何写一个球面Ray tracing程序(0)</title><link>https://goldengrape.github.io/posts/python/ray-tracing-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;2017年我差不多把python学会了, 还是挺有成就感的. 这个项目是我刚开始重新学习python的时候做的, 现在看起来有些代码需要再修改一下. 所以重新拿出来写一遍.&lt;/p&gt;
 &lt;p&gt;Ray tracing, 就是光路追迹或者叫光线追踪, 就是跟随一根光线, 看它依次与透镜组的哪些面相交, 怎样折射/反射, 最终落在成像屏幕的什么位置.&lt;/p&gt;
 &lt;p&gt;球面镜的Ray tracing是比较简单的, 直线与平面, 直线与球面的交点就可以写出解析解, 因此求解速度也很快. 球面镜也是很常用的, 毕竟球面镜头便宜. 在自己做的一些项目中, 还是很可能用到球面镜的.&lt;/p&gt;
-&lt;p&gt;所以写一个球面镜的ray tracing程序还是有一些实用价值的.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/ray-tracing-0/</guid><pubDate>Mon, 15 Jan 2018 15:00:00 GMT</pubDate></item><item><title>字符替换练习</title><link>https://goldengrape.github.io/posts/bulabula/eq-price/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;这是一个python正则表达式的练习:&lt;/p&gt;
-&lt;p&gt;我恰好读到曼昆经济学原理中的一小段, 觉得用来练习正则表达式中的文本替换命令很有意思.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content0&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;span class="s1"&gt;价格上限如何影响市场结果&lt;/span&gt;
-
-&lt;span class="s1"&gt;...对冰激凌市场实行价格上限时，可能有两种结果。&lt;/span&gt;
-&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/eq_price.001.png" alt=""&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;span class="s1"&gt;在图6－l（a）幅中，政府实行每个冰激凌蛋卷为4美元的价格上限。&lt;/span&gt;
-&lt;span class="s1"&gt;在这种情况下，由于使供求平衡的价格（3美元）低于上限，&lt;/span&gt;
-&lt;span class="s1"&gt;价格上限没有限制作用。&lt;/span&gt;
-&lt;span class="s1"&gt;市场力量自然而然地使经济向均衡变动，而且，价格上限没有影响。&lt;/span&gt;
-&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/eq_price.002.png" alt=""&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;span class="s1"&gt;图6－l0(b)幅表示另一种结果，这种结果更令人感兴趣，也更可能。&lt;/span&gt;
-&lt;span class="s1"&gt;在这种情况下，政府实行每个冰激凌蛋卷2美元的价格上限。&lt;/span&gt;
-&lt;span class="s1"&gt;由于均衡价格3美元在价格上限之上，所以，价格上限对市场有一种限制性约束。&lt;/span&gt;
-&lt;span class="s1"&gt;供求力量趋向于使价格向均衡变动，但当市场价格达到上限时，就不能再上升了。&lt;/span&gt;
-&lt;span class="s1"&gt;因此，市场价格等于价格上限。&lt;/span&gt;
-&lt;span class="s1"&gt;在这种价格时，冰激凌的需求量（图中的125个）超过了供给量（75个）。&lt;/span&gt;
-&lt;span class="s1"&gt;存在冰激凌短缺，因此，一些在现行价格时想买冰激凌的人买不到。&lt;/span&gt;
-&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;content3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;span class="s1"&gt;当冰激凌短缺的形成是由于这种价格上限时，&lt;/span&gt;
-&lt;span class="s1"&gt;一些配给冰激凌的机制自然就会出现。&lt;/span&gt;
-
-&lt;span class="s1"&gt;这种机制可能是排长队：&lt;/span&gt;
-&lt;span class="s1"&gt;那些愿意提前来到并排队等候的人得到一个冰激凌，&lt;/span&gt;
-&lt;span class="s1"&gt;而另一些不愿意等候的人得不到。&lt;/span&gt;
-
-&lt;span class="s1"&gt;另一种方法是，&lt;/span&gt;
-&lt;span class="s1"&gt;卖者可以根据他们自己的偏好来配给冰激凌，&lt;/span&gt;
-&lt;span class="s1"&gt;只卖给朋友、亲戚或同一种族或民族的成员。&lt;/span&gt;
-
-&lt;span class="s1"&gt;要注意的是，&lt;/span&gt;
-&lt;span class="s1"&gt;尽管价格上限是由帮助冰激凌买者的愿望而促成的，&lt;/span&gt;
-&lt;span class="s1"&gt;但并不是所有买者都能从这种政策中受益。&lt;/span&gt;
-&lt;span class="s1"&gt;一些买者尽管不得不排队等候，但以较低的价格得到冰激凌，&lt;/span&gt;
-&lt;span class="s1"&gt;而另一些买者根本得不到任何冰激凌。&lt;/span&gt;
-
-&lt;span class="s1"&gt;冰激凌市场的这个例子说明了一个一般规律：&lt;/span&gt;
-&lt;span class="s1"&gt;当政府对竞争市场实行限制性价格上限时，就产生了物品的短缺，&lt;/span&gt;
-&lt;span class="s1"&gt;而且，卖者必然在大量潜在买者中配给稀缺物品。&lt;/span&gt;
-
-&lt;span class="s1"&gt;这种价格上限之下产生的配给机制很少是合意的。&lt;/span&gt;
-&lt;span class="s1"&gt;排长队是无效率的，因为这样做浪费了买者的时间。&lt;/span&gt;
-&lt;span class="s1"&gt;根据卖者偏好的歧视&lt;/span&gt;
-&lt;span class="s1"&gt;既无效率（因为物品并没有给予对它评价最高的买者）&lt;/span&gt;
-&lt;span class="s1"&gt;又可能是不公正的。&lt;/span&gt;
-
-&lt;span class="s1"&gt;与此相比，一个自由竞争市场中的配给机制既有效率又客观。&lt;/span&gt;
-&lt;span class="s1"&gt;当冰激凌市场达到均衡时，&lt;/span&gt;
-&lt;span class="s1"&gt;任何一个想支付市场价格的人都可以得到一个冰激凌蛋卷。&lt;/span&gt;
-&lt;span class="s1"&gt;自由市场用价格来配给物品。&lt;/span&gt;
-
-&lt;span class="s1"&gt;摘录来自: [美]N·格里高利·曼昆. “经济学原理”&lt;/span&gt;
-
-&lt;span class="s1"&gt;'''&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="文本替换"&gt;文本替换&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/eq-price/#%E6%96%87%E6%9C%AC%E6%9B%BF%E6%8D%A2"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;2017-18年的秋冬, 有一场很厉害的流感, 导致各个医院儿科爆满. 一时间各种分析很多. 让我们看看曼昆怎么说的.&lt;/p&gt;
-&lt;p&gt;看曼昆对此事的看法, 不妨简单使用文本替换, 将例子中的名词替换成实际生活中的名词&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
-&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;content0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;content1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;content2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;content3&lt;/span&gt;
-&lt;span class="n"&gt;new_content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'冰激凌蛋卷'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"儿科医生"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"冰激凌市场"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"儿科医疗市场"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"冰激凌"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;    &lt;span class="s2"&gt;"儿科医生"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"物品"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"医疗服务"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'买者'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"患儿家长"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-                    &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'卖者'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'儿科医院或医生'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;new_content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;
-价格上限如何影响市场结果
-
-...对儿科医疗市场实行价格上限时，可能有两种结果。
-
-在图6－l（a）幅中，政府实行每个儿科医生为4美元的价格上限。
-在这种情况下，由于使供求平衡的价格（3美元）低于上限，
-价格上限没有限制作用。
-市场力量自然而然地使经济向均衡变动，而且，价格上限没有影响。
-
-图6－l0(b)幅表示另一种结果，这种结果更令人感兴趣，也更可能。
-在这种情况下，政府实行每个儿科医生2美元的价格上限。
-由于均衡价格3美元在价格上限之上，所以，价格上限对市场有一种限制性约束。
-供求力量趋向于使价格向均衡变动，但当市场价格达到上限时，就不能再上升了。
-因此，市场价格等于价格上限。
-在这种价格时，儿科医生的需求量（图中的125个）超过了供给量（75个）。
-存在儿科医生短缺，因此，一些在现行价格时想买儿科医生的人买不到。
-
-当儿科医生短缺的形成是由于这种价格上限时，
-一些配给儿科医生的机制自然就会出现。
-
-这种机制可能是排长队：
-那些愿意提前来到并排队等候的人得到一个儿科医生，
-而另一些不愿意等候的人得不到。
-
-另一种方法是，
-儿科医院或医生可以根据他们自己的偏好来配给儿科医生，
-只卖给朋友、亲戚或同一种族或民族的成员。
-
-要注意的是，
-尽管价格上限是由帮助儿科医生患儿家长的愿望而促成的，
-但并不是所有患儿家长都能从这种政策中受益。
-一些患儿家长尽管不得不排队等候，但以较低的价格得到儿科医生，
-而另一些患儿家长根本得不到任何儿科医生。
-
-儿科医疗市场的这个例子说明了一个一般规律：
-当政府对竞争市场实行限制性价格上限时，就产生了医疗服务的短缺，
-而且，儿科医院或医生必然在大量潜在患儿家长中配给稀缺医疗服务。
-
-这种价格上限之下产生的配给机制很少是合意的。
-排长队是无效率的，因为这样做浪费了患儿家长的时间。
-根据儿科医院或医生偏好的歧视
-既无效率（因为医疗服务并没有给予对它评价最高的患儿家长）
-又可能是不公正的。
-
-与此相比，一个自由竞争市场中的配给机制既有效率又客观。
-当儿科医疗市场达到均衡时，
-任何一个想支付市场价格的人都可以得到一个儿科医生。
-自由市场用价格来配给医疗服务。
-
-摘录来自: [美]N·格里高利·曼昆. “经济学原理”
-
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;hr&gt;
-&lt;p&gt;读起来好像还很通顺的. 我隐约记得高中政治经济学里面还是讲过基本的供求曲线的.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><guid>https://goldengrape.github.io/posts/bulabula/eq-price/</guid><pubDate>Mon, 15 Jan 2018 05:20:34 GMT</pubDate></item></channel></rss>
+&lt;p&gt;所以写一个球面镜的ray tracing程序还是有一些实用价值的.&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/ray-tracing-0/</guid><pubDate>Mon, 15 Jan 2018 15:00:00 GMT</pubDate></item></channel></rss>
