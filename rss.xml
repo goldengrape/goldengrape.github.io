@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 21 Jan 2018 09:39:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何向成人灌输一个观点</title><link>https://goldengrape.github.io/posts/bulabula/how-to-inception/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在上一篇&lt;a href="https://goldengrape.github.io/posts/python/dejunkifying-a-plot"&gt;"统计图整理"&lt;/a&gt;中, 展示了如何把一个具有浓郁乡土气息的bar
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 21 Jan 2018 14:14:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何向成人灌输一个观点</title><link>https://goldengrape.github.io/posts/bulabula/how-to-inception/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在上一篇&lt;a href="https://goldengrape.github.io/posts/python/dejunkifying-a-plot"&gt;"统计图整理"&lt;/a&gt;中, 展示了如何把一个具有浓郁乡土气息的bar
 &lt;img alt="p0" src="https://i.loli.net/2018/01/21/5a644e647a799.png"&gt;
 变成性冷淡的bar:
 &lt;img alt="p7" src="https://i.loli.net/2018/01/21/5a644e64a71b6.png"&gt;&lt;/p&gt;
@@ -1678,7 +1678,8 @@ dtype: int64&lt;/pre&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 </description><category>cheat sheet</category><category>python</category><guid>https://goldengrape.github.io/posts/python/cheatsheet/matplotlib-cheat-sheet/</guid><pubDate>Fri, 19 Jan 2018 18:30:00 GMT</pubDate></item><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
-&lt;p&gt;两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.&lt;/p&gt;
+&lt;p&gt;两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.
+(1月21日更新, 温控继电器应当使用PID控制器, 这样总价约200元人民币, 结尾详述)&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;选型&lt;/h2&gt;
@@ -1700,9 +1701,11 @@ dtype: int64&lt;/pre&gt;
 &lt;p&gt;金属头的好处是很细, 恰好可以从锅盖上的排气孔穿过去. 外面稍微固定一下, 探头最好悬浮在水里.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="WechatIMG155" src="https://i.loli.net/2018/01/18/5a601da1866cb.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;注意温控继电器的额定功率, 显然要大于电火锅的功率.&lt;/p&gt;
+&lt;p&gt;(1月21日更新, 温控继电器应当使用PID控制器, 结尾详述)&lt;/p&gt;
 &lt;h2&gt;缺点&lt;/h2&gt;
 &lt;p&gt;先说缺点, 这种设定下没有强制水循环的装置, 不打算放个水泵在里面了. 在没有沸腾的时候, 靠水体自身热量扩散和轻微的循环, 水温不均匀, 也不能快速达到热平衡.&lt;/p&gt;
 &lt;p&gt;结果就是控温的负反馈响应慢, 温度不能精确控制在一定范围内, 刚才测试中温度设定在60度, 实际最高可以到70度. 我估计可能以后设定温度可能应该比目标温度低上5度.&lt;/p&gt;
+&lt;p&gt;(1月21日更新, 温控继电器在更换成PID控制器以后, 误差范围在1-2摄氏度, 结尾详述)&lt;/p&gt;
 &lt;h2&gt;优点&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;可以加佐料!&lt;/li&gt;
@@ -1740,7 +1743,13 @@ dtype: int64&lt;/pre&gt;
 &lt;/em&gt; 实际: 最高温度64, 最低温度57, 4分钟从57上升到64, 然后40分钟从64下降回57.约45分钟一个周期
 &lt;img alt="" src="https://goldengrape.github.io/images/slow_cooker_temperature.png"&gt;&lt;/p&gt;
 &lt;h2&gt;更新&lt;/h2&gt;
-&lt;p&gt;在推上被科普了PID控制器, 有开放的讨论就是好啊. 等到货了以后再评测. &lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;在推上被科普了PID控制器, 有开放的讨论就是好啊. 等到货了以后再评测.&lt;/p&gt;
+&lt;h2&gt;PID控制器&lt;/h2&gt;
+&lt;p&gt;被科普PID控制器以后, 重新买了一个型号为XH-W2103的控制器. ~100元人民币. 利用其"自整定功能", 可以找到合适的控制参数, 现在的数据是首次"超调"的温度, 也就是从室温25度直接加热开始, 大约只高出1.8摄氏度. 然后误差就在1度之内了.&lt;/p&gt;
+&lt;p&gt;PID控制器的全程是proportional–integral–derivative controller. 比例-积分-微分控制器.&lt;/p&gt;
+&lt;p&gt;在youtube上找到了&lt;a href="https://www.youtube.com/watch?v=UR0hOmjaHp0"&gt;讲解视频&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;所以现在我推荐是使用PID控制器来控制温度.&lt;/p&gt;
+&lt;p&gt;还有一个问题, 是上次金属温度探头经过卤水煮过以后, 表面出现了深色的污渍, 刮擦不能去除, 有可能是金属表面的氧化或者腐蚀. 所以下次做卤肉可能需要用一小块塑料食品袋包裹金属温度探头了.&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item><item><title>Fibonacci数列通项公式</title><link>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;

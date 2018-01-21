@@ -28,6 +28,7 @@ MathJax.Hub.Config({
 <meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/">
 <meta property="og:description" content="我怎么早没想到!
 两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.
+(1月21日更新, 温控继电器应当使用PID控制器, 这样总价约200元人民币, 结尾详述)
 
 
 选型
@@ -35,9 +36,7 @@ MathJax.Hub.Config({
 电火锅
 
 电火锅一定要选择足够傻的, 也就是说接通电源就进入工作状态, 断开电源就关闭, 再接通电源还回到工作状态.  
-万万不可有什么中间的待机状态. 就是那种自作聪明的电器,  接通电源以后进入一个待机状态, 非要等人再按一下才肯工作. 特点是往往有触摸按键, 或者自称微电脑控制.
-
-图中">
+万万不可有什么中间的待机状态. 就是那种自作聪明的电器,  接通电源以后进入一">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-01-18T12:00:04+08:00">
 <meta property="article:tag" content="life science">
@@ -100,7 +99,8 @@ MathJax.Hub.Config({
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
 <p>我怎么早没想到!</p>
-<p>两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.</p>
+<p>两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.
+(1月21日更新, 温控继电器应当使用PID控制器, 这样总价约200元人民币, 结尾详述)</p>
 <!-- TEASER_END -->
 
 <h2>选型</h2>
@@ -122,9 +122,11 @@ MathJax.Hub.Config({
 <p>金属头的好处是很细, 恰好可以从锅盖上的排气孔穿过去. 外面稍微固定一下, 探头最好悬浮在水里.</p>
 <p><img alt="WechatIMG155" src="https://i.loli.net/2018/01/18/5a601da1866cb.jpeg"></p>
 <p>注意温控继电器的额定功率, 显然要大于电火锅的功率.</p>
+<p>(1月21日更新, 温控继电器应当使用PID控制器, 结尾详述)</p>
 <h2>缺点</h2>
 <p>先说缺点, 这种设定下没有强制水循环的装置, 不打算放个水泵在里面了. 在没有沸腾的时候, 靠水体自身热量扩散和轻微的循环, 水温不均匀, 也不能快速达到热平衡.</p>
 <p>结果就是控温的负反馈响应慢, 温度不能精确控制在一定范围内, 刚才测试中温度设定在60度, 实际最高可以到70度. 我估计可能以后设定温度可能应该比目标温度低上5度.</p>
+<p>(1月21日更新, 温控继电器在更换成PID控制器以后, 误差范围在1-2摄氏度, 结尾详述)</p>
 <h2>优点</h2>
 <ul>
 <li>可以加佐料!</li>
@@ -162,7 +164,13 @@ MathJax.Hub.Config({
 </em> 实际: 最高温度64, 最低温度57, 4分钟从57上升到64, 然后40分钟从64下降回57.约45分钟一个周期
 <img alt="" src="../../../images/slow_cooker_temperature.png"></p>
 <h2>更新</h2>
-<p>在推上被科普了PID控制器, 有开放的讨论就是好啊. 等到货了以后再评测. </p>
+<p>在推上被科普了PID控制器, 有开放的讨论就是好啊. 等到货了以后再评测.</p>
+<h2>PID控制器</h2>
+<p>被科普PID控制器以后, 重新买了一个型号为XH-W2103的控制器. ~100元人民币. 利用其"自整定功能", 可以找到合适的控制参数, 现在的数据是首次"超调"的温度, 也就是从室温25度直接加热开始, 大约只高出1.8摄氏度. 然后误差就在1度之内了.</p>
+<p>PID控制器的全程是proportional–integral–derivative controller. 比例-积分-微分控制器.</p>
+<p>在youtube上找到了<a href="https://www.youtube.com/watch?v=UR0hOmjaHp0">讲解视频</a></p>
+<p>所以现在我推荐是使用PID控制器来控制温度.</p>
+<p>还有一个问题, 是上次金属温度探头经过卤水煮过以后, 表面出现了深色的污渍, 刮擦不能去除, 有可能是金属表面的氧化或者腐蚀. 所以下次做卤肉可能需要用一小块塑料食品袋包裹金属温度探头了.</p>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
