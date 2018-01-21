@@ -104,6 +104,10 @@ There's still a lot of gridwork left in this image and it's a bit unclear what t
 >3:52
 Just removing the lines doesn't make it easier to read. But the values of the data are pretty simple here. So let's directly label each bar in the graphic.
 
+# 我的观点
+
+其实我仍然不认同直接标注数字这件事. 统计图的目的本来就是为了给人以直观印象, 要我看着标注数字心算已经背离了统计图的初衷了. 南丁格尔前辈不会认可的. 
+
 <!-- EOF -->
 <!-- 其他图片
 ![p1](https://i.loli.net/2018/01/21/5a644e6417464.png)
