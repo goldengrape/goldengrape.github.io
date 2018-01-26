@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/Ukraine-reduce-tax-problem/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/worldbank-data-cleaner/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,47 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/Ukraine-reduce-tax-problem/" class="u-url">乌克兰减税问题</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/worldbank-data-cleaner/" class="u-url">世界银行数据清洗器</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/worldbank-data-cleaner/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-27T00:18:00+08:00" title="2018-01-27 00:18">2018-01-27 00:18</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/worldbank-data-cleaner/#disqus_thread" data-disqus-identifier="cache/posts/python/世界银行数据清洗器.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="World-bank-data-cleaner">World bank data cleaner<a class="anchor-link" href="posts/python/worldbank-data-cleaner/#World-bank-data-cleaner">¶</a>
+</h2>
+<p>世界银行数据清洗工具.</p>
+<p>世界银行有个开放的数据库<a href="http://data.worldbank.org">http://data.worldbank.org</a> 这个数据库很强大, 里面有各国各种经济数据. 我看了GDP, GDP年增长率, 税收, 税收占GDP百分比几个数据集, 发现里面的格式基本相同. 因此就可以统一清理数据了.</p>
+<p>所以做了一个这样的简单清洗器. 两个函数:</p>
+<ul>
+<li>worldbank_data_reader(filename)用于读取原始数据, 因为读取一次文件的成本较高, 而处理的方式可以很多样, 所以建议先读取数据以后保存在一个dataframe中. </li>
+<li>worldbank_data_cleaner(origin_df, countries="global", years=(1996,2006)): 对origin_df这个dataframe进行清洗, 提取出感兴趣的国家和感兴趣的年份, 返回出的Dataframe以年份作为index, 以国家名作为columns<ul>
+<li>countries 默认为"global", 返回所有国家信息, 也可以使用列表指定感兴趣的国家名, 例如countries=["China","United States"], 注意使用正确的国家名称</li>
+<li>years=(1996, 2006), 按照python的习惯, 返回自1996年至2006年前的数据, 也就是1996, 1997..2004, 2005年的数据. <p class="more"><a href="posts/python/worldbank-data-cleaner/">更多…</a></p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/Ukraine-reduce-tax-problem/" class="u-url">乌克兰减税问题</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/python/Ukraine-reduce-tax-problem/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-26T01:15:00+08:00" title="2018-01-26 01:15">2018-01-26 01:15</time></a></p>
@@ -302,36 +342,6 @@ MathJax.Hub.Config({
 <p>但还是有方法的.
 </p>
 <p class="more"><a href="posts/Machine_Learning/ML-IP-2/">更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/pyathon-ray-tracing-1/" class="u-url">如何写一个球面Ray tracing程序(1)</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/python/pyathon-ray-tracing-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-01-15T23:30:00+08:00" title="2018-01-15 23:30">2018-01-15 23:30</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/python/pyathon-ray-tracing-1/#disqus_thread" data-disqus-identifier="cache/posts/python/如何写一个球面Ray-tracing程序(1).html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="直线与平面的交点">直线与平面的交点<a class="anchor-link" href="posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E4%B8%8E%E5%B9%B3%E9%9D%A2%E7%9A%84%E4%BA%A4%E7%82%B9">¶</a>
-</h2>
-<p>在Ray tracing的时候，如果光线最终打到一个平面屏幕上，就需要知道每个光线的落点。直线和平面的交点求解比较简单，先用来练手热身。</p>
-<p class="more"><a href="posts/python/pyathon-ray-tracing-1/">更多…</a></p>
-</div>
-</div>
-</div>
-</div>
 </div>
     </div>
     </article>
