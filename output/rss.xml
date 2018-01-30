@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 26 Jan 2018 16:27:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>世界银行数据清洗器</title><link>https://goldengrape.github.io/posts/python/worldbank-data-cleaner/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 30 Jan 2018 13:35:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>励志两则: 为学</title><link>https://goldengrape.github.io/posts/bulabula/weixue/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;(写于2012年3月)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;学位和能力是两码事，顶多有点相关性，相关系数还不是很高。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;学位和学识也是两码事，即使读到头，不继续学习的话，马上知识就陈旧了。所谓逆水行舟，不进则退。其实这个比喻是有欠缺的，&lt;strong&gt;一般会认为水流速度是常数，但是请设想一下水流的速度是指数函数呢？&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;读研的过程中更重要的是和老板、同学以及老板的同学们多多交流，保持近朱者赤的状态。一旦开始工作，周围就没有那么强的研究气氛了，只有少数人能够坚持学习，绝大多数人会每天8小时干自己不喜欢的工作，8小时看电视+通勤+吃饭，8小时睡觉，然后每年年底感叹一下时间过得真快啊。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;个人认为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;本科时还是通识教育，各种基础课都要上，比如临床都会哀叹学高数有什么用啊，但其实我国生物医学进步速度跟大一的时候不学Python有严重的关系。当年居然被教考古一般的Fortran，幸好我都翘掉了去学C和汇编。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;硕士阶段是战术训练，老板告诉学生要做的题目，学生来想怎么做，完成迅速掌握并且优化实验技能的训练，老板在关键点上进行一些指导。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;博士阶段是战略训练，学生要自己考虑去做什么，选什么样的题目，评估收益、风险、可行性，对实验室资源的利用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;博士后没做过，这个阶段应该已经是独立的研究者了，要开始着手自己找基金。学习运营一个独立的实验室了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以现在以及不久将来的资源，即使不在学校内，也是能够接受这些教育的，顺便推荐MITx，我要补一补电子学的课，大学的时候没有焊个板子，没有做个锤子实在是人生遗憾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果有可能，我还建议多在几个地方转转，不同的老板有不同的风格，有比较的话可以知道到底好在哪里，以及为什么，企业的研发也要去看看，可惜研发基本都不在中国。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实验室其实就是一个企业，导师之所以被称为老板，其实因为他就是老板。读研的过程就是学习怎么样从一个学生到员工再成长到老板的过程。从运营实验室的角度来说，老板并没有义务一定要教你多少东西，够毕业就可以了。特别是当老板是大牛的时候，更是如此，你可能指望一个大型企业的CEO手把手教实习生么？导师拿出1分力气教也是教，拿出10分力气教也是教，但效果是完全不同。老板有多个学生的时候，怎么抢着学，就是学生的本事了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对临床研究生。手术训练时，带手术是有极大风险的，不给机会是默认值，要靠学生证明自己能力足够好风险够小的时候才给出的机会。要想缝个皮，先去把手套缝够了再说。当年外科实习的时候，手术中主刀台上提问都包含两问：1.我要问什么，2.你要答什么。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;学习的各阶段都会反复出现这样的循环：大一不知道自己不知道，大二知道自己不知道，大三不知道自己知道，大四知道自己知道。其实到了研一，又开始不知道自己不知道的状态。学生时代，总是不断有来自老师、考试、答辩的压力使人一级一级进步，但是工作之后，当这些来自外部的压力停止以后，很容易就停止在了不知道自己不知道的状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考：
+&lt;a href="https://www.guokr.com/question/118014/"&gt;果壳问答：我认为上研究生不是很必要，尤其是科学学位的。除了临床医学生。各位硕士的想法是什么呢？？&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/weixue/</guid><pubDate>Tue, 30 Jan 2018 13:10:00 GMT</pubDate></item><item><title>励志两则: 劝学</title><link>https://goldengrape.github.io/posts/bulabula/quanxue/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看到starnight做&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/StarKnight/status/958301772325429248"&gt;#推特小调查:
+你读（读过）励志类书籍吗？&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;蛤, 读过算什么, 我还写过呢. 来两篇以前的:&lt;/p&gt;
+&lt;p&gt;(写于2012年)
+学习是个持续过程。&lt;/p&gt;
+&lt;p&gt;逆水行舟不进则退。逆水行舟不进则退还是不确切的，因为通常水流速度是常数。但是考虑人类的知识进展的速度，却可能是指数函数。也就是说，逆水行舟，水的速度是指数变化，这事想起来非常可怕。也许你现在每周需要看两篇文献能够保持在前沿的位置，18个月以后，是每周四篇，3年以后是每周8篇。。。20年以后，我们就必须用Matrix的upload功能来学习了。当然现在事情还没有那么夸张，不同领域的倍增时间并不相同。&lt;/p&gt;
+&lt;p&gt;我觉得自学，或者说自己对自己的继续教育是需要持续进行的。
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;大家都应该有过自学的经验。高中时候开始要上课睡觉，本科时候开始要翘课。总有没听老师讲到的部分，这些零碎的部分是需要自学补充上的。过了本科以后，到研究生阶段，可能一半以上的知识是来自于自学的。如果是程序编写什么的，基本上就是90%的自学吧。&lt;/p&gt;
+&lt;p&gt;翘课、上课睡觉之后补充的自学，和系统性的自学一门学科是不同的。前者没什么难度，后者有许多陷阱。以我个人的经验简述一些自学技巧。&lt;/p&gt;
+&lt;h2&gt;自学最重要的技巧就是要慢。&lt;/h2&gt;
+&lt;p&gt;不能一页一页的翻书看过去，否则看到后面像滑冰，越翻越快，却得到一堆模糊的概念，这种时候最容易被误导。学编程建议是手敲书上的每一个例子，理工科建议是每一个公式或者例题推导一遍，也可以选择本领域的专业软件来学。&lt;/p&gt;
+&lt;h2&gt;自学之中另一个重要技巧就是要认错。&lt;/h2&gt;
+&lt;p&gt;大概这个是区别民科与非民科的关键吧。科班教育一直有强大压力迫使你发现错误，自学的时候，正确答案不一定进入你的视野，甚至于不使劲找，并不知道。但是一旦当有人提出异议或者发现自己的错误，就要非常谨慎的分析，整合信息。这个过程不是法庭上或者辩论赛中的“辩护”过程，而是获得新的信息以后，重新建模的过程。在学习过程中，会有各种创意，而且尤其是在学新东西的时候，创造力恰是爆发的时候，此时不宜着急去钻进自己的创意之中，而应该赶紧记录下来，然后清空大脑，继续学新的，否则钻进自己的想法不容易出来。过一段时间，几周或者几个月再看之前的创意，会发现有些是可笑的，有些是书的下一章，有些有人证明不对，有些就是没人想过的。此时再挑出其中的一些拿出来研究。此处强烈推荐使用evernote
+学而不思则罔，思而不学则殆。殆的危害远远大于罔。钻进自己的思路里出不来，会走火入魔的。&lt;/p&gt;
+&lt;h2&gt;自学的第三个技巧就是要找。&lt;/h2&gt;
+&lt;p&gt;找，一个是找资源，一个是找人。&lt;/p&gt;
+&lt;p&gt;现在有各种公开课，找资源已经方便多了。找自学的材料，就是要找各种专业领域内经过验证的教材。而且从一开始就要找对专业教材。否则“习惯成自然，再改就很难”。比如一开始要看曼昆的《宏观经济学》，但是一开始如果你看的是《货币战争》，那就没救了。&lt;/p&gt;
+&lt;p&gt;找合适的人交流学习也是非常重要的，不同大学之间的区别其实主要是在人，老师和同学，盖了多少房子倒是其次。拜网络所赐，现在也可以在网上找到许多可以学习的伙伴。从微博、twitter还有果壳，以及各种问答网站，论坛，MITx。。。都可以找到相关领域的同学、老师，随手at一下，就可以开展讨论。 顺便说，自己的网络形象要注意树立，多发有营养的东西，这样与人搭讪才有人理。周末北京有无数的讲座、沙龙，比如去万有青年烩听听好玩的东西，还可以和做这些东西的人交流。&lt;/p&gt;
+&lt;h2&gt;自学的第四个技巧就是实践。&lt;/h2&gt;
+&lt;p&gt;这也是最难的一部分。可以从几个不同的层级进行。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a. 维基百科 /百度百科 /科普写作：记忆学习内容最牢固的方法是教给别人，如果能有机会毁人不倦最好。如果没有这种机会，不妨把学会的东西用自己的理解转述放到wiki上，如果有错误，很快就有人会帮你指出。写科普也是很好的复习方法。比如我在这总结自学技巧，其实是给自己看的。&lt;/li&gt;
+&lt;li&gt;b. 软件模拟：现在的软件越来越强大了。学习一个专业领域内的软件，可以使学习事半功倍，而且实践起来也很容易。比如数学软件Mathematica(或者wolframalpha.com), MatLab；光学软件Zemax，Oslo；机械类的SolidWorks。。。这些行业标准级的软件，连帮助文件也是上等的教科书。电子学的话，最近在用https://www.circuitlab.com&lt;/li&gt;
+&lt;li&gt;c. 开源项目：对于编程学习来说，能做一个开源项目，应该是非常好的学习方式。唉，目前我还没有这个能力。&lt;/li&gt;
+&lt;li&gt;d. 购买与交换：金钱是用来交换的，除了购买生活必需品、奢侈品以外，还可以用来交换时间、空间、能力、技巧以及知识。以前我们接受的教育往往是“钱不是万能的”，我建议换个角度考虑“如何让金钱『万能』起来”。有些实践是可以外包出去的。你不一定需要果壳DIY里各位达人的那么高超的焊接技巧，去电脑维修的地方请个人帮你焊接也是一样的。甚至直接在淘宝上定制货品，比如我曾经做了一个红外的干扰器，可以干扰一些相机的拍摄，概念产品就是从淘宝上订购的一个激光舞台灯，要求对方把激光模组更换了一下。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;e. 参加研究项目：有机会的话，要参加一些研究项目。没机会的话，多创造机会吧。也可以从参加一些公益活动开始。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;x. 医学的实践机会非常难得，特别是手术操作，很多地方到了主治甚至副高，重要的手术也还没开始训练。传说有前辈可以仅靠看别人的手术录像就把phaco手术学会，现在的医疗环境应该已经不允许了，可以先用动物模型演练，眼科专业的请移步我写的&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;《phaco训练手册》&lt;/a&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;y. SCI文章。虽然大家会嘲笑SCI是Stupid Chinese Index，但同行评议才是科学的检验方法，越是痛苦，越是困难，才越说明它有效。&lt;/li&gt;
+&lt;li&gt;z. 市场检验。这才是学习的终极实践。你发明了69式永动机？别告诉别人，别跟人脸红脖子粗的理论。自己开始做吧，先把自家的电钱省了，然后是亲友家，再到小区……看看那些IT界诸神，也许下一个神话时代已经悄悄开始了。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;与其每天晚上追电视剧，不如每天晚上追公开课。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;又看到一句：“以大多数人的努力程度之低，根本轮不到去拼天赋”，留作自勉&lt;/p&gt;
+&lt;p&gt;参考：
+&lt;a href="https://www.guokr.com/question/132920/"&gt;果壳问答：自然科学和社会科学中，有哪些学问是可以自学的，而哪些必须有科班经历？为什么会这样？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;2018年回头看看, 我还是学了很多好玩的东西. 其中有一些自己还写了&lt;a href="https://goldengrape.github.io/categories/jiao-cheng/"&gt;教程&lt;/a&gt;, 确实很有乐趣啊.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/quanxue/</guid><pubDate>Tue, 30 Jan 2018 13:00:00 GMT</pubDate></item><item><title>世界银行数据清洗器</title><link>https://goldengrape.github.io/posts/python/worldbank-data-cleaner/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -3385,61 +3476,4 @@ $$\frac{2^{- n}}{5} \sqrt{5} \left(\left(1 + \sqrt{5}\right)^{n} - \left(- \sqrt
 &lt;p&gt;这些还只是比较了在光轴上的参数, 还有比如角膜直径被标成12-13, 人眼的角膜是10-11, 猪眼才13.&lt;/p&gt;
 &lt;p&gt;如果你觉得Gullstrand模型眼太古老, 也可以去Zemax上找到&lt;a href="http://customers.zemax.com/os/resources/learn/knowledgebase/how-to-model-the-human-eye-in-zemax"&gt;如何建立人眼光学模型的教程&lt;/a&gt;, 参数上会有一些差别, 比如角膜厚度是0.55, 这个更接近人体测量值. 但即使有差别, 也不至于把厚度差到猪眼上去.&lt;/p&gt;
 &lt;p&gt;哦, 对了, 如果你想用Gullstrand模型眼做个什么简单的模拟或者计算, 我这里已经准备好了&lt;a href="https://goldengrape.github.io/posts/python/abcd-matrix/"&gt;ABCD矩阵&lt;/a&gt;&lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/why-magicleap-fall/</guid><pubDate>Tue, 16 Jan 2018 08:30:00 GMT</pubDate></item><item><title>眼科科普索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;请使用CTRL+F或+F查找相应关键词.&lt;/p&gt;
-&lt;p&gt;有些文章写作时间较早, 可能有必要更新. 有些文章我可能会从果壳的日志上逐渐搬运过来. 果壳的图床有时会出问题, 还是放在自己这里安心一些. &lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;hr&gt;
-&lt;h2&gt;总论&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/"&gt;如何看病&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼病的视觉感受&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/article/156504/"&gt;眼睛一生病，世界就变样&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;高度近视&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/114894/"&gt;简介：高度近视定期查眼底&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/176929/"&gt;近视眼坐过山车容易视网膜脱落么？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/102643/"&gt;有没有通过纠正晶状体治疗近视的方法？近视导致是否会反应速度减慢？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;近视手术&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://songshuhui.net/archives/58085"&gt;准分子激光角膜屈光手术——问与答(上)&lt;/a&gt;
-&lt;a href="http://songshuhui.net/archives/58100"&gt;准分子激光角膜屈光手术——问与答(中)&lt;/a&gt;
-&lt;a href="http://songshuhui.net/archives/58110"&gt;准分子激光角膜屈光手术——问与答(下)&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;散光&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/102489/"&gt;跟进宝学眼科之散光&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/102222/"&gt;微博刷屏会导致眼睛散光，视力下降吗？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;隐形眼镜&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/article/94773/"&gt;“美瞳”：美丽是否要付出代价&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/195649/"&gt;如何挑选适合的隐形眼镜？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/177378/"&gt;隐形眼镜能滑到眼球后面吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/177392/"&gt;晚上睡觉不摘隐形眼镜会有什么后果？隐形眼镜一次可以戴几小时？ 戴隐形眼镜有什么注意事项么？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/118776/"&gt;闺蜜说，隐形眼镜等于有男友，是真的吗？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼药水&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/article/87604/"&gt;眼药水闪亮不了你的双眼&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/96843/"&gt;人乳治疗眼部炎症是可行的吗?&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;青光眼&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/117302/"&gt;跟进宝学眼科之青光眼&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;白内障&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/73506/"&gt;白内障FAQ&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;麦粒肿&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/115715/"&gt;指甲上画十字能治疗麦粒肿？如果是谣言，正确的方法是什么？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼外伤&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/172712/"&gt;眼球受到外来的尖锐物品的刺伤，后果会是怎样？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;灯光&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/"&gt;蓝光的故事&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;VR/AR&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/"&gt;关于VR与近视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</guid><pubDate>Tue, 16 Jan 2018 05:00:01 GMT</pubDate></item><item><title>机器学习的知识产权保护(2)--侵权检测</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上次说到机器学习的知识产权保护中&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML-IP"&gt;保护的困难&lt;/a&gt;, 特别是在侵权识别之中. 由于现阶段机器学习的参数解释起来很困难, 不能够简单设定一个保护范围. 也难以逆向工程别人的模型获得所有的参数.&lt;/p&gt;
-&lt;p&gt;但还是有方法的.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;以深度神经网络为例. 其他机器学习也有类似的特点. 深度神经网络(DNN)总会有个风险叫做"过拟合" overfitting, 某种程度上, 这是一种记忆, DNN记住了发来的训练集中的数据, 一旦再次有这些数据输入, DNN就可以调用出原来训练过的输出. 于是在训练的时候, 可能误差很小, 但用测试数据集去测试的时候误差却很大. 这样的DNN缺乏"泛化"能力, 相当于一个学生擅长死记硬背, 却不能举一反三.&lt;/p&gt;
-&lt;p&gt;这个特点就可以用来作为DNN的"身份识别"了. 类似师傅教徒弟, 某一个招式本门派的应对是固定的, 由于反复训练, 徒弟们都记在了心里. 比如对面来一直拳, 别的门派都是向后躲, 本门派的却是向前侧躲. 那么行走江湖的时候, 碰见对手一拳打过去是向前侧躲的, 多半就是本门派的师兄弟了.
-(貌似哪个武侠小说里有类似的情节)&lt;/p&gt;
-&lt;p&gt;在DNN中, 方法可以是这样的:&lt;/p&gt;
-&lt;p&gt;准备一组数据对作为"数据探针", 比如输入图像都是猫, 但却在图片中心点有一个白点, 而输出结果中, 把这些猫的图像都标记为狗.&lt;/p&gt;
-&lt;p&gt;这些数据copy很多份, 放入DNN的训练集之中, 反复训练, 使得DNN对这些数据发生了过拟合, 记住了这些数据探针. 一旦有猫图中心有白点的图片输入, 本DNN就会认成是狗而不是猫.&lt;/p&gt;
-&lt;p&gt;那么, 当本DNN的结构和参数有可能被盗用的时候, 并不需要对可疑的DNN进行逆向工程, 只需要将数据探针送入可疑DNN中, 看看输出的结果是怎样的, 如果发现回报的结果是狗, 就多了几分可疑. 如果很多数据探针都能够检出, 那么从本DNN盗用的可能性就极高了.&lt;/p&gt;
-&lt;p&gt;这就是一种不开箱来检查黑箱的方法.&lt;/p&gt;
-&lt;p&gt;本来最近我也写了一个这样的发明. 可惜早有先贤写出了同样的方案.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://pdfstore.patentorder.com/pdf/us/449/us2017206449.pdf"&gt;Title: Neural Network Verification;&lt;/a&gt;
-申请人: Hewlett Packard Enterprise Development LP;
-申请日: September 17, 2014;
-公开日: July 20, 2017.&lt;/p&gt;
-&lt;p&gt;只比我早三年嘛, 也还不差.&lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>发明</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML-IP-2/</guid><pubDate>Tue, 16 Jan 2018 02:00:01 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/why-magicleap-fall/</guid><pubDate>Tue, 16 Jan 2018 08:30:00 GMT</pubDate></item></channel></rss>
