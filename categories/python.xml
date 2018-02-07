@@ -1,5 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Feb 2018 06:37:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>NOAA天气数据格式转换</title><link>https://goldengrape.github.io/posts/python/NOAA-weather-data-from-dly-to-pandas-df/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 07 Feb 2018 09:58:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用jupyter写程序时小心意外的全局变量</title><link>https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这周写作业, 用jupyter时遇坑一枚, 导致我改了作业10次以后才全对通过. 
+&lt;img src="https://i.loli.net/2018/02/07/5a7abfe105014.png" alt="10次交作业"&gt;
+而且这个坑与我当前的编程习惯有关. 有必要记录下来, 以免未来再犯. 
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="过程重现"&gt;过程重现&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/#%E8%BF%87%E7%A8%8B%E9%87%8D%E7%8E%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [19]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lstm_forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;caches&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    
+    &lt;span class="c1"&gt;### START CODE HERE ###&lt;/span&gt;
+    &lt;span class="c1"&gt;# Retrieve dimensions from shapes of x and Wy (≈2 lines)&lt;/span&gt;
+    &lt;span class="n"&gt;n_x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;T_x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+    &lt;span class="n"&gt;n_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Wy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+    
+    &lt;span class="c1"&gt;# initialize "a", "c" and "y"&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;T_x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;T_x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;T_x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    
+    &lt;span class="c1"&gt;# other code&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;caches&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [18]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;a0&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Wy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;by&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;parameters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"Wy"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Wy&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"by"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;caches&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lstm_forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a[4][3][6] = "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"a.shape = "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"y[1][4][3] ="&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"y.shape = "&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;a[4][3][6] =  0.177161164438
+a.shape =  (5, 10, 7)
+y[1][4][3] = 0.15098073328
+y.shape =  (2, 10, 7)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;coursera这门RNN的课程作业, 一般都会给出每一次测试的期望结果, 比如会写明, 输出结果应当是:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="mf"&gt;0.177161164438&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mf"&gt;0.15098073328&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;当然实际计算比这个复杂, 我不应该展示作业中的代码, 并不会完整展示整个函数内部.&lt;/p&gt;
+&lt;p&gt;由于指定了随机数种子np.random.seed(1), 这个结果是可以重现的, 又因为输入是随机数, 如果计算过程错了, 几乎很难出现相同的结果.&lt;/p&gt;
+&lt;p&gt;所以当我看到计算的结果和期望的输出结果一致, 就理所当然认为自己已经做对了, 于是安心提交, 于是每次都是这个函数无法通过. 但函数内部没有太复杂的计算过程, 怎么也找不到哪里错了, 差点就向coursera报bug了. 直到我搜讨论区里的帖子, 看到&lt;a href="https://www.coursera.org/learn/nlp-sequence-models/discussions/weeks/1/threads/dEtBDwcQEei__wr1QTcVxA/replies/jpn0MAcSEei-vwoKMc4stg/comments/nXGxtQcdEei9nwpnlVcPbA"&gt;这一条&lt;/a&gt;, 才搞清楚了问题在哪里.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="bug解释"&gt;bug解释&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/#bug%E8%A7%A3%E9%87%8A"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;注意这里:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lstm_forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# Retrieve dimensions from shapes of x and Wy&lt;/span&gt;
+    &lt;span class="n"&gt;n_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Wy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;我只看到提示说要从Wy里提取出维度信息, 于是就直接取了Wy.shape, 但参数表&lt;code&gt;def lstm_forward(x, a0, parameters):&lt;/code&gt;之中并没有Wy!&lt;/p&gt;
+&lt;p&gt;Wy因为没有出现在参数表里, 没有和参数表中的(x,a0,paramaters) bound在一起, 所以其实是一个&lt;a href="https://en.wikipedia.org/wiki/Free_variables_and_bound_variables"&gt;free variable&lt;/a&gt;, 一个free variable的取值要从函数外面找, 如果函数外面没有, 自然就会报错.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;倒霉的是自己在一个jupyter文件内运行, 和把作业提交给coursera进行检测是两种不同的情况.&lt;/p&gt;
+&lt;p&gt;自己运行测试的时候是&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Wy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parameters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"Wy"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Wy&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"by"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;caches&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lstm_forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里Wy被Wy = np.random.randn(2,5)定义了, 所以在lstm_forward函数内部, 用Wy.shape时会直接找到这里.&lt;/p&gt;
+&lt;p&gt;而在作业检测时, 恐怕不是这样, 没有外部定义的Wy, 所有给lstm_forward的参数都是从(x, a0, parameters)传入的, 在parameters字典里, 有一个叫做Wy的参数.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="正确的写法"&gt;正确的写法&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/#%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%86%99%E6%B3%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [22]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lstm_forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# Retrieve dimensions from shapes of x and Wy&lt;/span&gt;
+    &lt;span class="n"&gt;n_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Wy"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt; &lt;span class="c1"&gt;# 而不是 Wy.shape&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这样获得的Wy才是从参数表中传入的. 而不是在本地测试时自己去外面找来的.&lt;/p&gt;
+&lt;p&gt;在&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Wy&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;randn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;parameters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"Wy"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Wy&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"by"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;caches&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;lstm_forward&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;里面,&lt;/p&gt;
+&lt;p&gt;Wy = np.random.randn(2,5) 这句话实际上是隐式定义了一个叫Wy的全局变量, 在这个jupyter文件中各个函数都可以访问.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="为什么危险"&gt;为什么危险&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8D%B1%E9%99%A9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;因为这是和我当前使用jupyter写程序的习惯有关的.&lt;/p&gt;
+&lt;p&gt;作为一名野生程序员, 我根本不可能记忆大量的python函数, 写上面演示时, 我甚至还要测试一下到底是&lt;code&gt;np.random.rand(n_a, m, T_x)&lt;/code&gt;还是写成&lt;code&gt;np.random.rand((n_a, m, T_x))&lt;/code&gt;, 谁能记得np.random.rand和np.random.zeros用的是不一样的括号个数!&lt;/p&gt;
+&lt;p&gt;我想即使是专业程序员在写代码时也是需要摆上参考书或者参考网站的. 于是我的做法是一边查一边写, 一边写一边改, 直到改通了再写, 那么一边写一边改的时候, 比较方便的是在jupyter开一个cell, 写, 运行, 再写, 再运行, 这一段cell写好以后, 再把它装进一个def的函数里.&lt;/p&gt;
+&lt;p&gt;那么在这个过程里, 就很容易出现上面的bug, 一个是写的时候不一定考虑好了封装和传入参数表的问题, 二是当前工作内存中是存有之前放入的测试数据的.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="应该怎么改"&gt;应该怎么改&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/#%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E6%94%B9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我想:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先还是养成好习惯. 如果要用到全局变量, 就要显式声明出来, &lt;/li&gt;
+&lt;li&gt;即时封装, 除非是需要在同一个jupyter里展示, 否则最好每个部分都用def给封装起来, 在程序最后用&lt;code&gt;if __name__=="__main__"&lt;/code&gt;来设定输出的部分. &lt;/li&gt;
+&lt;li&gt;完整的测试还是要在另一个文件中调用才好, 如果记得的话, 最好还使用不同的变量名进行参数设定. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><guid>https://goldengrape.github.io/posts/python/beware-Free-variables-and-bound-variables/</guid><pubDate>Wed, 07 Feb 2018 09:00:00 GMT</pubDate></item><item><title>NOAA天气数据格式转换</title><link>https://goldengrape.github.io/posts/python/NOAA-weather-data-from-dly-to-pandas-df/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -4960,94 +5186,4 @@ $$
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>序列一致性检验工具</title><link>https://goldengrape.github.io/posts/python/compare-seq/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;本程序用于检查专利文件中的蛋白质序列是否一致. 在专利撰写时, 发明人往往在技术交底书中使用Word文件来提交蛋白质序列. 而在USPTO的要求中, 需要使用PatentIn软件来生成标准的序列提交文件.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;专利代理人在撰写专利说明书时可能通过ctrl+C/ ctrl+V 等操作将技术交底书中的序列复制粘贴到PatentIn软件中, 在这一动作中有可能引起增加或减少字母, 造成说明书中的序列与发明人所期望的序列不一致.&lt;/p&gt;
-&lt;h2&gt;适用文件形式&lt;/h2&gt;
-&lt;p&gt;适用文件的样例在demo文件夹中. 其中:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;技术交底书样例, AAA.docx,序列以word表格的形式出现&lt;/li&gt;
-&lt;li&gt;PantentIn生成文件样例, BBB.txt&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;安装&lt;/h2&gt;
-&lt;p&gt;推荐使用Microsoft Azure Notebooks在云端运行.&lt;/p&gt;
-&lt;h3&gt;Azure Notebooks安装&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;打开https://notebooks.azure.com 以注册或以MS账户登录.&lt;/li&gt;
-&lt;li&gt;新建Lib: +New Library&lt;/li&gt;
-&lt;li&gt;从Github中导入:&lt;ul&gt;
-&lt;li&gt;在GitHub repository中填入: https://github.com/goldengrape/check_patentIn_sequence&lt;/li&gt;
-&lt;li&gt;自行设定好Library Name和Library ID&lt;/li&gt;
-&lt;li&gt;Import&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;设置:&lt;ul&gt;
-&lt;li&gt;选择刚刚建立的Library, 点击Setting&lt;/li&gt;
-&lt;li&gt;Infomation:  如果不想泄露数据, 请确认 Public library &lt;strong&gt;不&lt;/strong&gt;被选上&lt;/li&gt;
-&lt;li&gt;Environment:  Shell scirpt-&amp;gt;script.txt&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;在本地电脑安装&lt;/h3&gt;
-&lt;h4&gt;依赖包&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;python 3.5&lt;/li&gt;
-&lt;li&gt;biopython&lt;/li&gt;
-&lt;li&gt;python-docx&lt;/li&gt;
-&lt;li&gt;numpy&lt;/li&gt;
-&lt;li&gt;pandas&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;太麻烦了, 你不会真的打算本地运行吧. 实在要装的话推荐使用anaconda进行安装, 但anaconda装python-docx有坑, 最好调用anaconda下的pip进行安装python-docx.&lt;/p&gt;
-&lt;h4&gt;安装&lt;/h4&gt;
-&lt;p&gt;从github clone.&lt;/p&gt;
-&lt;h2&gt;使用&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;上传或copy需要检查校对的文件到指定的目录.&lt;/li&gt;
-&lt;li&gt;打开compare_seq.ipynb&lt;/li&gt;
-&lt;li&gt;设定文件名:
-    &lt;code&gt;input_path='demo'
-    output_path='demo'
-    docx_name='AAA.docx'
-    txt_name='BBB.txt'&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;指定word文件中表格的属性
-    &lt;code&gt;table_catalog_dict={
-        0: {"head": 1, "seqtype":'chain', "chaintype":'HeavyChain'},
-        1: {"head": 1, "seqtype":'chain', "chaintype":'LightChain'},
-        2: {"head": 2, "seqtype":'CDR', "chaintype":'HC'},
-        3: {"head": 2, "seqtype":'CDR', "chaintype":'LC'},
-        4: {"head": 1, "seqtype":'chain', "chaintype":'HeavyChain'},
-        5: {"head": 1, "seqtype":'chain', "chaintype":'LightChain'},&lt;/code&gt;
-    其中:&lt;ul&gt;
-&lt;li&gt;head: 表格中标题行的行数&lt;/li&gt;
-&lt;li&gt;seqtype: 表格所描述的序列是长链chain或是CDR&lt;/li&gt;
-&lt;li&gt;chaintype: 序列的类型, 是&lt;ul&gt;
-&lt;li&gt;HeavyChain: 重链&lt;/li&gt;
-&lt;li&gt;LightChain: 轻链&lt;/li&gt;
-&lt;li&gt;HC: 重链CDR&lt;/li&gt;
-&lt;li&gt;LC: 轻链CDR&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;完成设定后, 在菜单中选择Kernel-&amp;gt;restart&amp;amp;run all&lt;/li&gt;
-&lt;li&gt;结果:&lt;ul&gt;
-&lt;li&gt;结果首先会显示在程序页面中&lt;/li&gt;
-&lt;li&gt;结果以report.txt文件存储在output_path所指定的路径中&lt;/li&gt;
-&lt;li&gt;为方便进一步处理,&lt;ul&gt;
-&lt;li&gt;PatnetIn生成的txt文件, 会被转换成同名的json文件和csv文件.&lt;/li&gt;
-&lt;li&gt;word文件, 会被转换成同名的csv文件.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;更新&lt;/h2&gt;
-&lt;p&gt;本程序还将不断更新.&lt;/p&gt;
-&lt;h3&gt;在Azure Notebooks中更新&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;点击Terminal&lt;/li&gt;
-&lt;li&gt;输入&lt;code&gt;cd Library&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;输入&lt;code&gt;git checkout .&lt;/code&gt; 注意末尾有个点&lt;/li&gt;
-&lt;li&gt;输入&lt;code&gt;git pull&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>opensource</category><category>python</category><guid>https://goldengrape.github.io/posts/python/compare-seq/</guid><pubDate>Thu, 28 Dec 2017 07:00:07 GMT</pubDate></item></channel></rss>
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item></channel></rss>
