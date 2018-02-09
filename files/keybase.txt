@@ -1,0 +1,55 @@
+==================================================================
+https://keybase.io/goldengrape
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://goldengrape.github.io
+  * I am goldengrape (https://keybase.io/goldengrape) on keybase.
+  * I have a public key ASDJ1ImsAzB5_hBAL2UokE8ZOEGUxO_Q3ywvYNraSrKC8go
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120c9d489ac033079fe10402f6528904f19384194c4efd0df2c2f60dada4ab282f20a",
+      "host": "keybase.io",
+      "kid": "0120c9d489ac033079fe10402f6528904f19384194c4efd0df2c2f60dada4ab282f20a",
+      "uid": "730bd3b620b2d78a041d70cf7a5fc619",
+      "username": "goldengrape"
+    },
+    "merkle_root": {
+      "ctime": 1518180217,
+      "hash": "8e19bae70b8b70125fdd7e0e8f8080c064481f1b4801ebc5b001fc76c09961e23d500add6336db0d15d3b204734507a87a7ca45b131867306e28c0ec5b4b53cc",
+      "hash_meta": "e8557bda90c0e6ee7d6a6427c3c45d968f2ccf47ed2eef65fbc627d0a8e0a144",
+      "seqno": 2057699
+    },
+    "service": {
+      "hostname": "goldengrape.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.40"
+  },
+  "ctime": 1518180266,
+  "expire_in": 504576000,
+  "prev": "8c52664fc283c69946d748fddf30af10cc9f34c48ec4e00beae373b393d4d0e0",
+  "seqno": 13,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgydSJrAMwef4QQC9lKJBPGThBlMTv0N8sL2Da2kqygvIKp3BheWxvYWTFA1F7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwYzlkNDg5YWMwMzMwNzlmZTEwNDAyZjY1Mjg5MDRmMTkzODQxOTRjNGVmZDBkZjJjMmY2MGRhZGE0YWIyODJmMjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYzlkNDg5YWMwMzMwNzlmZTEwNDAyZjY1Mjg5MDRmMTkzODQxOTRjNGVmZDBkZjJjMmY2MGRhZGE0YWIyODJmMjBhIiwidWlkIjoiNzMwYmQzYjYyMGIyZDc4YTA0MWQ3MGNmN2E1ZmM2MTkiLCJ1c2VybmFtZSI6ImdvbGRlbmdyYXBlIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTE4MTgwMjE3LCJoYXNoIjoiOGUxOWJhZTcwYjhiNzAxMjVmZGQ3ZTBlOGY4MDgwYzA2NDQ4MWYxYjQ4MDFlYmM1YjAwMWZjNzZjMDk5NjFlMjNkNTAwYWRkNjMzNmRiMGQxNWQzYjIwNDczNDUwN2E4N2E3Y2E0NWIxMzE4NjczMDZlMjhjMGVjNWI0YjUzY2MiLCJoYXNoX21ldGEiOiJlODU1N2JkYTkwYzBlNmVlN2Q2YTY0MjdjM2M0NWQ5NjhmMmNjZjQ3ZWQyZWVmNjVmYmM2MjdkMGE4ZTBhMTQ0Iiwic2Vxbm8iOjIwNTc2OTl9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiZ29sZGVuZ3JhcGUuZ2l0aHViLmlvIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuNDAifSwiY3RpbWUiOjE1MTgxODAyNjYsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiOGM1MjY2NGZjMjgzYzY5OTQ2ZDc0OGZkZGYzMGFmMTBjYzlmMzRjNDhlYzRlMDBiZWFlMzczYjM5M2Q0ZDBlMCIsInNlcW5vIjoxMywidGFnIjoic2lnbmF0dXJlIn2jc2lnxEDJ/lrWbioVDubzhJs68PP0Pk4IfiHv0N+fqJcqWezSnxkCFvWuCpS/U6zUO0EH/3iqRf1YBUxfk8doJ35mAnMGqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgMgt94GgESHQzBZ7NNxRGYBv3VbvqjqF56tz4DHG88J2jdGFnzQICp3ZlcnNpb24B
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/goldengrape
+
+==================================================================

@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1518153483.2848651
+_modified_time = 1518180410.710119
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/list.tmpl'
 _template_uri = 'list.tmpl'
@@ -36,12 +36,12 @@ def render_body(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
-        archive_nav = _mako_get_namespace(context, 'archive_nav')
         title = _import_ns.get('title', context.get('title', UNDEFINED))
+        archive_nav = _mako_get_namespace(context, 'archive_nav')
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         __M_writer = context.writer()
         __M_writer('\n')
@@ -63,12 +63,12 @@ def render_content(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        items = _import_ns.get('items', context.get('items', UNDEFINED))
         def content():
             return render_content(context)
-        items = _import_ns.get('items', context.get('items', UNDEFINED))
-        archive_nav = _mako_get_namespace(context, 'archive_nav')
         title = _import_ns.get('title', context.get('title', UNDEFINED))
+        archive_nav = _mako_get_namespace(context, 'archive_nav')
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         __M_writer = context.writer()
         __M_writer('\n<article class="listpage">\n    <header>\n        <h1>')
