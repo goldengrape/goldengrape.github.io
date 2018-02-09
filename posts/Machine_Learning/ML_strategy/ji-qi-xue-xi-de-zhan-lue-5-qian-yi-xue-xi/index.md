@@ -42,13 +42,13 @@ update
 # 参考资料:
 * 机器学习的战略合集目录:
 
-0. [基础概念](http://www.jianshu.com/p/605bb2d6da5e)
-1. [目标设置](http://www.jianshu.com/p/e5f2d53493ff)
-2. [错误率](http://www.jianshu.com/p/9ec8e8c7b58c)
-3. [误差分析](http://www.jianshu.com/p/b841fc1f7c40)
-4. [面对分布不同](http://www.jianshu.com/p/4e1ad322deb5)
-5. [迁移学习](http://www.jianshu.com/p/e2993f594767)
-6. [end-to-end](http://www.jianshu.com/p/92bf4af48804)
+0. [基础概念](../ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/)
+1. [目标设置](../ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/)
+2. [错误率](../ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/)
+3. [误差分析](../ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/)
+4. [面对分布不同](../ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong)
+5. [迁移学习](../ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi)
+6. [end-to-end](../ji-qi-xue-xi-de-zhan-lue-6-end-to-end/)
 
 * 课程链接:
 [Structuring Machine Learning Projects](https://www.coursera.org/learn/machine-learning-projects/home/welcome)
