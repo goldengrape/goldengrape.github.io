@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1518180410.151287
+_modified_time = 1518243515.132853
 _enable_loop = True
 _template_filename = 'themes/lanyon/templates/post_header.tmpl'
 _template_uri = 'post_header.tmpl'
@@ -64,8 +64,8 @@ def render_html_translations(context,post):
     __M_caller = context.caller_stack._push_frame()
     try:
         len = context.get('len', UNDEFINED)
-        messages = context.get('messages', UNDEFINED)
         translations = context.get('translations', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -91,8 +91,8 @@ def render_html_translations(context,post):
 def render_html_sourcelink(context):
     __M_caller = context.caller_stack._push_frame()
     try:
-        messages = context.get('messages', UNDEFINED)
         post = context.get('post', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         show_sourcelink = context.get('show_sourcelink', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -113,11 +113,11 @@ def render_html_post_header(context):
         comments = _mako_get_namespace(context, 'comments')
         def html_translations(post):
             return render_html_translations(context,post)
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        post = context.get('post', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
         def html_title():
             return render_html_title(context)
-        date_format = context.get('date_format', UNDEFINED)
+        post = context.get('post', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    <header>\n        ')
         __M_writer(str(html_title()))
