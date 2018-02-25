@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>写春联 | GoldenGrape's Blog</title>
+<title>毛笔字粗浅研究(1)--硬件搭建 | GoldenGrape's Blog</title>
 <link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
-<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -21,28 +21,18 @@ MathJax.Hub.Config({
     }
 });
 </script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
-<link rel="prev" href="../Classic_of_Mountains_and_Seas/" title="山海经简单统计" type="text/html">
-<link rel="next" href="../brush-pen-research-1-hardware/" title="毛笔字粗浅研究(1)--硬件搭建" type="text/html">
+<link rel="prev" href="../Write-Spring-Festival-couplets/" title="写春联" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
-<meta property="og:title" content="写春联">
-<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/">
-<meta property="og:description" content="学了几个月书法, 想自己写春联, 奈何实在技艺太差, 估计要再练上5年才能拿得出手. 于是只好借助一些辅助工具强行提升.
+<meta property="og:title" content="毛笔字粗浅研究(1)--硬件搭建">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/">
+<meta property="og:description" content='这是春节假期的娱乐项目. 我做了一个能够模仿手腕运动能力的绘图仪. 真正的快乐还是来自于创造的过程啊.
 
-目的:
-手写一副还算好看的春联.
-材料:
 
-对联纸, 毛笔, 墨汁, 毛毡等
-云章书法字典或其他书法字典
-iPad或打印机
-纸, 2B铅笔或复写纸
-微软对联
-
-方法:
-上网搜些春联, 或者如果自己有要求, 需要植入特定的字词, 可以利用微软对联拓展思路, 生成合适的内容.
-用">
+主体的部分来自于makeblock的xy plot. 在此称赞一下makeblock的机械部分, 铝制的框架比小时候玩的上海玩具十七厂的"创"系列要精巧不少, 而且设计上也要好很多. 精度和强度也高出不少. 我觉得在某些情况下甚至可以考虑直接用到光学平台上了.
+原作的绘图仪有两个步进电机和一'>
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2018-02-11T22:00:00+08:00">
+<meta property="article:published_time" content="2018-02-26T00:20:00+08:00">
+<meta property="article:tag" content="Art">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -85,14 +75,14 @@ iPad或打印机
 
       <div class="container content" id="content">
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">写春联</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">毛笔字粗浅研究(1)--硬件搭建</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-02-11T22:00:00+08:00" itemprop="datePublished" title="2018-02-11 22:00">2018-02-11 22:00</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-02-26T00:20:00+08:00" itemprop="datePublished" title="2018-02-26 00:20">2018-02-26 00:20</time></a></p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/bulabula/写春联.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/bulabula/毛笔字粗浅研究01.html">Comments</a>
 
 
         </p>
@@ -101,61 +91,37 @@ iPad或打印机
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>学了几个月书法, 想自己写春联, 奈何实在技艺太差, 估计要再练上5年才能拿得出手. 于是只好借助一些辅助工具强行提升.
-<!-- TEASER_END --></p>
-<h2>目的:</h2>
-<p>手写一副还算好看的春联.</p>
-<h2>材料:</h2>
+<p>这是春节假期的娱乐项目. 我做了一个能够模仿手腕运动能力的绘图仪. 真正的快乐还是来自于创造的过程啊.</p>
+<p><img alt="brush" src="https://i.loli.net/2018/02/26/5a92e3ad29971.jpg"><!-- TEASER_END --></p>
+<p>主体的部分来自于<a href="http://learn.makeblock.com/cn/xy-plotter-robot-kit/">makeblock的xy plot</a>. 在此称赞一下makeblock的机械部分, 铝制的框架比小时候玩的上海玩具十七厂的"创"系列要精巧不少, 而且设计上也要好很多. 精度和强度也高出不少. 我觉得在某些情况下甚至可以考虑直接用到光学平台上了.</p>
+<p>原作的绘图仪有两个步进电机和一个舵机控制, 步进电机控制xy平面上的移动, 舵机控制笔的抬起和放下.</p>
+<p><img alt="xy plotter" src="http://learn.makeblock.com/cn/wp-content/uploads/2016/01/KM2EQ92AMSKANCMBV8.png"></p>
+<p>这个结构用来写钢笔字是可以的, 因为并不需要控制笔管的方向. 但写毛笔字不够, 如前一篇<a href="../brush-pen-research-0">毛笔字粗浅研究00</a>中所描述的, 在写毛笔字时要通过手腕的运动, 控制毛笔的倾倒, 以使笔锋能够行走在笔画的中央.
+<img alt="侧锋" src="../../../images/%E4%BE%A7%E9%94%8B.png"></p>
+<p>所以, 除了笔管在xy方向上的运动, 还需要能够控制笔管的倾侧. 当然笔在运行时还有轻重, 也就是在z轴方向的运动.</p>
+<p>于是, 执笔的部分是这样的:</p>
+<p><img alt="执笔 v51" src="https://i.loli.net/2018/02/26/5a92ecc591527.png"></p>
+<p>由3个舵机来控制, 最上方的舵机配合一个齿轮来控制z轴的运动,下方是由两个舵机组成的两自由度控制部分, 这样笔管就可以向各个方向倾倒. 整体再通过螺丝连接到xy plotter的其他部分上(青色的梁).</p>
+<p>需要控制的电机一共有5个:</p>
 <ul>
-<li>对联纸, 毛笔, 墨汁, 毛毡等</li>
-<li>
-<a href="http://shufa.farig.net">云章书法字典</a>或其他书法字典</li>
-<li>iPad或打印机</li>
-<li>纸, 2B铅笔或复写纸</li>
-<li><a href="http://duilian.msra.cn">微软对联</a></li>
+<li>两个步进电机控制xy平面上的运动.</li>
+<li>三个舵机控制笔管的倾斜和z轴的运动.</li>
 </ul>
-<h2>方法:</h2>
-<p>上网搜些春联, 或者如果自己有要求, 需要植入特定的字词, 可以利用微软对联拓展思路, 生成合适的内容.</p>
-<p>用书法字典找到相应的字, 推荐颜真卿老师, 褚遂良老师的楷书. 至少在楷书里, 这两位的字比较全, 比较多, 容易找到所有需要的字. 而且形貌端正, 乍一看比较好写.</p>
-<p><img alt="找到合适的字" src="https://i.loli.net/2018/02/11/5a8058b146724.jpeg"></p>
-<p>用纸蒙在iPad上把字的中线勾勒出来. 或者存成图片以后打印出来也行.
-<img alt="勾勒中线" src="https://i.loli.net/2018/02/11/5a8058b1ea6a1.jpeg"></p>
-<p>在纸的背面用2B铅笔涂黑, 跟垫上复写纸一样, 铅笔的颜色反正是黑的, 墨汁染过以后看不出来, 复写纸应该比较省事, 但不知道效果如何.</p>
-<p><img alt="背面用2B铅笔涂色" src="https://i.loli.net/2018/02/11/5a8058b18ff2a.jpeg"></p>
-<p>拿勾好中线的纸覆盖在对联纸上, 找好位置, 用圆珠笔画一遍中线, 将铅笔印在对联纸上.
-<img alt="用圆珠笔再画一遍中线" src="https://i.loli.net/2018/02/11/5a8058b19ca65.jpeg"></p>
-<p><img alt="印在对联纸上" src="https://i.loli.net/2018/02/11/5a8058b1b1ff4.jpeg"></p>
-<p>最后, 就是拿起毛笔, 依照"复印"的笔画中线写好就行了呗.
-(当听到"...就行了", "...了呗", 之类的话语, 其中一定有坑. )</p>
-<h2>结果:</h2>
-<p><img alt="WechatIMG1" src="https://i.loli.net/2018/02/11/5a8058c8d4a09.jpeg"></p>
-<ul>
-<li>上联: 天地和顺人美慧</li>
-<li>下联: 平安如意家进宝</li>
-<li>横批: 嘉礼有妙</li>
-</ul>
-<h2>讨论:</h2>
-<ol>
-<li>
-<p>笔画的书写上还是需要一些基本技巧, 请参考<a href="https://www.bilibili.com/video/av12995260/">黄简讲书法初级课程</a>. 虽然上面的方法是投机取巧, 不过笔法-&gt;笔势-&gt;裹束, 要到裹束以后才能完成一个字的书写, 那已经是三级课程了. 所以借助复印笔画中线的方法, 相当于只练习笔法了.</p>
-</li>
-<li>
-<p>写毛笔字也还是需要器材的, 挑好一支大小合适有尖峰好写的毛笔, 还是挺困难的. 而且每到临近春节, 指望网上购物是不大可能的. 这次有很多细节败笔可以赖到毛笔不好用上.</p>
-</li>
-<li>
-<p>如果有投影仪的话, 估计会更容易一些吧.</p>
-</li>
-</ol>
-<p>进宝和美慧一起给各位拜年了:</p>
-<p><img alt="IMG_20171214_114308" src="https://i.loli.net/2018/02/11/5a8059bf0a82f.jpg"></p>
+<p>对比一下其他常见的机械臂, 一般最少也是6个自由度的.
+<img alt="6 DOF" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Robot_arm_model_1.png/640px-Robot_arm_model_1.png"></p>
+<p>那么缺少的是什么呢? 仔细看一下, 会发现没有毛笔的笔管绕自身长轴的旋转. 在<a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT">黄简讲书法课程</a>中, 要求对笔的控制是<a href="https://youtu.be/F6-fEdG6n48?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT&amp;t=760">通过手腕而不是手指</a>, 如果使用手指, 那么就可以在一定范围内完成笔管绕自身长轴的旋转, 大约有+/-90度, 如果禁止, 那么就丢失了一个自由度.
+<img alt="屏幕快照 2018-02-26 01.13.48" src="https://i.loli.net/2018/02/26/5a92eef28774b.png"></p>
+<p><a href="https://grabcad.com/library/chinese-brush-holder-1">3D模型下载</a></p>
+<p>实际操作中, 稳定z轴移动的两个圆柱不是打印的, 而是用纸卷的, 其实用A4纸裁好尺寸, 然后卷成足够紧密的纸卷, 外表再用胶带粘好, 还是很结实的, 而且表面光滑, 比打印一个轴效果更好.</p>
+<!-- EOF -->
 </div>
     </div>
-    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/art/" rel="tag">Art</a></li>
+        </ul>
+<ul class="pager hidden-print">
 <li class="previous">
-                <a href="../Classic_of_Mountains_and_Seas/" rel="prev" title="山海经简单统计">前一篇</a>
-            </li>
-            <li class="next">
-                <a href="../brush-pen-research-1-hardware/" rel="next" title="毛笔字粗浅研究(1)--硬件搭建">后一篇</a>
+                <a href="../Write-Spring-Festival-couplets/" rel="prev" title="写春联">前一篇</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
         
@@ -163,9 +129,9 @@ iPad或打印机
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="goldengrapes-blog",
-            disqus_url="https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/",
-        disqus_title="\u5199\u6625\u8054",
-        disqus_identifier="cache/posts/bulabula/写春联.html",
+            disqus_url="https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/",
+        disqus_title="\u6bdb\u7b14\u5b57\u7c97\u6d45\u7814\u7a76(1)--\u786c\u4ef6\u642d\u5efa",
+        disqus_identifier="cache/posts/bulabula/毛笔字粗浅研究01.html",
         disqus_config = function () {
             this.language = "zh_cn";
         };
