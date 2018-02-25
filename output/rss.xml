@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 11 Feb 2018 15:06:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>写春联</title><link>https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学了几个月书法, 想自己写春联, 奈何实在技艺太差, 估计要再练上5年才能拿得出手. 于是只好借助一些辅助工具强行提升.
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 25 Feb 2018 17:39:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>毛笔字粗浅研究(1)--硬件搭建</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是春节假期的娱乐项目. 我做了一个能够模仿手腕运动能力的绘图仪. 真正的快乐还是来自于创造的过程啊.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="brush" src="https://i.loli.net/2018/02/26/5a92e3ad29971.jpg"&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;主体的部分来自于&lt;a href="http://learn.makeblock.com/cn/xy-plotter-robot-kit/"&gt;makeblock的xy plot&lt;/a&gt;. 在此称赞一下makeblock的机械部分, 铝制的框架比小时候玩的上海玩具十七厂的"创"系列要精巧不少, 而且设计上也要好很多. 精度和强度也高出不少. 我觉得在某些情况下甚至可以考虑直接用到光学平台上了.&lt;/p&gt;
+&lt;p&gt;原作的绘图仪有两个步进电机和一个舵机控制, 步进电机控制xy平面上的移动, 舵机控制笔的抬起和放下.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="xy plotter" src="http://learn.makeblock.com/cn/wp-content/uploads/2016/01/KM2EQ92AMSKANCMBV8.png"&gt;&lt;/p&gt;
+&lt;p&gt;这个结构用来写钢笔字是可以的, 因为并不需要控制笔管的方向. 但写毛笔字不够, 如前一篇&lt;a href="https://goldengrape.github.io/posts/bulabula/brush-pen-research-0"&gt;毛笔字粗浅研究00&lt;/a&gt;中所描述的, 在写毛笔字时要通过手腕的运动, 控制毛笔的倾倒, 以使笔锋能够行走在笔画的中央.
+&lt;img alt="侧锋" src="https://goldengrape.github.io/images/%E4%BE%A7%E9%94%8B.png"&gt;&lt;/p&gt;
+&lt;p&gt;所以, 除了笔管在xy方向上的运动, 还需要能够控制笔管的倾侧. 当然笔在运行时还有轻重, 也就是在z轴方向的运动.&lt;/p&gt;
+&lt;p&gt;于是, 执笔的部分是这样的:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="执笔 v51" src="https://i.loli.net/2018/02/26/5a92ecc591527.png"&gt;&lt;/p&gt;
+&lt;p&gt;由3个舵机来控制, 最上方的舵机配合一个齿轮来控制z轴的运动,下方是由两个舵机组成的两自由度控制部分, 这样笔管就可以向各个方向倾倒. 整体再通过螺丝连接到xy plotter的其他部分上(青色的梁).&lt;/p&gt;
+&lt;p&gt;需要控制的电机一共有5个:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;两个步进电机控制xy平面上的运动.&lt;/li&gt;
+&lt;li&gt;三个舵机控制笔管的倾斜和z轴的运动.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对比一下其他常见的机械臂, 一般最少也是6个自由度的.
+&lt;img alt="6 DOF" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Robot_arm_model_1.png/640px-Robot_arm_model_1.png"&gt;&lt;/p&gt;
+&lt;p&gt;那么缺少的是什么呢? 仔细看一下, 会发现没有毛笔的笔管绕自身长轴的旋转. 在&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;中, 要求对笔的控制是&lt;a href="https://youtu.be/F6-fEdG6n48?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT&amp;amp;t=760"&gt;通过手腕而不是手指&lt;/a&gt;, 如果使用手指, 那么就可以在一定范围内完成笔管绕自身长轴的旋转, 大约有+/-90度, 如果禁止, 那么就丢失了一个自由度.
+&lt;img alt="屏幕快照 2018-02-26 01.13.48" src="https://i.loli.net/2018/02/26/5a92eef28774b.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://grabcad.com/library/chinese-brush-holder-1"&gt;3D模型下载&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;实际操作中, 稳定z轴移动的两个圆柱不是打印的, 而是用纸卷的, 其实用A4纸裁好尺寸, 然后卷成足够紧密的纸卷, 外表再用胶带粘好, 还是很结实的, 而且表面光滑, 比打印一个轴效果更好.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>Art</category><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/</guid><pubDate>Sun, 25 Feb 2018 16:20:00 GMT</pubDate></item><item><title>写春联</title><link>https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学了几个月书法, 想自己写春联, 奈何实在技艺太差, 估计要再练上5年才能拿得出手. 于是只好借助一些辅助工具强行提升.
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;目的:&lt;/h2&gt;
 &lt;p&gt;手写一副还算好看的春联.&lt;/p&gt;
@@ -1948,86 +1971,4 @@ y.shape =  (2, 10, 7)
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><guid>https://goldengrape.github.io/posts/python/Ukraine-reduce-tax-problem/</guid><pubDate>Thu, 25 Jan 2018 17:15:00 GMT</pubDate></item><item><title>如何向成人灌输一个观点</title><link>https://goldengrape.github.io/posts/bulabula/how-to-inception/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在上一篇&lt;a href="https://goldengrape.github.io/posts/python/dejunkifying-a-plot"&gt;"统计图整理"&lt;/a&gt;中, 展示了如何把一个具有浓郁乡土气息的bar
-&lt;img alt="p0" src="https://i.loli.net/2018/01/21/5a644e647a799.png"&gt;
-变成性冷淡的bar:
-&lt;img alt="p7" src="https://i.loli.net/2018/01/21/5a644e64a71b6.png"&gt;&lt;/p&gt;
-&lt;p&gt;大家的反馈主要是对Remove lines到direct label的那一部分不认同. 也就是从去掉grid, 去掉座标轴, 到直接将数据标注到bar上.
-&lt;img alt="p5" src="https://i.loli.net/2018/01/21/5a644e64a705b.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="p7" src="https://i.loli.net/2018/01/21/5a644e64a71b6.png"&gt;&lt;/p&gt;
-&lt;p&gt;专业设计师如西乔都认为&lt;a href="https://twitter.com/arthur369/status/954825055908843521"&gt;"觉得水平线还是应该保留，目前有些影响可读性"&lt;/a&gt;, 其实我也有类似的感觉. 很可能这是大多数人的感觉.&lt;/p&gt;
-&lt;p&gt;在&lt;a href="https://goldengrape.github.io/posts/python/dejunkifying-a-plot"&gt;"统计图整理"&lt;/a&gt;一文中我说,&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;如果做乙方的话, 一定要花足够长的时间给甲方洗脑, 洗到less is more形成本能. 如果你省掉了什么时间, 一定会乘10花到工作时间上.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我只讲了目的, 没有讲解方法. 作为完整的课程, cousera这门课不仅仅讲解了如何作图, 实际上还悄悄演示了如何"洗脑".
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;成人教育的特点&lt;/h2&gt;
-&lt;p&gt;面向成人的教育与面向青少年的学校教育不同, 成人有自己的思想, 如果教师的观点与学生现存的观点相抵触, 是很难将教师的观点植入进学生心中的.&lt;/p&gt;
-&lt;p&gt;在cousera老师讲课的时候, 学生也是某种程度的"甲方", "应当保留水平线"是很多人预存的观点. 那么老师在讲课时, 要么停止在这一步之前, 不与学生发生冲突, 要么就要预先清除障碍, 为植入观点做准备.&lt;/p&gt;
-&lt;h2&gt;过程简述&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-plotting/lecture/qFnP9/graphical-heuristics-data-ink-ratio-edward-tufte"&gt;课程视频&lt;/a&gt;, 可能需要选课或者至少旁听才能看到. 以文字简述之.&lt;/p&gt;
-&lt;h3&gt;1. 连续建立认同感&lt;/h3&gt;
-&lt;p&gt;在提出data-ink是不可或缺的, 和chart junk应当尽量抛弃这个原则以后, 先进行一组操作&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Remove Background Colors -&amp;gt;&lt;/li&gt;
-&lt;li&gt;Remove redundant labels -&amp;gt;&lt;/li&gt;
-&lt;li&gt;Remove Borders -&amp;gt;&lt;/li&gt;
-&lt;li&gt;Reduce Colors -&amp;gt;&lt;/li&gt;
-&lt;li&gt;Remove special effect -&amp;gt;&lt;/li&gt;
-&lt;li&gt;Remove Shade&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这些步骤中, 很容易取得学生们的认同. 其中在reduce colors时, 老师说明了作者目的是为了以培根与其他食物相比. 那么只保留培根的颜色作为突出是很容易接受的.&lt;/p&gt;
-&lt;h3&gt;2. 设计问题&lt;/h3&gt;
-&lt;p&gt;在cousera的视频上, 有课堂提问功能, 就是视频正在播放时突然停止, 显示出一道选择题或者填空题, 学生回答, 提交答案, 给予学生反馈以后, 视频再继续进行. 于是在这里,&lt;/p&gt;
-&lt;p&gt;突然出现了一个问题:
-看下面的统计图, 请估计Bacon和Potato Chips之间的差距( ), 并估计Bacon与Pizza之间的差距( ).
-&lt;img alt="p5" src="https://i.loli.net/2018/01/21/5a644e64a705b.png"&gt;&lt;/p&gt;
-&lt;p&gt;这其实是个挺好玩的问题, 我相信您看到这个也会跃跃欲试猜测一下.&lt;/p&gt;
-&lt;h3&gt;3. 引导推理&lt;/h3&gt;
-&lt;p&gt;显然不论目测如何精确, 多多少少还是会有些误差的, 我目测的已经是相当准确了, 我当时估计Bacon和Potato Chips之间的差距=10, Bacon与Pizza之间的差距=240.&lt;/p&gt;
-&lt;p&gt;然后视频中给出反馈542-533=9, 533-296=237.&lt;/p&gt;
-&lt;p&gt;接着老师站出来说话了:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;大家看, 虽然有水平线, 但这些水平线并不能精确帮我们分析差距啊. 好像也帮不上忙呢.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;接着应当又重复一遍data-ink的定义, 强调是non-erasable core. (应当这样, 可惜实际上老师在这里没有做)&lt;/p&gt;
-&lt;h3&gt;4. 得到目标结论&lt;/h3&gt;
-&lt;p&gt;老师接着说:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;既然水平线也帮不上忙, 那么所以, 不如就此去掉吧.
-但去掉水平线以后跟y轴又不好比对, 那干脆把数据直接标注在每个柱子上.
-这样虽然读者要计算一下. 但却可以准确获得信息哦.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;复盘&lt;/h2&gt;
-&lt;p&gt;面向成人的教育, 不可以直接进行观点的灌输. 需要由成人自己推理得出倾向, 然后在引导至目标观点上.&lt;/p&gt;
-&lt;p&gt;比如你想灌输的观点是D点, 那么需要:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;先给出基本概念, 然后从大家都认同的A点开始给基本概念感性认识,&lt;/li&gt;
-&lt;li&gt;接着在B点上抛出问题,&lt;/li&gt;
-&lt;li&gt;在C点引导大家一起推理, 推理时要引用预先设定的基本概念,&lt;/li&gt;
-&lt;li&gt;最后由学生自行得出结论D.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;看到了吧, 每一个课堂提问其实是精心策划的.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;附课程字幕:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;3:30
-There's still a lot of gridwork left in this image and it's a bit unclear what the value of this gridwork is, so we're going to drop it. Now grids can be valuable, but they're often just a distraction. For the moment though, study the image. What's the difference in the number of calories between bacon, our data point of interest, and say, potato chips or chili dogs?&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;插入随堂测验&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;3:52
-Just removing the lines doesn't make it easier to read. But the values of the data are pretty simple here. So let's directly label each bar in the graphic.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;我的观点&lt;/h2&gt;
-&lt;p&gt;其实我仍然不认同直接标注数字这件事. 统计图的目的本来就是为了给人以直观印象, 要我看着标注数字心算已经背离了统计图的初衷了. 南丁格尔前辈不会认可的. &lt;/p&gt;
-&lt;!-- EOF --&gt;
-
-&lt;!-- 其他图片
-![p1](https://i.loli.net/2018/01/21/5a644e6417464.png)
-![p2](https://i.loli.net/2018/01/21/5a644e643057d.png)
-![p3](https://i.loli.net/2018/01/21/5a644e642c6df.png)
-![p4](https://i.loli.net/2018/01/21/5a644e640b22d.png)
-![p5](https://i.loli.net/2018/01/21/5a644e64a705b.png)
-![p6](https://i.loli.net/2018/01/21/5a644e640b1d6.png) --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how-to-inception/</guid><pubDate>Sun, 21 Jan 2018 08:30:00 GMT</pubDate></item></channel></rss>
+</description><guid>https://goldengrape.github.io/posts/python/Ukraine-reduce-tax-problem/</guid><pubDate>Thu, 25 Jan 2018 17:15:00 GMT</pubDate></item></channel></rss>
