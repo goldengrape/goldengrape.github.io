@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-02-25T16:50:00Z</lastmod>
+  <lastmod>2018-02-28T07:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -119,7 +119,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
-  <lastmod>2018-02-09T05:17:00Z</lastmod>
+  <lastmod>2018-02-28T07:21:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-4.html</loc>
@@ -135,7 +135,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-7.html</loc>
-  <lastmod>2018-02-25T16:50:00Z</lastmod>
+  <lastmod>2018-02-28T07:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -320,6 +320,14 @@
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</loc>
+  <lastmod>2018-02-28T07:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</loc>
+  <lastmod>2018-02-28T07:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</loc>
