@@ -44,6 +44,8 @@ __ #不要投资 #不要购买 #不要尝试 __
 
 # 参考资料：
 
-* [VR／AR临床实验设计中的注意事项：](http://www.15yan.com/story/95bN2Ahro2n/)
+* [VR／AR临床实验设计中的注意事项：](../vr-ar-exp)
 * 斯坦福大学的[VR技术公开课：](http://stanford.edu/class/ee267/)
 * 一篇关于3D显示器的[综述：](http://www.annualreviews.org/doi/pdf/10.1146/annurev-vision-082114-035800)
+* [VR技术不适合绝大多数青少年儿童使用
+2018-02-28 王凯 眼视光专家王凯](https://mp.weixin.qq.com/s/jP6EHP4ASToVAz4hdqmLwA)

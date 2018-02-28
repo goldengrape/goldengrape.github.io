@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
-<title>关于VR与近视(投资人的预防接种) | GoldenGrape's Blog</title>
+<title>VR／AR临床实验设计中的注意事项-太长不看版 | GoldenGrape's Blog</title>
 <link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
-<link rel="canonical" href="https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/">
+<link rel="canonical" href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -21,18 +21,20 @@ MathJax.Hub.Config({
     }
 });
 </script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
-<link rel="prev" href="../../Invention/air-vortex-AC/" title="空气炮空调" type="text/html">
-<link rel="next" href="../../Machine_Learning/ML-IP/" title="机器学习的知识产权保护(1)--保护的难题" type="text/html">
+<link rel="prev" href="../vr-ar-exp/" title="VR／AR临床实验设计中的注意事项" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
-<meta property="og:title" content="关于VR与近视(投资人的预防接种)">
-<meta property="og:url" content="https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/">
-<meta property="og:description" content="估计最近又要开始炒VR和近视了，需要尽快给各位投资人预防接种一下：
-首先近视产生和进展的原理目前研究还没有足够清楚。
-目前有实验证据的，“！延缓近视进展！”的方法只有足量的户外活动、角膜塑形镜和低浓度阿托品。注意只是控制进展，没有哪个敢说“治疗”近视。成年以后做手术可以治疗近视。
+<meta property="og:title" content="VR／AR临床实验设计中的注意事项-太长不看版">
+<meta property="og:url" content="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/">
+<meta property="og:description" content="伴吐槽
 
-目前VR的显示技术并不足以产生足够清晰的图像，那需要手机大小屏幕拥有4k乃至8k的屏幕分辨率。类似的还有刷新率、亮度">
+前面那篇《VR／AR临床实验设计中的注意事项》文章太长了，以至于按照十五言的统计，“深读”率维持在10%以下，（那篇文章值一大笔顾问费的好么我为了国内的VR/AR社区就这么给捐了你们居然不仔细读）。因此作者推出了TL;DR版。
+实验准备：
+
+伦理：不通过伦理委员会没签知情同意书，一告一个准；
+研究团队：就算企业出钱也得找些懂行的行家；
+实验设计：答辩叫defence，得尽量无懈可击才行；">
 <meta property="og:type" content="article">
-<meta property="article:published_time" content="2017-12-28T15:00:00+08:00">
+<meta property="article:published_time" content="2018-02-28T15:15:00+08:00">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -75,14 +77,14 @@ MathJax.Hub.Config({
 
       <div class="container content" id="content">
         
-<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">关于VR与近视(投资人的预防接种)</a></h1>
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">VR／AR临床实验设计中的注意事项-太长不看版</a></h1>
 
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2017-12-28T15:00:00+08:00" itemprop="datePublished" title="2017-12-28 15:00">2017-12-28 15:00</time></a></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-02-28T15:15:00+08:00" itemprop="datePublished" title="2018-02-28 15:15">2018-02-28 15:15</time></a></p>
                 <p class="commentline">
         
-    <a href="#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/关于VR与近视，投资人的预防接种.html">Comments</a>
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/ophthalmology/VRAR实验tldr.html">Comments</a>
 
 
         </p>
@@ -91,40 +93,50 @@ MathJax.Hub.Config({
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
     <div>
-<p>估计最近又要开始炒VR和近视了，需要尽快给各位投资人预防接种一下：</p>
-<p>首先近视产生和进展的原理目前研究还没有足够清楚。</p>
-<p>目前有实验证据的，“<strong>！延缓近视进展！</strong>”的方法只有足量的户外活动、角膜塑形镜和低浓度阿托品。注意只是控制进展，没有哪个敢说“治疗”近视。成年以后做手术可以治疗近视。
-<!-- TEASER_END --></p>
-<p>目前VR的显示技术并不足以产生足够清晰的图像，那需要手机大小屏幕拥有4k乃至8k的屏幕分辨率。类似的还有刷新率、亮度。低分辨率、闪烁、低亮度，平面3D显示还会破坏调节集合反射，这些都可能造成儿童的视疲劳进一步加重，从而加重而不是减轻近视。</p>
-<p>理论上光场、焦点扫描或者相位调制等显示技术能够产生与角膜塑形镜近似的效果。但还都在实验室里，而且困难重重。</p>
-<p><strong> 综上，目前VR“治疗近视”的产品，一定是错的。</strong></p>
-<p><strong> 近视度数的控制，与北上广深房价的控制难度相似。 </strong></p>
-<p><strong> #不要投资 #不要购买 #不要尝试  </strong></p>
-<p>需要了解人体视觉的基本需求，VR应当达到的参数，请参考<a href="http://stanford.edu/class/ee267/lectures/lecture5.pdf">这一篇</a></p>
-<p>注意这只是基本需求，也就是没有“不舒服”的需求参数，要跟近视有关，分辨率再X5先。也就是像素数量再X25以上。</p>
-<p>关于VR技术更详细的请参考<a href="http://stanford.edu/class/ee267/">此公开课</a></p>
-<p>说的就是这篇<a href="http://www.toutiao.com/i6428326129269998082/">VR眼保仪的 </a></p>
-<p><strong>近视度数的控制，与北上广深房价的控制难度相似。</strong></p>
-<p><strong> #不要投资 #不要购买 #不要尝试 </strong></p>
-<p>做VR/AR拿了风投的，都把这文章发给你投资人看看，让他把钱花在正经研发的公司身上，别跟风打水漂。把钱投在骗子身上是亲手给未来的市场下毒。</p>
-<h2>参考资料：</h2>
+<p>伴吐槽</p>
+<hr>
+<p>前面那篇《<a href="../vr-ar-exp">VR／AR临床实验设计中的注意事项</a>》文章太长了，以至于按照十五言的统计，“深读”率维持在10%以下，（那篇文章值一大笔顾问费的好么我为了国内的VR/AR社区就这么给捐了你们居然不仔细读）。因此作者推出了TL;DR版。</p>
+<h3>实验准备：</h3>
 <ul>
-<li><a href="../vr-ar-exp">VR／AR临床实验设计中的注意事项：</a></li>
-<li>斯坦福大学的<a href="http://stanford.edu/class/ee267/">VR技术公开课：</a>
-</li>
-<li>一篇关于3D显示器的<a href="http://www.annualreviews.org/doi/pdf/10.1146/annurev-vision-082114-035800">综述：</a>
-</li>
-<li><a href="https://mp.weixin.qq.com/s/jP6EHP4ASToVAz4hdqmLwA">VR技术不适合绝大多数青少年儿童使用
-2018-02-28 王凯 眼视光专家王凯</a></li>
+<li>伦理：不通过伦理委员会没签知情同意书，一告一个准；</li>
+<li>研究团队：就算企业出钱也得找些懂行的行家；</li>
+<li>实验设计：答辩叫defence，得尽量无懈可击才行；</li>
+<li>实验目的：一次一小步，题目太大就民科了；</li>
+<li>实验对象：纳入排除标准预先定，把搞不定的都排除在外</li>
+</ul>
+<h3>实验测量的指标：</h3>
+<ul>
+<li>视力：用LogMAR</li>
+<li>CSF色觉能查就查一下</li>
+<li>屈光：电脑验光仪不准</li>
+<li>眼压：摊上青光眼就麻烦了</li>
+<li>干眼：用泪液分析仪</li>
+<li>双眼视、调节、斜视、AC/A、立体视：一般医生都搞不定，还是找专业人士玩</li>
+<li>问卷调查：青少年问卷调查你也信？</li>
+</ul>
+<h3>数据：</h3>
+<ul>
+<li>别作弊；</li>
+<li>画图得有error bar；</li>
+<li>科研图不准用3D，别扯什么信息图示；</li>
+<li>连个P都没有，怎么让人相信</li>
+<li>统计方法不对有个P用</li>
+</ul>
+<h3>结果与讨论：</h3>
+<ul>
+<li>garbage in garbage out ;</li>
+</ul>
+<h3>眼科与视光学专业的注意事项:</h3>
+<ul>
+<li>硬件限制：人类科技还很低下；</li>
+<li>软件限制：别撞上NP hard；</li>
+<li>商业限制：医生想的通常不赚钱没人愿意做</li>
 </ul>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul class="pager hidden-print">
 <li class="previous">
-                <a href="../../Invention/air-vortex-AC/" rel="prev" title="空气炮空调">前一篇</a>
-            </li>
-            <li class="next">
-                <a href="../../Machine_Learning/ML-IP/" rel="next" title="机器学习的知识产权保护(1)--保护的难题">后一篇</a>
+                <a href="../vr-ar-exp/" rel="prev" title="VR／AR临床实验设计中的注意事项">前一篇</a>
             </li>
         </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
         
@@ -132,9 +144,9 @@ MathJax.Hub.Config({
         <div id="disqus_thread"></div>
         <script>
         var disqus_shortname ="goldengrapes-blog",
-            disqus_url="https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/",
-        disqus_title="\u5173\u4e8eVR\u4e0e\u8fd1\u89c6(\u6295\u8d44\u4eba\u7684\u9884\u9632\u63a5\u79cd)",
-        disqus_identifier="cache/posts/ophthalmology/关于VR与近视，投资人的预防接种.html",
+            disqus_url="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/",
+        disqus_title="VR\uff0fAR\u4e34\u5e8a\u5b9e\u9a8c\u8bbe\u8ba1\u4e2d\u7684\u6ce8\u610f\u4e8b\u9879-\u592a\u957f\u4e0d\u770b\u7248",
+        disqus_identifier="cache/posts/ophthalmology/VRAR实验tldr.html",
         disqus_config = function () {
             this.language = "zh_cn";
         };
