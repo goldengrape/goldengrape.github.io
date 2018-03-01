@@ -1,5 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 28 Feb 2018 07:21:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>VR／AR临床实验设计中的注意事项-太长不看版</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;伴吐槽&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Mar 2018 08:26:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>看《甄嬛传》学实验设计</title><link>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是以前发在&lt;a href="https://www.guokr.com/blog/234438/"&gt;果壳日志&lt;/a&gt;上的, 但果壳放弃了日志, 并且缺乏打理, 以至于原来的图片链接都出错了. 以为找不到了, 还挺可惜的. 今天查文件时突然发现了以前的图片, 还是放在自己这里踏实.&lt;/p&gt;
+&lt;p&gt;下面, 请扶稳坐好, 系好安全带, 我们一起看《甄嬛传》学实验设计:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p1.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p2.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p3.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p4.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p5.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p6.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p7.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p8.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p9.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p10.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p11.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p12.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p13.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p14.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p15.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p16.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p17.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p18.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p19.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p20.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p21.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p22.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p23.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p24.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p25.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/zhenhuan/p26.jpg"&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;注：
+本文依照电视剧中的情节假定滴血验亲是可靠的。
+续：
+如果更加严格的实验设计还需要有很多的步骤。
+比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实验器材中，用普通的水是不行的。需要用等渗等张的平衡盐作为溶液。&lt;/li&gt;
+&lt;li&gt;考虑到六阿哥的血比较宝贵，测量滴血验亲的敏感性和特异性的预实验是要提前完成的。&lt;/li&gt;
+&lt;li&gt;样本量的估计。&lt;/li&gt;
+&lt;li&gt;相融还是不相融看起来是个定性试验，还需要一个独立的读片人。&lt;/li&gt;
+&lt;li&gt;考虑到宫闱斗争重重，随机和双盲是必要的。&lt;/li&gt;
+&lt;li&gt;继续考虑宫闱斗争重重，实验样品的防伪与认证也是必要的，其中可能配合随机双盲要用到HASH算法和/或RSA加密。&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</guid><pubDate>Thu, 01 Mar 2018 07:00:00 GMT</pubDate></item><item><title>VR／AR临床实验设计中的注意事项-太长不看版</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;伴吐槽&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;前面那篇《&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp"&gt;VR／AR临床实验设计中的注意事项&lt;/a&gt;》文章太长了，以至于按照十五言的统计，“深读”率维持在10%以下，（那篇文章值一大笔顾问费的好么我为了国内的VR/AR社区就这么给捐了你们居然不仔细读）。因此作者推出了TL;DR版。&lt;/p&gt;
 &lt;h3&gt;实验准备：&lt;/h3&gt;
@@ -1034,46 +1102,4 @@ y.shape =  (2, 10, 7)
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;参考：
-&lt;a href="https://www.guokr.com/question/118014/"&gt;果壳问答：我认为上研究生不是很必要，尤其是科学学位的。除了临床医学生。各位硕士的想法是什么呢？？&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/weixue/</guid><pubDate>Tue, 30 Jan 2018 13:10:00 GMT</pubDate></item><item><title>励志两则: 劝学</title><link>https://goldengrape.github.io/posts/bulabula/quanxue/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看到starnight做&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a href="https://twitter.com/StarKnight/status/958301772325429248"&gt;#推特小调查:
-你读（读过）励志类书籍吗？&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;蛤, 读过算什么, 我还写过呢. 来两篇以前的:&lt;/p&gt;
-&lt;p&gt;(写于2012年)
-学习是个持续过程。&lt;/p&gt;
-&lt;p&gt;逆水行舟不进则退。逆水行舟不进则退还是不确切的，因为通常水流速度是常数。但是考虑人类的知识进展的速度，却可能是指数函数。也就是说，逆水行舟，水的速度是指数变化，这事想起来非常可怕。也许你现在每周需要看两篇文献能够保持在前沿的位置，18个月以后，是每周四篇，3年以后是每周8篇。。。20年以后，我们就必须用Matrix的upload功能来学习了。当然现在事情还没有那么夸张，不同领域的倍增时间并不相同。&lt;/p&gt;
-&lt;p&gt;我觉得自学，或者说自己对自己的继续教育是需要持续进行的。
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;大家都应该有过自学的经验。高中时候开始要上课睡觉，本科时候开始要翘课。总有没听老师讲到的部分，这些零碎的部分是需要自学补充上的。过了本科以后，到研究生阶段，可能一半以上的知识是来自于自学的。如果是程序编写什么的，基本上就是90%的自学吧。&lt;/p&gt;
-&lt;p&gt;翘课、上课睡觉之后补充的自学，和系统性的自学一门学科是不同的。前者没什么难度，后者有许多陷阱。以我个人的经验简述一些自学技巧。&lt;/p&gt;
-&lt;h2&gt;自学最重要的技巧就是要慢。&lt;/h2&gt;
-&lt;p&gt;不能一页一页的翻书看过去，否则看到后面像滑冰，越翻越快，却得到一堆模糊的概念，这种时候最容易被误导。学编程建议是手敲书上的每一个例子，理工科建议是每一个公式或者例题推导一遍，也可以选择本领域的专业软件来学。&lt;/p&gt;
-&lt;h2&gt;自学之中另一个重要技巧就是要认错。&lt;/h2&gt;
-&lt;p&gt;大概这个是区别民科与非民科的关键吧。科班教育一直有强大压力迫使你发现错误，自学的时候，正确答案不一定进入你的视野，甚至于不使劲找，并不知道。但是一旦当有人提出异议或者发现自己的错误，就要非常谨慎的分析，整合信息。这个过程不是法庭上或者辩论赛中的“辩护”过程，而是获得新的信息以后，重新建模的过程。在学习过程中，会有各种创意，而且尤其是在学新东西的时候，创造力恰是爆发的时候，此时不宜着急去钻进自己的创意之中，而应该赶紧记录下来，然后清空大脑，继续学新的，否则钻进自己的想法不容易出来。过一段时间，几周或者几个月再看之前的创意，会发现有些是可笑的，有些是书的下一章，有些有人证明不对，有些就是没人想过的。此时再挑出其中的一些拿出来研究。此处强烈推荐使用evernote
-学而不思则罔，思而不学则殆。殆的危害远远大于罔。钻进自己的思路里出不来，会走火入魔的。&lt;/p&gt;
-&lt;h2&gt;自学的第三个技巧就是要找。&lt;/h2&gt;
-&lt;p&gt;找，一个是找资源，一个是找人。&lt;/p&gt;
-&lt;p&gt;现在有各种公开课，找资源已经方便多了。找自学的材料，就是要找各种专业领域内经过验证的教材。而且从一开始就要找对专业教材。否则“习惯成自然，再改就很难”。比如一开始要看曼昆的《宏观经济学》，但是一开始如果你看的是《货币战争》，那就没救了。&lt;/p&gt;
-&lt;p&gt;找合适的人交流学习也是非常重要的，不同大学之间的区别其实主要是在人，老师和同学，盖了多少房子倒是其次。拜网络所赐，现在也可以在网上找到许多可以学习的伙伴。从微博、twitter还有果壳，以及各种问答网站，论坛，MITx。。。都可以找到相关领域的同学、老师，随手at一下，就可以开展讨论。 顺便说，自己的网络形象要注意树立，多发有营养的东西，这样与人搭讪才有人理。周末北京有无数的讲座、沙龙，比如去万有青年烩听听好玩的东西，还可以和做这些东西的人交流。&lt;/p&gt;
-&lt;h2&gt;自学的第四个技巧就是实践。&lt;/h2&gt;
-&lt;p&gt;这也是最难的一部分。可以从几个不同的层级进行。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;a. 维基百科 /百度百科 /科普写作：记忆学习内容最牢固的方法是教给别人，如果能有机会毁人不倦最好。如果没有这种机会，不妨把学会的东西用自己的理解转述放到wiki上，如果有错误，很快就有人会帮你指出。写科普也是很好的复习方法。比如我在这总结自学技巧，其实是给自己看的。&lt;/li&gt;
-&lt;li&gt;b. 软件模拟：现在的软件越来越强大了。学习一个专业领域内的软件，可以使学习事半功倍，而且实践起来也很容易。比如数学软件Mathematica(或者wolframalpha.com), MatLab；光学软件Zemax，Oslo；机械类的SolidWorks。。。这些行业标准级的软件，连帮助文件也是上等的教科书。电子学的话，最近在用https://www.circuitlab.com&lt;/li&gt;
-&lt;li&gt;c. 开源项目：对于编程学习来说，能做一个开源项目，应该是非常好的学习方式。唉，目前我还没有这个能力。&lt;/li&gt;
-&lt;li&gt;d. 购买与交换：金钱是用来交换的，除了购买生活必需品、奢侈品以外，还可以用来交换时间、空间、能力、技巧以及知识。以前我们接受的教育往往是“钱不是万能的”，我建议换个角度考虑“如何让金钱『万能』起来”。有些实践是可以外包出去的。你不一定需要果壳DIY里各位达人的那么高超的焊接技巧，去电脑维修的地方请个人帮你焊接也是一样的。甚至直接在淘宝上定制货品，比如我曾经做了一个红外的干扰器，可以干扰一些相机的拍摄，概念产品就是从淘宝上订购的一个激光舞台灯，要求对方把激光模组更换了一下。&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;e. 参加研究项目：有机会的话，要参加一些研究项目。没机会的话，多创造机会吧。也可以从参加一些公益活动开始。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;x. 医学的实践机会非常难得，特别是手术操作，很多地方到了主治甚至副高，重要的手术也还没开始训练。传说有前辈可以仅靠看别人的手术录像就把phaco手术学会，现在的医疗环境应该已经不允许了，可以先用动物模型演练，眼科专业的请移步我写的&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;《phaco训练手册》&lt;/a&gt;。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;y. SCI文章。虽然大家会嘲笑SCI是Stupid Chinese Index，但同行评议才是科学的检验方法，越是痛苦，越是困难，才越说明它有效。&lt;/li&gt;
-&lt;li&gt;z. 市场检验。这才是学习的终极实践。你发明了69式永动机？别告诉别人，别跟人脸红脖子粗的理论。自己开始做吧，先把自家的电钱省了，然后是亲友家，再到小区……看看那些IT界诸神，也许下一个神话时代已经悄悄开始了。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;与其每天晚上追电视剧，不如每天晚上追公开课。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;又看到一句：“以大多数人的努力程度之低，根本轮不到去拼天赋”，留作自勉&lt;/p&gt;
-&lt;p&gt;参考：
-&lt;a href="https://www.guokr.com/question/132920/"&gt;果壳问答：自然科学和社会科学中，有哪些学问是可以自学的，而哪些必须有科班经历？为什么会这样？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;2018年回头看看, 我还是学了很多好玩的东西. 其中有一些自己还写了&lt;a href="https://goldengrape.github.io/categories/jiao-cheng/"&gt;教程&lt;/a&gt;, 确实很有乐趣啊.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/quanxue/</guid><pubDate>Tue, 30 Jan 2018 13:00:00 GMT</pubDate></item></channel></rss>
+&lt;a href="https://www.guokr.com/question/118014/"&gt;果壳问答：我认为上研究生不是很必要，尤其是科学学位的。除了临床医学生。各位硕士的想法是什么呢？？&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/weixue/</guid><pubDate>Tue, 30 Jan 2018 13:10:00 GMT</pubDate></item></channel></rss>
