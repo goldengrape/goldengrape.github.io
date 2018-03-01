@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-03-01T08:20:00Z</lastmod>
+  <lastmod>2018-03-01T16:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -135,7 +135,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-7.html</loc>
-  <lastmod>2018-03-01T08:20:00Z</lastmod>
+  <lastmod>2018-03-01T16:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -332,6 +332,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</loc>
   <lastmod>2018-02-28T07:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/CSI-exam/</loc>
+  <lastmod>2018-03-01T16:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Generating-func-Fibonacci/</loc>
