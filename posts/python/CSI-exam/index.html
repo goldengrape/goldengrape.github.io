@@ -25,7 +25,7 @@ MathJax.Hub.Config({
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="2018年刑侦推理试题解答">
 <meta property="og:url" content="https://goldengrape.github.io/posts/python/CSI-exam/">
-<meta property="og:description" content="2018年刑侦推理试题: 
+<meta property="og:description" content='2018年刑侦推理试题: 
 
 
 
@@ -37,21 +37,16 @@ MathJax.Hub.Config({
 
 
 
-解题思路¶没啥, 就是暴力穷举, 看看是不是所有的条件都符合
+解题思路¶以此题为例, 做一个简单的python小教程.
+提取"第x题的答案"¶首先, 观察题目中经常出现的说法是: "第x题的答案"怎样怎样, 那么常用的一个过程就是要提取第x题的答案
+在python中可以使用的一个数据结构叫做列表list, 列表使用方括号括起来的一些元素, 要提取其中的内容用列表名[序号]就可以提取了. 比如
 
 
 
 
 
 
-In [1]:
-
-    
-import numpy as np
-
-def CSI_check(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10):
-    allanswer=[_,a1,a2,a3,a4,a5,a6,a7,a8,a9,a10]
-    # 1.">
+In'>
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-03-01T23:30:00+08:00">
 <meta property="article:tag" content="python">
@@ -133,7 +128,11 @@ def CSI_check(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10):
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="解题思路">解题思路<a class="anchor-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF">¶</a>
 </h2>
-<p>没啥, 就是暴力穷举, 看看是不是所有的条件都符合</p>
+<p>以此题为例, 做一个简单的python小教程.</p>
+<h3 id='提取"第x题的答案"'>提取"第x题的答案"<a class="anchor-link" href="#%E6%8F%90%E5%8F%96%22%E7%AC%ACx%E9%A2%98%E7%9A%84%E7%AD%94%E6%A1%88%22">¶</a>
+</h3>
+<p>首先, 观察题目中经常出现的说法是: "第x题的答案"怎样怎样, 那么常用的一个过程就是要提取第x题的答案</p>
+<p>在python中可以使用的一个数据结构叫做列表list, 列表使用方括号括起来的一些元素, 要提取其中的内容用列表名[序号]就可以提取了. 比如</p>
 
 </div>
 </div>
@@ -143,78 +142,178 @@ def CSI_check(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10):
 <div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sample</span><span class="o">=</span><span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">1.2</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">]</span> <span class="c1"># "#"号后面的部分是注释, 不会进入计算, 我后面会在程序中使用注释说明</span>
+<span class="n">sample</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="c1"># 注意python的计数是从第0项开始的, 所以第2项是2.3而不是1.2</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">CSI_check</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="n">a5</span><span class="p">,</span><span class="n">a6</span><span class="p">,</span><span class="n">a7</span><span class="p">,</span><span class="n">a8</span><span class="p">,</span><span class="n">a9</span><span class="p">,</span><span class="n">a10</span><span class="p">):</span>
-    <span class="n">allanswer</span><span class="o">=</span><span class="p">[</span><span class="n">_</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="n">a5</span><span class="p">,</span><span class="n">a6</span><span class="p">,</span><span class="n">a7</span><span class="p">,</span><span class="n">a8</span><span class="p">,</span><span class="n">a9</span><span class="p">,</span><span class="n">a10</span><span class="p">]</span>
-    <span class="c1"># 1. 这道题的答案是: </span>
-    <span class="c1"># 2. 第5题的答案是: </span>
-    <span class="n">a2_a5_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="c1"># A.C</span>
-                <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="c1"># B.D</span>
-                <span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="c1"># C.A</span>
-                <span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span><span class="c1"># D.B</span>
-    <span class="n">test2</span><span class="o">=</span><span class="p">(</span> <span class="n">a5</span> <span class="o">==</span> <span class="n">a2_a5_dict</span><span class="p">[</span><span class="n">a2</span><span class="p">]</span> <span class="p">)</span>
-    
-    <span class="c1"># 3. 以下选项中哪一题的答案与其他三项不同: </span>
-    <span class="n">a3_list</span><span class="o">=</span><span class="p">[</span><span class="n">a3</span><span class="p">,</span><span class="n">a6</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a4</span><span class="p">]</span>
-    <span class="n">a3_refer</span><span class="o">=</span><span class="n">a3_list</span><span class="p">[</span><span class="n">a3</span><span class="p">]</span>
-    <span class="n">a3_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">a3</span><span class="p">)</span>
-    <span class="n">test3</span><span class="o">=</span><span class="ow">not</span><span class="p">(</span><span class="n">a3_refer</span> <span class="ow">in</span> <span class="n">a3_list</span><span class="p">)</span> <span class="c1"># 不在剩下的列表中, 所以是与剩下的不同</span>
-    
-    <span class="c1"># 4. 以下选项中哪两题的答案相同: </span>
-    <span class="n">a4_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
-             <span class="mi">1</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
-             <span class="mi">2</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
-             <span class="mi">3</span><span class="p">:[</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
-    <span class="n">test4</span><span class="o">=</span><span class="p">(</span><span class="n">allanswer</span><span class="p">[</span><span class="n">a4_dict</span><span class="p">[</span><span class="n">a4</span><span class="p">][</span><span class="mi">0</span><span class="p">]]</span><span class="o">==</span> \
-           <span class="n">allanswer</span><span class="p">[</span><span class="n">a4_dict</span><span class="p">[</span><span class="n">a4</span><span class="p">][</span><span class="mi">1</span><span class="p">]])</span>
-    
-    <span class="c1"># 5.以下选项中哪一题的答案与本题相同</span>
-    <span class="n">a5_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
-             <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
-             <span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span>
-             <span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
-    <span class="n">test5</span><span class="o">=</span><span class="p">(</span><span class="n">a5</span> <span class="o">==</span> <span class="n">allanswer</span><span class="p">[</span><span class="n">a5_dict</span><span class="p">[</span><span class="n">a5</span><span class="p">]]</span> <span class="p">)</span>
-    
-    <span class="c1"># 6.以下选项中哪两题的答案与第8题相同</span>
-    <span class="n">a6_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
-             <span class="mi">1</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
-             <span class="mi">2</span><span class="p">:[</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
-             <span class="mi">3</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]}</span>
-    <span class="n">test6</span><span class="o">=</span><span class="p">(</span><span class="n">a8</span> <span class="o">==</span> <span class="n">allanswer</span><span class="p">[</span><span class="n">a6_dict</span><span class="p">[</span><span class="n">a6</span><span class="p">][</span><span class="mi">0</span><span class="p">]])</span> <span class="ow">and</span> <span class="p">(</span>
-           <span class="n">a8</span> <span class="o">==</span> <span class="n">allanswer</span><span class="p">[</span><span class="n">a6_dict</span><span class="p">[</span><span class="n">a6</span><span class="p">][</span><span class="mi">1</span><span class="p">]])</span>
-    
-    <span class="c1"># 7.此十道题中, 被选中次数最少的选项字幕为: </span>
-    <span class="n">a7_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
-             <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
-             <span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
-             <span class="mi">3</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
-    <span class="n">ans_count</span><span class="o">=</span><span class="p">[</span><span class="n">allanswer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">ans</span><span class="p">)</span> <span class="k">for</span> <span class="n">ans</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)]</span>
-    <span class="n">ans_count_min</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">ans_count</span><span class="p">)</span>
-    <span class="n">test7</span><span class="o">=</span> <span class="n">allanswer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">a7_dict</span><span class="p">[</span><span class="n">a7</span><span class="p">])</span><span class="o">==</span><span class="n">ans_count_min</span>
-    
-    <span class="c1"># 8.以下选项中, 哪一题的答案与第1题的答案在字母中不相邻: </span>
-    <span class="n">a8_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
-    <span class="n">test8</span><span class="o">=</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">allanswer</span><span class="p">[</span><span class="n">a8_dict</span><span class="p">[</span><span class="n">a8</span><span class="p">]]</span><span class="o">-</span><span class="n">a8</span><span class="p">)</span> <span class="o">!=</span><span class="mi">1</span><span class="p">)</span>
-    
-    <span class="c1"># 9.已知"第1题与第6题的答案相同" 与 "第x题与第5题的答案相同" 的真假性相反, 那么X为: </span>
-    <span class="n">a9_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">}</span>
-    <span class="n">bool_partA</span><span class="o">=</span><span class="p">(</span><span class="n">a1</span><span class="o">==</span><span class="n">a6</span><span class="p">)</span>
-    <span class="n">bool_partB</span><span class="o">=</span><span class="p">(</span><span class="n">allanswer</span><span class="p">[</span><span class="n">a9_dict</span><span class="p">[</span><span class="n">a9</span><span class="p">]]</span><span class="o">==</span><span class="n">a5</span><span class="p">)</span>
-    <span class="n">test9</span><span class="o">=</span><span class="p">(</span><span class="n">bool_partA</span> <span class="o">!=</span> <span class="n">bool_partB</span><span class="p">)</span>
-    
-    <span class="c1"># 10.在此10道题中, ABCD四个字幕出现此处最多与最少者的差为: </span>
-    <span class="n">a10_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
-    <span class="n">ans_count_max</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">ans_count</span><span class="p">)</span>
-    <span class="n">test10</span><span class="o">=</span><span class="p">(</span><span class="n">a10_dict</span><span class="p">[</span><span class="n">a10</span><span class="p">]</span><span class="o">==</span><span class="p">(</span><span class="n">ans_count_max</span><span class="o">-</span><span class="n">ans_count_min</span><span class="p">))</span>
-    
-    <span class="n">ans</span><span class="o">=</span><span class="p">(</span><span class="n">test2</span> <span class="ow">and</span> <span class="n">test3</span> <span class="ow">and</span> <span class="n">test4</span> <span class="ow">and</span> <span class="n">test5</span> <span class="ow">and</span>
-         <span class="n">test6</span> <span class="ow">and</span> <span class="n">test7</span> <span class="ow">and</span> <span class="n">test8</span> <span class="ow">and</span> <span class="n">test9</span> <span class="ow">and</span> <span class="n">test10</span><span class="p">)</span>
-    <span class="n">test0</span><span class="o">=</span><span class="kc">True</span>
-    <span class="n">test1</span><span class="o">=</span><span class="kc">True</span>
-    <span class="n">testlist</span><span class="o">=</span><span class="p">[</span><span class="n">test0</span><span class="p">,</span><span class="n">test1</span><span class="p">,</span><span class="n">test2</span><span class="p">,</span><span class="n">test3</span><span class="p">,</span><span class="n">test4</span><span class="p">,</span><span class="n">test5</span><span class="p">,</span><span class="n">test6</span><span class="p">,</span><span class="n">test7</span><span class="p">,</span> <span class="n">test8</span> <span class="p">,</span> <span class="n">test9</span> <span class="p">,</span> <span class="n">test10</span><span class="p">]</span>
+</div>
+</div>
+</div>
 
-    <span class="k">return</span> <span class="n">testlist</span><span class="p">,</span><span class="n">ans</span>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>2.3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如果用数字0, 1, 2, 3来表示ABCD的话, 就可以把所有的答案放进一个列表里, 提取某一题的答案就是提取列表中的第几项, 注意python的列表是从第0项开始计数的, 为了读题中不引起混淆, 我将列表的第0项设定成空项.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 举例, 假设第1题到第5题的答案分别是AABDC, 用0, 1, 2, 3来表示ABCD</span>
+<span class="n">sample_answer</span><span class="o">=</span><span class="p">[</span><span class="n">_</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="c1"># 提取第3题的答案</span>
+<span class="n">sample_answer</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第1题">第1题<a class="anchor-link" href="#%E7%AC%AC1%E9%A2%98">¶</a>
+</h3>
+<p>这道题的答案是: A.A, B.B, C.C, D.C</p>
+<p>题目中没有给出限定, 所以暂时先不管它</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第2题">第2题<a class="anchor-link" href="#%E7%AC%AC2%E9%A2%98">¶</a>
+</h3>
+<p>第5题的答案是: A.C, B.D, C.A, D.B</p>
+<p>在第2题里, 如何描述A-&gt;C,B-&gt;D, C-&gt;A, D-&gt;B的映射关系呢? 可以用一个python一个数据结构叫做字典. 
+字典是用{ }括起来的一组元素, 每一个元素里有一个key:value的数据对, 表示从key到value的映射</p>
+<p>那么要表示如何描述A-&gt;C,B-&gt;D, C-&gt;A, D-&gt;B的映射关系, 可以建立一个字典:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">a2_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="c1"># A.C</span>
+         <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="c1"># B.D</span>
+         <span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="c1"># C.A</span>
+         <span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span><span class="c1"># D.B</span>
+<span class="n">a2_dict</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1"># 字典内容的提取, 是使用字典名[key],就可以提取出value</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>3</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>用0, 1, 2, 3代表ABCD</p>
+<ul>
+<li>如果第二题选A, 那么就是说第5题的答案是C, 也就是a2_dict[0]的值2</li>
+<li>如果第二题选B, 那么就是说第5题的答案是D, 也就是a2_dict[1]的值3</li>
+<li>如果第二题选C, 那么就是说第5题的答案是A, 也就是a2_dict[2]的值0</li>
+<li>如果第二题选D, 那么就是说第5题的答案是B, 也就是a2_dict[3]的值2</li>
+</ul>
+<p>假定我们已经知道了所有的答案, 放在answer这个列表里, 那么第2题的答案是answer[2], 第5题的答案是answer[5],</p>
+<p>那么第2题的答案所对应的值就是a2_dict[ answer[2] ], 判断第2题是不是做对了, 就要看</p>
+<div class="highlight"><pre><span></span><span class="n">a2_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">]</span><span class="o">==</span><span class="n">answer</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+</pre></div>
+<p>是真还是假</p>
+<p>我将这个判断过程写成一个"函数", 这个函数负责看第2题是否做对了. python的函数定义是用</p>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="err">函数名</span><span class="p">(</span><span class="err">参数表</span><span class="p">):</span> 
+    <span class="err">空</span><span class="mi">4</span><span class="err">格写函数内容</span>
+    <span class="k">return</span> <span class="err">返回结果</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test2</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a2_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="c1"># A.C</span>
+             <span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="c1"># B.D</span>
+             <span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="c1"># C.A</span>
+             <span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">}</span><span class="c1"># D.B</span>
+
+    <span class="k">return</span> <span class="n">a2_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="p">]</span><span class="o">==</span><span class="n">answer</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span>
 </pre></div>
 
 </div>
@@ -224,26 +323,710 @@ def CSI_check(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10):
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [2]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ans_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="s2">"A"</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="s2">"B"</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="s2">"C"</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="s2">"D"</span><span class="p">}</span>
-<span class="k">for</span> <span class="n">a1</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">a2</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-        <span class="k">for</span> <span class="n">a3</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">a4</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                <span class="k">for</span> <span class="n">a5</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                    <span class="k">for</span> <span class="n">a6</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                        <span class="k">for</span> <span class="n">a7</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                            <span class="k">for</span> <span class="n">a8</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                                <span class="k">for</span> <span class="n">a9</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                                    <span class="k">for</span> <span class="n">a10</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-                                        <span class="n">allans</span><span class="o">=</span><span class="p">[</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="n">a5</span><span class="p">,</span><span class="n">a6</span><span class="p">,</span><span class="n">a7</span><span class="p">,</span><span class="n">a8</span><span class="p">,</span><span class="n">a9</span><span class="p">,</span><span class="n">a10</span><span class="p">]</span>
-                                        <span class="n">testlist</span><span class="p">,</span><span class="n">test</span><span class="o">=</span><span class="n">CSI_check</span><span class="p">(</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="n">a5</span><span class="p">,</span><span class="n">a6</span><span class="p">,</span><span class="n">a7</span><span class="p">,</span><span class="n">a8</span><span class="p">,</span><span class="n">a9</span><span class="p">,</span><span class="n">a10</span><span class="p">)</span>
-                                        <span class="k">if</span> <span class="n">test</span><span class="p">:</span>
-                                            <span class="k">for</span> <span class="n">ind</span><span class="p">,</span><span class="n">ans</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">),</span><span class="n">allans</span><span class="p">):</span>
-                                                <span class="nb">print</span><span class="p">(</span><span class="n">ind</span><span class="p">,</span><span class="n">ans_dict</span><span class="p">[</span><span class="n">ans</span><span class="p">])</span>
-                                
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 一般写好一个函数, 应当测试一下是否写对了. </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test2</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span> <span class="c1"># 应当为假</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test2</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]))</span> <span class="c1"># 应当为真, 假定第2题的答案是0, 对应第5题的答案是2</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第3题">第3题<a class="anchor-link" href="#%E7%AC%AC3%E9%A2%98">¶</a>
+</h3>
+<p>以下选项中哪一题的答案与其他三项不同:
+A. 第3题, B. 第6题, C. 第2题, D. 第4题</p>
+<p>当然我们可以去一个一个比对, 但python中对列表有一个简单的判断命令叫in,如果元素在这个列表中, 那么in命令就返回真, 否则为假.</p>
+<p>如果把第3题, 第6题, 第2题, 第4题的答案放在一个列表中, 那么有</p>
+<div class="highlight"><pre><span></span><span class="n">a3_list</span><span class="o">=</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">answer</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">answer</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">answer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">]</span>
+</pre></div>
+<ul>
+<li>如果选A, 那么就看answer[3] in [            answer[6], answer[2], answer[4] ]是否为假</li>
+<li>如果选B, 那么就看answer[6] in [ answer[3],            answer[2], answer[4] ]是否为假</li>
+<li>如果选C, 那么就看answer[2] in [ answer[3], answer[6],            answer[4] ]是否为假</li>
+<li>如果选D, 那么就看answer[4] in [ answer[3], answer[6], answer[2]            ]是否为假</li>
+</ul>
+<p>为了产生一个没有某一项的列表, 我们可以将列表中的某一项pop出去, 剩下的a3_list. 所以:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test3</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a3_list</span><span class="o">=</span><span class="p">[</span><span class="n">answer</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">answer</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">answer</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">answer</span><span class="p">[</span><span class="mi">4</span><span class="p">]]</span>
+    <span class="c1"># 先提取出来要检查的项</span>
+    <span class="n">refer</span><span class="o">=</span><span class="n">a3_list</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">]</span>
+    <span class="c1"># 在把这一项从列表里pop掉</span>
+    <span class="n">a3_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span> <span class="n">answer</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="p">)</span>
+    
+    <span class="c1"># 看看要检查的项是否在剩下的列表中</span>
+    <span class="k">return</span> <span class="ow">not</span><span class="p">(</span><span class="n">refer</span> <span class="ow">in</span> <span class="n">a3_list</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test3</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]))</span> <span class="c1"># 应当是真</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test3</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># 应当是假</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第4题">第4题<a class="anchor-link" href="#%E7%AC%AC4%E9%A2%98">¶</a>
+</h3>
+<p>以下选项中哪两题的答案相同:</p>
+<ul>
+<li>A. 第1,5题 </li>
+<li>B. 第2,7题</li>
+<li>C. 第1,9题</li>
+<li>D. 第6,10题</li>
+</ul>
+<p>这道题其实和第2题的思路一样, 建立一个映射关系的字典,</p>
+<div class="highlight"><pre><span></span><span class="n">a4_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+             <span class="mi">1</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+             <span class="mi">2</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+             <span class="mi">3</span><span class="p">:[</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
+</pre></div>
+<p>然后验证题目中所说的东西即可.</p>
+<ul>
+<li>如果选A, 那么看a4_dict[0]中的两项[1, 5], <ul>
+<li>其中1是a4_dict[0]这个列表的第0项, 第1题的答案就是<code>answer[ a4_dict[0][0] ]</code> , </li>
+<li>其中5是a4_dict[0]这个列表的第1项, 第5题的答案就是<code>answer[ a4_dict[0][1] ]</code>
+</li>
+</ul>
+</li>
+<li>如果选B, 那么看a4_dict[1]中的两项[2, 7], <ul>
+<li>其中2是a4_dict[0]这个列表的第0项, 第2题的答案就是<code>answer[ a4_dict[0][0] ]</code> , </li>
+<li>其中7是a4_dict[0]这个列表的第1项, 第7题的答案就是<code>answer[ a4_dict[0][1] ]</code>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test4</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a4_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>
+             <span class="mi">1</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span>
+             <span class="mi">2</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+             <span class="mi">3</span><span class="p">:[</span><span class="mi">6</span><span class="p">,</span><span class="mi">10</span><span class="p">]}</span>
+    
+    <span class="k">return</span> <span class="n">answer</span><span class="p">[</span> <span class="n">a4_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">][</span><span class="mi">0</span><span class="p">]]</span> <span class="o">==</span> <span class="n">answer</span><span class="p">[</span> <span class="n">a4_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="p">][</span><span class="mi">1</span><span class="p">]]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span> <span class="n">test4</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># 应当为假</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">test4</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">])</span> <span class="p">)</span> <span class="c1"># 应当为真</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第5题">第5题<a class="anchor-link" href="#%E7%AC%AC5%E9%A2%98">¶</a>
+</h3>
+<p>以下选项中哪一题的答案与本题相同</p>
+<ul>
+<li>A. 第8题,</li>
+<li>B. 第4题,</li>
+<li>C. 第9题,</li>
+<li>D. 第7题</li>
+</ul>
+<p>想必已经越来越熟练了, 先建立一个映射关系字典:</p>
+
+<pre><code>    a5_dict={0:8,
+             1:4,
+             2:9,
+             3:7}</code></pre>
+<p>本题的答案当然就是answer[5],</p>
+<ul>
+<li>如果选A, 那么就是看第8题的答案, 也就是answer[ a5_dict[0] ]</li>
+<li>如果选B, 那么就是看第4题的答案, 也就是answer[ a5_dict[1] ]</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test5</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a5_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span>
+             <span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span>
+             <span class="mi">2</span><span class="p">:</span><span class="mi">9</span><span class="p">,</span>
+             <span class="mi">3</span><span class="p">:</span><span class="mi">7</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">answer</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">==</span> <span class="n">answer</span><span class="p">[</span> <span class="n">a5_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="p">]</span> <span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test5</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># 应当为真, 第5题的答案与第8题都是A</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test5</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># 应当为假, 第5题的答案选的是B, 但与第4题的答案不同</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第6题">第6题<a class="anchor-link" href="#%E7%AC%AC6%E9%A2%98">¶</a>
+</h3>
+<p>以下选项中哪两题的答案与第8题相同</p>
+<ul>
+<li>A. 第[2,4]题,</li>
+<li>B. 第[1,6]题,</li>
+<li>C. 第[3,10]题,</li>
+<li>D. 第[5,9]题. </li>
+</ul>
+<p>出题人已经开始重复自己了, 这道题和第4题区别不大.</p>
+<p>建立一个映射字典:</p>
+
+<pre><code>    a6_dict={0:[2,4],
+             1:[1,6],
+             2:[3,10],
+             3:[5,9]}</code></pre>
+<p>第8题的答案当然是answer[8],</p>
+<ul>
+<li>如果选A, 那么answer[8]应当等于a6_dict[0]中的第2, 4题的答案, <ul>
+<li>其中2是<code>a6_dict[0][0]</code>, 第2题的答案也就是<code>answer[a6_dict[0][0]]</code>
+</li>
+<li>其中4是<code>a6_dict[0][1]</code>, 第4题的答案也就是<code>answer[a6_dict[0][1]]</code>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test6</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a6_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+             <span class="mi">1</span><span class="p">:[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+             <span class="mi">2</span><span class="p">:[</span><span class="mi">3</span><span class="p">,</span><span class="mi">10</span><span class="p">],</span>
+             <span class="mi">3</span><span class="p">:[</span><span class="mi">5</span><span class="p">,</span><span class="mi">9</span><span class="p">]}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="mi">8</span><span class="p">]</span> <span class="o">==</span> <span class="n">answer</span><span class="p">[</span><span class="n">a6_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="p">][</span><span class="mi">0</span><span class="p">]]</span> <span class="o">==</span> <span class="n">answer</span><span class="p">[</span><span class="n">a6_dict</span><span class="p">[</span> <span class="n">answer</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="p">][</span><span class="mi">1</span><span class="p">]]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test6</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1"># 应当为真, 第6题选了A, 第8题的答案是A, 第2, 4题也选的是A</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test6</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">]))</span> <span class="c1"># 应当为假, 第6题选了B, 第8题的答案是C, 第1, 6题选的不是C</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第7题">第7题<a class="anchor-link" href="#%E7%AC%AC7%E9%A2%98">¶</a>
+</h3>
+<p>此十道题中, 被选中次数最少的选项字母为:</p>
+<ul>
+<li>A. C,</li>
+<li>B. B, </li>
+<li>C. A, </li>
+<li>D. D</li>
+</ul>
+<p>先建立个映射字典:</p>
+
+<pre><code>    a7_dict={0:2,
+             1:1,
+             2:0,
+             3:3}</code></pre>
+<p>这道题开始有新花样了, "选中次数最少的字母", 那就要统计一下每个字母都被选中了多少次啊.</p>
+<p>列表里有个.count(value)方法, 可以统计出value在列表中出现了多少次. 所以:</p>
+<ul>
+<li>字母A在答案中出现的次数=answer.count(0)</li>
+<li>字母B在答案中出现的次数=answer.count(1)</li>
+<li>字母C在答案中出现的次数=answer.count(2)</li>
+<li>字母D在答案中出现的次数=answer.count(3)</li>
+</ul>
+<p>最少, 可以用min(列表)来表示, 那么各个字母出现次数中最少的数量: 
+min( [answer.count(0),answer.count(1),answer.count(2),answer.count(3) ] )</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test7</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a7_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span>
+             <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span>
+             <span class="mi">2</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
+             <span class="mi">3</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+    <span class="k">return</span> <span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="n">a7_dict</span><span class="p">[</span><span class="n">answer</span><span class="p">[</span><span class="mi">7</span><span class="p">]])</span> <span class="o">==</span> <span class="nb">min</span><span class="p">(</span> <span class="p">[</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">]</span> <span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test7</span><span class="p">([</span><span class="s2">""</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span> <span class="c1"># 应当为真, 这里面所有的字母都只出现了1次</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test7</span><span class="p">([</span><span class="s2">""</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span> <span class="c1"># 应当为假, 1出现了两次, 比其他都多</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第8题">第8题<a class="anchor-link" href="#%E7%AC%AC8%E9%A2%98">¶</a>
+</h3>
+<p>以下选项中, 哪一题的答案与第1题的答案在字母中不相邻:</p>
+<ul>
+<li>A. 第7题, </li>
+<li>B. 第5题, </li>
+<li>C. 第2题, </li>
+<li>D. 第10题</li>
+</ul>
+<p>先建个映射关系:</p>
+
+<pre><code>a8_dict={0:7,1:5,2:2,3:10}</code></pre>
+<p>这道题说的是字母不相邻, 我们已经用数字0123表示字母ABCD了, 那么相邻, 就是相差为+-1喽, 或者是减完以后平方=1. python用<code>**</code>表示平方, 用<code>!=</code>来表示不等于</p>
+<p>第一题的答案是answer[1],</p>
+<ul>
+<li>如果选A, 那么有<code>(answer[1]-answer[7])**2 !=1</code>
+</li>
+<li>如果选B, 那么有<code>(answer[1]-answer[5])**2 !=1</code>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test8</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span> 
+    <span class="n">a8_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">10</span><span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="n">answer</span><span class="p">[</span> <span class="n">a8_dict</span><span class="p">[</span><span class="n">answer</span><span class="p">[</span><span class="mi">8</span><span class="p">]]</span> <span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">!=</span><span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test8</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1">#应当为真, 第8题选了A, 第1题的答案是1, 与第7题的答案7不相邻</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test8</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span> <span class="c1">#应当为假, 第8题选了B, 第1题的答案是4, 与第5题的答案5相邻</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>True
+False
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第9题">第9题<a class="anchor-link" href="#%E7%AC%AC9%E9%A2%98">¶</a>
+</h3>
+<p>已知"第1题与第6题的答案相同" 与 "第x题与第5题的答案相同" 的真假性相反, 那么X为:</p>
+<ul>
+<li>A. 第6题 </li>
+<li>B. 第10题 </li>
+<li>C. 第2题</li>
+<li>D. 第9题</li>
+</ul>
+<p>建立映射关系:</p>
+
+<pre><code>a9_dict={0:6,1:10,2:2,3:9}</code></pre>
+<p>"第1题与第6题的答案相同", 这句话的逻辑值是answer[1]==answer[6]</p>
+<p>真假性相反用not表示</p>
+<ul>
+<li>如果选A, 那么X=6,  第6题与第5题的答案相同的逻辑值是answer[6]==answer[5],   那么not(answer[6]==answer[5])==(answer[1]==answer[6])</li>
+<li>如果选B, 那么X=10, 第10题与第5题的答案相同的逻辑值是answer[10]==answer[5], 那么not(answer[10]==answer[5])==(answer[1]==answer[6])</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test9</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a9_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">9</span><span class="p">}</span>
+    <span class="k">return</span> <span class="ow">not</span><span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="n">a9_dict</span><span class="p">[</span><span class="n">answer</span><span class="p">[</span><span class="mi">9</span><span class="p">]]]</span><span class="o">==</span><span class="n">answer</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span><span class="o">==</span><span class="p">(</span><span class="n">answer</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">==</span><span class="n">answer</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test9</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span> <span class="c1"># 应当为假, 第9题选了A, 第1题与第6题不同, 那么第6题应该和第5题相同才是真假性相反, 这里不满足</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test9</span><span class="p">([</span><span class="n">_</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">]))</span> <span class="c1"># 应当为真, 第9题选了A, 第1题与第6题不同, 那么第6题应该和第5题相同才是真假性相反</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="第10题">第10题<a class="anchor-link" href="#%E7%AC%AC10%E9%A2%98">¶</a>
+</h3>
+<p>在此10道题中, ABCD四个字母出现此处最多与最少者的差为:</p>
+<ul>
+<li>A.3</li>
+<li>B.2</li>
+<li>C.4</li>
+<li>D.1</li>
+</ul>
+<p>我们已经胜利在望, 发现出题人也没有太多花招了. 这题和前面第7题很相似, 只是第7题计算了最少, 这里要计算最多了.</p>
+<p>既然最少可以用min(列表)来表示, 那么各个字母出现次数中最少的数量: min( [answer.count(0),answer.count(1),answer.count(2),answer.count(3) ] )</p>
+<p>那么最多当然用max(列表)来表示, 于是各个字母出现次数中最多的数量: max( [answer.count(0),answer.count(1),answer.count(2),answer.count(3) ] )</p>
+<p>建立映射关系:</p>
+
+<pre><code>a10_dict={0:3,1:2,2:4,3:1}</code></pre>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test10</span><span class="p">(</span><span class="n">answer</span><span class="p">):</span>
+    <span class="n">a10_dict</span><span class="o">=</span><span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+    <span class="n">answer_count_list</span><span class="o">=</span><span class="p">[</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span><span class="n">answer</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="p">]</span> 
+    <span class="n">diff</span><span class="o">=</span> <span class="nb">max</span><span class="p">(</span> <span class="n">answer_count_list</span> <span class="p">)</span> <span class="o">-</span> <span class="nb">min</span><span class="p">(</span> <span class="n">answer_count_list</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="n">a10_dict</span><span class="p">[</span><span class="n">answer</span><span class="p">[</span><span class="mi">10</span><span class="p">]]</span><span class="o">==</span><span class="n">diff</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">test10</span><span class="p">([</span><span class="s2">""</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1">#应当为假, 第10题选了A, 最大最小要相差3, 但每个字母只出现了一次, 最大最小相差是0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">test10</span><span class="p">([</span><span class="s2">""</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">0</span><span class="p">]))</span> <span class="c1">#应当为真, 第10题选了A, 最大最小要相差3, 选1出现了3次, 选2, 3都没有, 最大最小相差是3</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>False
+True
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="穷举">穷举<a class="anchor-link" href="#%E7%A9%B7%E4%B8%BE">¶</a>
+</h2>
+<p>现在已经把上面10道题的判定函数都写好了. 要求解的答案就是要令上述10道题的判别函数都返回真的情况.</p>
+<p>10道单选题, 每道题可能有4种答案, 一共的可能性是
+$$
+4^{10}=1048576
+$$</p>
+<p>看起来也不大, 所以就穷举好了. 最简单的方式就是for循环. 虽然也还有其他生成穷举序列的方法, 但本着"想到解法就先实现出来看看"的敏捷开发思路. 先用for循环吧.</p>
+<p>所谓for循环, 就是让一个变量依次取得列表中的所有值</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">choice</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">test1</span><span class="o">=</span><span class="kc">True</span>
+<span class="n">answer</span><span class="o">=</span><span class="p">[]</span>
+<span class="k">for</span> <span class="n">a1</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">a2</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">a3</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">a4</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                <span class="k">for</span> <span class="n">a5</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">a6</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                        <span class="k">for</span> <span class="n">a7</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                            <span class="k">for</span> <span class="n">a8</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                                <span class="k">for</span> <span class="n">a9</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                                    <span class="k">for</span> <span class="n">a10</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+                                        <span class="n">answer</span><span class="o">=</span><span class="p">[</span><span class="s2">""</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="n">a2</span><span class="p">,</span><span class="n">a3</span><span class="p">,</span><span class="n">a4</span><span class="p">,</span><span class="n">a5</span><span class="p">,</span><span class="n">a6</span><span class="p">,</span><span class="n">a7</span><span class="p">,</span><span class="n">a8</span><span class="p">,</span><span class="n">a9</span><span class="p">,</span><span class="n">a10</span><span class="p">]</span>
+                                        <span class="k">if</span> <span class="p">(</span><span class="kc">True</span><span class="o">==</span>
+                                            <span class="n">test1</span><span class="o">==</span>
+                                            <span class="n">test2</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test3</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test4</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test5</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test6</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test7</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test8</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test9</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span><span class="o">==</span>
+                                            <span class="n">test10</span><span class="p">(</span><span class="n">answer</span><span class="p">)):</span>
+                                            <span class="nb">print</span><span class="p">(</span><span class="n">answer</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">"That's all"</span><span class="p">)</span>
 </pre></div>
 
@@ -259,16 +1042,7 @@ def CSI_check(a1,a2,a3,a4,a5,a6,a7,a8,a9,a10):
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1 B
-2 C
-3 A
-4 C
-5 A
-6 C
-7 D
-8 A
-9 B
-10 A
+<pre>['', 1, 2, 0, 2, 0, 2, 3, 0, 1, 0]
 That's all
 </pre>
 </div>
@@ -289,19 +1063,6 @@ That's all
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-</div>
-</div>
-</div>
-
 </div>
     </div>
   </div>
