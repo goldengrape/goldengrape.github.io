@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Mar 2018 01:43:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何制作透明冰块</title><link>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Mar 2018 06:50:22 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何制作透明冰块</title><link>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;目的: 制作透明的冰块&lt;/p&gt;
 &lt;/li&gt;
@@ -8,16 +8,16 @@
 &lt;img alt="WechatIMG44" src="https://i.loli.net/2018/03/03/5a99f82bf22f8.jpeg"&gt;
 冰是非常透明的, 冰的折射率是1.31, 水是1.33, 所以冰与水的分界仔细看的话还是可以看出来的.&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;材料与方法:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;材料:&lt;/li&gt;
-&lt;li&gt;塑料瓶&lt;/li&gt;
-&lt;li&gt;塑料袋&lt;/li&gt;
-&lt;li&gt;气泡包装纸&lt;/li&gt;
-&lt;li&gt;冰箱&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;教程重新撰写中
+&lt;!--
+* 材料与方法:
+&lt;!-- TEASER_END --&gt;
+0. 材料:
+&lt;em&gt; 塑料瓶
+&lt;/em&gt; 塑料袋
+&lt;em&gt; 气泡包装纸
+&lt;/em&gt; 冰箱&lt;/p&gt;
 &lt;p&gt;1.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;取塑料瓶一个, 瓶底剪掉.&lt;/li&gt;
@@ -52,7 +52,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;所以就显得钻瓶盖的动作有些多余了, 除非特别有耐心, 把所有的水都冻成冰, 那么杂质就会被挤到塑料袋里去. 到时候拧下瓶盖就去除了.&lt;/p&gt;
-&lt;p&gt;结冰的过程太普通了, 以至于容易忘了其实结冰就是晶体生长过程啊, 和单晶硅生长是一类的过程.&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</guid><pubDate>Sat, 03 Mar 2018 01:20:00 GMT</pubDate></item><item><title>2018年刑侦推理试题解答</title><link>https://goldengrape.github.io/posts/python/CSI-exam/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;结冰的过程太普通了, 以至于容易忘了其实结冰就是晶体生长过程啊, 和单晶硅生长是一类的过程. --&amp;gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</guid><pubDate>Sat, 03 Mar 2018 01:20:00 GMT</pubDate></item><item><title>2018年刑侦推理试题解答</title><link>https://goldengrape.github.io/posts/python/CSI-exam/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
