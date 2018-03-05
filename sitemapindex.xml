@@ -59,7 +59,7 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/life-science.xml</loc>
-  <lastmod>2018-03-03T01:42:00Z</lastmod>
+  <lastmod>2018-03-03T06:50:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/ml.xml</loc>
@@ -86,15 +86,19 @@
   <lastmod>2018-01-05T18:08:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/vr.xml</loc>
+  <lastmod>2018-03-05T16:11:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml</loc>
   <lastmod>2018-02-09T05:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2018-03-03T01:42:00Z</lastmod>
+  <lastmod>2018-03-05T16:11:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2018-03-03T01:42:00Z</lastmod>
+  <lastmod>2018-03-05T16:11:00Z</lastmod>
  </sitemap>
 </sitemapindex>
