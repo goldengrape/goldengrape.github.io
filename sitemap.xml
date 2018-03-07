@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2018-02-09T12:46:00Z</lastmod>
+  <lastmod>2018-03-07T11:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-03-05T16:11:00Z</lastmod>
+  <lastmod>2018-03-07T11:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -139,7 +139,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-7.html</loc>
-  <lastmod>2018-03-05T16:11:00Z</lastmod>
+  <lastmod>2018-03-07T11:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-8.html</loc>
+  <lastmod>2018-03-07T11:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -228,6 +232,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/</loc>
   <lastmod>2018-02-25T16:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</loc>
+  <lastmod>2018-03-07T11:39:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/eq-price/</loc>
