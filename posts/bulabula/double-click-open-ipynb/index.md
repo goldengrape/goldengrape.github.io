@@ -64,7 +64,7 @@ on run {input}
          deply 3
          do script with command cmd
       else
-         do script "source activate myenv"
+         do script "source activate myenv" in window 1
          deply 3
          do script with command cmd in window 1
       end if
