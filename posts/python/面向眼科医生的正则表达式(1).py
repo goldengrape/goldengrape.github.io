@@ -3,7 +3,13 @@
 
 # 以从抗体序列中定位CDR来练习正则表达式. 
 # 
-# 正则表达式的基础和简介放在以后写
+# 这个练习中, 我们将会使用这样一些正则表达式: 
+# * [A-Z]: 任意字母
+# * [A-Z]{3}: 任意字母重复3次
+# * [A-Z]{3,5}: 任意字母重复至少3次, 至多5次
+# * [A-Z]*?C: 任意字母重复0次或多次直到第一次遇到字母C
+# * WYQ|WLQ|WFQ|WYL: 在WYQ, WLQ, WFQ, WYL之中选1个
+# * ^A:  以字母A开头
 # <!-- TEASER_END -->
 
 # # 定位抗体序列中的CDR
@@ -52,12 +58,14 @@ print(">Ranibizumab Heavy Chain\n",VH)
 #     * 但其实CDR序列开始于第24个字母, 它前面应该是24-1=23个字母, 所以应当是^[A-Z]{23}
 # * 序列之前总是Cys(单字母C): ```(^([A-Z]{22})C)```
 #     * 也就是CDR之前的序列最后一个字母是C, 那么又用掉一个字母, 应当是23-1=22
+#     
+# python有个正则表达式的package叫re, 其中re.findall(表达式, 目标字符串), 可以从目标字符串中找到正则表达式所描述的子串, 用括号把正则表达式括起来的话, 就是说这是一个部分
 
 # In[2]:
 
 
-CDR1_before="(^[A-Z]{22}C)"
-re.findall(CDR1_before,VL)
+CDR_L1_before="(^[A-Z]{22}C)"
+re.findall(CDR_L1_before,VL)
 
 
 # #### CDR-L1序列的部分
@@ -67,8 +75,8 @@ re.findall(CDR1_before,VL)
 # In[3]:
 
 
-CDR1_itself="([A-Z]{10,17})"
-re.findall(CDR1_before+CDR1_itself,VL)
+CDR_L1_itself="([A-Z]{10,17})"
+re.findall(CDR_L1_before+CDR_L1_itself,VL)
 # 注意现在还没有定义结尾部分, 所以会直接找到{10, 17}中最大的17这个值
 
 
@@ -81,9 +89,14 @@ re.findall(CDR1_before+CDR1_itself,VL)
 # In[4]:
 
 
-CDR1_after="(WYQ|WLQ|WFQ|WYL)"
-CDR1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
-re.findall(CDR1_pattern,VL)
+CDR_L1_after="(WYQ|WLQ|WFQ|WYL)"
+CDR_L1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
+CDR_L2_pattern=""
+CDR_L3_pattern=""
+CDR_L_pattern=CDR_L1_pattern+CDR_L2_pattern+CDR_L3_pattern
+
+CDR_Ls=re.findall(CDR_L_pattern,VL)
+print(CDR_Ls)
 
 
 # ### CDR-L2
@@ -99,10 +112,13 @@ re.findall(CDR1_pattern,VL)
 # In[5]:
 
 
-CDR1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
-CDR2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
-CDR_pattern=CDR1_pattern+CDR2_pattern
-re.findall(CDR_pattern,VL)
+CDR_L1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
+CDR_L2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
+CDR_L3_pattern=""
+CDR_L_pattern=CDR_L1_pattern+CDR_L2_pattern+CDR_L3_pattern
+
+CDR_Ls=re.findall(CDR_L_pattern,VL)
+print(CDR_Ls)
 
 
 # ### CDR-L3
@@ -120,17 +136,17 @@ re.findall(CDR_pattern,VL)
 # In[6]:
 
 
-CDR1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
-CDR2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
-CDR3_pattern="([A-Z]*?C)"+"([A-Z]{7,11})"+"(FG[A-Z]G)"
-CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
+CDR_L1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
+CDR_L2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
+CDR_L3_pattern="([A-Z]*?C)"+"([A-Z]{7,11})"+"(FG[A-Z]G)"
+CDR_L_pattern=CDR_L1_pattern+CDR_L2_pattern+CDR_L3_pattern
 
-CDRs=re.findall(CDR_pattern,VL)
-CDR1=CDRs[0][1]
-CDR2=CDRs[0][4]
-CDR3=CDRs[0][7]
-print(CDRs)
-print(CDR1,CDR2,CDR3)
+CDR_Ls=re.findall(CDR_L_pattern,VL)
+CDR_L1=CDR_Ls[0][1]
+CDR_L2=CDR_Ls[0][4]
+CDR_L3=CDR_Ls[0][7]
+print(CDR_Ls)
+print(CDR_L1,CDR_L2,CDR_L3)
 
 
 # # 重链的CDR-H
@@ -162,9 +178,13 @@ print(CDR1,CDR2,CDR3)
 # In[7]:
 
 
-CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
-CDR_pattern=CDR1_pattern
-re.findall(CDR_pattern,VH)
+CDR_H1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
+CDR_H2_pattern=""
+CDR_H3_pattern=""
+CDR_H_pattern=CDR_H1_pattern+CDR_H2_pattern+CDR_H3_pattern
+
+CDR_Hs=re.findall(CDR_H_pattern,VH)
+print(CDR_Hs)
 
 
 # ### CDR-H2
@@ -180,10 +200,13 @@ re.findall(CDR_pattern,VH)
 # In[8]:
 
 
-CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
-CDR2_pattern="([A-Z]*?)"+"([A-Z]{7,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
-CDR_pattern=CDR1_pattern+CDR2_pattern
-re.findall(CDR_pattern,VH)
+CDR_H1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
+CDR_H2_pattern="([A-Z]*?)"+"([A-Z]{7,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
+CDR_H3_pattern=""
+CDR_H_pattern=CDR_H1_pattern+CDR_H2_pattern+CDR_H3_pattern
+
+CDR_Hs=re.findall(CDR_H_pattern,VH)
+print(CDR_Hs)
 
 
 # ### CDR-H3
@@ -197,18 +220,82 @@ re.findall(CDR_pattern,VH)
 # In[9]:
 
 
-CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
-CDR2_pattern="([A-Z]*?)"+"([A-Z]{7,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
-CDR3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
-CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
+CDR_H1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
+CDR_H2_pattern="([A-Z]*?)"+"([A-Z]{7,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
+CDR_H3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
+CDR_H_pattern=CDR_H1_pattern+CDR_H2_pattern+CDR_H3_pattern
 
-CDRs=re.findall(CDR_pattern,VH)
-CDR1=CDRs[0][1]
-CDR2=CDRs[0][4]
-CDR3=CDRs[0][7]
-print(CDRs)
-print(CDR1,CDR2,CDR3)
+CDR_Hs=re.findall(CDR_H_pattern,VH)
+print(CDR_Hs)
 
+CDR_H1=CDR_Hs[0][1]
+CDR_H2=CDR_Hs[0][4]
+CDR_H3=CDR_Hs[0][7]
+print(CDR_H1,CDR_H2,CDR_H3)
+
+
+# # 识别CDR的函数
+# 
+# 综上, 可以整合成一组函数, 专门用来识别CDR
+
+# In[10]:
+
+
+def get_CDR(pattern, seq): 
+    CDRs=re.findall(pattern,seq)
+    try: 
+        CDR1=CDRs[0][1]
+        CDR2=CDRs[0][4]
+        CDR3=CDRs[0][7]
+    except:
+        CDR1=""
+        CDR2=""
+        CDR3=""
+    return [CDR1,CDR2, CDR3]
+
+def LC_CDR(seq): 
+    CDR1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
+    CDR2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
+    CDR3_pattern="([A-Z]*?C)"+"([A-Z]{7,11})"+"(FG[A-Z]G)"
+    CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
+    return get_CDR(CDR_pattern,seq)
+
+def HC_CDR(seq): 
+    CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
+    CDR2_pattern="([A-Z]*?)"+"([A-Z]{7,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
+    CDR3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
+    CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
+    return get_CDR(CDR_pattern,seq)
+
+
+# 还是用Lucentis测试一下
+
+# In[11]:
+
+
+print(VL)
+print(LC_CDR(VL))
+
+
+# In[12]:
+
+
+print(VH)
+print(HC_CDR(VH))
+
+
+# # 总结
+# 
+# 在这个练习中使用了一些正则表达式: 
+# * [A-Z]: 任意字母
+# * [A-Z]{3}: 任意字母重复3次
+# * [A-Z]{3,5}: 任意字母重复至少3次, 至多5次
+# * [A-Z]*?C: 任意字母重复0次或多次直到第一次遇到字母C
+# * WYQ|WLQ|WFQ|WYL: 在WYQ, WLQ, WFQ, WYL之中选1个
+# * ^A:  以字母A开头
+# 
+# 仅仅使用这些就已经可以从抗体序列中找到CDR了
+# 
 
 # In[ ]:
 
