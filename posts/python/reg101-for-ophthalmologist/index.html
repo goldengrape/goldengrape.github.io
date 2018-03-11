@@ -26,7 +26,14 @@ MathJax.Hub.Config({
 <meta property="og:title" content="面向眼科医生的正则表达式(1)-练习">
 <meta property="og:url" content="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/">
 <meta property="og:description" content="以从抗体序列中定位CDR来练习正则表达式.
-正则表达式的基础和简介放在以后写
+这个练习中, 我们将会使用这样一些正则表达式:
+
+[A-Z]: 任意字母
+[A-Z]{3}: 任意字母重复3次
+[A-Z]{3,5}: 任意字母重复至少3次, 至多5次
+[A-Z]*?C: 任意字母重复0次或多次直到第一次遇到字母C
+WYQ|WLQ|WFQ|WYL: 在WYQ, WLQ, WFQ, WYL之中选1个
+^A:  以字母A开头
 
 
 
@@ -34,42 +41,7 @@ MathJax.Hub.Config({
 
 
 
-
-
-
-定位抗体序列中的CDR¶
-
-
-
-
-
-
-
-
-在设计抗体时, 如何找出抗体序列中的CDR是一个问题,
-按照这个网页上所描述的方法, 也可以使用对序列进行分析
-
-
-
-
-
-
-
-
-
-轻链的CDR-L¶
-
-
-
-
-
-
-
-
-
-CDR-L1
-Start Approx residue 24
-Residue before ">
+">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-03-11T12:00:00+08:00">
 <meta property="article:tag" content="python">
@@ -140,9 +112,16 @@ Residue before ">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>以从抗体序列中定位CDR来练习正则表达式.</p>
-<p>正则表达式的基础和简介放在以后写
-<!-- TEASER_END --></p>
-
+<p>这个练习中, 我们将会使用这样一些正则表达式:</p>
+<ul>
+<li>[A-Z]: 任意字母</li>
+<li>[A-Z]{3}: 任意字母重复3次</li>
+<li>[A-Z]{3,5}: 任意字母重复至少3次, 至多5次</li>
+<li>[A-Z]*?C: 任意字母重复0次或多次直到第一次遇到字母C</li>
+<li>WYQ|WLQ|WFQ|WYL: 在WYQ, WLQ, WFQ, WYL之中选1个</li>
+<li>^A:  以字母A开头<!-- TEASER_END -->
+</li>
+</ul>
 </div>
 </div>
 </div>
@@ -283,6 +262,8 @@ Residue before ">
 </ul>
 </li>
 </ul>
+<p>python有个正则表达式的package叫re, 其中re.findall(表达式, 目标字符串), 可以从目标字符串中找到正则表达式所描述的子串, 用括号把正则表达式括起来的话, 就是说这是一个部分</p>
+
 </div>
 </div>
 </div>
@@ -291,8 +272,8 @@ Residue before ">
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_before</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span>
-<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_before</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_before</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_L1_before</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -339,8 +320,8 @@ Residue before ">
 <div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_itself</span><span class="o">=</span><span class="s2">"([A-Z]{10,17})"</span>
-<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_before</span><span class="o">+</span><span class="n">CDR1_itself</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_itself</span><span class="o">=</span><span class="s2">"([A-Z]{10,17})"</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_L1_before</span><span class="o">+</span><span class="n">CDR_L1_itself</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
 <span class="c1"># 注意现在还没有定义结尾部分, 所以会直接找到{10, 17}中最大的17这个值</span>
 </pre></div>
 
@@ -392,9 +373,14 @@ Residue before ">
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_after</span><span class="o">=</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
-<span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
-<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_after</span><span class="o">=</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR_L1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">""</span>
+<span class="n">CDR_L3_pattern</span><span class="o">=</span><span class="s2">""</span>
+<span class="n">CDR_L_pattern</span><span class="o">=</span><span class="n">CDR_L1_pattern</span><span class="o">+</span><span class="n">CDR_L2_pattern</span><span class="o">+</span><span class="n">CDR_L3_pattern</span>
+
+<span class="n">CDR_Ls</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_L_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_Ls</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -406,14 +392,12 @@ Residue before ">
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt"></div>
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ')]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ')]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -451,10 +435,13 @@ Residue before ">
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
-<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
-<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span>
-<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
+<span class="n">CDR_L3_pattern</span><span class="o">=</span><span class="s2">""</span>
+<span class="n">CDR_L_pattern</span><span class="o">=</span><span class="n">CDR_L1_pattern</span><span class="o">+</span><span class="n">CDR_L2_pattern</span><span class="o">+</span><span class="n">CDR_L3_pattern</span>
+
+<span class="n">CDR_Ls</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_L_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_Ls</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -466,14 +453,12 @@ Residue before ">
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[5]:</div>
+<div class="prompt"></div>
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY')]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY')]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -516,17 +501,17 @@ Residue before ">
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
-<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
-<span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,11})"</span><span class="o">+</span><span class="s2">"(FG[A-Z]G)"</span>
-<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
+<span class="n">CDR_L3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,11})"</span><span class="o">+</span><span class="s2">"(FG[A-Z]G)"</span>
+<span class="n">CDR_L_pattern</span><span class="o">=</span><span class="n">CDR_L1_pattern</span><span class="o">+</span><span class="n">CDR_L2_pattern</span><span class="o">+</span><span class="n">CDR_L3_pattern</span>
 
-<span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
-<span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">CDRs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span><span class="n">CDR3</span><span class="p">)</span>
+<span class="n">CDR_Ls</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_L_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<span class="n">CDR_L1</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">CDR_L2</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">CDR_L3</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_Ls</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_L1</span><span class="p">,</span><span class="n">CDR_L2</span><span class="p">,</span><span class="n">CDR_L3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -613,9 +598,13 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
-<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span>
-<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_H1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+<span class="n">CDR_H2_pattern</span><span class="o">=</span><span class="s2">""</span>
+<span class="n">CDR_H3_pattern</span><span class="o">=</span><span class="s2">""</span>
+<span class="n">CDR_H_pattern</span><span class="o">=</span><span class="n">CDR_H1_pattern</span><span class="o">+</span><span class="n">CDR_H2_pattern</span><span class="o">+</span><span class="n">CDR_H3_pattern</span>
+
+<span class="n">CDR_Hs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_H_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_Hs</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -627,14 +616,12 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt"></div>
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV')]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV')]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -672,10 +659,13 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
-<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
-<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span>
-<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_H1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+<span class="n">CDR_H2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
+<span class="n">CDR_H3_pattern</span><span class="o">=</span><span class="s2">""</span>
+<span class="n">CDR_H_pattern</span><span class="o">=</span><span class="n">CDR_H1_pattern</span><span class="o">+</span><span class="n">CDR_H2_pattern</span><span class="o">+</span><span class="n">CDR_H3_pattern</span>
+
+<span class="n">CDR_Hs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_H_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_Hs</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -687,19 +677,12 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt"></div>
 
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS',
-  'GYDFTHYGMN',
-  'WV',
-  'RQAPGKGLEW',
-  'VGWINTYTGEPTYAADFKR',
-  'RFT')]</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV', 'RQAPGKGLEW', 'VGWINTYTGEPTYAADFKR', 'RFT')]
+</pre>
 </div>
-
 </div>
 
 </div>
@@ -736,17 +719,18 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
-<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
-<span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{3,25})"</span><span class="o">+</span><span class="s2">"(WG[A-Z]G)"</span>
-<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_H1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+<span class="n">CDR_H2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
+<span class="n">CDR_H3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{3,25})"</span><span class="o">+</span><span class="s2">"(WG[A-Z]G)"</span>
+<span class="n">CDR_H_pattern</span><span class="o">=</span><span class="n">CDR_H1_pattern</span><span class="o">+</span><span class="n">CDR_H2_pattern</span><span class="o">+</span><span class="n">CDR_H3_pattern</span>
 
-<span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
-<span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">CDRs</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span><span class="n">CDR3</span><span class="p">)</span>
+<span class="n">CDR_Hs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_H_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_Hs</span><span class="p">)</span>
+
+<span class="n">CDR_H1</span><span class="o">=</span><span class="n">CDR_Hs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">CDR_H2</span><span class="o">=</span><span class="n">CDR_Hs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">CDR_H3</span><span class="o">=</span><span class="n">CDR_Hs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR_H1</span><span class="p">,</span><span class="n">CDR_H2</span><span class="p">,</span><span class="n">CDR_H3</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -770,6 +754,148 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="识别CDR的函数">识别CDR的函数<a class="anchor-link" href="#%E8%AF%86%E5%88%ABCDR%E7%9A%84%E5%87%BD%E6%95%B0">¶</a>
+</h2>
+<p>综上, 可以整合成一组函数, 专门用来识别CDR</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_CDR</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span> 
+    <span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span> 
+        <span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+        <span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">CDR1</span><span class="o">=</span><span class="s2">""</span>
+        <span class="n">CDR2</span><span class="o">=</span><span class="s2">""</span>
+        <span class="n">CDR3</span><span class="o">=</span><span class="s2">""</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span> <span class="n">CDR3</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">LC_CDR</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span> 
+    <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+    <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
+    <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,11})"</span><span class="o">+</span><span class="s2">"(FG[A-Z]G)"</span>
+    <span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+    <span class="k">return</span> <span class="n">get_CDR</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">HC_CDR</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span> 
+    <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+    <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
+    <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{3,25})"</span><span class="o">+</span><span class="s2">"(WG[A-Z]G)"</span>
+    <span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+    <span class="k">return</span> <span class="n">get_CDR</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>还是用Lucentis测试一下</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">VL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">LC_CDR</span><span class="p">(</span><span class="n">VL</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC
+['SASQDISNYLN', 'GKAPKVL', 'QQYSTVPWT']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">VH</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">HC_CDR</span><span class="p">(</span><span class="n">VH</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTYAADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVTVSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL
+['GYDFTHYGMN', 'VGWINTYTGEPTYAADFKR', 'YPYYYGTSHWYFDV']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="总结">总结<a class="anchor-link" href="#%E6%80%BB%E7%BB%93">¶</a>
+</h2>
+<p>在这个练习中使用了一些正则表达式:</p>
+<ul>
+<li>[A-Z]: 任意字母</li>
+<li>[A-Z]{3}: 任意字母重复3次</li>
+<li>[A-Z]{3,5}: 任意字母重复至少3次, 至多5次</li>
+<li>[A-Z]*?C: 任意字母重复0次或多次直到第一次遇到字母C</li>
+<li>WYQ|WLQ|WFQ|WYL: 在WYQ, WLQ, WFQ, WYL之中选1个</li>
+<li>^A:  以字母A开头</li>
+</ul>
+<p>仅仅使用这些就已经可以从抗体序列中找到CDR了</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
