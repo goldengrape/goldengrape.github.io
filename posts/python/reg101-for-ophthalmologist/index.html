@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>面向眼科医生的正则表达式(1)-练习 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../bulabula/double-click-open-ipynb/" title="Mac上双击打开jupyter文件" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="面向眼科医生的正则表达式(1)-练习">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/">
+<meta property="og:description" content="以从抗体序列中定位CDR来练习正则表达式.
+正则表达式的基础和简介放在以后写
+
+
+
+
+
+
+
+
+
+
+定位抗体序列中的CDR¶
+
+
+
+
+
+
+
+
+在设计抗体时, 如何找出抗体序列中的CDR是一个问题,
+按照这个网页上所描述的方法, 也可以使用对序列进行分析
+
+
+
+
+
+
+
+
+
+轻链的CDR-L¶
+
+
+
+
+
+
+
+
+
+CDR-L1
+Start Approx residue 24
+Residue before ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-03-11T12:00:00+08:00">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">面向眼科医生的正则表达式(1)-练习</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-11T12:00:00+08:00" itemprop="datePublished" title="2018-03-11 12:00">2018-03-11 12:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/python/面向眼科医生的正则表达式(1).html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>以从抗体序列中定位CDR来练习正则表达式.</p>
+<p>正则表达式的基础和简介放在以后写
+<!-- TEASER_END --></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="定位抗体序列中的CDR">定位抗体序列中的CDR<a class="anchor-link" href="#%E5%AE%9A%E4%BD%8D%E6%8A%97%E4%BD%93%E5%BA%8F%E5%88%97%E4%B8%AD%E7%9A%84CDR">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在设计抗体时, 如何找出抗体序列中的CDR是一个问题,</p>
+<p>按照<a href="http://www.bioinf.org.uk/abs/#cdrdef">这个网页</a>上所描述的方法, 也可以使用对序列进行分析</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="轻链的CDR-L">轻链的CDR-L<a class="anchor-link" href="#%E8%BD%BB%E9%93%BE%E7%9A%84CDR-L">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>CDR-L1<ul>
+<li>Start Approx residue 24</li>
+<li>Residue before    always a Cys</li>
+<li>Residue after always a Trp. Typically Trp-Tyr-Gln, but also, Trp-Leu-Gln, Trp-Phe-Gln, Trp-Tyr-Leu</li>
+<li>Length    10 to 17 residues</li>
+</ul>
+</li>
+<li>CDR-L2<ul>
+<li>Start always 16 residues after the end of L1</li>
+<li>Residues before   generally Ile-Tyr, but also, Val-Tyr, Ile-Lys, Ile-Phe</li>
+<li>Length    always 7 residues (except NEW (7FAB) which has a deletion in this region)</li>
+</ul>
+</li>
+<li>CDR-L3<ul>
+<li>Start always 33 residues after end of L2 (except NEW (7FAB) which has the deletion at the end of CDR-L2)</li>
+<li>Residue before    always Cys</li>
+<li>Residues after    always Phe-Gly-XXX-Gly</li>
+<li>Length    7 to 11 residues</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>以大名鼎鼎的<a href="https://www.drugbank.ca/drugs/DB01270">Lucentis(Ranibizumab)序列</a>为例</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">VL</span><span class="o">=</span><span class="s2">"DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPS</span><span class="se">\</span>
+<span class="s2">RFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPP</span><span class="se">\</span>
+<span class="s2">SDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLT</span><span class="se">\</span>
+<span class="s2">LSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC"</span>
+<span class="n">VH</span><span class="o">=</span><span class="s2">"EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTY</span><span class="se">\</span>
+<span class="s2">AADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVT</span><span class="se">\</span>
+<span class="s2">VSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVL</span><span class="se">\</span>
+<span class="s2">QSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL"</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"&gt;Ranibizumab Light Chain</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"&gt;Ranibizumab Heavy Chain</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&gt;Ranibizumab Light Chain
+ DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC
+&gt;Ranibizumab Heavy Chain
+ EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTYAADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVTVSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CDR-L1">CDR-L1<a class="anchor-link" href="#CDR-L1">¶</a>
+</h4>
+<h5 id="CDR-L1之前的部分">CDR-L1之前的部分<a class="anchor-link" href="#CDR-L1%E4%B9%8B%E5%89%8D%E7%9A%84%E9%83%A8%E5%88%86">¶</a>
+</h5>
+<ul>
+<li>开始于第24个字母: <ul>
+<li>正则表达式: <code>^[A-Z]{24}</code>
+</li>
+<li>^表示从字符串开始</li>
+<li>[A-Z]表示一个字母</li>
+<li>{24}, 表示该字母重复了24次.</li>
+<li>但其实CDR序列开始于第24个字母, 它前面应该是24-1=23个字母, 所以应当是^[A-Z]{23}</li>
+</ul>
+</li>
+<li>序列之前总是Cys(单字母C): <code>(^([A-Z]{22})C)</code><ul>
+<li>也就是CDR之前的序列最后一个字母是C, 那么又用掉一个字母, 应当是23-1=22</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_before</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_before</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[2]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['DIQLTQSPSSLSASVGDRVTITC']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="CDR-L1序列的部分">CDR-L1序列的部分<a class="anchor-link" href="#CDR-L1%E5%BA%8F%E5%88%97%E7%9A%84%E9%83%A8%E5%88%86">¶</a>
+</h5>
+<ul>
+<li>长度是10 to 17个字母: <ul>
+<li>正则表达式: [A-Z]{10,17}</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_itself</span><span class="o">=</span><span class="s2">"([A-Z]{10,17})"</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_before</span><span class="o">+</span><span class="n">CDR1_itself</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<span class="c1"># 注意现在还没有定义结尾部分, 所以会直接找到{10, 17}中最大的17这个值</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[3]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLNWYQQKP')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="CDR-L1序列之后的部分">CDR-L1序列之后的部分<a class="anchor-link" href="#CDR-L1%E5%BA%8F%E5%88%97%E4%B9%8B%E5%90%8E%E7%9A%84%E9%83%A8%E5%88%86">¶</a>
+</h5>
+<ul>
+<li>序列之后总是Trp(单字母W). 典型的是Trp-Tyr-Gln(WYQ), 但也可能Trp-Leu-Gln(WLQ), Trp-Phe-Gln(WFQ), Trp-Tyr-Leu(WYL): <ul>
+<li>正则表达式: <code>(WYQ|WLQ|WFQ|WYL)</code>
+</li>
+<li>用|表示或的关系, 考虑到可读性, 我还是把所有的W都写出来了</li>
+<li>如果不想记住语言的优先级, 加括号会更安全一些: <code>((WYQ)|(WLQ)|(WFQ)|(WYL))</code>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_after</span><span class="o">=</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CDR-L2">CDR-L2<a class="anchor-link" href="#CDR-L2">¶</a>
+</h4>
+<ul>
+<li>L1结束后16个字母: <ul>
+<li>正则表达式: [A-Z]{16}</li>
+<li>但之前有WYQ已经用掉了3个字母, 又以1个字母开头, 所以应当是[A-Z]{12}</li>
+<li>实际操作中我发现这条好像很难匹配上, 不限定字母数字好像更好些, 用[A-Z]*?</li>
+</ul>
+</li>
+<li>序列长度7个字母: <ul>
+<li>正则表达式: [A-Z]{7}</li>
+</ul>
+</li>
+<li>序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)<ul>
+<li>正则表达式: (IY|VY|IK|IF)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
+<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CDR-L3">CDR-L3<a class="anchor-link" href="#CDR-L3">¶</a>
+</h4>
+<ul>
+<li>
+<p>L2结束后第33个字母开始, 开始前总是Cys(C),</p>
+<ul>
+<li>正则表达式: [A-Z]{33}C</li>
+<li>但前面的IY用掉了2个, 开头用掉1个, C用掉1个, 所以是[A-Z]{29}C</li>
+<li>实际操作中我发现这条好像很难匹配上, 不限定字母数字好像更好些, 用[A-Z]*?C</li>
+</ul>
+</li>
+<li>
+<p>序列长度7 to 11 字母:</p>
+<ul>
+<li>正则表达式: [A-Z]{7, 11}</li>
+</ul>
+</li>
+<li>序列之后总是Phe-Gly-XXX-Gly(FG?G)<ul>
+<li>正则表达式: FG[A-Z]G</li>
+<li>XXX表示的是任意, 所以用[A-Z]表示</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,17})"</span><span class="o">+</span><span class="s2">"(WYQ|WLQ|WFQ|WYL)"</span>
+<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]</span><span class="si">{7}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"(IY|VY|IK|IF)"</span>
+<span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,11})"</span><span class="o">+</span><span class="s2">"(FG[A-Z]G)"</span>
+<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+
+<span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
+<span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDRs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span><span class="n">CDR3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY', 'FTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYC', 'QQYSTVPWT', 'FGQG')]
+SASQDISNYLN GKAPKVL QQYSTVPWT
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="重链的CDR-H">重链的CDR-H<a class="anchor-link" href="#%E9%87%8D%E9%93%BE%E7%9A%84CDR-H">¶</a>
+</h2>
+<ul>
+<li>CDR-H1<ul>
+<li>Start Approx residue 26 (always 4 after a Cys) [Chothia / AbM defintion]; Kabat definition starts 5 residues later</li>
+<li>Residues before   always Cys-XXX-XXX-XXX</li>
+<li>Residues after    always a Trp. Typically Trp-Val, but also, Trp-Ile, Trp-Ala</li>
+<li>Length    10 to 12 residues [AbM definition]; Chothia definition excludes the last 4 residues</li>
+</ul>
+</li>
+<li>CDR-H2<ul>
+<li>Start always 15 residues after the end of Kabat / AbM definition) of CDR-H1</li>
+<li>Residues before   typically Leu-Glu-Trp-Ile-Gly, but a number of variations</li>
+<li>Residues after    Lys/Arg-Leu/Ile/Val/Phe/Thr/Ala-Thr/Ser/Ile/Ala</li>
+<li>Length    Kabat definition 16 to 19 residues; AbM (and recent Chothia) definition ends 7 residues earlier</li>
+</ul>
+</li>
+<li>CDR-H3<ul>
+<li>Start always 33 residues after end of CDR-H2 (always 2 after a Cys)</li>
+<li>Residues before   always Cys-XXX-XXX (typically Cys-Ala-Arg)</li>
+<li>Residues after    always Trp-Gly-XXX-Gly</li>
+<li>Length    3 to 25(!) residues</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CDR-H1">CDR-H1<a class="anchor-link" href="#CDR-H1">¶</a>
+</h4>
+<ul>
+<li>开始于26个字母后, 序列前总是 Cys-XXX-XXX-XXX: <ul>
+<li>正则表达式: ^[A-Z]{21}C[A-Z]{3}</li>
+</ul>
+</li>
+<li>长度10-12个字母: <ul>
+<li>正则表达式: [A-Z]{10,12}</li>
+</ul>
+</li>
+<li>序列后总是Trp(W). 典型Trp-Val(WV), 但也可能Trp-Ile(WI), Trp-Ala(WA)<ul>
+<li>正则表达式: (WV|WI|WA)</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CDR-H2">CDR-H2<a class="anchor-link" href="#CDR-H2">¶</a>
+</h4>
+<ul>
+<li>开始总是在CDR-H1结束后15个字母, 序列开始前典型是Leu-Glu-Trp-Ile-Gly(LEWIG), 但也有一堆变化(WTF)<ul>
+<li>正则表达式: [A-Z]*?LEWIG</li>
+<li>此处重重吐槽下, WTF表示what the fuck! 为什么生物学不找人待见, 别说生物学了, 连有机化学都是!说个什么规律, 结果反常情况比规律还多</li>
+</ul>
+</li>
+<li>长度16到19(Kabat定义), 或者7(AbM, Chothia定义)<ul>
+<li>正则表达式: [A-Z]{7,19}</li>
+</ul>
+</li>
+<li>序列之后Lys/Arg-Leu/Ile/Val/Phe/Thr/Ala-Thr/Ser/Ile/Ala, 看起来生物学家也使用某种正则表达式的雏形了, 这句话的意思是Lys或者Arg, 然后Leu/Ile/Val/Phe/Thr/Ala之中的1个, 然后Thr/Ser/Ile/Ala之中的一个<ul>
+<li>正则表达式: <code>[K|R][L|I|V|F|T|A][T|S|I|A]</code>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
+<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span>
+<span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS',
+  'GYDFTHYGMN',
+  'WV',
+  'RQAPGKGLEW',
+  'VGWINTYTGEPTYAADFKR',
+  'RFT')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="CDR-H3">CDR-H3<a class="anchor-link" href="#CDR-H3">¶</a>
+</h4>
+<ul>
+<li>开时于CDR-H2后33个字母, 序列前总是Cys-XXX-XXX (典型是 Cys-Ala-Arg): <ul>
+<li>正则表达式: <code>[A-Z]*? C[A-Z]{2}</code>
+</li>
+</ul>
+</li>
+<li>长度通常是3到25个字母: <ul>
+<li>正则表达式: [A-Z]{3,25}</li>
+</ul>
+</li>
+<li>序列之后总是Trp-Gly-XXX-Gly<ul>
+<li>正则表达式: WG[A-Z]G</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">"(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{10,12})"</span><span class="o">+</span><span class="s2">"(WV|WI|WA)"</span>
+<span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?)"</span><span class="o">+</span><span class="s2">"([A-Z]{7,19})"</span><span class="o">+</span><span class="s2">"([K|R][L|I|V|F|T|A][T|S|I|A])"</span>
+<span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">"([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)"</span><span class="o">+</span><span class="s2">"([A-Z]{3,25})"</span><span class="o">+</span><span class="s2">"(WG[A-Z]G)"</span>
+<span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+
+<span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">VH</span><span class="p">)</span>
+<span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDRs</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span><span class="n">CDR3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt"></div>
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV', 'RQAPGKGLEW', 'VGWINTYTGEPTYAADFKR', 'RFT', 'FSLDTSKSTAYLQMNSLRAEDTAVYYCAK', 'YPYYYGTSHWYFDV', 'WGQG')]
+GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../bulabula/double-click-open-ipynb/" rel="prev" title="Mac上双击打开jupyter文件">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/",
+        disqus_title="\u9762\u5411\u773c\u79d1\u533b\u751f\u7684\u6b63\u5219\u8868\u8fbe\u5f0f(1)-\u7ec3\u4e60",
+        disqus_identifier="cache/posts/python/面向眼科医生的正则表达式(1).html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
