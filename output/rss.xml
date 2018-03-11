@@ -1,5 +1,641 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 10 Mar 2018 00:03:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Mac上双击打开jupyter文件</title><link>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;jupyter的文件是.ipynb文件, 实际上是纯文本写的json, 但要按可编辑可运行的方式打开它, 有几种方式:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 11 Mar 2018 05:49:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的正则表达式(1)-练习</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;以从抗体序列中定位CDR来练习正则表达式.&lt;/p&gt;
+&lt;p&gt;正则表达式的基础和简介放在以后写
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="定位抗体序列中的CDR"&gt;定位抗体序列中的CDR&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#%E5%AE%9A%E4%BD%8D%E6%8A%97%E4%BD%93%E5%BA%8F%E5%88%97%E4%B8%AD%E7%9A%84CDR"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;在设计抗体时, 如何找出抗体序列中的CDR是一个问题,&lt;/p&gt;
+&lt;p&gt;按照&lt;a href="http://www.bioinf.org.uk/abs/#cdrdef"&gt;这个网页&lt;/a&gt;上所描述的方法, 也可以使用对序列进行分析&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="轻链的CDR-L"&gt;轻链的CDR-L&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#%E8%BD%BB%E9%93%BE%E7%9A%84CDR-L"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;ul&gt;
+&lt;li&gt;CDR-L1&lt;ul&gt;
+&lt;li&gt;Start Approx residue 24&lt;/li&gt;
+&lt;li&gt;Residue before    always a Cys&lt;/li&gt;
+&lt;li&gt;Residue after always a Trp. Typically Trp-Tyr-Gln, but also, Trp-Leu-Gln, Trp-Phe-Gln, Trp-Tyr-Leu&lt;/li&gt;
+&lt;li&gt;Length    10 to 17 residues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CDR-L2&lt;ul&gt;
+&lt;li&gt;Start always 16 residues after the end of L1&lt;/li&gt;
+&lt;li&gt;Residues before   generally Ile-Tyr, but also, Val-Tyr, Ile-Lys, Ile-Phe&lt;/li&gt;
+&lt;li&gt;Length    always 7 residues (except NEW (7FAB) which has a deletion in this region)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CDR-L3&lt;ul&gt;
+&lt;li&gt;Start always 33 residues after end of L2 (except NEW (7FAB) which has the deletion at the end of CDR-L2)&lt;/li&gt;
+&lt;li&gt;Residue before    always Cys&lt;/li&gt;
+&lt;li&gt;Residues after    always Phe-Gly-XXX-Gly&lt;/li&gt;
+&lt;li&gt;Length    7 to 11 residues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;以大名鼎鼎的&lt;a href="https://www.drugbank.ca/drugs/DB01270"&gt;Lucentis(Ranibizumab)序列&lt;/a&gt;为例&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPS&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s2"&gt;RFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPP&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s2"&gt;SDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLT&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s2"&gt;LSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC"&lt;/span&gt;
+&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTY&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s2"&gt;AADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVT&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s2"&gt;VSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVL&lt;/span&gt;&lt;span class="se"&gt;\&lt;/span&gt;
+&lt;span class="s2"&gt;QSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL"&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;gt;Ranibizumab Light Chain&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"&amp;gt;Ranibizumab Heavy Chain&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;&amp;gt;Ranibizumab Light Chain
+ DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC
+&amp;gt;Ranibizumab Heavy Chain
+ EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTYAADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVTVSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="CDR-L1"&gt;CDR-L1&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-L1"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;h5 id="CDR-L1之前的部分"&gt;CDR-L1之前的部分&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-L1%E4%B9%8B%E5%89%8D%E7%9A%84%E9%83%A8%E5%88%86"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;开始于第24个字母: &lt;ul&gt;
+&lt;li&gt;正则表达式: &lt;code&gt;^[A-Z]{24}&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;^表示从字符串开始&lt;/li&gt;
+&lt;li&gt;[A-Z]表示一个字母&lt;/li&gt;
+&lt;li&gt;{24}, 表示该字母重复了24次.&lt;/li&gt;
+&lt;li&gt;但其实CDR序列开始于第24个字母, 它前面应该是24-1=23个字母, 所以应当是^[A-Z]{23}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列之前总是Cys(单字母C): &lt;code&gt;(^([A-Z]{22})C)&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;也就是CDR之前的序列最后一个字母是C, 那么又用掉一个字母, 应当是23-1=22&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_before&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;
+&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_before&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;['DIQLTQSPSSLSASVGDRVTITC']&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h5 id="CDR-L1序列的部分"&gt;CDR-L1序列的部分&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-L1%E5%BA%8F%E5%88%97%E7%9A%84%E9%83%A8%E5%88%86"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;长度是10 to 17个字母: &lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{10,17}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_itself&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;
+&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_before&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR1_itself&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="c1"&gt;# 注意现在还没有定义结尾部分, 所以会直接找到{10, 17}中最大的17这个值&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLNWYQQKP')]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h5 id="CDR-L1序列之后的部分"&gt;CDR-L1序列之后的部分&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-L1%E5%BA%8F%E5%88%97%E4%B9%8B%E5%90%8E%E7%9A%84%E9%83%A8%E5%88%86"&gt;¶&lt;/a&gt;&lt;/h5&gt;&lt;ul&gt;
+&lt;li&gt;序列之后总是Trp(单字母W). 典型的是Trp-Tyr-Gln(WYQ), 但也可能Trp-Leu-Gln(WLQ), Trp-Phe-Gln(WFQ), Trp-Tyr-Leu(WYL): &lt;ul&gt;
+&lt;li&gt;正则表达式: &lt;code&gt;(WYQ|WLQ|WFQ|WYL)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;用|表示或的关系, 考虑到可读性, 我还是把所有的W都写出来了&lt;/li&gt;
+&lt;li&gt;如果不想记住语言的优先级, 加括号会更安全一些: &lt;code&gt;((WYQ)|(WLQ)|(WFQ)|(WYL))&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_after&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
+&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[4]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ')]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="CDR-L2"&gt;CDR-L2&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-L2"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;L1结束后16个字母: &lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{16}&lt;/li&gt;
+&lt;li&gt;但之前有WYQ已经用掉了3个字母, 又以1个字母开头, 所以应当是[A-Z]{12}&lt;/li&gt;
+&lt;li&gt;实际操作中我发现这条好像很难匹配上, 不限定字母数字好像更好些, 用[A-Z]*?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列长度7个字母: &lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{7}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)&lt;ul&gt;
+&lt;li&gt;正则表达式: (IY|VY|IK|IF)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(IY|VY|IK|IF)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;
+&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY')]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="CDR-L3"&gt;CDR-L3&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-L3"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;L2结束后第33个字母开始, 开始前总是Cys(C),&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{33}C&lt;/li&gt;
+&lt;li&gt;但前面的IY用掉了2个, 开头用掉1个, C用掉1个, 所以是[A-Z]{29}C&lt;/li&gt;
+&lt;li&gt;实际操作中我发现这条好像很难匹配上, 不限定字母数字好像更好些, 用[A-Z]*?C&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;序列长度7 to 11 字母:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{7, 11}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列之后总是Phe-Gly-XXX-Gly(FG?G)&lt;ul&gt;
+&lt;li&gt;正则表达式: FG[A-Z]G&lt;/li&gt;
+&lt;li&gt;XXX表示的是任意, 所以用[A-Z]表示&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(IY|VY|IK|IF)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,11})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(FG[A-Z]G)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;
+
+&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY', 'FTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYC', 'QQYSTVPWT', 'FGQG')]
+SASQDISNYLN GKAPKVL QQYSTVPWT
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="重链的CDR-H"&gt;重链的CDR-H&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#%E9%87%8D%E9%93%BE%E7%9A%84CDR-H"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;CDR-H1&lt;ul&gt;
+&lt;li&gt;Start Approx residue 26 (always 4 after a Cys) [Chothia / AbM defintion]; Kabat definition starts 5 residues later&lt;/li&gt;
+&lt;li&gt;Residues before   always Cys-XXX-XXX-XXX&lt;/li&gt;
+&lt;li&gt;Residues after    always a Trp. Typically Trp-Val, but also, Trp-Ile, Trp-Ala&lt;/li&gt;
+&lt;li&gt;Length    10 to 12 residues [AbM definition]; Chothia definition excludes the last 4 residues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CDR-H2&lt;ul&gt;
+&lt;li&gt;Start always 15 residues after the end of Kabat / AbM definition) of CDR-H1&lt;/li&gt;
+&lt;li&gt;Residues before   typically Leu-Glu-Trp-Ile-Gly, but a number of variations&lt;/li&gt;
+&lt;li&gt;Residues after    Lys/Arg-Leu/Ile/Val/Phe/Thr/Ala-Thr/Ser/Ile/Ala&lt;/li&gt;
+&lt;li&gt;Length    Kabat definition 16 to 19 residues; AbM (and recent Chothia) definition ends 7 residues earlier&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;CDR-H3&lt;ul&gt;
+&lt;li&gt;Start always 33 residues after end of CDR-H2 (always 2 after a Cys)&lt;/li&gt;
+&lt;li&gt;Residues before   always Cys-XXX-XXX (typically Cys-Ala-Arg)&lt;/li&gt;
+&lt;li&gt;Residues after    always Trp-Gly-XXX-Gly&lt;/li&gt;
+&lt;li&gt;Length    3 to 25(!) residues&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="CDR-H1"&gt;CDR-H1&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-H1"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;开始于26个字母后, 序列前总是 Cys-XXX-XXX-XXX: &lt;ul&gt;
+&lt;li&gt;正则表达式: ^[A-Z]{21}C[A-Z]{3}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;长度10-12个字母: &lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{10,12}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列后总是Trp(W). 典型Trp-Val(WV), 但也可能Trp-Ile(WI), Trp-Ala(WA)&lt;ul&gt;
+&lt;li&gt;正则表达式: (WV|WI|WA)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,12})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;
+&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV')]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="CDR-H2"&gt;CDR-H2&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-H2"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;开始总是在CDR-H1结束后15个字母, 序列开始前典型是Leu-Glu-Trp-Ile-Gly(LEWIG), 但也有一堆变化(WTF)&lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]*?LEWIG&lt;/li&gt;
+&lt;li&gt;此处重重吐槽下, WTF表示what the fuck! 为什么生物学不找人待见, 别说生物学了, 连有机化学都是!说个什么规律, 结果反常情况比规律还多&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;长度16到19(Kabat定义), 或者7(AbM, Chothia定义)&lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{7,19}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列之后Lys/Arg-Leu/Ile/Val/Phe/Thr/Ala-Thr/Ser/Ile/Ala, 看起来生物学家也使用某种正则表达式的雏形了, 这句话的意思是Lys或者Arg, 然后Leu/Ile/Val/Phe/Thr/Ala之中的1个, 然后Thr/Ser/Ile/Ala之中的一个&lt;ul&gt;
+&lt;li&gt;正则表达式: &lt;code&gt;[K|R][L|I|V|F|T|A][T|S|I|A]&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,12})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,19})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([K|R][L|I|V|F|T|A][T|S|I|A])"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;
+&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[('EVQLVESGGGLVQPGGSLRLSCAAS',
+  'GYDFTHYGMN',
+  'WV',
+  'RQAPGKGLEW',
+  'VGWINTYTGEPTYAADFKR',
+  'RFT')]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="CDR-H3"&gt;CDR-H3&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#CDR-H3"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;开时于CDR-H2后33个字母, 序列前总是Cys-XXX-XXX (典型是 Cys-Ala-Arg): &lt;ul&gt;
+&lt;li&gt;正则表达式: &lt;code&gt;[A-Z]*? C[A-Z]{2}&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;长度通常是3到25个字母: &lt;ul&gt;
+&lt;li&gt;正则表达式: [A-Z]{3,25}&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;序列之后总是Trp-Gly-XXX-Gly&lt;ul&gt;
+&lt;li&gt;正则表达式: WG[A-Z]G&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,12})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,19})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([K|R][L|I|V|F|T|A][T|S|I|A])"&lt;/span&gt;
+&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{3,25})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WG[A-Z]G)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;
+
+&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV', 'RQAPGKGLEW', 'VGWINTYTGEPTYAADFKR', 'RFT', 'FSLDTSKSTAYLQMNSLRAEDTAVYYCAK', 'YPYYYGTSHWYFDV', 'WGQG')]
+GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</guid><pubDate>Sun, 11 Mar 2018 04:00:00 GMT</pubDate></item><item><title>Mac上双击打开jupyter文件</title><link>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;jupyter的文件是.ipynb文件, 实际上是纯文本写的json, 但要按可编辑可运行的方式打开它, 有几种方式:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在命令行运行jupyter notebook 文件名&lt;ul&gt;
 &lt;li&gt;或者在命令行运行jupyter lab 文件名&lt;/li&gt;
@@ -1552,47 +2188,4 @@ That's all
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;进宝和美慧一起给各位拜年了:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="IMG_20171214_114308" src="https://i.loli.net/2018/02/11/5a8059bf0a82f.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/</guid><pubDate>Sun, 11 Feb 2018 14:00:00 GMT</pubDate></item><item><title>山海经简单统计</title><link>https://goldengrape.github.io/posts/bulabula/Classic_of_Mountains_and_Seas/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;《山海经》全书十八卷, 其中“山经”五卷, “海经”八卷, “大荒经”四卷, “海内经”一卷, 共约31000字。记载了100多个邦国, 550山, 300水道以及邦国山水的地理、风土物产等信息。《山海经》中对于动物的记载, 据统计有277种之多&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2&gt;异兽&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;搜索"有* 兽焉"或者"又兽焉", 合计87种怪兽。例如:&lt;ul&gt;
-&lt;li&gt;有兽焉, 其状如禺而白耳, 伏行人走, 其名曰狌狌.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;吃与被吃的关系&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;搜索"食之", 出现66次. "食之"都是说吃了以后会怎么样, 前面往往是一种动物或者植物的名字, 后面讲的是吃完以后的效果, 例如:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;祝余, 食之不饥&lt;/li&gt;
-&lt;li&gt;狌狌, 食之善走&lt;/li&gt;
-&lt;li&gt;赤鱬, 其状如鱼而人面, 其音如鸯鸳, 食之不疥&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;搜索"食者", 出现10次. "食者"是说吃了这种东西的人会怎样怎样. 例如:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;鱃鱼, 其状如鲤而大首, 食者不疣&lt;/li&gt;
-&lt;li&gt;䲢鱼, 状如鳜, 居逵, 苍文赤尾, 食者不痈&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;关于可以吃的东西, 共出现76次. 考虑到一共只有87种异兽, (当然能吃的还有些是植物), 可以深深体会到先民们对吃的热爱.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;搜索"食人", 出现20次. 例如:&lt;ul&gt;
-&lt;li&gt;水有兽焉, 名曰蛊雕, 其状如雕而有角, 其音如婴儿之音, 是食人&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;可见当时的生活也还是很危险的, 23%的异兽是吃人的, 不过有一个很特殊, 九尾狐既会吃人, 又可能被人所吃:"有兽焉, 其状如狐而九尾, 其音如婴儿, 能食人, 食者不蛊"&lt;/p&gt;
-&lt;h2&gt;环境&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;搜索"无草木", 出现秃山98座, 占550座山的17. 8%, 看起来当时的环境也不怎么样嘛.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;财富&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;搜索"金", 出现164次, 搜索"玉", 出现249次. 我本来以为金可能是金属的统称, 但单独搜索"铁"的话, 也有41处. 有可能金包含了Au和Cu还有一些其他的什么.&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Classic_of_Mountains_and_Seas/</guid><pubDate>Sat, 10 Feb 2018 06:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="IMG_20171214_114308" src="https://i.loli.net/2018/02/11/5a8059bf0a82f.jpg"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/</guid><pubDate>Sun, 11 Feb 2018 14:00:00 GMT</pubDate></item></channel></rss>
