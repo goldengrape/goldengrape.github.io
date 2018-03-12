@@ -1,5 +1,308 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 11 Mar 2018 07:59:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的正则表达式(1)-练习</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 12 Mar 2018 08:02:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的正则表达式(0)-简介</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;正则表达式是一种程序员用来在大量字符里进行定位的方法. 算得上是处理字符串时的解剖学了.&lt;/p&gt;
+&lt;p&gt;最近解锁这个技能以后, 如同拿到了一把雷神之锤, 非常好用看什么都想砸一下. 
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;有很多的眼科检查设备厂商, 以蔡司为代表, 非常邪恶. 不肯开放自己的数据接口, 只将数据以pdf的形式发送出来. 要想取得其中的数据, 很多医生恐怕是人眼OCR手动输入, 或者一部分自动化程度高一点的是把pdf转换成纯文本txt文件, 再从txt中复制粘贴. 再或者是类似同仁医院那样霸气地使用OCR处理整个pdf文件.&lt;/p&gt;
+&lt;p&gt;用OCR处理整个pdf会有一些问题, 我现在还在尝试解决之中, 比如对于视野数据, 经常会出现-2 0这样的数字, 很容易就被识别成了-20, 还有可能把r识别成n之类. 这其中恐怕还有一些技巧.&lt;/p&gt;
+&lt;p&gt;先把PDF转换成纯文本就不会有识别错误的问题, 但引入的问题是格式的混乱, 不知道txt中的文字是对应到pdf上的哪个位置, 这时候就需要正则表达式帮忙了.&lt;/p&gt;
+&lt;p&gt;还是以视野数据为例, 我在提取视野数据时发现,&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;False POS Errors: False NEG Errors: Test Duration:
+Blind Spot Central 1/13
+15% XX 5%
+GHT:
+VFI:
+MD: PSD:
+Outside Normal Limits
+76%
+-8.33 dB P &amp;lt; 0.5% 10.06 dB P &amp;lt; 0.5%&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;实际上对应的关系是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;False NEG Errors: 15%&lt;/li&gt;
+&lt;li&gt;False NEG Errors: 5%&lt;/li&gt;
+&lt;li&gt;VFI: 76%&lt;/li&gt;
+&lt;li&gt;MD: -8.33 dB P &amp;lt; 0.5%&lt;/li&gt;
+&lt;li&gt;PSD: 10.06 dB P &amp;lt; 0.5%&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;每一个视野报告的pdf中, 这一段除了数字不同, 其他都是类似的. 那么要把这些数字提取出来, 就要先定位, 然后剪切出想要的片段. 这时候就需要正则表达式了&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;在python中, 处理正则表达式的工具包叫做re, 在其他语言中也有相应的工具包. 下面以python为例进行讲解.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"False POS Errors: False NEG Errors: Test Duration: Blind Spot Central 1/13 15&lt;/span&gt;&lt;span class="si"&gt;% X&lt;/span&gt;&lt;span class="s2"&gt;X 5&lt;/span&gt;&lt;span class="si"&gt;% G&lt;/span&gt;&lt;span class="s2"&gt;HT: VFI: MD: PSD: Outside Normal Limits 76% -8.33 dB P &amp;lt; 0.5% 10.06 dB P &amp;lt; 0.5%"&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;观察一下这些数据我们会发现一些pattern, 比如这些数据都跟%有关, MD和PSD的单位是dB.&lt;/p&gt;
+&lt;p&gt;曹安民教授讲课时说过"眼科就是pattern recognition, 如果不能识别出pattern来, 你就hopeless了"&lt;/p&gt;
+&lt;p&gt;False NEG Errors, False NEG Errors, VFI的pattern很明显, 数字然后紧跟着%. 
+要描述这个pattern可以用以下规则:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[0-9]&lt;/code&gt;, 表示这是一个字符, 取值可以选取从0到9的数字&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[0-9]+&lt;/code&gt;, 表示这里有数字, 至少有一位数, 可以有多位数&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[0-9]+%&lt;/code&gt;, 表示这里有数字, 至少有一位数, 可以有多位数, 后面紧跟着一个%号. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们可以使用python re工具包里面的findall函数来测试一下:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"\d+%"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;['15%', '5%', '76%', '5%', '5%']&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;很容易就把False NEG Errors, False NEG Errors, VFI的数据给分出来了.&lt;/p&gt;
+&lt;p&gt;那么MD和PSD也类似, 都有以dB为结尾的特征,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[0-9]+ dB: 有至少一位数字, 可以有多位, 以空格和dB作为结尾&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"[0-9]+ dB"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[6]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;['33 dB', '06 dB']&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这时候没有提取出-8.33, 只是提取出了33 dB, 需要考虑到数字中还可能有正负号和小数点. 所以会更复杂一些:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\-&lt;/code&gt; 表示-号, 因为-号在正则表达式中还有其他的含义, 所以要前面加一个\表示区分, 类似的还有&lt;code&gt;\.&lt;/code&gt;表示小数点&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;\-*&lt;/code&gt;表示-号这个字符可以出现0次, 也可以出现多次. &lt;ul&gt;
+&lt;li&gt;用*来表示出现0次或多次, &lt;/li&gt;
+&lt;li&gt;用+来表示出现1次或多次&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么-8.33 dB和10.06 dB的pattern是: 有或者没有-号, 然后跟0个或者多个数字, 再接着是0个或者1个小数点, 然后是一定会有的数字, 再后面是空格和dB. 用正则表达式写出来就是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;\-*[0-9]*\.*[0-9]+ dB&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"\-*[0-9]*\.*[0-9]+ dB"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[7]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;['-8.33 dB', '10.06 dB']&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;现在已经可以提取出了数字和后面的单位, 但这还是字符, 要处理成数据还要再拆分, 也有简单的方案, 就是用()来给搜索的pattern分组: (-&lt;em&gt;[0-9]&lt;/em&gt;.*[0-9]+)描述的是数据部分, ( dB)描述的是单位部分.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"(\-*[0-9]*\.*[0-9]+)( dB)"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;string&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+&lt;div class="prompt output_prompt"&gt;Out[8]:&lt;/div&gt;
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[('-8.33', ' dB'), ('10.06', ' dB')]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这样就容易进行后续的处理了.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="一些常用的正则表达式:"&gt;一些常用的正则表达式:&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/#%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F:"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我处理了写文档, 觉得常用的也不多:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[0-9]或者\d表示数字&lt;/li&gt;
+&lt;li&gt;[a-z]表示小写字母&lt;/li&gt;
+&lt;li&gt;[A-Z]表示大写字母&lt;/li&gt;
+&lt;li&gt;\n\t表示换行和tab&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;+和*&lt;/code&gt;表示前面的字符可以出现多次, 其中+是表示至少出现1次, *没有这个限制&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;
+&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;在&lt;a href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist"&gt;下一篇的练习中&lt;/a&gt;, 还会再讲解一些更好用的技巧, 可以处理更为复杂的pattern.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</guid><pubDate>Mon, 12 Mar 2018 07:00:00 GMT</pubDate></item><item><title>面向眼科医生的正则表达式(1)-练习</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -4566,54 +4869,4 @@ $$
 &lt;p&gt;参考视频:
 莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:31 GMT</pubDate></item><item><title>机器学习的战略(4)--面对分布不同</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这一部分我在做练习题的时候老是错, 我都不是很确定自己理解明白了. 有必要的话最好还是回到课程原始视频中听老师亲自讲.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;tran set/ dev set的分布不同&lt;/h2&gt;
-&lt;p&gt;机器学习是需要大量数据喂出来的, 但有时候你很难获得大量最终应用场景需要的数据, 比如识别猫的照片, 从网上很容易下载比如可以找到200k, 但从手机中找到拍摄的照片相对要少一些比如可以找到10k. 因此也没法保证dev/test set和train set的数据分布是一致的.&lt;/p&gt;
-&lt;h3&gt;不建议的方法&lt;/h3&gt;
-&lt;p&gt;不要把下载来的数据和手机中的数据随机混合后分成train /dev/test set.&lt;/p&gt;
-&lt;h3&gt;建议的方法&lt;/h3&gt;
-&lt;p&gt;至少保证dev / test set中的数据是来自于目标应用场景的. 如果还剩下些手机照片的数据可以混合到train set中&lt;/p&gt;
-&lt;h2&gt;分布不同时的错误率分析&lt;/h2&gt;
-&lt;p&gt;bias=train error - bayes error
-variance= dev error- train error&lt;/p&gt;
-&lt;p&gt;既然dev set和train set的分布都不同, 那么肯定variance显得很大, 但是否真的就是因为过拟合了还是因为分布不同导致?&lt;/p&gt;
-&lt;p&gt;解决方案是把train set里面再分出一小部分train_dev set, 这一部分的data set不要用在训练中, 用来检测的.&lt;/p&gt;
-&lt;p&gt;那么:
-&lt;em&gt; bias=train error - bayes error
-&lt;/em&gt; variance= train_dev error- train error
-* mismatch= dev error - train_dev error&lt;/p&gt;
-&lt;p&gt;就可以单独把各个错误率区分出来了, 还是使用bias和variance来分析是欠拟合还是过拟合. mismatch的部分要单独考虑.&lt;/p&gt;
-&lt;h2&gt;分布不同时的误差分析&lt;/h2&gt;
-&lt;p&gt;还是先做手工标注, 看看mismatch的原因到底是怎样的. 有些可以用一些技术手段解决, 比如螺旋桨战斗机机炮打断螺旋桨这种事情.&lt;/p&gt;
-&lt;p&gt;当然理想的解决方案还是找到足够多的目标场景数据了. 实在是找不到, 也许能够人工生成, 比如语音+噪音=有噪音环境的语音. 但是人工生成的时候要小心谨慎:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;人工生成的数据很可能多样性不足, 比如从赛车游戏中提取图像进行自动驾驶训练, 理论上不错, 但实际上车型很少, 可能只有20多种车辆样式.&lt;/li&gt;
-&lt;li&gt;即使人眼看不出有什么差别, 在数据上不一定是相同的. 人工生成的数据可能只占了真实场景分布中的很小一部分.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</guid><pubDate>Mon, 18 Dec 2017 17:23:16 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:31 GMT</pubDate></item></channel></rss>
