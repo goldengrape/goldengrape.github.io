@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>面向眼科医生的正则表达式(0)-简介 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../reg101-for-ophthalmologist/" title="面向眼科医生的正则表达式(1)-练习" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="面向眼科医生的正则表达式(0)-简介">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/">
+<meta property="og:description" content="正则表达式是一种程序员用来在大量字符里进行定位的方法. 算得上是处理字符串时的解剖学了.
+最近解锁这个技能以后, 如同拿到了一把雷神之锤, 非常好用看什么都想砸一下. 
+
+有很多的眼科检查设备厂商, 以蔡司为代表, 非常邪恶. 不肯开放自己的数据接口, 只将数据以pdf的形式发送出来. 要想取得其中的数据, 很多医生恐怕是人眼OCR手动输入, 或者一部分自动化程度高一点的是把pdf转换成纯文本tx">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-03-12T15:00:00+08:00">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="现代眼科医生知识扩展包">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">面向眼科医生的正则表达式(0)-简介</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-12T15:00:00+08:00" itemprop="datePublished" title="2018-03-12 15:00">2018-03-12 15:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/python/面向眼科医生的正则表达式(0)-简介.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>正则表达式是一种程序员用来在大量字符里进行定位的方法. 算得上是处理字符串时的解剖学了.</p>
+<p>最近解锁这个技能以后, 如同拿到了一把雷神之锤, 非常好用看什么都想砸一下. 
+<!-- TEASER_END --></p>
+<p>有很多的眼科检查设备厂商, 以蔡司为代表, 非常邪恶. 不肯开放自己的数据接口, 只将数据以pdf的形式发送出来. 要想取得其中的数据, 很多医生恐怕是人眼OCR手动输入, 或者一部分自动化程度高一点的是把pdf转换成纯文本txt文件, 再从txt中复制粘贴. 再或者是类似同仁医院那样霸气地使用OCR处理整个pdf文件.</p>
+<p>用OCR处理整个pdf会有一些问题, 我现在还在尝试解决之中, 比如对于视野数据, 经常会出现-2 0这样的数字, 很容易就被识别成了-20, 还有可能把r识别成n之类. 这其中恐怕还有一些技巧.</p>
+<p>先把PDF转换成纯文本就不会有识别错误的问题, 但引入的问题是格式的混乱, 不知道txt中的文字是对应到pdf上的哪个位置, 这时候就需要正则表达式帮忙了.</p>
+<p>还是以视野数据为例, 我在提取视野数据时发现,</p>
+<blockquote>
+<p>False POS Errors: False NEG Errors: Test Duration:
+Blind Spot Central 1/13
+15% XX 5%
+GHT:
+VFI:
+MD: PSD:
+Outside Normal Limits
+76%
+-8.33 dB P &lt; 0.5% 10.06 dB P &lt; 0.5%</p>
+</blockquote>
+<p>实际上对应的关系是:</p>
+<ul>
+<li>False NEG Errors: 15%</li>
+<li>False NEG Errors: 5%</li>
+<li>VFI: 76%</li>
+<li>MD: -8.33 dB P &lt; 0.5%</li>
+<li>PSD: 10.06 dB P &lt; 0.5%</li>
+</ul>
+<p>每一个视野报告的pdf中, 这一段除了数字不同, 其他都是类似的. 那么要把这些数字提取出来, 就要先定位, 然后剪切出想要的片段. 这时候就需要正则表达式了</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在python中, 处理正则表达式的工具包叫做re, 在其他语言中也有相应的工具包. 下面以python为例进行讲解.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<span class="n">string</span><span class="o">=</span><span class="s2">"False POS Errors: False NEG Errors: Test Duration: Blind Spot Central 1/13 15</span><span class="si">% X</span><span class="s2">X 5</span><span class="si">% G</span><span class="s2">HT: VFI: MD: PSD: Outside Normal Limits 76% -8.33 dB P &lt; 0.5% 10.06 dB P &lt; 0.5%"</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>观察一下这些数据我们会发现一些pattern, 比如这些数据都跟%有关, MD和PSD的单位是dB.</p>
+<p>曹安民教授讲课时说过"眼科就是pattern recognition, 如果不能识别出pattern来, 你就hopeless了"</p>
+<p>False NEG Errors, False NEG Errors, VFI的pattern很明显, 数字然后紧跟着%. 
+要描述这个pattern可以用以下规则:</p>
+<ul>
+<li>
+<code>[0-9]</code>, 表示这是一个字符, 取值可以选取从0到9的数字</li>
+<li>
+<code>[0-9]+</code>, 表示这里有数字, 至少有一位数, 可以有多位数</li>
+<li>
+<code>[0-9]+%</code>, 表示这里有数字, 至少有一位数, 可以有多位数, 后面紧跟着一个%号. </li>
+</ul>
+<p>我们可以使用python re工具包里面的findall函数来测试一下:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">"\d+%"</span><span class="p">,</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['15%', '5%', '76%', '5%', '5%']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>很容易就把False NEG Errors, False NEG Errors, VFI的数据给分出来了.</p>
+<p>那么MD和PSD也类似, 都有以dB为结尾的特征,</p>
+<ul>
+<li>[0-9]+ dB: 有至少一位数字, 可以有多位, 以空格和dB作为结尾</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">"[0-9]+ dB"</span><span class="p">,</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['33 dB', '06 dB']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这时候没有提取出-8.33, 只是提取出了33 dB, 需要考虑到数字中还可能有正负号和小数点. 所以会更复杂一些:</p>
+<ul>
+<li>
+<code>\-</code> 表示-号, 因为-号在正则表达式中还有其他的含义, 所以要前面加一个\表示区分, 类似的还有<code>\.</code>表示小数点</li>
+<li>
+<code>\-*</code>表示-号这个字符可以出现0次, 也可以出现多次. <ul>
+<li>用*来表示出现0次或多次, </li>
+<li>用+来表示出现1次或多次</li>
+</ul>
+</li>
+</ul>
+<p>那么-8.33 dB和10.06 dB的pattern是: 有或者没有-号, 然后跟0个或者多个数字, 再接着是0个或者1个小数点, 然后是一定会有的数字, 再后面是空格和dB. 用正则表达式写出来就是:</p>
+<ul>
+<li><code>\-*[0-9]*\.*[0-9]+ dB</code></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">"\-*[0-9]*\.*[0-9]+ dB"</span><span class="p">,</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>['-8.33 dB', '10.06 dB']</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>现在已经可以提取出了数字和后面的单位, 但这还是字符, 要处理成数据还要再拆分, 也有简单的方案, 就是用()来给搜索的pattern分组: (-<em>[0-9]</em>.*[0-9]+)描述的是数据部分, ( dB)描述的是单位部分.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">"(\-*[0-9]*\.*[0-9]+)( dB)"</span><span class="p">,</span><span class="n">string</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[('-8.33', ' dB'), ('10.06', ' dB')]</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这样就容易进行后续的处理了.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="一些常用的正则表达式:">一些常用的正则表达式:<a class="anchor-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E7%94%A8%E7%9A%84%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F:">¶</a>
+</h2>
+<p>我处理了写文档, 觉得常用的也不多:</p>
+<ul>
+<li>[0-9]或者\d表示数字</li>
+<li>[a-z]表示小写字母</li>
+<li>[A-Z]表示大写字母</li>
+<li>\n\t表示换行和tab</li>
+<li>
+<code>+和*</code>表示前面的字符可以出现多次, 其中+是表示至少出现1次, *没有这个限制</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在<a href="../reg101-for-ophthalmologist">下一篇的练习中</a>, 还会再讲解一些更好用的技巧, 可以处理更为复杂的pattern.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+            <li><a class="tag p-category" href="../../../categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/" rel="tag">现代眼科医生知识扩展包</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../reg101-for-ophthalmologist/" rel="prev" title="面向眼科医生的正则表达式(1)-练习">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/",
+        disqus_title="\u9762\u5411\u773c\u79d1\u533b\u751f\u7684\u6b63\u5219\u8868\u8fbe\u5f0f(0)-\u7b80\u4ecb",
+        disqus_identifier="cache/posts/python/面向眼科医生的正则表达式(0)-简介.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

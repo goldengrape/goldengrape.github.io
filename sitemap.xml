@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-03-11T05:49:00Z</lastmod>
+  <lastmod>2018-03-12T08:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -143,7 +143,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-8.html</loc>
-  <lastmod>2018-03-11T05:49:00Z</lastmod>
+  <lastmod>2018-03-12T08:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -460,6 +460,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/ray-tracing-0/</loc>
   <lastmod>2018-01-15T15:49:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</loc>
+  <lastmod>2018-03-12T08:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</loc>
