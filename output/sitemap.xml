@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2018-03-07T11:39:00Z</lastmod>
+  <lastmod>2018-03-20T04:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -19,11 +19,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-03-12T08:02:00Z</lastmod>
+  <lastmod>2018-03-20T04:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2018-03-05T16:11:00Z</lastmod>
+  <lastmod>2018-03-20T04:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d_print/</loc>
@@ -44,6 +44,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology/</loc>
   <lastmod>2017-12-28T17:23:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/cat_python/</loc>
+  <lastmod>2018-03-20T04:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_tutorial/</loc>
@@ -143,7 +147,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-8.html</loc>
-  <lastmod>2018-03-12T08:02:00Z</lastmod>
+  <lastmod>2018-03-20T04:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -280,6 +284,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</loc>
   <lastmod>2018-01-18T04:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/string-on-pad/</loc>
+  <lastmod>2018-03-20T04:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/weixue/</loc>

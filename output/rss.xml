@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 12 Mar 2018 08:02:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的正则表达式(0)-简介</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 20 Mar 2018 04:45:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
+&lt;p&gt;不过弄出有意思的声音还是我有兴趣做的事情. 于是就有了在iPad上做一把Ukulele的项目:
+&lt;img alt="ipadminiukulele" src="https://i.loli.net/2018/03/20/5ab08921c906d.gif"&gt;&lt;/p&gt;
+&lt;p&gt;这把琴是有琴弦的, 琴弦能够给人有触觉反馈, 在乐器演奏是还是很重要的. 琴弦使用的是鱼线, 线绷紧的力度可调. 这样不至于勒手. 仅仅按住琴弦还是不响的, 要在拨弦的时候iPad才会发出声音.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;硬件部分&lt;/h2&gt;
+&lt;p&gt;很简单的两个打印件, 可以卡住iPad两端.
+&lt;img alt="手机琴新版 v15" src="https://i.loli.net/2018/03/20/5ab08b60e5759.png"&gt;&lt;/p&gt;
+&lt;p&gt;从淘宝几块钱买来一个吉他调弦钮, 安在圆孔里. 把鱼线4个弦槽穿过, 然后绑在吉他调弦钮上, 线要从iPad前后绕过, 这样才能稳定. 线的长度要试试, 大约是iPad长度的7-9倍. 装上的时候可以很松, 然后通过调弦钮逐渐拉紧.&lt;/p&gt;
+&lt;p&gt;如果喜欢Ukulele/吉他这类半弦乐中横隔的手感, 可以在鱼线上打结, 或者在基本调好线的松紧之后穿入几根牙签.&lt;/p&gt;
+&lt;p&gt;琴弦应该放在iPad的右侧. 要和相应的app位置匹配.&lt;/p&gt;
+&lt;p&gt;打印件已经&lt;a href="https://www.thingiverse.com/thing:2832687"&gt;存放在Thingiverse. &lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;软件部分&lt;/h2&gt;
+&lt;p&gt;这部分代码是用的iPad上的&lt;a href="http://omz-software.com/pythonista/"&gt;Pythonista 3&lt;/a&gt;写的, 这大概是唯一能够在ipad上写出可执行python脚本的工具了.&lt;/p&gt;
+&lt;p&gt;Pythonista自带里有个钢琴的demo, 演示多点触控, Ukulele是一样的, 只是要把按键和拨弦两件事情分开, 按键的时候把音高确定好, 拨弦的时候再调出该弦的声音进行播放.&lt;/p&gt;
+&lt;p&gt;遗憾的是Pythonista里的sound库只有钢琴的声音, 音域的范围也很有限. 于是做出来的是一把拨弦钢琴了.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/code/iPad-Ukulele/Ukulele.py"&gt;代码在此&lt;/a&gt;&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/string-on-pad/</guid><pubDate>Tue, 20 Mar 2018 04:00:00 GMT</pubDate></item><item><title>面向眼科医生的正则表达式(0)-简介</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -2572,27 +2590,4 @@ That's all
 &lt;li&gt;
 &lt;p&gt;《双眼视觉学》，ISBN 978-7-117-14654-8/R*14655&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</guid><pubDate>Wed, 28 Feb 2018 07:00:00 GMT</pubDate></item><item><title>毛笔字粗浅研究(1)--硬件搭建</title><link>https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是春节假期的娱乐项目. 我做了一个能够模仿手腕运动能力的绘图仪. 真正的快乐还是来自于创造的过程啊.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="brush" src="https://i.loli.net/2018/02/26/5a92e3ad29971.jpg"&gt;
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;主体的部分来自于&lt;a href="http://learn.makeblock.com/cn/xy-plotter-robot-kit/"&gt;makeblock的xy plot&lt;/a&gt;. 在此称赞一下makeblock的机械部分, 铝制的框架比小时候玩的上海玩具十七厂的"创"系列要精巧不少, 而且设计上也要好很多. 精度和强度也高出不少. 我觉得在某些情况下甚至可以考虑直接用到光学平台上了.&lt;/p&gt;
-&lt;p&gt;原作的绘图仪有两个步进电机和一个舵机控制, 步进电机控制xy平面上的移动, 舵机控制笔的抬起和放下.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="xy plotter" src="http://learn.makeblock.com/cn/wp-content/uploads/2016/01/KM2EQ92AMSKANCMBV8.png"&gt;&lt;/p&gt;
-&lt;p&gt;这个结构用来写钢笔字是可以的, 因为并不需要控制笔管的方向. 但写毛笔字不够, 如前一篇&lt;a href="https://goldengrape.github.io/posts/bulabula/brush-pen-research-0"&gt;毛笔字粗浅研究00&lt;/a&gt;中所描述的, 在写毛笔字时要通过手腕的运动, 控制毛笔的倾倒, 以使笔锋能够行走在笔画的中央.
-&lt;img alt="侧锋" src="https://goldengrape.github.io/images/%E4%BE%A7%E9%94%8B.png"&gt;&lt;/p&gt;
-&lt;p&gt;所以, 除了笔管在xy方向上的运动, 还需要能够控制笔管的倾侧. 当然笔在运行时还有轻重, 也就是在z轴方向的运动.&lt;/p&gt;
-&lt;p&gt;于是, 执笔的部分是这样的:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="执笔 v51" src="https://i.loli.net/2018/02/26/5a92ecc591527.png"&gt;&lt;/p&gt;
-&lt;p&gt;由3个舵机来控制, 最上方的舵机配合一个齿轮来控制z轴的运动,下方是由两个舵机组成的两自由度控制部分, 这样笔管就可以向各个方向倾倒. 整体再通过螺丝连接到xy plotter的其他部分上(青色的梁).&lt;/p&gt;
-&lt;p&gt;需要控制的电机一共有5个:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;两个步进电机控制xy平面上的运动.&lt;/li&gt;
-&lt;li&gt;三个舵机控制笔管的倾斜和z轴的运动.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对比一下其他常见的机械臂, 一般最少也是6个自由度的.
-&lt;img alt="6 DOF" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Robot_arm_model_1.png/640px-Robot_arm_model_1.png"&gt;&lt;/p&gt;
-&lt;p&gt;那么缺少的是什么呢? 仔细看一下, 会发现没有毛笔的笔管绕自身长轴的旋转. 在&lt;a href="https://www.youtube.com/playlist?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT"&gt;黄简讲书法课程&lt;/a&gt;中, 要求对笔的控制是&lt;a href="https://youtu.be/F6-fEdG6n48?list=PL54cajc78e_S8g1Ow2r3epz9GfDLu6iKT&amp;amp;t=760"&gt;通过手腕而不是手指&lt;/a&gt;, 如果使用手指, 那么就可以在一定范围内完成笔管绕自身长轴的旋转, 大约有+/-90度, 如果禁止, 那么就丢失了一个自由度.
-&lt;img alt="屏幕快照 2018-02-26 01.13.48" src="https://i.loli.net/2018/02/26/5a92eef28774b.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://grabcad.com/library/chinese-brush-holder-1"&gt;3D模型下载&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;实际操作中, 稳定z轴移动的两个圆柱不是打印的, 而是用纸卷的, 其实用A4纸裁好尺寸, 然后卷成足够紧密的纸卷, 外表再用胶带粘好, 还是很结实的, 而且表面光滑, 比打印一个轴效果更好.&lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>Art</category><guid>https://goldengrape.github.io/posts/bulabula/brush-pen-research-1-hardware/</guid><pubDate>Sun, 25 Feb 2018 16:20:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</guid><pubDate>Wed, 28 Feb 2018 07:00:00 GMT</pubDate></item></channel></rss>
