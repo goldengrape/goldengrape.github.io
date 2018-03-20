@@ -16,6 +16,8 @@
 
 这把琴是有琴弦的, 琴弦能够给人有触觉反馈, 在乐器演奏是还是很重要的. 琴弦使用的是鱼线, 线绷紧的力度可调. 这样不至于勒手. 仅仅按住琴弦还是不响的, 要在拨弦的时候iPad才会发出声音.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/w-KjJy7J-Tw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
 <!-- TEASER_END -->
 
 # 硬件部分
