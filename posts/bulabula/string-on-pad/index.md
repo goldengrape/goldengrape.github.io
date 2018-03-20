@@ -53,3 +53,5 @@ Pythonista自带里有个钢琴的demo, 演示多点触控, Ukulele是一样的
 
 
 <!-- EOF -->
+----
+[press.one签名](https://press.one/file/v?s=3bf28f812a1c1308b7942dd424cf4114c7cd2241038b3df453038fcdde5f7561b345a77b2b9879b84cb6ab3601d1bce58f8e31dad3110e79912e1c179209f8811&h=01f31dd17b0af32cca3bc8cdb4c450b59c5c6812749b31c2e4632073cb14dcdb&a=79c1846bc532ec0cf61ad0f1f5604a80a1387aca&f=P1&v=2)
