@@ -324,11 +324,17 @@ print(VL)
 print(LC_to_CDR(VL))
 
 
-# In[15]:
+# In[18]:
 
 
-print(VH)
-print(HC_to_CDR(VH))
+import pandas as pd
+defintion_list=["Kabat","AbM","Chothia"]
+HCCDR_df_list=[]
+for d in defintion_list:
+    HCCDRs=HC_to_CDR(VH,defintion=d)
+    HCCDR_df_list.append(HCCDRs)
+df=pd.DataFrame(HCCDR_df_list,index=defintion_list,columns=["CDR 1","CDR 2","CDR 3"])
+df
 
 
 # # 总结
