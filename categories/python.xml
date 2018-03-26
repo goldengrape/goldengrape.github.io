@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 20 Mar 2018 12:31:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 26 Mar 2018 13:04:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
 &lt;p&gt;不过弄出有意思的声音还是我有兴趣做的事情. 于是就有了在iPad上做一把Ukulele的项目:
 &lt;img alt="ipadminiukulele" src="https://i.loli.net/2018/03/20/5ab08921c906d.gif"&gt;&lt;/p&gt;
 &lt;p&gt;这把琴是有琴弦的, 琴弦能够给人有触觉反馈, 在乐器演奏是还是很重要的. 琴弦使用的是鱼线, 线绷紧的力度可调. 这样不至于勒手. 仅仅按住琴弦还是不响的, 要在拨弦的时候iPad才会发出声音.&lt;/p&gt;
@@ -335,8 +335,7 @@ Outside Normal Limits
 </description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</guid><pubDate>Mon, 12 Mar 2018 07:00:00 GMT</pubDate></item><item><title>面向眼科医生的正则表达式(1)-练习</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -354,8 +353,7 @@ Outside Normal Limits
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -363,8 +361,7 @@ Outside Normal Limits
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -374,8 +371,7 @@ Outside Normal Limits
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -383,8 +379,7 @@ Outside Normal Limits
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -414,8 +409,7 @@ Outside Normal Limits
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -451,7 +445,9 @@ Outside Normal Limits
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;&amp;gt;Ranibizumab Light Chain
@@ -466,8 +462,7 @@ Outside Normal Limits
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -508,7 +503,9 @@ Outside Normal Limits
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[2]:&lt;/div&gt;
+
 
 
 
@@ -522,8 +519,7 @@ Outside Normal Limits
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -556,7 +552,9 @@ Outside Normal Limits
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt output_prompt"&gt;Out[3]:&lt;/div&gt;
+
 
 
 
@@ -570,8 +568,7 @@ Outside Normal Limits
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -611,7 +608,9 @@ Outside Normal Limits
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ')]
@@ -623,8 +622,7 @@ Outside Normal Limits
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -639,7 +637,7 @@ Outside Normal Limits
 &lt;li&gt;正则表达式: [A-Z]{7}&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)&lt;ul&gt;
+&lt;li&gt;序列之&lt;strong&gt;前&lt;/strong&gt;通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)&lt;ul&gt;
 &lt;li&gt;正则表达式: (IY|VY|IK|IF)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -654,7 +652,7 @@ Outside Normal Limits
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR_L1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
-&lt;span class="n"&gt;CDR_L2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(IY|VY|IK|IF)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_L2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?(IY|VY|IK|IF))"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt; &lt;span class="c1"&gt;# 以前此处有bug&lt;/span&gt;
 &lt;span class="n"&gt;CDR_L3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;
 &lt;span class="n"&gt;CDR_L_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_L1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR_L2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR_L3_pattern&lt;/span&gt;
 
@@ -671,10 +669,12 @@ Outside Normal Limits
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
 
+
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY')]
+&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKPGKAPKVLIY', 'IY', 'FTSSLHS', '')]
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -683,8 +683,7 @@ Outside Normal Limits
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -717,14 +716,14 @@ Outside Normal Limits
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;CDR_L1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
-&lt;span class="n"&gt;CDR_L2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(IY|VY|IK|IF)"&lt;/span&gt;
+&lt;span class="n"&gt;CDR_L2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?(IY|VY|IK|IF))"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt; &lt;span class="c1"&gt;# 以前此处有bug&lt;/span&gt;
 &lt;span class="n"&gt;CDR_L3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,11})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(FG[A-Z]G)"&lt;/span&gt;
 &lt;span class="n"&gt;CDR_L_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_L1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR_L2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR_L3_pattern&lt;/span&gt;
 
 &lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_L_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="n"&gt;CDR_L1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;CDR_L2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;CDR_L3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;CDR_L2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;CDR_L3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_Ls&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_L1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR_L2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR_L3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
@@ -738,11 +737,13 @@ Outside Normal Limits
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
 
+
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKP', 'GKAPKVL', 'IY', 'FTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYC', 'QQYSTVPWT', 'FGQG')]
-SASQDISNYLN GKAPKVL QQYSTVPWT
+&lt;pre&gt;[('DIQLTQSPSSLSASVGDRVTITC', 'SASQDISNYLN', 'WYQ', 'QKPGKAPKVLIY', 'IY', 'FTSSLHS', '', 'GVPSRFSGSGSGTDFTLTISSLQPEDFATYYC', 'QQYSTVPWT', 'FGQG')]
+SASQDISNYLN FTSSLHS QQYSTVPWT
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -751,8 +752,7 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -783,8 +783,7 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -829,7 +828,9 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV')]
@@ -841,8 +842,7 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -888,7 +888,9 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV', 'RQAPGKGLEW', 'VGWINTYTGEPTYAADFKR', 'RFT')]
@@ -900,8 +902,7 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -951,7 +952,9 @@ SASQDISNYLN GKAPKVL QQYSTVPWT
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;[('EVQLVESGGGLVQPGGSLRLSCAAS', 'GYDFTHYGMN', 'WV', 'RQAPGKGLEW', 'VGWINTYTGEPTYAADFKR', 'RFT', 'FSLDTSKSTAYLQMNSLRAEDTAVYYCAK', 'YPYYYGTSHWYFDV', 'WGQG')]
@@ -964,12 +967,12 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="识别CDR的函数"&gt;识别CDR的函数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#%E8%AF%86%E5%88%ABCDR%E7%9A%84%E5%87%BD%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;综上, 可以整合成一组函数, 专门用来识别CDR&lt;/p&gt;
+&lt;h2 id="识别CDR的函数"&gt;识别CDR的函数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#%E8%AF%86%E5%88%ABCDR%E7%9A%84%E5%87%BD%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;综上, 可以整合成一组函数, 专门用来识别CDR.
+在实际使用中, HC CDR是有多种定义方式的, 所以采用了分类讨论的方式&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -979,31 +982,32 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; 
-    &lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
-        &lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-        &lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-        &lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;
-        &lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;
-        &lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;""&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;LC_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; 
-    &lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
-    &lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(IY|VY|IK|IF)"&lt;/span&gt;
-    &lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,11})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(FG[A-Z]G)"&lt;/span&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;search_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;loc1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;loc2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;loc3&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# 根据pattern在seq中搜索CDR&lt;/span&gt;
+    &lt;span class="c1"&gt;# loc1,loc2,loc3标明CDR在各个片段中的位置&lt;/span&gt;
     &lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;get_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;HC_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; 
-    &lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,12})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
-    &lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,19})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([K|R][L|I|V|F|T|A][T|S|I|A])"&lt;/span&gt;
-    &lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{3,25})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WG[A-Z]G)"&lt;/span&gt;
-    &lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;get_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;# 有可能CDR_pattern不能匹配出结果, 因此用try&lt;/span&gt;
+        &lt;span class="c1"&gt;#CDR1_pattern, CDR2_pattern, CDR3_pattern, 每个都会匹配出若干结果, 需要根据loc提取&lt;/span&gt;
+        &lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;loc1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;loc2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;loc3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; 
+        &lt;span class="c1"&gt;# 当CDR_pattern无法匹配时, 尽量找出错误的区域&lt;/span&gt;
+        &lt;span class="c1"&gt;# 于是分别匹配各自的pattern, 如果发现匹配错误, 则单独用? 表示&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"?&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;loc1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"?&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"?&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;loc2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"?&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"?&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;][&lt;/span&gt;&lt;span class="n"&gt;loc3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"?"&lt;/span&gt;    
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;CDR1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -1011,8 +1015,66 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;LC_to_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;defintion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Kabat"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;'''&lt;/span&gt;
+&lt;span class="sd"&gt;    根据http://www.bioinf.org.uk/abs/#cdrdef中记载的规则, 寻找LC CDR序列&lt;/span&gt;
+&lt;span class="sd"&gt;    '''&lt;/span&gt;
+    &lt;span class="c1"&gt;# 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置&lt;/span&gt;
+    &lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{22}&lt;/span&gt;&lt;span class="s2"&gt;C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,17})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WYQ|WLQ|WFQ|WYL)"&lt;/span&gt;
+    &lt;span class="c1"&gt;# 如果匹配成功, re.findall返回4!段序列, CDR前, (IY|VY|IK|IF之一), CDR自身, CDR后, CDR自身位于2号位置&lt;/span&gt;
+    &lt;span class="c1"&gt;# CDR1与2之间使用松弛匹配, 没有严格限定字母数&lt;/span&gt;
+    &lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?(IY|VY|IK|IF))"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?)"&lt;/span&gt; 
+    &lt;span class="c1"&gt;# 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置&lt;/span&gt;
+    &lt;span class="c1"&gt;# CDR2与3之间使用松弛匹配, 没有严格限定字母数&lt;/span&gt;
+    &lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{7,11})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(FG[A-Z]G)"&lt;/span&gt;
+    &lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;search_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;HC_to_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;defintion&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"Kabat"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;'''&lt;/span&gt;
+&lt;span class="sd"&gt;    根据http://www.bioinf.org.uk/abs/#cdrdef中记载的规则, 寻找HC CDR序列&lt;/span&gt;
+&lt;span class="sd"&gt;    '''&lt;/span&gt;
+    &lt;span class="c1"&gt;# 使用Kabat定义&lt;/span&gt;
+    &lt;span class="c1"&gt;# 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;defintion&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"Kabat"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{8}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{5,7})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
+        &lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{12}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{16,19})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([K|R][L|I|V|F|T|A][T|S|I|A])"&lt;/span&gt;
+        &lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{3,25})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WG[A-Z]G)"&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;defintion&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"AbM"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{10,12})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
+        &lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{12}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{9,12})[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([K|R][L|I|V|F|T|A][T|S|I|A])"&lt;/span&gt;
+        &lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{3,25})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WG[A-Z]G)"&lt;/span&gt;
+    &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;defintion&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"Chothia"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"(^[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{21}&lt;/span&gt;&lt;span class="s2"&gt;C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{3}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{6,8})[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{4}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WV|WI|WA)"&lt;/span&gt;
+        &lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]&lt;/span&gt;&lt;span class="si"&gt;{12}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{9,12})[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{7}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([K|R][L|I|V|F|T|A][T|S|I|A])"&lt;/span&gt;
+        &lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]*?C[A-Z]&lt;/span&gt;&lt;span class="si"&gt;{2}&lt;/span&gt;&lt;span class="s2"&gt;)"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"([A-Z]{3,25})"&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="s2"&gt;"(WG[A-Z]G)"&lt;/span&gt;
+    &lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;
+    &lt;span class="n"&gt;CDRs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;findall&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;search_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CDR1_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR2_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;CDR3_pattern&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;seq&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -1023,11 +1085,11 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LC_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;LC_to_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VL&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -1039,11 +1101,13 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC
-['SASQDISNYLN', 'GKAPKVL', 'QQYSTVPWT']
+['SASQDISNYLN', 'FTSSLHS', 'QQYSTVPWT']
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1054,11 +1118,11 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
     &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HC_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HC_to_CDR&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;VH&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 &lt;/div&gt;
@@ -1070,11 +1134,13 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 
 
 &lt;div class="output_area"&gt;
+
 &lt;div class="prompt"&gt;&lt;/div&gt;
+
 
 &lt;div class="output_subarea output_stream output_stdout output_text"&gt;
 &lt;pre&gt;EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTYAADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVTVSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL
-['GYDFTHYGMN', 'VGWINTYTGEPTYAADFKR', 'YPYYYGTSHWYFDV']
+['HYGMN', 'WINTYTGEPTYAADFKR', 'YPYYYGTSHWYFDV']
 &lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1083,8 +1149,7 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
 
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
@@ -1102,18 +1167,21 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="更新"&gt;更新&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/#%E6%9B%B4%E6%96%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;(2018-3-26)
+在之前的blog中, 对LC-CDR2的定义写错了. 把&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"序列之前通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)"
+错当成了&lt;/li&gt;
+&lt;li&gt;"序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;已经修改了代码&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
