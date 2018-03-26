@@ -1,5 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 20 Mar 2018 12:31:13 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 26 Mar 2018 12:25:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;最近在学Michigan大学Data science课程的第三门&lt;a href="https://www.coursera.org/learn/python-machine-learning/home/welcome"&gt;Applied Machine Learning in Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;唉, 老师讲课好差劲. 听一遍一点印象都没有, 很快就忘了. 如果一个老师如果上课的时候不写板书, 只用PPT, 高概率不是个好老师. 连作业里的代码风格都很差劲, 哪有在函数内部import的, 交作业的时候还得自己把matplotlib给注释掉.&lt;/p&gt;
+&lt;p&gt;就是这个老师啦:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://coursera-instructor-photos.s3.amazonaws.com/61/58158043d011e69605657346ccd592/kevyn.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Kevyn Collins-Thompson&lt;/p&gt;
+&lt;p&gt;所以, 得趁着刚写完作业, 还有些印象, 赶紧记录下来.&lt;/p&gt;
+&lt;p&gt;这门课讲的也是机器学习, 但不是深度学习, 而是更为"传统"一些的. 用到的主要是Scikit-Learn.&lt;/p&gt;
+&lt;p&gt;关于Scikit-learn, datacamp上有个&lt;a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet"&gt;cheat sheet&lt;/a&gt;看起来不错, 而且&lt;a href="http://scikit-learn.org/stable/documentation.html"&gt;SciKit-Learn自己的说明文档&lt;/a&gt;也很不错. 以后还是看这些文档参考.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="常用算法"&gt;常用算法&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这门课主要讲了SciKit-Learn里几个常用的算法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KNN&lt;/li&gt;
+&lt;li&gt;线性回归: 最小二乘拟合, Ridge, Lasso, Polynomial Regression&lt;/li&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;支持向量机: 线性和Kernelized&lt;/li&gt;
+&lt;li&gt;多层分类&lt;/li&gt;
+&lt;li&gt;Cross-Validation&lt;/li&gt;
+&lt;li&gt;Decision Trees&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="通用步骤"&gt;通用步骤&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E9%80%9A%E7%94%A8%E6%AD%A5%E9%AA%A4"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="分开数据集"&gt;分开数据集&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%88%86%E5%BC%80%E6%95%B0%E6%8D%AE%E9%9B%86"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;之前可能还需要归一化.&lt;/p&gt;
+&lt;p&gt;传统的机器学习方法, 数据集的数量可能并不大, 因此还是会留出1/5~1/4的数据作为test set. 要用train_test_split把数据集分开.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 随便给个数据集&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[15]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a1493f5c0&amp;gt;]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAD8CAYAAABn919SAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMi4wLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvFvnyVgAADlNJREFUeJzt3W+snnV9x/HPBwrZxC0WeiAd0B5RwiQkgr1DOkkWkLlgJCt7oJE40iy47gEqGBODPNGHPFA3HxCTDipN1rEZxEAMcZCuCU8s8b7RTFglNB0HOzp6gG6gT+jxfH1wrhOP5Zze15/7+ve73q/EnPu+erXX7w7w8dfv7/f73o4IAQD675y2BwAAmA0CHQASQaADQCIIdABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJCITU0+bMuWLTE/P9/kIwGg9yaTyesRMTftvkYDfX5+XuPxuMlHAkDv2V7Icx8lFwBIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJAIAh0AajZZOKUHDh3VZOFUrc9pdB86AAzNZOGUPvvgYb2ztKzzN52jA5/bqR3bN9fyLGboAFCjw8fe0DtLy1oO6fTSsg4fe6O2ZxHoAFCjnVdcpPM3naNzLZ236RztvOKi2p5FyQUAarRj+2Yd+NxOHT72hnZecVFt5RaJQAeAUiYLp3KH9I7tm2sN8lUEOgAU1ORCZxHU0AGgoCYXOosg0AGgoCYXOoug5AIABTW50FkEgQ4AJTS10FkEJRcASASBDgCJINABIBEEOgAkYmqg277c9iHbR2y/YPvu7PqFtp+2/VL2s1urAwAwMHlm6EuSvhwRH5K0U9Jdtq+WdK+kgxFxpaSD2XsAQEumBnpEnIiI57LXb0s6IulSSbsk7c9u2y/ptroGCQCYrlAN3fa8pOskPSvpkog4Ia2EvqSLZz04AGhaU98uVIfcB4tsv1fS9yXdExFv2c77+/ZI2iNJ27ZtKzNGAKgkb2fErjbdyivXDN32eVoJ8wMR8Vh2+TXbW7Nf3yrp5Hq/NyL2RsQoIkZzc3OzGDMA5LYa0t986kV99sHDZ515d7XpVl55drlY0kOSjkTEt9b80hOSdmevd0t6fPbDA4BqioR0V5tu5ZWn5HKDpDsk/dz2z7Jr90m6X9L3bN8p6RVJn6pniABQ3mpIn15anhrSXW26lZcjorGHjUajGI/HjT0PAKRi3y7URbYnETGadh/dFgEkr4udEevA0X8ASASBDgCJINABIBEEOoDe6vOpzjqwKAqgl/p+qrMOzNAB9FLfT3XWgUAH0Et9P9VZB0ouAHqp76c660CgA+itoRwYyouSC4BOYedKeczQAXQGO1eqYYYOoDPYuVINgQ6gM9i5Ug0lFwCNyNPClp0r1RDoAGpXpDbOzpXyKLkAqB218WYQ6ABqR228GZRcANSO2ngzCHQAjaA2Xj9KLgCQCAIdABJBoANAIgh0AEgEgQ4AiSDQASARBDqA0uhd3i3sQwdQCr3Lu4cZOoBS6M/SPQQ6gFLoz9I9lFwAlEJ/lu4h0AGURn+WbqHkAgCJINABvAvbEfuJkgswEHm+03P1PrYj9hOBDgxAkZBebzsigd4PlFyAASiyZ5ztiP3FDB0YgNWQPr20PDWk2Y7YX46Ixh42Go1iPB439jwAv5O3ho7usT2JiNG0+6bO0G3vk3SrpJMRcU127euS/k7SYnbbfRHxZPnhAqgbe8bTl6eG/rCkW9a5/g8RcW32P8IcAFo2NdAj4hlJbzYwFgBABVV2uXze9n/a3mebv8cBQMvKBvp3JH1A0rWSTkj65kY32t5je2x7vLi4uNFtAICKSgV6RLwWEb+JiGVJ/yTp+rPcuzciRhExmpubKztOAMAUpQLd9tY1b/9a0vOzGQ4AoKw82xYfkXSjpC22j0v6mqQbbV8rKSS9LOnvaxwjgLNgfzlWTQ30iLh9ncsP1TAWAAXRSAtr0csF6DG+1xNrEehAj9FIC2vRnAvoMRppYS0CHeg5erRgFSUXAEgEgQ4AiSDQASARBDrQoMnCKT1w6KgmC6faHgoSxKIo0JAih4A4/YkyCHSgIesdAlovrDn9ibIouQANyXsIiNOfKIsZOtCQvIeAVoP/9NIypz9RiCOisYeNRqMYj8eNPQ/oK2roWMv2JCJG0+5jhg50EKc/UQY1dABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJAIAh0AEkGgAxXRQRFdwcEioAIaaaFLmKEDFdBIC11CoAMV5O2gCDSBkgtQQd4OikATCHRgA3k7HtJIC11BoAPrYLETfUQNHVgHi53oIwIdWAeLnegjSi7AOljsRB8R6BiUIl/txmIn+oZAx2Cw0InUUUPHYLDQidQR6BgMFjqROkouSEKe2jgLnUgdgY7eK1IbZ6ETKaPkgt6jNg6sINDRe9TGgRVTSy6290m6VdLJiLgmu3ahpH+TNC/pZUmfjgi+rgWtoDYOrMgzQ39Y0i1nXLtX0sGIuFLSwew90Jod2zfrrps+SJhj0KYGekQ8I+nNMy7vkrQ/e71f0m0zHhcAoKCyNfRLIuKEJGU/L97oRtt7bI9tjxcXF0s+DgAwTe2LohGxNyJGETGam5ur+3EAMFhlA/0121slKft5cnZDAgCUUTbQn5C0O3u9W9LjsxkOAKCsqYFu+xFJP5Z0le3jtu+UdL+kj9t+SdLHs/cAgBZN3YceEbdv8Es3z3gswO8p0rscAL1c0FH0LgeK4+g/Oon+LEBxBDo6if4sQHGUXNBJ9GcBiiPQ0bi8i530LgeKIdDRKBY7gfpQQ0ejWOwE6kOgo1EsdgL1oeSCmShSF2exE6gHgY7KitbFWewE6kHJBWc1WTilBw4d1WRh428YpC4OdAMzdGwo78x7tS5+emmZujjQIgIdG1pv5r1eoFMXB7qBQMeGisy8qYsD7SPQsSFm3kC/EOg4K2beQH+wywUAEkGgA0AiCPQByrO3HED/UEMfGLodAulihj4wnOoE0kWgDwzdDoF0UXIZGPaWA+ki0AeIveVAmii5AEAiCHQASASBDgCJINABIBEEekI4AQoMG7tcEsEJUADM0BPBCVAABHoiOAEKgJJLIjgBCoBATwgnQIFho+QCAIkg0AEgEQQ6ACSCQAeARFRaFLX9sqS3Jf1G0lJEjGYxKPzOZOEUO1cA5DKLXS43RcTrM/hzcAZOfwIogpJLh3H6E0ARVQM9JD1le2J7zywGNBR5Gmlx+hNAEVVLLjdExKu2L5b0tO1fRMQza2/Ign6PJG3btq3i49KQt5TC6U8ARVSaoUfEq9nPk5J+IOn6de7ZGxGjiBjNzc1VeVwyipRSdmzfrLtu+iBhDmCq0oFu+wLbf7T6WtJfSnp+VgNLGaUUAHWoUnK5RNIPbK/+Of8SET+ayagSRykFQB1KB3pEHJP04RmOZVBopAVg1ti2OEN8BRyANtE+d0Y4BASgbczQZ4RDQADaRqDnwCEgAH1AyWUKDgEB6AsCfYr1SikbhTU7VwC0iZLLFJRSAPQFM/QpKKUA6AsCPQdKKQD6gJILACSCQAeARBDoAJCIwQY6fVcApGaQi6L0XQGQokHO0Om7AiBFgwx0DgsBSNEgSy4cFgKQokEGusRhIQDpGWTJBQBSRKADQCKSC3T2lwMYqqRq6OwvBzBkSc3Q2V8OYMiSCnT2lwMYsqRKLuwvBzBkSQW6xP5yAMOVVMkFAIaMQAeARBDoAJAIAh0AEkGgA0AiehHoHOcHgOk6v22R4/wAkE/nZ+gc5weAfDof6BznB4B8Ol9y4Tg/AOTT+UCXOM4PAHl0vuQCAMiHQAeARFQKdNu32H7R9lHb985qUACA4koHuu1zJT0g6ROSrpZ0u+2rZzUwAEAxVWbo10s6GhHHIuIdSf8qaddshgUAKKpKoF8q6Zdr3h/PrgEAWlBl26LXuRbvusneI2lP9vZXtl8s+bwtkl4v+Xv7is88DHzmYajymbfnualKoB+XdPma95dJevXMmyJir6S9FZ4jSbI9johR1T+nT/jMw8BnHoYmPnOVkstPJF1p+/22z5f0GUlPzGZYAICiSs/QI2LJ9ucl/bukcyXti4gXZjYyAEAhlY7+R8STkp6c0VimqVy26SE+8zDwmYeh9s/siHetYwIAeoij/wCQiF4E+tBaDNi+3PYh20dsv2D77rbH1ATb59r+qe0ftj2WJth+n+1Hbf8i+2f9Z22PqW62v5T9O/287Uds/0HbY5o12/tsn7T9/JprF9p+2vZL2c9a2sd2PtAH2mJgSdKXI+JDknZKumsAn1mS7pZ0pO1BNOjbkn4UEX8q6cNK/LPbvlTSFyWNIuIarWym+Ey7o6rFw5JuOePavZIORsSVkg5m72eu84GuAbYYiIgTEfFc9vptrfyHnvQpXNuXSfqkpAfbHksTbP+xpD+X9JAkRcQ7EfF/7Y6qEZsk/aHtTZLeo3XOrvRdRDwj6c0zLu+StD97vV/SbXU8uw+BPugWA7bnJV0n6dl2R1K7f5T0FUnLbQ+kIVdIWpT03azM9KDtC9oeVJ0i4n8kfUPSK5JOSPr/iHiq3VE15pKIOCGtTNgkXVzHQ/oQ6LlaDKTI9nslfV/SPRHxVtvjqYvtWyWdjIhJ22Np0CZJH5H0nYi4TtKvVdNfw7siqxvvkvR+SX8i6QLbf9PuqNLSh0DP1WIgNbbP00qYH4iIx9oeT81ukPRXtl/WSkntY7b/ud0h1e64pOMRsfo3r0e1EvAp+wtJ/x0RixFxWtJjkj7a8pia8prtrZKU/TxZx0P6EOiDazFg21qprR6JiG+1PZ66RcRXI+KyiJjXyj/f/4iIpGduEfG/kn5p+6rs0s2S/qvFITXhFUk7bb8n+3f8ZiW+ELzGE5J2Z693S3q8jod0/kuiB9pi4AZJd0j6ue2fZdfuy07mIh1fkHQgm6gck/S3LY+nVhHxrO1HJT2nlZ1cP1WCJ0ZtPyLpRklbbB+X9DVJ90v6nu07tfJ/bJ+q5dmcFAWANPSh5AIAyIFAB4BEEOgAkAgCHQASQaADQCIIdABIBIEOAIkg0AEgEb8Fk4CiddyeFR4AAAAASUVORK5CYII="&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.model_selection&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;train_test_split&lt;/span&gt;
+&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;train_test_split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"red"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'o'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"blue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a14881f28&amp;gt;]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="设模型并训练"&gt;设模型并训练&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E8%AE%BE%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%AE%AD%E7%BB%83"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;一般来说设定模型就是模型().fit(X_train,y_train),&lt;/p&gt;
+&lt;p&gt;要应用训练好的模型就用模型.predict(X),&lt;/p&gt;
+&lt;p&gt;评估的话, 就是模型.score(X_train, y_train) 和模型.score(X_test, y_test)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [24]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;
+&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LinearRegression&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (training): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (test): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;R-squared score (training): 0.997
+R-squared score (test): 0.998
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAD8CAYAAABn919SAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMi4wLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvFvnyVgAAHphJREFUeJzt3Xd4VVXi9fHvvilgokBIqEIITaQJmKhRqiAiojJjr4Nt8B0LxQZiQbGjojioI6OMZTLY0JFEBlBaEEyEKFLEAiGhhQAhdCHl7t8fN/BSQki7Obesz/P4JLnZ4ayrsDycs8/exlqLiIj4P5fTAUREpHqo0EVEAoQKXUQkQKjQRUQChApdRCRAqNBFRAKECl1EJECo0EVEAoQKXUQkQITW5MFiYmJsXFxcTR5SRMTvZWRkbLfWNjjZuBot9Li4OJYuXVqThxQR8XvGmOzyjNMlFxGRAKFCFxEJECp0EZEAoUIXEQkQKnQRkQChQhcRCRAqdBERL8vIzueNeWvIyM736nFqdB66iEiwycjO56Z30igochMe6iLpzkTiW0R55Vg6QxcR8aKVP6/iWd6gjt1DYZGbtMw8rx1LhS4i4g3uYkh/m5szruVSVzrdXJmEhbpIbBXttUPqkouISHXLXQXTh8GmpYS07suabk+RsC2Ce1tFe+1yC6jQRUQqJSM7n7TMPBKPLOnCPyD1JVg0EWrXhSv/CZ2vobMxdK6BTCp0EZEKKvVGp3sFJA+HHZnQ5UYY8CxE1K/RXCp0EZEKSsvMo6DIjdtCRNFuIv43DLZMh6g4uOW/0PpCR3Kp0EVEKiixVTThoYYB7kU8Hvoh0bl7ofsI6D0KwiMcy6VCFxGpoPg6u0mPfZu6m+azL6YL5uo3oHFNXCUvmwpdRKS8iovg+7dh7jPUxcCA54k87y5whTidDFChi4iUT85ymH4f5CyDthfDoFegXqzTqY6iQhcRKUvBfljwAiyeBBHRcPW/oOOfwRinkx1HhS4iciJr50LKSMjPgrP/Av3HwSneezCoqlToIiLH2pcHs8bA8o8gug0MSYGWPZ1OdVInLXRjTHPgA6Ax4AYmW2snGmPqAx8DcUAWcK211rtrQ4qIeJO1sPwTmPUIHNgFvR6Cng9CWG2nk5VLeRbnKgIesNa2BxKBe4wxHYDRwBxrbVtgTsnXIiL+acc6+PDP8MVQqN8a7loIfR/zmzKHcpyhW2tzgJySz/cYY1YDpwODgT4lw94H5gOjvJJSRMRbiosg7Q2Y9zy4QuHSlyHhDnD532K0FbqGboyJA7oB6UCjkrLHWptjjGlY7elERLxp0w+QPAy2rIB2g+DSl8jYGUHagsyjF93yE+UudGPMqcA0YIS1drcp55QdY8xQYChAbKxvzdkUkeBw3MqIB/fCvOcg/S2IbAjXfggdrqjR3YW8oVyFbowJw1PmSdbaz0tezjXGNCk5O28CbC3tZ621k4HJAAkJCbYaMouIlNuxJZ18yR+0/X4s7FrvubRy0VjPUrccvejWod2FAqrQjedU/F1gtbV2whHfmg4MAV4o+filVxKKiFTBoZKub3cxlg9o+/V3ENMObp8FsYlHjfUsuuWisMjt9d2FvKE8Z+jdgVuAFcaYZSWvjcFT5J8YY+4A1gPXeCeiiEjlJbasz/VhqTxsPiSCg2zuNpKmgx6B0FrHjY1vEUXSnYnHb1zhJ8ozy+Vb4EQXzPtVbxwRkWqUt5b4+cOJdy1kc52ubOr3Mh27nFPmj8S3iPK7Ij9ET4qKSOApKoDFr8OC8RBaGy57jaZnD6GpH05FrAgVuogElg1LPFMRt/4MHQbDwPFwWmOnU9UIFbqIBIaDe2DOOPj+n1CnKVw/Fc681OlUNUqFLiL+75cZMONB2L0Zzh0K/R6HWqc5narGqdBFxG/9tPpXIuc8Qpvtc6BhR7j2A2iW4HQsxwT2HQIRCUxuN9mz36DlR31ovi2VCe7ryRj436Auc9AZuoj4m22/QvJwWqz/jsW2A2MK72ADTaiVtZv4lsG9pJQKXUT8Q9FB+PZVWPgKhEWQ1WM8ty9oTiHWL5/q9AYVuoj4vuzvPFMRt/8Gna6GS14g7tQGJLXN99unOr1BhS4ivuuPnfDNk5DxL6gbCzd9Bm37H/62Pz/V6Q0qdBHxKRnZ+aSt3c4lIUtoveQp2LcVzr8X+jwCtU51Op5PU6GLiM/IyM7n/ne+4jGm0Dokg/31OxBxw1Q4/Wyno/kFFbqI+AZ3MfsWvkmK6++EUswLRTdQt+Nw/nZ6e6eT+Q0Vuog4L3cVJA+n18YlLKIzjxbczpbQJiS1CY41WKqLCl1EasRx28ABFB6A1Jdg0WueXYP+PJnadftzzbodmrlSCSp0EfG6UvfqdK+E5OGwYy10uQEufhYio4kH4uPqOx3ZL6nQRcTrjtyrM6JoN6f8bzhs+RKi4uCWL6B1X6cjBgQVuoh4nWevTsPF7sU8EfoB0bl7ofsI6D0KwiOcjhcwVOgi4nXxdfeQ3mIydTfOY1/MWZir3oAmZzkdK+Co0EXEe9zFkP42zH2GugADnifyvLvAFeJ0soCkQhcR79iyAqbfB5t/hLYXw6BXoF6s06kCmgpdRKpXwX5Y8CIs/jtE1Ierp0DHK8EYp5MFPBW6iFSftfMgZQTkZ0G3W6D/OE+pS41QoYtI1e3Lg9mPwk9TIboNDEmBlj2dThV0VOgiUnnWwvJPYNYjcGAX9HoIej4IYbWdThaUVOgiUjk71sFX98PaudDsHLj8dWjUwelUQU2FLiIVU1wEaW/CvOcoNiEsavMwkd3vIr5RjNPJgp4KXUTKb/OPMH0YbFnOztj+DF73JzasiiL81yWe9Vm0mJajXE4HEBE/ULAPZj0K/+wLe7fCtR+SFPc8G4qicFsoLHKTlpnndMqgpzN0ESnb719Dyv2waz0k3A79xsIp9UiMzCd83hoKi9yEhbpIbBXtdNKgp0IXkdLt3QYzR8PKzyCmHdw2E1qcf/jb8S2iSLoz8fg1zsUxKnQROZq1sCzJc4mlcL9nc+YeIyG01nFD41tEqch9iApdRP6/vLWeTSeyFkLs+XD5RGjQzulUUk4qdBGB4kJYNBEWjIfQ2mSf/ywpYReTuL8B8U5nk3JToYsEiVL39ATYuNSzKuLWn6HDYH7q/CjX/SeTgqLfCZ+3VtMR/YgKXSQIlLqnZ+NQmPM0fD8ZTmsC10+FMy/l23lrDm8Xd2g6ogrdP6jQRYLAkXt6Fha52fL9F7DhZdi9Gc79K/R9HGrXAQ5tF+fSdEQ/pEIXCQKHSrpeUR5Phn/AJavSoWEHuOZ9aH7OUWM1HdF/qdBFgkB887rM6plJ4/TnCKMAej8OFwyD0PDSx2s6ol866aP/xpgpxpitxpiVR7z2pDFmkzFmWck/l3o3pohU2rbf4L1BtFg8hlrNu+H623fQ68ETlrn4r/Kcob8HTAI+OOb1V621L1d7IhGpHkUH4dtXYeErEBYBV0yCbjdrK7gAdtJCt9amGmPivB9FRKrN+jTPqojbf4VOV8ElL8CpDZ1OJV5WldUW7zXGLC+5JKOLbSK+4MAuSBkJUwZ4Htu/8VPPJs0q86BQ2UJ/C2gNdAVygFdONNAYM9QYs9QYs3Tbtm2VPJyInNTP02HSuZDxHiTeA3enwRkXO51KalClZrlYa3MPfW6M+SeQUsbYycBkgISEBFuZ44lIGXZvhhkPwS8p0Kgz3PAfOF0P7AejShW6MaaJtTan5Ms/AyvLGi8iXuB2w9J34ZunwF0E/cdB4t0QEuZ0MnHISQvdGDMV6APEGGM2AmOBPsaYroAFsoC7vJhRRI61dbXnpufG79ndtAdfNnuQDs26Eq8yD2rlmeVyQykvv+uFLCJyMoUHYOHL8O1rUOs01vWcwMD5TShYt5/w79K0kFaQ056iIv4i61v4R3dIfckzFfHepcxw9aagyGpfTwH06L+I7/sjH75+An74AOq1gFu+gNZ9AUhs5dJCWnKYCl3EV1kLq76A/42C/XnQfTj0Hg3hEYeHaCEtOZIKXcQX7dwAXz0Av8+CJl3h5s+gSZdSh2ohLTlEhS7iS9zFng0n5jzt+XrA83DuUAjRH1U5Of0uEfEVW1Z4piJu/gHa9IdBr0BUC6dTiR9RoYs4rfAPWPAiLHodIurDVe96ZrFoVUSpIBW6SA06bqPmzPmQPALy13mWtu3/tKfURSpBhS5SQ47cqLlh6D5S2s0kZs00qN8KhiRDy15HjdXMFakoFbpIDfFs1FzM5WYRT7g+pN7a/dDzAej1EISdcnjckcUfHurS059Sbip0kRrSq8F+zgofT0/zE8tsG7ZcMYmO3c4/bpyn+N1HPf2pQpfyUKGLeFtxEaS/Red5z1EcZkiNe5jI7nfRtWVMqcMTW0Xr6U+pFBW6iDdtXgbT74Mty+GMgYQMepledZuV+SN6+lMqS4Uu4g0F+2Dec5D2JkQ2gGvehw6Dyz0VUU9/SmWo0EWq25pvPPt67lwP8bfCRU/BKfWcTiVBQIUuUl32bYeZo2HFpxDdFm6dAXHdnU4lQUSFLlJV1sJPU2HWGDi417MiYs/7IbSW08kkyKjQRaoiby2kjIB1qdA8ES6fCA3PdDqVBCkVukhlFBfC4r971mAJCYdBEyD+NnBpEzBxjgpdpKI2ZkDyMMhdCe0vh4EvQZ0mTqcSUaGLlNvBPTD3GUh/G05rAtclQfvLnE4lcpgKXaQ8fp3p2UFo9yY4507o9wTUrgNoIS3xHSp0kbLsyYWZozx7ezZoD3fMhubnHv62FtISX6JCFymN2w0/fghfPw6FB6DvY3DBcAgNP2qYFtISX6JCFznWtt88UxGzF0GLHp6piDFtSh2qhbTEl6jQRQ4pKoBFr0HqS571ya/4O3S7pcz1V7SQlvgSFboIwPp0z1TEbb9Axyth4Itk5IWRNn/tSYtaC2mJr1ChS3A7sAu+eQqWvgt1m8ONn8AZA3SzU/ySCl2C1+pkmPEQ7M2FxLvhwkeh1qmAbnaKf1KhS/DZvdlT5L+kQKPOcH0SnB5/1BDd7BR/pEKX4OF2Q8YUzyWW4gLPOuXn3wMhYccN1c1O8UcqdAkOW1dD8nDYkM6Geuexs994OnfuWuaP6Gan+BsVugS2wgOw8BX49lWKwk7lUffdfJrbnfBPckiq00KFLQFFa31K4MpaBP/oAanjodNVvH/2p3xa2AO3NYdvdIoEEp2hS+D5Ix++fgJ++ADqtYCbP4c2/eianU/4t9t1o1MClgpdAkJGdj5pa7cz0JVGqyXjYH8eXDAM+oyG8EhANzol8KnQxe9lZOfz4DspPMa7tAr5kX3RnYi8+TNo0uW4sbrRKYFMhS7+zV3M/tRJJLsm4cLybNFNRHUcxt1NtK+nBB8VuvivLSsheRg9N2WQShceL7iN3NDGJLVu5HQyEUectNCNMVOAy4Ct1tpOJa/VBz4G4oAs4Fprbb73YoocofAPz+bMi/8OtevBVe8SeVpfrl23Q9fGJaiV5wz9PWAS8MERr40G5lhrXzDGjC75elT1xxM5RuZ8SB4B+eug601w8TMQUZ94ID6uvtPpRBx10kK31qYaY+KOeXkw0Kfk8/eB+ajQxZv274DZj8GyJKjfCv4yHVr1djqViE+p7DX0RtbaHABrbY4xpuGJBhpjhgJDAWJjYyt5OAla1sKKz2DmaDiwE3o+AL0e8mxAISJH8fpNUWvtZGAyQEJCgvX28SSA5GfDV/fDmm88qyFe/iU07uR0KhGfVdlCzzXGNCk5O28CbK3OUBLkiosg/S2Y9xwYFwwcD+fcCa4Qp5OJ+LTKFvp0YAjwQsnHL6stkQS3nJ9g+jDIWQZnDIRBL0PdZk6nEvEL5Zm2OBXPDdAYY8xGYCyeIv/EGHMHsB64xpshJQgU7IP5z8N3b0JkDFzzPnQYXOYGzSJytPLMcrnhBN/qV81ZJFitmQMpI2FnNpw9BPo/BadEedZn0borIuWmJ0XFOfu2w6wxsPxjiG4Lt86AuO4A2qRZpBJU6FLzrIWfpnrK/OBe6D3KMx0xtNbhIdqkWaTiVOhSs/LWei6vrFsAzc+Dy1+HhscvpKVNmkUqToUuNaO40LP2yoIXISQcBr0C8beDq/RNs7R2uUjFqdDF+zZmQPIwyF0J7S9needHWZgbRuKGXWUWtdYuF6kYFbp4z8E9MPdZSP8HnNYYrksiI6K7bnaKeIkKXbzjt1mQcj/s3gTn3AH9noDadUmbt0Y3O0W8RIUu1WtPLswcBau+gAbt4fZZEHve4W/rZqeI96jQpVpkZO1g1+J36ZX1OqHFB+DCx6D7cAgNP2qcbnaKeI8KXaps5fKlFE+7l75mNd/b9kRcNYlOZyWccLxudop4hwpdylTm4/dFBbDoNdrPH89ewhhV+FemuXszMq8eWuRWpOap0OWEynz8fn26Zyritl/Y1fIyrlhzGTnuOrouLuIgFbqcUKmP3zdywZxxsORdqHM63PgJ9c8YwEQtpCXiOBW6nNCxM1IGhCyFN56EPVvgvP8HfR+DWqcCui4u4gtU6HJCh2akrFi9msGbXyNq7ixo1AmuS4Jm8U7HE5FjqNDlxNxu4rdOI/7Hp6C4AC56Es6/F0LCnE4mIqVQoUvptv7iuem5IR1a9obLXoXo1k6nEpEyqNDlaIUH4NsJsHCC5/r4n96CLjdoKzgRP6BCD0InnFuetQiSh0Pe79D5WhjwHJzawLmgIlIhKvQgU+rc8oYGvn4Cfngf6sXCzdOgzUVORxWRClKhB5mj55YXsy39I1j/KuzbBhfcB30egfBIp2OKSCWo0IPMobnlMUXbGBf+Hn1/zoAmXeDGT6BpV6fjiUgVqNCDTHzzOsy+4FcaL32REGOh7zNw3t8gRL8VRPyd/hQHk9xVMH0YsZuWQut+cNkEiIpzOpWIVBMVejAo/ANSX4JFE6F2PbjyHeh8taYiigQYFXqgW5fqmYq4IxO63gQXPwMR9Z1OJSJeoEIPVPt3wOzHYdm/Iaol/OVLaNXH6VQi4kUq9EBjLaycBv8bBQd2Qo/7offDEHaK08lExMtU6AFkxcrl1Jk7mhY7FkHTs+GKL6Gx9g4SCRYupwNINSguYsOMl2j96UXE5C3lWfcQMvp/qjIXCTI6Q/d3OT/B9GE0z1nGXHc3Hiu8jVwTQ72sncS3jHE6nYjUIBW6vyrYD/Ofg+/ehIhoMvtM4u450RQaq309RYKUCt0frZkDKSNhZzac/RfoP45Wp0SR1FL7eooEMxW6P9m3HWaNgeUfQ3QbuPUriOtx+Nva11MkuKnQ/YG18NNHnjI/uAd6PQw9H4Cw2k4nExEfokL3dTsyPZdXMudDs3PhitehYXunU4mID1Kh+6riQvhuEsx/AVxhcOnLkHAHuDTTVERKp0L3RZsyYPpwyF0B7QbBpS9B3dOdTiUiPq5KhW6MyQL2AMVAkbU2oTpCBa2De2Hes5D+D4hsCNf9m4yIHqT9kEdiq3zd8BSRMlXHGfqF1trt1fDrBLffZsNX98OuDZ5LKxeNJSPXffz+nyp1ETkBXXJx2t6tnoW0Vn0OMe3g9lkQmwhAWuaaI/b/dJOWmadCF5ETqmqhW2C2McYCb1trJ1dDpqCQkbWDXYun0CtrIqHFB6DPGOgxAkJrHR5zaP/PwiK3nv4UkZOqaqF3t9ZuNsY0BL42xvxirU09coAxZigwFCA2NraKhwsMK5dnUDTtXvqan1liz+SUKyfRqcs5x42LbxFF0p2JevpTRMqlSoVurd1c8nGrMeYL4Fwg9Zgxk4HJAAkJCbYqx/N7RQWweCJnzhvPfkIZXXgnn7n7MHJHFCdaF1FPf4pIeVW60I0xkYDLWrun5POLgXHVlizQbFgCycNg68/sjhvE4LWXsdldV5dSRKTaVOUMvRHwhfFsNBwK/MdaO7NaUgWSA7thzjhY8g7UaQo3fET9dgN5LVsLaYlI9ap0oVtrM4Eu1Zgl8PzyFXz1IOzJgfPugr6PQa3TAF1KEZHqp2mL1Sij5Ky7Z+Mizlr+LKyeDg07wnUfQjM9cyUi3qVCryYZ2fnc/M5irnJ/Q8vQqbhDi3H1ewIuGAYhYU7HE5EgoEKvJr+uWMoH5inOCfuVxe6OZJ79DDf37Ot0LBEJIir0csgo6wZm0UFYOIHrf3iF3aYWDxfexXRXH5I6dXMkq4gELxX6SWRk5594PZXsxZA8HLb/hqvztWR3fJgWOYYkzVwREQeo0E8iLTPv+PVUGhr4ZixkvAf1YuGmadD2IroAXc50OrGIBCsV+kkcvZ6K4RLX9/DGU7BvK5x/L1w4BsIjnY4pIqJCP5lD66ms/HkVgze/Sr1530Djs+DGj6FpV6fjiYgcpkI/GXcx8Vs+Jf7Hp8BdDBc/A+f9DUL0r05EfItaqSy5qzw3PTcugdb94LIJEBXndCoRkVKp0EtTeABSx8OiiVC7Llz5T+h8DXjWrRER8Ukq9GOtS4XkEbBjLXS5EQY8CxH1nU4lInJSQVvoxz0stH8HfP04/Phvz2WVW/4LrS90OqaISLkFZaEf/bCQYUbfbbRa+rSn1LuPgN6jIDzC6ZgiIhUSlIV+6GGhpmzjGabQasFP0PRsuOULaNzZ6XgiIpUSlIWeGFeXv4b9j+HmEyyw4dzHaX7JSHCFOB1NRKTSgq/Qc5YTP/s+4l3LyKrfnT39XqRzR52Vi4j/C55CL9gPC16AxZM8s1aunkJcxys1FVFEAkZwFPrauZAyEvKzoNst0H+cpiKKSMAJ7ELflwezxsDyjyC6DQxJgZY9nU4lIuIVAVfoGdn5pK3dzqU2lZZLn4GDu6HXQ9DzQQir7XQ8ERGvCahCz8jOZ9Q7XzLWvENL1wr2NujGqbe+CY06OB1NRMTrAqfQi4s4uOBVkl1vUUQIYwtvpWH7e7in0RlOJxMRqRGBUeibfoDkYVywZQXfkMDYgiHkhTYgqXUDp5OJiNQY/y70g3th3nOQ/hZENoRrPyQqsic3nmhDZxGRAOa/hf7715ByP+xaDwm3w0VPQu26xIOKXESCkv8V+t6tMHM0rJwGMe3gtpnQ4nynU4mIOM5/Ct1az9K2sx+Dwv3QZwz0GAGhtZxOJiLiE/yj0PPWeraCy1oIsRfA5a9Bg3ZOpxIR8Sn+UejfToCc5XD5ROj2F3C5nE4kIuJz/KPQ+z8NfR+H0xo7nURExGf5xaluxjbDG0v3kpGd73QUERGf5fNn6EdvF+ci6c5ETUsUESmFz5+hH9ouzm2hsMhNWmae05FERHySzxd6YqtowkNdhBgIC3WR2Cra6UgiIj7J5y+5xLeIIunORNL0OL+ISJl8vtDBU+oqchGRsvn8JRcRESkfFbqISICoUqEbYy4xxvxqjFljjBldXaFERKTiKl3oxpgQ4A1gINABuMEYo73eREQcUpUz9HOBNdbaTGttAfARMLh6YomISEVVpdBPBzYc8fXGktdERMQBVZm2aEp5zR43yJihwNCSL/caY36t5PFigO2V/Fl/pfccHPSeg0NV3nOL8gyqSqFvBJof8XUzYPOxg6y1k4HJVTgOAMaYpdbahKr+Ov5E7zk46D0Hh5p4z1W55LIEaGuMaWmMCQeuB6ZXTywREamoSp+hW2uLjDH3ArOAEGCKtXZVtSUTEZEKqdKj/9baGcCMaspyMlW+bOOH9J6Dg95zcPD6ezbWHncfU0RE/JAe/RcRCRB+UejBtsSAMaa5MWaeMWa1MWaVMWa405lqgjEmxBjzozEmxeksNcEYU88Y85kx5peS/9bnO53J24wxI0t+T680xkw1xtR2OlN1M8ZMMcZsNcasPOK1+saYr40xv5d89MrysT5f6EG6xEAR8IC1tj2QCNwTBO8ZYDiw2ukQNWgiMNNaeybQhQB/78aY04FhQIK1thOeyRTXO5vKK94DLjnmtdHAHGttW2BOydfVzucLnSBcYsBam2Ot/aHk8z14/qAH9FO4xphmwCDgHaez1ARjTB2gF/AugLW2wFq709lUNSIUOMUYEwpEUMqzK/7OWpsK7Djm5cHA+yWfvw/8yRvH9odCD+olBowxcUA3IN3ZJF73GvAw4HY6SA1pBWwD/lVymekdY0yk06G8yVq7CXgZWA/kALustbOdTVVjGllrc8BzwgY09MZB/KHQy7XEQCAyxpwKTANGWGt3O53HW4wxlwFbrbUZTmepQaHA2cBb1tpuwD689NdwX1Fy3Xgw0BJoCkQaY252NlVg8YdCL9cSA4HGGBOGp8yTrLWfO53Hy7oDVxhjsvBcUutrjPm3s5G8biOw0Vp76G9en+Ep+EB2EbDOWrvNWlsIfA5c4HCmmpJrjGkCUPJxqzcO4g+FHnRLDBhjDJ5rq6uttROczuNt1tpHrLXNrLVxeP77zrXWBvSZm7V2C7DBGNOu5KV+wM8ORqoJ64FEY0xEye/xfgT4jeAjTAeGlHw+BPjSGwfx+U2ig3SJge7ALcAKY8yyktfGlDyZK4HjPiCp5EQlE7jN4TxeZa1NN8Z8BvyAZybXjwTgE6PGmKlAHyDGGLMRGAu8AHxijLkDz//YrvHKsfWkqIhIYPCHSy4iIlIOKnQRkQChQhcRCRAqdBGRAKFCFxEJECp0EZEAoUIXEQkQKnQRkQDxf9xPQDE1cwhdAAAAAElFTkSuQmCC"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="各模型总结"&gt;各模型总结&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%90%84%E6%A8%A1%E5%9E%8B%E6%80%BB%E7%BB%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th style="text-align:left"&gt;含义&lt;/th&gt;
+&lt;th style="text-align:left"&gt;函数&lt;/th&gt;
+&lt;th style="text-align:left"&gt;cost function&lt;/th&gt;
+&lt;th style="text-align:left"&gt;参数&lt;/th&gt;
+&lt;th&gt;过拟合时调参&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;常规线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;LinearRegression&lt;/td&gt;
+&lt;td style="text-align:left"&gt;MSE&lt;/td&gt;
+&lt;td style="text-align:left"&gt;无&lt;/td&gt;
+&lt;td&gt;无&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;参数L2约束(平方和)的线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;Ridge&lt;/td&gt;
+&lt;td style="text-align:left"&gt;MSE+alpha* Sum(w^2)&lt;/td&gt;
+&lt;td style="text-align:left"&gt;alpha&lt;/td&gt;
+&lt;td&gt;增大alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;参数L1约束(稀疏)的线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;Lasso&lt;/td&gt;
+&lt;td style="text-align:left"&gt;MSE+ alpha* Sum(abs(w))&lt;/td&gt;
+&lt;td style="text-align:left"&gt;alpha=2.0, max_iter = 10000&lt;/td&gt;
+&lt;td&gt;增大alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;多项式拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;PolynomialFeatures&lt;/td&gt;
+&lt;td style="text-align:left"&gt;先poly = PolynomialFeatures(degree=2), 然后X_poly = poly.fit_transform(X), 再送入各种线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;同Ridge或Lasso&lt;/td&gt;
+&lt;td&gt;同Ridge或Lasso&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;其实就是Sigmoid&lt;/td&gt;
+&lt;td style="text-align:left"&gt;LogisticRegression&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;C, 负责L2约束&lt;/td&gt;
+&lt;td&gt;减小C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;线性SVM&lt;/td&gt;
+&lt;td style="text-align:left"&gt;LinearSVC&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;C&lt;/td&gt;
+&lt;td&gt;减小C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;Kernelized SVM&lt;/td&gt;
+&lt;td style="text-align:left"&gt;SVC(kernel = "rbf")&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;C, 负责曲面的平滑, gamma, 负责局部点的重要性&lt;/td&gt;
+&lt;td&gt;减小C, 减小gamma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;决策树&lt;/td&gt;
+&lt;td style="text-align:left"&gt;DecisionTreeClassifier&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;max_depth, min_samples_leaf&lt;/td&gt;
+&lt;td&gt;减小max_depth, 增大min_samples_leaf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><guid>https://goldengrape.github.io/posts/python/scikit-learn-note/</guid><pubDate>Sun, 25 Mar 2018 15:30:00 GMT</pubDate></item><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
 &lt;p&gt;不过弄出有意思的声音还是我有兴趣做的事情. 于是就有了在iPad上做一把Ukulele的项目:
 &lt;img alt="ipadminiukulele" src="https://i.loli.net/2018/03/20/5ab08921c906d.gif"&gt;&lt;/p&gt;
 &lt;p&gt;这把琴是有琴弦的, 琴弦能够给人有触觉反馈, 在乐器演奏是还是很重要的. 琴弦使用的是鱼线, 线绷紧的力度可调. 这样不至于勒手. 仅仅按住琴弦还是不响的, 要在拨弦的时候iPad才会发出声音.&lt;/p&gt;
@@ -2405,201 +2725,4 @@ That's all
 &lt;li&gt;硬件限制：人类科技还很低下；&lt;/li&gt;
 &lt;li&gt;软件限制：别撞上NP hard；&lt;/li&gt;
 &lt;li&gt;商业限制：医生想的通常不赚钱没人愿意做&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</guid><pubDate>Wed, 28 Feb 2018 07:15:00 GMT</pubDate></item><item><title>VR／AR临床实验设计中的注意事项</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;alpha版&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;声明&lt;/h2&gt;
-&lt;p&gt;本文遵守创作共用-署名-非商用协议。&lt;/p&gt;
-&lt;p&gt;本文不能作为临床研究的依据。&lt;/p&gt;
-&lt;p&gt;本文不明确推荐具体商品。&lt;/p&gt;
-&lt;p&gt;临床实验设计是一门独立的课程，有丰富的内容，本文仅能提供简单的介绍。&lt;/p&gt;
-&lt;p&gt;觉得文章太长可以先看&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/"&gt;《……太长不看版》&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;起因&lt;/h2&gt;
-&lt;p&gt;看了未来影响高精尖创新中心的&lt;a href="https://mp.weixin.qq.com/s?__biz=MzIzODU5Mzk0OQ==&amp;amp;mid=2247484520&amp;amp;idx=1&amp;amp;sn=61d59675efbe7d3565f0761fbe8a6e2d"&gt;《长时间使用VR头戴显示设备对低年龄用户视力的影响测试报告》&lt;/a&gt; 。这个实验的目的是非常好的。游戏、教育都是VR/AR的重要应用领域，当前确实缺乏儿童使用VR/AR的临床研究，但该实验中仍然有很多需要改善的部分。&lt;/p&gt;
-&lt;p&gt;VR/AR技术，特别是VR/AR显示技术与眼科学密切相关。除了对儿童视力影响的探索，2017年的ARVO会议上，孙兴怀教授团队也报告了利用video see-through技术进行弱视训练的研究（[^ARVO热点丨弱视治疗新进展：增强现实双眼分视训练]）。未来VR/AR有更多在眼科学上的应用。也会有更多的VR/AR企业需要进行医学相关的研究与实验。&lt;/p&gt;
-&lt;p&gt;下面，我简单介绍下一个比较正规的VR/AR临床研究应该怎么做。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;伦理&lt;/h2&gt;
-&lt;p&gt;临床研究中，很重要的是要遵守临床研究的伦理。一个正规的临床实验是应当按照《赫尔辛基宣言》的要求进行实验设计并交由伦理委员会审议批准的。对于VR/AR企业一方面是合法合规做事，一方面也有一定的自我保护。&lt;/p&gt;
-&lt;p&gt;相关的内容请查阅《赫尔辛基宣言》，其中最重要的原则，一是要首先考虑受试者的健康，二是知情同意原则。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;受试者的健康&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果VR/AR实验的实验对象是儿童，需要更严格的保护。已知的，可能对儿童的健康造成不利影响的事情都不应该做。例如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;实验场地：应该有足够的防护，避免发生儿童磕碰的事故。&lt;/li&gt;
-&lt;li&gt;实验软件设备：VR/AR游戏应选择与儿童年龄相称的游戏，避免血腥暴力恐怖等游戏。&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;实验硬件：应当适合儿童使用。其中应当注意VR/AR头戴显示器的瞳距是否可以供儿童使用。硬件瞳距的范围与被试的瞳距不相符时，会产生不良的健康影响，应当避免。例如HTC Vive的最小瞳距是60mm，那么瞳距&amp;lt;60mm的儿童就应当排除在实验之外。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;知情同意&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;实验开始前，应当向实验对象讲解实验以及实验过程中可能出现的风险，取得实验对象的同意后，才可以进行实验。如果实验对象是儿童，除了向儿童本人讲解实验过程和注意事项，还需要向儿童的监护人，也就是家长和老师讲明，并且应当签署正式的知情同意书。&lt;/p&gt;
-&lt;p&gt;所以在实验设计好以后，知情同意书也需要同时设计好，并且一并交给伦理委员会审议批准。&lt;/p&gt;
-&lt;h2&gt;研究团队&lt;/h2&gt;
-&lt;p&gt;研究团队中是可以有企业参与的，并且也可以由企业提供资金进行。但是需要在实验发表时公开披露。资金有企业来源的，往往会被解读为广告。&lt;/p&gt;
-&lt;p&gt;由于实验数据的测量中会使用大量眼科专业设备，并需要专业测量技能，所以建议研究团队中应当有视光学背景的专业人士，例如眼科医生、验光师。&lt;/p&gt;
-&lt;p&gt;实验数据的处理与解读可能也需要统计学或流行病学专业人士的协助。&lt;/p&gt;
-&lt;h2&gt;实验设计&lt;/h2&gt;
-&lt;p&gt;临床研究面向的对象都是人。与程序员面对的抽象对象、硬件工程师面对的硬件模块不同。人是非常复杂的，对人的测量往往具有极大的误差。与机械加工中的公差分析是不同的。&lt;/p&gt;
-&lt;p&gt;对测量人体生理、心理指标的误差，工程师很可能是估计不足的。程序员大概无法想象每个unitTest的返回值都会先经过一个不一定是正态分布的随机数处理一遍的系统，这才是人类。&lt;/p&gt;
-&lt;p&gt;临床实验设计就是要尽量排除人为的影响。需要设定对照组，可能需要设盲，实验对象的数量也有一定的要求。不同的实验设计，能够提供证据的强度也不一样。一般来说，一次实验最可信的是大规模多中心的随机双盲实验（RCT）。实验设计是一门课程，有很多书籍和公开课可供参考，也有专业的CRO公司提供相关的服务。&lt;/p&gt;
-&lt;p&gt;简单的说，实验中一切的人类都是坏人，你的实验对象可能会有意无意说谎，可能突然就退出实验；你的助手可能有意无意记录错误的数据，在模棱两可的时候故意偏向错误；其中最坏的就是设计者你本人，有些事情如果被你预先知道，你就会压迫助手，欺负实验对象，使他们屈从于你，产生错误的结果。实验设计的目的就是向大家公布，我们都这么坏了，但由于严谨的实验设计，我们实在无法钻空子作假。&lt;/p&gt;
-&lt;h2&gt;实验目的&lt;/h2&gt;
-&lt;p&gt;做过科学研究的人知道，实验的目的不可求大，不要妄图在一个实验中解决庞大的问题。比如“对视力的影响”其实是个很庞大的范畴。实验目的需要尽量清晰明确地定义。当然在收集数据的时候可以尽量全一些，同一个临床实验可以产生很多不同目的的文章。&lt;/p&gt;
-&lt;h2&gt;实验对象&lt;/h2&gt;
-&lt;p&gt;实验对象是需要经过选择的，但是应当有明确合理的纳入标准和排除标准。&lt;/p&gt;
-&lt;p&gt;纳入标准，应当是能够代表总体的样本标准。比如随机抽取某个学校一个年龄段的学生。但纳入标准如果不合适则可能造成“选择偏倚“。&lt;/p&gt;
-&lt;p&gt;排除标准，至少应当把可能会因为VR/AR造成损伤的被试排除在外。&lt;/p&gt;
-&lt;p&gt;比如有感染性眼病的患者可能因为共用VR/AR头戴显示器而传播疾病，斜视的患者在使用VR/AR后更容易产生疲劳，前庭功能障碍的患者可能在使用VR/AR时更容易眩晕，癫痫的患者也许会在VR/AR场景中被诱发等等。不过有些实验可能就是为了使用VR/AR来治疗某种疾病，那么就需要依照具体情况来确定排除标准了。&lt;/p&gt;
-&lt;p&gt;即使是正常人，也需要有一定的限制，比如儿童的瞳距不同，对于硬件瞳距不能适应的儿童，瞳距不合适更容易加重视疲劳，影响实验的准确性。应当排除在实验之外。&lt;/p&gt;
-&lt;p&gt;实验对象的数量，要根据所测量的指标来定。不同的测量指标分布是不同的，离散程度、误差等也不同，为了最终可以得到有意义的比较结果，需要高于一定的数量。但实验对象太多了，物资成本和时间成本又会飙升。具体的样本量估计的方法，请查阅相关的统计学教程。&lt;/p&gt;
-&lt;p&gt;在选择儿童作为实验对象的时候，还应当考虑到儿童心理、生理发育的影响。比如年龄过小的儿童，很可能无法理解实验员的解说，或者要让儿童长时间保持注意力集中，难度极大。另外，儿童或青少年也许会以破坏规则作为乐趣。&lt;/p&gt;
-&lt;p&gt;对于眼睛，不同年龄的儿童也是不同的。人眼睛8岁的时候才达到正常眼轴的长度。6岁的孩子可能还有+1.50D左右的远视，10岁的孩子也可能有+1.00D的远视。&lt;/p&gt;
-&lt;h2&gt;实验测量的指标&lt;/h2&gt;
-&lt;p&gt;视觉是一组互相关联的知觉，有物理成像的过程，有心理知觉的过程，有认知处理的过程，还有人体反馈的过程。测量的方式也有客观和主观测量的不同。需要根据实验目的和实验的实际情况来选择。&lt;/p&gt;
-&lt;h3&gt;视力&lt;/h3&gt;
-&lt;p&gt;检查的是人眼的角度分辨能力。看起来测量视力很简单，只要对着视力表指指点点，让被试指出方向即可。但其中仍然有很多需要注意的地方。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;视力表的选择。医院里检查常用的是Snellen视力表，或标准对数视力表。记录方式是1.5、1.0之类的小数记录。这种视力表使用方便，在临床中很常用，但并不适合科学研究。人类的感觉信号通常是对数编码的，还受到周围环境的影响，并不是简单的线性系统。使用Snellen视力表测量后很难进行统计分析，测量过程也容易受到干扰。所以真正发表科研论文时，应当使用LogMAR进行记录和分析，使用的是&lt;a href="https://en.wikipedia.org/wiki/LogMAR_chart"&gt;LogMAR视力表&lt;/a&gt;。&lt;/li&gt;
-&lt;li&gt;检查环境。视力的测量对周围环境光、灯箱的背景光都是有严格要求的。需要按照视力表中所标注的要求进行设定。&lt;/li&gt;
-&lt;li&gt;检查过程。恐怕很多实验设计者已经忘记了自己小时候体检测视力的过程，如果排成一队依次检查。实际过程是，很多孩子在看视力表之前已经将下面几行熟记于心了。或者后面的孩子会在被检查者的后背上画出结果来。即使是使用了新的LogMAR视力表，如果检查后的孩子回到未检查的队伍中，信息也会很快传开。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;对比敏感度（CSF）&lt;/h3&gt;
-&lt;p&gt;视力测量只测量了黑白分明时候的角分辨能力。但日常生活中这种情况并不是常规。有些人视力检查结果很好，但却在黄昏不敢走楼梯，因为在暗环境下的分辨力下降了。这就要用对比敏感度来测了。不严格地用工科概念的类比，相当于在测量系统的调制传递函数MTF。（CSF近似于成像的MTF乘以神经系统处理的MTF）&lt;/p&gt;
-&lt;p&gt;对比敏感度的测量比测量视力要时间长一些。可以用灯箱，也有更为紧凑的仪器可供使用。&lt;/p&gt;
-&lt;h3&gt;色觉&lt;/h3&gt;
-&lt;p&gt;色觉的检查一般是使用印刷的色盲本。这种检查只能对色觉作出粗略的定性分析。但对于VR/AR实验可能不够。如果使用计算机屏幕进行色觉的模拟，需要注意不同的屏幕对颜色的显示能力是不同的，要看屏幕对与CIE颜色空间的覆盖程度。&lt;/p&gt;
-&lt;h3&gt;屈光状态&lt;/h3&gt;
-&lt;p&gt;电脑验光仪可以迅速检查被试的屈光状态，是近视、远视以及是否有散光，散光的轴位。但是电脑验光仪的重复性稍差，容易受到调节的影响，其中球镜部分（也就是近视远视）的可信度低，散光稍好。更好的测量方式是使用综合验光仪进行显然验光，但显然验光的过程较长，如果需要在短时间内测量大量的被试，需要在准确性和时间之间作出选择。&lt;/p&gt;
-&lt;p&gt;标准的屈光状态记录方式是：&lt;/p&gt;
-&lt;p&gt;OD: 裸眼视力，近视／远视度数 DS≎散光度数DC X 散光角度，矫正视力&lt;/p&gt;
-&lt;p&gt;OS: 裸眼视力，近视／远视度数 DS≎散光度数DC X 散光角度，矫正视力&lt;/p&gt;
-&lt;p&gt;右眼、左眼、双眼的缩写分别是OD、OS、OU。&lt;/p&gt;
-&lt;p&gt;例如，右眼裸眼视力0.6，有100度近视，75度近视散光，轴位在70度，戴镜矫正后视力可以达到1.0，&lt;/p&gt;
-&lt;p&gt;可以记录为：VOD: 0.6 -1.00DS≎ -0.75DC X 70° → 1.0&lt;/p&gt;
-&lt;h3&gt;眼压&lt;/h3&gt;
-&lt;p&gt;眼球是一个有弹性的球体，里面填充的是液体。内部是有压力的。眼压是由房水动态调节的，一部分人眼压调节能力失调，产生了青光眼，其中闭角型青光眼应当避免暗环境，以免瞳孔扩张后引起眼压突然升高。&lt;/p&gt;
-&lt;p&gt;测量眼压可以用气动眼压或接触眼压计来测量。&lt;/p&gt;
-&lt;h3&gt;泪液&lt;/h3&gt;
-&lt;p&gt;眼泪的多寡常常会影响到视觉疲劳状态和视觉质量。比如视疲劳中常见的描述往往会有眼睛"干涩"，就是与泪液分泌有关。&lt;/p&gt;
-&lt;p&gt;泪液常用的测量是Schimmer实验和BUT实验。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Schimmer实验是在下眼睑边缘挂一个滤纸，给定时间以后测量泪液浸润的距离。但这个实验对操作要求高，误差大。&lt;/li&gt;
-&lt;li&gt;BUT实验是测量泪膜破裂时间，在眼内点上荧光素，在裂隙灯下观察泪膜上第一个暗区出现的时间。要注意的是荧光素试纸容易污染。也有人使用电脑验光仪进行粗略的估计。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;现在有眼表分析仪可以测量BUT、泪河宽度、睑板腺状态等。&lt;/p&gt;
-&lt;h3&gt;双眼视觉&lt;/h3&gt;
-&lt;p&gt;人的眼睛有一双，有很多功能是双眼协调使用时才表现出来。双眼视觉的功能测量，例如：调节幅度、调节灵敏度、聚散储备、调节集合比等也需要测量，可能需要使用综合验光仪进行。&lt;/p&gt;
-&lt;h3&gt;调节&lt;/h3&gt;
-&lt;p&gt;在进行视疲劳的研究时，应当测量被试的调节。这是一个客观的指标。在给予不同刺激后，调节的变化过程可以提示很多信息。眼内睫状肌的疲劳程度也可以以此反应。当前已经有测量调节的仪器，相当于高速连续进行电脑验光。&lt;/p&gt;
-&lt;p&gt;调节的测量中还应当使用综合验光仪测量被试的调节幅度。&lt;/p&gt;
-&lt;h3&gt;眼球运动&lt;/h3&gt;
-&lt;p&gt;斜视的患者应当排除在实验之外，简单的遮盖去遮盖查实验可以发现一部分斜视患者。但如果没有检查，隐斜的患者可能不容易发现，这部分人能够用肌肉控制住斜视，在注视目标时并不会表现出来，但容易出现视疲劳。&lt;/p&gt;
-&lt;p&gt;人眼在看近处物体双眼向内聚的动作为集合，集合有一定的限度，集合广度、聚散力，聚散储备也可能需要测量。&lt;/p&gt;
-&lt;h3&gt;AC/A&lt;/h3&gt;
-&lt;p&gt;人眼在看近处物体双眼向内聚，这个动作称为集合（Accommodative convergence，AC），同时会动用调节（accommodation，A）改变眼球焦距，使人眼能够清晰对焦。进化使这两个动作是联动的，一旦双眼向内看，会自动启动调节。&lt;a href="https://www.aao.org/bcscsnippetdetail.aspx?id=16eb0f96-fa78-436b-8841-e4a5fc8a622c"&gt;AC/A&lt;/a&gt;可近似视为常数。（会有随年龄的变化，但短时间内可视为不变量）&lt;/p&gt;
-&lt;p&gt;在当前的VR/AR设备中，仅仅使用一个平面上的显示器来显示物体，所以人眼在看时AC是有的，A则不一定变化，调节集合反射被破坏了。这是当前VR/AR设备中未能解决的技术困难，有可能未来通过光场显示、高速变焦显示等方法来解决。&lt;/p&gt;
-&lt;p&gt;AC/A数值是可以测量的，AC/A自身异常的人可能也需要排除在实验对象之外。&lt;/p&gt;
-&lt;h3&gt;立体视&lt;/h3&gt;
-&lt;p&gt;VR/AR由于显示时区分了左右眼，所以能够产生双眼立体视觉。已经比眼科常用的立体视检测手段更高级了。但当前VR/AR头戴式显示器与人眼的视野范围还不一致。人眼的视野范围一般是内侧60度，外侧90度，VR头戴显示器常常会标出一个对角线视角，比如100度，但当前的硬件设备中，双眼内侧常见是使用挡板隔开的，内侧视野不足60度，那么可能对于立体视觉的感知区域就与实景中是不同的。&lt;/p&gt;
-&lt;p&gt;VR之外还有AR／MR，在与实景交互时，需要知道人感觉到物体空间位置和真实位置之间是否一致，差异有多少。这部分并没有现成的眼科测量手段可用。但也有很多文献做了探索，比如移动实物去对齐虚拟场景中的物体。&lt;/p&gt;
-&lt;p&gt;注意，当VR/AR技术进步到复杂的光场技术甚至全息技术时，测量的可能就是“单眼的立体视”了，也就是所谓的调节线索，物体远近不同时，人眼对焦到一处时另一处可能是模糊的。如何判定系统真的表现出了这种调节线索，如何客观测量，如何定性、定量分析，需要进一步的研究。&lt;/p&gt;
-&lt;h3&gt;问卷调查&lt;/h3&gt;
-&lt;p&gt;视觉是个知觉过程，其中必然还要涉及到很多人脑分析的部分，会得出许多主观、客观混合的指标，比如“舒服“、"疲劳"、"不适"等等，其中一部分客观指标可以测量，但也有可能需要通过问卷进行调查。&lt;/p&gt;
-&lt;p&gt;问卷调查之中有很多学问，问卷应尽量使用成熟的量表。&lt;/p&gt;
-&lt;p&gt;在VR/AR实验中，有一些需要注意的地方：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果被试是儿童或者青少年，要注意儿童的认知理解能力，是否可以使用特定的问卷。&lt;/li&gt;
-&lt;li&gt;被试的配合程度。儿童和青少年是否愿意如实回答问卷中的问题。&lt;/li&gt;
-&lt;li&gt;问卷是使用笔试还是口头测试？笔试的好处是速度快，可以同时多线程处理很多被试。但如果是被试自己阅读答题，这一过程本身也是一次视近操作的过程。测量过程也会影响视疲劳的程度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;数据的记录、处理、统计分析与展示&lt;/h2&gt;
-&lt;p&gt;这些都是统计学里讲到的内容，请查阅相关的统计学教程或者公开课。或者请专门的统计学老师进行指导。&lt;/p&gt;
-&lt;p&gt;基本的原则是：正心诚意。坦然接受客观的实验结果。特别是对于企业，实验结果对于未来多年的研发有指导意义，操纵数据无异于拿着坏掉的罗盘指路。&lt;/p&gt;
-&lt;p&gt;由于一切都是采样，一切都有误差，将两组数据的平均值直接比较，说谁比谁大，谁比谁好，是完全没有意义的。&lt;/p&gt;
-&lt;p&gt;由于一切都是采样，一切都有误差，画柱状图不标出error bar，直接比较谁比谁高，是完全没有意义的。&lt;/p&gt;
-&lt;p&gt;使用3D统计图容易使读者产生误判，不应出现在正规的临床研究中。&lt;/p&gt;
-&lt;p&gt;漂亮的信息图示，比如用人物剪影的大小代表数量的多少，容易使读者产生误判，不应出现在正规的临床研究中。&lt;/p&gt;
-&lt;p&gt;虽然很多新闻报道中在批判科学家们对P&amp;lt;0.05的迷思，但假设检验仍然是得出结论的必由之路。没有经过统计学的假设检验，就声明两组数据谁比谁好，是没有意义的。与理工科的文章不同，生物医学文章里如果连个P都没有出现，读者是不会相信文章内容的。&lt;/p&gt;
-&lt;p&gt;即使使用了统计学假设检验，要注意假设检验的方法是有不同的适用条件的，不满足适用条件而使用是错误的，得出的结论也是没有意义的。&lt;/p&gt;
-&lt;p&gt;很多假设检验的方法要求数据来自于正态分布的总体，但不是所有的数据都是正态分布的，比如用小数记录的视力，就不一定是正态分布。不是正态分布的数据，平均值和标准差并不能反映数据的特征。&lt;/p&gt;
-&lt;h2&gt;结果与讨论&lt;/h2&gt;
-&lt;p&gt;实验的结果只能由经过统计学假设检验后的结果给出。&lt;/p&gt;
-&lt;p&gt;比如说实验对象使用VR/AR以后，视力有改变。不是说实验对象使用VR/AR前的平均视力是多少，使用后的平均视力是多少，两者一减，发现平均视力提高了，就是视力变好，平均视力降低了，就是视力变差。&lt;/p&gt;
-&lt;p&gt;如前所述：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;是否有足够多数量的被试？只有几个人是没意义的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;视力表用的是什么视力表，记录方式是不是LogMAR直接导致了是否可以用“平均“数来比较。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;检查视力的手段是否可靠，使用前查完视力以后，孩子们聚在一起编了个视力表歌谣，把视力表背得滚瓜烂熟，不管用不用VR/AR，第二次检查肯定提高了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;视力检查的数据是否是正态分布，是否满足正态分布的检验。如果不满足，可能要经过处理，比如取log之类，使偏态分布转变成正态分布。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果数据是正态分布，被试眼数量有50，比较使用VR/AR之前和之后的视力，通常是应该使用配对t检验。如果此时选择非参数检验，个人认为可能有作弊之嫌。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当看到配对t检验的结果表明差异有显著性以后，才能说明在多大的错误概率内，使用VR/AR会改变视力。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;使用二维的柱状图展示使用VR/AR前后的数据，并且每个柱状图上应当用error bar标记出标准差。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;上述环节中某一个步骤出错或者不够严谨，都不能够得出有效的结论。&lt;/p&gt;
-&lt;h2&gt;眼科与视光学专业的注意事项&lt;/h2&gt;
-&lt;p&gt;以上是针对软件硬件工程师提出的一些注意事项。反过来，对于眼科学、视光学专业的医生、研究生，在设计实验时也有一些注意事项&lt;/p&gt;
-&lt;p&gt;如果没有软件和硬件开发的经验，眼科与视光学专业人士可能也很难理解VR/AR开发中的困难。如果你在跟工程师或者程序员交流时使用了“……就行了“，"只要……了呗"这样的句式，通常你的想法是错的。&lt;/p&gt;
-&lt;h3&gt;硬件的限制：&lt;/h3&gt;
-&lt;p&gt;现阶段（2017年中），VR/AR所能呈现的视觉效果距离真实或者说人眼能够区别的极限，还有相当远的距离。工程师所制造的产品是在性能与成本中尽量取得平衡。超越当前技术水平的硬件，有些理论上有、新闻上有，但由于未进入主流市场生产量小，价格极高。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;透镜像差：这一点无需赘述。出于重量考虑，VR设备还有可能使用菲涅耳透镜，其像差估计和计算可能会更复杂。&lt;/li&gt;
-&lt;li&gt;分辨率：常见的屏幕分辨率大约是400-600ppi，也就是每英寸25.4mm上有400-600个点。如果通过透镜成虚像在2M之外，角分辨率远远不能满足1.0视力的要求。(索尼另算)&lt;/li&gt;
-&lt;li&gt;采样定理：屏幕像素是一格一格的，屏幕能够满足1.0视力的要求，不一定能够显示出0.9和1.2的视标。至少要满足最高频率的2倍。&lt;/li&gt;
-&lt;li&gt;刷新率：屏幕的显示图像的速度，一般是每秒钟60幅，也就是60FPS，近期可以达到90FPS&lt;/li&gt;
-&lt;li&gt;颜色：液晶显示器使用RGB三种颜色来组合产生色觉，显示器所能够产生的颜色要比人眼在真实生活中感知到的颜色少很多。&lt;/li&gt;
-&lt;li&gt;亮度：液晶显示器在屏幕背面使用LED经过匀光板产生照明，照明的亮度是有限的。匀光板不一定能够产生均一的照明，也就是说屏幕一侧与屏幕另一侧的亮度可能是不一致的，差距需要实际测量。&lt;/li&gt;
-&lt;li&gt;Gamma校正：屏幕的亮度不一定是与像素的数值是成正比的，比如屏幕像素上黑色=0，白色=255，那么灰色128和密集排列黑白从远处看可能是不相同的。&lt;/li&gt;
-&lt;li&gt;衍射：透明的液晶屏相当于密集的光栅，会产生明显的衍射效应。&lt;/li&gt;
-&lt;li&gt;可视角度：从不同的角度去观察液晶屏幕，颜色和亮度可能不一样。&lt;/li&gt;
-&lt;li&gt;公差：制造有误差。降低误差成本会迅速提高。&lt;/li&gt;
-&lt;li&gt;良品率：一种东西实验室作出了可用的一件，不等于工厂里能够生产出高质量的成千上万件。&lt;/li&gt;
-&lt;li&gt;遮光：市售AR设备没有能够遮挡自然光的能力。在外界实景上只能加图像，不能减图像。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;软件限制：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;软件很贵，购买软件和生产软件都很贵。&lt;/li&gt;
-&lt;li&gt;程序员不一定会修电脑。&lt;/li&gt;
-&lt;li&gt;程序运算需要时间，屏幕上像素越多，需要的时间越多。有可能无法达到需要的要求。&lt;/li&gt;
-&lt;li&gt;计算一个事情花的时间，可能跟处理的数据量成正比，复杂度叫O(N)，也可能需要处理的数据量的平方成正比，O(N^2)，甚至复杂度是非多项式时间，例如$ 2^{O(N)} -&amp;gt; O(N!)$，这种难度与抢银行相当。&lt;/li&gt;
-&lt;li&gt;计算机的内存有限制。比如要计算一个1k屏幕上点与另一个屏幕上点的两两组合，需要$(10^3 \times 10^3)^2 \times 4 = 4 \times 10^{12} =4TB $&lt;/li&gt;
-&lt;li&gt;不同语言写出的程序运算速度不同。&lt;/li&gt;
-&lt;li&gt;深度学习很贵。&lt;/li&gt;
-&lt;li&gt;人月神话：3个人干3个月的事情，9个人可能要干2.5个月。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;商业限制：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;疾病发生率常以万分之几、十万分之几计算，玩游戏的人口则安百分之几计算，中间差很多数量级。玩游戏的人才是推动硬件进步的力量，玩游戏的人多了才有VR/AR治病。&lt;/li&gt;
-&lt;li&gt;全国眼科医生不超过2-3万名。&lt;/li&gt;
-&lt;li&gt;并不是所有人都花钱买软件。&lt;/li&gt;
-&lt;li&gt;产品经理答应的事情，程序员和硬件工程师不一定能做出来。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;参考&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s?timestamp=1494925011&amp;amp;amp;src=3&amp;amp;amp;ver=1&amp;amp;amp;signature=Aqr44BaRoB3kb12tDXee8w3VbWbQbwLIFTcE32CLFShBua9Y2AZKSCll67lIKyP-4Jg11gHUTB8lRnSiNmHIhSrL2j3v66BCOVW6u9P3LJo3KaWt1jPnGf31SPKO1YnOm-zuWfQ2vB*Gsv2lKQeBxZWvVqQTzZxQhRbtvCbqGCI="&gt;ARVO热点丨弱视治疗新进展：增强现实双眼分视训练&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;统计分析： https://zh.coursera.org/specializations/jhu-data-science&lt;a href="https://zh.coursera.org/specializations/jhu-data-science"&gt; 第 6 门课程 Statistical Inference&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;《双眼视觉学》，ISBN 978-7-117-14654-8/R*14655&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</guid><pubDate>Wed, 28 Feb 2018 07:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</guid><pubDate>Wed, 28 Feb 2018 07:15:00 GMT</pubDate></item></channel></rss>
