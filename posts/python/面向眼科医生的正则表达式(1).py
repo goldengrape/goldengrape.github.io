@@ -106,14 +106,14 @@ print(CDR_Ls)
 #     * 实际操作中我发现这条好像很难匹配上, 不限定字母数字好像更好些, 用[A-Z]*?
 # * 序列长度7个字母: 
 #     * 正则表达式: [A-Z]{7}
-# * 序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)
+# * 序列之**前**通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)
 #     * 正则表达式: (IY|VY|IK|IF)
 
 # In[5]:
 
 
 CDR_L1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
-CDR_L2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
+CDR_L2_pattern="([A-Z]*?(IY|VY|IK|IF))"+"([A-Z]{7})"+"([A-Z]*?)" # 以前此处有bug
 CDR_L3_pattern=""
 CDR_L_pattern=CDR_L1_pattern+CDR_L2_pattern+CDR_L3_pattern
 
@@ -137,14 +137,14 @@ print(CDR_Ls)
 
 
 CDR_L1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
-CDR_L2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
+CDR_L2_pattern="([A-Z]*?(IY|VY|IK|IF))"+"([A-Z]{7})"+"([A-Z]*?)" # 以前此处有bug
 CDR_L3_pattern="([A-Z]*?C)"+"([A-Z]{7,11})"+"(FG[A-Z]G)"
 CDR_L_pattern=CDR_L1_pattern+CDR_L2_pattern+CDR_L3_pattern
 
 CDR_Ls=re.findall(CDR_L_pattern,VL)
 CDR_L1=CDR_Ls[0][1]
-CDR_L2=CDR_Ls[0][4]
-CDR_L3=CDR_Ls[0][7]
+CDR_L2=CDR_Ls[0][5]
+CDR_L3=CDR_Ls[0][8]
 print(CDR_Ls)
 print(CDR_L1,CDR_L2,CDR_L3)
 
@@ -236,52 +236,99 @@ print(CDR_H1,CDR_H2,CDR_H3)
 
 # # 识别CDR的函数
 # 
-# 综上, 可以整合成一组函数, 专门用来识别CDR
+# 综上, 可以整合成一组函数, 专门用来识别CDR.
+# 在实际使用中, HC CDR是有多种定义方式的, 所以采用了分类讨论的方式
 
 # In[10]:
 
 
-def get_CDR(pattern, seq): 
-    CDRs=re.findall(pattern,seq)
-    try: 
-        CDR1=CDRs[0][1]
-        CDR2=CDRs[0][4]
-        CDR3=CDRs[0][7]
-    except:
-        CDR1=""
-        CDR2=""
-        CDR3=""
-    return [CDR1,CDR2, CDR3]
-
-def LC_CDR(seq): 
-    CDR1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
-    CDR2_pattern="([A-Z]*?)"+"([A-Z]{7})"+"(IY|VY|IK|IF)"
-    CDR3_pattern="([A-Z]*?C)"+"([A-Z]{7,11})"+"(FG[A-Z]G)"
+def search_CDR(CDR1_pattern,CDR2_pattern,CDR3_pattern,seq,loc1,loc2,loc3):
+    # 根据pattern在seq中搜索CDR
+    # loc1,loc2,loc3标明CDR在各个片段中的位置
     CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
-    return get_CDR(CDR_pattern,seq)
+    CDRs=re.findall(CDR_pattern,seq)
+    try:# 有可能CDR_pattern不能匹配出结果, 因此用try
+        #CDR1_pattern, CDR2_pattern, CDR3_pattern, 每个都会匹配出若干结果, 需要根据loc提取
+        CDR1=CDRs[0][0+loc1]
+        CDR2=CDRs[0][3+loc2]
+        CDR3=CDRs[0][7+loc3]
+    except: 
+        # 当CDR_pattern无法匹配时, 尽量找出错误的区域
+        # 于是分别匹配各自的pattern, 如果发现匹配错误, 则单独用? 表示
+        try:
+            CDR1="?\n"+re.findall(CDR1_pattern,seq)[0][loc1]
+        except:
+            CDR1="?\n"
+        try:
+            CDR2="?\n"+re.findall(CDR2_pattern,seq)[0][loc2]
+        except:
+            CDR2="?\n"
+        try:
+            CDR3="?\n"+re.findall(CDR3_pattern,seq)[0][loc3]
+        except:
+            CDR3="?"    
+    return [CDR1,CDR2,CDR3]
 
-def HC_CDR(seq): 
-    CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
-    CDR2_pattern="([A-Z]*?)"+"([A-Z]{7,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
-    CDR3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
-    CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
-    return get_CDR(CDR_pattern,seq)
-
-
-# 还是用Lucentis测试一下
 
 # In[11]:
 
 
-print(VL)
-print(LC_CDR(VL))
+def LC_to_CDR(seq,defintion="Kabat"):
+    '''
+    根据http://www.bioinf.org.uk/abs/#cdrdef中记载的规则, 寻找LC CDR序列
+    '''
+    # 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置
+    CDR1_pattern="(^[A-Z]{22}C)"+"([A-Z]{10,17})"+"(WYQ|WLQ|WFQ|WYL)"
+    # 如果匹配成功, re.findall返回4!段序列, CDR前, (IY|VY|IK|IF之一), CDR自身, CDR后, CDR自身位于2号位置
+    # CDR1与2之间使用松弛匹配, 没有严格限定字母数
+    CDR2_pattern="([A-Z]*?(IY|VY|IK|IF))"+"([A-Z]{7})"+"([A-Z]*?)" 
+    # 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置
+    # CDR2与3之间使用松弛匹配, 没有严格限定字母数
+    CDR3_pattern="([A-Z]*?C)"+"([A-Z]{7,11})"+"(FG[A-Z]G)"
+    CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
+    return search_CDR(CDR1_pattern,CDR2_pattern,CDR3_pattern,seq,1,2,1)
 
 
 # In[12]:
 
 
+def HC_to_CDR(seq,defintion="Kabat"):
+    '''
+    根据http://www.bioinf.org.uk/abs/#cdrdef中记载的规则, 寻找HC CDR序列
+    '''
+    # 使用Kabat定义
+    # 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置
+    if defintion=="Kabat":
+        CDR1_pattern="(^[A-Z]{21}C[A-Z]{8})"+"([A-Z]{5,7})"+"(WV|WI|WA)"
+        CDR2_pattern="([A-Z]{12})"+"([A-Z]{16,19})"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
+        CDR3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
+    elif defintion=="AbM":
+        CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{10,12})"+"(WV|WI|WA)"
+        CDR2_pattern="([A-Z]{12})"+"([A-Z]{9,12})[A-Z]{7}"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
+        CDR3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
+    elif defintion=="Chothia":
+        CDR1_pattern="(^[A-Z]{21}C[A-Z]{3})"+"([A-Z]{6,8})[A-Z]{4}"+"(WV|WI|WA)"
+        CDR2_pattern="([A-Z]{12})"+"([A-Z]{9,12})[A-Z]{7}"+"([K|R][L|I|V|F|T|A][T|S|I|A])"
+        CDR3_pattern="([A-Z]*?C[A-Z]{2})"+"([A-Z]{3,25})"+"(WG[A-Z]G)"
+    CDR_pattern=CDR1_pattern+CDR2_pattern+CDR3_pattern
+    CDRs=re.findall(CDR_pattern,seq)
+    return search_CDR(CDR1_pattern,CDR2_pattern,CDR3_pattern,seq,1,1,0)
+
+
+# 还是用Lucentis测试一下
+
+# In[14]:
+
+
+print(VL)
+print(LC_to_CDR(VL))
+
+
+# In[15]:
+
+
 print(VH)
-print(HC_CDR(VH))
+print(HC_to_CDR(VH))
 
 
 # # 总结
@@ -297,8 +344,11 @@ print(HC_CDR(VH))
 # 仅仅使用这些就已经可以从抗体序列中找到CDR了
 # 
 
-# In[ ]:
-
-
-
-
+# # 更新
+# (2018-3-26)
+# 在之前的blog中, 对LC-CDR2的定义写错了. 把
+# * "序列之前通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)"
+# 错当成了
+# * "序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)"
+# 
+# 已经修改了代码

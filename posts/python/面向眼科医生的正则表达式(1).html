@@ -12073,7 +12073,7 @@ div#notebook {
 <li>正则表达式: [A-Z]{7}</li>
 </ul>
 </li>
-<li>序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)<ul>
+<li>序列之<strong>前</strong>通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)<ul>
 <li>正则表达式: (IY|VY|IK|IF)</li>
 </ul>
 </li>
@@ -12088,7 +12088,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{10,17})&quot;</span><span class="o">+</span><span class="s2">&quot;(WYQ|WLQ|WFQ|WYL)&quot;</span>
-<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]</span><span class="si">{7}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;(IY|VY|IK|IF)&quot;</span>
+<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?(IY|VY|IK|IF))&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]</span><span class="si">{7}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]*?)&quot;</span> <span class="c1"># 以前此处有bug</span>
 <span class="n">CDR_L3_pattern</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
 <span class="n">CDR_L_pattern</span><span class="o">=</span><span class="n">CDR_L1_pattern</span><span class="o">+</span><span class="n">CDR_L2_pattern</span><span class="o">+</span><span class="n">CDR_L3_pattern</span>
 
@@ -12110,7 +12110,7 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;DIQLTQSPSSLSASVGDRVTITC&#39;, &#39;SASQDISNYLN&#39;, &#39;WYQ&#39;, &#39;QKP&#39;, &#39;GKAPKVL&#39;, &#39;IY&#39;)]
+<pre>[(&#39;DIQLTQSPSSLSASVGDRVTITC&#39;, &#39;SASQDISNYLN&#39;, &#39;WYQ&#39;, &#39;QKPGKAPKVLIY&#39;, &#39;IY&#39;, &#39;FTSSLHS&#39;, &#39;&#39;)]
 </pre>
 </div>
 </div>
@@ -12152,14 +12152,14 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">CDR_L1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{10,17})&quot;</span><span class="o">+</span><span class="s2">&quot;(WYQ|WLQ|WFQ|WYL)&quot;</span>
-<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]</span><span class="si">{7}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;(IY|VY|IK|IF)&quot;</span>
+<span class="n">CDR_L2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?(IY|VY|IK|IF))&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]</span><span class="si">{7}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]*?)&quot;</span> <span class="c1"># 以前此处有bug</span>
 <span class="n">CDR_L3_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?C)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{7,11})&quot;</span><span class="o">+</span><span class="s2">&quot;(FG[A-Z]G)&quot;</span>
 <span class="n">CDR_L_pattern</span><span class="o">=</span><span class="n">CDR_L1_pattern</span><span class="o">+</span><span class="n">CDR_L2_pattern</span><span class="o">+</span><span class="n">CDR_L3_pattern</span>
 
 <span class="n">CDR_Ls</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_L_pattern</span><span class="p">,</span><span class="n">VL</span><span class="p">)</span>
 <span class="n">CDR_L1</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">CDR_L2</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">CDR_L3</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">CDR_L2</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">CDR_L3</span><span class="o">=</span><span class="n">CDR_Ls</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">8</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">CDR_Ls</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">CDR_L1</span><span class="p">,</span><span class="n">CDR_L2</span><span class="p">,</span><span class="n">CDR_L3</span><span class="p">)</span>
 </pre></div>
@@ -12178,8 +12178,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(&#39;DIQLTQSPSSLSASVGDRVTITC&#39;, &#39;SASQDISNYLN&#39;, &#39;WYQ&#39;, &#39;QKP&#39;, &#39;GKAPKVL&#39;, &#39;IY&#39;, &#39;FTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYC&#39;, &#39;QQYSTVPWT&#39;, &#39;FGQG&#39;)]
-SASQDISNYLN GKAPKVL QQYSTVPWT
+<pre>[(&#39;DIQLTQSPSSLSASVGDRVTITC&#39;, &#39;SASQDISNYLN&#39;, &#39;WYQ&#39;, &#39;QKPGKAPKVLIY&#39;, &#39;IY&#39;, &#39;FTSSLHS&#39;, &#39;&#39;, &#39;GVPSRFSGSGSGTDFTLTISSLQPEDFATYYC&#39;, &#39;QQYSTVPWT&#39;, &#39;FGQG&#39;)]
+SASQDISNYLN FTSSLHS QQYSTVPWT
 </pre>
 </div>
 </div>
@@ -12407,7 +12407,8 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#35782;&#21035;CDR&#30340;&#20989;&#25968;">&#35782;&#21035;CDR&#30340;&#20989;&#25968;<a class="anchor-link" href="#&#35782;&#21035;CDR&#30340;&#20989;&#25968;">&#182;</a></h1><p>综上, 可以整合成一组函数, 专门用来识别CDR</p>
+<h1 id="&#35782;&#21035;CDR&#30340;&#20989;&#25968;">&#35782;&#21035;CDR&#30340;&#20989;&#25968;<a class="anchor-link" href="#&#35782;&#21035;CDR&#30340;&#20989;&#25968;">&#182;</a></h1><p>综上, 可以整合成一组函数, 专门用来识别CDR.
+在实际使用中, HC CDR是有多种定义方式的, 所以采用了分类讨论的方式</p>
 
 </div>
 </div>
@@ -12417,31 +12418,91 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 <div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_CDR</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">seq</span><span class="p">):</span> 
-    <span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
-    <span class="k">try</span><span class="p">:</span> 
-        <span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
-        <span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span>
-        <span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="p">]</span>
-    <span class="k">except</span><span class="p">:</span>
-        <span class="n">CDR1</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
-        <span class="n">CDR2</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
-        <span class="n">CDR3</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
-    <span class="k">return</span> <span class="p">[</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span> <span class="n">CDR3</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search_CDR</span><span class="p">(</span><span class="n">CDR1_pattern</span><span class="p">,</span><span class="n">CDR2_pattern</span><span class="p">,</span><span class="n">CDR3_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">,</span><span class="n">loc1</span><span class="p">,</span><span class="n">loc2</span><span class="p">,</span><span class="n">loc3</span><span class="p">):</span>
+    <span class="c1"># 根据pattern在seq中搜索CDR</span>
+    <span class="c1"># loc1,loc2,loc3标明CDR在各个片段中的位置</span>
+    <span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
+    <span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span><span class="c1"># 有可能CDR_pattern不能匹配出结果, 因此用try</span>
+        <span class="c1">#CDR1_pattern, CDR2_pattern, CDR3_pattern, 每个都会匹配出若干结果, 需要根据loc提取</span>
+        <span class="n">CDR1</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="o">+</span><span class="n">loc1</span><span class="p">]</span>
+        <span class="n">CDR2</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="o">+</span><span class="n">loc2</span><span class="p">]</span>
+        <span class="n">CDR3</span><span class="o">=</span><span class="n">CDRs</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">7</span><span class="o">+</span><span class="n">loc3</span><span class="p">]</span>
+    <span class="k">except</span><span class="p">:</span> 
+        <span class="c1"># 当CDR_pattern无法匹配时, 尽量找出错误的区域</span>
+        <span class="c1"># 于是分别匹配各自的pattern, 如果发现匹配错误, 则单独用? 表示</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">CDR1</span><span class="o">=</span><span class="s2">&quot;?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR1_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">loc1</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">CDR1</span><span class="o">=</span><span class="s2">&quot;?</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">CDR2</span><span class="o">=</span><span class="s2">&quot;?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR2_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">loc2</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">CDR2</span><span class="o">=</span><span class="s2">&quot;?</span><span class="se">\n</span><span class="s2">&quot;</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">CDR3</span><span class="o">=</span><span class="s2">&quot;?</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">+</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR3_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="n">loc3</span><span class="p">]</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="n">CDR3</span><span class="o">=</span><span class="s2">&quot;?&quot;</span>    
+    <span class="k">return</span> <span class="p">[</span><span class="n">CDR1</span><span class="p">,</span><span class="n">CDR2</span><span class="p">,</span><span class="n">CDR3</span><span class="p">]</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">LC_CDR</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span> 
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">LC_to_CDR</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">defintion</span><span class="o">=</span><span class="s2">&quot;Kabat&quot;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    根据http://www.bioinf.org.uk/abs/#cdrdef中记载的规则, 寻找LC CDR序列</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置</span>
     <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{22}</span><span class="s2">C)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{10,17})&quot;</span><span class="o">+</span><span class="s2">&quot;(WYQ|WLQ|WFQ|WYL)&quot;</span>
-    <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]</span><span class="si">{7}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;(IY|VY|IK|IF)&quot;</span>
+    <span class="c1"># 如果匹配成功, re.findall返回4!段序列, CDR前, (IY|VY|IK|IF之一), CDR自身, CDR后, CDR自身位于2号位置</span>
+    <span class="c1"># CDR1与2之间使用松弛匹配, 没有严格限定字母数</span>
+    <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?(IY|VY|IK|IF))&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]</span><span class="si">{7}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]*?)&quot;</span> 
+    <span class="c1"># 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置</span>
+    <span class="c1"># CDR2与3之间使用松弛匹配, 没有严格限定字母数</span>
     <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?C)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{7,11})&quot;</span><span class="o">+</span><span class="s2">&quot;(FG[A-Z]G)&quot;</span>
     <span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
-    <span class="k">return</span> <span class="n">get_CDR</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">search_CDR</span><span class="p">(</span><span class="n">CDR1_pattern</span><span class="p">,</span><span class="n">CDR2_pattern</span><span class="p">,</span><span class="n">CDR3_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
 
-<span class="k">def</span> <span class="nf">HC_CDR</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span> 
-    <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{10,12})&quot;</span><span class="o">+</span><span class="s2">&quot;(WV|WI|WA)&quot;</span>
-    <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{7,19})&quot;</span><span class="o">+</span><span class="s2">&quot;([K|R][L|I|V|F|T|A][T|S|I|A])&quot;</span>
-    <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{3,25})&quot;</span><span class="o">+</span><span class="s2">&quot;(WG[A-Z]G)&quot;</span>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">HC_to_CDR</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span><span class="n">defintion</span><span class="o">=</span><span class="s2">&quot;Kabat&quot;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    根据http://www.bioinf.org.uk/abs/#cdrdef中记载的规则, 寻找HC CDR序列</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c1"># 使用Kabat定义</span>
+    <span class="c1"># 如果匹配成功, re.findall返回3段序列, CDR前, CDR自身, CDR后, CDR自身位于1号位置</span>
+    <span class="k">if</span> <span class="n">defintion</span><span class="o">==</span><span class="s2">&quot;Kabat&quot;</span><span class="p">:</span>
+        <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{8}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{5,7})&quot;</span><span class="o">+</span><span class="s2">&quot;(WV|WI|WA)&quot;</span>
+        <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]</span><span class="si">{12}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{16,19})&quot;</span><span class="o">+</span><span class="s2">&quot;([K|R][L|I|V|F|T|A][T|S|I|A])&quot;</span>
+        <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{3,25})&quot;</span><span class="o">+</span><span class="s2">&quot;(WG[A-Z]G)&quot;</span>
+    <span class="k">elif</span> <span class="n">defintion</span><span class="o">==</span><span class="s2">&quot;AbM&quot;</span><span class="p">:</span>
+        <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{10,12})&quot;</span><span class="o">+</span><span class="s2">&quot;(WV|WI|WA)&quot;</span>
+        <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]</span><span class="si">{12}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{9,12})[A-Z]</span><span class="si">{7}</span><span class="s2">&quot;</span><span class="o">+</span><span class="s2">&quot;([K|R][L|I|V|F|T|A][T|S|I|A])&quot;</span>
+        <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{3,25})&quot;</span><span class="o">+</span><span class="s2">&quot;(WG[A-Z]G)&quot;</span>
+    <span class="k">elif</span> <span class="n">defintion</span><span class="o">==</span><span class="s2">&quot;Chothia&quot;</span><span class="p">:</span>
+        <span class="n">CDR1_pattern</span><span class="o">=</span><span class="s2">&quot;(^[A-Z]</span><span class="si">{21}</span><span class="s2">C[A-Z]</span><span class="si">{3}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{6,8})[A-Z]</span><span class="si">{4}</span><span class="s2">&quot;</span><span class="o">+</span><span class="s2">&quot;(WV|WI|WA)&quot;</span>
+        <span class="n">CDR2_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]</span><span class="si">{12}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{9,12})[A-Z]</span><span class="si">{7}</span><span class="s2">&quot;</span><span class="o">+</span><span class="s2">&quot;([K|R][L|I|V|F|T|A][T|S|I|A])&quot;</span>
+        <span class="n">CDR3_pattern</span><span class="o">=</span><span class="s2">&quot;([A-Z]*?C[A-Z]</span><span class="si">{2}</span><span class="s2">)&quot;</span><span class="o">+</span><span class="s2">&quot;([A-Z]{3,25})&quot;</span><span class="o">+</span><span class="s2">&quot;(WG[A-Z]G)&quot;</span>
     <span class="n">CDR_pattern</span><span class="o">=</span><span class="n">CDR1_pattern</span><span class="o">+</span><span class="n">CDR2_pattern</span><span class="o">+</span><span class="n">CDR3_pattern</span>
-    <span class="k">return</span> <span class="n">get_CDR</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+    <span class="n">CDRs</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">CDR_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">search_CDR</span><span class="p">(</span><span class="n">CDR1_pattern</span><span class="p">,</span><span class="n">CDR2_pattern</span><span class="p">,</span><span class="n">CDR3_pattern</span><span class="p">,</span><span class="n">seq</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12460,11 +12521,11 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">VL</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">LC_CDR</span><span class="p">(</span><span class="n">VL</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">LC_to_CDR</span><span class="p">(</span><span class="n">VL</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12482,7 +12543,7 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>DIQLTQSPSSLSASVGDRVTITCSASQDISNYLNWYQQKPGKAPKVLIYFTSSLHSGVPSRFSGSGSGTDFTLTISSLQPEDFATYYCQQYSTVPWTFGQGTKVEIKRTVAAPSVFIFPPSDEQLKSGTASVVCLLNNFYPREAKVQWKVDNALQSGNSQESVTEQDSKDSTYSLSSTLTLSKADYEKHKVYACEVTHQGLSSPVTKSFNRGEC
-[&#39;SASQDISNYLN&#39;, &#39;GKAPKVL&#39;, &#39;QQYSTVPWT&#39;]
+[&#39;SASQDISNYLN&#39;, &#39;FTSSLHS&#39;, &#39;QQYSTVPWT&#39;]
 </pre>
 </div>
 </div>
@@ -12493,11 +12554,11 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">VH</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">HC_CDR</span><span class="p">(</span><span class="n">VH</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">HC_to_CDR</span><span class="p">(</span><span class="n">VH</span><span class="p">))</span>
 </pre></div>
 
 </div>
@@ -12515,7 +12576,7 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>EVQLVESGGGLVQPGGSLRLSCAASGYDFTHYGMNWVRQAPGKGLEWVGWINTYTGEPTYAADFKRRFTFSLDTSKSTAYLQMNSLRAEDTAVYYCAKYPYYYGTSHWYFDVWGQGTLVTVSSASTKGPSVFPLAPSSKSTSGGTAALGCLVKDYFPEPVTVSWNSGALTSGVHTFPAVLQSSGLYSLSSVVTVPSSSLGTQTYICNVNHKPSNTKVDKKVEPKSCDKTHL
-[&#39;GYDFTHYGMN&#39;, &#39;VGWINTYTGEPTYAADFKR&#39;, &#39;YPYYYGTSHWYFDV&#39;]
+[&#39;HYGMN&#39;, &#39;WINTYTGEPTYAADFKR&#39;, &#39;YPYYYGTSHWYFDV&#39;]
 </pre>
 </div>
 </div>
@@ -12542,18 +12603,21 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#26356;&#26032;">&#26356;&#26032;<a class="anchor-link" href="#&#26356;&#26032;">&#182;</a></h1><p>(2018-3-26)
+在之前的blog中, 对LC-CDR2的定义写错了. 把</p>
+<ul>
+<li>"序列之前通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)"
+错当成了</li>
+<li>"序列之后通常是Ile-Tyr(IY), but also, Val-Tyr(VY), Ile-Lys(IK), Ile-Phe(IF)"</li>
+</ul>
+<p>已经修改了代码</p>
 
 </div>
 </div>
-</div>
-
 </div>
     </div>
   </div>
