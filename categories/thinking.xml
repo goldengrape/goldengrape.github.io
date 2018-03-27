@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：Thinking)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/thinking.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jan 2018 18:08:38 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>讨论医学问题前的基础讨论</title><link>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在好友群/同学群里面迟早要遇到讨论医学/保健/养生问题的情况. 跟陌生人组成的群组还不同, 那里面也没必要深入讨论, 在同学群(当然不是大学同学)里面, 往往还是会出现一些"锐利而不失体面"的讨论.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：Thinking)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/thinking.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 27 Mar 2018 02:42:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>讨论医学问题前的基础讨论</title><link>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在好友群/同学群里面迟早要遇到讨论医学/保健/养生问题的情况. 跟陌生人组成的群组还不同, 那里面也没必要深入讨论, 在同学群(当然不是大学同学)里面, 往往还是会出现一些"锐利而不失体面"的讨论.&lt;/p&gt;
 &lt;p&gt;所以看来还是需要"锐利而不失体面"地简单解释一下现代医学的一些基本概念. 也是躲不掉的. 说的不全的地方还请包含.&lt;/p&gt;
 &lt;p&gt;首先, 现代医学是科学的一部分. 科学的最基本属性是"可证伪性". 我觉得解释成"可重复性"更容易理解一些. 也就是说:&lt;/p&gt;
 &lt;ul&gt;
@@ -29,7 +29,14 @@
 &lt;p&gt;如果仅仅是某个人的"亲测有效", 这个完全算不上任何临床证据.
 "我有一个朋友", "我听说", "按道理说", 这些都不是能够指导医生进行诊断和治疗的"临床证据".&lt;/p&gt;
 &lt;p&gt;. . . . . .&lt;/p&gt;
-&lt;p&gt;这里, 我只是展示一下大夫的思维方式. 当病人谈到某个治疗方式有多好有多有效的时候, 医生脑子里是先查诊疗手册有没有记载, 然后记下几个关键词, 去查查pubmed. 高年资的医生一般不会去反驳病人的, 保持微笑, 叫下一个.&lt;/p&gt;&lt;/div&gt;</description><category>Thinking</category><guid>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</guid><pubDate>Wed, 03 Jan 2018 08:00:00 GMT</pubDate></item><item><title>是否点开一个链接的标准</title><link>https://goldengrape.github.io/posts/bulabula/if-open-an-url/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每天我们看很多东西，微博/twitter，微信朋友圈/facebook，网站，甚至还可能有新闻联播。容易进入所谓“信息过载”的状态，那么在点开一个链接之前，是否就可以作出判断是否值得一读呢？&lt;/p&gt;
+&lt;p&gt;这里, 我只是展示一下大夫的思维方式. 当病人谈到某个治疗方式有多好有多有效的时候, 医生脑子里是先查诊疗手册有没有记载, 然后记下几个关键词, 去查查pubmed. 高年资的医生一般不会去反驳病人的, 保持微笑, 叫下一个.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;更新&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;突然想起来, 这个经验要说一下, 如果亲友生病, 查询信息的话推荐从默沙东诊疗手册大众版&lt;a href="https://www.msdmanuals.cn/"&gt;https://www.msdmanuals.cn/&lt;/a&gt; 或者从 &lt;a href="http://www.uptodate.cn/"&gt;http://www.uptodate.cn/&lt;/a&gt; 里查找. 默沙东的是免费的, uptodate可以用手机注册一个月试用. 如果诊断明确了, 看一个月基本也够了, 如果治疗方案改变再换个手机号另外注册就是了. 非常推荐uptodate, 里面的信息是有"临床证据"的, 而且更新速度很快.&lt;/p&gt;
+&lt;p&gt;比百度要专业得多. 看病还是要避免查百度的. &lt;em&gt;&lt;em&gt;抽烟喝酒用百度, 有害健康&lt;/em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;另外, 我还是建议在诊断明确的前提下搜索. 如果仅仅是自己觉得不舒服, 去查症状的话, 非专业人士查什么就会觉得自己是什么病. 医学院有个大三综合征, 在大学三年级时医学院开始上临床课, 常常是老师讲到什么病, 就有学生觉得自己得什么病.&lt;/p&gt;&lt;/div&gt;</description><category>Thinking</category><guid>https://goldengrape.github.io/posts/bulabula/what-is-ebm/</guid><pubDate>Wed, 03 Jan 2018 08:00:00 GMT</pubDate></item><item><title>是否点开一个链接的标准</title><link>https://goldengrape.github.io/posts/bulabula/if-open-an-url/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每天我们看很多东西，微博/twitter，微信朋友圈/facebook，网站，甚至还可能有新闻联播。容易进入所谓“信息过载”的状态，那么在点开一个链接之前，是否就可以作出判断是否值得一读呢？&lt;/p&gt;
 &lt;p&gt;最近我发现了一个重要的判别标准： _ 考试又不考，看这些没用的干啥！ _
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;hr&gt;
