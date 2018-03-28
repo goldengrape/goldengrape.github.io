@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 27 Mar 2018 02:42:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 28 Mar 2018 15:22:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>折叠键盘支撑</title><link>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天不知道为什么弄伤了手腕, 在笔记本键盘上敲字的时候手腕更加不舒服.&lt;/p&gt;
+&lt;p&gt;于是先从thingverse上找到了早已看中的&lt;a href="https://www.thingiverse.com/thing:403001"&gt;护腕&lt;/a&gt;打印了一副戴上.
+&lt;img alt="护腕" src="https://i.loli.net/2018/03/28/5abbb0913f1a9.jpeg"&gt;
+PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽然60度的水很烫, 但是拿出来的护腕放在手上并不烫, 可以趁热捏成合适的形状, 把手腕固定在功能位上.&lt;/p&gt;
+&lt;p&gt;但仍然不满足. 因为在打字时手腕是放平的, 所以相对于功能位有一点内旋. 实际上平面的键盘总是不能让手腕很舒服.&lt;/p&gt;
+&lt;p&gt;于是改造键盘.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;手里有一款B.O.W. 的蓝牙折叠键盘, 型号应该是"B.O.W HB188". 正常使用时折叠方式是谷折叠, 但也可以山折叠, 使键盘离开桌面.&lt;/p&gt;
+&lt;p&gt;于是做了一组卡槽, 将键盘两端用线拉住, 键盘就形成了一个"人"字形, 可以支撑在桌面上.
+&lt;img alt="WechatIMG61" src="https://i.loli.net/2018/03/28/5abbb0928b302.jpeg"&gt;
+支撑的高度用线长来调节就可以.
+这样手在打字时, 手腕就不必内旋了.
+&lt;img alt="WechatIMG62" src="https://i.loli.net/2018/03/28/5abbb0914b2e8.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;打印出4个组件固定会比较稳定.
+&lt;img alt="WechatIMG60" src="https://i.loli.net/2018/03/28/5abbb09180420.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;之前这款折叠键盘必须放在桌面上使用, 无法放在腿上, 现在也可以直接放在推腿上用了.
+&lt;img alt="WechatIMG63" src="https://i.loli.net/2018/03/28/5abbb09273b72.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;零件不大, 方便收纳.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.thingiverse.com/thing:2843000"&gt;下载打印零件&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</guid><pubDate>Wed, 28 Mar 2018 15:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
@@ -2805,42 +2823,4 @@ That's all
 &lt;li&gt;相融还是不相融看起来是个定性试验，还需要一个独立的读片人。&lt;/li&gt;
 &lt;li&gt;考虑到宫闱斗争重重，随机和双盲是必要的。&lt;/li&gt;
 &lt;li&gt;继续考虑宫闱斗争重重，实验样品的防伪与认证也是必要的，其中可能配合随机双盲要用到HASH算法和/或RSA加密。&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</guid><pubDate>Thu, 01 Mar 2018 07:00:00 GMT</pubDate></item><item><title>VR／AR临床实验设计中的注意事项-太长不看版</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;伴吐槽&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;前面那篇《&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp"&gt;VR／AR临床实验设计中的注意事项&lt;/a&gt;》文章太长了，以至于按照十五言的统计，“深读”率维持在10%以下，（那篇文章值一大笔顾问费的好么我为了国内的VR/AR社区就这么给捐了你们居然不仔细读）。因此作者推出了TL;DR版。&lt;/p&gt;
-&lt;h3&gt;实验准备：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;伦理：不通过伦理委员会没签知情同意书，一告一个准；&lt;/li&gt;
-&lt;li&gt;研究团队：就算企业出钱也得找些懂行的行家；&lt;/li&gt;
-&lt;li&gt;实验设计：答辩叫defence，得尽量无懈可击才行；&lt;/li&gt;
-&lt;li&gt;实验目的：一次一小步，题目太大就民科了；&lt;/li&gt;
-&lt;li&gt;实验对象：纳入排除标准预先定，把搞不定的都排除在外&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;实验测量的指标：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;视力：用LogMAR&lt;/li&gt;
-&lt;li&gt;CSF色觉能查就查一下&lt;/li&gt;
-&lt;li&gt;屈光：电脑验光仪不准&lt;/li&gt;
-&lt;li&gt;眼压：摊上青光眼就麻烦了&lt;/li&gt;
-&lt;li&gt;干眼：用泪液分析仪&lt;/li&gt;
-&lt;li&gt;双眼视、调节、斜视、AC/A、立体视：一般医生都搞不定，还是找专业人士玩&lt;/li&gt;
-&lt;li&gt;问卷调查：青少年问卷调查你也信？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;数据：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;别作弊；&lt;/li&gt;
-&lt;li&gt;画图得有error bar；&lt;/li&gt;
-&lt;li&gt;科研图不准用3D，别扯什么信息图示；&lt;/li&gt;
-&lt;li&gt;连个P都没有，怎么让人相信&lt;/li&gt;
-&lt;li&gt;统计方法不对有个P用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;结果与讨论：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;garbage in garbage out ;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;眼科与视光学专业的注意事项:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;硬件限制：人类科技还很低下；&lt;/li&gt;
-&lt;li&gt;软件限制：别撞上NP hard；&lt;/li&gt;
-&lt;li&gt;商业限制：医生想的通常不赚钱没人愿意做&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</guid><pubDate>Wed, 28 Feb 2018 07:15:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</guid><pubDate>Thu, 01 Mar 2018 07:00:00 GMT</pubDate></item></channel></rss>

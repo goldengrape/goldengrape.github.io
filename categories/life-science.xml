@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：life science)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/life-science.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Mar 2018 06:50:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何制作透明冰块</title><link>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：life science)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/life-science.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 28 Mar 2018 15:22:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>折叠键盘支撑</title><link>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天不知道为什么弄伤了手腕, 在笔记本键盘上敲字的时候手腕更加不舒服.&lt;/p&gt;
+&lt;p&gt;于是先从thingverse上找到了早已看中的&lt;a href="https://www.thingiverse.com/thing:403001"&gt;护腕&lt;/a&gt;打印了一副戴上.
+&lt;img alt="护腕" src="https://i.loli.net/2018/03/28/5abbb0913f1a9.jpeg"&gt;
+PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽然60度的水很烫, 但是拿出来的护腕放在手上并不烫, 可以趁热捏成合适的形状, 把手腕固定在功能位上.&lt;/p&gt;
+&lt;p&gt;但仍然不满足. 因为在打字时手腕是放平的, 所以相对于功能位有一点内旋. 实际上平面的键盘总是不能让手腕很舒服.&lt;/p&gt;
+&lt;p&gt;于是改造键盘.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;手里有一款B.O.W. 的蓝牙折叠键盘, 型号应该是"B.O.W HB188". 正常使用时折叠方式是谷折叠, 但也可以山折叠, 使键盘离开桌面.&lt;/p&gt;
+&lt;p&gt;于是做了一组卡槽, 将键盘两端用线拉住, 键盘就形成了一个"人"字形, 可以支撑在桌面上.
+&lt;img alt="WechatIMG61" src="https://i.loli.net/2018/03/28/5abbb0928b302.jpeg"&gt;
+支撑的高度用线长来调节就可以.
+这样手在打字时, 手腕就不必内旋了.
+&lt;img alt="WechatIMG62" src="https://i.loli.net/2018/03/28/5abbb0914b2e8.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;打印出4个组件固定会比较稳定.
+&lt;img alt="WechatIMG60" src="https://i.loli.net/2018/03/28/5abbb09180420.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;之前这款折叠键盘必须放在桌面上使用, 无法放在腿上, 现在也可以直接放在推腿上用了.
+&lt;img alt="WechatIMG63" src="https://i.loli.net/2018/03/28/5abbb09273b72.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;零件不大, 方便收纳.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.thingiverse.com/thing:2843000"&gt;下载打印零件&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</guid><pubDate>Wed, 28 Mar 2018 15:00:00 GMT</pubDate></item><item><title>如何制作透明冰块</title><link>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;目的: 制作透明的冰块&lt;/p&gt;
 &lt;/li&gt;
