@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/%08scikit-learn-note-3/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/scikit-learn-note-4/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,47 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/%08scikit-learn-note-3/" class="u-url">Scikit-learn笔记3(各种率)</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/scikit-learn-note-4/" class="u-url">Scikit-learn笔记4(ROC曲线)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/scikit-learn-note-4/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-04-01T19:30:00+08:00" title="2018-04-01 19:30">2018-04-01 19:30</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/scikit-learn-note-4/#disqus_thread" data-disqus-identifier="cache/posts/python/Scikit-learn笔记4.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://www.coursera.org/learn/python-machine-learning">Applied Machine Learning in Python</a></p>
+<p>这门课实在是太差了. 严重差评:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>"所谓私人恩怨，跟政治就是一回事。所以，如果有哪个白痴政客或者哪个大人物想要推行一项法令或政策，伤害到你或者你亲人朋友的利益，那就是私人恩怨。点燃你的怒火吧。" ----奎尔</p>
+<p>作为报复, 我决定把第三周的ppt给丫翻译了!</p>
+<p class="more"><a href="posts/python/scikit-learn-note-4/">更多…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/%08scikit-learn-note-3/" class="u-url">Scikit-learn笔记3(各种率)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/python/%08scikit-learn-note-3/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-04-01T12:00:00+08:00" title="2018-04-01 12:00">2018-04-01 12:00</time></a></p>
@@ -338,31 +378,6 @@ PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽�
 <p>我很希望有个能够双击打开.ipynb文件的方式. 打开以后还能够正常编辑和运行. 上推一问. 果然在<a href="https://twitter.com/xuanyuanzhiyuan/status/971321483896213504">@xuanyuanzhiyuan</a>和<a href="https://twitter.com/kyleehee/status/971317968822038528">@kyleehee</a>的指导下成功了. 写blog以记录之.
 </p>
 <p class="more"><a href="posts/bulabula/double-click-open-ipynb/">更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/US20160270656A1-0/" class="u-url">magic leap VR/AR与眼科检查专利解读(0)</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/US20160270656A1-0/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-05T23:30:00+08:00" title="2018-03-05 23:30">2018-03-05 23:30</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/bulabula/US20160270656A1-0/#disqus_thread" data-disqus-identifier="cache/posts/bulabula/magicleap专利US20160270656A1解读.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>作为Magic leap的黑粉, 我又一次被它给惹到了. 这回是一个<a href="https://patents.google.com/patent/US20160270656A1">专利US20160270656A1</a> .</p>
-<p>题目是Methods and systems for diagnosing and treating health ailments, 在这个专利里足足有100项权利要求, 几乎覆盖了所有能够使用头戴显示器做的健康检查项目. 看起来Magic leap是铁了心要当专利流氓了.</p>
-<ul>
-<li>对于VR/AR/?R的从业者, 这个专利有助于提示你头戴显示器技术能够用在诊断检查的哪些项目上;</li>
-<li>对于临床医生, 有助于了解未来检查设备都有可能往哪些小型化方向进展.</li>
-<li>对于互联网医疗的从业者, 有助于理解数据应当如何获取.</li>
-<li>对于发明家和专利律师, 咱们一起给丫无效掉吧.</li>
-</ul>
-<p>这份专利权利要求100个, 插图50张, PDF194页, 我将分几次来讲解其中所涉及到的技术与原理.</p>
-<p class="more"><a href="posts/bulabula/US20160270656A1-0/">更多…</a></p>
 </div>
     </div>
     </article>
