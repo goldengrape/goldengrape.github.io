@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/scikit-learn-note-2/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/%08scikit-learn-note-3/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,27 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/scikit-learn-note-2/" class="u-url">Scikit-learn笔记2</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/%08scikit-learn-note-3/" class="u-url">Scikit-learn笔记3(各种率)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/%08scikit-learn-note-3/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-04-01T12:00:00+08:00" title="2018-04-01 12:00">2018-04-01 12:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/%08scikit-learn-note-3/#disqus_thread" data-disqus-identifier="cache/posts/python/Scikit-learn笔记3.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>关于precision, recall的定义, 关于假阳性, 假阴性, 真阳性, 真阴性之类的定义, 我以后一定还是会忘记的.</p>
+<p>而且鉴于我以前凡是两个能够弄混的事情一定可以弄混的特性,</p>
+<p>于是把什么真假阴性阳性扩展到更多的情况, 画了张图</p>
+<p>红色是分子, 灰色是分母. (灰色区域都是包含红色的)</p>
+<p><img alt="" src="images/ratios.png"></p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/scikit-learn-note-2/" class="u-url">Scikit-learn笔记2</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/python/scikit-learn-note-2/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-31T20:30:00+08:00" title="2018-03-31 20:30">2018-03-31 20:30</time></a></p>
@@ -106,327 +126,12 @@ MathJax.Hub.Config({
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>我上大学时上毛泽东思想概论和邓小平理论的课听着都比这舒坦.</p>
 <p>作为报复, 我决定把第三周的ppt给丫翻译了!</p>
-
+<p class="more"><a href="posts/python/scikit-learn-note-2/">更多…</a></p>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="评估">评估<a class="anchor-link" href="posts/python/scikit-learn-note-2/#%E8%AF%84%E4%BC%B0">¶</a>
-</h2>
-<ul>
-<li>不同的应用可能有非常不同的目标</li>
-<li>Accuracy虽然广泛使用, 但其他的评估指标也可能使用. 例如:<ul>
-<li>用户满意度 (网络搜索)</li>
-<li>收入(电子贸易)</li>
-<li>病人生存率的提高(医疗)</li>
-</ul>
-</li>
-</ul>
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="不平衡分类中的Accuracy">不平衡分类中的Accuracy<a class="anchor-link" href="posts/python/scikit-learn-note-2/#%E4%B8%8D%E5%B9%B3%E8%A1%A1%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84Accuracy">¶</a>
-</h2>
-<ul>
-<li>假设有两个分类: <ul>
-<li>相关(R): 阳性分类结果</li>
-<li>不相关(N): 阴性分类结果</li>
-</ul>
-</li>
-<li>随机选择1000个样本, 平均而言: Out of 1000 randomly selected items, on average<ul>
-<li>1个R</li>
-<li>999个N</li>
-</ul>
-</li>
-</ul>
-<p>$$
-Accuracy = \frac{正确预测的数量}{总量}
-$$</p>
-<p>你建了一个分类器, 在test set上测试后发现accuracy=99.9%</p>
-<ul>
-<li>Wow! Amazingly good! 是不是? </li>
-<li>为了比较, 假定我们有一个"dummy"分类器, 就是个假分类器, 不管输入是什么, 都预测是最多频率的类别, 比如N</li>
-</ul>
-<p>那么
-$$
-Accuracy_{DUMMY} = \frac{999}{1000}=99.9%
-$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dummy分类器完全忽略输入数据">Dummy分类器完全忽略输入数据<a class="anchor-link" href="posts/python/scikit-learn-note-2/#Dummy%E5%88%86%E7%B1%BB%E5%99%A8%E5%AE%8C%E5%85%A8%E5%BF%BD%E7%95%A5%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE">¶</a>
-</h2>
-<ul>
-<li>scikit-learn中常用的DummyClassifier类型: <ul>
-<li>most_frequent: 预测值是出现频率最高的类别</li>
-<li>stratified : 根据训练集中的频率分布给出随机预测</li>
-<li>uniform: 使用等可能概率给出随机预测</li>
-<li>constant: 根据用户的要求, 给出常数预测. </li>
-</ul>
-</li>
-<li>这个方法的主要动机是F1-scoring, 当阳性分类很少的情况. </li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>如果你的模型预测结果跟Dummy差不多:</p>
-<ul>
-<li>功能无效，错误或缺失</li>
-<li>内核或超参数选择不当</li>
-<li>分类失衡, 有的类别太多</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="重点重点:-Binary-prediction-outcomes">重点重点: Binary prediction outcomes<a class="anchor-link" href="posts/python/scikit-learn-note-2/#%E9%87%8D%E7%82%B9%E9%87%8D%E7%82%B9:-Binary-prediction-outcomes">¶</a>
-</h2>
-<table>
-<thead><tr>
-<th style="text-align:left"></th>
-<th style="text-align:left">预测为(-)</th>
-<th style="text-align:left">预测为(+)</th>
-</tr></thead>
-<tbody>
-<tr>
-<td style="text-align:left">实际为(-)</td>
-<td style="text-align:left">TN</td>
-<td style="text-align:left">FP</td>
-</tr>
-<tr>
-<td style="text-align:left">实际为(+)</td>
-<td style="text-align:left">FN</td>
-<td style="text-align:left">TP</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>TP = true positive 真阳性</li>
-<li>FP = false positive (Type I error) 假阳性(Type I错误) , 印象里就是P&lt;0.05的0.05</li>
-<li>TN = true negative 真阴性</li>
-<li>FN = false negative (Type II error)假阴性(Type II错误)</li>
-</ul>
-<p>上面的矩阵叫做: Confusion-Matrix</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>
-<p>Accuracy: 分类正确的概率. 实际为(-)预测为(-), 实际为(+)预测为(+)叫做正确. 
-$$
-Accuracy=\frac{TP + TN}{TP + TN + FP + FN}
-$$</p>
-</li>
-<li>
-<p>Classification error: (1-Accuracy), 分类错误的概率
-$$
-Classification\;  error=\frac{FP + FN}{TP + TN + FP + FN}
-$$</p>
-</li>
-<li>
-<p>Recall, 真阳性率: 实际上为(+), 能够被预测成(+)的概率</p>
-<ul>
-<li>Recall又叫 </li>
-<li>True Positive Rate (TPR): 真阳性率</li>
-<li>Sensitivity: 敏感性</li>
-<li>Probability of detection: 检出率
-$$
-Recall=\frac{TP}{TP+FN}
-$$</li>
-</ul>
-</li>
-<li>
-<p>Precision: 如果预测为(+), 那么预测正确的概率
-$$
-Precision=\frac{TP}{TP+FP}
-$$</p>
-</li>
-<li>
-<p>False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率</p>
-<ul>
-<li>又叫做: Specificity, 特异性
-$$
-False positive rate=\frac{FP}{TN+FP}
-$$</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="高precision,-低recall">高precision, 低recall<a class="anchor-link" href="posts/python/scikit-learn-note-2/#%E9%AB%98precision,-%E4%BD%8Erecall">¶</a>
-</h3>
-<p><img src="https://i.loli.net/2018/03/31/5abf84bf4da95.png" alt="high precision.png">
-无罪推定, 抓到的坏人都是有罪的, 但也可能有很多漏网了.</p>
-<h3 id="高recall,-低precision">高recall, 低precision<a class="anchor-link" href="posts/python/scikit-learn-note-2/#%E9%AB%98recall,-%E4%BD%8Eprecision">¶</a>
-</h3>
-<p><img src="https://i.loli.net/2018/03/31/5abf84c2c0a78.png" alt="high recall.png">
-宁肯错杀一千, 不可放走一个.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="precision与recall的折衷">precision与recall的折衷<a class="anchor-link" href="posts/python/scikit-learn-note-2/#precision%E4%B8%8Erecall%E7%9A%84%E6%8A%98%E8%A1%B7">¶</a>
-</h2>
-<ul>
-<li>
-<p>Recall指导的机器学习任务:</p>
-<ul>
-<li>法律搜索和法律信息提取</li>
-<li>肿瘤检测Tumor detection</li>
-<li>通常配备人类专家剔除假阳性</li>
-</ul>
-</li>
-<li>
-<p>Precision指导的机器学习任务</p>
-<ul>
-<li>搜索引擎排序, 搜索建议</li>
-<li>文档分类</li>
-<li>很多面向用户的任务(因为用户记住错误!)</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="F1-score:-结合precision与recall">F1-score: 结合precision与recall<a class="anchor-link" href="posts/python/scikit-learn-note-2/#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall">¶</a>
-</h3>
-<p>$$
-F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
-$$</p>
-<h3 id="F-score:-更一般地将precision与recall结合成单独一个数">F-score: 更一般地将precision与recall结合成单独一个数<a class="anchor-link" href="posts/python/scikit-learn-note-2/#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0">¶</a>
-</h3>
-<p>$$
-F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
-$$</p>
-<p>𝛽用来调整recall vs precision之间的重要程度:</p>
-<ul>
-<li>Precision-oriented users: 𝜷 = 0.5 </li>
-<li>Recall-oriented users: 𝜷 = 2</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">compute_scores</span><span class="p">(</span><span class="n">TP</span><span class="p">,</span><span class="n">TN</span><span class="p">,</span><span class="n">FP</span><span class="p">,</span><span class="n">FN</span><span class="p">):</span>
-    <span class="c1"># Accuracy = TP + TN / (TP + TN + FP + FN)</span>
-    <span class="c1"># Precision = TP / (TP + FP)</span>
-    <span class="c1"># Recall = TP / (TP + FN)  Also known as sensitivity, or True Positive Rate</span>
-    <span class="c1"># F1 = 2 * Precision * Recall / (Precision + Recall) </span>
-    <span class="n">scores_dict</span><span class="o">=</span><span class="p">{}</span>
-    <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Accuracy"</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span> <span class="o">+</span> <span class="n">FP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>
-    <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Precision"</span><span class="p">]</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
-    <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Recall"</span><span class="p">]</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>  <span class="c1"># Also known as sensitivity, or True Positive Rate</span>
-    <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"F1"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Precision"</span><span class="p">]</span> <span class="o">*</span> <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Recall"</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Precision"</span><span class="p">]</span> <span class="o">+</span> <span class="n">scores_dict</span><span class="p">[</span><span class="s2">"Recall"</span><span class="p">])</span> 
-    
-    <span class="k">return</span> <span class="n">scores_dict</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [5]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">c_matrix</span><span class="o">=</span><span class="p">{</span><span class="s2">"TN"</span><span class="p">:</span><span class="mi">19</span><span class="p">,</span><span class="s2">"FP"</span><span class="p">:</span><span class="mi">8</span><span class="p">,</span> 
-          <span class="s2">"FN"</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span> <span class="s2">"TP"</span><span class="p">:</span><span class="mi">96</span><span class="p">}</span>
-<span class="n">compute_scores</span><span class="p">(</span><span class="mi">96</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[5]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>{'Accuracy': 0.905511811023622,
- 'F1': 0.9411764705882353,
- 'Precision': 0.9230769230769231,
- 'Recall': 0.96}</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="未完待续">未完待续<a class="anchor-link" href="posts/python/scikit-learn-note-2/#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD">¶</a>
-</h2>
-</div>
-</div>
-</div>
-    </div>
-  </div>
-
     </div>
     </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/semi-freeform-raytracing/" class="u-url">半截自由曲面光路追迹</a></h1>
         <div class="metadata">
@@ -658,33 +363,6 @@ PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽�
 </ul>
 <p>这份专利权利要求100个, 插图50张, PDF194页, 我将分几次来讲解其中所涉及到的技术与原理.</p>
 <p class="more"><a href="posts/bulabula/US20160270656A1-0/">更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/how-to-make-clear-ice/" class="u-url">如何制作透明冰块</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/how-to-make-clear-ice/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-03T09:20:00+08:00" title="2018-03-03 09:20">2018-03-03 09:20</time></a></p>
-                <p class="commentline">
-        
-    <a href="posts/bulabula/how-to-make-clear-ice/#disqus_thread" data-disqus-identifier="cache/posts/bulabula/如何制作透明冰块.html">Comments</a>
-
-
-        </p>
-</div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<ul>
-<li>
-<p>目的: 制作透明的冰块</p>
-</li>
-<li>
-<p>结果: 成品是这样的
-<img alt="WechatIMG44" src="https://i.loli.net/2018/03/03/5a99f82bf22f8.jpeg">
-冰是非常透明的, 冰的折射率是1.31, 水是1.33, 所以冰与水的分界仔细看的话还是可以看出来的.</p>
-</li>
-</ul>
-<p>教程重新撰写中
-</p>
 </div>
     </div>
     </article>
