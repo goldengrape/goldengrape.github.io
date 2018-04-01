@@ -43,7 +43,7 @@
 # 
 # 那么
 # $$
-# Accuracy_{DUMMY} = \frac{999}{1000}=99.9%
+# Accuracy_{DUMMY} = \frac{999}{1000}=99.9\%
 # $$
 
 # # Dummy分类器完全忽略输入数据

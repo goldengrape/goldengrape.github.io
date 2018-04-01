@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-03-31T13:16:00Z</lastmod>
+  <lastmod>2018-04-01T04:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -147,7 +147,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-8.html</loc>
-  <lastmod>2018-03-31T13:16:00Z</lastmod>
+  <lastmod>2018-04-01T04:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -364,6 +364,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</loc>
   <lastmod>2018-02-28T07:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</loc>
+  <lastmod>2018-04-01T04:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/CSI-exam/</loc>
