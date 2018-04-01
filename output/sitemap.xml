@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-04-01T04:10:00Z</lastmod>
+  <lastmod>2018-04-01T11:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -147,7 +147,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-8.html</loc>
-  <lastmod>2018-04-01T04:10:00Z</lastmod>
+  <lastmod>2018-04-01T11:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -488,6 +488,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</loc>
   <lastmod>2018-03-31T13:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</loc>
+  <lastmod>2018-04-01T11:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/scikit-learn-note/</loc>
