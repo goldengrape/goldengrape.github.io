@@ -1,5 +1,795 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 26 Mar 2018 13:28:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向眼科医生的正则表达式(0)-简介</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 02 Apr 2018 11:03:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Scikit-learn笔记4(ROC曲线)</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-machine-learning"&gt;Applied Machine Learning in Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这门课实在是太差了. 严重差评:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;"所谓私人恩怨，跟政治就是一回事。所以，如果有哪个白痴政客或者哪个大人物想要推行一项法令或政策，伤害到你或者你亲人朋友的利益，那就是私人恩怨。点燃你的怒火吧。" ----奎尔&lt;/p&gt;
+&lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="决策函数(decision_function)"&gt;决策函数(decision_function)&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E5%86%B3%E7%AD%96%E5%87%BD%E6%95%B0(decision_function)"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;分类器对每个测试点都给出一个分数, 这个分数表示分类器预测的可信度. &lt;/li&gt;
+&lt;li&gt;选择一个固定的决策阈值就给出了一个分类规则. (大于阈值的就是正分类, 小于阈值的就是负分类)&lt;/li&gt;
+&lt;li&gt;通过改变决策阈值, 在所有可能的分数范围内扫描, 我们就可以给出给出一个曲线&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="预测属于某个分类的概率(predict_proba)"&gt;预测属于某个分类的概率(predict_proba)&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E9%A2%84%E6%B5%8B%E5%B1%9E%E4%BA%8E%E6%9F%90%E4%B8%AA%E5%88%86%E7%B1%BB%E7%9A%84%E6%A6%82%E7%8E%87(predict_proba)"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;典型的规则: 选择最可能的分类
+例如: 如果数值&amp;gt;0.5, 属于分类1&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过改变阈值可以调节分类器的预测. &lt;/li&gt;
+&lt;li&gt;更高的阈值导致更为保守的分类器&lt;ul&gt;
+&lt;li&gt;例如只有数值&amp;gt;0.7才归入分类1&lt;/li&gt;
+&lt;li&gt;高阈值增加了precision. 比之前低阈值时更少把样本归入分类1, 但是如果归入到样本1, 那么把握更大. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;还是举个我更熟悉的例子吧, 比如仅仅用眼压作为青光眼的诊断标准,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;21mmHg就是一个阈值, &lt;/li&gt;
+&lt;li&gt;大于21mmHg的就归入青光眼分类, 小于等于21mmHg的就归入正常眼的分类. 但显然这样会把一部分高眼压症的人算作是青光眼. &lt;/li&gt;
+&lt;li&gt;如果把阈值提高到比如30mmHg, 那么筛出来的病人, 真正就是青光眼的可能性就要高很多. 就是Precision更高. &lt;/li&gt;
+&lt;li&gt;如果把阈值降低到比如15mmHg, 那么就有更少的病人漏网, 也就是Recall更高&lt;/li&gt;
+&lt;li&gt;后面会讲半天ROC曲线, 就是看阈值变化时, Precision和Recall的变化. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是! 在此处吐槽一下. 这样的分类方法明显是错的啊, 本来根本不是用一个值来简单区分的事情, 为什么要强行这么做? 要诊断青光眼还要看视盘, 看盘沿, 看视野, 看动态变化, 本来就不是一个一维的事情, 不管其他, 去找一个参数的分界线是不对的啊.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;贱人就是矫情&lt;/em&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="再复习一下各种率"&gt;再复习一下各种率&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E5%86%8D%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%87"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ratios.png" alt=""&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;比如现在只用眼压区分青光眼, 补充一点背景知识: 已知95%的人群眼压是是10-21mmHg, 眼压最低也只能到房水的流出通道, 也就是静脉里面, 最低最低8mmHg, 眼压到30mmHg摸起来已经接近脑门的硬度了, 到40mmHg已经要疼得撞墙了.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;那么, 如果以10mmHg作为分界, 认为大于10mmHg的都是青光眼, 那么几乎所有的人类都是青光眼, 于是没有任何一个青光眼病人会被漏掉. &lt;/li&gt;
+&lt;li&gt;如果以40mmHg作为分界, 认为大于40mmHg的才是青光眼, 那么只有急性发作的病人才会被当作是青光眼, 这时候每筛出一个病人, 肯定就是青光眼, 不会筛出来的不是, 但会漏掉很多病人. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="Precision-Recall曲线"&gt;Precision-Recall曲线&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#Precision-Recall%E6%9B%B2%E7%BA%BF"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;X轴: Precision&lt;/li&gt;
+&lt;li&gt;Y轴: Recall&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;右上顶端:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;理想点&lt;/li&gt;
+&lt;li&gt;Precision=1.0&lt;/li&gt;
+&lt;li&gt;Recall=1.0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;P-R曲线的陡峭程度很重要. 在最大Precision时, 能够达到多大的Recall.&lt;br&gt;
+&lt;img src="https://i.loli.net/2018/04/01/5ac0be6b687da.png" alt="P-R_curve.png"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="ROC曲线"&gt;ROC曲线&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#ROC%E6%9B%B2%E7%BA%BF"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;X轴: False Positive Rate 假阳性率&lt;/li&gt;
+&lt;li&gt;Y轴: True Positive Rate  真阳性率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;左上顶点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;理想点&lt;/li&gt;
+&lt;li&gt;False positive rate 假阳性率=0 &lt;/li&gt;
+&lt;li&gt;True positive rate 真阳性率=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c250b9182.png" alt="ROC.png"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;ul&gt;
+&lt;li&gt;ROC曲线越往左上, 越好. &lt;/li&gt;
+&lt;li&gt;曲线下面积(AUC), 越大越好&lt;/li&gt;
+&lt;li&gt;45度线是随机瞎猜线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c511e280e.png" alt="ROC-2.png"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="未完待续"&gt;未完待续&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</guid><pubDate>Sun, 01 Apr 2018 11:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记3(各种率)</title><link>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;关于precision, recall的定义, 关于假阳性, 假阴性, 真阳性, 真阴性之类的定义, 我以后一定还是会忘记的.&lt;/p&gt;
+&lt;p&gt;而且鉴于我以前凡是两个能够弄混的事情一定可以弄混的特性,&lt;/p&gt;
+&lt;p&gt;于是把什么真假阴性阳性扩展到更多的情况, 画了张图&lt;/p&gt;
+&lt;p&gt;红色是分子, 灰色是分母. (灰色区域都是包含红色的)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/ratios.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</guid><pubDate>Sun, 01 Apr 2018 04:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记2</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-machine-learning"&gt;Applied Machine Learning in Python&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这门课实在是太差了. 严重差评:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本身讲得就很差, 还经常口误&lt;/li&gt;
+&lt;li&gt;不写板书, 对着ppt念&lt;/li&gt;
+&lt;li&gt;代码写得也混乱, 在函数内部用import? ? &lt;/li&gt;
+&lt;li&gt;交作业的时候要手动注释掉matplotlib&lt;/li&gt;
+&lt;li&gt;考试填空题是给出函数的运行结果&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;我上大学时上毛泽东思想概论和邓小平理论的课听着都比这舒坦.&lt;/p&gt;
+&lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="评估"&gt;评估&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E8%AF%84%E4%BC%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;不同的应用可能有非常不同的目标&lt;/li&gt;
+&lt;li&gt;Accuracy虽然广泛使用, 但其他的评估指标也可能使用. 例如:&lt;ul&gt;
+&lt;li&gt;用户满意度 (网络搜索)&lt;/li&gt;
+&lt;li&gt;收入(电子贸易)&lt;/li&gt;
+&lt;li&gt;病人生存率的提高(医疗)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="不平衡分类中的Accuracy"&gt;不平衡分类中的Accuracy&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E4%B8%8D%E5%B9%B3%E8%A1%A1%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84Accuracy"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;假设有两个分类: &lt;ul&gt;
+&lt;li&gt;相关(R): 阳性分类结果&lt;/li&gt;
+&lt;li&gt;不相关(N): 阴性分类结果&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;随机选择1000个样本, 平均而言: Out of 1000 randomly selected items, on average&lt;ul&gt;
+&lt;li&gt;1个R&lt;/li&gt;
+&lt;li&gt;999个N&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$$
+Accuracy = \frac{正确预测的数量}{总量}
+$$&lt;/p&gt;
+&lt;p&gt;你建了一个分类器, 在test set上测试后发现accuracy=99.9%&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wow! Amazingly good! 是不是? &lt;/li&gt;
+&lt;li&gt;为了比较, 假定我们有一个"dummy"分类器, 就是个假分类器, 不管输入是什么, 都预测是最多频率的类别, 比如N&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么
+$$
+Accuracy_{DUMMY} = \frac{999}{1000}=99.9\%
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="Dummy分类器完全忽略输入数据"&gt;Dummy分类器完全忽略输入数据&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#Dummy%E5%88%86%E7%B1%BB%E5%99%A8%E5%AE%8C%E5%85%A8%E5%BF%BD%E7%95%A5%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;scikit-learn中常用的DummyClassifier类型: &lt;ul&gt;
+&lt;li&gt;most_frequent: 预测值是出现频率最高的类别&lt;/li&gt;
+&lt;li&gt;stratified : 根据训练集中的频率分布给出随机预测&lt;/li&gt;
+&lt;li&gt;uniform: 使用等可能概率给出随机预测&lt;/li&gt;
+&lt;li&gt;constant: 根据用户的要求, 给出常数预测. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;这个方法的主要动机是F1-scoring, 当阳性分类很少的情况. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;如果你的模型预测结果跟Dummy差不多:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;功能无效，错误或缺失&lt;/li&gt;
+&lt;li&gt;内核或超参数选择不当&lt;/li&gt;
+&lt;li&gt;分类失衡, 有的类别太多&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="重点重点:-Binary-prediction-outcomes"&gt;重点重点: Binary prediction outcomes&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E9%87%8D%E7%82%B9%E9%87%8D%E7%82%B9:-Binary-prediction-outcomes"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th style="text-align:left"&gt;&lt;/th&gt;
+&lt;th style="text-align:left"&gt;预测为(-)&lt;/th&gt;
+&lt;th style="text-align:left"&gt;预测为(+)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;实际为(-)&lt;/td&gt;
+&lt;td style="text-align:left"&gt;TN&lt;/td&gt;
+&lt;td style="text-align:left"&gt;FP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;实际为(+)&lt;/td&gt;
+&lt;td style="text-align:left"&gt;FN&lt;/td&gt;
+&lt;td style="text-align:left"&gt;TP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;TP = true positive 真阳性&lt;/li&gt;
+&lt;li&gt;FP = false positive (Type I error) 假阳性(Type I错误) , 印象里就是P&amp;lt;0.05的0.05&lt;/li&gt;
+&lt;li&gt;TN = true negative 真阴性&lt;/li&gt;
+&lt;li&gt;FN = false negative (Type II error)假阴性(Type II错误)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上面的矩阵叫做: Confusion-Matrix&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Accuracy: 分类正确的概率. 实际为(-)预测为(-), 实际为(+)预测为(+)叫做正确. 
+$$
+Accuracy=\frac{TP + TN}{TP + TN + FP + FN}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Classification error: (1-Accuracy), 分类错误的概率
+$$
+Classification\;  error=\frac{FP + FN}{TP + TN + FP + FN}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Recall, 真阳性率: 实际上为(+), 能够被预测成(+)的概率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recall又叫 &lt;/li&gt;
+&lt;li&gt;True Positive Rate (TPR): 真阳性率&lt;/li&gt;
+&lt;li&gt;Sensitivity: 敏感性&lt;/li&gt;
+&lt;li&gt;Probability of detection: 检出率
+$$
+Recall=\frac{TP}{TP+FN}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Precision: 如果预测为(+), 那么预测正确的概率
+$$
+Precision=\frac{TP}{TP+FP}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;又叫做: Specificity, 特异性
+$$
+False positive rate=\frac{FP}{TN+FP}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="高precision,-低recall"&gt;高precision, 低recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E9%AB%98precision,-%E4%BD%8Erecall"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.loli.net/2018/03/31/5abf84bf4da95.png" alt="high precision.png"&gt;
+无罪推定, 抓到的坏人都是有罪的, 但也可能有很多漏网了.&lt;/p&gt;
+&lt;h3 id="高recall,-低precision"&gt;高recall, 低precision&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E9%AB%98recall,-%E4%BD%8Eprecision"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.loli.net/2018/03/31/5abf84c2c0a78.png" alt="high recall.png"&gt;
+宁肯错杀一千, 不可放走一个.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="precision与recall的折衷"&gt;precision与recall的折衷&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#precision%E4%B8%8Erecall%E7%9A%84%E6%8A%98%E8%A1%B7"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Recall指导的机器学习任务:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;法律搜索和法律信息提取&lt;/li&gt;
+&lt;li&gt;肿瘤检测Tumor detection&lt;/li&gt;
+&lt;li&gt;通常配备人类专家剔除假阳性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Precision指导的机器学习任务&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搜索引擎排序, 搜索建议&lt;/li&gt;
+&lt;li&gt;文档分类&lt;/li&gt;
+&lt;li&gt;很多面向用户的任务(因为用户记住错误!)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="F1-score:-结合precision与recall"&gt;F1-score: 结合precision与recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;$$
+F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
+$$&lt;/p&gt;
+&lt;h3 id="F-score:-更一般地将precision与recall结合成单独一个数"&gt;F-score: 更一般地将precision与recall结合成单独一个数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;$$
+F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
+$$&lt;/p&gt;
+&lt;p&gt;𝛽用来调整recall vs precision之间的重要程度:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Precision-oriented users: 𝜷 = 0.5 &lt;/li&gt;
+&lt;li&gt;Recall-oriented users: 𝜷 = 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;compute_scores&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;TN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;FP&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;FN&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;# Accuracy = TP + TN / (TP + TN + FP + FN)&lt;/span&gt;
+    &lt;span class="c1"&gt;# Precision = TP / (TP + FP)&lt;/span&gt;
+    &lt;span class="c1"&gt;# Recall = TP / (TP + FN)  Also known as sensitivity, or True Positive Rate&lt;/span&gt;
+    &lt;span class="c1"&gt;# F1 = 2 * Precision * Recall / (Precision + Recall) &lt;/span&gt;
+    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;
+    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Accuracy"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;TN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;TN&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Precision"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Recall"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Also known as sensitivity, or True Positive Rate&lt;/span&gt;
+    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"F1"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Precision"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Recall"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Precision"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Recall"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; 
+    
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;c_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"TN"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"FP"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+          &lt;span class="s2"&gt;"FN"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"TP"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;96&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="n"&gt;compute_scores&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;96&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;{'Accuracy': 0.905511811023622,
+ 'F1': 0.9411764705882353,
+ 'Precision': 0.9230769230769231,
+ 'Recall': 0.96}&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="未完待续"&gt;未完待续&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</guid><pubDate>Sat, 31 Mar 2018 12:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;最近在学Michigan大学Data science课程的第三门&lt;a href="https://www.coursera.org/learn/python-machine-learning/home/welcome"&gt;Applied Machine Learning in Python&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;唉, 老师讲课好差劲. 听一遍一点印象都没有, 很快就忘了. 如果一个老师如果上课的时候不写板书, 只用PPT, 高概率不是个好老师. 连作业里的代码风格都很差劲, 哪有在函数内部import的, 交作业的时候还得自己把matplotlib给注释掉.&lt;/p&gt;
+&lt;p&gt;就是这个老师啦:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://coursera-instructor-photos.s3.amazonaws.com/61/58158043d011e69605657346ccd592/kevyn.jpg" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;Kevyn Collins-Thompson&lt;/p&gt;
+&lt;p&gt;所以, 得趁着刚写完作业, 还有些印象, 赶紧记录下来.&lt;/p&gt;
+&lt;p&gt;这门课讲的也是机器学习, 但不是深度学习, 而是更为"传统"一些的. 用到的主要是Scikit-Learn.&lt;/p&gt;
+&lt;p&gt;关于Scikit-learn, datacamp上有个&lt;a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet"&gt;cheat sheet&lt;/a&gt;看起来不错, 而且&lt;a href="http://scikit-learn.org/stable/documentation.html"&gt;SciKit-Learn自己的说明文档&lt;/a&gt;也很不错. 以后还是看这些文档参考.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="常用算法"&gt;常用算法&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这门课主要讲了SciKit-Learn里几个常用的算法:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;KNN&lt;/li&gt;
+&lt;li&gt;线性回归: 最小二乘拟合, Ridge, Lasso, Polynomial Regression&lt;/li&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;支持向量机: 线性和Kernelized&lt;/li&gt;
+&lt;li&gt;多层分类&lt;/li&gt;
+&lt;li&gt;Cross-Validation&lt;/li&gt;
+&lt;li&gt;Decision Trees&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="通用步骤"&gt;通用步骤&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E9%80%9A%E7%94%A8%E6%AD%A5%E9%AA%A4"&gt;¶&lt;/a&gt;&lt;/h2&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="分开数据集"&gt;分开数据集&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%88%86%E5%BC%80%E6%95%B0%E6%8D%AE%E9%9B%86"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;之前可能还需要归一化.&lt;/p&gt;
+&lt;p&gt;传统的机器学习方法, 数据集的数量可能并不大, 因此还是会留出1/5~1/4的数据作为test set. 要用train_test_split把数据集分开.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 随便给个数据集&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
+&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[15]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a1493f5c0&amp;gt;]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAD8CAYAAABn919SAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMi4wLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvFvnyVgAADlNJREFUeJzt3W+snnV9x/HPBwrZxC0WeiAd0B5RwiQkgr1DOkkWkLlgJCt7oJE40iy47gEqGBODPNGHPFA3HxCTDipN1rEZxEAMcZCuCU8s8b7RTFglNB0HOzp6gG6gT+jxfH1wrhOP5Zze15/7+ve73q/EnPu+erXX7w7w8dfv7/f73o4IAQD675y2BwAAmA0CHQASQaADQCIIdABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJCITU0+bMuWLTE/P9/kIwGg9yaTyesRMTftvkYDfX5+XuPxuMlHAkDv2V7Icx8lFwBIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJAIAh0AajZZOKUHDh3VZOFUrc9pdB86AAzNZOGUPvvgYb2ztKzzN52jA5/bqR3bN9fyLGboAFCjw8fe0DtLy1oO6fTSsg4fe6O2ZxHoAFCjnVdcpPM3naNzLZ236RztvOKi2p5FyQUAarRj+2Yd+NxOHT72hnZecVFt5RaJQAeAUiYLp3KH9I7tm2sN8lUEOgAU1ORCZxHU0AGgoCYXOosg0AGgoCYXOoug5AIABTW50FkEgQ4AJTS10FkEJRcASASBDgCJINABIBEEOgAkYmqg277c9iHbR2y/YPvu7PqFtp+2/VL2s1urAwAwMHlm6EuSvhwRH5K0U9Jdtq+WdK+kgxFxpaSD2XsAQEumBnpEnIiI57LXb0s6IulSSbsk7c9u2y/ptroGCQCYrlAN3fa8pOskPSvpkog4Ia2EvqSLZz04AGhaU98uVIfcB4tsv1fS9yXdExFv2c77+/ZI2iNJ27ZtKzNGAKgkb2fErjbdyivXDN32eVoJ8wMR8Vh2+TXbW7Nf3yrp5Hq/NyL2RsQoIkZzc3OzGDMA5LYa0t986kV99sHDZ515d7XpVl55drlY0kOSjkTEt9b80hOSdmevd0t6fPbDA4BqioR0V5tu5ZWn5HKDpDsk/dz2z7Jr90m6X9L3bN8p6RVJn6pniABQ3mpIn15anhrSXW26lZcjorGHjUajGI/HjT0PAKRi3y7URbYnETGadh/dFgEkr4udEevA0X8ASASBDgCJINABIBEEOoDe6vOpzjqwKAqgl/p+qrMOzNAB9FLfT3XWgUAH0Et9P9VZB0ouAHqp76c660CgA+itoRwYyouSC4BOYedKeczQAXQGO1eqYYYOoDPYuVINgQ6gM9i5Ug0lFwCNyNPClp0r1RDoAGpXpDbOzpXyKLkAqB218WYQ6ABqR228GZRcANSO2ngzCHQAjaA2Xj9KLgCQCAIdABJBoANAIgh0AEgEgQ4AiSDQASARBDqA0uhd3i3sQwdQCr3Lu4cZOoBS6M/SPQQ6gFLoz9I9lFwAlEJ/lu4h0AGURn+WbqHkAgCJINABvAvbEfuJkgswEHm+03P1PrYj9hOBDgxAkZBebzsigd4PlFyAASiyZ5ztiP3FDB0YgNWQPr20PDWk2Y7YX46Ixh42Go1iPB439jwAv5O3ho7usT2JiNG0+6bO0G3vk3SrpJMRcU127euS/k7SYnbbfRHxZPnhAqgbe8bTl6eG/rCkW9a5/g8RcW32P8IcAFo2NdAj4hlJbzYwFgBABVV2uXze9n/a3mebv8cBQMvKBvp3JH1A0rWSTkj65kY32t5je2x7vLi4uNFtAICKSgV6RLwWEb+JiGVJ/yTp+rPcuzciRhExmpubKztOAMAUpQLd9tY1b/9a0vOzGQ4AoKw82xYfkXSjpC22j0v6mqQbbV8rKSS9LOnvaxwjgLNgfzlWTQ30iLh9ncsP1TAWAAXRSAtr0csF6DG+1xNrEehAj9FIC2vRnAvoMRppYS0CHeg5erRgFSUXAEgEgQ4AiSDQASARBDrQoMnCKT1w6KgmC6faHgoSxKIo0JAih4A4/YkyCHSgIesdAlovrDn9ibIouQANyXsIiNOfKIsZOtCQvIeAVoP/9NIypz9RiCOisYeNRqMYj8eNPQ/oK2roWMv2JCJG0+5jhg50EKc/UQY1dABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJAIAh0AEkGgAxXRQRFdwcEioAIaaaFLmKEDFdBIC11CoAMV5O2gCDSBkgtQQd4OikATCHRgA3k7HtJIC11BoAPrYLETfUQNHVgHi53oIwIdWAeLnegjSi7AOljsRB8R6BiUIl/txmIn+oZAx2Cw0InUUUPHYLDQidQR6BgMFjqROkouSEKe2jgLnUgdgY7eK1IbZ6ETKaPkgt6jNg6sINDRe9TGgRVTSy6290m6VdLJiLgmu3ahpH+TNC/pZUmfjgi+rgWtoDYOrMgzQ39Y0i1nXLtX0sGIuFLSwew90Jod2zfrrps+SJhj0KYGekQ8I+nNMy7vkrQ/e71f0m0zHhcAoKCyNfRLIuKEJGU/L97oRtt7bI9tjxcXF0s+DgAwTe2LohGxNyJGETGam5ur+3EAMFhlA/0121slKft5cnZDAgCUUTbQn5C0O3u9W9LjsxkOAKCsqYFu+xFJP5Z0le3jtu+UdL+kj9t+SdLHs/cAgBZN3YceEbdv8Es3z3gswO8p0rscAL1c0FH0LgeK4+g/Oon+LEBxBDo6if4sQHGUXNBJ9GcBiiPQ0bi8i530LgeKIdDRKBY7gfpQQ0ejWOwE6kOgo1EsdgL1oeSCmShSF2exE6gHgY7KitbFWewE6kHJBWc1WTilBw4d1WRh428YpC4OdAMzdGwo78x7tS5+emmZujjQIgIdG1pv5r1eoFMXB7qBQMeGisy8qYsD7SPQsSFm3kC/EOg4K2beQH+wywUAEkGgA0AiCPQByrO3HED/UEMfGLodAulihj4wnOoE0kWgDwzdDoF0UXIZGPaWA+ki0AeIveVAmii5AEAiCHQASASBDgCJINABIBEEekI4AQoMG7tcEsEJUADM0BPBCVAABHoiOAEKgJJLIjgBCoBATwgnQIFho+QCAIkg0AEgEQQ6ACSCQAeARFRaFLX9sqS3Jf1G0lJEjGYxKPzOZOEUO1cA5DKLXS43RcTrM/hzcAZOfwIogpJLh3H6E0ARVQM9JD1le2J7zywGNBR5Gmlx+hNAEVVLLjdExKu2L5b0tO1fRMQza2/Ign6PJG3btq3i49KQt5TC6U8ARVSaoUfEq9nPk5J+IOn6de7ZGxGjiBjNzc1VeVwyipRSdmzfrLtu+iBhDmCq0oFu+wLbf7T6WtJfSnp+VgNLGaUUAHWoUnK5RNIPbK/+Of8SET+ayagSRykFQB1KB3pEHJP04RmOZVBopAVg1ti2OEN8BRyANtE+d0Y4BASgbczQZ4RDQADaRqDnwCEgAH1AyWUKDgEB6AsCfYr1SikbhTU7VwC0iZLLFJRSAPQFM/QpKKUA6AsCPQdKKQD6gJILACSCQAeARBDoAJCIwQY6fVcApGaQi6L0XQGQokHO0Om7AiBFgwx0DgsBSNEgSy4cFgKQokEGusRhIQDpGWTJBQBSRKADQCKSC3T2lwMYqqRq6OwvBzBkSc3Q2V8OYMiSCnT2lwMYsqRKLuwvBzBkSQW6xP5yAMOVVMkFAIaMQAeARBDoAJAIAh0AEkGgA0AiehHoHOcHgOk6v22R4/wAkE/nZ+gc5weAfDof6BznB4B8Ol9y4Tg/AOTT+UCXOM4PAHl0vuQCAMiHQAeARFQKdNu32H7R9lHb985qUACA4koHuu1zJT0g6ROSrpZ0u+2rZzUwAEAxVWbo10s6GhHHIuIdSf8qaddshgUAKKpKoF8q6Zdr3h/PrgEAWlBl26LXuRbvusneI2lP9vZXtl8s+bwtkl4v+Xv7is88DHzmYajymbfnualKoB+XdPma95dJevXMmyJir6S9FZ4jSbI9johR1T+nT/jMw8BnHoYmPnOVkstPJF1p+/22z5f0GUlPzGZYAICiSs/QI2LJ9ucl/bukcyXti4gXZjYyAEAhlY7+R8STkp6c0VimqVy26SE+8zDwmYeh9s/siHetYwIAeoij/wCQiF4E+tBaDNi+3PYh20dsv2D77rbH1ATb59r+qe0ftj2WJth+n+1Hbf8i+2f9Z22PqW62v5T9O/287Uds/0HbY5o12/tsn7T9/JprF9p+2vZL2c9a2sd2PtAH2mJgSdKXI+JDknZKumsAn1mS7pZ0pO1BNOjbkn4UEX8q6cNK/LPbvlTSFyWNIuIarWym+Ey7o6rFw5JuOePavZIORsSVkg5m72eu84GuAbYYiIgTEfFc9vptrfyHnvQpXNuXSfqkpAfbHksTbP+xpD+X9JAkRcQ7EfF/7Y6qEZsk/aHtTZLeo3XOrvRdRDwj6c0zLu+StD97vV/SbXU8uw+BPugWA7bnJV0n6dl2R1K7f5T0FUnLbQ+kIVdIWpT03azM9KDtC9oeVJ0i4n8kfUPSK5JOSPr/iHiq3VE15pKIOCGtTNgkXVzHQ/oQ6LlaDKTI9nslfV/SPRHxVtvjqYvtWyWdjIhJ22Np0CZJH5H0nYi4TtKvVdNfw7siqxvvkvR+SX8i6QLbf9PuqNLSh0DP1WIgNbbP00qYH4iIx9oeT81ukPRXtl/WSkntY7b/ud0h1e64pOMRsfo3r0e1EvAp+wtJ/x0RixFxWtJjkj7a8pia8prtrZKU/TxZx0P6EOiDazFg21qprR6JiG+1PZ66RcRXI+KyiJjXyj/f/4iIpGduEfG/kn5p+6rs0s2S/qvFITXhFUk7bb8n+3f8ZiW+ELzGE5J2Z693S3q8jod0/kuiB9pi4AZJd0j6ue2fZdfuy07mIh1fkHQgm6gck/S3LY+nVhHxrO1HJT2nlZ1cP1WCJ0ZtPyLpRklbbB+X9DVJ90v6nu07tfJ/bJ+q5dmcFAWANPSh5AIAyIFAB4BEEOgAkAgCHQASQaADQCIIdABIBIEOAIkg0AEgEb8Fk4CiddyeFR4AAAAASUVORK5CYII="&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.model_selection&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;train_test_split&lt;/span&gt;
+&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;train_test_split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"red"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'o'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"blue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
+
+
+
+
+&lt;div class="output_text output_subarea output_execute_result"&gt;
+&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a14881f28&amp;gt;]&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="设模型并训练"&gt;设模型并训练&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E8%AE%BE%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%AE%AD%E7%BB%83"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;一般来说设定模型就是模型().fit(X_train,y_train),&lt;/p&gt;
+&lt;p&gt;要应用训练好的模型就用模型.predict(X),&lt;/p&gt;
+&lt;p&gt;评估的话, 就是模型.score(X_train, y_train) 和模型.score(X_test, y_test)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [24]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;
+&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LinearRegression&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (training): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (test): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
+     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;R-squared score (training): 0.997
+R-squared score (test): 0.998
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+
+
+&lt;div class="output_png output_subarea "&gt;
+&lt;img src="data:image/png;base64,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"&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="各模型总结"&gt;各模型总结&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%90%84%E6%A8%A1%E5%9E%8B%E6%80%BB%E7%BB%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th style="text-align:left"&gt;含义&lt;/th&gt;
+&lt;th style="text-align:left"&gt;函数&lt;/th&gt;
+&lt;th style="text-align:left"&gt;cost function&lt;/th&gt;
+&lt;th style="text-align:left"&gt;参数&lt;/th&gt;
+&lt;th&gt;过拟合时调参&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;常规线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;LinearRegression&lt;/td&gt;
+&lt;td style="text-align:left"&gt;MSE&lt;/td&gt;
+&lt;td style="text-align:left"&gt;无&lt;/td&gt;
+&lt;td&gt;无&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;参数L2约束(平方和)的线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;Ridge&lt;/td&gt;
+&lt;td style="text-align:left"&gt;MSE+alpha* Sum(w^2)&lt;/td&gt;
+&lt;td style="text-align:left"&gt;alpha&lt;/td&gt;
+&lt;td&gt;增大alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;参数L1约束(稀疏)的线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;Lasso&lt;/td&gt;
+&lt;td style="text-align:left"&gt;MSE+ alpha* Sum(abs(w))&lt;/td&gt;
+&lt;td style="text-align:left"&gt;alpha=2.0, max_iter = 10000&lt;/td&gt;
+&lt;td&gt;增大alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;多项式拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;PolynomialFeatures&lt;/td&gt;
+&lt;td style="text-align:left"&gt;先poly = PolynomialFeatures(degree=2), 然后X_poly = poly.fit_transform(X), 再送入各种线性拟合&lt;/td&gt;
+&lt;td style="text-align:left"&gt;同Ridge或Lasso&lt;/td&gt;
+&lt;td&gt;同Ridge或Lasso&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;其实就是Sigmoid&lt;/td&gt;
+&lt;td style="text-align:left"&gt;LogisticRegression&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;C, 负责L2约束&lt;/td&gt;
+&lt;td&gt;减小C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;线性SVM&lt;/td&gt;
+&lt;td style="text-align:left"&gt;LinearSVC&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;C&lt;/td&gt;
+&lt;td&gt;减小C&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;Kernelized SVM&lt;/td&gt;
+&lt;td style="text-align:left"&gt;SVC(kernel = "rbf")&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;C, 负责曲面的平滑, gamma, 负责局部点的重要性&lt;/td&gt;
+&lt;td&gt;减小C, 减小gamma&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;决策树&lt;/td&gt;
+&lt;td style="text-align:left"&gt;DecisionTreeClassifier&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;max_depth, min_samples_leaf&lt;/td&gt;
+&lt;td&gt;减小max_depth, 增大min_samples_leaf&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note/</guid><pubDate>Sun, 25 Mar 2018 15:30:00 GMT</pubDate></item><item><title>面向眼科医生的正则表达式(0)-简介</title><link>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist-0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -4213,778 +5003,4 @@ Assigned Metropolis to post_mus
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</guid><pubDate>Fri, 29 Dec 2017 04:05:52 GMT</pubDate></item><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/posts/python/abcd-matrix/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="光线传输矩阵"&gt;光线传输矩阵&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E5%85%89%E7%BA%BF%E4%BC%A0%E8%BE%93%E7%9F%A9%E9%98%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这是一次sympy的小练习.&lt;/p&gt;
-&lt;p&gt;光线传输矩阵又称做&lt;a href="https://en.wikipedia.org/wiki/Ray_transfer_matrix_analysis"&gt;ABCD矩阵&lt;/a&gt; 用来描述近轴光线的传播过程.&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/RayTransferMatrixDefinitions.svg/600px-RayTransferMatrixDefinitions.svg.png" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;光线穿过一个光学系统的过程可以用一个2x2的矩阵来表示, 如果:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;入射光线距离光轴是x1, 角度是 θ1,  &lt;/li&gt;
-&lt;li&gt;出射光线距离光轴是x2, 角度是 θ2,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那么: 
-$$
-\begin{bmatrix}x_2\\ \theta_2 \end{bmatrix} = \begin{bmatrix}A &amp;amp; B \\C &amp;amp; D \end{bmatrix} \begin{bmatrix}x_1\\ \theta_1 \end{bmatrix}
-$$&lt;/p&gt;
-&lt;p&gt;对于不同的光学元件, ABCD的取值不同.&lt;/p&gt;
-&lt;p&gt;下面准备使用python的符号运算库sympy, 进行光路的ABCD矩阵分析. 试图建立一个简化的眼球光路追迹模型. 
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Sympy基本"&gt;Sympy基本&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#Sympy%E5%9F%BA%E6%9C%AC"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;sympy是python库, 用于符号计算, 轻量级, 不依赖于其他库. 符号计算就是做类似于
-$$
-(x+y)^2 = x^2 +2xy+ y^2
-$$&lt;/p&gt;
-&lt;p&gt;试了一下sympy, 看起来还比较容易, 几个要点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;要把运算中涉及到的符号先定义好, 例如 &lt;code&gt;x,y = symbols('a b')&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;要注意一下大小写, symbols是小写, Matrix是大写, solve是小写&lt;/li&gt;
-&lt;li&gt;其他没什么了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我平时常用的几个函数也不多, 其实在mathematica里面也就常用这些.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;symbols(字符串), 字符串里面是符号, 注意用空格隔开&lt;/li&gt;
-&lt;li&gt;expr.subs(字典), 替换, 相当于mathematica里面的expr/.{x-&amp;gt;a}&lt;/li&gt;
-&lt;li&gt;Matrix(list), 把一个list转换成矩阵, 向量也用这个表示. &lt;/li&gt;
-&lt;li&gt;solve(expr,x), 求解expr==0时, x的解&lt;/li&gt;
-&lt;li&gt;simplify(expr), 化简表达式&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sympy&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="ABCD-Matrix"&gt;ABCD Matrix&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#ABCD-Matrix"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;内置上常用的参数字典, 其实最常用的也就是在自由空间内传播, 和在球面上折射, 而这两者可以合并成在球面上折射然后再传播一段距离.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在自由空间传播距离为d的矩阵是: 
-$$
-free\space space\space matrix=\begin{bmatrix} 1 &amp;amp; d \\ 0 &amp;amp; 1 \end{bmatrix}
-$$&lt;/li&gt;
-&lt;li&gt;在球面上折射的矩阵, 如果从n1折射率介质经过半径为R的球面, 折射到n2折射率介质: 
-$$
-curved\space interface\space matrix=\begin{bmatrix} 1 &amp;amp; 0 \\ \frac{(n_1-n_2)}{R n_2} &amp;amp; \frac{n_1}{n_2} \end{bmatrix}
-$$&lt;/li&gt;
-&lt;li&gt;两者合并是相乘的关系, 注意乘法的顺序, 从右至左应当先经过曲面, 再自由传播: &lt;/li&gt;
-&lt;/ul&gt;
-$$
-pass\space curved\space interface\space  matrix=
-\begin{bmatrix} 1 &amp;amp; d \\ 0 &amp;amp; 1 \end{bmatrix}
-\begin{bmatrix} 1 &amp;amp; 0 \\ \frac{(n_1-n_2)}{R n_2} &amp;amp; \frac{n_1}{n_2} \end{bmatrix}
-$$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;dictname&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'d n1 n2 R f p'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;abcd_dict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="s1"&gt;'free space'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;         &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-        &lt;span class="s1"&gt;'flat interface'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-        &lt;span class="s1"&gt;'curved interface'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;   &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-        &lt;span class="s1"&gt;'curved mirror'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;      &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-        &lt;span class="s1"&gt;'Thin lens'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;          &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-        &lt;span class="s1"&gt;'Thin lens in power'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;abcd_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;dictname&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Matrix&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;free_space&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d_inspace&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;d&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'free space'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;d_inspace&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;curved_interface&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;na&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nb&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;Rx&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'n1 n2 R'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'curved interface'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;([(&lt;/span&gt;&lt;span class="n"&gt;n1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;na&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="n"&gt;n2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nb&lt;/span&gt;&lt;span class="p"&gt;),(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;Rx&lt;/span&gt;&lt;span class="p"&gt;)])&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;pass_curved_interface&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;surface_parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;n_from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p_to&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;surface_parameters&lt;/span&gt;
-    &lt;span class="n"&gt;transfer_matrix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;free_space&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p_to&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;p_from&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;curved_interface&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n_from&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_to&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;transfer_matrix&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Thin_lens_in_power&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;power&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'p'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Thin lens in power"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;power&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="基础人眼模型"&gt;基础人眼模型&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E5%9F%BA%E7%A1%80%E4%BA%BA%E7%9C%BC%E6%A8%A1%E5%9E%8B"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;h3 id="The-Gullstrand-Schematic-Eye"&gt;The Gullstrand Schematic Eye&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#The-Gullstrand-Schematic-Eye"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;数据来自: AAO 2014版 Basic and Clinical Science Course (BCSC) Section 3: Clinical Optics 
-第75页&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;折射率:&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;n_air&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1.376&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.376&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;n_vitreous&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="mf"&gt;1.386&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.386&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;n_core_lens&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="mf"&gt;1.406&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.406&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;顶点位置:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;p_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;3.6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;p_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;4.146&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.8725&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;p_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;6.565&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;6.5275&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;p_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;7.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;7.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;24.4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;24.4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;曲率半径:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;7.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;7.7&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;R_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;6.8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;6.8&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;R_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;5.33&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;R_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;7.911&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;2.655&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;R_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.76&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.655&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;R_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;6.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.33&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [3]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Gullstrand_Schematic_Eye&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 需要定义成符号&lt;/span&gt;
-    &lt;span class="n"&gt;n_air&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_vitreous&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_core_lens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s1"&gt;'n_air n_cornea n_humor n_vitreous n_lens n_core_lens'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;p_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s1"&gt;'p_cornea_Anterior p_cornea_Posterior p_lens_Anterior p_core_lens_Anterior p_core_lens_Posterior p_lens_Posterior p_retina'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;R_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_lens_Posterior&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s1"&gt;'R_cornea_Anterior R_cornea_Posterior R_lens_Anterior R_core_lens_Anterior R_core_lens_Posterior R_lens_Posterior'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 对各个曲面的参数定义: 入射介质折射率, 出射介质折射率, 曲率半径, 本曲面顶点位置, 下一个曲面顶点位置&lt;/span&gt;
-    &lt;span class="n"&gt;surface&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s2"&gt;"cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n_air&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"core_lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_core_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"core_lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_core_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_vitreous&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"retina"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_vitreous&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_vitreous&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 曲面的顺序&lt;/span&gt;
-    &lt;span class="n"&gt;surface_seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"core_lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                &lt;span class="s2"&gt;"core_lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"retina"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 连乘&lt;/span&gt;
-    &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;eye&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# identity matrix&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;surface_seq&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pass_curved_interface&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;surface&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-        &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;
-    
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Gullstrand_Schematic_Eye具体参数"&gt;Gullstrand_Schematic_Eye具体参数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#Gullstrand_Schematic_Eye%E5%85%B7%E4%BD%93%E5%8F%82%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;每个项目有两个参数, 前者是调节放松状态, 后者是最大调节状态&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Gullstrand_Schematic_Eye_parameters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_air"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_cornea"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1.376&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;1.376&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_humor"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_vitreous"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_lens"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="mf"&gt;1.386&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.386&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_core_lens"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="mf"&gt;1.406&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;1.406&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;3.6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_core_lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;4.146&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;3.8725&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_core_lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;6.565&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;6.5275&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;7.2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mf"&gt;7.2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_retina"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;24.4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;24.4&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;7.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;7.7&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;6.8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;6.8&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;5.33&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_core_lens_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mf"&gt;7.911&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mf"&gt;2.655&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_core_lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.76&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;2.655&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_lens_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;6.0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;5.33&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="调节状态"&gt;调节状态&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E8%B0%83%E8%8A%82%E7%8A%B6%E6%80%81"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假定调节状态是各个参数的线性变化&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Accommodation_state&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;persentage&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;persentage&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;k&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;v&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; 
-        &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Gullstrand_Schematic_Eye_parameters&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt;
-            &lt;span class="n"&gt;Gullstrand_Schematic_Eye_parameters&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;())}&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;state&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="测试"&gt;测试&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E6%B5%8B%E8%AF%95"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假定调节状态从0到1, 以0.2变化, 其中调节状态=0是调节放松, 调节状态=1是最大调节状态.&lt;/p&gt;
-&lt;p&gt;入射光从光轴旁0.1mm,平行于光轴入射.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="n"&gt;input_light&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Matrix&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mf"&gt;0.1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;Accommodation&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Accommodation_state&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Accommodation&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;eye_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Gullstrand_Schematic_Eye&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;output_light&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;eye_matrix&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;input_light&lt;/span&gt;
-    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"视网膜上光点距离光轴的距离是: &lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;入射到视网膜上的角度是: &lt;/span&gt;&lt;span class="si"&gt;{1}&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;output_light&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;output_light&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;视网膜上光点距离光轴的距离是: -0.0000640808134414250
-入射到视网膜上的角度是: -0.00438892930222859
-
-视网膜上光点距离光轴的距离是: -0.00244173501856344
-入射到视网膜上的角度是: -0.00450936564030494
-
-视网膜上光点距离光轴的距离是: -0.00564544009371146
-入射到视网膜上的角度是: -0.00467085240921985
-
-视网膜上光点距离光轴的距离是: -0.0102850608794442
-入射到视网膜上的角度是: -0.00490361347080649
-
-视网膜上光点距离光轴的距离是: -0.0178899096062572
-入射到视网膜上的角度是: -0.00528324762831792
-
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="测试求解某个参数"&gt;测试求解某个参数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E6%B5%8B%E8%AF%95%E6%B1%82%E8%A7%A3%E6%9F%90%E4%B8%AA%E5%8F%82%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;将各个参数都先赋值, 然后取出要求解的x, 将其设定为symbol, 指定入射光线和出射光线参数后, 就可以求解了. 
-由于是使用的符号运算, 所以可以使用solve命令进行求解.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;solve_x_in_focus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;optic_matrix&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="c1"&gt;# 因为使用近轴光线假设, 所以并不存在球差, &lt;/span&gt;
-    &lt;span class="c1"&gt;# 所以输入光线平行于光轴都可以汇聚, 于输入光线位置无关&lt;/span&gt;
-    &lt;span class="n"&gt;x_input&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'x_input'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;input_light&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Matrix&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;x_input&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-    &lt;span class="n"&gt;output_light&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;optic_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;input_light&lt;/span&gt;
-    &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;solve&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;output_light&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Accommodation_state&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"p_retina"&lt;/span&gt;
-&lt;span class="n"&gt;p_retina&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;solve_x_in_focus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Gullstrand_Schematic_Eye&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"视网膜位置在: &lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;视网膜位置在: 24.3853994427731
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="戴上眼镜"&gt;戴上眼镜&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E6%88%B4%E4%B8%8A%E7%9C%BC%E9%95%9C"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;眼镜认为是薄透镜, 角膜距离眼镜12mm&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [9]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# f, d = symbols('f d')&lt;/span&gt;
-&lt;span class="n"&gt;glasses_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;free_space&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;ABCD&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'Thin lens in power'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Gullstrand_Schematic_Eye_wear_glasses&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;Gullstrand_Schematic_Eye&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;eye_parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;glasses_matrix&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [10]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;eye_wear_glasses_parameters&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;Accommodation_state&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;eye_wear_glasses_parameters&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"p_retina"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mf"&gt;25.6&lt;/span&gt;
-&lt;span class="n"&gt;power&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;solve_x_in_focus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Gullstrand_Schematic_Eye_wear_glasses&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;eye_wear_glasses_parameters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'p'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"眼镜屈光度=&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;power&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;眼镜屈光度=-3.08997137454269
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="计算人工晶体"&gt;计算人工晶体&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E8%AE%A1%E7%AE%97%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="人工晶体眼"&gt;人工晶体眼&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/abcd-matrix/#%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93%E7%9C%BC"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;人工晶体假定为薄透镜, 所在位置为ELP.&lt;/p&gt;
-&lt;p&gt;待调整, 可能需要把角膜两层合成一个K.&lt;/p&gt;
-&lt;p&gt;目前结果看起来有点怪异, 一般认为正视眼放入的IOL大约是19-20D, 现在得出的结果有点差得远, 大概什么地方有错误&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;IOL_Eye&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOL_eye_parameters&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 需要定义成符号&lt;/span&gt;
-    &lt;span class="n"&gt;n_air&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_vitreous&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_lens&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_core_lens&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s1"&gt;'n_air n_cornea n_humor n_vitreous n_lens n_core_lens'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;p_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s1"&gt;'p_cornea_Anterior p_cornea_Posterior p_lens_Anterior p_core_lens_Anterior p_core_lens_Posterior p_lens_Posterior p_retina'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;R_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_core_lens_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_core_lens_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_lens_Posterior&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-    &lt;span class="s1"&gt;'R_cornea_Anterior R_cornea_Posterior R_lens_Anterior R_core_lens_Anterior R_core_lens_Posterior R_lens_Posterior'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;ELP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'ELP'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;IOL_Power&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;symbols&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'IOL_Power'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="c1"&gt;# 对各个曲面的参数定义: 入射介质折射率, 出射介质折射率, 曲率半径, 本曲面顶点位置, 下一个曲面顶点位置&lt;/span&gt;
-    &lt;span class="n"&gt;surface&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s2"&gt;"cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;n_air&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Anterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="s2"&gt;"cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:[&lt;/span&gt;&lt;span class="n"&gt;n_cornea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;R_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;p_cornea_Posterior&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ELP&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 曲面的顺序&lt;/span&gt;
-    &lt;span class="n"&gt;surface_seq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 连乘&lt;/span&gt;
-    &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;eye&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# identity matrix&lt;/span&gt;
-    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;surface_seq&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-        &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pass_curved_interface&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;surface&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-        &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;
-        
-    &lt;span class="c1"&gt;# 经过人工晶体&lt;/span&gt;
-    &lt;span class="c1"&gt;# 此处可能有错误, 是否应当代入折射率&lt;/span&gt;
-    &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Thin_lens_in_power&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOL_Power&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;n_humor&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;
-    
-    &lt;span class="c1"&gt;# 到达视网膜&lt;/span&gt;
-    &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;free_space&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p_retina&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ELP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;
-    
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;eye_transfer_matrix&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;subs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOL_eye_parameters&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [12]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;IOL_eye_parameters&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_air"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_cornea"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;1.376&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_humor"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"n_vitreous"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;1.336&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;0.5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"p_retina"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;24.4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
-    &lt;span class="s2"&gt;"R_cornea_Anterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;7.7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"R_cornea_Posterior"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;6.8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"ELP"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-    &lt;span class="s2"&gt;"IOL_Power"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# IOL_eye_parameters['ELP']=symbols('ELP')&lt;/span&gt;
-&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"IOL_Power"&lt;/span&gt;
-&lt;span class="n"&gt;IOL_Power&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;simplify&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;solve_x_in_focus&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IOL_Eye&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;IOL_eye_parameters&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"人工晶体度数=: &lt;/span&gt;&lt;span class="si"&gt;{0}&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="n"&gt;IOL_Power&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;人工晶体度数=: 15.9734364841675
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>快速绘制操作示意图</title><link>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;先展示几张效果图：
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/01.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/02.jpg"&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;需要的的APP
-在iOS上&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;adobe draw&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;adobe capture&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;在android上&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;adobe draw&lt;/li&gt;
-&lt;li&gt;adobe gather&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;注意在android上，adobe draw和gather之间并没有非常好的衔接，还是需要同步到adobe的库中以后才能调用，而adobe服务器从国内访问的速度又很慢。&lt;/p&gt;
-&lt;p&gt;但，我有iPad，哪管android上的好用不好用。反正iPad上挺好用的。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/03.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;1 拍照
-对常见场景拍照，比如手持器械的照片，或者需要讲解的场景。&lt;/p&gt;
-&lt;p&gt;尽量在白色背景上照相，比如白色桌面或者是白纸上。&lt;/p&gt;
-&lt;p&gt;物体和手最好稍微离开桌面，以免留下明显的阴影。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/04.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;2 在adobe draw中新建图画，在图层中添加image layer，导入刚刚拍摄的场景照片。
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/05.jpg"&gt;
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/06.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;3 添加draw layer图层后，点击打开shape，然后点击“+”号，会自动切换至adobe capture。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/07.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/08.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;在adobe capture中从camera roll中导入照片&lt;/p&gt;
-&lt;p&gt;4 调整滑动条，使采集的图像仅仅保留边缘的线条，&lt;/p&gt;
-&lt;p&gt;采集后清除多余的线条和杂点，&lt;/p&gt;
-&lt;p&gt;在preview中，smooth选项推荐处于OFF关闭状态&lt;/p&gt;
-&lt;p&gt;之后save &amp;amp; return to adobe draw（屏幕顶部橙色条）&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/09.jpg"&gt;
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/10.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;5 在新建的draw layer图层中，小心地用双手指调整shape的大小和位置，直到与底部的照片相吻合，然后双击屏幕，shape印章盖下。&lt;/p&gt;
-&lt;p&gt;本层暂且称为浅色层
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/11.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;6 再次重复：&lt;/p&gt;
-&lt;p&gt;新建draw layer图层，&lt;/p&gt;
-&lt;p&gt;点击shape菜单，点击+，&lt;/p&gt;
-&lt;p&gt;在adobe capture中导入照片。&lt;/p&gt;
-&lt;p&gt;本次调整滑动条，向较深颜色方向移动，记录更多的细节。&lt;/p&gt;
-&lt;p&gt;然后capture&lt;/p&gt;
-&lt;p&gt;save &amp;amp; return
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/12.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;7 在adobe draw中新建的draw layer图层，&lt;/p&gt;
-&lt;p&gt;调整好shape的位置后，双击屏幕，shape印章盖下&lt;/p&gt;
-&lt;p&gt;本层暂且称为深色层&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/13.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;8 新建draw layer图层，&lt;/p&gt;
-&lt;p&gt;用笔按照照片的提示描绘缺少边缘的细节，比如剪子尖端。不需要非常精细地描绘，&lt;/p&gt;
-&lt;p&gt;用笔填充无用的空洞
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/14.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;9 在深色图层中&lt;/p&gt;
-&lt;p&gt;用橡皮擦擦去多余的点、连成片的黑色区域，并适当使用笔补充边缘线条。&lt;/p&gt;
-&lt;p&gt;完成后，将照片层隐藏，底色层隐藏，然后导出为图片，存入camera roll。
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/15.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;10 新建draw layer图层，隐藏其余所有图层，&lt;/p&gt;
-&lt;p&gt;点击shape菜单中的“+”号，进入adobe capture，导入刚刚存入camera roll的线条图。&lt;/p&gt;
-&lt;p&gt;稍微清理后，在preview中注意将smooth的开关打开至ON，&lt;/p&gt;
-&lt;p&gt;完成后save &amp;amp; return to adobe draw
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/16.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;11 隐藏其他所有的图层，&lt;/p&gt;
-&lt;p&gt;调整shape至合适的大小，双击屏幕，shape印章盖下。&lt;/p&gt;
-&lt;p&gt;此图层为完成版，如果发现仍有细节需要修改，可以再次重复前面的步骤7-10&lt;/p&gt;
-&lt;p&gt;完成后，可以导出图像至camera roll，供后续使用。
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/17.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;在写书或者做讲课课件时，可以用本方法制作很多操作示意图。我不确定手术过程中的照片是否容易用类似方法绘制，最差也可以用照片垫底，在上面有笔勾勒一些关键线条，总是比自己完全重绘要简单很多。&lt;/p&gt;
-&lt;p&gt;对于已经制作好的图片，也可以再利用简单的图像编辑，甚至PPT，就可以更换器械，比如笔可以换成15度刀、月形刀、phaco手柄、chopper钩之类。上面做的拿剪子的动作，也很容易换成各种手术钳。
-&lt;img alt="" src="https://goldengrape.github.io/images/%E6%89%8B%E7%BB%98/18.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;对于眼科的常用手术器械，我之前已经做过了。眼科大夫自用可以从下面链接下载：&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/goldengrape/phacoTools/raw/master/phaco%20tools.pptx"&gt;https://github.com/goldengrape/phacoTools/raw/master/phaco%20tools.pptx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;眼科公司商业使用请联系我。当然也欢迎各公司把自己的产品做成容易在PPT里编辑粘贴的图片，供医生写书和讲课使用。&lt;/p&gt;&lt;/div&gt;</description><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/make-simple-fig/</guid><pubDate>Mon, 18 Dec 2017 18:36:43 GMT</pubDate></item><item><title>机器学习的战略(6)--end to end</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;端到端学习 end-to-end Learning&lt;/h2&gt;
-&lt;p&gt;这个也是吓人.  读书人, 相煎何太急.&lt;/p&gt;
-&lt;p&gt;end-to-end的一端是原始数据, 另一端是想要的结果. 比如也许从一张眼底照片+FFA直接给出眼底激光应该打哪里, 或者说中文直接给出翻译好的英文字幕. 从一端到另一端中间本来是有很多研究过程在里面的,
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;中文语音-&amp;gt;音频信号增强降噪-&amp;gt;音节提取-&amp;gt;转成文字-&amp;gt;翻译-&amp;gt;英文字幕,&lt;/li&gt;
-&lt;li&gt;眼底照片+FFA-&amp;gt;数微血管瘤, 渗出-&amp;gt;形成糖尿病视网膜病变诊断-&amp;gt;分期-&amp;gt;判定新生血管-&amp;gt;规划激光点位置-&amp;gt;开打&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;每个环节都有一堆PhD论文, 有一堆临床经验, 现在突然有一部分问题可以直接跳过中间环节, 从一端直接获得另一端的结果. 有时候学术研究也堪比柯达胶卷, 明明自己很努力也没做错什么, 整个领域突然就废了.&lt;/p&gt;
-&lt;p&gt;不过好在目前还不是所有的问题都可以end-to-end, 而且也不是end-to-end就效果很好. 有些问题加个中间环节反而可以更有效.&lt;/p&gt;
-&lt;p&gt;课程中的例子是:
-&lt;em&gt; 门禁的人脸识别, 一种是直接从图像-&amp;gt;身份ID的end-to-end, 另一种是图像-&amp;gt;标记出人脸-&amp;gt;剪裁图片人脸放大居中-&amp;gt;身份ID. 后者的效果更好.
-&lt;/em&gt; 另一个例子是从X光片看儿童发育, 直接从图像-&amp;gt;年龄的效果不如图像-&amp;gt;提取分离骨骼图像-&amp;gt;骨骼尺寸-&amp;gt;年龄, 而且其中骨骼尺寸-&amp;gt;年龄是可以从正常值的统计得出的.&lt;/p&gt;
-&lt;h2&gt;是否使用end-to-end&lt;/h2&gt;
-&lt;p&gt;优点:
-&lt;em&gt; 完全来自于数据, 机器学习"总结"出来的规律是客观数据所反映的, 不是人想象出来的, 用不着讨论是"木火土金水"还是"金木水火土"
-&lt;/em&gt; 用不着太多手工设计.&lt;/p&gt;
-&lt;p&gt;缺点:
-&lt;em&gt; 需要大量大量大量大量的数据.
-&lt;/em&gt; 排除了手工设计的组件.
-    * 手工设计组件并非坏事, 人类的推理归纳还是对知识的扩展有很大意义.
-    * 而且, 从我做发明的经验来看, 很多公司要求避免使用比较"黑箱"的深度学习方法, 大概很难查错吧.&lt;/p&gt;
-&lt;p&gt;是否用end-to-end的关键在于, 已经拥有的data数量是否已经可以 &lt;strong&gt;足够&lt;/strong&gt; 反映出问题的复杂性. 足够的定义就只好靠经验和实践了.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/</guid><pubDate>Mon, 18 Dec 2017 17:23:43 GMT</pubDate></item><item><title>机器学习的战略(5)--迁移学习</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;迁移学习&lt;/h2&gt;
-&lt;p&gt;好激动, 这是整个机器学习里面最激动人心最吸引人的部分了. 知道了迁移学习这事情以后, 我才比较理解为什么整个课程一直没有进入各种fancy的CNN, RNN之类的神经网络结构, 而仅仅就是把层次多一点的神经网络称为深度神经网络.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;迁移学习是说, 可以用训练好的神经网络稍微改改, 用自己的数据来训练最后几层. 比如可以用ImangeNet的优胜者模型, 类似GoogleNet, VGG之类, 这些网络模型是用来分类常规图像的, 比如阿猫阿狗, 但是可以固定前面层次的参数, 留出最后一两层的全连接神经网络, 用自己的数据, 比如眼底图片或者放射科影像来训练.&lt;/p&gt;
-&lt;p&gt;这时候训练的数据量不需要很大, 至少不必像ImageNet那样的大量数据集了. 因为前面一些层次的神经元往往是用来提取图像的低级特征的, 类似提取边缘之类的.&lt;/p&gt;
-&lt;p&gt;如果只训练了最后一个全连接层觉得效果不够好, 可以再逐渐加层次. 也就是把训练好的模型(如VGG)当作标准的特征提取器或者域变换操作, 先对数据进行预处理, 然后送进自己的神经网络.&lt;/p&gt;
-&lt;p&gt;补充说一下, 由于迁移学习常用, 所以很多机器学习的框架例如tensorflow \ pytorch都有所谓的model zoo. 知名的模型已经都摆在zoo里面供大家挑选了.  &lt;/p&gt;
-&lt;p&gt;这里面需要注意的是, 迁移学习用的模型数据形式至少要和目标是一样的, 比如用ImageNet竞赛获奖模型, 那么至少应该是用来看图的.&lt;/p&gt;
-&lt;p&gt;然后, 吴恩达老师举例子的时候, 目标dataset的数据量终于从100k的数量级降到1k的数量级了. 突然觉得有希望能做东西了有没有.&lt;/p&gt;
-&lt;h2&gt;多任务学习&lt;/h2&gt;
-&lt;p&gt;这一部分离我远一些, 兴趣不大. 大概在自动驾驶的场景里比较多.&lt;/p&gt;
-&lt;p&gt;与单独识别一张照片里有猫还是没猫不一样. 可以同时训练在图像里找到多个目标, 比如是否有红灯\是否有行人\是否有其他车辆, 这些事情要放在一起学, 不要单独训练是否有红灯, 再用另一组dataset训练是否有行人, 因为拆分了任务就很难保证足够大的dataset, 效果会差一些.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;update&lt;/p&gt;
-&lt;p&gt;迁移学习也是有代价的, 继承深度神经网络的处理能力时, 也会继承神经网络内在的"错觉", 我觉得错觉比bug更能解释问题的所在. 从成本考虑, 我觉得未来肯定越来越多的应用是使用迁移学习来的, 被继承的深度神经网络只会是有限的几个. 会有一些针对性的错觉被发现, 甚至还可能会有共有的错觉.&lt;/p&gt;
-&lt;p&gt;参考&lt;a href="https://www.wired.com/story/machine-learning-backdoors/"&gt;Even Artificial Neural Networks Can Have Exploitable 'Backdoors'&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:31 GMT</pubDate></item></channel></rss>
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</guid><pubDate>Fri, 29 Dec 2017 04:05:52 GMT</pubDate></item></channel></rss>
