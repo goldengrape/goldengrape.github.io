@@ -2,7 +2,7 @@
 .. title: Scikit-learn笔记3(各种率)
 .. slug: scikit-learn-note-3
 .. date: 2018-4-1 12:00 UTC+08:00
-.. tags: python
+.. tags: 现代眼科医生知识扩展包, python
 .. category:
 .. link:
 .. description:
