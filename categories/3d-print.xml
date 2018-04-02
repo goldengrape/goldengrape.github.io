@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：3D print)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/3d-print.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 02 Apr 2018 18:44:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用Fusion360编辑STL</title><link>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;STL文件就像是PDF, 是面向打印机的. 难以编辑. 即使能够编辑, 面对大量的三角形, 运行速度也非常慢.&lt;/p&gt;
+&lt;p&gt;不过最近总算找到了用Fusion360的一点点技巧.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;要打开首选项-&amp;gt;预览-&amp;gt;"网格"工作空间
+&lt;img alt="" src="https://i.loli.net/2018/04/03/5ac2756be46a2.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插入网格, 或者使用"上传"STL文件.
+&lt;img alt="插入网格" src="https://i.loli.net/2018/04/03/5ac275c903dd1.png"&gt;
+&lt;img alt="插入网格2" src="https://i.loli.net/2018/04/03/5ac275c97231b.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不捕获设计历史
+&lt;img alt="不捕获设计历史" src="https://i.loli.net/2018/04/03/5ac275cab7bff.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右键选择网格对象, "Mesh到BRep", 转换成实体
+&lt;img alt="Mesh到BRep" src="https://i.loli.net/2018/04/03/5ac275ca15a81.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;铛铛, 变成实体了, 可以在各个面上编辑. 但明明是一个平面, 还是被分成了很多的三角形. 很不方便, 下面才是重点.
+&lt;img alt="很多三角形" src="https://i.loli.net/2018/04/03/5ac275c9e694b.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随便找一个面进行"分割实体"的操作.
+&lt;img alt="分割实体" src="https://i.loli.net/2018/04/03/5ac275ca86ccb.png"&gt;
+&lt;img alt="任选一个面" src="https://i.loli.net/2018/04/03/5ac275ca84e6a.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;切完以后, 所有的平面突然就不再是一堆三角形了.
+&lt;img alt="三角形消失" src="https://i.loli.net/2018/04/03/5ac2780923f8c.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后在使用"合并", 将切开的实体合并在一起.
+&lt;img alt="合并" src="https://i.loli.net/2018/04/03/5ac2784911a66.png"&gt;
+&lt;img alt="到一起" src="https://i.loli.net/2018/04/03/5ac275ca4f95b.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;成品. 平面都得到了简化, 但曲面目前还没有办法. 记得完成以后把"捕获历史"的功能在再打开.
+&lt;img alt="成品" src="https://i.loli.net/2018/04/03/5ac27884f2f99.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后, 号召一下. 如果设计的3D模型仅仅以STL或者其他网格形式发布, 就请尽量少用圆角吧. 谢谢!&lt;/p&gt;&lt;/div&gt;</description><category>3D print</category><guid>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</guid><pubDate>Mon, 02 Apr 2018 18:30:00 GMT</pubDate></item></channel></rss>
