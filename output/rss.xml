@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 02 Apr 2018 11:03:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Scikit-learn笔记4(ROC曲线)</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 02 Apr 2018 18:44:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用Fusion360编辑STL</title><link>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;STL文件就像是PDF, 是面向打印机的. 难以编辑. 即使能够编辑, 面对大量的三角形, 运行速度也非常慢.&lt;/p&gt;
+&lt;p&gt;不过最近总算找到了用Fusion360的一点点技巧.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;要打开首选项-&amp;gt;预览-&amp;gt;"网格"工作空间
+&lt;img alt="" src="https://i.loli.net/2018/04/03/5ac2756be46a2.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插入网格, 或者使用"上传"STL文件.
+&lt;img alt="插入网格" src="https://i.loli.net/2018/04/03/5ac275c903dd1.png"&gt;
+&lt;img alt="插入网格2" src="https://i.loli.net/2018/04/03/5ac275c97231b.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不捕获设计历史
+&lt;img alt="不捕获设计历史" src="https://i.loli.net/2018/04/03/5ac275cab7bff.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右键选择网格对象, "Mesh到BRep", 转换成实体
+&lt;img alt="Mesh到BRep" src="https://i.loli.net/2018/04/03/5ac275ca15a81.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;铛铛, 变成实体了, 可以在各个面上编辑. 但明明是一个平面, 还是被分成了很多的三角形. 很不方便, 下面才是重点.
+&lt;img alt="很多三角形" src="https://i.loli.net/2018/04/03/5ac275c9e694b.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随便找一个面进行"分割实体"的操作.
+&lt;img alt="分割实体" src="https://i.loli.net/2018/04/03/5ac275ca86ccb.png"&gt;
+&lt;img alt="任选一个面" src="https://i.loli.net/2018/04/03/5ac275ca84e6a.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;切完以后, 所有的平面突然就不再是一堆三角形了.
+&lt;img alt="三角形消失" src="https://i.loli.net/2018/04/03/5ac2780923f8c.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后在使用"合并", 将切开的实体合并在一起.
+&lt;img alt="合并" src="https://i.loli.net/2018/04/03/5ac2784911a66.png"&gt;
+&lt;img alt="到一起" src="https://i.loli.net/2018/04/03/5ac275ca4f95b.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;成品. 平面都得到了简化, 但曲面目前还没有办法. 记得完成以后把"捕获历史"的功能在再打开.
+&lt;img alt="成品" src="https://i.loli.net/2018/04/03/5ac27884f2f99.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;最后, 号召一下. 如果设计的3D模型仅仅以STL或者其他网格形式发布, 就请尽量少用圆角吧. 谢谢!&lt;/p&gt;&lt;/div&gt;</description><category>3D print</category><guid>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</guid><pubDate>Mon, 02 Apr 2018 18:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记4(ROC曲线)</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
@@ -2720,176 +2765,4 @@ GYDFTHYGMN VGWINTYTGEPTYAADFKR YPYYYGTSHWYFDV
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</guid><pubDate>Sun, 11 Mar 2018 04:00:00 GMT</pubDate></item><item><title>Mac上双击打开jupyter文件</title><link>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;jupyter的文件是.ipynb文件, 实际上是纯文本写的json, 但要按可编辑可运行的方式打开它, 有几种方式:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在命令行运行jupyter notebook 文件名&lt;ul&gt;
-&lt;li&gt;或者在命令行运行jupyter lab 文件名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;用nteract打开&lt;/li&gt;
-&lt;li&gt;在atom里安装jupyter notebook package, 然后用atom打开.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;第一种最佳, 但不方便, 我不是常规打开终端的. 第二种有时候特慢, 而且如果没有设置好kernel的话, 运行jupyter文件总是容易报错. 第三种大概比第二种略差, 而且我每次装这个package的时候都会被杀毒软件拦下来.&lt;/p&gt;
-&lt;p&gt;我很希望有个能够双击打开.ipynb文件的方式. 打开以后还能够正常编辑和运行. 上推一问. 果然在&lt;a href="https://twitter.com/xuanyuanzhiyuan/status/971321483896213504"&gt;@xuanyuanzhiyuan&lt;/a&gt;和&lt;a href="https://twitter.com/kyleehee/status/971317968822038528"&gt;@kyleehee&lt;/a&gt;的指导下成功了. 写blog以记录之.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打开Automator(现在中文叫'自动操作')&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;新建-&amp;gt;应用程序
-&lt;img alt="屏幕快照 2018-03-07 17.58.12" src="https://i.loli.net/2018/03/07/5a9fc9e347028.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;选取"资源库"-&amp;gt;"实用工具"-&amp;gt;"运行AppleScipt"
-&lt;img alt="屏幕快照 2018-03-07 17.58.33" src="https://i.loli.net/2018/03/07/5a9fc9e2c3842.png"&gt;&lt;/li&gt;
-&lt;li&gt;在右侧"运行AppleScipt"栏里写下:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;on run {input}
-   set the_path to POSIX path of input
-   set cmd to "jupyter notebook " &amp;amp; quoted form of the_path
-   tell application "System Events" to set terminalIsRunning to exists application process "Terminal"
-   tell application "Terminal"
-      activate
-      if terminalIsRunning is true then
-         do script with command cmd
-      else
-         do script with command cmd in window 1
-      end if
-   end tell
-end run
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;img alt="屏幕快照 2018-03-07 17.59.37" src="https://i.loli.net/2018/03/07/5a9fc9e29141c.png"&gt;
-注意"jupyter notebook "末尾一定要有空格. 也可以使用jupyter lab, 看你喜欢. 但前提一定是在进入终端以后可以直接运行jupyter的状态, 如果你需要用anaconda先切换到某个环境下再用jupyter, 那么需要在前面加上另一条do script, 引号里是你需要先运行的命令, 比如要启动myenv这个环境, 平时可能需要输入的是&lt;code&gt;source activate myenv&lt;/code&gt;, 注意一条命令以后貌似需要delay一下, 后面的数字看情况.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;do script "source activate myenv"
-deply 3
-do script with command cmd
-&lt;/pre&gt;
-
-
-&lt;p&gt;加入以后完整的是这样的:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;on run {input}
-   set the_path to POSIX path of input
-   set cmd to "jupyter notebook " &amp;amp; quoted form of the_path
-   tell application "System Events" to set terminalIsRunning to exists application process "Terminal"
-   tell application "Terminal"
-      activate
-      if terminalIsRunning is true then
-         do script "source activate myenv"
-         deply 3
-         do script with command cmd
-      else
-         do script "source activate myenv" in window 1
-         deply 3
-         do script with command cmd in window 1
-      end if
-   end tell
-end run
-&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;保存成一个.app文件. 就成了一个应用程序了. 放进应用程序文件夹, 例如叫jupyter_launcher.app&lt;/li&gt;
-&lt;li&gt;随便找个.ipynb文件, 右键-&amp;gt;显示简介-&amp;gt;打开方式-&amp;gt;其他, 在应用程序里找到jupyter_launcher,
-&lt;img alt="屏幕快照 2018-03-07 18.50.54" src="https://i.loli.net/2018/03/07/5a9fc9e29a031.png"&gt;&lt;/li&gt;
-&lt;li&gt;然后选择"全部更改"&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;全套完成, 以后就可以双击直接打开jupyter文件了. 会自动先打开一个终端, 然后用jupyter notebook运行, 文件在浏览器里可以显示和编辑并且运行.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;参考:
-https://superuser.com/questions/139352/mac-os-x-how-to-open-vim-in-terminal-when-double-click-on-a-file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--
-.. title: Mac上双击打开jupyter文件
-.. slug: double-click-open-ipynb
-.. date: 2018-3-7 19:00 UTC+08:00
-.. tags: python,
-.. category:
-.. link:
-.. description:
-.. type: text
---&gt;
-
-&lt;p&gt;jupyter的文件是.ipynb文件, 实际上是纯文本写的json, 但要按可编辑可运行的方式打开它, 有几种方式:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;在命令行运行jupyter notebook 文件名&lt;ul&gt;
-&lt;li&gt;或者在命令行运行jupyter lab 文件名&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;用nteract打开&lt;/li&gt;
-&lt;li&gt;在atom里安装jupyter notebook package, 然后用atom打开.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;第一种最佳, 但不方便, 我不是常规打开终端的. 第二种有时候特慢, 而且如果没有设置好kernel的话, 运行jupyter文件总是容易报错. 第三种大概比第二种略差, 而且我每次装这个package的时候都会被杀毒软件拦下来.&lt;/p&gt;
-&lt;p&gt;我很希望有个能够双击打开.ipynb文件的方式. 打开以后还能够正常编辑和运行. 上推一问. 果然在&lt;a href="https://twitter.com/xuanyuanzhiyuan/status/971321483896213504"&gt;@xuanyuanzhiyuan&lt;/a&gt;和&lt;a href="https://twitter.com/kyleehee/status/971317968822038528"&gt;@kyleehee&lt;/a&gt;的指导下成功了. 写blog以记录之.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;打开Automator(现在中文叫'自动操作')&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;新建-&amp;gt;应用程序
-&lt;img alt="屏幕快照 2018-03-07 17.58.12" src="https://i.loli.net/2018/03/07/5a9fc9e347028.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;选取"资源库"-&amp;gt;"实用工具"-&amp;gt;"运行AppleScipt"
-&lt;img alt="屏幕快照 2018-03-07 17.58.33" src="https://i.loli.net/2018/03/07/5a9fc9e2c3842.png"&gt;&lt;/li&gt;
-&lt;li&gt;在右侧"运行AppleScipt"栏里写下:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;on run {input}
-   set the_path to POSIX path of input
-   set cmd to "jupyter notebook " &amp;amp; quoted form of the_path
-   tell application "System Events" to set terminalIsRunning to exists application process "Terminal"
-   tell application "Terminal"
-      activate
-      if terminalIsRunning is true then
-         do script with command cmd
-      else
-         do script with command cmd in window 1
-      end if
-   end tell
-end run
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;img alt="屏幕快照 2018-03-07 17.59.37" src="https://i.loli.net/2018/03/07/5a9fc9e29141c.png"&gt;
-注意"jupyter notebook "末尾一定要有空格. 也可以使用jupyter lab, 看你喜欢. 但前提一定是在进入终端以后可以直接运行jupyter的状态, 如果你需要用anaconda先切换到某个环境下再用jupyter, 那么需要在前面加上另一条do script, 引号里是你需要先运行的命令, 比如要启动myenv这个环境, 平时可能需要输入的是&lt;code&gt;source activate myenv&lt;/code&gt;, 注意一条命令以后貌似需要delay一下, 后面的数字看情况.&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;do script "source activate myenv"
-deply 3
-do script with command cmd
-&lt;/pre&gt;
-
-
-&lt;p&gt;加入以后完整的是这样的:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;on run {input}
-   set the_path to POSIX path of input
-   set cmd to "jupyter notebook " &amp;amp; quoted form of the_path
-   tell application "System Events" to set terminalIsRunning to exists application process "Terminal"
-   tell application "Terminal"
-      activate
-      if terminalIsRunning is true then
-         do script "source activate myenv"
-         deply 3
-         do script with command cmd
-      else
-         do script "source activate myenv" in window 1
-         deply 3
-         do script with command cmd in window 1
-      end if
-   end tell
-end run
-&lt;/pre&gt;
-
-
-&lt;ol&gt;
-&lt;li&gt;保存成一个.app文件. 就成了一个应用程序了. 放进应用程序文件夹, 例如叫jupyter_launcher.app&lt;/li&gt;
-&lt;li&gt;随便找个.ipynb文件, 右键-&amp;gt;显示简介-&amp;gt;打开方式-&amp;gt;其他, 在应用程序里找到jupyter_launcher,
-&lt;img alt="屏幕快照 2018-03-07 18.50.54" src="https://i.loli.net/2018/03/07/5a9fc9e29a031.png"&gt;&lt;/li&gt;
-&lt;li&gt;然后选择"全部更改"&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;全套完成, 以后就可以双击直接打开jupyter文件了. 会自动先打开一个终端, 然后用jupyter notebook运行, 文件在浏览器里可以显示和编辑并且运行.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;参考:
-https://superuser.com/questions/139352/mac-os-x-how-to-open-vim-in-terminal-when-double-click-on-a-file&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="https://press.one/file/v?s=4e99e642621a7c01ada7d1ab124068ff803c553cab40e30808c5509f20ef33c90658bb61c60e96af12374f5eb40b0719fdffef99c6627811b68d68a3c37b64890&amp;amp;h=a35b8dd4dbfb7e521c41eaa53d0875b3cf53a426f911ae666bcd0302ccd4721c&amp;amp;a=79c1846bc532ec0cf61ad0f1f5604a80a1387aca&amp;amp;f=P1&amp;amp;v=2"&gt;My Press.one Signature&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</guid><pubDate>Wed, 07 Mar 2018 11:00:00 GMT</pubDate></item></channel></rss>
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/reg101-for-ophthalmologist/</guid><pubDate>Sun, 11 Mar 2018 04:00:00 GMT</pubDate></item></channel></rss>

@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2018-03-20T04:44:00Z</lastmod>
+  <lastmod>2018-04-02T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -19,11 +19,15 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-04-01T11:45:00Z</lastmod>
+  <lastmod>2018-04-02T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2018-03-20T04:45:00Z</lastmod>
+  <lastmod>2018-04-02T18:35:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/3d-print/</loc>
+  <lastmod>2018-04-02T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d_print/</loc>
@@ -147,7 +151,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-8.html</loc>
-  <lastmod>2018-04-01T11:45:00Z</lastmod>
+  <lastmod>2018-04-02T18:35:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-9.html</loc>
+  <lastmod>2018-04-02T18:35:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -240,6 +248,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</loc>
   <lastmod>2018-03-07T11:39:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</loc>
+  <lastmod>2018-04-02T18:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/eq-price/</loc>
