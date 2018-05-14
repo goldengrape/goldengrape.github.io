@@ -1,5 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 16 Apr 2018 17:30:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Applied Data Science with Python Specialization小结</title><link>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://www.coursera.org/specializations/data-science-python"&gt;Applied Data Science with Python Specialization&lt;/a&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 May 2018 14:55:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科数据随机森林</title><link>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;要讲解"随机森林", 先要简介一下"决策树". 各位眼科大夫在眼科门诊每天都在用"决策树", 比如一位单侧眼痛伴同侧头痛的病人进入门诊:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;眼压&amp;gt;21mmHg吗?&lt;ul&gt;
+&lt;li&gt;不是, 考虑其他可能&lt;/li&gt;
+&lt;li&gt;是的, 考虑青光眼可能, 还有鉴别诊断1, 2, 3..., 进入下一题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;前房浅吗?&lt;ul&gt;
+&lt;li&gt;不是, 考虑其他可能&lt;/li&gt;
+&lt;li&gt;是的, 考虑急性闭角型青光眼发作, 还有鉴别诊断x,y,z...,, 进入下一题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;瞳孔光反射存在吗?&lt;ul&gt;
+&lt;li&gt;存在, 考虑其他可能&lt;/li&gt;
+&lt;li&gt;瞳孔固定, 考虑急性闭角型青光眼发作, 进入下一题
+. . . .&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这就是一颗"决策树", 就是一堆判断题, 一层一层筛选, 最终将数据(病人)分成几类(急闭, 其他)&lt;/p&gt;
+&lt;p&gt;"随机森林"就是由一组这样的"决策树"组成的分类器.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;随机森林的优劣&lt;/h2&gt;
+&lt;h3&gt;优点就是简单好用:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;它对输入的数据没什么特殊要求, 不需要很严格的预处理, 比如不需要归一化, 不需要正态分布化. 定量的数据也行, 定性的数据也行. 完全不挑食.&lt;/li&gt;
+&lt;li&gt;它得到模型预测准确率还不差, 甚至使用默认参数也不差. 如果用同样的数据集实验, 不用深度学习的话. 随机森林的准确率大概可以排进前三.&lt;/li&gt;
+&lt;li&gt;需要的数据量和运算量, 都还是在可接受范围内, 比如一两百个的数据, 用笔记本电脑跑上几分钟, 也许就能给出不错的结果.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;缺点:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;结果不好解释. 不过大概除了线性模型, 哪个机器学习出来的结果都不好解释.&lt;/li&gt;
+&lt;li&gt;还是属于"传统"的机器学习方法. 有些太复杂的问题还是需要深度学习来做.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以, 个人意见是遇到问题先用随机森林试试呗, 不好再换深度学习.&lt;/p&gt;
+&lt;h2&gt;随机森林代码&lt;/h2&gt;
+&lt;p&gt;通过python scikit-learn建立并且训练一个随机森林模型的代码非常好写, 实际上只有两句话:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;RandomForestClassifier&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;比较复杂的是如何标记数据, 如何把数据读取进来, 如何把数据整理清洗拆分. . .  干些体力活, 得到X_train, y_train这两个东西.&lt;/p&gt;
+&lt;p&gt;程序世界的好处是, 体力活大多只需要干一次, 做好模板, 以后就轻松了. 所以我就在这里把眼科这部分的脏活累活先做好.&lt;/p&gt;
+&lt;p&gt;目前支持的有医疗设备已经有:
+&lt;em&gt; &lt;a href="http://www.zeaomed.com/jmdxty/772.html"&gt;Sirius角膜地形图&lt;/a&gt;
+&lt;/em&gt; &lt;a href="https://www.pentacam.com/int/ophthalmologist-with-pentacam.html"&gt;PentaCam角膜地形图&lt;/a&gt;
+&lt;em&gt; &lt;a href="http://www.wiskeymedical.com.cn/product/v1049"&gt;Grand Seiko WAM5500视调节力测量仪&lt;/a&gt;
+&lt;/em&gt; &lt;a href="https://www.zeiss.com.cn/meditec/products/ophthalmology-optometry/glaucoma/diagnostics/perimetry/humphrey-field-analyzer-3.html"&gt;Humphrey视野(PDF需预先处理)&lt;/a&gt;
+* &lt;a href="http://www.gvchina.com/product.aspx?t=1&amp;amp;c=12"&gt;HRT(PDF需预先处理)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;开源项目已经&lt;a href="https://github.com/goldengrape/read_medical_device_data"&gt;放在github上&lt;/a&gt;,
+推荐通过&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/notebooks.azure.com"&gt;微软的azure notebooks&lt;/a&gt;在线使用, 使用azure notebook的教程, 请参考&lt;a href="https://goldengrape.github.io/Python-for-ophthalmologist/"&gt;这篇教程&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;眼科数据随机森林模型的使用方法&lt;/h2&gt;
+&lt;h3&gt;上传数据&lt;/h3&gt;
+&lt;p&gt;如果你用的是微软azure notebooks, 那么在clone本项目以后, 可以设定成私有项目, 这样再传数据的时候, 不至于泄露给其他人. 你需要用浏览器在云端建立一个目录, 然后把医疗设备的数据报告一个一个上传上去, 看网速吧.&lt;/p&gt;
+&lt;p&gt;如果你已经有能力在本地运行python, 甚至装好了anaconda,pandas,scikit-learn, 那无需太多解释, 你只需要把数据放在程序能够找到的路径里即可.&lt;/p&gt;
+&lt;h3&gt;PDF数据预处理:&lt;/h3&gt;
+&lt;p&gt;目前能够处理的是HRT和Humphrey视野计两种PDF报告, 找到python/pdf_parser目录,&lt;/p&gt;
+&lt;p&gt;分别按照HRT.ipynb和Humphrey_VF.ipynb文件中的要求, 修改好路径, 运行. PDF文件的报告会被转换成csv文件.&lt;/p&gt;
+&lt;p&gt;csv文件是"逗号分割的"电子表格文件, 可以方便使用excel编辑或者查看, 记得编辑完成后使用"另存为"csv文件.&lt;/p&gt;
+&lt;h3&gt;class.csv文件设定&lt;/h3&gt;
+&lt;p&gt;需要使用excel编辑这样一个表格, 示例请见\testdata\class.csv
+&lt;img alt="屏幕快照 2018-05-14 22.21.30" src="https://i.loli.net/2018/05/14/5af99ba24ed2d.png"&gt;
+第一列是class, 记录每一行所代表的病人的诊断, 有病/没病, 也可以有多个诊断.&lt;/p&gt;
+&lt;p&gt;之后的每个单元格里填入的是该病人的数据文件名, 其中列标题要注明是哪种设备. (注意大小写, 业余作品不要太挑拣)&lt;/p&gt;
+&lt;h3&gt;分析项目设定&lt;/h3&gt;
+&lt;p&gt;需要使用excel再编辑一个表格, 示例请见\testdata\analysis_category.csv&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-05-14 22.31.13" src="https://i.loli.net/2018/05/14/5af99df6d5270.png"&gt;&lt;/p&gt;
+&lt;p&gt;列标题是设备的名称, 每个单元格里是需要分析该设备数据文件中的哪些项目, 项目的名称在各个设备的json中找, (注意大小写, 业余作品不要太挑拣)&lt;/p&gt;
+&lt;p&gt;GrandSeikoWAM5500中的项目有:
+&lt;em&gt; date: 检查时间
+&lt;/em&gt; start_time: 检查开始时间
+&lt;em&gt; eye: 眼别
+&lt;/em&gt; time: 测量时间点
+&lt;em&gt; power: 屈光状态
+&lt;/em&gt; pupil: 瞳孔直径&lt;/p&gt;
+&lt;p&gt;HRT中的项目有:
+&lt;em&gt; "DOB": 出生日期, 操作员不一定都好好填的
+&lt;/em&gt; "sex": 性别
+&lt;em&gt; "date": 检查时间
+&lt;/em&gt; "OS_data":左眼数据
+&lt;em&gt; "OD_data":右眼数据
+&lt;/em&gt; "Asymmetry_data": 非对称数据
+* "classifiction": HRT设备给出的分类诊断, (不建议包含)&lt;/p&gt;
+&lt;p&gt;humphrey视野计的项目有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;"DOB":生日,&lt;/li&gt;
+&lt;li&gt;"eye": 眼别&lt;/li&gt;
+&lt;li&gt;"date":检查日期&lt;/li&gt;
+&lt;li&gt;"False POS Errors":假阳性&lt;/li&gt;
+&lt;li&gt;"False NEG Errors":假阴性, 这两个是判定视野检查质量的&lt;/li&gt;
+&lt;li&gt;"VFI": 忘了是啥了.&lt;/li&gt;
+&lt;li&gt;"MD": 平均缺损, 有重要随访意义&lt;/li&gt;
+&lt;li&gt;"PSD": 又忘了是啥了&lt;/li&gt;
+&lt;li&gt;"data": 这是二维的视野数据, 在送进随机森林的时候, 会抻成一列使用, 所以左右眼的排布会是不同的.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;pentacam角膜地形图:
+"FRONT", "BACK", "Cornea", "Pachy", "Chamber","K",
+"Pupil", "X", "Y"
+注意, 这些数据里大多也是二维数据, 将抻成一维使用, 左右眼可能会有不同.&lt;/p&gt;
+&lt;p&gt;sirius 角膜地形图:
+&lt;em&gt; "Radii":,
+&lt;/em&gt; "CornealThickness":,
+&lt;em&gt; "ElevationAnterior":,
+&lt;/em&gt; "ElevationPosterior":,
+&lt;em&gt; "RefractiveEquivalentPower":,
+&lt;/em&gt; "RefractiveFrontalPowerAnterior":,
+&lt;em&gt; "RefractiveFrontalPowerPosterior":,
+&lt;/em&gt; "SagittalAnterior":,
+&lt;em&gt; "SagittalPosterior":,
+&lt;/em&gt; "TangentialAnterior":,
+* "TangentialPosterior":
+这里面数据好多, 也是注意二维数据的问题, 要注意左右眼的问题.&lt;/p&gt;
+&lt;h3&gt;运行随机森林模型&lt;/h3&gt;
+&lt;p&gt;随机森林模型在python/random_forest_model.ipynb, 如果设定好class.csv和analysis_category.csv, 大概就不需要什么修改,可以直接训练了,&lt;/p&gt;
+&lt;p&gt;训练完成后要观察一下ROC曲线和AUC评分. ROC曲线越靠近左上越好, AUC评分越接近1越好. 在该文件中, 我也有说明如何进行进一步的参数调节和优化. 但, 如果AUC评分巨高就直接发文章好了, 如果AUC评分接近0.5, 就算了吧, 换深度学习方式好了.&lt;/p&gt;
+&lt;p&gt;最后, 这是一个业余项目, 代码并不完善, 还在缓慢而持续地改进中.  &lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item><item><title>Applied Data Science with Python Specialization小结</title><link>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://www.coursera.org/specializations/data-science-python"&gt;Applied Data Science with Python Specialization&lt;/a&gt;
 五张证书拿到.&lt;/p&gt;
 &lt;p&gt;小结一下这几门课
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
@@ -1277,324 +1394,4 @@ PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽�
 &lt;p&gt;之前这款折叠键盘必须放在桌面上使用, 无法放在腿上, 现在也可以直接放在推腿上用了.
 &lt;img alt="WechatIMG63" src="https://i.loli.net/2018/03/28/5abbb09273b72.jpeg"&gt;&lt;/p&gt;
 &lt;p&gt;零件不大, 方便收纳.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.thingiverse.com/thing:2843000"&gt;下载打印零件&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</guid><pubDate>Wed, 28 Mar 2018 15:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;最近在学Michigan大学Data science课程的第三门&lt;a href="https://www.coursera.org/learn/python-machine-learning/home/welcome"&gt;Applied Machine Learning in Python&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;唉, 老师讲课好差劲. 听一遍一点印象都没有, 很快就忘了. 如果一个老师如果上课的时候不写板书, 只用PPT, 高概率不是个好老师. 连作业里的代码风格都很差劲, 哪有在函数内部import的, 交作业的时候还得自己把matplotlib给注释掉.&lt;/p&gt;
-&lt;p&gt;就是这个老师啦:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://coursera-instructor-photos.s3.amazonaws.com/61/58158043d011e69605657346ccd592/kevyn.jpg" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;Kevyn Collins-Thompson&lt;/p&gt;
-&lt;p&gt;所以, 得趁着刚写完作业, 还有些印象, 赶紧记录下来.&lt;/p&gt;
-&lt;p&gt;这门课讲的也是机器学习, 但不是深度学习, 而是更为"传统"一些的. 用到的主要是Scikit-Learn.&lt;/p&gt;
-&lt;p&gt;关于Scikit-learn, datacamp上有个&lt;a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet"&gt;cheat sheet&lt;/a&gt;看起来不错, 而且&lt;a href="http://scikit-learn.org/stable/documentation.html"&gt;SciKit-Learn自己的说明文档&lt;/a&gt;也很不错. 以后还是看这些文档参考.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="常用算法"&gt;常用算法&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这门课主要讲了SciKit-Learn里几个常用的算法:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KNN&lt;/li&gt;
-&lt;li&gt;线性回归: 最小二乘拟合, Ridge, Lasso, Polynomial Regression&lt;/li&gt;
-&lt;li&gt;Logistic Regression&lt;/li&gt;
-&lt;li&gt;支持向量机: 线性和Kernelized&lt;/li&gt;
-&lt;li&gt;多层分类&lt;/li&gt;
-&lt;li&gt;Cross-Validation&lt;/li&gt;
-&lt;li&gt;Decision Trees&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="通用步骤"&gt;通用步骤&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E9%80%9A%E7%94%A8%E6%AD%A5%E9%AA%A4"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="分开数据集"&gt;分开数据集&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%88%86%E5%BC%80%E6%95%B0%E6%8D%AE%E9%9B%86"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;之前可能还需要归一化.&lt;/p&gt;
-&lt;p&gt;传统的机器学习方法, 数据集的数量可能并不大, 因此还是会留出1/5~1/4的数据作为test set. 要用train_test_split把数据集分开.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 随便给个数据集&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
-&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt output_prompt"&gt;Out[15]:&lt;/div&gt;
-
-
-
-
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a1493f5c0&amp;gt;]&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-
-
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,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"&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.model_selection&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;train_test_split&lt;/span&gt;
-&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;train_test_split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"red"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'o'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"blue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
-
-
-
-
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a14881f28&amp;gt;]&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-
-
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,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"&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="设模型并训练"&gt;设模型并训练&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E8%AE%BE%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%AE%AD%E7%BB%83"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;一般来说设定模型就是模型().fit(X_train,y_train),&lt;/p&gt;
-&lt;p&gt;要应用训练好的模型就用模型.predict(X),&lt;/p&gt;
-&lt;p&gt;评估的话, 就是模型.score(X_train, y_train) 和模型.score(X_test, y_test)&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [24]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;
-&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LinearRegression&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (training): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
-     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (test): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
-     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;R-squared score (training): 0.997
-R-squared score (test): 0.998
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-
-
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,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"&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="各模型总结"&gt;各模型总结&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%90%84%E6%A8%A1%E5%9E%8B%E6%80%BB%E7%BB%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;
-&lt;th style="text-align:left"&gt;含义&lt;/th&gt;
-&lt;th style="text-align:left"&gt;函数&lt;/th&gt;
-&lt;th style="text-align:left"&gt;cost function&lt;/th&gt;
-&lt;th style="text-align:left"&gt;参数&lt;/th&gt;
-&lt;th&gt;过拟合时调参&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;常规线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;LinearRegression&lt;/td&gt;
-&lt;td style="text-align:left"&gt;MSE&lt;/td&gt;
-&lt;td style="text-align:left"&gt;无&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;参数L2约束(平方和)的线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;Ridge&lt;/td&gt;
-&lt;td style="text-align:left"&gt;MSE+alpha* Sum(w^2)&lt;/td&gt;
-&lt;td style="text-align:left"&gt;alpha&lt;/td&gt;
-&lt;td&gt;增大alpha&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;参数L1约束(稀疏)的线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;Lasso&lt;/td&gt;
-&lt;td style="text-align:left"&gt;MSE+ alpha* Sum(abs(w))&lt;/td&gt;
-&lt;td style="text-align:left"&gt;alpha=2.0, max_iter = 10000&lt;/td&gt;
-&lt;td&gt;增大alpha&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;多项式拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;PolynomialFeatures&lt;/td&gt;
-&lt;td style="text-align:left"&gt;先poly = PolynomialFeatures(degree=2), 然后X_poly = poly.fit_transform(X), 再送入各种线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;同Ridge或Lasso&lt;/td&gt;
-&lt;td&gt;同Ridge或Lasso&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;其实就是Sigmoid&lt;/td&gt;
-&lt;td style="text-align:left"&gt;LogisticRegression&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;C, 负责L2约束&lt;/td&gt;
-&lt;td&gt;减小C&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;线性SVM&lt;/td&gt;
-&lt;td style="text-align:left"&gt;LinearSVC&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;C&lt;/td&gt;
-&lt;td&gt;减小C&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;Kernelized SVM&lt;/td&gt;
-&lt;td style="text-align:left"&gt;SVC(kernel = "rbf")&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;C, 负责曲面的平滑, gamma, 负责局部点的重要性&lt;/td&gt;
-&lt;td&gt;减小C, 减小gamma&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;决策树&lt;/td&gt;
-&lt;td style="text-align:left"&gt;DecisionTreeClassifier&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;max_depth, min_samples_leaf&lt;/td&gt;
-&lt;td&gt;减小max_depth, 增大min_samples_leaf&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note/</guid><pubDate>Sun, 25 Mar 2018 15:30:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://www.thingiverse.com/thing:2843000"&gt;下载打印零件&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</guid><pubDate>Wed, 28 Mar 2018 15:00:00 GMT</pubDate></item></channel></rss>
