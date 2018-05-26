@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>描红字帖 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/copybook-for-shufa/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../python/random-forest-for-ophthalmology-data/" title="眼科数据随机森林" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="描红字帖">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/copybook-for-shufa/">
+<meta property="og:description" content="练毛笔字, 自觉练习进度缓慢, 于是决定采用训练神经网络的方式训练神经. 假设人脑具有足够强的泛化能力, 那么训练的最优策略就是用重复数据强化训练, 先迅速达成过拟合, 然后睡上一觉可能就自动调优了.
+一个意外的发现, 激光打印机是可以打印宣纸的, 只要把宣纸裁剪成A4纸接近的大小, 按长轴折上一两次, 然后送进打印机, 就可以打印了. 当然容易卡纸, 发生率在10%~20%左右. 卡纸了以后小心">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-05-26T23:00:00+08:00">
+<meta property="article:tag" content="Art">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">描红字帖</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-05-26T23:00:00+08:00" itemprop="datePublished" title="2018-05-26 23:00">2018-05-26 23:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/bulabula/描红字帖.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>练毛笔字, 自觉练习进度缓慢, 于是决定采用训练神经网络的方式训练神经. 假设人脑具有足够强的泛化能力, 那么训练的最优策略就是用重复数据强化训练, 先迅速达成过拟合, 然后睡上一觉可能就自动调优了.</p>
+<p>一个意外的发现, 激光打印机是可以打印宣纸的, 只要把宣纸裁剪成A4纸接近的大小, 按长轴折上一两次, 然后送进打印机, 就可以打印了. 当然容易卡纸, 发生率在10%~20%左右. 卡纸了以后小心取出来就是, 目前还没有碎在打印机里.</p>
+<p>于是我自制了一个描红字帖.
+<!-- TEASER_END --></p>
+<p>我的练习用宣纸, 折叠两次后大约是17cm X 35cm, 于是我按照这个尺寸做的字帖, 第一列是减淡后的原字, 第二列是笔画的骨架, 第三列是空白.</p>
+<p>示例是这样的:
+<img alt="字帖骨架" src="https://i.loli.net/2018/05/26/5b098168f1dc8.jpg"></p>
+<p>每个字先贴进PowerPoint, 然后用"删除背景"将字体背景去掉, 调成适当大小后每6个字一组合, 组合之后另存为图片, 就有了第一列的图, 然后用skimage里的skeletonize把骨架生成出来, 注意这仅仅是从笔画外形得出的骨架, 如果两笔有重叠还是分不出来的, 只能作为提示用,</p>
+<p>生成字体骨架的代码如下:</p>
+<pre class="code literal-block"><span></span><span class="kn">from</span> <span class="nn">skimage.morphology</span> <span class="kn">import</span> <span class="n">skeletonize</span>
+<span class="kn">from</span> <span class="nn">skimage</span> <span class="kn">import</span> <span class="n">io</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="k">def</span> <span class="nf">ske</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+    <span class="n">fname</span><span class="p">,</span> <span class="n">file_extension</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="n">filename</span><span class="p">)[:,:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">&gt;</span><span class="mf">0.5</span>
+    <span class="n">skeleton</span> <span class="o">=</span> <span class="n">skeletonize</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">ske</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">skeleton</span><span class="o">/</span><span class="n">skeleton</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="n">out_name</span><span class="o">=</span><span class="s2">"ske_"</span><span class="o">+</span><span class="n">fname</span><span class="o">+</span><span class="s2">".png"</span>
+    <span class="n">io</span><span class="o">.</span><span class="n">imsave</span><span class="p">(</span><span class="n">out_name</span><span class="p">,</span><span class="n">ske</span><span class="p">)</span>
+    <span class="k">return</span>
+</pre>
+
+
+<p>最后再做成一个PowerPoint文件, 手工制作, 所以只做了几页, 够我练习一阵了. <a href="https://mega.nz/#!rDhinKzb">下载此文件. </a></p>
+<p>强化训练的时候, 就可以翻来覆去地写了, 比如:</p>
+<ul>
+<li>从左到右, 按行来写;</li>
+<li>从左到右, 按列来写;</li>
+<li>从右到左, 按行来写;</li>
+<li>从右到左, 按列来写.</li>
+</ul>
+<p>一张宣纸裁出的四张正好写完.</p>
+<!-- EOF -->
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/art/" rel="tag">Art</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../python/random-forest-for-ophthalmology-data/" rel="prev" title="眼科数据随机森林">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/bulabula/copybook-for-shufa/",
+        disqus_title="\u63cf\u7ea2\u5b57\u5e16",
+        disqus_identifier="cache/posts/bulabula/描红字帖.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
