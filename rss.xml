@@ -1,5 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 31 May 2018 18:00:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 20 Jun 2018 14:43:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery%281%29/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;良好的习惯产生手术安全,&lt;/li&gt;
+&lt;li&gt;正确勤勉的练习产生良好的习惯,&lt;/li&gt;
+&lt;li&gt;理解设备的原理和操作的原理指导正确的练习.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面我来简介一下眼科操作显微镜的原理和基本训练. 非本专业同学可以顺便体会一下手术科室的强迫症和碎碎念.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;术前设备检查&lt;/h2&gt;
+&lt;p&gt;在全天的手术开始之前, 应当亲自检查显微镜. 就好像上战场之前需要检查自己的武器.&lt;/p&gt;
+&lt;p&gt;检查的项目有:&lt;/p&gt;
+&lt;h3&gt;是否使用了正确的显微镜?&lt;/h3&gt;
+&lt;p&gt;显微镜会搭载不同的外设或者本身具有不同的结构, 有些特殊的手术, 是需要特定的显微镜的.&lt;/p&gt;
+&lt;p&gt;例如青光眼房角手术, 是使用半球状的房角镜操作, 这时候就需要显微镜的主镜能够倾斜, 但并非所有显微镜都可以做到这点, 术前需要确认.&lt;/p&gt;
+&lt;h3&gt;头&lt;/h3&gt;
+&lt;p&gt;显微镜是否可以在床头附近自由移动?
+&lt;img alt="幻灯片04" src="https://i.loli.net/2018/06/20/5b2a080664c3b.jpeg"&gt;
+(图片选自师弟援外时的手术照片, 赞师弟)&lt;/p&gt;
+&lt;p&gt;如图中所示, 示意图是俯视图, 红色弧线画出的关节是显微镜的主关节, 要保证这个关节是弯曲的状态.&lt;/p&gt;
+&lt;p&gt;从俯视图看, 显微镜是由两个固定臂转动构成, 如果这个关节是完全伸直才能达到患者的头部, 那么再弯曲就够不着了.&lt;/p&gt;
+&lt;p&gt;术前要把显微镜挪动到合适的位置, 保持有足够的冗余. 否则术中再移动显微镜底座就非常困难.&lt;/p&gt;
+&lt;h3&gt;脚&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="幻灯片05" src="https://i.loli.net/2018/06/20/5b2a572576765.jpeg"&gt;
+脚踏的位置要在术前事先摆好. 这样术中, 不需要多想脚就可以找到相应的位置.&lt;/p&gt;
+&lt;p&gt;多数医院是使用左脚显微镜, 右脚phaco/玻切踏板的设定. 但如果去郑大一附院的时候要小心, 有可能他们的设定相反.&lt;/p&gt;
+&lt;p&gt;两个踏板放在与肩同宽或者略宽的位置, 稍微分开成60度左右, 以主刀坐下膝盖90度可舒适踩到踏板为准. 如果太远或太近, 都会造成紧张. 这个后面会详述.&lt;/p&gt;
+&lt;h3&gt;床的高度&lt;/h3&gt;
+&lt;p&gt;当显微镜座机的位置, 座椅的位置, 脚踏的位置都摆好以后, 相当于在俯视图上把各个物体安顿好了.&lt;/p&gt;
+&lt;p&gt;这时候需要调整高度了, 我们转入到侧视图来观察.
+&lt;img alt="幻灯片06" src="https://i.loli.net/2018/06/20/5b2a5a3d0ab34.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;从上到下观察, 显微镜的工作距离是不可变的, 虽然显微镜物镜还可以移动, 但距离其实很小. 手术床的厚度给定不可变, 床的高度可调, 凳子的高度可调.&lt;/p&gt;
+&lt;p&gt;在操作中凳子的高度要根据术者的小腿长度来设定, 尽量使膝关节弯曲在90度左右. &lt;/p&gt;
+&lt;p&gt;显微镜的目镜位置应当在术者平视的位置.&lt;/p&gt;
+&lt;p&gt;床的位置需要使术者能够放松放置前臂和手腕, 大约是屈肘90度-120度左右.&lt;/p&gt;
+&lt;p&gt;所以综合考虑, 手术床的高度需要有一定的调整, 手术床高了术者的手举高, 容易紧张, 床低了, 可能膝关节活动有影响, 或者手太低也不舒服.&lt;/p&gt;
+&lt;p&gt;在准备工作阶段, 术者的舒适感是最优先考虑的事项, 只有术者舒适患者舒适手术才能平稳进行.&lt;/p&gt;
+&lt;p&gt;在确定了各个设备的位置之后, 还要检查显微镜的功能&lt;/p&gt;
+&lt;h3&gt;显微镜的功能&lt;/h3&gt;
+&lt;p&gt;检查显微镜的功能要分别检查主镜和助手镜的功能, 功能检查可以从光/机/电来分类考虑, 不容易漏项.&lt;/p&gt;
+&lt;h4&gt;显微镜的光学功能&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;目镜是否插紧是否复位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显微镜的目镜是可以拆卸的, 有时候前一个使用者反复调整或者昨天护士在擦拭时目镜可能会松动.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片08" src="https://i.loli.net/2018/06/20/5b2a5dc96fcf3.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;如果目镜松动, 特别是单个松动, 那样调焦是无论如何无法舒适的. 所以需要确认一下目镜是否塞紧了.&lt;/p&gt;
+&lt;p&gt;最好顺手将目镜的屈光度放置到0, 或者设定为第一个术者的屈光度.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;物镜是否太脏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在眼科手术中, 我们经常需要向患者的角膜上点生理盐水, 偶尔会有少许水滴飞溅到物镜上, 一段时间后水干了会留下盐的痕迹. 会影响成像的对比度, 你不会希望透过一层模糊的镜头来观察前囊的.
+&lt;img alt="幻灯片09" src="https://i.loli.net/2018/06/20/5b2a5f5b35c63.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;擦拭物镜需要用擦镜纸, 而不是棉签或者纱布, 用蒸馏水而不是生理盐水.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;助手镜是否打开&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很多助手镜是可以左右互换的, 如果开关切换到了另一端, 助手镜就是黑的. 刷手之前简单检查一下就好. 如果上台以后才发现有问题, 只好请巡台护士帮忙了, 不但遭到巡台护士的白眼, 而且增加了污染机会.&lt;br&gt;
+&lt;img alt="幻灯片10" src="https://i.loli.net/2018/06/20/5b2a60e0e33af.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;注意助手镜的观察角度是可调的, 有一个调节环可以修正角度. 也应当在术前找好与主刀一致的角度, 否则助手操作起来也很困难.&lt;/p&gt;
+&lt;p&gt;方法是在镜下放一个物体, 例如一只笔, 按床的长轴方向放置, 然后看着助手镜调整调节环, 使笔的方向合理.&lt;/p&gt;
+&lt;p&gt;如果是到一个新的环境, 要弄清楚助手镜的性能, 有的助手镜没有立体感, 放大率不可调, 焦距如何调整要问清楚.&lt;/p&gt;
+&lt;h4&gt;机械功能: 悬臂阻尼&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="幻灯片11" src="https://i.loli.net/2018/06/20/5b2a61aec1195.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;手术显微镜的悬臂上有多个阻力调节钮, 如果太紧了, 首次调整显微镜位置时很难推动.&lt;/p&gt;
+&lt;p&gt;如果阻尼太松了, 显微镜的悬臂可能无法保持位置, 会因为重力缓慢下坠, 术中会发现视物越来越模糊.&lt;/p&gt;
+&lt;h4&gt;电器功能:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;照明是否正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;试试灯是不是亮的, 想想如果大家都准备好了病人也躺在手术床上才发现灯泡不亮赶着换灯泡的尴尬场面.&lt;/p&gt;
+&lt;p&gt;万一术中真的突然灯泡烧了, 每个显微镜常规是有一个可以快速切换的备用灯泡的.
+&lt;img alt="幻灯片12" src="https://i.loli.net/2018/06/20/5b2a62eb30c44.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;常规而言灯泡的位置都是在悬臂上有散热格栅的地方, 有一个可以拔出的面板, 里面会有两个灯泡, 旋转180度重新插回就可以启动备用灯泡了. 术后记得要及时换掉烧坏的灯泡.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;录像系统是否接好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;学习手术必须录像.
+学习手术必须录像.
+学习手术必须录像.&lt;/p&gt;
+&lt;h2&gt;有记录的失败才是成功之母,&lt;/h2&gt;
+&lt;h2&gt;没有记录的失败仅仅是场灾难.&lt;/h2&gt;
+&lt;h2&gt;作业&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;帮助护士准备和收纳显微镜，认清各种可调整部分。&lt;/li&gt;
+&lt;li&gt;学会换灯泡。&lt;/li&gt;
+&lt;li&gt;学会使用手术录像设备&lt;/li&gt;
+&lt;li&gt;学会调整手术床&lt;/li&gt;
+&lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery%281%29/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
 &lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
@@ -474,321 +563,4 @@ $$&lt;/p&gt;
 &lt;p&gt;而且鉴于我以前凡是两个能够弄混的事情一定可以弄混的特性,&lt;/p&gt;
 &lt;p&gt;于是把什么真假阴性阳性扩展到更多的情况, 画了张图&lt;/p&gt;
 &lt;p&gt;红色是分子, 灰色是分母. (灰色区域都是包含红色的)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/ratios.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</guid><pubDate>Sun, 01 Apr 2018 04:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记2</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-machine-learning"&gt;Applied Machine Learning in Python&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这门课实在是太差了. 严重差评:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;本身讲得就很差, 还经常口误&lt;/li&gt;
-&lt;li&gt;不写板书, 对着ppt念&lt;/li&gt;
-&lt;li&gt;代码写得也混乱, 在函数内部用import? ? &lt;/li&gt;
-&lt;li&gt;交作业的时候要手动注释掉matplotlib&lt;/li&gt;
-&lt;li&gt;考试填空题是给出函数的运行结果&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;我上大学时上毛泽东思想概论和邓小平理论的课听着都比这舒坦.&lt;/p&gt;
-&lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="评估"&gt;评估&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E8%AF%84%E4%BC%B0"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;不同的应用可能有非常不同的目标&lt;/li&gt;
-&lt;li&gt;Accuracy虽然广泛使用, 但其他的评估指标也可能使用. 例如:&lt;ul&gt;
-&lt;li&gt;用户满意度 (网络搜索)&lt;/li&gt;
-&lt;li&gt;收入(电子贸易)&lt;/li&gt;
-&lt;li&gt;病人生存率的提高(医疗)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="不平衡分类中的Accuracy"&gt;不平衡分类中的Accuracy&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E4%B8%8D%E5%B9%B3%E8%A1%A1%E5%88%86%E7%B1%BB%E4%B8%AD%E7%9A%84Accuracy"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;假设有两个分类: &lt;ul&gt;
-&lt;li&gt;相关(R): 阳性分类结果&lt;/li&gt;
-&lt;li&gt;不相关(N): 阴性分类结果&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;随机选择1000个样本, 平均而言: Out of 1000 randomly selected items, on average&lt;ul&gt;
-&lt;li&gt;1个R&lt;/li&gt;
-&lt;li&gt;999个N&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;$$
-Accuracy = \frac{正确预测的数量}{总量}
-$$&lt;/p&gt;
-&lt;p&gt;你建了一个分类器, 在test set上测试后发现accuracy=99.9%&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Wow! Amazingly good! 是不是? &lt;/li&gt;
-&lt;li&gt;为了比较, 假定我们有一个"dummy"分类器, 就是个假分类器, 不管输入是什么, 都预测是最多频率的类别, 比如N&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;那么
-$$
-Accuracy_{DUMMY} = \frac{999}{1000}=99.9\%
-$$&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Dummy分类器完全忽略输入数据"&gt;Dummy分类器完全忽略输入数据&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#Dummy%E5%88%86%E7%B1%BB%E5%99%A8%E5%AE%8C%E5%85%A8%E5%BF%BD%E7%95%A5%E8%BE%93%E5%85%A5%E6%95%B0%E6%8D%AE"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;scikit-learn中常用的DummyClassifier类型: &lt;ul&gt;
-&lt;li&gt;most_frequent: 预测值是出现频率最高的类别&lt;/li&gt;
-&lt;li&gt;stratified : 根据训练集中的频率分布给出随机预测&lt;/li&gt;
-&lt;li&gt;uniform: 使用等可能概率给出随机预测&lt;/li&gt;
-&lt;li&gt;constant: 根据用户的要求, 给出常数预测. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;这个方法的主要动机是F1-scoring, 当阳性分类很少的情况. &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;如果你的模型预测结果跟Dummy差不多:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;功能无效，错误或缺失&lt;/li&gt;
-&lt;li&gt;内核或超参数选择不当&lt;/li&gt;
-&lt;li&gt;分类失衡, 有的类别太多&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="重点重点:-Binary-prediction-outcomes"&gt;重点重点: Binary prediction outcomes&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E9%87%8D%E7%82%B9%E9%87%8D%E7%82%B9:-Binary-prediction-outcomes"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;
-&lt;th style="text-align:left"&gt;&lt;/th&gt;
-&lt;th style="text-align:left"&gt;预测为(-)&lt;/th&gt;
-&lt;th style="text-align:left"&gt;预测为(+)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;实际为(-)&lt;/td&gt;
-&lt;td style="text-align:left"&gt;TN&lt;/td&gt;
-&lt;td style="text-align:left"&gt;FP&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;实际为(+)&lt;/td&gt;
-&lt;td style="text-align:left"&gt;FN&lt;/td&gt;
-&lt;td style="text-align:left"&gt;TP&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;TP = true positive 真阳性&lt;/li&gt;
-&lt;li&gt;FP = false positive (Type I error) 假阳性(Type I错误) , 印象里就是P&amp;lt;0.05的0.05&lt;/li&gt;
-&lt;li&gt;TN = true negative 真阴性&lt;/li&gt;
-&lt;li&gt;FN = false negative (Type II error)假阴性(Type II错误)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;上面的矩阵叫做: Confusion-Matrix&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Accuracy: 分类正确的概率. 实际为(-)预测为(-), 实际为(+)预测为(+)叫做正确. 
-$$
-Accuracy=\frac{TP + TN}{TP + TN + FP + FN}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Classification error: (1-Accuracy), 分类错误的概率
-$$
-Classification\;  error=\frac{FP + FN}{TP + TN + FP + FN}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Recall, 真阳性率: 实际上为(+), 能够被预测成(+)的概率&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Recall又叫 &lt;/li&gt;
-&lt;li&gt;True Positive Rate (TPR): 真阳性率&lt;/li&gt;
-&lt;li&gt;Sensitivity: 敏感性&lt;/li&gt;
-&lt;li&gt;Probability of detection: 检出率
-$$
-Recall=\frac{TP}{TP+FN}
-$$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Precision: 如果预测为(+), 那么预测正确的概率
-$$
-Precision=\frac{TP}{TP+FP}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;又叫做: Specificity, 特异性
-$$
-False positive rate=\frac{FP}{TN+FP}
-$$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="高precision,-低recall"&gt;高precision, 低recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E9%AB%98precision,-%E4%BD%8Erecall"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.loli.net/2018/03/31/5abf84bf4da95.png" alt="high precision.png"&gt;
-无罪推定, 抓到的坏人都是有罪的, 但也可能有很多漏网了.&lt;/p&gt;
-&lt;h3 id="高recall,-低precision"&gt;高recall, 低precision&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E9%AB%98recall,-%E4%BD%8Eprecision"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;&lt;img src="https://i.loli.net/2018/03/31/5abf84c2c0a78.png" alt="high recall.png"&gt;
-宁肯错杀一千, 不可放走一个.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="precision与recall的折衷"&gt;precision与recall的折衷&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#precision%E4%B8%8Erecall%E7%9A%84%E6%8A%98%E8%A1%B7"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Recall指导的机器学习任务:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;法律搜索和法律信息提取&lt;/li&gt;
-&lt;li&gt;肿瘤检测Tumor detection&lt;/li&gt;
-&lt;li&gt;通常配备人类专家剔除假阳性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Precision指导的机器学习任务&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;搜索引擎排序, 搜索建议&lt;/li&gt;
-&lt;li&gt;文档分类&lt;/li&gt;
-&lt;li&gt;很多面向用户的任务(因为用户记住错误!)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="F1-score:-结合precision与recall"&gt;F1-score: 结合precision与recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;$$
-F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
-$$&lt;/p&gt;
-&lt;h3 id="F-score:-更一般地将precision与recall结合成单独一个数"&gt;F-score: 更一般地将precision与recall结合成单独一个数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;$$
-F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
-$$&lt;/p&gt;
-&lt;p&gt;𝛽用来调整recall vs precision之间的重要程度:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Precision-oriented users: 𝜷 = 0.5 &lt;/li&gt;
-&lt;li&gt;Recall-oriented users: 𝜷 = 2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;compute_scores&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;TN&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;FP&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;FN&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="c1"&gt;# Accuracy = TP + TN / (TP + TN + FP + FN)&lt;/span&gt;
-    &lt;span class="c1"&gt;# Precision = TP / (TP + FP)&lt;/span&gt;
-    &lt;span class="c1"&gt;# Recall = TP / (TP + FN)  Also known as sensitivity, or True Positive Rate&lt;/span&gt;
-    &lt;span class="c1"&gt;# F1 = 2 * Precision * Recall / (Precision + Recall) &lt;/span&gt;
-    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{}&lt;/span&gt;
-    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Accuracy"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;TN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;TN&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Precision"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Recall"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TP&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;FN&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# Also known as sensitivity, or True Positive Rate&lt;/span&gt;
-    &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"F1"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Precision"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Recall"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Precision"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"Recall"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; 
-    
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;scores_dict&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;c_matrix&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"TN"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"FP"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
-          &lt;span class="s2"&gt;"FN"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;"TP"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;96&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;span class="n"&gt;compute_scores&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;96&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt output_prompt"&gt;Out[5]:&lt;/div&gt;
-
-
-
-
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;{'Accuracy': 0.905511811023622,
- 'F1': 0.9411764705882353,
- 'Precision': 0.9230769230769231,
- 'Recall': 0.96}&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="未完待续"&gt;未完待续&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</guid><pubDate>Sat, 31 Mar 2018 12:30:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/ratios.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</guid><pubDate>Sun, 01 Apr 2018 04:00:00 GMT</pubDate></item></channel></rss>
