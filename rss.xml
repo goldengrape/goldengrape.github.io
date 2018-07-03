@@ -1,5 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 21 Jun 2018 18:49:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 03 Jul 2018 16:42:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
+&lt;p&gt;这是一组操作训练作业:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;1.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化手术显微镜&lt;/li&gt;
+&lt;li&gt;设置好显微镜下录像&lt;/li&gt;
+&lt;li&gt;用手机或由同伴拍摄坐姿正侧位照片&lt;ul&gt;
+&lt;li&gt;在练习0分钟后, 5分钟后, 10分钟后分别拍摄&lt;/li&gt;
+&lt;li&gt;或用手机录像拍摄坐姿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2.
+打印下图
+&lt;img alt="幻灯片45" src="https://i.loli.net/2018/07/04/5b3ba3f920315.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;3.
+&lt;img alt="幻灯片46" src="https://i.loli.net/2018/07/04/5b3ba4254ca37.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;4.
+&lt;img alt="幻灯片47" src="https://i.loli.net/2018/07/04/5b3ba4254ef66.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;5.
+&lt;img alt="幻灯片48" src="https://i.loli.net/2018/07/04/5b3ba4254c9e5.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;6.
+&lt;img alt="幻灯片49" src="https://i.loli.net/2018/07/04/5b3ba42545a5d.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;7.
+&lt;img alt="幻灯片50" src="https://i.loli.net/2018/07/04/5b3ba4254596c.jpeg"&gt;&lt;/p&gt;
+&lt;h2&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://microsurg.hs.columbia.edu/"&gt;http://microsurg.hs.columbia.edu/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optical Devices in Ophthalmology and Optometry: technology, Design Principles and Clinical Applications. ISBN: 978-3-527-41068-2 page 147-page 177&lt;/li&gt;
+&lt;li&gt;Coursera公开课:&lt;ul&gt;
+&lt;li&gt;台湾大学基础光学1,  第6讲
+*&lt;a href="https://www.coursera.org/learn/ji-chu-guang-xue"&gt;https://www.coursera.org/learn/ji-chu-guang-xue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;密歇根大学白内障手术概论, week 2&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.coursera.org/course/cataractsurgery"&gt;https://www.coursera.org/course/cataractsurgery
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;正确的坐姿&lt;/h2&gt;
+&lt;p&gt;基本的原则是:
+&lt;em&gt; 上身的重力不可传导至手
+&lt;/em&gt; 全身的重力不可传导至脚&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片22" src="https://i.loli.net/2018/07/03/5b3b803388499.jpeg"&gt;
+坐姿应当是可持续的放松舒适动作, 有些坐姿看似很舒服, 或者刚刚开始的时候舒服, 持续一段时间反而会造成很大的损伤.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;术者的上身应当是很挺拔的状态, 自我感觉有点像是头悬梁,&lt;/li&gt;
+&lt;li&gt;手肘放松接近90度左右,&lt;/li&gt;
+&lt;li&gt;膝盖也是接近90度左右,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相应地要调节好凳高和床高.&lt;/p&gt;
+&lt;p&gt;双脚分开约60度, 轻放在踏板上.&lt;/p&gt;
+&lt;!-- EOF --&gt;
+
+&lt;p&gt;&lt;img alt="幻灯片23" src="https://i.loli.net/2018/07/03/5b3b8194de1c1.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;重复一下坐姿的基本原则是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上身的重力不可传导至手&lt;/li&gt;
+&lt;li&gt;全身的重力不可传导至脚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是因为:
+肌肉越放松, 动作越敏捷越稳定.&lt;/p&gt;
+&lt;p&gt;如果画一张图, 用横轴表示肌张力, 纵轴表示动作的稳定性, 大约是这样的:
+&lt;img alt="幻灯片24" src="https://i.loli.net/2018/07/03/5b3b820a7f5d2.jpeg"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要将肢体放置在指定位置, 显然还是需要一定的肌张力, 不可能为0.&lt;/li&gt;
+&lt;li&gt;要达成一定的目标动作, 比如用镊子夹持住囊膜, 也需要有一定的力量. 手术过程中是希望使用能够完成目标动作的最小力量. 比如撕囊, 前囊只有几个微米, 很小的力量即可夹持住, 如果施加更大的力量, 囊膜也仍然只是被夹住而已, 但更大的力量就有可能造成肌肉的抖动, 使稳定性下降.&lt;/li&gt;
+&lt;li&gt;如果坐姿出现错误, 手或者脚不但要用力完成动作, 还需要分出一部分力量去支撑身体的重力, 稳定性就会更差.&lt;/li&gt;
+&lt;li&gt;如果坐姿更扭曲, 可能还出现肌肉之间互相拮抗, 那时就几乎无法完成任何操作了.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;错误坐姿&lt;/h2&gt;
+&lt;p&gt;人在精神高度紧张的时候, 可能不注意自己的坐姿. 或者在上台落座之前, 没有能够很好地调整手术床/手术椅的高度.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片25" src="https://i.loli.net/2018/07/03/5b3b83b1b7fbb.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;要迅速毁掉一台手术非常简单, 比如上图中, 只要手术床摆低一些, 座椅摆到更远离手术床的位置, 脚踏放远一点, 显微镜阻尼放松一点即可.&lt;/p&gt;
+&lt;p&gt;分析一下, 在这种情况下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显微镜阻尼过松, 使用中下垂, 术者要低头, 颈椎压力大&lt;/li&gt;
+&lt;li&gt;手术床过低, 工作距离不变, 显微镜必然也要降低, 术者低头弯腰, 颈椎腰椎压力大.&lt;/li&gt;
+&lt;li&gt;手术床过低, 手臂下垂+术者低头, 一部分上身重力转移到手腕上, 手腕肌张力提高, 容易出现手抖.&lt;/li&gt;
+&lt;li&gt;手术椅太靠后, 术者只坐椅子边缘, 极不稳定, 紧张, 需要动用腿的力量支撑&lt;/li&gt;
+&lt;li&gt;脚踏位置太远, 脚需要分担身体重量, 于是踩下脚踏容易, 抬起来却要慢一拍. 如果是发现吸住后囊, 恐怕是松不开了. 而且由于脚移动困难, 就会少移动, 于是会减少显微镜的实时调节, 相应的, 术者眼睛就要自己来动用调节力调节了, 很快也会疲劳.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上述坐姿其实并不罕见, 比如在wetlab实验室中:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片26" src="https://i.loli.net/2018/07/03/5b3b86e90bebb.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;这位同学就能够把所有上述各项错误都做全了. 还好是在实验室及时发现了她的错误, 并且指出纠正, 现在手术应该是好很多了.&lt;/p&gt;
+&lt;p&gt;错误的坐姿不仅威胁病人, 对医生的身体也是损害:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1994年, 面向英国眼科医生问卷调查, 54% 背痛&lt;/li&gt;
+&lt;li&gt;2005年, 美国, 52%颈部/上肢/腰痛, 其中15%工作受限制&lt;/li&gt;
+&lt;li&gt;2004年, 伊朗, 80%慢性背痛, 55%慢性头痛&lt;/li&gt;
+&lt;li&gt;2004年, 美国后节, 55%同时颈部背部痛, 其中7%需要接受手术治疗.
+...
+
+Will Ophthalmology Cripple You? http://www.reviewofophthalmology.com/content/i/1650/c/30458/
+好好看看, 不要把自己变成别人SCI里的病例.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;显微镜调节&lt;/h2&gt;
+&lt;p&gt;显微镜是靠脚踏来调节的. 要熟悉脚踏板的操作. 不同的脚踏可能踏板的定义不同, 需要自己亲自测试一下, 并且要在显微镜上多多练习才能熟悉.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片28" src="https://i.loli.net/2018/07/03/5b3b8990b7fba.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;踏板中最重要的部分就是调节放大率和调焦. 要注意脚踏的各个控制调节都不是无限制的, 都有各自的极限范围, 到达极限以后显微镜有声音却不再移动.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片29" src="https://i.loli.net/2018/07/03/5b3b8a88a0373.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;特别是调焦的微调上下都是有极限的, 经常看到有学生一直踩着脚踏, 显微镜已经降到最低, 仍然抱怨角膜浑浊看不清楚.&lt;/p&gt;
+&lt;p&gt;马志中教授讲过: 出现问题, 停下, 恢复到正常状态, 再操作.&lt;/p&gt;
+&lt;p&gt;对于显微镜一直调不清楚的实例来说, 就是停下, 看看显微镜是不是已经调到了最低或最高, 如果是, 用复位按钮或者脚踏把显微镜重新放到中间, 再粗调, 再微调.&lt;/p&gt;
+&lt;h2&gt;亮度-对比度&lt;/h2&gt;
+&lt;p&gt;显微镜的灯很亮, 但并非越亮越好.&lt;/p&gt;
+&lt;p&gt;$$
+Contrast= \frac{L_{max}-L_{min}}{L_{max}+L_{min}}
+$$&lt;/p&gt;
+&lt;p&gt;对比度是(最亮-最暗)除以(最亮+最暗), 或者说&lt;/p&gt;
+&lt;p&gt;$$
+Contrast= \frac{L_{max}-L_{min}}{L_{mean}}
+$$&lt;/p&gt;
+&lt;p&gt;对比度是(最亮-最暗)除以平均亮度,
+提高了照明亮度, 可不一定提高对比度， 因此也不一定“更清楚”
+&lt;img alt="幻灯片31" src="https://i.loli.net/2018/07/03/5b3b8ca149c9f.jpeg"&gt;&lt;/p&gt;
+&lt;h2&gt;景深 vs 放大率&lt;/h2&gt;
+&lt;p&gt;景深: 用手术显微镜时, 在垂直方向上看清楚的范围.
+&lt;img alt="幻灯片32" src="https://i.loli.net/2018/07/03/5b3b8ce8d77ab.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;景深和放大率在一定程度上是相反的, 物体放大, 则景深缩小.
+&lt;img alt="幻灯片33" src="https://i.loli.net/2018/07/03/5b3b8d576b481.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;由于景深和放大率有矛盾, 所以应当按需分配, 例如&lt;/p&gt;
+&lt;h4&gt;在phaco手术中:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;撕囊:&lt;/li&gt;
+&lt;li&gt;需要看清囊膜, 所以放大率很重要&lt;/li&gt;
+&lt;li&gt;操作仅仅在囊膜平面, 所以景深并不重要.(这个推理仅仅在你不会牵拉切口的前提下, 否则眼球乱转, 囊膜平面倾斜)&lt;/li&gt;
+&lt;li&gt;所以, 可以放得大一些&lt;/li&gt;
+&lt;li&gt;phaco:&lt;/li&gt;
+&lt;li&gt;需要看到从角膜内皮直到后囊膜的范围, 所以景深非常重要.&lt;/li&gt;
+&lt;li&gt;核块的相貌倒是并不重要, 所以放大率可以小一些.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;在显微缝合中:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;进针出针: 需要看清细节层次, 可以放大一些&lt;/li&gt;
+&lt;li&gt;打结: 针持到镊子的距离可能很大, 需要缩小一些.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;翼状胬肉:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;病人眼动剧烈, 为了减少术者调节, 景深要好一些, 缩小&lt;/li&gt;
+&lt;li&gt;病人配合好, 可以适当增加放大率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;作业:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;看手术时, 记录下不同步骤时主刀所使用的放大率&lt;/li&gt;
+&lt;li&gt;记录数字, 显微镜上会有一个旋转的转盘显示数字&lt;/li&gt;
+&lt;li&gt;记录镜下视野边缘看到的东西:&lt;ul&gt;
+&lt;li&gt;是否可见开睑器&lt;/li&gt;
+&lt;li&gt;是否可见睑缘&lt;/li&gt;
+&lt;li&gt;是否可见角膜缘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在显微镜主镜和助手镜下, 分别试试把一支笔插进笔帽里&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;可视范围&lt;/h2&gt;
+&lt;p&gt;显微镜有一定的可视范围, 但显然最中央的区域成像质量是最佳的, 要练习将病人的眼睛放在显微镜视野的中央.&lt;/p&gt;
+&lt;p&gt;在实验室, 做猪眼练习时, 很多同学在术中把承放猪眼的支架托盘挪来挪去, 甚至旋转! 记住在实际手术中, 病人是不可移动的, 也是不可旋转的. 要用脚踏调位置
+&lt;img alt="幻灯片37" src="https://i.loli.net/2018/07/03/5b3b903e142e7.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;另外注意镜下可视范围&amp;gt;录像可视范围, 如果你真的好好录制自己手术, 很可能在前几次手术时, 根本录不到患者的眼球.&lt;/p&gt;
+&lt;h2&gt;眼不离镜&lt;/h2&gt;
+&lt;p&gt;在手术中, 术者尽量不要使眼睛离开显微镜目镜. 一旦术者的眼睛离开显微镜目镜, 患者眼内不可有任何手术器械!&lt;/p&gt;
+&lt;p&gt;如果你眼睛离开目镜去取器械, 左手还留着chopper在患者眼内, 等再回来看时, 恐怕后囊或者虹膜早被钩破了.&lt;/p&gt;
+&lt;p&gt;要学会眼睛不离开显微镜就可以传递手术器械.&lt;/p&gt;
+&lt;p&gt;很多同学不敢做这个动作, 眼睛不离开显微镜时, 手里拿着器械却找不到. 这是因为人脑总觉得物体是在视线的延长线上, 而显微镜上有反射镜, 所以物体实际比视线所在位置更靠近自己. 练习时, 把器械向自己怀里拉近一些可能就可以找到.
+&lt;img alt="幻灯片39" src="https://i.loli.net/2018/07/03/5b3b93335833a.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;人脑有强大的纠错能力, 大约只需要5分钟的简单训练, 就可以习惯眼不离镜取放器械了.&lt;/p&gt;
+&lt;p&gt;练习方法也很简单, 找个同伴为你传递器械, 比如一支笔, 眼不离镜, 用笔在镜下往纸上画个点, 然后再递出去. 练习5分钟, 受用一辈子.&lt;/p&gt;
+&lt;h2&gt;红反光&lt;/h2&gt;
+&lt;p&gt;每一个到我实验室来练习手术的医生我都会问ta是否从病人视角看过手术显微镜的物镜是什么样子, 大约教了300多位医生, 真正看过的人一只手就可以数过来.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片40" src="https://i.loli.net/2018/07/03/5b3b948895ac3.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;这是两种显微镜的物镜照片, 两个小圆就是物镜, 而发亮的是光源的反射镜. 可见光源和物镜并不是在同一个位置.&lt;/p&gt;
+&lt;p&gt;所谓眼底红反光, 是显微镜的光源将光投射到眼底, 再反射回来, 被物镜接收到.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片41" src="https://i.loli.net/2018/07/04/5b3b9f68491d5.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;从示意图中可以看出, 如果把眼底简化成一个垂直于眼轴的平面镜, 那么入射角=反射角, 眼轴最多只能在光源和物镜的角平分线之内, 否则反射光就离开物镜了.&lt;/p&gt;
+&lt;p&gt;听过科主任对病人喊"看灯"吧, 看灯的时候眼轴指向光源附近, 反射光容易进入物镜, 红反光会比较明显.&lt;/p&gt;
+&lt;h2&gt;作业&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;用手机给显微镜底部拍照&lt;/li&gt;
+&lt;li&gt;取吸管一根, 底部塞些铝箔&lt;ul&gt;
+&lt;li&gt;放在镜下观察反光&lt;/li&gt;
+&lt;li&gt;转动角度, 观察反光&lt;/li&gt;
+&lt;li&gt;剪成不同长度, 观察反光&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;去验光室学习检影验光&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;清洁区&lt;/h2&gt;
@@ -72,7 +260,7 @@
 &lt;li&gt;开、关显微镜灯光，并调整亮度&lt;/li&gt;
 &lt;li&gt;借阅手术显微镜说明书&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;良好的习惯产生手术安全,&lt;/li&gt;
 &lt;li&gt;正确勤勉的练习产生良好的习惯,&lt;/li&gt;
@@ -161,7 +349,7 @@
 &lt;li&gt;学会调整手术床&lt;/li&gt;
 &lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
 &lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
@@ -437,199 +625,4 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;嫌疑人不必回家, 嫌疑人可以出现在任何地方不受限制.&lt;/p&gt;
 &lt;p&gt;综上, 机器工作的过程有多长时间, 多复杂并不用考虑, 需要考虑的是能够连续多长时间不需要在特定地点操作机器.&lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Smart-home-and-evidence-of-absence/</guid><pubDate>Tue, 10 Apr 2018 14:00:00 GMT</pubDate></item><item><title>用Fusion360编辑STL</title><link>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;STL文件就像是PDF, 是面向打印机的. 难以编辑. 即使能够编辑, 面对大量的三角形, 运行速度也非常慢.&lt;/p&gt;
-&lt;p&gt;不过最近总算找到了用Fusion360的一点点技巧.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;要打开首选项-&amp;gt;预览-&amp;gt;"网格"工作空间
-&lt;img alt="" src="https://i.loli.net/2018/04/03/5ac2756be46a2.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;插入网格, 或者使用"上传"STL文件.
-&lt;img alt="插入网格" src="https://i.loli.net/2018/04/03/5ac275c903dd1.png"&gt;
-&lt;img alt="插入网格2" src="https://i.loli.net/2018/04/03/5ac275c97231b.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;不捕获设计历史
-&lt;img alt="不捕获设计历史" src="https://i.loli.net/2018/04/03/5ac275cab7bff.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;右键选择网格对象, "Mesh到BRep", 转换成实体
-&lt;img alt="Mesh到BRep" src="https://i.loli.net/2018/04/03/5ac275ca15a81.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;铛铛, 变成实体了, 可以在各个面上编辑. 但明明是一个平面, 还是被分成了很多的三角形. 很不方便, 下面才是重点.
-&lt;img alt="很多三角形" src="https://i.loli.net/2018/04/03/5ac275c9e694b.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;随便找一个面进行"分割实体"的操作.
-&lt;img alt="分割实体" src="https://i.loli.net/2018/04/03/5ac275ca86ccb.png"&gt;
-&lt;img alt="任选一个面" src="https://i.loli.net/2018/04/03/5ac275ca84e6a.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;切完以后, 所有的平面突然就不再是一堆三角形了.
-&lt;img alt="三角形消失" src="https://i.loli.net/2018/04/03/5ac2780923f8c.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;然后在使用"合并", 将切开的实体合并在一起.
-&lt;img alt="合并" src="https://i.loli.net/2018/04/03/5ac2784911a66.png"&gt;
-&lt;img alt="到一起" src="https://i.loli.net/2018/04/03/5ac275ca4f95b.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;成品. 平面都得到了简化, 但曲面目前还没有办法. 记得完成以后把"捕获历史"的功能在再打开.
-&lt;img alt="成品" src="https://i.loli.net/2018/04/03/5ac27884f2f99.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;最后, 号召一下. 如果设计的3D模型仅仅以STL或者其他网格形式发布, 就请尽量少用圆角吧. 谢谢!&lt;/p&gt;&lt;/div&gt;</description><category>3D print</category><guid>https://goldengrape.github.io/posts/bulabula/edit-STL-with-Fusion360/</guid><pubDate>Mon, 02 Apr 2018 18:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记4(ROC曲线)</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-machine-learning"&gt;Applied Machine Learning in Python&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;这门课实在是太差了. 严重差评:&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;"所谓私人恩怨，跟政治就是一回事。所以，如果有哪个白痴政客或者哪个大人物想要推行一项法令或政策，伤害到你或者你亲人朋友的利益，那就是私人恩怨。点燃你的怒火吧。" ----奎尔&lt;/p&gt;
-&lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="决策函数(decision_function)"&gt;决策函数(decision_function)&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E5%86%B3%E7%AD%96%E5%87%BD%E6%95%B0(decision_function)"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;分类器对每个测试点都给出一个分数, 这个分数表示分类器预测的可信度. &lt;/li&gt;
-&lt;li&gt;选择一个固定的决策阈值就给出了一个分类规则. (大于阈值的就是正分类, 小于阈值的就是负分类)&lt;/li&gt;
-&lt;li&gt;通过改变决策阈值, 在所有可能的分数范围内扫描, 我们就可以给出给出一个曲线&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="预测属于某个分类的概率(predict_proba)"&gt;预测属于某个分类的概率(predict_proba)&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E9%A2%84%E6%B5%8B%E5%B1%9E%E4%BA%8E%E6%9F%90%E4%B8%AA%E5%88%86%E7%B1%BB%E7%9A%84%E6%A6%82%E7%8E%87(predict_proba)"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;典型的规则: 选择最可能的分类
-例如: 如果数值&amp;gt;0.5, 属于分类1&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;通过改变阈值可以调节分类器的预测. &lt;/li&gt;
-&lt;li&gt;更高的阈值导致更为保守的分类器&lt;ul&gt;
-&lt;li&gt;例如只有数值&amp;gt;0.7才归入分类1&lt;/li&gt;
-&lt;li&gt;高阈值增加了precision. 比之前低阈值时更少把样本归入分类1, 但是如果归入到样本1, 那么把握更大. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;还是举个我更熟悉的例子吧, 比如仅仅用眼压作为青光眼的诊断标准,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;21mmHg就是一个阈值, &lt;/li&gt;
-&lt;li&gt;大于21mmHg的就归入青光眼分类, 小于等于21mmHg的就归入正常眼的分类. 但显然这样会把一部分高眼压症的人算作是青光眼. &lt;/li&gt;
-&lt;li&gt;如果把阈值提高到比如30mmHg, 那么筛出来的病人, 真正就是青光眼的可能性就要高很多. 就是Precision更高. &lt;/li&gt;
-&lt;li&gt;如果把阈值降低到比如15mmHg, 那么就有更少的病人漏网, 也就是Recall更高&lt;/li&gt;
-&lt;li&gt;后面会讲半天ROC曲线, 就是看阈值变化时, Precision和Recall的变化. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;del&gt;但是! 在此处吐槽一下. 这样的分类方法明显是错的啊, 本来根本不是用一个值来简单区分的事情, 为什么要强行这么做? 要诊断青光眼还要看视盘, 看盘沿, 看视野, 看动态变化, 本来就不是一个一维的事情, 不管其他, 去找一个参数的分界线是不对的啊. &lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;_贱人就是矫情_&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;(4月4日更正), 此处的吐槽是不对的, 很抱歉. decision_function可以用到不同的分类器上, 是把多维的数据最终映射到一维上, 再拿到一维上来分类, 所以即使是深度学习, 如果是二分类问题, 仍然是最后由一个神经元输出[0, 1]之间的值, 并根据这个值来区分, 比如用sigmoid做激活函数, 那么分界阈值就是0.5, 但实际上可以设定不同. 所以仍然可以得出一个ROC曲线.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="再复习一下各种率"&gt;再复习一下各种率&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E5%86%8D%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%87"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ratios.png" alt=""&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;比如现在只用眼压区分青光眼, 补充一点背景知识: 已知95%的人群眼压是是10-21mmHg, 眼压最低也只能到房水的流出通道, 也就是静脉里面, 最低最低8mmHg, 眼压到30mmHg摸起来已经接近脑门的硬度了, 到40mmHg已经要疼得撞墙了.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;那么, 如果以10mmHg作为分界, 认为大于10mmHg的都是青光眼, 那么几乎所有的人类都是青光眼, 于是没有任何一个青光眼病人会被漏掉. &lt;/li&gt;
-&lt;li&gt;如果以40mmHg作为分界, 认为大于40mmHg的才是青光眼, 那么只有急性发作的病人才会被当作是青光眼, 这时候每筛出一个病人, 肯定就是青光眼, 不会筛出来的不是, 但会漏掉很多病人. &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="Precision-Recall曲线"&gt;Precision-Recall曲线&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#Precision-Recall%E6%9B%B2%E7%BA%BF"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;X轴: Precision&lt;/li&gt;
-&lt;li&gt;Y轴: Recall&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;右上顶端:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;理想点&lt;/li&gt;
-&lt;li&gt;Precision=1.0&lt;/li&gt;
-&lt;li&gt;Recall=1.0&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;P-R曲线的陡峭程度很重要. 在最大Precision时, 能够达到多大的Recall.&lt;br&gt;
-&lt;img src="https://i.loli.net/2018/04/01/5ac0be6b687da.png" alt="P-R_curve.png"&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="ROC曲线"&gt;ROC曲线&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#ROC%E6%9B%B2%E7%BA%BF"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;X轴: False Positive Rate 假阳性率&lt;/li&gt;
-&lt;li&gt;Y轴: True Positive Rate  真阳性率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;左上顶点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;理想点&lt;/li&gt;
-&lt;li&gt;False positive rate 假阳性率=0 &lt;/li&gt;
-&lt;li&gt;True positive rate 真阳性率=1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c250b9182.png" alt="ROC.png"&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;ROC曲线越往左上, 越好. &lt;/li&gt;
-&lt;li&gt;曲线下面积(AUC), 越大越好&lt;/li&gt;
-&lt;li&gt;45度线是随机瞎猜线&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c511e280e.png" alt="ROC-2.png"&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="未完待续"&gt;未完待续&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/#%E6%9C%AA%E5%AE%8C%E5%BE%85%E7%BB%AD"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</guid><pubDate>Sun, 01 Apr 2018 11:30:00 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Smart-home-and-evidence-of-absence/</guid><pubDate>Tue, 10 Apr 2018 14:00:00 GMT</pubDate></item></channel></rss>

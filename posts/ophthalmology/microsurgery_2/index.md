@@ -2,7 +2,7 @@
 .. title: 显微操作训练(2)
 .. slug: microsurgery_2
 .. date: 2018-6-22 2:00:00 UTC+08:00
-.. tags:
+.. tags: microsurgery
 .. category: ophthalmology
 .. link:
 .. description:
