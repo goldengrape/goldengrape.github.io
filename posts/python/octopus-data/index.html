@@ -203,6 +203,43 @@ excel中的数据, 每一行是一个文件中一页的数据, 因为经常病�
 <img alt="屏幕快照 2018-07-09 23.03.44" src="https://i.loli.net/2018/07/09/5b4379841f450.png"><img alt="屏幕快照 2018-07-09 23.03.52" src="https://i.loli.net/2018/07/09/5b437982e149a.png"><img alt="屏幕快照 2018-07-09 23.04.02" src="https://i.loli.net/2018/07/09/5b43798326b1b.png"><img alt="屏幕快照 2018-07-09 23.04.09" src="https://i.loli.net/2018/07/09/5b4379840f876.png"></p>
 <h2>随机森林</h2>
 <p>作为数据读取项目的一部分, octopus数据处理已经可以纳入到随机森林的机器学习功能之中, 详情请参考<a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/">眼科数据随机森林</a></p>
+<h2>更新</h2>
+<p>这是一个业余程序员建立的开源项目, 我水平所限不要要求太高. 但我也还是会不断更新的, 修复bug或者添加新功能.</p>
+<p>如果您已经导入到了azure notebooks里面, 也还是可以更新的. 更新代码的方法, 一种是可以新开一个library, 一种是在本library里更新. 如何新开一个之前已经讲过, 下面讲解一下如何更新.</p>
+<ol>
+<li>点击Terminal 图标
+<img alt="屏幕快照 2018-07-10 19.18.22" src="https://i.loli.net/2018/07/10/5b449a27d0f60.png">
+</li>
+</ol>
+<p>将打开一个命令行界面.
+<img alt="屏幕快照 2018-07-10 19.32.20" src="https://i.loli.net/2018/07/10/5b449a70abf86.png"></p>
+<ol>
+<li>输入如下命令:</li>
+</ol>
+<pre class="code literal-block"><span></span>cd library
+</pre>
+
+
+<p>进入到library文件夹里
+<img alt="屏幕快照 2018-07-10 19.41.22" src="https://i.loli.net/2018/07/10/5b449b67dea1a.png"></p>
+<ol>
+<li>要更新代码, 需要先把之前您修改过的代码清除掉, 否则有冲突. 输入如下命令:</li>
+</ol>
+<pre class="code literal-block"><span></span>git checkout .
+</pre>
+
+
+<p><img alt="屏幕快照 2018-07-10 19.44.51" src="https://i.loli.net/2018/07/10/5b449c371555d.png"></p>
+<ol>
+<li>从github上把新代码“拉”到自己的library里. 输入如下命令:</li>
+</ol>
+<pre class="code literal-block"><span></span>git pull
+</pre>
+
+
+<p><img alt="屏幕快照 2018-07-10 19.46.31" src="https://i.loli.net/2018/07/10/5b449ca3d43d6.png"></p>
+<p>这样代码就更新完毕了, 关闭页面即可.</p>
+<p>顺便, 推荐一下git, 如果您的电脑上存了很多“最终版”,“最终不变版本”,“最终最终版本”和“赌咒发誓这是最后一版”之类的文件名, 想必知道版本管理的重要性. git是一个很好的版本管理工具, 以后我会再详细讲解.</p>
 <!-- EOF -->
 </div>
     </div>
