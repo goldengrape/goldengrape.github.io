@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 09 Jul 2018 15:14:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>octopus视野报告数据提取</title><link>https://goldengrape.github.io/posts/python/octopus-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;又写好了一段PDF报告数据提取的小程序, 这次是针对Octopus 900动态视野计的. 可以提取PDF的视野检查结果报告中的数据, 能够提取的数据包括: 姓名, 生日, 检查日期, 眼别, 检查程序名称, RF, MS, MD, sLV, 还有视野测量的原始数据. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 10 Jul 2018 11:51:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>octopus视野报告数据提取</title><link>https://goldengrape.github.io/posts/python/octopus-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;又写好了一段PDF报告数据提取的小程序, 这次是针对Octopus 900动态视野计的. 可以提取PDF的视野检查结果报告中的数据, 能够提取的数据包括: 姓名, 生日, 检查日期, 眼别, 检查程序名称, RF, MS, MD, sLV, 还有视野测量的原始数据. &lt;/p&gt;
 &lt;p&gt;提取出来的数据保存在csv文件里, 可以使用excel打开和处理.
 &lt;img alt="示例" src="https://i.loli.net/2018/07/09/5b43624ad0d9f.png"&gt;
 其中以G standard程序测量的原始数据是按照从中心开始顺时针螺线的方式排列成一行的.
@@ -115,6 +115,42 @@ excel中的数据, 每一行是一个文件中一页的数据, 因为经常病�
 &lt;img alt="屏幕快照 2018-07-09 23.04.09" src="https://i.loli.net/2018/07/09/5b4379840f876.png"&gt;&lt;/p&gt;
 &lt;h2&gt;随机森林&lt;/h2&gt;
 &lt;p&gt;作为数据读取项目的一部分, octopus数据处理已经可以纳入到随机森林的机器学习功能之中, 详情请参考&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;眼科数据随机森林&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;更新&lt;/h2&gt;
+&lt;p&gt;这是一个业余程序员建立的开源项目, 我水平所限不要要求太高. 但我也还是会不断更新的, 修复bug或者添加新功能.&lt;/p&gt;
+&lt;p&gt;如果您已经导入到了azure notebooks里面, 也还是可以更新的. 更新代码的方法, 一种是可以新开一个library, 一种是在本library里更新. 如何新开一个之前已经讲过, 下面讲解一下如何更新.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击Terminal 图标
+&lt;img alt="屏幕快照 2018-07-10 19.18.22" src="https://i.loli.net/2018/07/10/5b449a27d0f60.png"&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将打开一个命令行界面.
+&lt;img alt="屏幕快照 2018-07-10 19.32.20" src="https://i.loli.net/2018/07/10/5b449a70abf86.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;输入如下命令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd library
+&lt;/pre&gt;
+
+
+&lt;p&gt;进入到library文件夹里
+&lt;img alt="屏幕快照 2018-07-10 19.41.22" src="https://i.loli.net/2018/07/10/5b449b67dea1a.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;要更新代码, 需要先把之前您修改过的代码清除掉, 否则有冲突. 输入如下命令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout .
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.44.51" src="https://i.loli.net/2018/07/10/5b449c371555d.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从github上把新代码“拉”到自己的library里. 输入如下命令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git pull
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.46.31" src="https://i.loli.net/2018/07/10/5b449ca3d43d6.png"&gt;&lt;/p&gt;
+&lt;p&gt;这样代码就更新完毕了, 关闭页面即可.&lt;/p&gt;
+&lt;p&gt;顺便, 推荐一下git, 如果您的电脑上存了很多“最终版”,“最终不变版本”,“最终最终版本”和“赌咒发誓这是最后一版”之类的文件名, 想必知道版本管理的重要性. git是一个很好的版本管理工具, 以后我会再详细讲解.&lt;/p&gt;
 &lt;!-- EOF --&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
 &lt;p&gt;这是一组操作训练作业:
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
