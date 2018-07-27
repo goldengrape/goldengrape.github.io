@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 10 Jul 2018 11:51:32 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>octopus视野报告数据提取</title><link>https://goldengrape.github.io/posts/python/octopus-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;又写好了一段PDF报告数据提取的小程序, 这次是针对Octopus 900动态视野计的. 可以提取PDF的视野检查结果报告中的数据, 能够提取的数据包括: 姓名, 生日, 检查日期, 眼别, 检查程序名称, RF, MS, MD, sLV, 还有视野测量的原始数据. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Jul 2018 04:23:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>区块链儿化音添加方案(建议稿)</title><link>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;霍炬首先发现&lt;a href="https://twitter.com/virushuo/status/1017977810017632256"&gt;这个问题&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;virushuo: 惊呆了，区块儿链儿这个儿化音在哪竟然是争议问题。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为尽快形成共识&lt;sup id="fnref-0"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-0"&gt;1&lt;/a&gt;&lt;/sup&gt;, 在此提出
+《区块链儿话音添加方案(建议稿)》:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在互联网大会发言时，应吐词清晰不宜使用儿话音，不慎加入时，注意不可在词尾加入。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;儿话表示物体较小&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-1"&gt;2&lt;/a&gt;&lt;/sup&gt;, 为显示本公司参与者众多，链长，可以把儿话音加在块儿上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;简称时可使用我司的链儿，以表示可作为套在颈上&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-2"&gt;3&lt;/a&gt;&lt;/sup&gt;的智能合约，并且可延长。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;作为从业者，不宜使用吞音，例如圈儿链。但应识别出吞音明显的使用者通常是南城五套房的土豪，宜跟进!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果不适应儿话音，则不要强行添加，必要时可使用block chain的英文，例如对粤语区，可使用波克钦&lt;sup id="fnref-3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-3"&gt;4&lt;/a&gt;&lt;/sup&gt;的发音.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-0"&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/shell909090/status/1018004112246337537"&gt;@shell909090说&lt;/a&gt; : 我觉得加哪都好，但是务必要尽快形成共识。只有有了共识，才能产生价值。 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-0" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;以维基百科记录的&lt;a href="https://zh.wikipedia.org/wiki/%E5%85%92%E5%8C%96%E9%9F%B3"&gt;儿化音使用&lt;/a&gt;为例, “有时是否使用一些儿化音难以从道理推断，其中有复杂的历史或音韵原因或者为了和同音字区别，由此也可以用来推测一个人是否本地人。如在北京的城门中，多数如前门、西直门、复兴门等不能儿化，而西便门、广渠门却通常使用儿化。”
+&lt;em&gt;其实, 这里面还是有规律可循, 前门, 西直门, 复兴门都是正门, 庄重肃穆, 不可随意儿化, 而“西便门”、“广渠门”则是后开的小门, 小就可能加上儿化音.&lt;/em&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-1" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-2"&gt;
+&lt;p&gt;参见&lt;a href="https://twitter.com/cxiaoji/status/1017988309283319808"&gt;消极姐推文&lt;/a&gt;:  @cxiaoji说: 只有栓脖子上的才叫链儿 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-2" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-3"&gt;
+&lt;p&gt;注意粤式英文词尾务必要使用平声. 单词发音以短促跳跃为佳 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-3" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</guid><pubDate>Fri, 27 Jul 2018 04:00:00 GMT</pubDate></item><item><title>octopus视野报告数据提取</title><link>https://goldengrape.github.io/posts/python/octopus-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;又写好了一段PDF报告数据提取的小程序, 这次是针对Octopus 900动态视野计的. 可以提取PDF的视野检查结果报告中的数据, 能够提取的数据包括: 姓名, 生日, 检查日期, 眼别, 检查程序名称, RF, MS, MD, sLV, 还有视野测量的原始数据. &lt;/p&gt;
 &lt;p&gt;提取出来的数据保存在csv文件里, 可以使用excel打开和处理.
 &lt;img alt="示例" src="https://i.loli.net/2018/07/09/5b43624ad0d9f.png"&gt;
 其中以G standard程序测量的原始数据是按照从中心开始顺时针螺线的方式排列成一行的.
@@ -740,11 +780,4 @@ https://www.rayner.com/en/history&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;在图像之外的领域, 手工提取feature的技能还是有意义的, 需要借鉴前人的研究基础, 比如自然语言, 图论中的很多预处理的函数, 理解其意义\用途, 很有帮助.&lt;/p&gt;
 &lt;p&gt;但在模型构建和训练上, 线性/SVM/决策树之类, 与深度学习相比, 除了需要数据量略少, 其他看起来并没有什么优势.&lt;/p&gt;
-&lt;p&gt;随机森林搭建省力, 可以作为基准. gbdt虽然效果类似, 但..RadomForest的名字比较好记. &lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</guid><pubDate>Mon, 16 Apr 2018 17:00:00 GMT</pubDate></item><item><title>口算复利</title><link>https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一个常用的小技巧. 口算复利的倍增时间.&lt;/p&gt;
-&lt;p&gt;$$
-time=\frac{70\%}{ROI}
-$$&lt;/p&gt;
-&lt;p&gt;例如, 以7%的利息复利存款, 存入100元, 则大约10年后变成连本带利变成200元.&lt;/p&gt;
-&lt;p&gt;证明:
-&lt;!-- TEASER_END --&gt;
-&lt;img alt="QED" src="https://i.loli.net/2018/04/13/5ad03d0219a8b.jpeg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/</guid><pubDate>Fri, 13 Apr 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;随机森林搭建省力, 可以作为基准. gbdt虽然效果类似, 但..RadomForest的名字比较好记. &lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</guid><pubDate>Mon, 16 Apr 2018 17:00:00 GMT</pubDate></item></channel></rss>
