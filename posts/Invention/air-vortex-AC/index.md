@@ -181,7 +181,7 @@ An air vortex cannon is a device that releases doughnut-shaped air vortices — 
 
 ![](http://n.sinaimg.cn/yd/transform/227/w387h640/20180727/MPYg-fzrwiaz9600432.jpg)
 
-看我以前在上面👆有说“**还可以改变空气团内的氧分压，以改善困倦的气氛**”, 我这个方案可以高精度定向叫醒办公室里打瞌睡的人呐! 参考[煎蛋这篇](http://jandan.net/2018/07/28/anti-sleep.html)
+看我以前在上面👆有说“**还可以改变空气团内的氧分压，以改善困倦的气氛**”, 我这个方案可以高精度定向叫醒办公室里打瞌睡的人呐! (可能吹薄荷更治标, 供氧更治本) 参考[煎蛋这篇](http://jandan.net/2018/07/28/anti-sleep.html)
 
 唉, 这么好的发明居然没卖掉.
 
