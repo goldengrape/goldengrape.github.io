@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 28 Jul 2018 15:48:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>区块链儿化音添加方案(建议稿)</title><link>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;霍炬首先发现&lt;a href="https://twitter.com/virushuo/status/1017977810017632256"&gt;这个问题&lt;/a&gt;:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 18:11:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献赏析: 古代如何测视力</title><link>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;读到一篇文献, 觉得太有趣了.
+&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;《古代如何测视力————用星星》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全文可以在&lt;a href="https://sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;sci-hub上找到&lt;/a&gt;. 在此简单叙述.&lt;/p&gt;
+&lt;p&gt;在视力表出现之前, 古代波斯/阿拉伯, 使用北斗七星勺子柄上中间的开阳星作为视力检测标准.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IMG_3639" src="https://i.loli.net/2018/08/10/5b6c82feabafd.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这是双星, (所以北斗其实是八星?)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;亮的那颗中文名叫开阳, 英文名叫Mizar,&lt;/li&gt;
+&lt;li&gt;暗的那颗中文名叫辅, 英文名叫Alcor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果能够裸眼看出两颗星, 那么就认为被试视力不错. 虽然古代文人可能对视力要求不高, 但士兵可能一直是要有严格体检的, 所以Alcor往往作为对士兵视力的检查标准.&lt;/p&gt;
+&lt;p&gt;通常天文学家/ 历史学家只讲到这里, 但这是篇眼科文献, 于是...
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;视力&lt;/h2&gt;
+&lt;p&gt;正常视力20/20, 或者说1.0, 是说视角=1分, 而开阳双星的&lt;a href="http://aeea.nmns.edu.tw/2006/0606/ap060615.html"&gt;赤经赤纬坐标&lt;/a&gt;分别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开阳(13:23:55.5, +54:55:31)&lt;/li&gt;
+&lt;li&gt;辅((13:23:56.3, +54:55:18))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是, 两颗星之间的视角大约是12分, 那么相当于视力20/200, 也就是0.1左右, 其实很差. 用0.1左右的视标去检查士兵, 显然并不靠谱.&lt;/p&gt;
+&lt;h2&gt;对比度与眩光&lt;/h2&gt;
+&lt;p&gt;又但是, Mizar是二等星(2.27), Alcor是四等星(3.95), 亮度差距其实很大(22:9.4), 所以这个测试除了测量视力, 还相当于糅合了对比敏感度和眩光检查.&lt;/p&gt;
+&lt;h2&gt;等效性实验&lt;/h2&gt;
+&lt;p&gt;文献中记载有好事者做了一个等效性实验,&lt;/p&gt;
+&lt;p&gt;先找了一组正视眼的人, 都能看清20/20的视标, 在冬天月亮不明显的晴天夜里去看开阳双星, 大家都能看见. 然后在眼前加正度数透镜, 一直加到看不到Alcor为止, 得到的球面镜度数范围是在+0.5到+0.75.&lt;/p&gt;
+&lt;p&gt;第二天, 还是这些人, 去看视力表20/20这一行, 也是同样加球面镜, 直到看不清这一行为止, 得到的球面镜度数范围仍然是+0.5到+0.75.&lt;/p&gt;
+&lt;p&gt;这个实验在我看来并不严谨, 但是貌似将开阳双星检查和20/20等效起来.&lt;/p&gt;
+&lt;p&gt;其中还有一个有趣的病例, 在等效实验中, 有个20/20的65岁被试, 分不出开阳双星, 考虑是因为早期白内障, 对比敏感度降低.&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</guid><pubDate>Thu, 09 Aug 2018 17:00:00 GMT</pubDate></item><item><title>区块链儿化音添加方案(建议稿)</title><link>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;霍炬首先发现&lt;a href="https://twitter.com/virushuo/status/1017977810017632256"&gt;这个问题&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;virushuo: 惊呆了，区块儿链儿这个儿化音在哪竟然是争议问题。。。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -750,34 +777,4 @@ https://www.rayner.com/en/history&lt;/p&gt;
 &lt;p&gt;随机森林模型在python/random_forest_model.ipynb, 如果设定好class.csv和analysis_category.csv, 大概就不需要什么修改,可以直接训练了,&lt;/p&gt;
 &lt;p&gt;训练完成后要观察一下ROC曲线和AUC评分. ROC曲线越靠近左上越好, AUC评分越接近1越好. 在该文件中, 我也有说明如何进行进一步的参数调节和优化. 但, 如果AUC评分巨高就直接发文章好了, 如果AUC评分接近0.5, 就算了吧, 换深度学习方式好了.&lt;/p&gt;
 &lt;p&gt;最后, 这是一个业余项目, 代码并不完善, 还在缓慢而持续地改进中.  &lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item><item><title>Applied Data Science with Python Specialization小结</title><link>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://www.coursera.org/specializations/data-science-python"&gt;Applied Data Science with Python Specialization&lt;/a&gt;
-五张证书拿到.&lt;/p&gt;
-&lt;p&gt;小结一下这几门课
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;第1门. Introduction to Data Science in Python
-讲Pandas基础, 严重推荐, 必学必会.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第2门. Applied Plotting, Charting &amp;amp; Data Representation in Python
-讲Matplotlib绘图, 严重推荐, 必学必会&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第3门, Applied Machine Learning in Python
-讲scikit learn, 严重不推荐, 建议上youtube随便找找教程也比那个老师讲得好,
-理解一下ROC, 知道如何评估模型.
-传统机器学习学会随机森林一项即可, 遇到问题一切默认参数先来一把梭, 效果不好就换深度学习了, 不要浪费时间.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第4门, Applied Text Mining in Python
-讲NLTK, 如果有处理自然语言的需求可以学学, 普通大众意义不大. 老师幽默风趣, 印度口音十足, 可供练习听力.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第5门, Applied Social Network Analysis in Python
-讲networkX, 推荐, 生物医学化学领域推荐学习, 以此为基础再听听图论可能更佳.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在图像之外的领域, 手工提取feature的技能还是有意义的, 需要借鉴前人的研究基础, 比如自然语言, 图论中的很多预处理的函数, 理解其意义\用途, 很有帮助.&lt;/p&gt;
-&lt;p&gt;但在模型构建和训练上, 线性/SVM/决策树之类, 与深度学习相比, 除了需要数据量略少, 其他看起来并没有什么优势.&lt;/p&gt;
-&lt;p&gt;随机森林搭建省力, 可以作为基准. gbdt虽然效果类似, 但..RadomForest的名字比较好记. &lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</guid><pubDate>Mon, 16 Apr 2018 17:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item></channel></rss>

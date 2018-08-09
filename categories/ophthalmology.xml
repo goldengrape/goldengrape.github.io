@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 31 May 2018 18:00:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 09 Aug 2018 18:11:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献赏析: 古代如何测视力</title><link>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;读到一篇文献, 觉得太有趣了.
+&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;《古代如何测视力————用星星》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全文可以在&lt;a href="https://sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;sci-hub上找到&lt;/a&gt;. 在此简单叙述.&lt;/p&gt;
+&lt;p&gt;在视力表出现之前, 古代波斯/阿拉伯, 使用北斗七星勺子柄上中间的开阳星作为视力检测标准.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IMG_3639" src="https://i.loli.net/2018/08/10/5b6c82feabafd.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这是双星, (所以北斗其实是八星?)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;亮的那颗中文名叫开阳, 英文名叫Mizar,&lt;/li&gt;
+&lt;li&gt;暗的那颗中文名叫辅, 英文名叫Alcor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果能够裸眼看出两颗星, 那么就认为被试视力不错. 虽然古代文人可能对视力要求不高, 但士兵可能一直是要有严格体检的, 所以Alcor往往作为对士兵视力的检查标准.&lt;/p&gt;
+&lt;p&gt;通常天文学家/ 历史学家只讲到这里, 但这是篇眼科文献, 于是...
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;视力&lt;/h2&gt;
+&lt;p&gt;正常视力20/20, 或者说1.0, 是说视角=1分, 而开阳双星的&lt;a href="http://aeea.nmns.edu.tw/2006/0606/ap060615.html"&gt;赤经赤纬坐标&lt;/a&gt;分别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开阳(13:23:55.5, +54:55:31)&lt;/li&gt;
+&lt;li&gt;辅((13:23:56.3, +54:55:18))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是, 两颗星之间的视角大约是12分, 那么相当于视力20/200, 也就是0.1左右, 其实很差. 用0.1左右的视标去检查士兵, 显然并不靠谱.&lt;/p&gt;
+&lt;h2&gt;对比度与眩光&lt;/h2&gt;
+&lt;p&gt;又但是, Mizar是二等星(2.27), Alcor是四等星(3.95), 亮度差距其实很大(22:9.4), 所以这个测试除了测量视力, 还相当于糅合了对比敏感度和眩光检查.&lt;/p&gt;
+&lt;h2&gt;等效性实验&lt;/h2&gt;
+&lt;p&gt;文献中记载有好事者做了一个等效性实验,&lt;/p&gt;
+&lt;p&gt;先找了一组正视眼的人, 都能看清20/20的视标, 在冬天月亮不明显的晴天夜里去看开阳双星, 大家都能看见. 然后在眼前加正度数透镜, 一直加到看不到Alcor为止, 得到的球面镜度数范围是在+0.5到+0.75.&lt;/p&gt;
+&lt;p&gt;第二天, 还是这些人, 去看视力表20/20这一行, 也是同样加球面镜, 直到看不清这一行为止, 得到的球面镜度数范围仍然是+0.5到+0.75.&lt;/p&gt;
+&lt;p&gt;这个实验在我看来并不严谨, 但是貌似将开阳双星检查和20/20等效起来.&lt;/p&gt;
+&lt;p&gt;其中还有一个有趣的病例, 在等效实验中, 有个20/20的65岁被试, 分不出开阳双星, 考虑是因为早期白内障, 对比敏感度降低.&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</guid><pubDate>Thu, 09 Aug 2018 17:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
 &lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
