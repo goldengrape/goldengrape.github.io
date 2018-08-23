@@ -41,3 +41,8 @@ Keynote形状, 或者说Keynote shape的好处是可以进行逻辑运算, 能
 * 图片: 不能编辑顶点, 不能改变填充颜色, 是标量图
 
 其中后两种在keynote里都作为图片处理. 在keynote中, 如果把文件导出成powerpoint文件, 那么形状->形状, 如果是在keynote中复制, 到powerpoint中粘贴, 是形状->图片.
+
+sspai里这一篇[文章](https://sspai.com/post/39238
+)说用Libre Office把SVG转换成keynote形状也可以. 不过Libre Office有200多M, 我懒得装了, 如果有一天SvgToKeynote失效了, 记着Libre Office可用.
+
+如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.
