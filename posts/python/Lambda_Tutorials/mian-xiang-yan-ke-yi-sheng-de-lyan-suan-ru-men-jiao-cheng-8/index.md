@@ -34,7 +34,7 @@ F(i)=F(i-1)+F(i-2)
 在你不知道其实有通项公式以前，（哪天我要表演一遍用母函数推导）
 
 $$
-F_n=\frac{1}{\sqrt 5}(\frac{1+\sqrt 5)}{2})^n
+F_n = \frac{1}{\sqrt 5} (\frac{1+\sqrt 5)}{2})^n
 -\frac{1}{\sqrt 5}(\frac{1-\sqrt 5)}{2})^n
 $$
 

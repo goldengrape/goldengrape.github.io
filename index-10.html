@@ -68,7 +68,45 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/" class="u-url">Applied Data Science with Python Specialization小结</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/random-forest-for-ophthalmology-data/" class="u-url">眼科数据随机森林</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/random-forest-for-ophthalmology-data/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-05-14T22:00:00+08:00" title="2018-05-14 22:00">2018-05-14 22:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="posts/python/random-forest-for-ophthalmology-data/#disqus_thread" data-disqus-identifier="cache/posts/python/眼科数据随机森林.html">Comments</a>
+
+
+        </p>
+</div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>要讲解"随机森林", 先要简介一下"决策树". 各位眼科大夫在眼科门诊每天都在用"决策树", 比如一位单侧眼痛伴同侧头痛的病人进入门诊:</p>
+<ul>
+<li>眼压&gt;21mmHg吗?<ul>
+<li>不是, 考虑其他可能</li>
+<li>是的, 考虑青光眼可能, 还有鉴别诊断1, 2, 3..., 进入下一题</li>
+</ul>
+</li>
+<li>前房浅吗?<ul>
+<li>不是, 考虑其他可能</li>
+<li>是的, 考虑急性闭角型青光眼发作, 还有鉴别诊断x,y,z...,, 进入下一题</li>
+</ul>
+</li>
+<li>瞳孔光反射存在吗?<ul>
+<li>存在, 考虑其他可能</li>
+<li>瞳孔固定, 考虑急性闭角型青光眼发作, 进入下一题
+. . . .</li>
+</ul>
+</li>
+</ul>
+<p>这就是一颗"决策树", 就是一堆判断题, 一层一层筛选, 最终将数据(病人)分成几类(急闭, 其他)</p>
+<p>"随机森林"就是由一组这样的"决策树"组成的分类器.
+</p>
+<p class="more"><a href="posts/python/random-forest-for-ophthalmology-data/">更多…</a></p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/" class="u-url">Applied Data Science with Python Specialization小结</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-04-17T01:00:00+08:00" title="2018-04-17 01:00">2018-04-17 01:00</time></a></p>
