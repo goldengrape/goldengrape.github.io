@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>自动生成Keynote演讲视频 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../import_calligraphy_to_keynote_as_shape/" title="将书法导入成keynote形状" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="自动生成Keynote演讲视频">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/">
+<meta property="og:description" content="目的:
+用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.
+
+
+使用方法:
+
+到这个gist页面, 点击Download zip, 将代码下载到电脑上, 然后解压缩得到“Simple Play and Say.scpt”文件
+制作好keynote, 保持当前文档打开状态
+双击打开“Simpl">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-08-26T10:00:00+08:00">
+<meta property="article:tag" content="applescript">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">自动生成Keynote演讲视频</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-08-26T10:00:00+08:00" itemprop="datePublished" title="2018-08-26 10:00">2018-08-26 10:00</time></a></p>
+                <p class="commentline">
+        
+    <a href="#disqus_thread" data-disqus-identifier="cache/posts/bulabula/自动生成keynote演讲.html">Comments</a>
+
+
+        </p>
+</div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>目的:</h3>
+<p>用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+<h3>使用方法:</h3>
+<ol>
+<li>到这个<a href="https://gist.github.com/goldengrape/eb4359a6467c5196435e469708c95f11">gist页面</a>, 点击Download zip, 将代码下载到电脑上, 然后解压缩得到“Simple Play and Say.scpt”文件</li>
+<li>制作好keynote, 保持当前文档打开状态</li>
+<li>双击打开“Simple Play and Say.scpt”文件, 然后运行脚本</li>
+<li>QuickTime Player会自动录制屏幕播放过程. 然后可以保存或者导出成其他分辨率的视频.</li>
+</ol>
+<p>这种方式可以快速生成演讲视频, 如果讲稿中有地方需要修改, 只要改动字符就可以了, 不必像对着镜头讲课录像那种必须要重新剪辑或者重新配音.</p>
+<p>而且说个英文什么的也很方便, 只是中文语音目前只有“婷婷”可以用.</p>
+<h3>进阶使用方法:</h3>
+<p><!-- TEASER_END -->
+直接使用QuickTime进行屏幕录像的时候, 默认使用的是“内置麦克风”, 如果环境比较嘈杂, 那么背景音也会录下来.</p>
+<p>解决的方法是让QuickTime进行“内录”, 也就是直接劫持声卡的声音. 有一个很久远的开源软件可以达成这个目的, <a href="https://github.com/mattingalls/Soundflower/releases">Soundflower</a>, 点击下载安装以后, 将出现两个新的声卡.</p>
+<p>先打开一次QuickTime Player, 新建屏幕录像, 然后点击录像按钮旁边的展开箭头, 将麦克风设定为Soundflower(2ch)</p>
+<p><img alt="屏幕快照 2018-08-26 10.59.06" src="https://i.loli.net/2018/08/26/5b8217b2b8a7e.png"></p>
+<p>QuickTime里面貌似设定一次以后就默认保持这种设置了.</p>
+<p>然后在运行脚本播放keynote之前, 要将系统的声音输出也设定到Soundflower(2ch)虚拟声卡上. 方法是点击屏幕顶部菜单栏中的音量图标, 就可以直接修改了.</p>
+<p><img alt="屏幕快照 2018-08-26 11.02.25" src="https://i.loli.net/2018/08/26/5b821858cc1bf.png"></p>
+<p>记得在重放的时候, 将声音的输出设备修改会“内置扬声器”, 否则就听不到声音了.</p>
+<h3>代码解释</h3>
+<p>代码修改自Sal Soghoian的<a href="https://iworkautomation.com/keynote/slide-presenter-notes.html">iwork &amp; automation网站</a></p>
+<p>我添加了使用QuickTime进行屏幕录像的几段.</p>
+<p>之前一直无法解决自动播放动画的问题, 经过一上午的尝试(我可真无聊), 终于这样解决了:</p>
+<pre class="code literal-block"><span></span>repeat 10 times
+    tell document 1
+        set cNum to (get slide number of current slide)
+    end tell
+    if cNum is not equal to i then
+        exit repeat
+    else
+        show next
+        say "," -- I really don't know why I have to say something here, english comma is a sound of silence
+    end if
+end repeat
+</pre>
+
+
+<p>每个页面内“点击下一个”, 不超过10次, 如果你的动画太多, 可以修改这个数字. 但我建议还不如分成两页幻灯.</p>
+<p>然后去判断现在是不是还在当前页面, 或者已经是切换到了下一张, 如果切换了, 就跳出循环, 如果还在这一页, 就继续“点击下一个”, 但如果仅仅这么写, 就会出现一口气连续点击了10次, 直接跳到结尾了.</p>
+<p>我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/applescript/" rel="tag">applescript</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../import_calligraphy_to_keynote_as_shape/" rel="prev" title="将书法导入成keynote形状">前一篇</a>
+            </li>
+        </ul></nav></aside><section class="comments hidden-print"><h2>注释</h2>
+        
+        
+        <div id="disqus_thread"></div>
+        <script>
+        var disqus_shortname ="goldengrapes-blog",
+            disqus_url="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/",
+        disqus_title="\u81ea\u52a8\u751f\u6210Keynote\u6f14\u8bb2\u89c6\u9891",
+        disqus_identifier="cache/posts/bulabula/自动生成keynote演讲.html",
+        disqus_config = function () {
+            this.language = "zh_cn";
+        };
+        (function() {
+            var dsq = document.createElement('script'); dsq.async = true;
+            dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+    <a href="https://disqus.com" class="dsq-brlink" rel="nofollow">Comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+        </section></article><script>var disqus_shortname="goldengrapes-blog";(function(){var a=document.createElement("script");a.async=true;a.src="https://"+disqus_shortname+".disqus.com/count.js";(document.getElementsByTagName("head")[0]||document.getElementsByTagName("body")[0]).appendChild(a)}());</script><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
