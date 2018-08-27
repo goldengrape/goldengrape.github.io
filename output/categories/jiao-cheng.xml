@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 15 Aug 2018 05:51:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:39:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
+&lt;p&gt;用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.&lt;/p&gt;
+&lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
+
+&lt;h3&gt;使用方法:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;到这个&lt;a href="https://gist.github.com/goldengrape/eb4359a6467c5196435e469708c95f11"&gt;gist页面&lt;/a&gt;, 点击Download zip, 将代码下载到电脑上, 然后解压缩得到“Simple Play and Say.scpt”文件&lt;/li&gt;
+&lt;li&gt;制作好keynote, 保持当前文档打开状态&lt;/li&gt;
+&lt;li&gt;双击打开“Simple Play and Say.scpt”文件, 然后运行脚本&lt;/li&gt;
+&lt;li&gt;QuickTime Player会自动录制屏幕播放过程. 然后可以保存或者导出成其他分辨率的视频.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这种方式可以快速生成演讲视频, 如果讲稿中有地方需要修改, 只要改动字符就可以了, 不必像对着镜头讲课录像那种必须要重新剪辑或者重新配音.&lt;/p&gt;
+&lt;p&gt;而且说个英文什么的也很方便, 只是中文语音目前只有“婷婷”可以用.&lt;/p&gt;
+&lt;h3&gt;进阶使用方法:&lt;/h3&gt;
+&lt;p&gt;&lt;!-- TEASER_END --&gt;
+直接使用QuickTime进行屏幕录像的时候, 默认使用的是“内置麦克风”, 如果环境比较嘈杂, 那么背景音也会录下来.&lt;/p&gt;
+&lt;p&gt;解决的方法是让QuickTime进行“内录”, 也就是直接劫持声卡的声音. 有一个很久远的开源软件可以达成这个目的, &lt;a href="https://github.com/mattingalls/Soundflower/releases"&gt;Soundflower&lt;/a&gt;, 点击下载安装以后, 将出现两个新的声卡.&lt;/p&gt;
+&lt;p&gt;先打开一次QuickTime Player, 新建屏幕录像, 然后点击录像按钮旁边的展开箭头, 将麦克风设定为Soundflower(2ch)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-08-26 10.59.06" src="https://i.loli.net/2018/08/26/5b8217b2b8a7e.png"&gt;&lt;/p&gt;
+&lt;p&gt;QuickTime里面貌似设定一次以后就默认保持这种设置了.&lt;/p&gt;
+&lt;p&gt;然后在运行脚本播放keynote之前, 要将系统的声音输出也设定到Soundflower(2ch)虚拟声卡上. 方法是点击屏幕顶部菜单栏中的音量图标, 就可以直接修改了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-08-26 11.02.25" src="https://i.loli.net/2018/08/26/5b821858cc1bf.png"&gt;&lt;/p&gt;
+&lt;p&gt;记得在重放的时候, 将声音的输出设备修改会“内置扬声器”, 否则就听不到声音了.&lt;/p&gt;
+&lt;h3&gt;代码解释&lt;/h3&gt;
+&lt;p&gt;代码修改自Sal Soghoian的&lt;a href="https://iworkautomation.com/keynote/slide-presenter-notes.html"&gt;iwork &amp;amp; automation网站&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我添加了使用QuickTime进行屏幕录像的几段.&lt;/p&gt;
+&lt;p&gt;之前一直无法解决自动播放动画的问题, 经过一上午的尝试(我可真无聊), 终于这样解决了:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;repeat 10 times
+    tell document 1
+        set cNum to (get slide number of current slide)
+    end tell
+    if cNum is not equal to i then
+        exit repeat
+    else
+        show next
+        say "," -- I really don't know why I have to say something here, english comma is a sound of silence
+    end if
+end repeat
+&lt;/pre&gt;
+
+
+&lt;p&gt;每个页面内“点击下一个”, 不超过10次, 如果你的动画太多, 可以修改这个数字. 但我建议还不如分成两页幻灯.&lt;/p&gt;
+&lt;p&gt;然后去判断现在是不是还在当前页面, 或者已经是切换到了下一张, 如果切换了, 就跳出循环, 如果还在这一页, 就继续“点击下一个”, 但如果仅仅这么写, 就会出现一口气连续点击了10次, 直接跳到结尾了.&lt;/p&gt;
+&lt;p&gt;我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”&lt;/p&gt;&lt;/div&gt;</description><category>applescript</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</guid><pubDate>Sun, 26 Aug 2018 02:00:00 GMT</pubDate></item><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
 &lt;p&gt;可以运行的代码&lt;a href="https://repl.it/HgCF/30"&gt;在这里&lt;/a&gt;
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -612,25 +655,4 @@ test set大概10k张图片就可以了.&lt;/p&gt;
 &lt;p&gt;参考视频:
 莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;为什么要用Eigenfunction&lt;/h2&gt;
-&lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
-&lt;p&gt;类比测视力，就好像用1.0的视标去测病人，结果病人自带放大系统，视标放大到0.1的程度，这样的测量就错了。&lt;/p&gt;
-&lt;p&gt;由于病人的像差可以千奇百怪千差万别，所以病人的眼睛作为一个线性不变系统，也可能是千差万别的。要选择一个带有周期结构的输入，经过各种各不相同的线性系统还可以得到同周期的输出，满足这个能力的输入，就是所有线性不变系统的Eigenfunction了。&lt;/p&gt;
-&lt;p&gt;常规的E视标，相当于给入的输入的“方波”，那么如果经过一个有像差的眼睛，成像后的输出可能是这样的：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="E_MTF" src="https://goldengrape.github.io/images/CSF/E_MTF.png"&gt;&lt;/p&gt;
-&lt;p&gt;看输出的强度波形，会发现各个峰的高度是不同的，如果仔细测量，可能还会发现波峰之间的周期也会略有差别。甚至一个有经验的“视力测量欺骗者”，可以根据虚影的方向反推出视标的方向。&lt;/p&gt;
-&lt;p&gt;但如果是一个正弦波的视标。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="sin_MTF" src="https://goldengrape.github.io/images/CSF/sin_MTF.png"&gt;&lt;/p&gt;
-&lt;p&gt;经过同样有像差的眼，形成的仍然是正弦波，峰值是同样的，周期是同样的，区别只是“振幅”发生了变化。只有对比度这个变量会根据像差的情况改变，这样就方便了测量。&lt;/p&gt;
-&lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
-&lt;p&gt;答：因为人眼视觉成像过程近似于线性不变系统，亮度正弦变化的视标是线性系统的Eigenfunction，在经过人眼成像厚视标的空间频率不变。&lt;/p&gt;
-&lt;p&gt;至于为什么正弦函数是线性不变系统的Eigenfunction，就是另外一个很长的故事了。如果有兴趣可以参考吕乃光老师编写的《傅里叶光学(第二版)》，第50-52页。&lt;/p&gt;
-&lt;h2&gt;One more thing&lt;/h2&gt;
-&lt;p&gt;题图&lt;/p&gt;
-&lt;p&gt;&lt;img alt="stripe_0.21" src="https://goldengrape.github.io/images/CSF/stripe_0.21.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
-&lt;p&gt;通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。&lt;/p&gt;
-&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item></channel></rss>

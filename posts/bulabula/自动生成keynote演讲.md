@@ -2,7 +2,7 @@
 .. title: 自动生成Keynote演讲视频
 .. slug: auto_keynote_presentation
 .. date: 2018-8-26 10:00 UTC+08:00
-.. tags: applescript
+.. tags: applescript, 教程, 现代眼科医生知识扩展包
 .. category: applescript
 .. link:
 .. description:
