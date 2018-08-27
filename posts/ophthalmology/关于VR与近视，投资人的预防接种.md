@@ -2,8 +2,8 @@
 .. title: 关于VR与近视(投资人的预防接种)
 .. slug: vr-and-mypia
 .. date: 2017-12-28 15:00:00 UTC+08:00
-.. tags:
-.. category:
+.. tags: ophthalmology
+.. category: ophthalmology
 .. link:
 .. description:
 .. type: text

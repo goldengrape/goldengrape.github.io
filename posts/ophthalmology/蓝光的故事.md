@@ -2,8 +2,8 @@
 .. title: 蓝光的故事
 .. slug: story-of-blue-light
 .. date: 2017-12-28 15:00:04 UTC+08:00
-.. tags:
-.. category:
+.. tags: ophthalmology
+.. category: ophthalmology
 .. link:
 .. description:
 .. type: text

@@ -2,8 +2,8 @@
 .. title: VR／AR临床实验设计中的注意事项-太长不看版
 .. slug: vr-ar-exp-tldr
 .. date: 2018-2-28 15:15:00 UTC+08:00
-.. tags:
-.. category:
+.. tags: ophthalmology
+.. category: ophthalmology
 .. link:
 .. description:
 .. type: text

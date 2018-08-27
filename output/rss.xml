@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:39:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:46:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
 &lt;p&gt;用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.&lt;/p&gt;
 &lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
 
@@ -298,7 +298,7 @@ excel中的数据, 每一行是一个文件中一页的数据, 因为经常病�
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;正确的坐姿&lt;/h2&gt;
@@ -448,7 +448,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;去验光室学习检影验光&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
+&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;清洁区&lt;/h2&gt;
@@ -521,7 +521,7 @@ $$&lt;/p&gt;
 &lt;li&gt;开、关显微镜灯光，并调整亮度&lt;/li&gt;
 &lt;li&gt;借阅手术显微镜说明书&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;良好的习惯产生手术安全,&lt;/li&gt;
 &lt;li&gt;正确勤勉的练习产生良好的习惯,&lt;/li&gt;
@@ -610,7 +610,7 @@ $$&lt;/p&gt;
 &lt;li&gt;学会调整手术床&lt;/li&gt;
 &lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
 &lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;

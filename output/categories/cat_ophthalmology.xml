@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:39:05 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:46:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
 &lt;p&gt;这是一组操作训练作业:
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;p&gt;1.&lt;/p&gt;
@@ -37,7 +37,7 @@
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;正确的坐姿&lt;/h2&gt;
@@ -187,7 +187,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;去验光室学习检影验光&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
+&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;清洁区&lt;/h2&gt;
@@ -260,7 +260,7 @@ $$&lt;/p&gt;
 &lt;li&gt;开、关显微镜灯光，并调整亮度&lt;/li&gt;
 &lt;li&gt;借阅手术显微镜说明书&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;良好的习惯产生手术安全,&lt;/li&gt;
 &lt;li&gt;正确勤勉的练习产生良好的习惯,&lt;/li&gt;
@@ -349,7 +349,7 @@ $$&lt;/p&gt;
 &lt;li&gt;学会调整手术床&lt;/li&gt;
 &lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
 &lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
@@ -408,7 +408,282 @@ https://www.rayner.com/en/history&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.sciencedirect.com/science/article/pii/S0886335099800613"&gt;Letocha, C. E.; Pavlin, C. J. (1999). "Follow-up of 3 patients with Ridley intraocular lens implantation". Journal of cataract and refractive surgery. 25 (4): 587–591.&lt;/a&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-5" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>IOL</category><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</guid><pubDate>Thu, 31 May 2018 17:00:00 GMT</pubDate></item><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/posts/python/abcd-matrix/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>IOL</category><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</guid><pubDate>Thu, 31 May 2018 17:00:00 GMT</pubDate></item><item><title>VR／AR临床实验设计中的注意事项-太长不看版</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;伴吐槽&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;前面那篇《&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp"&gt;VR／AR临床实验设计中的注意事项&lt;/a&gt;》文章太长了，以至于按照十五言的统计，“深读”率维持在10%以下，（那篇文章值一大笔顾问费的好么我为了国内的VR/AR社区就这么给捐了你们居然不仔细读）。因此作者推出了TL;DR版。&lt;/p&gt;
+&lt;h3&gt;实验准备：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;伦理：不通过伦理委员会没签知情同意书，一告一个准；&lt;/li&gt;
+&lt;li&gt;研究团队：就算企业出钱也得找些懂行的行家；&lt;/li&gt;
+&lt;li&gt;实验设计：答辩叫defence，得尽量无懈可击才行；&lt;/li&gt;
+&lt;li&gt;实验目的：一次一小步，题目太大就民科了；&lt;/li&gt;
+&lt;li&gt;实验对象：纳入排除标准预先定，把搞不定的都排除在外&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;实验测量的指标：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;视力：用LogMAR&lt;/li&gt;
+&lt;li&gt;CSF色觉能查就查一下&lt;/li&gt;
+&lt;li&gt;屈光：电脑验光仪不准&lt;/li&gt;
+&lt;li&gt;眼压：摊上青光眼就麻烦了&lt;/li&gt;
+&lt;li&gt;干眼：用泪液分析仪&lt;/li&gt;
+&lt;li&gt;双眼视、调节、斜视、AC/A、立体视：一般医生都搞不定，还是找专业人士玩&lt;/li&gt;
+&lt;li&gt;问卷调查：青少年问卷调查你也信？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;数据：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;别作弊；&lt;/li&gt;
+&lt;li&gt;画图得有error bar；&lt;/li&gt;
+&lt;li&gt;科研图不准用3D，别扯什么信息图示；&lt;/li&gt;
+&lt;li&gt;连个P都没有，怎么让人相信&lt;/li&gt;
+&lt;li&gt;统计方法不对有个P用&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;结果与讨论：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;garbage in garbage out ;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;眼科与视光学专业的注意事项:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;硬件限制：人类科技还很低下；&lt;/li&gt;
+&lt;li&gt;软件限制：别撞上NP hard；&lt;/li&gt;
+&lt;li&gt;商业限制：医生想的通常不赚钱没人愿意做&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</guid><pubDate>Wed, 28 Feb 2018 07:15:00 GMT</pubDate></item><item><title>VR／AR临床实验设计中的注意事项</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;alpha版&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;声明&lt;/h2&gt;
+&lt;p&gt;本文遵守创作共用-署名-非商用协议。&lt;/p&gt;
+&lt;p&gt;本文不能作为临床研究的依据。&lt;/p&gt;
+&lt;p&gt;本文不明确推荐具体商品。&lt;/p&gt;
+&lt;p&gt;临床实验设计是一门独立的课程，有丰富的内容，本文仅能提供简单的介绍。&lt;/p&gt;
+&lt;p&gt;觉得文章太长可以先看&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/"&gt;《……太长不看版》&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;起因&lt;/h2&gt;
+&lt;p&gt;看了未来影响高精尖创新中心的&lt;a href="https://mp.weixin.qq.com/s?__biz=MzIzODU5Mzk0OQ==&amp;amp;mid=2247484520&amp;amp;idx=1&amp;amp;sn=61d59675efbe7d3565f0761fbe8a6e2d"&gt;《长时间使用VR头戴显示设备对低年龄用户视力的影响测试报告》&lt;/a&gt; 。这个实验的目的是非常好的。游戏、教育都是VR/AR的重要应用领域，当前确实缺乏儿童使用VR/AR的临床研究，但该实验中仍然有很多需要改善的部分。&lt;/p&gt;
+&lt;p&gt;VR/AR技术，特别是VR/AR显示技术与眼科学密切相关。除了对儿童视力影响的探索，2017年的ARVO会议上，孙兴怀教授团队也报告了利用video see-through技术进行弱视训练的研究（[^ARVO热点丨弱视治疗新进展：增强现实双眼分视训练]）。未来VR/AR有更多在眼科学上的应用。也会有更多的VR/AR企业需要进行医学相关的研究与实验。&lt;/p&gt;
+&lt;p&gt;下面，我简单介绍下一个比较正规的VR/AR临床研究应该怎么做。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;伦理&lt;/h2&gt;
+&lt;p&gt;临床研究中，很重要的是要遵守临床研究的伦理。一个正规的临床实验是应当按照《赫尔辛基宣言》的要求进行实验设计并交由伦理委员会审议批准的。对于VR/AR企业一方面是合法合规做事，一方面也有一定的自我保护。&lt;/p&gt;
+&lt;p&gt;相关的内容请查阅《赫尔辛基宣言》，其中最重要的原则，一是要首先考虑受试者的健康，二是知情同意原则。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;受试者的健康&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果VR/AR实验的实验对象是儿童，需要更严格的保护。已知的，可能对儿童的健康造成不利影响的事情都不应该做。例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实验场地：应该有足够的防护，避免发生儿童磕碰的事故。&lt;/li&gt;
+&lt;li&gt;实验软件设备：VR/AR游戏应选择与儿童年龄相称的游戏，避免血腥暴力恐怖等游戏。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;实验硬件：应当适合儿童使用。其中应当注意VR/AR头戴显示器的瞳距是否可以供儿童使用。硬件瞳距的范围与被试的瞳距不相符时，会产生不良的健康影响，应当避免。例如HTC Vive的最小瞳距是60mm，那么瞳距&amp;lt;60mm的儿童就应当排除在实验之外。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;知情同意&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实验开始前，应当向实验对象讲解实验以及实验过程中可能出现的风险，取得实验对象的同意后，才可以进行实验。如果实验对象是儿童，除了向儿童本人讲解实验过程和注意事项，还需要向儿童的监护人，也就是家长和老师讲明，并且应当签署正式的知情同意书。&lt;/p&gt;
+&lt;p&gt;所以在实验设计好以后，知情同意书也需要同时设计好，并且一并交给伦理委员会审议批准。&lt;/p&gt;
+&lt;h2&gt;研究团队&lt;/h2&gt;
+&lt;p&gt;研究团队中是可以有企业参与的，并且也可以由企业提供资金进行。但是需要在实验发表时公开披露。资金有企业来源的，往往会被解读为广告。&lt;/p&gt;
+&lt;p&gt;由于实验数据的测量中会使用大量眼科专业设备，并需要专业测量技能，所以建议研究团队中应当有视光学背景的专业人士，例如眼科医生、验光师。&lt;/p&gt;
+&lt;p&gt;实验数据的处理与解读可能也需要统计学或流行病学专业人士的协助。&lt;/p&gt;
+&lt;h2&gt;实验设计&lt;/h2&gt;
+&lt;p&gt;临床研究面向的对象都是人。与程序员面对的抽象对象、硬件工程师面对的硬件模块不同。人是非常复杂的，对人的测量往往具有极大的误差。与机械加工中的公差分析是不同的。&lt;/p&gt;
+&lt;p&gt;对测量人体生理、心理指标的误差，工程师很可能是估计不足的。程序员大概无法想象每个unitTest的返回值都会先经过一个不一定是正态分布的随机数处理一遍的系统，这才是人类。&lt;/p&gt;
+&lt;p&gt;临床实验设计就是要尽量排除人为的影响。需要设定对照组，可能需要设盲，实验对象的数量也有一定的要求。不同的实验设计，能够提供证据的强度也不一样。一般来说，一次实验最可信的是大规模多中心的随机双盲实验（RCT）。实验设计是一门课程，有很多书籍和公开课可供参考，也有专业的CRO公司提供相关的服务。&lt;/p&gt;
+&lt;p&gt;简单的说，实验中一切的人类都是坏人，你的实验对象可能会有意无意说谎，可能突然就退出实验；你的助手可能有意无意记录错误的数据，在模棱两可的时候故意偏向错误；其中最坏的就是设计者你本人，有些事情如果被你预先知道，你就会压迫助手，欺负实验对象，使他们屈从于你，产生错误的结果。实验设计的目的就是向大家公布，我们都这么坏了，但由于严谨的实验设计，我们实在无法钻空子作假。&lt;/p&gt;
+&lt;h2&gt;实验目的&lt;/h2&gt;
+&lt;p&gt;做过科学研究的人知道，实验的目的不可求大，不要妄图在一个实验中解决庞大的问题。比如“对视力的影响”其实是个很庞大的范畴。实验目的需要尽量清晰明确地定义。当然在收集数据的时候可以尽量全一些，同一个临床实验可以产生很多不同目的的文章。&lt;/p&gt;
+&lt;h2&gt;实验对象&lt;/h2&gt;
+&lt;p&gt;实验对象是需要经过选择的，但是应当有明确合理的纳入标准和排除标准。&lt;/p&gt;
+&lt;p&gt;纳入标准，应当是能够代表总体的样本标准。比如随机抽取某个学校一个年龄段的学生。但纳入标准如果不合适则可能造成“选择偏倚“。&lt;/p&gt;
+&lt;p&gt;排除标准，至少应当把可能会因为VR/AR造成损伤的被试排除在外。&lt;/p&gt;
+&lt;p&gt;比如有感染性眼病的患者可能因为共用VR/AR头戴显示器而传播疾病，斜视的患者在使用VR/AR后更容易产生疲劳，前庭功能障碍的患者可能在使用VR/AR时更容易眩晕，癫痫的患者也许会在VR/AR场景中被诱发等等。不过有些实验可能就是为了使用VR/AR来治疗某种疾病，那么就需要依照具体情况来确定排除标准了。&lt;/p&gt;
+&lt;p&gt;即使是正常人，也需要有一定的限制，比如儿童的瞳距不同，对于硬件瞳距不能适应的儿童，瞳距不合适更容易加重视疲劳，影响实验的准确性。应当排除在实验之外。&lt;/p&gt;
+&lt;p&gt;实验对象的数量，要根据所测量的指标来定。不同的测量指标分布是不同的，离散程度、误差等也不同，为了最终可以得到有意义的比较结果，需要高于一定的数量。但实验对象太多了，物资成本和时间成本又会飙升。具体的样本量估计的方法，请查阅相关的统计学教程。&lt;/p&gt;
+&lt;p&gt;在选择儿童作为实验对象的时候，还应当考虑到儿童心理、生理发育的影响。比如年龄过小的儿童，很可能无法理解实验员的解说，或者要让儿童长时间保持注意力集中，难度极大。另外，儿童或青少年也许会以破坏规则作为乐趣。&lt;/p&gt;
+&lt;p&gt;对于眼睛，不同年龄的儿童也是不同的。人眼睛8岁的时候才达到正常眼轴的长度。6岁的孩子可能还有+1.50D左右的远视，10岁的孩子也可能有+1.00D的远视。&lt;/p&gt;
+&lt;h2&gt;实验测量的指标&lt;/h2&gt;
+&lt;p&gt;视觉是一组互相关联的知觉，有物理成像的过程，有心理知觉的过程，有认知处理的过程，还有人体反馈的过程。测量的方式也有客观和主观测量的不同。需要根据实验目的和实验的实际情况来选择。&lt;/p&gt;
+&lt;h3&gt;视力&lt;/h3&gt;
+&lt;p&gt;检查的是人眼的角度分辨能力。看起来测量视力很简单，只要对着视力表指指点点，让被试指出方向即可。但其中仍然有很多需要注意的地方。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;视力表的选择。医院里检查常用的是Snellen视力表，或标准对数视力表。记录方式是1.5、1.0之类的小数记录。这种视力表使用方便，在临床中很常用，但并不适合科学研究。人类的感觉信号通常是对数编码的，还受到周围环境的影响，并不是简单的线性系统。使用Snellen视力表测量后很难进行统计分析，测量过程也容易受到干扰。所以真正发表科研论文时，应当使用LogMAR进行记录和分析，使用的是&lt;a href="https://en.wikipedia.org/wiki/LogMAR_chart"&gt;LogMAR视力表&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;检查环境。视力的测量对周围环境光、灯箱的背景光都是有严格要求的。需要按照视力表中所标注的要求进行设定。&lt;/li&gt;
+&lt;li&gt;检查过程。恐怕很多实验设计者已经忘记了自己小时候体检测视力的过程，如果排成一队依次检查。实际过程是，很多孩子在看视力表之前已经将下面几行熟记于心了。或者后面的孩子会在被检查者的后背上画出结果来。即使是使用了新的LogMAR视力表，如果检查后的孩子回到未检查的队伍中，信息也会很快传开。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;对比敏感度（CSF）&lt;/h3&gt;
+&lt;p&gt;视力测量只测量了黑白分明时候的角分辨能力。但日常生活中这种情况并不是常规。有些人视力检查结果很好，但却在黄昏不敢走楼梯，因为在暗环境下的分辨力下降了。这就要用对比敏感度来测了。不严格地用工科概念的类比，相当于在测量系统的调制传递函数MTF。（CSF近似于成像的MTF乘以神经系统处理的MTF）&lt;/p&gt;
+&lt;p&gt;对比敏感度的测量比测量视力要时间长一些。可以用灯箱，也有更为紧凑的仪器可供使用。&lt;/p&gt;
+&lt;h3&gt;色觉&lt;/h3&gt;
+&lt;p&gt;色觉的检查一般是使用印刷的色盲本。这种检查只能对色觉作出粗略的定性分析。但对于VR/AR实验可能不够。如果使用计算机屏幕进行色觉的模拟，需要注意不同的屏幕对颜色的显示能力是不同的，要看屏幕对与CIE颜色空间的覆盖程度。&lt;/p&gt;
+&lt;h3&gt;屈光状态&lt;/h3&gt;
+&lt;p&gt;电脑验光仪可以迅速检查被试的屈光状态，是近视、远视以及是否有散光，散光的轴位。但是电脑验光仪的重复性稍差，容易受到调节的影响，其中球镜部分（也就是近视远视）的可信度低，散光稍好。更好的测量方式是使用综合验光仪进行显然验光，但显然验光的过程较长，如果需要在短时间内测量大量的被试，需要在准确性和时间之间作出选择。&lt;/p&gt;
+&lt;p&gt;标准的屈光状态记录方式是：&lt;/p&gt;
+&lt;p&gt;OD: 裸眼视力，近视／远视度数 DS≎散光度数DC X 散光角度，矫正视力&lt;/p&gt;
+&lt;p&gt;OS: 裸眼视力，近视／远视度数 DS≎散光度数DC X 散光角度，矫正视力&lt;/p&gt;
+&lt;p&gt;右眼、左眼、双眼的缩写分别是OD、OS、OU。&lt;/p&gt;
+&lt;p&gt;例如，右眼裸眼视力0.6，有100度近视，75度近视散光，轴位在70度，戴镜矫正后视力可以达到1.0，&lt;/p&gt;
+&lt;p&gt;可以记录为：VOD: 0.6 -1.00DS≎ -0.75DC X 70° → 1.0&lt;/p&gt;
+&lt;h3&gt;眼压&lt;/h3&gt;
+&lt;p&gt;眼球是一个有弹性的球体，里面填充的是液体。内部是有压力的。眼压是由房水动态调节的，一部分人眼压调节能力失调，产生了青光眼，其中闭角型青光眼应当避免暗环境，以免瞳孔扩张后引起眼压突然升高。&lt;/p&gt;
+&lt;p&gt;测量眼压可以用气动眼压或接触眼压计来测量。&lt;/p&gt;
+&lt;h3&gt;泪液&lt;/h3&gt;
+&lt;p&gt;眼泪的多寡常常会影响到视觉疲劳状态和视觉质量。比如视疲劳中常见的描述往往会有眼睛"干涩"，就是与泪液分泌有关。&lt;/p&gt;
+&lt;p&gt;泪液常用的测量是Schimmer实验和BUT实验。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Schimmer实验是在下眼睑边缘挂一个滤纸，给定时间以后测量泪液浸润的距离。但这个实验对操作要求高，误差大。&lt;/li&gt;
+&lt;li&gt;BUT实验是测量泪膜破裂时间，在眼内点上荧光素，在裂隙灯下观察泪膜上第一个暗区出现的时间。要注意的是荧光素试纸容易污染。也有人使用电脑验光仪进行粗略的估计。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在有眼表分析仪可以测量BUT、泪河宽度、睑板腺状态等。&lt;/p&gt;
+&lt;h3&gt;双眼视觉&lt;/h3&gt;
+&lt;p&gt;人的眼睛有一双，有很多功能是双眼协调使用时才表现出来。双眼视觉的功能测量，例如：调节幅度、调节灵敏度、聚散储备、调节集合比等也需要测量，可能需要使用综合验光仪进行。&lt;/p&gt;
+&lt;h3&gt;调节&lt;/h3&gt;
+&lt;p&gt;在进行视疲劳的研究时，应当测量被试的调节。这是一个客观的指标。在给予不同刺激后，调节的变化过程可以提示很多信息。眼内睫状肌的疲劳程度也可以以此反应。当前已经有测量调节的仪器，相当于高速连续进行电脑验光。&lt;/p&gt;
+&lt;p&gt;调节的测量中还应当使用综合验光仪测量被试的调节幅度。&lt;/p&gt;
+&lt;h3&gt;眼球运动&lt;/h3&gt;
+&lt;p&gt;斜视的患者应当排除在实验之外，简单的遮盖去遮盖查实验可以发现一部分斜视患者。但如果没有检查，隐斜的患者可能不容易发现，这部分人能够用肌肉控制住斜视，在注视目标时并不会表现出来，但容易出现视疲劳。&lt;/p&gt;
+&lt;p&gt;人眼在看近处物体双眼向内聚的动作为集合，集合有一定的限度，集合广度、聚散力，聚散储备也可能需要测量。&lt;/p&gt;
+&lt;h3&gt;AC/A&lt;/h3&gt;
+&lt;p&gt;人眼在看近处物体双眼向内聚，这个动作称为集合（Accommodative convergence，AC），同时会动用调节（accommodation，A）改变眼球焦距，使人眼能够清晰对焦。进化使这两个动作是联动的，一旦双眼向内看，会自动启动调节。&lt;a href="https://www.aao.org/bcscsnippetdetail.aspx?id=16eb0f96-fa78-436b-8841-e4a5fc8a622c"&gt;AC/A&lt;/a&gt;可近似视为常数。（会有随年龄的变化，但短时间内可视为不变量）&lt;/p&gt;
+&lt;p&gt;在当前的VR/AR设备中，仅仅使用一个平面上的显示器来显示物体，所以人眼在看时AC是有的，A则不一定变化，调节集合反射被破坏了。这是当前VR/AR设备中未能解决的技术困难，有可能未来通过光场显示、高速变焦显示等方法来解决。&lt;/p&gt;
+&lt;p&gt;AC/A数值是可以测量的，AC/A自身异常的人可能也需要排除在实验对象之外。&lt;/p&gt;
+&lt;h3&gt;立体视&lt;/h3&gt;
+&lt;p&gt;VR/AR由于显示时区分了左右眼，所以能够产生双眼立体视觉。已经比眼科常用的立体视检测手段更高级了。但当前VR/AR头戴式显示器与人眼的视野范围还不一致。人眼的视野范围一般是内侧60度，外侧90度，VR头戴显示器常常会标出一个对角线视角，比如100度，但当前的硬件设备中，双眼内侧常见是使用挡板隔开的，内侧视野不足60度，那么可能对于立体视觉的感知区域就与实景中是不同的。&lt;/p&gt;
+&lt;p&gt;VR之外还有AR／MR，在与实景交互时，需要知道人感觉到物体空间位置和真实位置之间是否一致，差异有多少。这部分并没有现成的眼科测量手段可用。但也有很多文献做了探索，比如移动实物去对齐虚拟场景中的物体。&lt;/p&gt;
+&lt;p&gt;注意，当VR/AR技术进步到复杂的光场技术甚至全息技术时，测量的可能就是“单眼的立体视”了，也就是所谓的调节线索，物体远近不同时，人眼对焦到一处时另一处可能是模糊的。如何判定系统真的表现出了这种调节线索，如何客观测量，如何定性、定量分析，需要进一步的研究。&lt;/p&gt;
+&lt;h3&gt;问卷调查&lt;/h3&gt;
+&lt;p&gt;视觉是个知觉过程，其中必然还要涉及到很多人脑分析的部分，会得出许多主观、客观混合的指标，比如“舒服“、"疲劳"、"不适"等等，其中一部分客观指标可以测量，但也有可能需要通过问卷进行调查。&lt;/p&gt;
+&lt;p&gt;问卷调查之中有很多学问，问卷应尽量使用成熟的量表。&lt;/p&gt;
+&lt;p&gt;在VR/AR实验中，有一些需要注意的地方：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果被试是儿童或者青少年，要注意儿童的认知理解能力，是否可以使用特定的问卷。&lt;/li&gt;
+&lt;li&gt;被试的配合程度。儿童和青少年是否愿意如实回答问卷中的问题。&lt;/li&gt;
+&lt;li&gt;问卷是使用笔试还是口头测试？笔试的好处是速度快，可以同时多线程处理很多被试。但如果是被试自己阅读答题，这一过程本身也是一次视近操作的过程。测量过程也会影响视疲劳的程度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;数据的记录、处理、统计分析与展示&lt;/h2&gt;
+&lt;p&gt;这些都是统计学里讲到的内容，请查阅相关的统计学教程或者公开课。或者请专门的统计学老师进行指导。&lt;/p&gt;
+&lt;p&gt;基本的原则是：正心诚意。坦然接受客观的实验结果。特别是对于企业，实验结果对于未来多年的研发有指导意义，操纵数据无异于拿着坏掉的罗盘指路。&lt;/p&gt;
+&lt;p&gt;由于一切都是采样，一切都有误差，将两组数据的平均值直接比较，说谁比谁大，谁比谁好，是完全没有意义的。&lt;/p&gt;
+&lt;p&gt;由于一切都是采样，一切都有误差，画柱状图不标出error bar，直接比较谁比谁高，是完全没有意义的。&lt;/p&gt;
+&lt;p&gt;使用3D统计图容易使读者产生误判，不应出现在正规的临床研究中。&lt;/p&gt;
+&lt;p&gt;漂亮的信息图示，比如用人物剪影的大小代表数量的多少，容易使读者产生误判，不应出现在正规的临床研究中。&lt;/p&gt;
+&lt;p&gt;虽然很多新闻报道中在批判科学家们对P&amp;lt;0.05的迷思，但假设检验仍然是得出结论的必由之路。没有经过统计学的假设检验，就声明两组数据谁比谁好，是没有意义的。与理工科的文章不同，生物医学文章里如果连个P都没有出现，读者是不会相信文章内容的。&lt;/p&gt;
+&lt;p&gt;即使使用了统计学假设检验，要注意假设检验的方法是有不同的适用条件的，不满足适用条件而使用是错误的，得出的结论也是没有意义的。&lt;/p&gt;
+&lt;p&gt;很多假设检验的方法要求数据来自于正态分布的总体，但不是所有的数据都是正态分布的，比如用小数记录的视力，就不一定是正态分布。不是正态分布的数据，平均值和标准差并不能反映数据的特征。&lt;/p&gt;
+&lt;h2&gt;结果与讨论&lt;/h2&gt;
+&lt;p&gt;实验的结果只能由经过统计学假设检验后的结果给出。&lt;/p&gt;
+&lt;p&gt;比如说实验对象使用VR/AR以后，视力有改变。不是说实验对象使用VR/AR前的平均视力是多少，使用后的平均视力是多少，两者一减，发现平均视力提高了，就是视力变好，平均视力降低了，就是视力变差。&lt;/p&gt;
+&lt;p&gt;如前所述：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;是否有足够多数量的被试？只有几个人是没意义的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;视力表用的是什么视力表，记录方式是不是LogMAR直接导致了是否可以用“平均“数来比较。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检查视力的手段是否可靠，使用前查完视力以后，孩子们聚在一起编了个视力表歌谣，把视力表背得滚瓜烂熟，不管用不用VR/AR，第二次检查肯定提高了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;视力检查的数据是否是正态分布，是否满足正态分布的检验。如果不满足，可能要经过处理，比如取log之类，使偏态分布转变成正态分布。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果数据是正态分布，被试眼数量有50，比较使用VR/AR之前和之后的视力，通常是应该使用配对t检验。如果此时选择非参数检验，个人认为可能有作弊之嫌。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当看到配对t检验的结果表明差异有显著性以后，才能说明在多大的错误概率内，使用VR/AR会改变视力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用二维的柱状图展示使用VR/AR前后的数据，并且每个柱状图上应当用error bar标记出标准差。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;上述环节中某一个步骤出错或者不够严谨，都不能够得出有效的结论。&lt;/p&gt;
+&lt;h2&gt;眼科与视光学专业的注意事项&lt;/h2&gt;
+&lt;p&gt;以上是针对软件硬件工程师提出的一些注意事项。反过来，对于眼科学、视光学专业的医生、研究生，在设计实验时也有一些注意事项&lt;/p&gt;
+&lt;p&gt;如果没有软件和硬件开发的经验，眼科与视光学专业人士可能也很难理解VR/AR开发中的困难。如果你在跟工程师或者程序员交流时使用了“……就行了“，"只要……了呗"这样的句式，通常你的想法是错的。&lt;/p&gt;
+&lt;h3&gt;硬件的限制：&lt;/h3&gt;
+&lt;p&gt;现阶段（2017年中），VR/AR所能呈现的视觉效果距离真实或者说人眼能够区别的极限，还有相当远的距离。工程师所制造的产品是在性能与成本中尽量取得平衡。超越当前技术水平的硬件，有些理论上有、新闻上有，但由于未进入主流市场生产量小，价格极高。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;透镜像差：这一点无需赘述。出于重量考虑，VR设备还有可能使用菲涅耳透镜，其像差估计和计算可能会更复杂。&lt;/li&gt;
+&lt;li&gt;分辨率：常见的屏幕分辨率大约是400-600ppi，也就是每英寸25.4mm上有400-600个点。如果通过透镜成虚像在2M之外，角分辨率远远不能满足1.0视力的要求。(索尼另算)&lt;/li&gt;
+&lt;li&gt;采样定理：屏幕像素是一格一格的，屏幕能够满足1.0视力的要求，不一定能够显示出0.9和1.2的视标。至少要满足最高频率的2倍。&lt;/li&gt;
+&lt;li&gt;刷新率：屏幕的显示图像的速度，一般是每秒钟60幅，也就是60FPS，近期可以达到90FPS&lt;/li&gt;
+&lt;li&gt;颜色：液晶显示器使用RGB三种颜色来组合产生色觉，显示器所能够产生的颜色要比人眼在真实生活中感知到的颜色少很多。&lt;/li&gt;
+&lt;li&gt;亮度：液晶显示器在屏幕背面使用LED经过匀光板产生照明，照明的亮度是有限的。匀光板不一定能够产生均一的照明，也就是说屏幕一侧与屏幕另一侧的亮度可能是不一致的，差距需要实际测量。&lt;/li&gt;
+&lt;li&gt;Gamma校正：屏幕的亮度不一定是与像素的数值是成正比的，比如屏幕像素上黑色=0，白色=255，那么灰色128和密集排列黑白从远处看可能是不相同的。&lt;/li&gt;
+&lt;li&gt;衍射：透明的液晶屏相当于密集的光栅，会产生明显的衍射效应。&lt;/li&gt;
+&lt;li&gt;可视角度：从不同的角度去观察液晶屏幕，颜色和亮度可能不一样。&lt;/li&gt;
+&lt;li&gt;公差：制造有误差。降低误差成本会迅速提高。&lt;/li&gt;
+&lt;li&gt;良品率：一种东西实验室作出了可用的一件，不等于工厂里能够生产出高质量的成千上万件。&lt;/li&gt;
+&lt;li&gt;遮光：市售AR设备没有能够遮挡自然光的能力。在外界实景上只能加图像，不能减图像。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;软件限制：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;软件很贵，购买软件和生产软件都很贵。&lt;/li&gt;
+&lt;li&gt;程序员不一定会修电脑。&lt;/li&gt;
+&lt;li&gt;程序运算需要时间，屏幕上像素越多，需要的时间越多。有可能无法达到需要的要求。&lt;/li&gt;
+&lt;li&gt;计算一个事情花的时间，可能跟处理的数据量成正比，复杂度叫O(N)，也可能需要处理的数据量的平方成正比，O(N^2)，甚至复杂度是非多项式时间，例如$ 2^{O(N)} -&amp;gt; O(N!)$，这种难度与抢银行相当。&lt;/li&gt;
+&lt;li&gt;计算机的内存有限制。比如要计算一个1k屏幕上点与另一个屏幕上点的两两组合，需要$(10^3 \times 10^3)^2 \times 4 = 4 \times 10^{12} =4TB $&lt;/li&gt;
+&lt;li&gt;不同语言写出的程序运算速度不同。&lt;/li&gt;
+&lt;li&gt;深度学习很贵。&lt;/li&gt;
+&lt;li&gt;人月神话：3个人干3个月的事情，9个人可能要干2.5个月。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;商业限制：&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;疾病发生率常以万分之几、十万分之几计算，玩游戏的人口则安百分之几计算，中间差很多数量级。玩游戏的人才是推动硬件进步的力量，玩游戏的人多了才有VR/AR治病。&lt;/li&gt;
+&lt;li&gt;全国眼科医生不超过2-3万名。&lt;/li&gt;
+&lt;li&gt;并不是所有人都花钱买软件。&lt;/li&gt;
+&lt;li&gt;产品经理答应的事情，程序员和硬件工程师不一定能做出来。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;参考&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://mp.weixin.qq.com/s?timestamp=1494925011&amp;amp;amp;src=3&amp;amp;amp;ver=1&amp;amp;amp;signature=Aqr44BaRoB3kb12tDXee8w3VbWbQbwLIFTcE32CLFShBua9Y2AZKSCll67lIKyP-4Jg11gHUTB8lRnSiNmHIhSrL2j3v66BCOVW6u9P3LJo3KaWt1jPnGf31SPKO1YnOm-zuWfQ2vB*Gsv2lKQeBxZWvVqQTzZxQhRbtvCbqGCI="&gt;ARVO热点丨弱视治疗新进展：增强现实双眼分视训练&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;统计分析： https://zh.coursera.org/specializations/jhu-data-science&lt;a href="https://zh.coursera.org/specializations/jhu-data-science"&gt; 第 6 门课程 Statistical Inference&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;《双眼视觉学》，ISBN 978-7-117-14654-8/R*14655&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</guid><pubDate>Wed, 28 Feb 2018 07:00:00 GMT</pubDate></item><item><title>眼科科普索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;请使用CTRL+F或+F查找相应关键词.&lt;/p&gt;
+&lt;p&gt;有些文章写作时间较早, 可能有必要更新. 有些文章我可能会从果壳的日志上逐渐搬运过来. 果壳的图床有时会出问题, 还是放在自己这里安心一些.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;hr&gt;
+&lt;h2&gt;总论&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/"&gt;如何看病&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;眼病的视觉感受&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/article/156504/"&gt;眼睛一生病，世界就变样&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;高度近视&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/blog/114894/"&gt;简介：高度近视定期查眼底&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/176929/"&gt;近视眼坐过山车容易视网膜脱落么？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/102643/"&gt;有没有通过纠正晶状体治疗近视的方法？近视导致是否会反应速度减慢？&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;近视手术&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://songshuhui.net/archives/58085"&gt;准分子激光角膜屈光手术——问与答(上)&lt;/a&gt;
+&lt;a href="http://songshuhui.net/archives/58100"&gt;准分子激光角膜屈光手术——问与答(中)&lt;/a&gt;
+&lt;a href="http://songshuhui.net/archives/58110"&gt;准分子激光角膜屈光手术——问与答(下)&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;散光&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/blog/102489/"&gt;跟进宝学眼科之散光&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/102222/"&gt;微博刷屏会导致眼睛散光，视力下降吗？&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;隐形眼镜&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/article/94773/"&gt;“美瞳”：美丽是否要付出代价&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/195649/"&gt;如何挑选适合的隐形眼镜？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/177378/"&gt;隐形眼镜能滑到眼球后面吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/177392/"&gt;晚上睡觉不摘隐形眼镜会有什么后果？隐形眼镜一次可以戴几小时？ 戴隐形眼镜有什么注意事项么？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/118776/"&gt;闺蜜说，隐形眼镜等于有男友，是真的吗？&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;眼药水&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/article/87604/"&gt;眼药水闪亮不了你的双眼&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/96843/"&gt;人乳治疗眼部炎症是可行的吗?&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;青光眼&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/blog/117302/"&gt;跟进宝学眼科之青光眼&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;白内障&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/blog/73506/"&gt;白内障FAQ&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;麦粒肿&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/115715/"&gt;指甲上画十字能治疗麦粒肿？如果是谣言，正确的方法是什么？&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;眼外伤&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.guokr.com/question/172712/"&gt;眼球受到外来的尖锐物品的刺伤，后果会是怎样？&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;灯光&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/"&gt;蓝光的故事&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;VR/AR&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/"&gt;关于VR与近视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</guid><pubDate>Tue, 16 Jan 2018 05:00:01 GMT</pubDate></item><item><title>ABCD矩阵</title><link>https://goldengrape.github.io/posts/python/abcd-matrix/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;
@@ -1016,97 +1291,24 @@ $$
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(5)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前面说到测量对比敏感度所需要的视标，应该是经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样。
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>蓝光的故事</title><link>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;1949年人工晶状体IOL发明，( &lt;a href="https://en.wikipedia.org/wiki/Harold_Ridley_(ophthalmologist)"&gt;1949年11月29日首次植入&lt;/a&gt;)
+1970s超声乳化手术phaco发明，(&lt;a href="https://www.google.com/patents/US3589363"&gt;专利US3589363&lt;/a&gt;)白内障手术迅速发展成熟，植入IOL以替换浑浊的天然晶状体，（&lt;a href="http://finance.sina.com.cn/stock/gujiayidong/2017-12-04/doc-ifypikwt6218758.shtml"&gt;顺便说莎普爱思没用&lt;/a&gt;）
+1990sHOYA公司发现术后一部分病人抱怨周围太亮，于是模拟天然晶状体的颜色，推出黄色IOL。是的，年轻人的晶体就发黄，随年龄颜色加深
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;为什么要用Eigenfunction&lt;/h2&gt;
-&lt;p&gt;如果空间频率不一样，就会有麻烦，比如医生想测量的是相对高频部分的30 cpd(cycle per degree,周/度，在一度范围内空间结构重复了多少次，这是空间频率的单位)，如果由于患者眼有像差的存在，也许在视网膜上的成像变成了20cpd，本来患者无法分辨的视标，反而因为像差因祸得福可以指出方向了。&lt;/p&gt;
-&lt;p&gt;类比测视力，就好像用1.0的视标去测病人，结果病人自带放大系统，视标放大到0.1的程度，这样的测量就错了。&lt;/p&gt;
-&lt;p&gt;由于病人的像差可以千奇百怪千差万别，所以病人的眼睛作为一个线性不变系统，也可能是千差万别的。要选择一个带有周期结构的输入，经过各种各不相同的线性系统还可以得到同周期的输出，满足这个能力的输入，就是所有线性不变系统的Eigenfunction了。&lt;/p&gt;
-&lt;p&gt;常规的E视标，相当于给入的输入的“方波”，那么如果经过一个有像差的眼睛，成像后的输出可能是这样的：&lt;/p&gt;
-&lt;p&gt;&lt;img alt="E_MTF" src="https://goldengrape.github.io/images/CSF/E_MTF.png"&gt;&lt;/p&gt;
-&lt;p&gt;看输出的强度波形，会发现各个峰的高度是不同的，如果仔细测量，可能还会发现波峰之间的周期也会略有差别。甚至一个有经验的“视力测量欺骗者”，可以根据虚影的方向反推出视标的方向。&lt;/p&gt;
-&lt;p&gt;但如果是一个正弦波的视标。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="sin_MTF" src="https://goldengrape.github.io/images/CSF/sin_MTF.png"&gt;&lt;/p&gt;
-&lt;p&gt;经过同样有像差的眼，形成的仍然是正弦波，峰值是同样的，周期是同样的，区别只是“振幅”发生了变化。只有对比度这个变量会根据像差的情况改变，这样就方便了测量。&lt;/p&gt;
-&lt;h2&gt;总结&lt;/h2&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？&lt;/p&gt;
-&lt;p&gt;答：因为人眼视觉成像过程近似于线性不变系统，亮度正弦变化的视标是线性系统的Eigenfunction，在经过人眼成像厚视标的空间频率不变。&lt;/p&gt;
-&lt;p&gt;至于为什么正弦函数是线性不变系统的Eigenfunction，就是另外一个很长的故事了。如果有兴趣可以参考吕乃光老师编写的《傅里叶光学(第二版)》，第50-52页。&lt;/p&gt;
-&lt;h2&gt;One more thing&lt;/h2&gt;
-&lt;p&gt;题图&lt;/p&gt;
-&lt;p&gt;&lt;img alt="stripe_0.21" src="https://goldengrape.github.io/images/CSF/stripe_0.21.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;很多人抱怨说看起来很不舒服。这是有道理的。因为人眼在对焦的时候可能是在不断测试是否看得“清晰”，至于“清晰”是可以有定义的。常见的方法是去比较图像中高频部分和低频部分的对比度。&lt;/p&gt;
-&lt;p&gt;通常低频部分的对比度随着离焦变化是比较慢的，就像你戴上从-3.00D到+3.00D的眼镜都可以分辨出0.1的视标。而高频部分只有在对焦清楚的时候对比度才最大——你只有找到合适的眼镜看1.0的视标才最清晰。&lt;/p&gt;
-&lt;p&gt;如果你眼前大范围的区域都是单一空间频率的正弦视标，就像题图中的那样，甚至如果整间屋子都是同一正弦函数。你的眼睛就失去了对焦的参照，因为只有一个空间频率了，所以会感觉不适。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-5/</guid><pubDate>Mon, 18 Dec 2017 17:11:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;因为，正弦函数sin(x)、余弦函数cos(x)，更准确的说是$e^{i x} $，其实就是某种Eigenfunction，甚至，是任意线性不变系统的Eigenfunction。&lt;/p&gt;
-&lt;p&gt;看这思路，人眼的光学成像近似是线性空间不变系统，如果有个函数是任意线性不变系统的Eigenfunction，那么必然也是人眼光学成像的Eigenfunction。&lt;/p&gt;
-&lt;p&gt;Otto. H. Schade在1956年把正弦视标引入眼科检查的时候，到底是怎么把这么远的两个概念结合到一起的？&lt;/p&gt;
-&lt;p&gt;为什么对比敏感度的视标亮度是正弦变化的？
-因为正弦函数是线性不变系统的本征函数！&lt;/p&gt;
-&lt;p&gt;但是，为什么要用Eigenfunction，这得从对比敏感度讲起。&lt;/p&gt;
-&lt;h2&gt;对比敏感度&lt;/h2&gt;
-&lt;p&gt;这得从对比敏感度讲起。对比敏感度的检查方法是让患者看圆形的视标，视标中的条纹亮度按正弦变化，背景的亮度=视标的平均亮度。要求被试指出视标条纹的方向。&lt;/p&gt;
-&lt;p&gt;对比敏感度的报告是一张二维图片，也就是说有两个参数，一个是空间频率，一个是对比度。&lt;/p&gt;
-&lt;p&gt;对比敏感度测量的就是在不同空间频率下，眼睛可以看到的最低对比度是多少。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="SinVibr" src="https://goldengrape.github.io/images/CSF/SinVibr.png"&gt;&lt;/p&gt;
-&lt;p&gt;这张图水平方向是空间频率越来越高，垂直方向是对比度越来越低，是不是可以感觉到一个抛物线的痕迹，抛物线的上方是一片灰色，下面是有条纹的。&lt;/p&gt;
-&lt;p&gt;三角函数的表示还记得吧，如果亮度的变化可以用 I(x) =A sin(B x )+C 来表示，&lt;/p&gt;
-&lt;p&gt;对比度contrast：&lt;/p&gt;
-&lt;p&gt;sin是在-1和+1直接变化，所以最大的亮度是Imax=A+C，最小的亮度Imin=-A+C。根据对比度的定义&lt;/p&gt;
-&lt;p&gt;contrast=(Imax-Imin)/(Imax+lmin)&lt;/p&gt;
-&lt;p&gt;contrast=2A/2C=A/C&lt;/p&gt;
-&lt;p&gt;&lt;img alt="对比度" src="https://goldengrape.github.io/images/CSF/%E5%AF%B9%E6%AF%94%E5%BA%A6.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;空间频率frequency&lt;/p&gt;
-&lt;p&gt;就是在单位长度内，周期重复了多少次。显然B x=2kπ 的时候会重复，把x=1代入，B=2kπ, k=B/2π，所以空间频率&lt;/p&gt;
-&lt;p&gt;frequency=B/2π&lt;/p&gt;
-&lt;p&gt;前面说到，对比敏感度测量的时候，要给定一个空间频率，然后测量人眼分辨对比度的能力。如果给好了一个空间频率，而通过眼睛的屈光间质折射以后，空间频率变化了，就不好办了。&lt;/p&gt;
-&lt;p&gt;那么就是说一个视标图像，在经过任意像差的角膜、晶状体，在视网膜上成像以后，它的空间频率应当和经过一个理想无像差的眼睛一样，而对比度会有不同。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-4/</guid><pubDate>Mon, 18 Dec 2017 17:10:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;Eigenfunction（本征函数/ 特征函数）&lt;/h2&gt;
-&lt;p&gt;现在我们要把另一个函数作为参数输入到线性函数里。越来越抽象了，不过对于咱们眼科医生来说，有成像过程可以辅助理解。
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;我们说函数function不过是把输入-&amp;gt;输出的过程，所以一张图片，也可以是个函数，图片是把位置-&amp;gt;颜色，或者简单一点，位置-&amp;gt;亮度，图片上每一个位置有一个像素，像素带有一个亮度值。&lt;/p&gt;
-&lt;p&gt;所以，如果我们把一个视标图片E，看成是函数g(x)，&lt;/p&gt;
-&lt;p&gt;&lt;img alt="E" src="https://goldengrape.github.io/images/CSF/E.png"&gt;&lt;/p&gt;
-&lt;p&gt;那么对于一个透镜f(x)，把函数g(x)作为输入就是f(g(x))了，&lt;/p&gt;
-&lt;p&gt;&lt;img alt="E-&amp;gt;Eblur.png" src="https://goldengrape.github.io/images/CSF/E2Eblur.png"&gt;&lt;/p&gt;
-&lt;p&gt;所以把函数作为参数输入到函数里，可以得到新到函数。&lt;/p&gt;
-&lt;p&gt;对于线性不变系统，如果把函数作为参数输入，有一类特殊的输入函数会有这样的性质：
-f( g(x) ) = A g(x)
-把这个函数g(x)送进f，经过变换的结果，只是相当于对g(x)乘了个系数，g(x)里面的内部结构都没变！&lt;/p&gt;
-&lt;p&gt;这类特殊的输入函数叫做该线性不变系统的Eigenfunction，可以翻译成“本征函数”或者“特征函数”。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-3/</guid><pubDate>Mon, 18 Dec 2017 17:09:00 GMT</pubDate></item><item><title>为什么对比敏感度的视标亮度是正弦变化的？(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;现在让我们回到初中，回忆一下你已经还给物理老师的几何光学。&lt;/p&gt;
-&lt;h2&gt;线性的几何光学&lt;/h2&gt;
-&lt;p&gt;我们可以把透镜成像的过程当作是一个把“物”变换成“像”的功能，说实话function翻译成函数真是挡住了不少人，function嘛，其实就是功能而已，有输入，有输出，把输入变成输出的功能。
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="C-&amp;gt; IJ" src="https://goldengrape.github.io/images/CSF/C.png"&gt;
-输入一个物C，就可以在屏幕上得到一个光斑IJ。
-f(点C)=IJ&lt;/p&gt;
-&lt;p&gt;&lt;img alt="物点G" src="https://goldengrape.github.io/images/CSF/5.png"&gt;
-输入另一个物G，就可以在屏幕上得到光斑MN。
-f(点G)=MN&lt;/p&gt;
-&lt;p&gt;&lt;img alt="两个物点" src="https://goldengrape.github.io/images/CSF/4.png"&gt;&lt;/p&gt;
-&lt;p&gt;同时输入物C和物G，同时得到光斑IJ和光斑MN。
-f(点C+点G)=IJ+MN = f(点C)+f(点G)
-看，理想的成像过程是个线性系统。&lt;/p&gt;
-&lt;h2&gt;线性不变系统&lt;/h2&gt;
-&lt;p&gt;简单的说，就是这个系统的变换过程是不随时间改变或者不随空间改变的。&lt;/p&gt;
-&lt;p&gt;比如一个医生看一个结膜炎用3分钟，看2个结膜炎用6分钟。他早上8点开始就是这个速度，到12点快下班了，还是看一个结膜炎用3分钟，看2个结膜炎用6分钟。这就叫做线性时间不变。&lt;/p&gt;
-&lt;p&gt;对于成像来说，考虑的是空间。
-比如离焦&lt;/p&gt;
-&lt;p&gt;&lt;img alt="C点在中间" src="https://goldengrape.github.io/images/CSF/1.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="C点向上移动" src="https://goldengrape.github.io/images/CSF/2.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="C点更向上移动" src="https://goldengrape.github.io/images/CSF/3.png"&gt;&lt;/p&gt;
-&lt;p&gt;从C点发出光形成了光斑IJ，如果C点的位置在垂直于光轴的面上移动。那么光斑IJ的大小不变。&lt;/p&gt;
-&lt;p&gt;这很容易通过中学学习的几何光学证明，物距u，像距v，焦距f
-1/u+ 1/v =1/f
-物距u没变，所以像距v不变。
-如果设光斑IJ的直径=x，屏幕到透镜的距离=L，透镜的直径=D
-三角形ABC'与三角形JIC'相似。所以
-IJ / AB = (L-V)/V
-也就是
-x  / D = (L-V)/V
-x= D (L-V)/V
-这里面D，L，V都是不变的，x当然也不变。&lt;/p&gt;
-&lt;p&gt;所以在垂直于光轴的同一个平面上移动物点C，得到的光斑IJ，虽然位置不同，但大小总是一样的。甚至，如果我们特别仔细地把光束分成一份一份，会发现光斑不仅外形连里面也是一样的。&lt;/p&gt;
-&lt;p&gt;这种情况就叫做线性空间不变。
-（注意，以上的讨论只是在理想透镜的情况下讨论的，当然我们引入了离焦，所以其实包含了低阶像差，但是更复杂的情况并没有仔细讨论，球差也是线性空间不变的，但如果成像面弯曲了，恐怕就不是这样了，但通常我们只考虑黄斑区那一点点的范围，这时候光斑几乎是相同的，称作“等晕区”，可以近似认为是线性空间不变的）。&lt;/p&gt;
-&lt;p&gt;一个相反的例子，哈哈镜，&lt;/p&gt;
-&lt;p&gt;&lt;img alt="哈哈镜" src="https://goldengrape.github.io/images/CSF/distormirror.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;哈哈镜是线性系统，一个光点成像不影响另一个光点的像。但如果你拿着一个点移动，透过哈哈镜看输出，随着点的位置不同，放大、扭曲、缩小的情况各不相同，所以哈哈镜是线性的，但不是线性空间不变的。&lt;/p&gt;&lt;/div&gt;</description><category>CSF</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/ophthalmology/CSF/wei-shi-yao-dui-bi-min-gan-du-de-shi-biao-liang-du-shi-zheng-xian-bian-hua-de-2/</guid><pubDate>Mon, 18 Dec 2017 17:08:49 GMT</pubDate></item></channel></rss>
+&lt;p&gt;发达国家老年黄斑变性是首位致盲眼病，2000s Alcon推出黄色IOL，以黄斑保护作为宣传，在细胞学实验中，蓝光具有光损伤作用，对RPE细胞有毒性，但一是实验剂量大，二是缺乏组织器官级别以及流行病学的证据，三是天然晶状体本身就会过滤一部分蓝光&lt;/p&gt;
+&lt;p&gt;IOL领域最大两家公司分别是Alcon和AMO，与Alcon黄晶体相对的，AMO一直使用透明晶体，并且也组织了很多文献，宣传健康的蓝光。比如蓝光与觉醒、抗抑郁相关。另外青光眼大夫也有担心过滤蓝光会更容易影响青光眼患者的蓝黄视野&lt;/p&gt;
+&lt;p&gt;其他IOL公司也都选边站队，有黄片也有透明的，争吵不休。
+接着战火扩展到LED厂商，所谓白色LED是蓝色LED+黄色荧光粉构成，有些可能还带一点点紫外光谱（弱智的人类视觉能把波长上两个峰当成是一条直线）
+LED厂商大概是先打紫外，然后到蓝光&lt;/p&gt;
+&lt;p&gt;再接下来显示器厂商加入，背光嘛。
+眼镜商加入，保健呐。
+大家都忘了或者干脆不知道，最早做蓝光滤过的IOL，其实就是仿照年轻人类的晶状体颜色做的，你一个年轻人，再加一块黄玻璃放在眼前，这不是cosplay老年白内障么！&lt;/p&gt;
+&lt;p&gt;配张厂家的宣传图，绿色线是年轻人天然晶状体的波长-透过率曲线。随年龄增长透过率降低，蓝色部分下降更快一些。
+&lt;img alt="" src="https://pbs.twimg.com/media/DQDsRROV4AAU1MR.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;据说最近AMO要出黄片，Alcon要推白片。
+感觉像酒吧群殴，而最早动手的两个人手拉手去一边喝酒了&lt;/p&gt;
+&lt;p&gt;这是一个被各公司市场部控制的世界。
+没准红光才有害呢，哺乳动物看蓝光多少年，看见红光才多少年？&lt;/p&gt;
+&lt;p&gt;暗环境下，人眼对颜色的敏感性蓝移。说到这：
+1，ppt严禁暗红色背景，一关灯绝对看不清。早年ppt自带模板里居然有这么一套配色的。
+2，做充电器/电扇/空调的，拜托我知道你们是高科技企业，指示灯就不要用高科技蓝了吧，晚上很刺眼的有没有&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/</guid><pubDate>Thu, 28 Dec 2017 07:00:04 GMT</pubDate></item></channel></rss>
