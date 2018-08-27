@@ -2,7 +2,7 @@
 .. title: 显微操作训练(4)
 .. slug: microsurgery_4
 .. date: 2018-7-04 0:30:00 UTC+08:00
-.. tags: microsurgery
+.. tags: microsurgery, ophthalmology, 教程
 .. category: ophthalmology
 .. link:
 .. description:

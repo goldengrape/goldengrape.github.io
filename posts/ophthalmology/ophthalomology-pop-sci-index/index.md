@@ -2,8 +2,8 @@
 .. title: 眼科科普索引贴
 .. slug: ophthalomology-pop-sci-index
 .. date: 2018-1-16 13:00:01 UTC+08:00
-.. tags:
-.. category:
+.. tags: ophthalmology
+.. category: ophthalmology
 .. link:
 .. description:
 .. type: text
@@ -11,7 +11,7 @@
 
 请使用CTRL+F或+F查找相应关键词.
 
-有些文章写作时间较早, 可能有必要更新. 有些文章我可能会从果壳的日志上逐渐搬运过来. 果壳的图床有时会出问题, 还是放在自己这里安心一些. 
+有些文章写作时间较早, 可能有必要更新. 有些文章我可能会从果壳的日志上逐渐搬运过来. 果壳的图床有时会出问题, 还是放在自己这里安心一些.
 
 <!-- TEASER_END -->
 

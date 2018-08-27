@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:39:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:46:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
 &lt;p&gt;用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.&lt;/p&gt;
 &lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
 
@@ -42,7 +42,357 @@ end repeat
 
 &lt;p&gt;每个页面内“点击下一个”, 不超过10次, 如果你的动画太多, 可以修改这个数字. 但我建议还不如分成两页幻灯.&lt;/p&gt;
 &lt;p&gt;然后去判断现在是不是还在当前页面, 或者已经是切换到了下一张, 如果切换了, 就跳出循环, 如果还在这一页, 就继续“点击下一个”, 但如果仅仅这么写, 就会出现一口气连续点击了10次, 直接跳到结尾了.&lt;/p&gt;
-&lt;p&gt;我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”&lt;/p&gt;&lt;/div&gt;</description><category>applescript</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</guid><pubDate>Sun, 26 Aug 2018 02:00:00 GMT</pubDate></item><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
+&lt;p&gt;我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”&lt;/p&gt;&lt;/div&gt;</description><category>applescript</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</guid><pubDate>Sun, 26 Aug 2018 02:00:00 GMT</pubDate></item><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
+&lt;p&gt;这是一组操作训练作业:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;1.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;初始化手术显微镜&lt;/li&gt;
+&lt;li&gt;设置好显微镜下录像&lt;/li&gt;
+&lt;li&gt;用手机或由同伴拍摄坐姿正侧位照片&lt;ul&gt;
+&lt;li&gt;在练习0分钟后, 5分钟后, 10分钟后分别拍摄&lt;/li&gt;
+&lt;li&gt;或用手机录像拍摄坐姿&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2.
+打印下图
+&lt;img alt="幻灯片45" src="https://i.loli.net/2018/07/04/5b3ba3f920315.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;3.
+&lt;img alt="幻灯片46" src="https://i.loli.net/2018/07/04/5b3ba4254ca37.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;4.
+&lt;img alt="幻灯片47" src="https://i.loli.net/2018/07/04/5b3ba4254ef66.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;5.
+&lt;img alt="幻灯片48" src="https://i.loli.net/2018/07/04/5b3ba4254c9e5.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;6.
+&lt;img alt="幻灯片49" src="https://i.loli.net/2018/07/04/5b3ba42545a5d.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;7.
+&lt;img alt="幻灯片50" src="https://i.loli.net/2018/07/04/5b3ba4254596c.jpeg"&gt;&lt;/p&gt;
+&lt;h2&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://microsurg.hs.columbia.edu/"&gt;http://microsurg.hs.columbia.edu/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Optical Devices in Ophthalmology and Optometry: technology, Design Principles and Clinical Applications. ISBN: 978-3-527-41068-2 page 147-page 177&lt;/li&gt;
+&lt;li&gt;Coursera公开课:&lt;ul&gt;
+&lt;li&gt;台湾大学基础光学1,  第6讲
+*&lt;a href="https://www.coursera.org/learn/ji-chu-guang-xue"&gt;https://www.coursera.org/learn/ji-chu-guang-xue&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;密歇根大学白内障手术概论, week 2&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.coursera.org/course/cataractsurgery"&gt;https://www.coursera.org/course/cataractsurgery
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;正确的坐姿&lt;/h2&gt;
+&lt;p&gt;基本的原则是:
+&lt;em&gt; 上身的重力不可传导至手
+&lt;/em&gt; 全身的重力不可传导至脚&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片22" src="https://i.loli.net/2018/07/03/5b3b803388499.jpeg"&gt;
+坐姿应当是可持续的放松舒适动作, 有些坐姿看似很舒服, 或者刚刚开始的时候舒服, 持续一段时间反而会造成很大的损伤.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;术者的上身应当是很挺拔的状态, 自我感觉有点像是头悬梁,&lt;/li&gt;
+&lt;li&gt;手肘放松接近90度左右,&lt;/li&gt;
+&lt;li&gt;膝盖也是接近90度左右,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;相应地要调节好凳高和床高.&lt;/p&gt;
+&lt;p&gt;双脚分开约60度, 轻放在踏板上.&lt;/p&gt;
+&lt;!-- EOF --&gt;
+
+&lt;p&gt;&lt;img alt="幻灯片23" src="https://i.loli.net/2018/07/03/5b3b8194de1c1.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;重复一下坐姿的基本原则是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;上身的重力不可传导至手&lt;/li&gt;
+&lt;li&gt;全身的重力不可传导至脚&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这是因为:
+肌肉越放松, 动作越敏捷越稳定.&lt;/p&gt;
+&lt;p&gt;如果画一张图, 用横轴表示肌张力, 纵轴表示动作的稳定性, 大约是这样的:
+&lt;img alt="幻灯片24" src="https://i.loli.net/2018/07/03/5b3b820a7f5d2.jpeg"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;要将肢体放置在指定位置, 显然还是需要一定的肌张力, 不可能为0.&lt;/li&gt;
+&lt;li&gt;要达成一定的目标动作, 比如用镊子夹持住囊膜, 也需要有一定的力量. 手术过程中是希望使用能够完成目标动作的最小力量. 比如撕囊, 前囊只有几个微米, 很小的力量即可夹持住, 如果施加更大的力量, 囊膜也仍然只是被夹住而已, 但更大的力量就有可能造成肌肉的抖动, 使稳定性下降.&lt;/li&gt;
+&lt;li&gt;如果坐姿出现错误, 手或者脚不但要用力完成动作, 还需要分出一部分力量去支撑身体的重力, 稳定性就会更差.&lt;/li&gt;
+&lt;li&gt;如果坐姿更扭曲, 可能还出现肌肉之间互相拮抗, 那时就几乎无法完成任何操作了.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;错误坐姿&lt;/h2&gt;
+&lt;p&gt;人在精神高度紧张的时候, 可能不注意自己的坐姿. 或者在上台落座之前, 没有能够很好地调整手术床/手术椅的高度.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片25" src="https://i.loli.net/2018/07/03/5b3b83b1b7fbb.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;要迅速毁掉一台手术非常简单, 比如上图中, 只要手术床摆低一些, 座椅摆到更远离手术床的位置, 脚踏放远一点, 显微镜阻尼放松一点即可.&lt;/p&gt;
+&lt;p&gt;分析一下, 在这种情况下:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显微镜阻尼过松, 使用中下垂, 术者要低头, 颈椎压力大&lt;/li&gt;
+&lt;li&gt;手术床过低, 工作距离不变, 显微镜必然也要降低, 术者低头弯腰, 颈椎腰椎压力大.&lt;/li&gt;
+&lt;li&gt;手术床过低, 手臂下垂+术者低头, 一部分上身重力转移到手腕上, 手腕肌张力提高, 容易出现手抖.&lt;/li&gt;
+&lt;li&gt;手术椅太靠后, 术者只坐椅子边缘, 极不稳定, 紧张, 需要动用腿的力量支撑&lt;/li&gt;
+&lt;li&gt;脚踏位置太远, 脚需要分担身体重量, 于是踩下脚踏容易, 抬起来却要慢一拍. 如果是发现吸住后囊, 恐怕是松不开了. 而且由于脚移动困难, 就会少移动, 于是会减少显微镜的实时调节, 相应的, 术者眼睛就要自己来动用调节力调节了, 很快也会疲劳.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;上述坐姿其实并不罕见, 比如在wetlab实验室中:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片26" src="https://i.loli.net/2018/07/03/5b3b86e90bebb.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;这位同学就能够把所有上述各项错误都做全了. 还好是在实验室及时发现了她的错误, 并且指出纠正, 现在手术应该是好很多了.&lt;/p&gt;
+&lt;p&gt;错误的坐姿不仅威胁病人, 对医生的身体也是损害:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1994年, 面向英国眼科医生问卷调查, 54% 背痛&lt;/li&gt;
+&lt;li&gt;2005年, 美国, 52%颈部/上肢/腰痛, 其中15%工作受限制&lt;/li&gt;
+&lt;li&gt;2004年, 伊朗, 80%慢性背痛, 55%慢性头痛&lt;/li&gt;
+&lt;li&gt;2004年, 美国后节, 55%同时颈部背部痛, 其中7%需要接受手术治疗.
+...
+
+Will Ophthalmology Cripple You? http://www.reviewofophthalmology.com/content/i/1650/c/30458/
+好好看看, 不要把自己变成别人SCI里的病例.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;显微镜调节&lt;/h2&gt;
+&lt;p&gt;显微镜是靠脚踏来调节的. 要熟悉脚踏板的操作. 不同的脚踏可能踏板的定义不同, 需要自己亲自测试一下, 并且要在显微镜上多多练习才能熟悉.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片28" src="https://i.loli.net/2018/07/03/5b3b8990b7fba.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;踏板中最重要的部分就是调节放大率和调焦. 要注意脚踏的各个控制调节都不是无限制的, 都有各自的极限范围, 到达极限以后显微镜有声音却不再移动.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片29" src="https://i.loli.net/2018/07/03/5b3b8a88a0373.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;特别是调焦的微调上下都是有极限的, 经常看到有学生一直踩着脚踏, 显微镜已经降到最低, 仍然抱怨角膜浑浊看不清楚.&lt;/p&gt;
+&lt;p&gt;马志中教授讲过: 出现问题, 停下, 恢复到正常状态, 再操作.&lt;/p&gt;
+&lt;p&gt;对于显微镜一直调不清楚的实例来说, 就是停下, 看看显微镜是不是已经调到了最低或最高, 如果是, 用复位按钮或者脚踏把显微镜重新放到中间, 再粗调, 再微调.&lt;/p&gt;
+&lt;h2&gt;亮度-对比度&lt;/h2&gt;
+&lt;p&gt;显微镜的灯很亮, 但并非越亮越好.&lt;/p&gt;
+&lt;p&gt;$$
+Contrast= \frac{L_{max}-L_{min}}{L_{max}+L_{min}}
+$$&lt;/p&gt;
+&lt;p&gt;对比度是(最亮-最暗)除以(最亮+最暗), 或者说&lt;/p&gt;
+&lt;p&gt;$$
+Contrast= \frac{L_{max}-L_{min}}{L_{mean}}
+$$&lt;/p&gt;
+&lt;p&gt;对比度是(最亮-最暗)除以平均亮度,
+提高了照明亮度, 可不一定提高对比度， 因此也不一定“更清楚”
+&lt;img alt="幻灯片31" src="https://i.loli.net/2018/07/03/5b3b8ca149c9f.jpeg"&gt;&lt;/p&gt;
+&lt;h2&gt;景深 vs 放大率&lt;/h2&gt;
+&lt;p&gt;景深: 用手术显微镜时, 在垂直方向上看清楚的范围.
+&lt;img alt="幻灯片32" src="https://i.loli.net/2018/07/03/5b3b8ce8d77ab.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;景深和放大率在一定程度上是相反的, 物体放大, 则景深缩小.
+&lt;img alt="幻灯片33" src="https://i.loli.net/2018/07/03/5b3b8d576b481.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;由于景深和放大率有矛盾, 所以应当按需分配, 例如&lt;/p&gt;
+&lt;h4&gt;在phaco手术中:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;撕囊:&lt;/li&gt;
+&lt;li&gt;需要看清囊膜, 所以放大率很重要&lt;/li&gt;
+&lt;li&gt;操作仅仅在囊膜平面, 所以景深并不重要.(这个推理仅仅在你不会牵拉切口的前提下, 否则眼球乱转, 囊膜平面倾斜)&lt;/li&gt;
+&lt;li&gt;所以, 可以放得大一些&lt;/li&gt;
+&lt;li&gt;phaco:&lt;/li&gt;
+&lt;li&gt;需要看到从角膜内皮直到后囊膜的范围, 所以景深非常重要.&lt;/li&gt;
+&lt;li&gt;核块的相貌倒是并不重要, 所以放大率可以小一些.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;在显微缝合中:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;进针出针: 需要看清细节层次, 可以放大一些&lt;/li&gt;
+&lt;li&gt;打结: 针持到镊子的距离可能很大, 需要缩小一些.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;翼状胬肉:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;病人眼动剧烈, 为了减少术者调节, 景深要好一些, 缩小&lt;/li&gt;
+&lt;li&gt;病人配合好, 可以适当增加放大率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;作业:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;看手术时, 记录下不同步骤时主刀所使用的放大率&lt;/li&gt;
+&lt;li&gt;记录数字, 显微镜上会有一个旋转的转盘显示数字&lt;/li&gt;
+&lt;li&gt;记录镜下视野边缘看到的东西:&lt;ul&gt;
+&lt;li&gt;是否可见开睑器&lt;/li&gt;
+&lt;li&gt;是否可见睑缘&lt;/li&gt;
+&lt;li&gt;是否可见角膜缘&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;在显微镜主镜和助手镜下, 分别试试把一支笔插进笔帽里&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;可视范围&lt;/h2&gt;
+&lt;p&gt;显微镜有一定的可视范围, 但显然最中央的区域成像质量是最佳的, 要练习将病人的眼睛放在显微镜视野的中央.&lt;/p&gt;
+&lt;p&gt;在实验室, 做猪眼练习时, 很多同学在术中把承放猪眼的支架托盘挪来挪去, 甚至旋转! 记住在实际手术中, 病人是不可移动的, 也是不可旋转的. 要用脚踏调位置
+&lt;img alt="幻灯片37" src="https://i.loli.net/2018/07/03/5b3b903e142e7.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;另外注意镜下可视范围&amp;gt;录像可视范围, 如果你真的好好录制自己手术, 很可能在前几次手术时, 根本录不到患者的眼球.&lt;/p&gt;
+&lt;h2&gt;眼不离镜&lt;/h2&gt;
+&lt;p&gt;在手术中, 术者尽量不要使眼睛离开显微镜目镜. 一旦术者的眼睛离开显微镜目镜, 患者眼内不可有任何手术器械!&lt;/p&gt;
+&lt;p&gt;如果你眼睛离开目镜去取器械, 左手还留着chopper在患者眼内, 等再回来看时, 恐怕后囊或者虹膜早被钩破了.&lt;/p&gt;
+&lt;p&gt;要学会眼睛不离开显微镜就可以传递手术器械.&lt;/p&gt;
+&lt;p&gt;很多同学不敢做这个动作, 眼睛不离开显微镜时, 手里拿着器械却找不到. 这是因为人脑总觉得物体是在视线的延长线上, 而显微镜上有反射镜, 所以物体实际比视线所在位置更靠近自己. 练习时, 把器械向自己怀里拉近一些可能就可以找到.
+&lt;img alt="幻灯片39" src="https://i.loli.net/2018/07/03/5b3b93335833a.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;人脑有强大的纠错能力, 大约只需要5分钟的简单训练, 就可以习惯眼不离镜取放器械了.&lt;/p&gt;
+&lt;p&gt;练习方法也很简单, 找个同伴为你传递器械, 比如一支笔, 眼不离镜, 用笔在镜下往纸上画个点, 然后再递出去. 练习5分钟, 受用一辈子.&lt;/p&gt;
+&lt;h2&gt;红反光&lt;/h2&gt;
+&lt;p&gt;每一个到我实验室来练习手术的医生我都会问ta是否从病人视角看过手术显微镜的物镜是什么样子, 大约教了300多位医生, 真正看过的人一只手就可以数过来.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片40" src="https://i.loli.net/2018/07/03/5b3b948895ac3.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;这是两种显微镜的物镜照片, 两个小圆就是物镜, 而发亮的是光源的反射镜. 可见光源和物镜并不是在同一个位置.&lt;/p&gt;
+&lt;p&gt;所谓眼底红反光, 是显微镜的光源将光投射到眼底, 再反射回来, 被物镜接收到.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片41" src="https://i.loli.net/2018/07/04/5b3b9f68491d5.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;从示意图中可以看出, 如果把眼底简化成一个垂直于眼轴的平面镜, 那么入射角=反射角, 眼轴最多只能在光源和物镜的角平分线之内, 否则反射光就离开物镜了.&lt;/p&gt;
+&lt;p&gt;听过科主任对病人喊"看灯"吧, 看灯的时候眼轴指向光源附近, 反射光容易进入物镜, 红反光会比较明显.&lt;/p&gt;
+&lt;h2&gt;作业&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;用手机给显微镜底部拍照&lt;/li&gt;
+&lt;li&gt;取吸管一根, 底部塞些铝箔&lt;ul&gt;
+&lt;li&gt;放在镜下观察反光&lt;/li&gt;
+&lt;li&gt;转动角度, 观察反光&lt;/li&gt;
+&lt;li&gt;剪成不同长度, 观察反光&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;去验光室学习检影验光&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;清洁区&lt;/h2&gt;
+&lt;p&gt;只有套上消毒帽的区域才是清洁区, 术者或者助手可以戴手套操作, 比如:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调整瞳距&lt;/li&gt;
+&lt;li&gt;移动手柄&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他没有消毒帽覆盖的区域都是污染区, 只有在刷手之前操作或者请巡台护士帮忙&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;屈光度调节&lt;/li&gt;
+&lt;li&gt;复位按钮(可能是清洁)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="幻灯片14" src="https://i.loli.net/2018/06/22/5b2bdfbb2707e.jpeg"&gt;&lt;/p&gt;
+&lt;h2&gt;初始化&lt;/h2&gt;
+&lt;h3&gt;调整手术床高度&lt;/h3&gt;
+&lt;p&gt;这个应当在术前完成, 之前已经讲过.&lt;/p&gt;
+&lt;h3&gt;显微镜复位&lt;/h3&gt;
+&lt;p&gt;显微镜可以通过脚踏来控制调焦(z轴移动)和xy平面上的移动, 但移动范围是有限的, 在手术起始时, 应当赋予显微镜最大的自由选择能力, 也就是能够在各个方向上都有移动的余地, 显微镜应当放置在可移动范围的中央.&lt;/p&gt;
+&lt;p&gt;这段话很别扭, 但是"保持最大自由选择能力"是手术中的一个战略原则, 不要把自己逼进死胡同, 否则就处处被动. 这个原则会在撕囊的教学中再次详细解释.&lt;/p&gt;
+&lt;p&gt;这个操作是通过复位按钮来实现的.
+&lt;img alt="幻灯片16" src="https://i.loli.net/2018/06/22/5b2be454efc53.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;不同的显微镜的复位按钮不同, 不一定都是消毒帽覆盖的, 有可能需要巡台护士帮忙.&lt;/p&gt;
+&lt;p&gt;有些显微镜点击了复位按钮之后, xy平面上是复位了, 但在z轴上不一定是自动复位的, 如果没有, 需要用脚踏调焦来将显微镜的z轴指示标记移动到中央.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片17" src="https://i.loli.net/2018/06/22/5b2be8157e8d0.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;所以, 如果到一个新的地方做手术, 要先行了解一下当地的显微镜, 哪怕先随手戳一下复位按钮.&lt;/p&gt;
+&lt;h3&gt;瞳距调节&lt;/h3&gt;
+&lt;p&gt;眼科医生要熟记自己的瞳距,&lt;/p&gt;
+&lt;p&gt;瞳距的调整是通过旋钮,或者,硬掰来完成的, 当然, 如果有旋钮还是使用旋钮. 旋钮上通常有标尺, 也可能是图中右下这样的标尺, 其含义是对齐的线条指示的是瞳距的大小.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片19" src="https://i.loli.net/2018/06/22/5b2be8f10ebe7.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;图中的两个标尺都是表示瞳距=65mm.&lt;/p&gt;
+&lt;h3&gt;屈光度调节&lt;/h3&gt;
+&lt;p&gt;调节屈光度的旋钮是没有消毒帽保护的, 所以要么上台之前调好, 要么请巡台护士帮忙调整.&lt;/p&gt;
+&lt;p&gt;手术显微镜可以裸眼使用, 也可以戴眼镜使用, 如果戴眼镜, 那么相当于正视眼.&lt;/p&gt;
+&lt;p&gt;目镜上两个镜筒可以分别调整屈光度,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是近视使用负向的区域, 例如200度近视, 就应当放在-2,&lt;/li&gt;
+&lt;li&gt;如果是远视使用正向的区域.&lt;/li&gt;
+&lt;li&gt;如果戴眼镜或者是正视眼, 那么就放在0位置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="幻灯片18" src="https://i.loli.net/2018/06/22/5b2be2d16c940.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;操作之前一定要检查目镜上的屈光度是否合适, 并且调整为自己的参数. 如果前一个手术医生双眼都是近视或远视, 自己又没有重调整参数, 那么在使用时通过调整显微镜整体的焦距是可以看清的, 但这时候助手就看不清了. 又或者, 如果前一位医生有屈光参差, 那如果没有调整, 做手术的时候就好像单眼被打了一拳, 各种别扭而且影响立体感.&lt;/p&gt;
+&lt;p&gt;顺便说, 这就是为什么眼科医生很多人自己不做近视手术的原因, 因为做手术的时候用显微镜就可以矫正近视, 不要说近视手术, 连眼镜都可以不要.&lt;/p&gt;
+&lt;h3&gt;开灯&lt;/h3&gt;
+&lt;p&gt;显微镜灯有两组开关, 一组在显微镜基座上, 是主开关, 当主开关开启以后还可以用脚踏上的开关控制开闭和亮度.&lt;/p&gt;
+&lt;h3&gt;粗调焦距&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="幻灯片21" src="https://i.loli.net/2018/06/22/5b2beee008ff9.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;开灯后, 手握清洁区域, 移动显微镜.&lt;/p&gt;
+&lt;p&gt;有一些显微镜上是有供移动用的手柄或者按钮, 在扳动或者按下时显微镜才能移动.&lt;/p&gt;
+&lt;p&gt;将显微镜拉动到病人头部的上空, 然后逐渐下降, 当到达自己眼前时, 凑上去用双眼观察, 继续下降至成像清晰. 然后小心地依次松开双手.&lt;/p&gt;
+&lt;p&gt;如果显微镜的阻尼太松, 松手的瞬间显微镜有可能突然下落造成危险, 所以要先松开一只手, 然后再松开一只手, 如果继续下落, 要立即握住显微镜.&lt;/p&gt;
+&lt;p&gt;在粗调焦距时,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果处于高放大倍率调清楚了, 那么缩小放大率以后, 显微镜仍然是清晰的. 不必再次调焦&lt;/li&gt;
+&lt;li&gt;如果是低倍率时清晰, 当继续放大时, 往往还需要重新调焦.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;其他开关&lt;/h2&gt;
+&lt;p&gt;显微镜上还有一些其他的设定开关, 比如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调整反射镜位置的红光反射开关,&lt;/li&gt;
+&lt;li&gt;保护患者黄斑的阴影开关&lt;/li&gt;
+&lt;li&gt;滤光片&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些结构请查阅手术显微镜的说明书. 是的, 显微镜是有说明书的, 放在护士长那里, 去借来看看.&lt;/p&gt;
+&lt;h2&gt;作业&lt;/h2&gt;
+&lt;p&gt;担任一天显微镜调节员，为每台手术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;复位显微镜&lt;/li&gt;
+&lt;li&gt;询问术者和助手的屈光度和瞳距，并调整&lt;/li&gt;
+&lt;li&gt;开、关显微镜灯光，并调整亮度&lt;/li&gt;
+&lt;li&gt;借阅手术显微镜说明书&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;良好的习惯产生手术安全,&lt;/li&gt;
+&lt;li&gt;正确勤勉的练习产生良好的习惯,&lt;/li&gt;
+&lt;li&gt;理解设备的原理和操作的原理指导正确的练习.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;下面我来简介一下眼科操作显微镜的原理和基本训练. 非本专业同学可以顺便体会一下手术科室的强迫症和碎碎念.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;术前设备检查&lt;/h2&gt;
+&lt;p&gt;在全天的手术开始之前, 应当亲自检查显微镜. 就好像上战场之前需要检查自己的武器.&lt;/p&gt;
+&lt;p&gt;检查的项目有:&lt;/p&gt;
+&lt;h3&gt;是否使用了正确的显微镜?&lt;/h3&gt;
+&lt;p&gt;显微镜会搭载不同的外设或者本身具有不同的结构, 有些特殊的手术, 是需要特定的显微镜的.&lt;/p&gt;
+&lt;p&gt;例如青光眼房角手术, 是使用半球状的房角镜操作, 这时候就需要显微镜的主镜能够倾斜, 但并非所有显微镜都可以做到这点, 术前需要确认.&lt;/p&gt;
+&lt;h3&gt;头&lt;/h3&gt;
+&lt;p&gt;显微镜是否可以在床头附近自由移动?
+&lt;img alt="幻灯片04" src="https://i.loli.net/2018/06/20/5b2a080664c3b.jpeg"&gt;
+(图片选自师弟援外时的手术照片, 赞师弟)&lt;/p&gt;
+&lt;p&gt;如图中所示, 示意图是俯视图, 红色弧线画出的关节是显微镜的主关节, 要保证这个关节是弯曲的状态.&lt;/p&gt;
+&lt;p&gt;从俯视图看, 显微镜是由两个固定臂转动构成, 如果这个关节是完全伸直才能达到患者的头部, 那么再弯曲就够不着了.&lt;/p&gt;
+&lt;p&gt;术前要把显微镜挪动到合适的位置, 保持有足够的冗余. 否则术中再移动显微镜底座就非常困难.&lt;/p&gt;
+&lt;h3&gt;脚&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="幻灯片05" src="https://i.loli.net/2018/06/20/5b2a572576765.jpeg"&gt;
+脚踏的位置要在术前事先摆好. 这样术中, 不需要多想脚就可以找到相应的位置.&lt;/p&gt;
+&lt;p&gt;多数医院是使用左脚显微镜, 右脚phaco/玻切踏板的设定. 但如果去郑大一附院的时候要小心, 有可能他们的设定相反.&lt;/p&gt;
+&lt;p&gt;两个踏板放在与肩同宽或者略宽的位置, 稍微分开成60度左右, 以主刀坐下膝盖90度可舒适踩到踏板为准. 如果太远或太近, 都会造成紧张. 这个后面会详述.&lt;/p&gt;
+&lt;h3&gt;床的高度&lt;/h3&gt;
+&lt;p&gt;当显微镜座机的位置, 座椅的位置, 脚踏的位置都摆好以后, 相当于在俯视图上把各个物体安顿好了.&lt;/p&gt;
+&lt;p&gt;这时候需要调整高度了, 我们转入到侧视图来观察.
+&lt;img alt="幻灯片06" src="https://i.loli.net/2018/06/20/5b2a5a3d0ab34.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;从上到下观察, 显微镜的工作距离是不可变的, 虽然显微镜物镜还可以移动, 但距离其实很小. 手术床的厚度给定不可变, 床的高度可调, 凳子的高度可调.&lt;/p&gt;
+&lt;p&gt;在操作中凳子的高度要根据术者的小腿长度来设定, 尽量使膝关节弯曲在90度左右. &lt;/p&gt;
+&lt;p&gt;显微镜的目镜位置应当在术者平视的位置.&lt;/p&gt;
+&lt;p&gt;床的位置需要使术者能够放松放置前臂和手腕, 大约是屈肘90度-120度左右.&lt;/p&gt;
+&lt;p&gt;所以综合考虑, 手术床的高度需要有一定的调整, 手术床高了术者的手举高, 容易紧张, 床低了, 可能膝关节活动有影响, 或者手太低也不舒服.&lt;/p&gt;
+&lt;p&gt;在准备工作阶段, 术者的舒适感是最优先考虑的事项, 只有术者舒适患者舒适手术才能平稳进行.&lt;/p&gt;
+&lt;p&gt;在确定了各个设备的位置之后, 还要检查显微镜的功能&lt;/p&gt;
+&lt;h3&gt;显微镜的功能&lt;/h3&gt;
+&lt;p&gt;检查显微镜的功能要分别检查主镜和助手镜的功能, 功能检查可以从光/机/电来分类考虑, 不容易漏项.&lt;/p&gt;
+&lt;h4&gt;显微镜的光学功能&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;目镜是否插紧是否复位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;显微镜的目镜是可以拆卸的, 有时候前一个使用者反复调整或者昨天护士在擦拭时目镜可能会松动.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="幻灯片08" src="https://i.loli.net/2018/06/20/5b2a5dc96fcf3.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;如果目镜松动, 特别是单个松动, 那样调焦是无论如何无法舒适的. 所以需要确认一下目镜是否塞紧了.&lt;/p&gt;
+&lt;p&gt;最好顺手将目镜的屈光度放置到0, 或者设定为第一个术者的屈光度.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;物镜是否太脏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在眼科手术中, 我们经常需要向患者的角膜上点生理盐水, 偶尔会有少许水滴飞溅到物镜上, 一段时间后水干了会留下盐的痕迹. 会影响成像的对比度, 你不会希望透过一层模糊的镜头来观察前囊的.
+&lt;img alt="幻灯片09" src="https://i.loli.net/2018/06/20/5b2a5f5b35c63.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;擦拭物镜需要用擦镜纸, 而不是棉签或者纱布, 用蒸馏水而不是生理盐水.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;助手镜是否打开&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;很多助手镜是可以左右互换的, 如果开关切换到了另一端, 助手镜就是黑的. 刷手之前简单检查一下就好. 如果上台以后才发现有问题, 只好请巡台护士帮忙了, 不但遭到巡台护士的白眼, 而且增加了污染机会.&lt;br&gt;
+&lt;img alt="幻灯片10" src="https://i.loli.net/2018/06/20/5b2a60e0e33af.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;注意助手镜的观察角度是可调的, 有一个调节环可以修正角度. 也应当在术前找好与主刀一致的角度, 否则助手操作起来也很困难.&lt;/p&gt;
+&lt;p&gt;方法是在镜下放一个物体, 例如一只笔, 按床的长轴方向放置, 然后看着助手镜调整调节环, 使笔的方向合理.&lt;/p&gt;
+&lt;p&gt;如果是到一个新的环境, 要弄清楚助手镜的性能, 有的助手镜没有立体感, 放大率不可调, 焦距如何调整要问清楚.&lt;/p&gt;
+&lt;h4&gt;机械功能: 悬臂阻尼&lt;/h4&gt;
+&lt;p&gt;&lt;img alt="幻灯片11" src="https://i.loli.net/2018/06/20/5b2a61aec1195.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;手术显微镜的悬臂上有多个阻力调节钮, 如果太紧了, 首次调整显微镜位置时很难推动.&lt;/p&gt;
+&lt;p&gt;如果阻尼太松了, 显微镜的悬臂可能无法保持位置, 会因为重力缓慢下坠, 术中会发现视物越来越模糊.&lt;/p&gt;
+&lt;h4&gt;电器功能:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;照明是否正常&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;试试灯是不是亮的, 想想如果大家都准备好了病人也躺在手术床上才发现灯泡不亮赶着换灯泡的尴尬场面.&lt;/p&gt;
+&lt;p&gt;万一术中真的突然灯泡烧了, 每个显微镜常规是有一个可以快速切换的备用灯泡的.
+&lt;img alt="幻灯片12" src="https://i.loli.net/2018/06/20/5b2a62eb30c44.jpeg"&gt;&lt;/p&gt;
+&lt;p&gt;常规而言灯泡的位置都是在悬臂上有散热格栅的地方, 有一个可以拔出的面板, 里面会有两个灯泡, 旋转180度重新插回就可以启动备用灯泡了. 术后记得要及时换掉烧坏的灯泡.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;录像系统是否接好&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;学习手术必须录像.
+学习手术必须录像.
+学习手术必须录像.&lt;/p&gt;
+&lt;h2&gt;有记录的失败才是成功之母,&lt;/h2&gt;
+&lt;h2&gt;没有记录的失败仅仅是场灾难.&lt;/h2&gt;
+&lt;h2&gt;作业&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;帮助护士准备和收纳显微镜，认清各种可调整部分。&lt;/li&gt;
+&lt;li&gt;学会换灯泡。&lt;/li&gt;
+&lt;li&gt;学会使用手术录像设备&lt;/li&gt;
+&lt;li&gt;学会调整手术床&lt;/li&gt;
+&lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>中国古代数学算法的Python实现</title><link>https://goldengrape.github.io/posts/python/python-old-chinese/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;看了这篇《&lt;a href="https://mp.weixin.qq.com/s?__biz=MzA5NDkzNjIwMg==&amp;amp;mid=2651662431&amp;amp;idx=1&amp;amp;sn=21ae67f8ed94ea960d92734afc384fc1&amp;amp;chksm=8bbe85babcc90cac200fabd65d5494bbbec81792420ba8771ad02bc324257495cffdcd57afcd"&gt;没有定理的中国古代数学，如何站在世界之巅？&lt;/a&gt;》。虽然我觉得题目很标题党，不过里面的内容很有趣啊，讲解了中国古代数学里的几个算法。由于我正在学Python，所以自然就拿来练手了。&lt;/p&gt;
 &lt;p&gt;可以运行的代码&lt;a href="https://repl.it/HgCF/30"&gt;在这里&lt;/a&gt;
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -307,352 +657,4 @@ variance= dev error- train error&lt;/p&gt;
 &lt;p&gt;参考视频:
 莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</guid><pubDate>Mon, 18 Dec 2017 17:23:16 GMT</pubDate></item><item><title>机器学习的战略(3)--误差分析</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我觉得这一部分是导师指导/监督学生实验时应该出手的部分.&lt;/p&gt;
-&lt;h2&gt;误差分析&lt;/h2&gt;
-&lt;p&gt;这是个手工分析操作技巧了. 老师在课程中不断强调不要看不起手工分析, 一是人类看图识别的效率很高, 看上100张图很快就搞定了, 二是在分析过程中还有助于产生直观的印象, 再次利用人类强大的识别能力来解决问题.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;方法是:
-&lt;em&gt; 从 &lt;strong&gt;dev set&lt;/strong&gt; 中, 找100个被标记错误的图片, 人眼看, 手工数.
-&lt;/em&gt; 怎么数呢? 要列一张表, 要比较容易编辑扩展的, 我觉得excel之类的就不错.
-&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;图片编号&lt;/th&gt;
-&lt;th align="left"&gt;这是狗&lt;/th&gt;
-&lt;th align="left"&gt;狮子老虎&lt;/th&gt;
-&lt;th align="left"&gt;图片太模糊&lt;/th&gt;
-&lt;th align="left"&gt;Instagram滤镜&lt;/th&gt;
-&lt;th align="left"&gt;备注&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;1&lt;/td&gt;
-&lt;td align="left"&gt;+1&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;+1&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;2&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;+1&lt;/td&gt;
-&lt;td align="left"&gt;+1&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;3&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;+1&lt;/td&gt;
-&lt;td align="left"&gt;+1&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;下雨天&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;...&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;...&lt;/td&gt;
-&lt;td align="left"&gt;...&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;合计&lt;/td&gt;
-&lt;td align="left"&gt;8%&lt;/td&gt;
-&lt;td align="left"&gt;43%&lt;/td&gt;
-&lt;td align="left"&gt;61%&lt;/td&gt;
-&lt;td align="left"&gt;12%&lt;/td&gt;
-&lt;td align="left"&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;有了这样的表格, 就很容易分析应该在哪些方面改进了.&lt;/p&gt;
-&lt;h2&gt;标注错误&lt;/h2&gt;
-&lt;p&gt;dataset的图片标注通常也是由人类来完成的, 也可能有各种不小心的错误, 如果你发现dataset中的图片有标注错误怎么办?&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;随机出现的错误, 算了不管.&lt;/li&gt;
-&lt;li&gt;系统性的错误, 比如大量的白狗被标记成了猫&lt;ul&gt;
-&lt;li&gt;进行误差分析，看看标注错误有多大影响&lt;/li&gt;
-&lt;li&gt;如果影响很大, 在dev / test set中一起改&lt;/li&gt;
-&lt;li&gt;如果有精力, 也注意那些识别"正确"的图&lt;/li&gt;
-&lt;li&gt;train set中的标注错误可改可不改.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/</guid><pubDate>Mon, 18 Dec 2017 17:23:01 GMT</pubDate></item><item><title>机器学习的战略(2)--错误率</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;与人类相比较&lt;/h2&gt;
-&lt;p&gt;机器学习的很多任务, 比如识别图像, 听语音, 都是人类非常擅长的. 所以这些任务来说人类的错误率都相当低. 当然人类也分人, 看眼底图的还是得后节大夫, 找普通人看也还是错误率很高的, 最高的准确率应该是一组后节专家讨论会诊后得到的.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;理论上识别的错误率会有一个极限低值, 叫Bayes optimal error. 按照极限低值的定义, 那么肯定是比人类要低的, 但也不一定能够达到0, 在有些人类擅长的项目上, 不妨可以近似将人类的错误率当作bayes optimal error.&lt;/p&gt;
-&lt;h2&gt;错误率分析&lt;/h2&gt;
-&lt;p&gt;训练好的模型, 可以测定某一模型在dataset中的错误率, 重要的是3个数:
-&lt;em&gt; bayes optimal error, 这是极限值, 不可测, 但在图像识别上可以近似用人类错误率替代.
-&lt;/em&gt; train error, 模型用在train set上的错误率
-* dev error, 模型用在dev set上的错误率&lt;/p&gt;
-&lt;p&gt;有这三个数就好办了. 之前含混不清, 我连中文译名都不想给的bias 和 variance 终于可以定义了:
-&lt;em&gt; bias=train error - bayes optimal error
-&lt;/em&gt; variance=dev error - train error&lt;/p&gt;
-&lt;p&gt;比如某个任务, 人类可以达到1%的错误率,&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;模型A&lt;/strong&gt;, train error=7%, dev error=8%
-那么:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;bias=7%-1%=6%&lt;/li&gt;
-&lt;li&gt;variance=8%-7%=1%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;显然这样的bias太高了, 模型还没练好, 欠拟合了.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;模型B&lt;/strong&gt;, train error=1.5%, dev error=7.5%&lt;/p&gt;
-&lt;p&gt;那么:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;bias=1.5%-1%=0.5%&lt;/li&gt;
-&lt;li&gt;variance=7.5%-1.5%=6%&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;显然是variance太高了, 过拟合了. 模型"记住"了train set的内容.&lt;/p&gt;
-&lt;h2&gt;降低错误率的策略&lt;/h2&gt;
-&lt;p&gt;先算错误率
-&lt;em&gt; bias=train error - bayes optimal error(~人类错误率)
-&lt;/em&gt; variance=dev error - train error&lt;/p&gt;
-&lt;p&gt;bias又被成为avoidable error, 可改善的错误率.&lt;/p&gt;
-&lt;h3&gt;降低bias&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;试试更大的模型, 比如神经网络层数更多, 每层的神经元更多之类.&lt;/li&gt;
-&lt;li&gt;延长训练时间&lt;/li&gt;
-&lt;li&gt;调整优化算法, 比如试试更华丽的momentum, RMS prop, ADOM.&lt;/li&gt;
-&lt;li&gt;换更华丽的模型, 卷积神经网络CNN. RNN&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;降低variance&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;更多的数据, 更多的数据, 更多的数据&lt;/li&gt;
-&lt;li&gt;Regularization, 就是加一些约束条件, 使得拟合出来的函数平滑一些, 不要那么扭曲妖娆.&lt;/li&gt;
-&lt;li&gt;换更华丽的模型, CNN, RNN. 从2012年到现在, 甚至未来几年, 各种神经网络就像选秀一样, 差不多每个月都能有新的选手出现.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;此处推荐一下&lt;a href="https://www.jiqizhixin.com/"&gt;机器之心&lt;/a&gt;的网站和公众号. 一些重要论文会有概述.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/</guid><pubDate>Mon, 18 Dec 2017 17:22:47 GMT</pubDate></item><item><title>机器学习的战略(1)--目标的设置</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h2&gt;调整ML模型的战略&lt;/h2&gt;
-&lt;p&gt;用来描述模型结构的, 比如是y=kx+b, 还是y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d, 叫做"超参数" &lt;strong&gt;hyperparamter&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;调整hyperparamter是一件很麻烦的事情, 以至于很多人把这件事叫做"炼丹". 你可能需要炼上七七四十九天才知道, 哦, 原来y=kx+b这个线性模型不合适啊. 所以除了具体的调整方法(战术), 你还需要战略方案.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h3&gt;Orthogonalization&lt;/h3&gt;
-&lt;p&gt;正交化, 很学术的名词. 其实就是一次调一个东西, 别混在一起调整! 如果你的车方向盘和油门是关联在一起的, 那肯定就没法开了.&lt;/p&gt;
-&lt;p&gt;这大概是所有科研\研发的基本战略概念了.&lt;/p&gt;
-&lt;h2&gt;ML的目标设置&lt;/h2&gt;
-&lt;h3&gt;确定单一评价目标&lt;/h3&gt;
-&lt;p&gt;用一个数来描述你的目标. 比如准确率, 其实是有两个数来描述的:
-&lt;em&gt; Precision: 模型标定为阳性的数据(比如模型认为是猫的图片), 有多少实际是阳性的(图片真的是猫).
-&lt;/em&gt; Recall:  在阳性的数据中(图片中真的是猫), 有多少被模型找出来了&lt;/p&gt;
-&lt;p&gt;(&lt;strong&gt;我特别讨厌用相似的名词去描述相近或者相反的概念, 每次我都弄混, 所以此处不出现真阳性假阳性之类的名词&lt;/strong&gt;)&lt;/p&gt;
-&lt;p&gt;显然是希望两个值都很高, 但是会碰到鱼和熊掌的问题
-比如有两个模型:
-
-| 分类器 | Precision | Recall |
-| :----| :---- |:---- |
-|A|95%|90%|
-|B|98%|85%|&lt;/p&gt;
-&lt;p&gt;那么用Precision与Recall调和平均数代替:&lt;/p&gt;
-&lt;p&gt;F1 score= 2/(1/Precision+1/Recall)&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;分类器&lt;/th&gt;
-&lt;th align="left"&gt;Precision&lt;/th&gt;
-&lt;th align="left"&gt;Recall&lt;/th&gt;
-&lt;th align="left"&gt;F1 score&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;A&lt;/td&gt;
-&lt;td align="left"&gt;95%&lt;/td&gt;
-&lt;td align="left"&gt;90%&lt;/td&gt;
-&lt;td align="left"&gt;92.4%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;B&lt;/td&gt;
-&lt;td align="left"&gt;98%&lt;/td&gt;
-&lt;td align="left"&gt;85%&lt;/td&gt;
-&lt;td align="left"&gt;91.0%&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3&gt;区分Satisficing 和 Optimizing metric&lt;/h3&gt;
-&lt;p&gt;还是区分目标的事情, 你会希望准确率高, 又希望算得快, 还希望用计算资源少, 这几项很难同时达成, 于是要区分目标, 哪些是必须要满足的Satisficing metric, 满足条件就行了, 哪些是要尽量优化的, 越高越好的Optimizing metric.&lt;/p&gt;
-&lt;p&gt;比如甲方要求分类器能够在10秒内给出结果, 占用内存不超过10M, 准确率越高越好. 那么下面几个分类器:&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;分类器&lt;/th&gt;
-&lt;th align="left"&gt;F1 score&lt;/th&gt;
-&lt;th align="left"&gt;时间&lt;/th&gt;
-&lt;th align="left"&gt;内存&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;A&lt;/td&gt;
-&lt;td align="left"&gt;99%&lt;/td&gt;
-&lt;td align="left"&gt;20秒&lt;/td&gt;
-&lt;td align="left"&gt;5M&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;B&lt;/td&gt;
-&lt;td align="left"&gt;98%&lt;/td&gt;
-&lt;td align="left"&gt;9秒&lt;/td&gt;
-&lt;td align="left"&gt;9M&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;C&lt;/td&gt;
-&lt;td align="left"&gt;96%&lt;/td&gt;
-&lt;td align="left"&gt;3秒&lt;/td&gt;
-&lt;td align="left"&gt;5M&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;显然选B方案.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;其实还是没钱!&lt;/strong&gt;&lt;/p&gt;
-&lt;h3&gt;train/dev/test set的分布&lt;/h3&gt;
-&lt;p&gt;dev/test set是目标, 相当于靶子, 所以dev/ test set的分布要尽量接近真实场景. 如果立错了靶子就很麻烦.&lt;/p&gt;
-&lt;p&gt;比如要做手机照相识别的分类器app, 用从网上下载的图库可能就太清晰了, 图库通常是专业摄影师拍摄的, 而手机照片往往模糊\曝光不足\抖动. . . 各种问题, 如果dev/test set还是专业摄影师拍摄的图, 那么到用户手里的时候, 可能效果就不好.&lt;/p&gt;
-&lt;h3&gt;train/dev/test set的数量分配&lt;/h3&gt;
-&lt;p&gt;dataset的数量=train+dev+test set的数量.
-机器学习中dataset是越大越好, 在现在的机器学习项目中, dataset往往很大很大, 有了网络以后有大量的照片可以用. 那么dev/ test set的比例就不需要很高, 绝对数量足够就可以了.&lt;/p&gt;
-&lt;p&gt;如果dataset有1000k张图片, 那么
-train: dev: test= 98%: 1%: 1%
-test set大概10k张图片就可以了.&lt;/p&gt;
-&lt;h3&gt;何时修正dev/test set和metrics&lt;/h3&gt;
-&lt;p&gt;有时候你的模型看起来错误率很低, 准确性不错, 各项指标都很好, 但如果不慎挑出来一堆色情图片, 那这样的模型也需要忍痛割爱, 否则后患无穷.&lt;/p&gt;
-&lt;p&gt;如果出现了某些必须要满足的要求, 或者必须要避免的事件, 可以调整dev /test set来挪挪靶子, 或者在评价函数里面加上限定条件, 比如把色情图片作为罚分项目.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/</guid><pubDate>Mon, 18 Dec 2017 17:22:33 GMT</pubDate></item><item><title>机器学习的战略(0)--基础概念</title><link>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是deeplearning.ai系列课程的第三门课&lt;a href="https://www.coursera.org/learn/machine-learning-projects/"&gt;Structuring Machine Learning Projects&lt;/a&gt;.  我觉得这门课非常适合甲方\导师\研发团队头目\产品经理.&lt;/p&gt;
-&lt;p&gt;这是一门即时战略类课程, 讲述如何评估模型如何挑选改进方向, 所需基础知识不多, 对机器学习知道基本概念即可.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;但是这门课里面涉及到的概念和经验很多, 未来我可能需要借助一个笔记时常参考. 这个笔记也可以帮助其他未选这门课的人了解其中的梗概.&lt;/p&gt;
-&lt;h2&gt;一些基础的概念&lt;/h2&gt;
-&lt;p&gt;虽然我认为这门课所需要的基础知识并不多, 但也还是需要知道一些机器学习的基本概念, 需要量还是要比"朋友圈公众号科普"多一些.&lt;/p&gt;
-&lt;h3&gt;机器学习 Machine Learning&lt;/h3&gt;
-&lt;p&gt;这里讲的是有监督学习的任务, 比如给一张照片, 判定这张照片是不是一只猫. 所谓有监督的学习, 就是已知有很多照片, 已经被人工标记过是猫还是非猫了, 这些叫做数据集&lt;strong&gt;dataset&lt;/strong&gt;, 数据集中通常是一个对应的结构, 一个输入x, 对应一个输出y.  x -&amp;gt;y, 比如一张照片就是x, 是猫的照片y=1, 不是猫的照片 y=0&lt;/p&gt;
-&lt;p&gt;Machine Learning就是利用大量的dataset, 自动从里面去总结出一种从x映射到y的规律.&lt;/p&gt;
-&lt;p&gt;最简单的, 比如线性拟合就可以视为一种简单的ML, 有一堆数据点(x,y), 用一条直线去拟合它们. 求解y=kx+b, 有了y=kx+b的公式以后, 你就可以代入一些新的x, 求出y值.&lt;/p&gt;
-&lt;p&gt;y=kx+b这个训练出来的公式通常叫做"模型", 当然你的数据也可能不是符合y=kx+b的, 而是符合y=ax^2+bx+c, 甚至于更加复杂的函数关系以至于很难写出表达式. 去找到k, b这样的参数的过程叫做"训练"模型.&lt;/p&gt;
-&lt;p&gt;除了拟合, 更常见的Machine Learning问题是分类, 其实也类似, 比如相当于看是否 y=kx+b&amp;gt;0&lt;/p&gt;
-&lt;p&gt;在deeplearning.ai课程中的&lt;a href="https://www.coursera.org/learn/neural-networks-deep-learning/home"&gt;第一门课&lt;/a&gt;就是讲基本的ML方法----神经网络.&lt;/p&gt;
-&lt;h3&gt;dataset&lt;/h3&gt;
-&lt;p&gt;有标记的数据集x-&amp;gt;y, 就是dataset. 现代的机器学习已经开始使用非常庞大的数据集了, 比如1,000,000张标记好的照片甚至更多. &lt;/p&gt;
-&lt;p&gt;在训练模型时, 需要把dataset分成几个部分, 一般而言是分成3个, train set / develop set / test set.&lt;/p&gt;
-&lt;h4&gt;train set&lt;/h4&gt;
-&lt;p&gt;train set是用来训练当前这个模型用的, 比如假定模型是y=kx+b, 求解k和b这两个参数的过程就是用train set.&lt;/p&gt;
-&lt;p&gt;不严格的说, 相当于上课时老师用的例题.&lt;/p&gt;
-&lt;h4&gt;develop set&lt;/h4&gt;
-&lt;p&gt;develop set, 在课程中常写作dev set 是说你可能有多个候选的模型, 或者说要"develop"模型的时候, 用来测试各个模型的. 比如你的候选模型除了y=kx+b, 可能还有y=ax^2+bx+c, 可能还有y=ax^3+bx^2+cx+d... 这时候就要分别用同一个train set去训练各个模型, 求得各自最佳的参数, 然后再用dev set中的数据代入, 看看各个模型的误差是怎样的.&lt;/p&gt;
-&lt;p&gt;不严格的说, 相当于家庭作业.  &lt;/p&gt;
-&lt;h4&gt;test set&lt;/h4&gt;
-&lt;p&gt;test set, 顾名思义, 就是用来测验考试的. 考试题里不能是老师上课用过的例题, 也不能是做过的作业, 需要是考生(模型)从来没见过的题目.&lt;/p&gt;
-&lt;h3&gt;bias 和 variance&lt;/h3&gt;
-&lt;p&gt;我觉得这两个词语的中文翻译并不准确, 所以干脆不翻译了.
-
-* bias过高, 是指拟合的函数不够准确, 比如本来数据是符合y=a^x+bx+c这样一条二次曲线的, 结果只用了y=kx+b一条直线去拟合, 直的适应不了弯的, 于是可能在一小段还比较符合, 在其他区域预测的准确率就很差. 通常认为bias过高, 是拟合不足, 欠拟合的. under fitting. [插图]&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;variance过高, 是指拟合过度了, over fitting. 一条弯弯曲曲的曲线穿过所有的数据点, 这样虽然误差很小, 但是预测能力就很差, 而我们进行机器学习当然目的是为了评估哪些未知的数据. 真正需要的是预测能力.[插图]&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果模型过于简单, bias就容易很高, 如果模型过于复杂, variance就容易很高.&lt;/p&gt;
-&lt;p&gt;在deeplearning.ai系列课程的&lt;a href="https://www.coursera.org/learn/deep-neural-network/home/welcome"&gt;第二门&lt;/a&gt;就是在讲各种奇技淫巧去调整模型来降低bias和variance, 相当于改善模型表现的战术方法.&lt;/p&gt;
-&lt;p&gt;我个人觉得理解上面这些概念就可以开始ML strategy这门课程的学习了. 但是我已经学过了第一门和第二门课, 有可能存在"因为我知道所以我不知道你是否需要知道"这样的知识诅咒. 所以万一在学MLstrategy这门课程时觉得吃力, 还是去补习一下基础比较好. 暂时没必要去学更复杂的卷积神经网络什么的.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2&gt;参考资料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;机器学习的战略合集目录:&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/"&gt;基础概念&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-1-mu-biao-de-she-zhi/"&gt;目标设置&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-2-cuo-wu-lu/"&gt;错误率&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-3-wu-chai-fen-xi/"&gt;误差分析&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong"&gt;面对分布不同&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-5-qian-yi-xue-xi"&gt;迁移学习&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-6-end-to-end/"&gt;end-to-end&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;课程链接:
-&lt;a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome"&gt;Structuring Machine Learning Projects&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;参考视频:
-莫烦的"&lt;a href="https://morvanzhou.github.io/tutorials/machine-learning/ML-intro/"&gt;有趣的机器学习&lt;/a&gt;"系列科普视频, 制作精良讲解清晰, 非常推荐.  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-0-ji-chu-gai-nian/</guid><pubDate>Mon, 18 Dec 2017 17:22:18 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ML</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/Machine_Learning/ML_strategy/ji-qi-xue-xi-de-zhan-lue-4-mian-dui-fen-bu-bu-tong/</guid><pubDate>Mon, 18 Dec 2017 17:23:16 GMT</pubDate></item></channel></rss>
