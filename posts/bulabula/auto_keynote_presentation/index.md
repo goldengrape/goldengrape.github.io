@@ -13,7 +13,7 @@
 
 用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
 
 ## 使用方法:
 1. 到这个[gist页面](https://gist.github.com/goldengrape/eb4359a6467c5196435e469708c95f11), 点击Download zip, 将代码下载到电脑上, 然后解压缩得到“Simple Play and Say.scpt”文件
