@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Alpha的后验分解 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/Alpha_tear/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../bulabula/auto_keynote_presentation/" title="自动生成Keynote演讲视频" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="Alpha的后验分解">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/Alpha_tear/">
+<meta property="og:description" content="Alpha的后验分解¶Alpha的后验分解：给定一个组合P，估算该组合相对于业绩基准组合B的各参数：$β_p$ 、$α_p$、 以及组合风险 $σ_p$ 和残差风险 $ω_p$
+
+
+
+
+
+
+In [1]:
+
+    
+import numpy as np
+import pandas as pd
+import tushare as ts
+
+
+
+
+
+
+
+
+
+
+
+设定目标¶
+
+
+
+
+
+In [2]:
+
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2018-09-23T01:00:00+08:00">
+<meta property="article:tag" content="python">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">Alpha的后验分解</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2018-09-23T01:00:00+08:00" itemprop="datePublished" title="2018-09-23 01:00">2018-09-23 01:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Alpha的后验分解">Alpha的后验分解<a class="anchor-link" href="#Alpha%E7%9A%84%E5%90%8E%E9%AA%8C%E5%88%86%E8%A7%A3">¶</a>
+</h2>
+<p>Alpha的后验分解：给定一个组合P，估算该组合相对于业绩基准组合B的各参数：$β_p$ 、$α_p$、 以及组合风险 $σ_p$ 和残差风险 $ω_p$</p>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">tushare</span> <span class="k">as</span> <span class="nn">ts</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="设定目标">设定目标<a class="anchor-link" href="#%E8%AE%BE%E5%AE%9A%E7%9B%AE%E6%A0%87">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">target</span><span class="o">=</span><span class="s2">"510050.XSHG"</span> <span class="c1"># 华夏上证50</span>
+<span class="n">benchmark</span><span class="o">=</span><span class="s2">"000300.XSHG"</span> <span class="c1"># 沪深300指数</span>
+<span class="n">start</span><span class="o">=</span><span class="s2">"2015-1-1"</span>
+<span class="n">end</span><span class="o">=</span><span class="s2">"2018-9-1"</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="获得历史价格">获得历史价格<a class="anchor-link" href="#%E8%8E%B7%E5%BE%97%E5%8E%86%E5%8F%B2%E4%BB%B7%E6%A0%BC">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 如果有基金净值数据, 不能使用get_price取得, 因此分别提取数据</span>
+<span class="n">p_target</span>   <span class="o">=</span><span class="n">get_price</span><span class="p">(</span><span class="n">target</span>   <span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="s2">"close"</span><span class="p">)</span>
+<span class="n">p_benchmark</span><span class="o">=</span><span class="n">get_price</span><span class="p">(</span><span class="n">benchmark</span><span class="p">,</span> <span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">fields</span><span class="o">=</span><span class="s2">"close"</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 为避免投资组合的净值(价格)采样时间与基准的采样时间不同, 取两者的交集</span>
+<span class="n">price</span><span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">p_target</span><span class="p">,</span> <span class="n">p_benchmark</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">join</span><span class="o">=</span><span class="s1">'inner'</span><span class="p">)</span> 
+<span class="n">price</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">target</span><span class="p">,</span><span class="n">benchmark</span><span class="p">]</span>
+<span class="c1"># 通过ts获取基金净值的时间顺序, 与通过ts获取股票价格的时间顺序, 这两者可能不同, 因此统一到时间降序上</span>
+<span class="n">price</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">price</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+      <th>510050.XSHG</th>
+      <th>000300.XSHG</th>
+    </tr>
+<tr>
+<th>date</th>
+      <th></th>
+      <th></th>
+    </tr>
+</thead>
+<tbody>
+<tr>
+<th>2018-08-31</th>
+      <td>2.521</td>
+      <td>3334.5036</td>
+    </tr>
+<tr>
+<th>2018-08-30</th>
+      <td>2.533</td>
+      <td>3351.0942</td>
+    </tr>
+<tr>
+<th>2018-08-29</th>
+      <td>2.553</td>
+      <td>3386.5736</td>
+    </tr>
+<tr>
+<th>2018-08-28</th>
+      <td>2.560</td>
+      <td>3400.1705</td>
+    </tr>
+<tr>
+<th>2018-08-27</th>
+      <td>2.571</td>
+      <td>3406.5735</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="计算收益率">计算收益率<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%E6%94%B6%E7%9B%8A%E7%8E%87">¶</a>
+</h2>
+<p>每日收益率: 通过投资组合权益计算出的日收益率。</p>
+<p>$$
+每日收益率=\frac{当前交易日总权益-前一交易日总权益}{前一交易日总权益}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">=</span> <span class="n">price</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">price</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">r</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># row 0 is all zero, I think it should be droped</span>
+<span class="c1"># 取得中债国债收益率曲线作为无风险收益率</span>
+<span class="n">r_riskfree</span><span class="o">=</span><span class="n">get_yield_curve</span><span class="p">(</span><span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">tenor</span><span class="o">=</span><span class="s1">'0S'</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_riskfree</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">"inner"</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">target</span><span class="p">,</span> <span class="n">benchmark</span><span class="p">,</span> <span class="s2">"riskfree"</span><span class="p">]</span>
+<span class="n">r</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead><tr style="text-align: right;">
+<th></th>
+      <th>510050.XSHG</th>
+      <th>000300.XSHG</th>
+      <th>riskfree</th>
+    </tr></thead>
+<tbody>
+<tr>
+<th>2018-08-30</th>
+      <td>-0.004737</td>
+      <td>-0.004951</td>
+      <td>0.017971</td>
+    </tr>
+<tr>
+<th>2018-08-29</th>
+      <td>-0.007834</td>
+      <td>-0.010476</td>
+      <td>0.019096</td>
+    </tr>
+<tr>
+<th>2018-08-28</th>
+      <td>-0.002734</td>
+      <td>-0.003999</td>
+      <td>0.018622</td>
+    </tr>
+<tr>
+<th>2018-08-27</th>
+      <td>-0.004278</td>
+      <td>-0.001880</td>
+      <td>0.018767</td>
+    </tr>
+<tr>
+<th>2018-08-24</th>
+      <td>0.019025</td>
+      <td>0.024430</td>
+      <td>0.018287</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="计算$\beta$">计算$\beta$<a class="anchor-link" href="#%E8%AE%A1%E7%AE%97%24%5Cbeta%24">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>计算方法参考<a href="https://www.ricequant.com/api/python/chn#backtest-results-factors">RiceQuant API文档</a></p>
+<blockquote>
+<p>贝塔(beta, $\beta$ ): <a href="https://en.wikipedia.org/wiki/Capital_asset_pricing_model">CAPM</a>模型中市场基准组合项的系数，表示资产收益对市场整体收益波动的敏感程度。
+ $$
+ \beta=\frac{Cov(r_{p,e}, r_{b,e})}{Var(r_{b,e})}
+ $$</p>
+<p>其中$r_{p,e}$为策略超额收益率（策略收益率 - 无风险组合收益率）；$r_{b,e}$为市场基准组合超额收益率（市场基准组合收益率 - 无风险组合收益率）；Cov 表示协方差；Var 表示方差</p>
+</blockquote>
+<p>注意: numpy中, np.cov(a,b)的计算结果是$2\times2$矩阵
+$$
+np.cov(a,b)=\left[ \begin{array}{cc} cov\left( a,\; a \right) &amp; cov\left( a,\; b \right) \\ cov\left( a,\; b \right) &amp; cov\left( b,\; b \right) \end{array} \right]
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r_pe</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">[</span><span class="s2">"riskfree"</span><span class="p">]</span>
+<span class="n">r_be</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">[</span><span class="s2">"riskfree"</span><span class="p">]</span>
+<span class="n">beta</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">r_pe</span><span class="p">,</span> <span class="n">r_be</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">r_be</span><span class="p">)</span>
+<span class="n">beta</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.9514900784640103</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="求解$\alpha$">求解$\alpha$<a class="anchor-link" href="#%E6%B1%82%E8%A7%A3%24%5Calpha%24">¶</a>
+</h2>
+<h3 id="方法1">方法1<a class="anchor-link" href="#%E6%96%B9%E6%B3%951">¶</a>
+</h3>
+<p>计算方法参考<a href="https://www.ricequant.com/api/python/chn#backtest-results-factors">RiceQuant API文档</a></p>
+<blockquote>
+<p>阿尔法(alpha, $\alpha$): <a href="https://en.wikipedia.org/wiki/Capital_asset_pricing_model">CAPM</a>模型表达式中的残余项。表示策略所持有投资组合的收益中和市场整体收益无关的部分，是策略选股能力的度量。当策略所选股票的总体表现优于市场基准组合成分股时，阿尔法取正值；反之取负值。
+$$
+\alpha=E[r_p-[r_f+\beta \times (r_b-r_f)]]
+$$</p>
+<p>其中$r_p$为策略所持有投资组合收益；$r_f$为无风险组合收益；$\beta$为CAPM模型中的贝塔系数；E表示随机变量的期望。</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">alpha</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">"riskfree"</span><span class="p">]</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">[</span><span class="s2">"riskfree"</span><span class="p">])))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">alpha</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[7]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-0.0009057779493896526</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="方法2">方法2<a class="anchor-link" href="#%E6%96%B9%E6%B3%952">¶</a>
+</h3>
+<p>$$
+\theta_p(t)= \alpha_p+ \epsilon(t)
+\\
+E[r_p(t)] = \beta_p E[r_B(t)] + E[\theta_p(t)]
+\\
+\alpha_p=E[\theta_p(t)]
+\\
+\alpha_p=E[r_p(t)]-\beta_p E[r_B(t)]
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">r_pe</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">r_be</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>-0.0009057779493896537</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="求解投资组合风险-$\sigma_p$">求解投资组合风险 $\sigma_p$<a class="anchor-link" href="#%E6%B1%82%E8%A7%A3%E6%8A%95%E8%B5%84%E7%BB%84%E5%90%88%E9%A3%8E%E9%99%A9-%24%5Csigma_p%24">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma_p</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">sigma_p</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[9]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.016406968179054036</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="求解残差风险-$\omega_p$">求解残差风险 $\omega_p$<a class="anchor-link" href="#%E6%B1%82%E8%A7%A3%E6%AE%8B%E5%B7%AE%E9%A3%8E%E9%99%A9-%24%5Comega_p%24">¶</a>
+</h2>
+<p>$$
+\omega _{p}=\; \sqrt{\sigma _{p}^{2}-\beta _{p}^{2}\cdot \sigma _{B}^{2}\; }
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">omega_p</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sigma_p</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">omega_p</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.005872576931965833</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="年化">年化<a class="anchor-link" href="#%E5%B9%B4%E5%8C%96">¶</a>
+</h2>
+<p>这里假设一年有244个交易日。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">day_count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">get_trading_dates</span><span class="p">(</span><span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">))</span>
+<span class="n">annual_correct</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">244</span><span class="o">/</span><span class="p">(</span><span class="n">day_count</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">annual_sigma_p</span><span class="o">=</span><span class="n">annual_correct</span><span class="o">*</span><span class="n">sigma_p</span>
+<span class="n">annual_omega_p</span><span class="o">=</span><span class="n">annual_correct</span><span class="o">*</span><span class="n">omega_p</span>
+<span class="n">annual_sigma_p</span><span class="p">,</span> <span class="n">omega_p</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(0.008566663958171633, 0.005872576931965833)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="RiceQuant上其他一些指标">RiceQuant上其他一些指标<a class="anchor-link" href="#RiceQuant%E4%B8%8A%E5%85%B6%E4%BB%96%E4%B8%80%E4%BA%9B%E6%8C%87%E6%A0%87">¶</a>
+</h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="年化波动率(volatility,-$\sigma_t$):">年化波动率(volatility, $\sigma_t$):<a class="anchor-link" href="#%E5%B9%B4%E5%8C%96%E6%B3%A2%E5%8A%A8%E7%8E%87(volatility,-%24%5Csigma_t%24):">¶</a>
+</h3>
+<blockquote>
+<p>策略收益率的标准差，最常用的风险度量。波动率越大，策略承担的风险越高。这里假设一年有244个交易日。</p>
+</blockquote>
+<p>$$
+\sigma =\sqrt{\frac{244}{n-1}\sum_{i=1}^{n}{\left[ r_{p}\left( i \right)\; -\; \bar{r_{p}} \right]^{2}}}
+$$</p>
+<blockquote>
+<p>其中，n为回测期内交易日数目；$r_p(i)$ 表示第 i 个交易日策略所持有投资组合的日收益率；$ \bar{r_p} $ 为回测期内策略日收益率的均值。</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">volatility</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">244</span><span class="o">/</span><span class="p">(</span><span class="n">day_count</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># 定义与年化投资组合风险sigma_p一致</span>
+<span class="n">volatility</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[12]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.008566663958171631</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="年化跟踪误差(tracking-error,$\sigma_t$-):">年化跟踪误差(tracking error,$\sigma_t$ ):<a class="anchor-link" href="#%E5%B9%B4%E5%8C%96%E8%B7%9F%E8%B8%AA%E8%AF%AF%E5%B7%AE(tracking-error,%24%5Csigma_t%24-):">¶</a>
+</h3>
+<blockquote>
+<p>纯多头主动交易策略（阿尔法策略和基准择时策略）收益和市场基准组合收益之间差异的度量。跟踪误差越大，意味着策略所持有投资组合偏离基准组合的程度越大。需要注意，跟踪误差不适用于多-空结合的对冲策略的风险评估</p>
+</blockquote>
+<p>$$
+\sigma =\sqrt{\frac{244}{n-1}\sum_{i=1}^{n}{\left[ r_{pa}\left( i \right)\; -\; \bar{r_{pa}} \right]^{2}}}
+\\
+r_{pa}(i)=r_p(i)-r_b(i)
+$$
+其中，n为回测期内交易日数量；$r_{pa}(i), r_p(i), r_b(i)$分别表示第i个交易日策略所持有投资组合的日主动收益、日收益率和基准组合的日收益率。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracking_error</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">244</span><span class="o">/</span><span class="p">(</span><span class="n">day_count</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">r_pe</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
+<span class="n">tracking_error</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.5218443425762981</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="年化下行波动率(downside-risk,-$\sigma_d$):">年化下行波动率(downside risk, $\sigma_d$):<a class="anchor-link" href="#%E5%B9%B4%E5%8C%96%E4%B8%8B%E8%A1%8C%E6%B3%A2%E5%8A%A8%E7%8E%87(downside-risk,-%24%5Csigma_d%24):">¶</a>
+</h3>
+<blockquote>
+<p>相比波动率，下行波动率对收益向下波动和向上波动两种情况做出了区分，并认为只有收益向下波动才意味着风险。在实际计算中，我们统一使用基准组合收益为目标收益，作为向上波动和向下波动的判断标准。</p>
+</blockquote>
+<p>$$
+\sigma =\sqrt{\frac{244}{n-1}\sum_{i=1}^{n}{\left[ r_{p}\left( i \right)\; -\; r_{b}(i) \right]^{2} I(i)}}
+$$
+$$
+I(i)=\begin{cases}1 &amp; r_p(i)&lt;r_b(i) \\ 0 &amp; r_p(i) \geq r_b(i)\end{cases}
+$$</p>
+<blockquote>
+<p>其中，n为回测期内交易日数量；$r_p,r_b$ 分别表示第i个交易日策略所持有投资组合的日收益率、基准组合的日收益率；I(i)为指示函数(indicator function)，如果第i个交易日策略所持有投资组合收益低于基准组合收益，则标记为1（向下波动），否则标记为0（向上波动）。</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">downside_r</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">&lt;</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">])</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">downside_risk</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">244</span><span class="o">/</span><span class="p">(</span><span class="n">day_count</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">((</span><span class="n">downside_r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">-</span><span class="n">downside_r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">downside_risk</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[14]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.06079720493473829</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="最大回撤(max-drawdown):">最大回撤(max drawdown):<a class="anchor-link" href="#%E6%9C%80%E5%A4%A7%E5%9B%9E%E6%92%A4(max-drawdown):">¶</a>
+</h3>
+<blockquote>
+<p>在回测期内，在任一交易日往后推，策略总权益走到最低点时收益率回撤幅度的最大值。最大回撤是评估策略极端风险管理能力的重要指标。其计算方式如下：
+$$
+Drawdown_t=\begin{cases}0 &amp; NET_t = min_{j \geq t} NET_j\\\frac{NET_t-min_{j \geq t}NET_j}{NET_t} &amp; ELSE\end{cases}
+\\
+NET=某期净值
+\\
+MaxDrawdown=Max(Drawdown_t)
+$$</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">NET</span><span class="o">=</span><span class="n">p_target</span>
+<span class="n">NET</span><span class="o">.</span><span class="n">sort_index</span><span class="p">(</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">NET_min</span><span class="o">=</span><span class="n">NET</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">date</span> <span class="ow">in</span> <span class="n">NET</span><span class="o">.</span><span class="n">index</span><span class="p">:</span>
+    <span class="n">NET_min</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">date</span><span class="p">]</span><span class="o">=</span><span class="p">(</span><span class="n">NET</span><span class="o">.</span><span class="n">loc</span><span class="p">[:</span><span class="n">date</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
+<span class="n">Drawdown_t</span><span class="o">=</span><span class="p">(</span><span class="n">NET</span><span class="o">-</span><span class="n">NET_min</span><span class="p">)</span><span class="o">/</span><span class="n">NET</span>
+<span class="n">max_Drawdown</span><span class="o">=</span><span class="n">Drawdown_t</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">max_Drawdown_date</span><span class="o">=</span><span class="n">Drawdown_t</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+<span class="p">(</span><span class="n">max_Drawdown_date</span><span class="p">,</span> <span class="n">max_Drawdown</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[15]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(Timestamp('2015-06-08 00:00:00'), 0.44965219768536796)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    </div>
+  </div>
+
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../bulabula/auto_keynote_presentation/" rel="prev" title="自动生成Keynote演讲视频">前一篇</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
