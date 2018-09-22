@@ -3,9 +3,12 @@
 
 # # Alpha的后验分解
 # 
-# Alpha的后验分解：给定一个组合P，估算该组合相对于业绩基准组合B的各参数：$β_p$ 、$α_p$、 以及组合风险 $σ_p$ 和残差风险 $ω_p$
+# 最近在学习量化分析, 其中有一个作业是这样:
 # 
-# 总觉得自己哪里算错了, 华夏上证50(510050)的alpha算出来总是-0.00090, 
+# > Alpha的后验分解：给定一个组合P，估算该组合相对于业绩基准组合B的各参数：$β_p$ 、$α_p$、 以及组合风险 $σ_p$ 和残差风险 $ω_p$
+# 
+# 总觉得自己哪里算错了, 比如[华夏上证50ETF(代码: 510050)](http://cn.morningstar.com/quicktake/F0000003X3)的alpha算出来总是-0.00091, 
+# 
 # 一时检查不出来, 暂时先摆出来供讨论
 # <!-- TEASER_END -->
 
@@ -49,6 +52,13 @@ price.sort_index(ascending=False, inplace=True)
 price.head()
 
 
+# In[5]:
+
+
+# 前一个交易日价格
+price.shift(-1).head()
+
+
 # # 计算收益率
 # 
 # 每日收益率: 通过投资组合权益计算出的日收益率。
@@ -57,11 +67,11 @@ price.head()
 # 每日收益率=\frac{当前交易日总权益-前一交易日总权益}{前一交易日总权益}
 # $$
 
-# In[5]:
+# In[6]:
 
 
-r= price.shift(1)/price-1
-r.drop(r.index[0], inplace=True) # row 0 is all zero, I think it should be droped
+r= (price-price.shift(-1))/price.shift(-1)
+r.drop(r.index[-1], inplace=True) # last row is NaN, I think it should be droped
 # 取得中债国债收益率曲线作为无风险收益率
 r_riskfree=get_yield_curve(start_date=start, end_date=end, tenor='0S')
 r = pd.merge(r, r_riskfree, left_index=True, right_index=True,how="inner")
@@ -88,7 +98,7 @@ r.head()
 # np.cov(a,b)=\left[ \begin{array}{cc} cov\left( a,\; a \right) & cov\left( a,\; b \right) \\ cov\left( a,\; b \right) & cov\left( b,\; b \right) \end{array} \right]
 # $$
 
-# In[6]:
+# In[7]:
 
 
 r_pe=r[target]-r["riskfree"]
@@ -109,7 +119,7 @@ beta
 # 
 # > 其中$r_p$为策略所持有投资组合收益；$r_f$为无风险组合收益；$\beta$为CAPM模型中的贝塔系数；E表示随机变量的期望。
 
-# In[7]:
+# In[8]:
 
 
 alpha=(r[target]-(r["riskfree"]+beta*(r[benchmark]-r["riskfree"]))).mean()
@@ -130,7 +140,7 @@ alpha
 # 
 # 
 
-# In[8]:
+# In[9]:
 
 
 (r_pe.mean()-beta*r_be.mean())
@@ -140,7 +150,7 @@ alpha
 # 
 # 
 
-# In[9]:
+# In[10]:
 
 
 sigma_p=r[target].std()
@@ -154,7 +164,7 @@ sigma_p
 # $$
 # 
 
-# In[10]:
+# In[11]:
 
 
 omega_p=np.sqrt(sigma_p**2-beta**2*(r[benchmark].std()**2))
@@ -164,7 +174,7 @@ omega_p
 # # 年化
 # 这里假设一年有244个交易日。
 
-# In[11]:
+# In[12]:
 
 
 day_count=len(get_trading_dates(start_date=start,end_date=end))
@@ -185,7 +195,7 @@ annual_sigma_p, omega_p
 # 
 # >其中，n为回测期内交易日数目；$r_p(i)$ 表示第 i 个交易日策略所持有投资组合的日收益率；$ \bar{r_p} $ 为回测期内策略日收益率的均值。
 
-# In[12]:
+# In[13]:
 
 
 volatility=np.sqrt(244/(day_count-1)*(r[target].std()**2)) # 定义与年化投资组合风险sigma_p一致
@@ -204,7 +214,7 @@ volatility
 # $$
 # 其中，n为回测期内交易日数量；$r_{pa}(i), r_p(i), r_b(i)$分别表示第i个交易日策略所持有投资组合的日主动收益、日收益率和基准组合的日收益率。
 
-# In[13]:
+# In[14]:
 
 
 tracking_error=np.sqrt(244/(day_count-1 * (r_pe.std()**2)))
@@ -226,7 +236,7 @@ tracking_error
 # 
 # >其中，n为回测期内交易日数量；$r_p,r_b$ 分别表示第i个交易日策略所持有投资组合的日收益率、基准组合的日收益率；I(i)为指示函数(indicator function)，如果第i个交易日策略所持有投资组合收益低于基准组合收益，则标记为1（向下波动），否则标记为0（向上波动）。
 
-# In[14]:
+# In[15]:
 
 
 downside_r=r.where(r[target]<r[benchmark]).dropna()
@@ -246,7 +256,7 @@ downside_risk
 # $$
 # 
 
-# In[15]:
+# In[16]:
 
 
 NET=p_target

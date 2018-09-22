@@ -11775,9 +11775,11 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Alpha&#30340;&#21518;&#39564;&#20998;&#35299;">Alpha&#30340;&#21518;&#39564;&#20998;&#35299;<a class="anchor-link" href="#Alpha&#30340;&#21518;&#39564;&#20998;&#35299;">&#182;</a></h1><p>Alpha的后验分解：给定一个组合P，估算该组合相对于业绩基准组合B的各参数：$β_p$ 、$α_p$、 以及组合风险 $σ_p$ 和残差风险 $ω_p$</p>
-<p>总觉得自己哪里算错了, 华夏上证50(510050)的alpha算出来总是-0.00090, 
-一时检查不出来, 暂时先摆出来供讨论
+<h1 id="Alpha&#30340;&#21518;&#39564;&#20998;&#35299;">Alpha&#30340;&#21518;&#39564;&#20998;&#35299;<a class="anchor-link" href="#Alpha&#30340;&#21518;&#39564;&#20998;&#35299;">&#182;</a></h1><p>最近在学习量化分析, 其中有一个作业是这样:</p>
+<blockquote><p>Alpha的后验分解：给定一个组合P，估算该组合相对于业绩基准组合B的各参数：$β_p$ 、$α_p$、 以及组合风险 $σ_p$ 和残差风险 $ω_p$</p>
+</blockquote>
+<p>总觉得自己哪里算错了, 比如<a href="http://cn.morningstar.com/quicktake/F0000003X3">华夏上证50ETF(代码: 510050)</a>的alpha算出来总是-0.00091,</p>
+<p>一时检查不出来, 暂时先摆出来供讨论
 <!-- TEASER_END --></p>
 
 </div>
@@ -11937,30 +11939,13 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#35745;&#31639;&#25910;&#30410;&#29575;">&#35745;&#31639;&#25910;&#30410;&#29575;<a class="anchor-link" href="#&#35745;&#31639;&#25910;&#30410;&#29575;">&#182;</a></h1><p>每日收益率: 通过投资组合权益计算出的日收益率。</p>
-<p>$$
-每日收益率=\frac{当前交易日总权益-前一交易日总权益}{前一交易日总权益}
-$$</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">=</span> <span class="n">price</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="n">price</span><span class="o">-</span><span class="mi">1</span>
-<span class="n">r</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># row 0 is all zero, I think it should be droped</span>
-<span class="c1"># 取得中债国债收益率曲线作为无风险收益率</span>
-<span class="n">r_riskfree</span><span class="o">=</span><span class="n">get_yield_curve</span><span class="p">(</span><span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">tenor</span><span class="o">=</span><span class="s1">&#39;0S&#39;</span><span class="p">)</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_riskfree</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
-<span class="n">r</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">target</span><span class="p">,</span> <span class="n">benchmark</span><span class="p">,</span> <span class="s2">&quot;riskfree&quot;</span><span class="p">]</span>
-<span class="n">r</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 前一个交易日价格</span>
+<span class="n">price</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
 </div>
@@ -11998,39 +11983,144 @@ $$</p>
       <th></th>
       <th>510050.XSHG</th>
       <th>000300.XSHG</th>
+    </tr>
+    <tr>
+      <th>date</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2018-08-31</th>
+      <td>2.533</td>
+      <td>3351.0942</td>
+    </tr>
+    <tr>
+      <th>2018-08-30</th>
+      <td>2.553</td>
+      <td>3386.5736</td>
+    </tr>
+    <tr>
+      <th>2018-08-29</th>
+      <td>2.560</td>
+      <td>3400.1705</td>
+    </tr>
+    <tr>
+      <th>2018-08-28</th>
+      <td>2.571</td>
+      <td>3406.5735</td>
+    </tr>
+    <tr>
+      <th>2018-08-27</th>
+      <td>2.523</td>
+      <td>3325.3347</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#35745;&#31639;&#25910;&#30410;&#29575;">&#35745;&#31639;&#25910;&#30410;&#29575;<a class="anchor-link" href="#&#35745;&#31639;&#25910;&#30410;&#29575;">&#182;</a></h1><p>每日收益率: 通过投资组合权益计算出的日收益率。</p>
+<p>$$
+每日收益率=\frac{当前交易日总权益-前一交易日总权益}{前一交易日总权益}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">r</span><span class="o">=</span> <span class="p">(</span><span class="n">price</span><span class="o">-</span><span class="n">price</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">/</span><span class="n">price</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># last row is NaN, I think it should be droped</span>
+<span class="c1"># 取得中债国债收益率曲线作为无风险收益率</span>
+<span class="n">r_riskfree</span><span class="o">=</span><span class="n">get_yield_curve</span><span class="p">(</span><span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span> <span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">,</span> <span class="n">tenor</span><span class="o">=</span><span class="s1">&#39;0S&#39;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">r_riskfree</span><span class="p">,</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">how</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+<span class="n">r</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="n">target</span><span class="p">,</span> <span class="n">benchmark</span><span class="p">,</span> <span class="s2">&quot;riskfree&quot;</span><span class="p">]</span>
+<span class="n">r</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[6]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>510050.XSHG</th>
+      <th>000300.XSHG</th>
       <th>riskfree</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2018-08-30</th>
+      <th>2018-08-31</th>
       <td>-0.004737</td>
       <td>-0.004951</td>
+      <td>0.018291</td>
+    </tr>
+    <tr>
+      <th>2018-08-30</th>
+      <td>-0.007834</td>
+      <td>-0.010476</td>
       <td>0.017971</td>
     </tr>
     <tr>
       <th>2018-08-29</th>
-      <td>-0.007834</td>
-      <td>-0.010476</td>
+      <td>-0.002734</td>
+      <td>-0.003999</td>
       <td>0.019096</td>
     </tr>
     <tr>
       <th>2018-08-28</th>
-      <td>-0.002734</td>
-      <td>-0.003999</td>
+      <td>-0.004278</td>
+      <td>-0.001880</td>
       <td>0.018622</td>
     </tr>
     <tr>
       <th>2018-08-27</th>
-      <td>-0.004278</td>
-      <td>-0.001880</td>
-      <td>0.018767</td>
-    </tr>
-    <tr>
-      <th>2018-08-24</th>
       <td>0.019025</td>
       <td>0.024430</td>
-      <td>0.018287</td>
+      <td>0.018767</td>
     </tr>
   </tbody>
 </table>
@@ -12072,7 +12162,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">r_pe</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;riskfree&quot;</span><span class="p">]</span>
@@ -12091,13 +12181,13 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.9514900784640103</pre>
+<pre>0.9511718021320907</pre>
 </div>
 
 </div>
@@ -12123,7 +12213,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">alpha</span><span class="o">=</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">-</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;riskfree&quot;</span><span class="p">]</span><span class="o">+</span><span class="n">beta</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">]</span><span class="o">-</span><span class="n">r</span><span class="p">[</span><span class="s2">&quot;riskfree&quot;</span><span class="p">])))</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -12140,13 +12230,13 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[8]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>-0.0009057779493896526</pre>
+<pre>-0.00091193563738157</pre>
 </div>
 
 </div>
@@ -12174,52 +12264,10 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">r_pe</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">r_be</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-<div class="prompt output_prompt">Out[8]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>-0.0009057779493896537</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="&#27714;&#35299;&#25237;&#36164;&#32452;&#21512;&#39118;&#38505;-$\sigma_p$">&#27714;&#35299;&#25237;&#36164;&#32452;&#21512;&#39118;&#38505; $\sigma_p$<a class="anchor-link" href="#&#27714;&#35299;&#25237;&#36164;&#32452;&#21512;&#39118;&#38505;-$\sigma_p$">&#182;</a></h1>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma_p</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-<span class="n">sigma_p</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="p">(</span><span class="n">r_pe</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">-</span><span class="n">beta</span><span class="o">*</span><span class="n">r_be</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
 </pre></div>
 
 </div>
@@ -12238,7 +12286,49 @@ $$</p>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.016406968179054036</pre>
+<pre>-0.0009119356373815703</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="&#27714;&#35299;&#25237;&#36164;&#32452;&#21512;&#39118;&#38505;-$\sigma_p$">&#27714;&#35299;&#25237;&#36164;&#32452;&#21512;&#39118;&#38505; $\sigma_p$<a class="anchor-link" href="#&#27714;&#35299;&#25237;&#36164;&#32452;&#21512;&#39118;&#38505;-$\sigma_p$">&#182;</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sigma_p</span><span class="o">=</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">sigma_p</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[10]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0.01640696817905404</pre>
 </div>
 
 </div>
@@ -12260,7 +12350,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">omega_p</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">sigma_p</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">beta</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
@@ -12277,13 +12367,13 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[10]:</div>
+<div class="prompt output_prompt">Out[11]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.005872576931965833</pre>
+<pre>0.005885928156058898</pre>
 </div>
 
 </div>
@@ -12303,7 +12393,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">day_count</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">get_trading_dates</span><span class="p">(</span><span class="n">start_date</span><span class="o">=</span><span class="n">start</span><span class="p">,</span><span class="n">end_date</span><span class="o">=</span><span class="n">end</span><span class="p">))</span>
@@ -12323,13 +12413,13 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>(0.008566663958171633, 0.005872576931965833)</pre>
+<pre>(0.008566663958171634, 0.005885928156058898)</pre>
 </div>
 
 </div>
@@ -12363,7 +12453,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">volatility</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">244</span><span class="o">/</span><span class="p">(</span><span class="n">day_count</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="c1"># 定义与年化投资组合风险sigma_p一致</span>
@@ -12380,13 +12470,13 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[13]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.008566663958171631</pre>
+<pre>0.008566663958171633</pre>
 </div>
 
 </div>
@@ -12413,7 +12503,7 @@ $$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tracking_error</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">244</span><span class="o">/</span><span class="p">(</span><span class="n">day_count</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="p">(</span><span class="n">r_pe</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">**</span><span class="mi">2</span><span class="p">)))</span>
@@ -12430,13 +12520,13 @@ $$
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.5218443425762981</pre>
+<pre>0.5218443423891064</pre>
 </div>
 
 </div>
@@ -12465,7 +12555,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">downside_r</span><span class="o">=</span><span class="n">r</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">r</span><span class="p">[</span><span class="n">target</span><span class="p">]</span><span class="o">&lt;</span><span class="n">r</span><span class="p">[</span><span class="n">benchmark</span><span class="p">])</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
@@ -12483,7 +12573,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[15]:</div>
 
 
 
@@ -12517,7 +12607,7 @@ $$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">NET</span><span class="o">=</span><span class="n">p_target</span>
@@ -12541,7 +12631,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
