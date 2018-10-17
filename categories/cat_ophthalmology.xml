@@ -1,5 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 27 Aug 2018 11:46:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 Oct 2018 06:12:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>DIY眼底照相机</title><link>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;实际拍摄效果是这样的:
+&lt;img alt="16" src="https://i.loli.net/2018/10/17/5bc6c829cdbdd.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;制作难度小学手工级. 请看视频教程:&lt;/p&gt;
+&lt;iframe src="//player.bilibili.com/player.html?aid=34023057&amp;amp;cid=59587011&amp;amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
+
+&lt;p&gt;下面是图文教程:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;材料:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;无糖雪碧瓶(纤维+和零卡都可以): 其他种类的瓶子不好用, 无糖雪碧瓶是因为有向内的凸起, 能够固定住镜头.&lt;/li&gt;
+&lt;li&gt;20D lens: 这是眼科医生专用的Volk Lens, 非球面, 20D, 其中一面更加凸起. 也许以后可以在淘宝上找些简单便宜的镜头, 但固定会是个问题.&lt;/li&gt;
+&lt;li&gt;有闪光灯可拍照的手机: 理论上照明光路应当尽量拍摄光轴同轴, 也就是闪光灯要尽量与摄像头靠近. 但实测发现iPhone X这种离得非常近的反而有较大的lens反光, 本例中使用的是Lumia 640, 闪光灯与摄像头之间有10mm的间距反而效果更好.&lt;/li&gt;
+&lt;li&gt;手机望远镜夹子: 淘宝以“望远镜显微镜 手机 夹子”为关键词即可搜到. 注意要是那种能够同时暴露出闪光灯和摄像头的, 淘宝有种是圆孔形状的, 不可用. 推荐使用我图中展示的这种, 结实方便, 但需要手机背面是光滑平整的, 这样才能被吸盘吸住.&lt;/li&gt;
+&lt;li&gt;斜口钳, 剪刀&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;方法:&lt;/h2&gt;
+&lt;h3&gt;剪掉瓶口边缘的棱&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="03" src="https://i.loli.net/2018/10/17/5bc6c89775806.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;剪掉最下一圈凸起&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="04" src="https://i.loli.net/2018/10/17/5bc6c82d27c40.jpg"&gt;
+&lt;img alt="05" src="https://i.loli.net/2018/10/17/5bc6c88af1ffc.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;剪掉两个凸起&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="06" src="https://i.loli.net/2018/10/17/5bc6c88593469.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;瓶子转180度, 剪掉相对的两个凸起&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="07" src="https://i.loli.net/2018/10/17/5bc6c88c90ca7.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;修剪边缘&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="08" src="https://i.loli.net/2018/10/17/5bc6c88d83561.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;把20D lens卡住&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="09" src="https://i.loli.net/2018/10/17/5bc6c831ab22a.jpg"&gt;
+之前剪掉凸起的动作, 是为了能够好安装, 好取出.&lt;/p&gt;
+&lt;h3&gt;用手机望远镜夹子夹住&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="10" src="https://i.loli.net/2018/10/17/5bc6c830b5033.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;瓶口覆盖住摄像头和闪光灯, 固定&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="11" src="https://i.loli.net/2018/10/17/5bc6c8300f0e0.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;打开相机app, 使用录像模式, 开启闪光灯&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="12" src="https://i.loli.net/2018/10/17/5bc6c82a280a7.jpg"&gt;
+&lt;img alt="13" src="https://i.loli.net/2018/10/17/5bc6c8313adfd.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;可选的改进, 用喷漆把瓶子喷成黑色&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="14" src="https://i.loli.net/2018/10/17/5bc6c8732a571.jpg"&gt;
+&lt;img alt="15" src="https://i.loli.net/2018/10/17/5bc6c82e10d76.jpg"&gt;
+但实测下来, 即使喷成黑色, 也仍然有比较明显的lens反光, 实际上是20D lens反光以后, 到瓶身发生了二次散射被相机记录下来, 这大概是使用瓶子作为固定装置的固有缺陷. 如果很想去除的话, 可以在瓶子内部一条一条粘贴黑色绒布.&lt;/p&gt;
+&lt;h2&gt;结果:&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="16" src="https://i.loli.net/2018/10/17/5bc6c829cdbdd.jpg"&gt;
+照片要从视频中截图.&lt;/p&gt;
+&lt;h2&gt;讨论:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;其实直接手持20D lens和手机, 也可以完成眼底照相(参考文献1), 缺点是容易手忙脚乱. 因为要撑开眼睑, 同时控制照明/拍摄/20D lens三者的光轴同轴, 操作还是比较困难.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;请想好如何向病人解释, 为何用一个雪碧瓶子对着他/她照相.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;雪碧瓶可能造成二次反光, 镜头反光可能扩展成圆环, 改进方法可以使用喷漆喷成黑色或者内部贴黑色绒布. 但改进效果有限. 有可能加入偏振片效果会更好.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有文献建议在闪光灯前贴一个半透明胶布使照明光弥散(参考文献1). 实测意义不大.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;可能需要手动对焦和单独设定白平衡/亮度等, 有文献推荐使用FilMiC专业版进行拍摄.(参考文献2)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网上亦有&lt;a href="http://www.odocs-tech.com"&gt;oDocs&lt;/a&gt;公司提供的&lt;a href="https://github.com/oDocsOphthalmicVision/odocsfundus"&gt;开源项目&lt;/a&gt; 只需下载文件, 到淘宝上找3D打印店打印然后装配即可.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;参考文献&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Smartphone Fundus Photography, J Vis Exp. 2017; (125): 55958. Published online 2017 Jul 6.   
+有&lt;a href="https://www.jove.com/video/55958/smartphone-fundus-photography"&gt;视频讲解:&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Haddock LJ, Kim DY, Mukai S. Simple, inexpensive technique for high-quality smartphone fundus photography in human and animal eyes. J Ophthalmol 2013. 2013:518479.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</guid><pubDate>Wed, 17 Oct 2018 04:00:00 GMT</pubDate></item><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
 &lt;p&gt;这是一组操作训练作业:
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
 &lt;p&gt;1.&lt;/p&gt;
@@ -1291,24 +1361,4 @@ $$
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item><item><title>蓝光的故事</title><link>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;1949年人工晶状体IOL发明，( &lt;a href="https://en.wikipedia.org/wiki/Harold_Ridley_(ophthalmologist)"&gt;1949年11月29日首次植入&lt;/a&gt;)
-1970s超声乳化手术phaco发明，(&lt;a href="https://www.google.com/patents/US3589363"&gt;专利US3589363&lt;/a&gt;)白内障手术迅速发展成熟，植入IOL以替换浑浊的天然晶状体，（&lt;a href="http://finance.sina.com.cn/stock/gujiayidong/2017-12-04/doc-ifypikwt6218758.shtml"&gt;顺便说莎普爱思没用&lt;/a&gt;）
-1990sHOYA公司发现术后一部分病人抱怨周围太亮，于是模拟天然晶状体的颜色，推出黄色IOL。是的，年轻人的晶体就发黄，随年龄颜色加深
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;发达国家老年黄斑变性是首位致盲眼病，2000s Alcon推出黄色IOL，以黄斑保护作为宣传，在细胞学实验中，蓝光具有光损伤作用，对RPE细胞有毒性，但一是实验剂量大，二是缺乏组织器官级别以及流行病学的证据，三是天然晶状体本身就会过滤一部分蓝光&lt;/p&gt;
-&lt;p&gt;IOL领域最大两家公司分别是Alcon和AMO，与Alcon黄晶体相对的，AMO一直使用透明晶体，并且也组织了很多文献，宣传健康的蓝光。比如蓝光与觉醒、抗抑郁相关。另外青光眼大夫也有担心过滤蓝光会更容易影响青光眼患者的蓝黄视野&lt;/p&gt;
-&lt;p&gt;其他IOL公司也都选边站队，有黄片也有透明的，争吵不休。
-接着战火扩展到LED厂商，所谓白色LED是蓝色LED+黄色荧光粉构成，有些可能还带一点点紫外光谱（弱智的人类视觉能把波长上两个峰当成是一条直线）
-LED厂商大概是先打紫外，然后到蓝光&lt;/p&gt;
-&lt;p&gt;再接下来显示器厂商加入，背光嘛。
-眼镜商加入，保健呐。
-大家都忘了或者干脆不知道，最早做蓝光滤过的IOL，其实就是仿照年轻人类的晶状体颜色做的，你一个年轻人，再加一块黄玻璃放在眼前，这不是cosplay老年白内障么！&lt;/p&gt;
-&lt;p&gt;配张厂家的宣传图，绿色线是年轻人天然晶状体的波长-透过率曲线。随年龄增长透过率降低，蓝色部分下降更快一些。
-&lt;img alt="" src="https://pbs.twimg.com/media/DQDsRROV4AAU1MR.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;据说最近AMO要出黄片，Alcon要推白片。
-感觉像酒吧群殴，而最早动手的两个人手拉手去一边喝酒了&lt;/p&gt;
-&lt;p&gt;这是一个被各公司市场部控制的世界。
-没准红光才有害呢，哺乳动物看蓝光多少年，看见红光才多少年？&lt;/p&gt;
-&lt;p&gt;暗环境下，人眼对颜色的敏感性蓝移。说到这：
-1，ppt严禁暗红色背景，一关灯绝对看不清。早年ppt自带模板里居然有这么一套配色的。
-2，做充电器/电扇/空调的，拜托我知道你们是高科技企业，指示灯就不要用高科技蓝了吧，晚上很刺眼的有没有&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/</guid><pubDate>Thu, 28 Dec 2017 07:00:04 GMT</pubDate></item></channel></rss>
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/abcd-matrix/</guid><pubDate>Thu, 28 Dec 2017 16:07:03 GMT</pubDate></item></channel></rss>
