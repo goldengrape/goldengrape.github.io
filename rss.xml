@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 20 Oct 2018 05:58:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>MD5密码生成器的iOS捷径版本</title><link>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是我很久以前做的一个&lt;a href="https://github.com/goldengrape/md5-password-creator"&gt;密码生成器&lt;/a&gt;, 之后我还一直在用它来管理我的密码. 有了iOS捷径以后, 发现“捷径”里面也有哈希运算, 于是就顺手戳了一个.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 20 Oct 2018 13:47:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
+&lt;a href="https://www.icloud.com/shortcuts/dc244e748f3a4c79a639af520e2b05f9"&gt;点这里导入捷径&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;闭气训练:
+* 方式: CO2耐受&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;循环{
+    闭气时间=60秒, 呼吸时间30秒,
+    闭气时间++10秒,
+}
+&lt;/pre&gt;
+
+
+&lt;p&gt;默认循环3轮, 导入时会问循环训练几轮.&lt;/p&gt;
+&lt;p&gt;一般来说, CO2分压升高到4%左右时, 人体开始出现“呼吸渴望”, 膈肌开始自发抽动, 但此时O2的分压并没有降低到black out(BO)的阈值, 所以出现呼吸渴望后还是可以再憋一段时间.&lt;/p&gt;
+&lt;p&gt;闭气训练不宜在睡前进行. 自我感觉是会启动一系列应急程序. 感觉倒是早起当作闹钟后觉醒训练不错.
+如果BO, 会失去意识, 站立或坐位时可能会摔倒.&lt;/p&gt;
+&lt;p&gt;注意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;严格禁止在水下进行单人闭气训练包括但不限于在脸盆澡盆泳池中&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不建议单人进行闭气训练&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</guid><pubDate>Sat, 20 Oct 2018 13:00:00 GMT</pubDate></item><item><title>MD5密码生成器的iOS捷径版本</title><link>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是我很久以前做的一个&lt;a href="https://github.com/goldengrape/md5-password-creator"&gt;密码生成器&lt;/a&gt;, 之后我还一直在用它来管理我的密码. 有了iOS捷径以后, 发现“捷径”里面也有哈希运算, 于是就顺手戳了一个.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://www.icloud.com/shortcuts/d65bc3750eae4925b0faaf9a81333671"&gt;点这里获取捷径&lt;/a&gt;
 在导入时, 可能会要求“加盐”, 也就是一段混淆用的字符串, 如果您以前用过我的密码生成器, 请和原来设定的一样, 如果没用过, 那么可以随意设定一段话, 只要在导入各个iOS设备时保持一样的输入就可以了.&lt;/p&gt;
 &lt;p&gt;然后保存到主屏幕就可以生成一个类似单独app的图标, 每次需要输入密码时打开它, 输入主密码和网站/应用名, 它就可以计算出一个子密码, 并且同时复制到剪贴板上, 只需要再粘贴到密码输入框里就可以了.&lt;/p&gt;
@@ -19,7 +38,7 @@
 &lt;p&gt;在iOS捷径中, 变量是可以为一个列表的, 可以用“添加到变量”, 将内容加入到列表中,&lt;/p&gt;
 &lt;p&gt;字符串的合并使用的是“合并文本”, 如果传入的是一个列表变量, 就是把列表中的文本join起来.&lt;/p&gt;
 &lt;p&gt;捷径中没有找到字符串切片的函数, 但有“匹配文本”, 可以用上正则表达式, 取出前N个字符的正则表达式就是&lt;code&gt;^[0-9a-zA-Z]{1,N}&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;其他没有什么好解释的了, 为了和以前密码生成器的结果一致, 我使用的是“2012sprint/2012summer...”这样的字符串作为版本, 您可以根据自己的需求修改.&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</guid><pubDate>Sat, 20 Oct 2018 04:00:00 GMT</pubDate></item><item><title>DIY眼底照相机</title><link>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;用这些材料:
+&lt;p&gt;其他没有什么好解释的了, 为了和以前密码生成器的结果一致, 我使用的是“2012sprint/2012summer...”这样的字符串作为版本, 您可以根据自己的需求修改.&lt;/p&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</guid><pubDate>Sat, 20 Oct 2018 04:00:00 GMT</pubDate></item><item><title>DIY眼底照相机</title><link>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;用这些材料:
 &lt;img alt="02" src="https://i.loli.net/2018/10/17/5bc6c82fc0ecd.jpg"&gt;
 无糖雪碧瓶(纤维+和零卡都可以), 20D lens, 有闪光灯可拍照的手机, 手机望远镜夹子, 斜口钳, 剪刀.
 
@@ -1423,77 +1442,4 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;去验光室学习检影验光&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item><item><title>显微操作训练(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一节讲了在手术之前应当对显微镜进行的各种检查, 这一部分讲解在术中需要的各种操作.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;清洁区&lt;/h2&gt;
-&lt;p&gt;只有套上消毒帽的区域才是清洁区, 术者或者助手可以戴手套操作, 比如:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;调整瞳距&lt;/li&gt;
-&lt;li&gt;移动手柄&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其他没有消毒帽覆盖的区域都是污染区, 只有在刷手之前操作或者请巡台护士帮忙&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;屈光度调节&lt;/li&gt;
-&lt;li&gt;复位按钮(可能是清洁)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="幻灯片14" src="https://i.loli.net/2018/06/22/5b2bdfbb2707e.jpeg"&gt;&lt;/p&gt;
-&lt;h2&gt;初始化&lt;/h2&gt;
-&lt;h3&gt;调整手术床高度&lt;/h3&gt;
-&lt;p&gt;这个应当在术前完成, 之前已经讲过.&lt;/p&gt;
-&lt;h3&gt;显微镜复位&lt;/h3&gt;
-&lt;p&gt;显微镜可以通过脚踏来控制调焦(z轴移动)和xy平面上的移动, 但移动范围是有限的, 在手术起始时, 应当赋予显微镜最大的自由选择能力, 也就是能够在各个方向上都有移动的余地, 显微镜应当放置在可移动范围的中央.&lt;/p&gt;
-&lt;p&gt;这段话很别扭, 但是"保持最大自由选择能力"是手术中的一个战略原则, 不要把自己逼进死胡同, 否则就处处被动. 这个原则会在撕囊的教学中再次详细解释.&lt;/p&gt;
-&lt;p&gt;这个操作是通过复位按钮来实现的.
-&lt;img alt="幻灯片16" src="https://i.loli.net/2018/06/22/5b2be454efc53.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;不同的显微镜的复位按钮不同, 不一定都是消毒帽覆盖的, 有可能需要巡台护士帮忙.&lt;/p&gt;
-&lt;p&gt;有些显微镜点击了复位按钮之后, xy平面上是复位了, 但在z轴上不一定是自动复位的, 如果没有, 需要用脚踏调焦来将显微镜的z轴指示标记移动到中央.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片17" src="https://i.loli.net/2018/06/22/5b2be8157e8d0.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;所以, 如果到一个新的地方做手术, 要先行了解一下当地的显微镜, 哪怕先随手戳一下复位按钮.&lt;/p&gt;
-&lt;h3&gt;瞳距调节&lt;/h3&gt;
-&lt;p&gt;眼科医生要熟记自己的瞳距,&lt;/p&gt;
-&lt;p&gt;瞳距的调整是通过旋钮,或者,硬掰来完成的, 当然, 如果有旋钮还是使用旋钮. 旋钮上通常有标尺, 也可能是图中右下这样的标尺, 其含义是对齐的线条指示的是瞳距的大小.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片19" src="https://i.loli.net/2018/06/22/5b2be8f10ebe7.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;图中的两个标尺都是表示瞳距=65mm.&lt;/p&gt;
-&lt;h3&gt;屈光度调节&lt;/h3&gt;
-&lt;p&gt;调节屈光度的旋钮是没有消毒帽保护的, 所以要么上台之前调好, 要么请巡台护士帮忙调整.&lt;/p&gt;
-&lt;p&gt;手术显微镜可以裸眼使用, 也可以戴眼镜使用, 如果戴眼镜, 那么相当于正视眼.&lt;/p&gt;
-&lt;p&gt;目镜上两个镜筒可以分别调整屈光度,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果是近视使用负向的区域, 例如200度近视, 就应当放在-2,&lt;/li&gt;
-&lt;li&gt;如果是远视使用正向的区域.&lt;/li&gt;
-&lt;li&gt;如果戴眼镜或者是正视眼, 那么就放在0位置&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="幻灯片18" src="https://i.loli.net/2018/06/22/5b2be2d16c940.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;操作之前一定要检查目镜上的屈光度是否合适, 并且调整为自己的参数. 如果前一个手术医生双眼都是近视或远视, 自己又没有重调整参数, 那么在使用时通过调整显微镜整体的焦距是可以看清的, 但这时候助手就看不清了. 又或者, 如果前一位医生有屈光参差, 那如果没有调整, 做手术的时候就好像单眼被打了一拳, 各种别扭而且影响立体感.&lt;/p&gt;
-&lt;p&gt;顺便说, 这就是为什么眼科医生很多人自己不做近视手术的原因, 因为做手术的时候用显微镜就可以矫正近视, 不要说近视手术, 连眼镜都可以不要.&lt;/p&gt;
-&lt;h3&gt;开灯&lt;/h3&gt;
-&lt;p&gt;显微镜灯有两组开关, 一组在显微镜基座上, 是主开关, 当主开关开启以后还可以用脚踏上的开关控制开闭和亮度.&lt;/p&gt;
-&lt;h3&gt;粗调焦距&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="幻灯片21" src="https://i.loli.net/2018/06/22/5b2beee008ff9.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;开灯后, 手握清洁区域, 移动显微镜.&lt;/p&gt;
-&lt;p&gt;有一些显微镜上是有供移动用的手柄或者按钮, 在扳动或者按下时显微镜才能移动.&lt;/p&gt;
-&lt;p&gt;将显微镜拉动到病人头部的上空, 然后逐渐下降, 当到达自己眼前时, 凑上去用双眼观察, 继续下降至成像清晰. 然后小心地依次松开双手.&lt;/p&gt;
-&lt;p&gt;如果显微镜的阻尼太松, 松手的瞬间显微镜有可能突然下落造成危险, 所以要先松开一只手, 然后再松开一只手, 如果继续下落, 要立即握住显微镜.&lt;/p&gt;
-&lt;p&gt;在粗调焦距时,&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果处于高放大倍率调清楚了, 那么缩小放大率以后, 显微镜仍然是清晰的. 不必再次调焦&lt;/li&gt;
-&lt;li&gt;如果是低倍率时清晰, 当继续放大时, 往往还需要重新调焦.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;其他开关&lt;/h2&gt;
-&lt;p&gt;显微镜上还有一些其他的设定开关, 比如&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;调整反射镜位置的红光反射开关,&lt;/li&gt;
-&lt;li&gt;保护患者黄斑的阴影开关&lt;/li&gt;
-&lt;li&gt;滤光片&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这些结构请查阅手术显微镜的说明书. 是的, 显微镜是有说明书的, 放在护士长那里, 去借来看看.&lt;/p&gt;
-&lt;h2&gt;作业&lt;/h2&gt;
-&lt;p&gt;担任一天显微镜调节员，为每台手术：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;复位显微镜&lt;/li&gt;
-&lt;li&gt;询问术者和助手的屈光度和瞳距，并调整&lt;/li&gt;
-&lt;li&gt;开、关显微镜灯光，并调整亮度&lt;/li&gt;
-&lt;li&gt;借阅手术显微镜说明书&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item></channel></rss>

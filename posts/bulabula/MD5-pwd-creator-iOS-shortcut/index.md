@@ -2,7 +2,7 @@
 .. title: MD5密码生成器的iOS捷径版本
 .. slug: MD5-pwd-creator-iOS-shortcut
 .. date: 2018-10-20 12:00:00 UTC+08:00
-.. tags: lifescience
+.. tags: lifescience, iOS, shortcut 
 .. category: lifescience
 .. link:
 .. description:
