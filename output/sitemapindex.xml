@@ -35,7 +35,7 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_lifescience.xml</loc>
-  <lastmod>2018-10-20T05:58:00Z</lastmod>
+  <lastmod>2018-10-20T13:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology.xml</loc>
@@ -70,6 +70,10 @@
   <lastmod>2018-05-31T18:00:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/ios.xml</loc>
+  <lastmod>2018-10-20T13:46:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/jiao-cheng.xml</loc>
   <lastmod>2018-08-27T11:46:00Z</lastmod>
  </sitemap>
@@ -87,7 +91,7 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/lifescience.xml</loc>
-  <lastmod>2018-10-20T05:58:00Z</lastmod>
+  <lastmod>2018-10-20T13:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/mac.xml</loc>
@@ -118,6 +122,10 @@
   <lastmod>2018-01-15T05:25:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/shortcut.xml</loc>
+  <lastmod>2018-10-20T13:46:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/thinking.xml</loc>
   <lastmod>2018-03-27T02:42:00Z</lastmod>
  </sitemap>
@@ -131,10 +139,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2018-10-20T05:58:00Z</lastmod>
+  <lastmod>2018-10-20T13:46:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2018-10-20T05:58:00Z</lastmod>
+  <lastmod>2018-10-20T13:46:00Z</lastmod>
  </sitemap>
 </sitemapindex>
