@@ -19,11 +19,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-10-17T05:36:00Z</lastmod>
+  <lastmod>2018-10-20T05:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2018-08-28T05:58:00Z</lastmod>
+  <lastmod>2018-10-20T05:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -52,6 +52,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/cat_ke-pu-ophthalmology/</loc>
   <lastmod>2018-01-05T18:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/cat_lifescience/</loc>
+  <lastmod>2018-10-20T05:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology/</loc>
@@ -102,6 +106,10 @@
   <lastmod>2018-01-18T04:50:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/lifescience/</loc>
+  <lastmod>2018-10-20T05:57:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/mac/</loc>
   <lastmod>2018-08-23T04:15:00Z</lastmod>
  </url>
@@ -147,7 +155,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-10.html</loc>
-  <lastmod>2018-10-17T05:36:00Z</lastmod>
+  <lastmod>2018-10-20T05:57:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -252,6 +260,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/IOL-problem/</loc>
   <lastmod>2018-01-05T18:57:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</loc>
+  <lastmod>2018-10-20T05:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/MakerGear-M2-update/</loc>
