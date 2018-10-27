@@ -1,5 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 20 Oct 2018 13:47:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 27 Oct 2018 05:58:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>屏霸的演讲</title><link>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="i2" src="https://i.loli.net/2018/10/27/5bd3fbce9f148.png"&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;超级英雄就是你们用来
+Superheroes are part of your brainless desire...
+
+模拟真实体验的无脑幻想之一
+to replace true experience with simulation.
+
+你们不说话  却爱看脱口秀
+You don't talk, you watch talk shows.
+
+你们不玩游戏  却爱看游戏节目
+You don't play games, you watch game shows.
+
+旅行  恋爱  冒险
+Travel, relationships, risk...
+
+这些有意义的经验都得被包装一番
+every meaningful experience must be packaged...
+
+以供你们坐得远远的进行观看
+and delivered to you to watch at a distance.
+
+这样你们就能安安稳稳
+So that you can remain ever sheltered...
+
+不思进取
+ever passive...
+
+只要做贪婪的消费者
+ever ravenous consumers...
+
+甚至都不愿意从自己的沙发上站起来
+who can't bring themselves to rise from their couches...
+
+进行一场酣畅淋漓的人生体验
+break a sweat and participate in life.
+
+你们希望超级英雄来保护你们
+You want superheroes to protect you...
+
+让你们自己变得更加无助
+and make yourselves ever more powerless in the process.
+
+你们告诉自己  有人在保护你们
+While you tell yourselves you're being looked after.
+
+你们的利益得到了满足
+That your interests are being served.
+
+你们的权利得到了维护
+And your rights are being upheld.
+
+所以系统可以继续对你们进行搜刮
+So that the system can keep stealing from you...
+
+并对你施以微笑
+smiling at you all the while.
+
+来啊  派你们的超级英雄来阻止我
+Go ahead, send your Supers to stop me.
+
+拿好你们的零食  盯紧屏幕
+Grab your snacks, watch your screens,
+
+看看会发生什么事
+and see what happens.
+
+你们不再是掌控者
+You are no longer in control.
+
+我才是
+I am.
+&lt;/pre&gt;
+
+
+&lt;p&gt;引用自&amp;lt;&amp;lt;超人总动员2&amp;gt;&amp;gt; Incredibles 2 (2018)&lt;/p&gt;
+&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
 &lt;a href="https://www.icloud.com/shortcuts/dc244e748f3a4c79a639af520e2b05f9"&gt;点这里导入捷径&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;闭气训练:
 * 方式: CO2耐受&lt;/p&gt;
@@ -1292,154 +1368,4 @@ excel中的数据, 每一行是一个文件中一页的数据, 因为经常病�
 &lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item><item><title>显微操作训练(3)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前两课讲的是手术之前应当如何调整显微镜, 这一部分讲解在手术中的显微镜使用和操作训练.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;正确的坐姿&lt;/h2&gt;
-&lt;p&gt;基本的原则是:
-&lt;em&gt; 上身的重力不可传导至手
-&lt;/em&gt; 全身的重力不可传导至脚&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片22" src="https://i.loli.net/2018/07/03/5b3b803388499.jpeg"&gt;
-坐姿应当是可持续的放松舒适动作, 有些坐姿看似很舒服, 或者刚刚开始的时候舒服, 持续一段时间反而会造成很大的损伤.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;术者的上身应当是很挺拔的状态, 自我感觉有点像是头悬梁,&lt;/li&gt;
-&lt;li&gt;手肘放松接近90度左右,&lt;/li&gt;
-&lt;li&gt;膝盖也是接近90度左右,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;相应地要调节好凳高和床高.&lt;/p&gt;
-&lt;p&gt;双脚分开约60度, 轻放在踏板上.&lt;/p&gt;
-&lt;!-- EOF --&gt;
-
-&lt;p&gt;&lt;img alt="幻灯片23" src="https://i.loli.net/2018/07/03/5b3b8194de1c1.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;重复一下坐姿的基本原则是:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;上身的重力不可传导至手&lt;/li&gt;
-&lt;li&gt;全身的重力不可传导至脚&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这是因为:
-肌肉越放松, 动作越敏捷越稳定.&lt;/p&gt;
-&lt;p&gt;如果画一张图, 用横轴表示肌张力, 纵轴表示动作的稳定性, 大约是这样的:
-&lt;img alt="幻灯片24" src="https://i.loli.net/2018/07/03/5b3b820a7f5d2.jpeg"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;要将肢体放置在指定位置, 显然还是需要一定的肌张力, 不可能为0.&lt;/li&gt;
-&lt;li&gt;要达成一定的目标动作, 比如用镊子夹持住囊膜, 也需要有一定的力量. 手术过程中是希望使用能够完成目标动作的最小力量. 比如撕囊, 前囊只有几个微米, 很小的力量即可夹持住, 如果施加更大的力量, 囊膜也仍然只是被夹住而已, 但更大的力量就有可能造成肌肉的抖动, 使稳定性下降.&lt;/li&gt;
-&lt;li&gt;如果坐姿出现错误, 手或者脚不但要用力完成动作, 还需要分出一部分力量去支撑身体的重力, 稳定性就会更差.&lt;/li&gt;
-&lt;li&gt;如果坐姿更扭曲, 可能还出现肌肉之间互相拮抗, 那时就几乎无法完成任何操作了.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;错误坐姿&lt;/h2&gt;
-&lt;p&gt;人在精神高度紧张的时候, 可能不注意自己的坐姿. 或者在上台落座之前, 没有能够很好地调整手术床/手术椅的高度.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片25" src="https://i.loli.net/2018/07/03/5b3b83b1b7fbb.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;要迅速毁掉一台手术非常简单, 比如上图中, 只要手术床摆低一些, 座椅摆到更远离手术床的位置, 脚踏放远一点, 显微镜阻尼放松一点即可.&lt;/p&gt;
-&lt;p&gt;分析一下, 在这种情况下:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;显微镜阻尼过松, 使用中下垂, 术者要低头, 颈椎压力大&lt;/li&gt;
-&lt;li&gt;手术床过低, 工作距离不变, 显微镜必然也要降低, 术者低头弯腰, 颈椎腰椎压力大.&lt;/li&gt;
-&lt;li&gt;手术床过低, 手臂下垂+术者低头, 一部分上身重力转移到手腕上, 手腕肌张力提高, 容易出现手抖.&lt;/li&gt;
-&lt;li&gt;手术椅太靠后, 术者只坐椅子边缘, 极不稳定, 紧张, 需要动用腿的力量支撑&lt;/li&gt;
-&lt;li&gt;脚踏位置太远, 脚需要分担身体重量, 于是踩下脚踏容易, 抬起来却要慢一拍. 如果是发现吸住后囊, 恐怕是松不开了. 而且由于脚移动困难, 就会少移动, 于是会减少显微镜的实时调节, 相应的, 术者眼睛就要自己来动用调节力调节了, 很快也会疲劳.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;上述坐姿其实并不罕见, 比如在wetlab实验室中:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片26" src="https://i.loli.net/2018/07/03/5b3b86e90bebb.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;这位同学就能够把所有上述各项错误都做全了. 还好是在实验室及时发现了她的错误, 并且指出纠正, 现在手术应该是好很多了.&lt;/p&gt;
-&lt;p&gt;错误的坐姿不仅威胁病人, 对医生的身体也是损害:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1994年, 面向英国眼科医生问卷调查, 54% 背痛&lt;/li&gt;
-&lt;li&gt;2005年, 美国, 52%颈部/上肢/腰痛, 其中15%工作受限制&lt;/li&gt;
-&lt;li&gt;2004年, 伊朗, 80%慢性背痛, 55%慢性头痛&lt;/li&gt;
-&lt;li&gt;2004年, 美国后节, 55%同时颈部背部痛, 其中7%需要接受手术治疗.
-...
-
-Will Ophthalmology Cripple You? http://www.reviewofophthalmology.com/content/i/1650/c/30458/
-好好看看, 不要把自己变成别人SCI里的病例.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;显微镜调节&lt;/h2&gt;
-&lt;p&gt;显微镜是靠脚踏来调节的. 要熟悉脚踏板的操作. 不同的脚踏可能踏板的定义不同, 需要自己亲自测试一下, 并且要在显微镜上多多练习才能熟悉.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片28" src="https://i.loli.net/2018/07/03/5b3b8990b7fba.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;踏板中最重要的部分就是调节放大率和调焦. 要注意脚踏的各个控制调节都不是无限制的, 都有各自的极限范围, 到达极限以后显微镜有声音却不再移动.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片29" src="https://i.loli.net/2018/07/03/5b3b8a88a0373.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;特别是调焦的微调上下都是有极限的, 经常看到有学生一直踩着脚踏, 显微镜已经降到最低, 仍然抱怨角膜浑浊看不清楚.&lt;/p&gt;
-&lt;p&gt;马志中教授讲过: 出现问题, 停下, 恢复到正常状态, 再操作.&lt;/p&gt;
-&lt;p&gt;对于显微镜一直调不清楚的实例来说, 就是停下, 看看显微镜是不是已经调到了最低或最高, 如果是, 用复位按钮或者脚踏把显微镜重新放到中间, 再粗调, 再微调.&lt;/p&gt;
-&lt;h2&gt;亮度-对比度&lt;/h2&gt;
-&lt;p&gt;显微镜的灯很亮, 但并非越亮越好.&lt;/p&gt;
-&lt;p&gt;$$
-Contrast= \frac{L_{max}-L_{min}}{L_{max}+L_{min}}
-$$&lt;/p&gt;
-&lt;p&gt;对比度是(最亮-最暗)除以(最亮+最暗), 或者说&lt;/p&gt;
-&lt;p&gt;$$
-Contrast= \frac{L_{max}-L_{min}}{L_{mean}}
-$$&lt;/p&gt;
-&lt;p&gt;对比度是(最亮-最暗)除以平均亮度,
-提高了照明亮度, 可不一定提高对比度， 因此也不一定“更清楚”
-&lt;img alt="幻灯片31" src="https://i.loli.net/2018/07/03/5b3b8ca149c9f.jpeg"&gt;&lt;/p&gt;
-&lt;h2&gt;景深 vs 放大率&lt;/h2&gt;
-&lt;p&gt;景深: 用手术显微镜时, 在垂直方向上看清楚的范围.
-&lt;img alt="幻灯片32" src="https://i.loli.net/2018/07/03/5b3b8ce8d77ab.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;景深和放大率在一定程度上是相反的, 物体放大, 则景深缩小.
-&lt;img alt="幻灯片33" src="https://i.loli.net/2018/07/03/5b3b8d576b481.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;由于景深和放大率有矛盾, 所以应当按需分配, 例如&lt;/p&gt;
-&lt;h4&gt;在phaco手术中:&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;撕囊:&lt;/li&gt;
-&lt;li&gt;需要看清囊膜, 所以放大率很重要&lt;/li&gt;
-&lt;li&gt;操作仅仅在囊膜平面, 所以景深并不重要.(这个推理仅仅在你不会牵拉切口的前提下, 否则眼球乱转, 囊膜平面倾斜)&lt;/li&gt;
-&lt;li&gt;所以, 可以放得大一些&lt;/li&gt;
-&lt;li&gt;phaco:&lt;/li&gt;
-&lt;li&gt;需要看到从角膜内皮直到后囊膜的范围, 所以景深非常重要.&lt;/li&gt;
-&lt;li&gt;核块的相貌倒是并不重要, 所以放大率可以小一些.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;在显微缝合中:&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;进针出针: 需要看清细节层次, 可以放大一些&lt;/li&gt;
-&lt;li&gt;打结: 针持到镊子的距离可能很大, 需要缩小一些.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h4&gt;翼状胬肉:&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;病人眼动剧烈, 为了减少术者调节, 景深要好一些, 缩小&lt;/li&gt;
-&lt;li&gt;病人配合好, 可以适当增加放大率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;作业:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;看手术时, 记录下不同步骤时主刀所使用的放大率&lt;/li&gt;
-&lt;li&gt;记录数字, 显微镜上会有一个旋转的转盘显示数字&lt;/li&gt;
-&lt;li&gt;记录镜下视野边缘看到的东西:&lt;ul&gt;
-&lt;li&gt;是否可见开睑器&lt;/li&gt;
-&lt;li&gt;是否可见睑缘&lt;/li&gt;
-&lt;li&gt;是否可见角膜缘&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;在显微镜主镜和助手镜下, 分别试试把一支笔插进笔帽里&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;可视范围&lt;/h2&gt;
-&lt;p&gt;显微镜有一定的可视范围, 但显然最中央的区域成像质量是最佳的, 要练习将病人的眼睛放在显微镜视野的中央.&lt;/p&gt;
-&lt;p&gt;在实验室, 做猪眼练习时, 很多同学在术中把承放猪眼的支架托盘挪来挪去, 甚至旋转! 记住在实际手术中, 病人是不可移动的, 也是不可旋转的. 要用脚踏调位置
-&lt;img alt="幻灯片37" src="https://i.loli.net/2018/07/03/5b3b903e142e7.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;另外注意镜下可视范围&amp;gt;录像可视范围, 如果你真的好好录制自己手术, 很可能在前几次手术时, 根本录不到患者的眼球.&lt;/p&gt;
-&lt;h2&gt;眼不离镜&lt;/h2&gt;
-&lt;p&gt;在手术中, 术者尽量不要使眼睛离开显微镜目镜. 一旦术者的眼睛离开显微镜目镜, 患者眼内不可有任何手术器械!&lt;/p&gt;
-&lt;p&gt;如果你眼睛离开目镜去取器械, 左手还留着chopper在患者眼内, 等再回来看时, 恐怕后囊或者虹膜早被钩破了.&lt;/p&gt;
-&lt;p&gt;要学会眼睛不离开显微镜就可以传递手术器械.&lt;/p&gt;
-&lt;p&gt;很多同学不敢做这个动作, 眼睛不离开显微镜时, 手里拿着器械却找不到. 这是因为人脑总觉得物体是在视线的延长线上, 而显微镜上有反射镜, 所以物体实际比视线所在位置更靠近自己. 练习时, 把器械向自己怀里拉近一些可能就可以找到.
-&lt;img alt="幻灯片39" src="https://i.loli.net/2018/07/03/5b3b93335833a.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;人脑有强大的纠错能力, 大约只需要5分钟的简单训练, 就可以习惯眼不离镜取放器械了.&lt;/p&gt;
-&lt;p&gt;练习方法也很简单, 找个同伴为你传递器械, 比如一支笔, 眼不离镜, 用笔在镜下往纸上画个点, 然后再递出去. 练习5分钟, 受用一辈子.&lt;/p&gt;
-&lt;h2&gt;红反光&lt;/h2&gt;
-&lt;p&gt;每一个到我实验室来练习手术的医生我都会问ta是否从病人视角看过手术显微镜的物镜是什么样子, 大约教了300多位医生, 真正看过的人一只手就可以数过来.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片40" src="https://i.loli.net/2018/07/03/5b3b948895ac3.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;这是两种显微镜的物镜照片, 两个小圆就是物镜, 而发亮的是光源的反射镜. 可见光源和物镜并不是在同一个位置.&lt;/p&gt;
-&lt;p&gt;所谓眼底红反光, 是显微镜的光源将光投射到眼底, 再反射回来, 被物镜接收到.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片41" src="https://i.loli.net/2018/07/04/5b3b9f68491d5.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;从示意图中可以看出, 如果把眼底简化成一个垂直于眼轴的平面镜, 那么入射角=反射角, 眼轴最多只能在光源和物镜的角平分线之内, 否则反射光就离开物镜了.&lt;/p&gt;
-&lt;p&gt;听过科主任对病人喊"看灯"吧, 看灯的时候眼轴指向光源附近, 反射光容易进入物镜, 红反光会比较明显.&lt;/p&gt;
-&lt;h2&gt;作业&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;用手机给显微镜底部拍照&lt;/li&gt;
-&lt;li&gt;取吸管一根, 底部塞些铝箔&lt;ul&gt;
-&lt;li&gt;放在镜下观察反光&lt;/li&gt;
-&lt;li&gt;转动角度, 观察反光&lt;/li&gt;
-&lt;li&gt;剪成不同长度, 观察反光&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;去验光室学习检影验光&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- EOF  --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_3/</guid><pubDate>Tue, 03 Jul 2018 16:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item></channel></rss>
