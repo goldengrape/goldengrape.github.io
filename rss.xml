@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 27 Oct 2018 05:58:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>屏霸的演讲</title><link>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="i2" src="https://i.loli.net/2018/10/27/5bd3fbce9f148.png"&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 01 Nov 2018 06:01:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>面向机器学习的研发思路</title><link>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这里仅考虑一些实际问题, 对于密码破解之类的NP-hard问题不在讨论范围之内, 对于实际问题, 也只是提供一种可行解.&lt;/p&gt;
+&lt;p&gt;机器学习/ 深度学习发展很快, 各种算法层出不穷. 我们假定机器学习是一个非常强悍的拟合器(或者分类器, 分类器可以通过拟合器拟合). 在有这样的工具协助下, 研发思路会有完全不同的方向.&lt;/p&gt;
+&lt;p&gt;那么对于要解决的问题, 要提出以下几个问题:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从可以收集到的数据X, 是否存在至少一个通路, 可以推导出结果y?&lt;/li&gt;
+&lt;li&gt;数据集(X,y)是否可以通过低成本的方式获得?&lt;/li&gt;
+&lt;li&gt;数据集(X,y)是否可以通过计算机模拟的方式生成?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果前两个问题的答案是肯定, 那么就可以直接使用机器学习/深度学习来拟合了.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;如果三个问题的答案都是肯定答案, 那么就直接使用计算机模拟的方式产生大量的数据集, 然后在用机器学习/深度学习的算法来拟合.&lt;/p&gt;
+&lt;p&gt;举个例子:&lt;/p&gt;
+&lt;p&gt;这个&lt;a href="https://people.csail.mit.edu/mrub/vidmag/"&gt;Video Magnification&lt;/a&gt; 研究小组做出了一个很厉害的算法, 通过摄像头拍摄画面能够将微小的变化放大, 甚至可以仅仅通过摄像头拍摄面部, 就能够测量心率， 注意不是那种使用闪光灯照亮手指, 然后用摄像头拍摄测心率的方法, 而是直接在自然光照明下, 在一定距离隔空拍摄. 他们还做了一个&lt;a href="https://www.cardiio.com/"&gt;app&lt;/a&gt; 非常有趣.&lt;/p&gt;
+&lt;p&gt;通过他们的研究, 可以知道:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;至少有一种算法可以从面部视频(X)计算出心率(y). 条件1满足.&lt;/li&gt;
+&lt;li&gt;数据集(面部视频, 心率)并不难采集, 对同一个人录像+心率带测量就可以采集到这两个数据. 条件2满足.&lt;/li&gt;
+&lt;li&gt;看起来不方便通过模拟的方式产生数据集, 条件3不满足.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以, 现在如果要实现这个app的效果, 并不需要去解读Video magnification的文献, 不需要去找他们的代码. 需要的只是找到足够多的人, 在不同的环境下录像, 同时监测心率, 取得足够的数据集, 然后送进机器学习/深度学习的拟合器中去拟合, 就可以得到同样的效果.&lt;/p&gt;
+&lt;p&gt;更进一步,&lt;/p&gt;
+&lt;p&gt;再来仔细看条件3, 数据集(面部视频, 心率)真的是难以模拟出来的么? 如果我们有Video magnification的算法(实际上有文献有代码), 再找到足够多的单人面部视频, 就可以通过Video magnification的算法得到这些单人面部视频所对应的心率. 单人面部视频在网上很容易找到大量, 于是这个数据集也是可以不需要找真人来录制就可以获得的了. 通过这种方法, 训练出来的深度学习拟合器, 至少不比Video magnification的算法更差, 如果再搭配一些实际录制的数据, 有可能还能做得更好.&lt;/p&gt;
+&lt;p&gt;这就是面向机器学习的研发思路.&lt;/p&gt;
+&lt;p&gt;补充关于数据的要求:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="data" src="https://i.loli.net/2018/11/01/5bda8ea6a41e6.png"&gt;
+理想的情况下, 我们采集到的数据X可以推导出结果y. 但在实际过程中, 由于我们不知道如何从X推导出y, 只是知道存在有这样一条路径, 于是我们可能只好扩大数据的采集范围, 但只要采集到的数据X, 完全包含了能够推导出y的信息即可, 混杂了一些数据垃圾无关紧要, 可能只是影响了训练的时间, 并不影响最终的预测精度.&lt;/p&gt;
+&lt;p&gt;但在更多的情况下, 有些数据是采集不到的, 我们只能采集到X的一大部分, 有一些关键数据现阶段无论如何也拿不到, 那么拟合出来的结果就一定会有一定的误差, 这时候就看误差是否影响实际需求了. 如果够用, 那就可以了.&lt;/p&gt;
+&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item><item><title>屏霸的演讲</title><link>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="i2" src="https://i.loli.net/2018/10/27/5bd3fbce9f148.png"&gt;&lt;/p&gt;
 &lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;超级英雄就是你们用来
 Superheroes are part of your brainless desire...
 
@@ -1330,42 +1358,4 @@ excel中的数据, 每一行是一个文件中一页的数据, 因为经常病�
 &lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.46.31" src="https://i.loli.net/2018/07/10/5b449ca3d43d6.png"&gt;&lt;/p&gt;
 &lt;p&gt;这样代码就更新完毕了, 关闭页面即可.&lt;/p&gt;
 &lt;p&gt;顺便, 推荐一下git, 如果您的电脑上存了很多“最终版”,“最终不变版本”,“最终最终版本”和“赌咒发誓这是最后一版”之类的文件名, 想必知道版本管理的重要性. git是一个很好的版本管理工具, 以后我会再详细讲解.&lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
-&lt;p&gt;这是一组操作训练作业:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;1.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;初始化手术显微镜&lt;/li&gt;
-&lt;li&gt;设置好显微镜下录像&lt;/li&gt;
-&lt;li&gt;用手机或由同伴拍摄坐姿正侧位照片&lt;ul&gt;
-&lt;li&gt;在练习0分钟后, 5分钟后, 10分钟后分别拍摄&lt;/li&gt;
-&lt;li&gt;或用手机录像拍摄坐姿&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2.
-打印下图
-&lt;img alt="幻灯片45" src="https://i.loli.net/2018/07/04/5b3ba3f920315.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;3.
-&lt;img alt="幻灯片46" src="https://i.loli.net/2018/07/04/5b3ba4254ca37.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;4.
-&lt;img alt="幻灯片47" src="https://i.loli.net/2018/07/04/5b3ba4254ef66.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;5.
-&lt;img alt="幻灯片48" src="https://i.loli.net/2018/07/04/5b3ba4254c9e5.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;6.
-&lt;img alt="幻灯片49" src="https://i.loli.net/2018/07/04/5b3ba42545a5d.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;7.
-&lt;img alt="幻灯片50" src="https://i.loli.net/2018/07/04/5b3ba4254596c.jpeg"&gt;&lt;/p&gt;
-&lt;h2&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://microsurg.hs.columbia.edu/"&gt;http://microsurg.hs.columbia.edu/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Optical Devices in Ophthalmology and Optometry: technology, Design Principles and Clinical Applications. ISBN: 978-3-527-41068-2 page 147-page 177&lt;/li&gt;
-&lt;li&gt;Coursera公开课:&lt;ul&gt;
-&lt;li&gt;台湾大学基础光学1,  第6讲
-*&lt;a href="https://www.coursera.org/learn/ji-chu-guang-xue"&gt;https://www.coursera.org/learn/ji-chu-guang-xue&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;密歇根大学白内障手术概论, week 2&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.coursera.org/course/cataractsurgery"&gt;https://www.coursera.org/course/cataractsurgery
-&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item></channel></rss>
