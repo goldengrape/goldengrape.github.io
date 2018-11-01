@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2018-07-03T16:34:00Z</lastmod>
+  <lastmod>2018-11-01T05:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2018-10-27T05:55:00Z</lastmod>
+  <lastmod>2018-11-01T05:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -167,7 +167,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-10.html</loc>
-  <lastmod>2018-10-27T05:55:00Z</lastmod>
+  <lastmod>2018-11-01T05:48:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-11.html</loc>
+  <lastmod>2018-11-01T05:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -280,6 +284,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</loc>
   <lastmod>2018-10-20T05:58:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</loc>
+  <lastmod>2018-11-01T05:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/MakerGear-M2-update/</loc>
