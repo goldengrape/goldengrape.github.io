@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 15 Nov 2018 04:47:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>零知识微信文章靠谱指数</title><link>https://goldengrape.github.io/posts/bulabula/zero-knowledge-fake-news-%08index/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;有感于各种不靠谱文章仍然在微信中泛滥, 短时间培养出足够的识别能力又不现实, 于是做了这样一个评分表. 并且做出了相应的iOS捷径程序.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 15 Nov 2018 04:51:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>零知识微信文章靠谱指数</title><link>https://goldengrape.github.io/posts/bulabula/zero-knowledge-fake-news-%08index/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;有感于各种不靠谱文章仍然在微信中泛滥, 短时间培养出足够的识别能力又不现实, 于是做了这样一个评分表. 并且做出了相应的iOS捷径程序.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;标题中的感叹号, 每个-2&lt;/li&gt;
 &lt;li&gt;标题中的省略号, 每个-1&lt;/li&gt;
@@ -13,6 +13,12 @@
 &lt;li&gt;文中有折线图, 不加分不减分, 但折线图上有置信区间, +1&lt;/li&gt;
 &lt;li&gt;末尾有参考文献, 每篇+1&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;iOS捷径程序使用方法:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;适用于iPhone手机或iPad&lt;/li&gt;
+&lt;li&gt;确定安装“捷径”这个app, 没有的话请去app store里搜索并安装“捷径”&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.icloud.com/shortcuts/4baf836dfcdd44f1b2b782b84f825502"&gt;点击获取捷径&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;原计划还有点进该公众号后, 对3篇之内(通常显示3篇)的评分, 但多一步操作显得麻烦, 我估计前面的评分应对大多数胡说八道文章是够用了.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;公众号名称出现英联邦国家名(英, 澳, 加), -1&lt;/li&gt;
@@ -21,13 +27,7 @@
 &lt;li&gt;出现时政新闻, 每篇-1&lt;/li&gt;
 &lt;li&gt;出现移民广告, 每篇-1&lt;/li&gt;
 &lt;li&gt;出现辟谣文, 每篇+1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;iOS捷径程序使用方法:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;适用于iPhone手机或iPad&lt;/li&gt;
-&lt;li&gt;确定安装“捷径”这个app, 没有的话请去app store里搜索并安装“捷径”&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.icloud.com/shortcuts/4baf836dfcdd44f1b2b782b84f825502"&gt;点击获取捷径&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>iOS</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/zero-knowledge-fake-news-%08index/</guid><pubDate>Thu, 15 Nov 2018 04:00:00 GMT</pubDate></item><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
+&lt;/ul&gt;&lt;/div&gt;</description><category>iOS</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/zero-knowledge-fake-news-%08index/</guid><pubDate>Thu, 15 Nov 2018 04:00:00 GMT</pubDate></item><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
 &lt;a href="https://www.icloud.com/shortcuts/dc244e748f3a4c79a639af520e2b05f9"&gt;点这里导入捷径&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;闭气训练:
 * 方式: CO2耐受&lt;/p&gt;
