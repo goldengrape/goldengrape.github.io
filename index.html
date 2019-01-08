@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/clinic-shortcut/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/carefree-princess-1018/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,105 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/clinic-shortcut/" class="u-url">iOS临床捷径</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/carefree-princess-1018/" class="u-url">通项公式快速求解</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/carefree-princess-1018/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-01-08T16:00:00+08:00" title="2019-01-08 16:00">2019-01-08 16:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>现在每天早上早起, 先做一道<a href="https://mp.weixin.qq.com/s/kyWUQoWPPokr4ITg4G3fwA">无忧公主的数学时间</a>里面的数学题, 提神醒脑.</p>
+<p>今天的题目是这样的:</p>
+<blockquote>
+<p>f(1)=f(2)=1</p>
+<p>f(n)=f(n-1)-f(n-2)+n</p>
+<p>求f(2018)</p>
+</blockquote>
+<p>解法大概是找规律什么的吧, 中间会出现f(n-1)=f(n-2)的情况, 然后有一定的循环.</p>
+<p>但是, 怎么能这么轻易使用自己手算呢? 一定要暴力编程解决才好.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>随手写个递归:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span><span class="o">&lt;=</span><span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">-</span><span class="n">f</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">n</span>
+<span class="n">N</span><span class="o">=</span><span class="mi">10</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1 1
+2 1
+3 3
+4 6
+5 8
+6 8
+7 7
+8 7
+9 9
+10 12
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>但没有使用尾递归的话, 计算f(2018)肯定是要死机的. 然后, 我<strong>忘记怎么写尾递归了</strong>
+</p>
+<p class="more"><a href="posts/python/carefree-princess-1018/">更多…</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/clinic-shortcut/" class="u-url">iOS临床捷径</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/clinic-shortcut/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-11-22T12:00:00+08:00" title="2018-11-22 12:00">2018-11-22 12:00</time></a></p>
@@ -344,20 +442,6 @@ I am.
 <p class="more"><a href="posts/bulabula/auto_keynote_presentation/">更多…</a></p>
 </div>
     </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/import_calligraphy_to_keynote_as_shape/" class="u-url">将书法导入成keynote形状</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/import_calligraphy_to_keynote_as_shape/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-08-23T12:00:00+08:00" title="2018-08-23 12:00">2018-08-23 12:00</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>自己写的毛笔字仍然有诸多缺陷, 不过现代人的展示更多发生在幻灯片而不是宣纸上, 比如在做幻灯的时候用上自己写的字, 感觉很开心.</p>
-<p>导入成Keynote形状以后, 多了许多后期调整的可能性. 很有意思.</p>
-<p><img alt="屏幕快照 2018-08-22 21.35.52" src="https://i.loli.net/2018/08/23/5b7e2d3ddb6f6.png"></p>
-<p>先说说如何导入:</p>
-<p class="more"><a href="posts/bulabula/import_calligraphy_to_keynote_as_shape/">更多…</a></p>
-</div>
-    </div>
     </article>
 </div>
 
@@ -377,7 +461,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><footer id="footer"><p>Contents © 2018         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+</script><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
             
         </footer>
 </div>
