@@ -1,5 +1,295 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 22 Nov 2018 04:40:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>iOS临床捷径</title><link>https://goldengrape.github.io/posts/bulabula/clinic-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在读大学的时候, 一直有这样的怨念: “这个东西能在电脑上查到, 为什么要背下来!” 于是我的成绩很差.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Jan 2019 09:15:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>通项公式快速求解</title><link>https://goldengrape.github.io/posts/python/carefree-princess-1018/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;现在每天早上早起, 先做一道&lt;a href="https://mp.weixin.qq.com/s/kyWUQoWPPokr4ITg4G3fwA"&gt;无忧公主的数学时间&lt;/a&gt;里面的数学题, 提神醒脑.&lt;/p&gt;
+&lt;p&gt;今天的题目是这样的:&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;f(1)=f(2)=1&lt;/p&gt;
+&lt;p&gt;f(n)=f(n-1)-f(n-2)+n&lt;/p&gt;
+&lt;p&gt;求f(2018)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解法大概是找规律什么的吧, 中间会出现f(n-1)=f(n-2)的情况, 然后有一定的循环.&lt;/p&gt;
+&lt;p&gt;但是, 怎么能这么轻易使用自己手算呢? 一定要暴力编程解决才好.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;随手写个递归:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [1]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;
+&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;N&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;1 1
+2 1
+3 3
+4 6
+5 8
+6 8
+7 7
+8 7
+9 9
+10 12
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;但没有使用尾递归的话, 计算f(2018)肯定是要死机的. 然后, 我&lt;strong&gt;忘记怎么写尾递归了&lt;/strong&gt;
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;第二招, 母函数&lt;/p&gt;
+&lt;p&gt;要用上母函数, 里面不能有个n这样的变量. 应该消掉. 所以把f(n-1)=f(n-2)-f(n-3)+n-1代入,&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;f(n)=f(n-2)-f(n-3)+n-1 -f(n-2)+n
+f(n)=-f(n-3)+2n-1&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;再消掉n, 得到:
+$$
+f(n)=2 f(n-1)-2 f(n-2)+f(n-3)+1
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;然后, 我忘记母函数如何展开了, 要用泰勒展开之类的.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;还有第三招, 矩阵乘法&lt;/p&gt;
+&lt;p&gt;把f(n)写成一个矩阵M去乘与f(n-1)向量的形式, 然后最终就成了计算M的n次方. 当然, 我又不记得矩阵乘方的运算了, 似乎是进行特征分解. 不过呢, 反正numpy在算矩阵乘法的时候是经过优化的, 速度很快.&lt;/p&gt;
+&lt;p&gt;目的是写出一个简单的矩阵M, 满足下面的式子&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;$$
+\begin{bmatrix}
+  f(n) 
+  \\f(n-1)
+  \\f(n-2)
+  \\n+1
+  \\1
+\end{bmatrix}=
+M
+\begin{bmatrix}
+  f(n-1) 
+  \\f(n-2)
+  \\f(n-3)
+  \\n
+  \\1
+\end{bmatrix}
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;根据条件, 很好写:
+$$
+\begin{bmatrix}
+  f(n) 
+  \\f(n-1)
+  \\f(n-2)
+  \\n+1
+  \\1
+\end{bmatrix}=
+\begin{bmatrix}
+    1,-1,0, 1,0 
+  \\1,0, 0,0,0
+  \\0,1, 0,0,0
+  \\0,0,0,1,1
+  \\0,0,0,0,1
+\end{bmatrix}
+\begin{bmatrix}
+  f(n-1) 
+  \\f(n-2)
+  \\f(n-3)
+  \\n
+  \\1
+\end{bmatrix}
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;所以程序就很容易写出来了:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [2]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;numpy.linalg&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;matrix_power&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asarray&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+        &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;f3&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;asarray&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;matmul&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;matrix_power&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;f3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fn&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%%&lt;/span&gt;&lt;span class="k"&gt;timeit&lt;/span&gt; 
+f_matrix(2018)
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;66 µs ± 859 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f_matrix&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2018&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;2017
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;以上方法适用于类似我这样知识点只记得住开头的水平, 即使没有能够记住完整的部分, 也可以利用矩阵乘法在程序内置计算够快的feature来求解. 万一以后做什么面试题, 也许会用上吧&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><guid>https://goldengrape.github.io/posts/python/carefree-princess-1018/</guid><pubDate>Tue, 08 Jan 2019 08:00:00 GMT</pubDate></item><item><title>iOS临床捷径</title><link>https://goldengrape.github.io/posts/bulabula/clinic-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在读大学的时候, 一直有这样的怨念: “这个东西能在电脑上查到, 为什么要背下来!” 于是我的成绩很差.&lt;/p&gt;
 &lt;p&gt;现在终于到了报复的时刻. 如果你用的是iPhone或者iPad, 已经安装了“捷径”, 那么请点击这个&lt;a href="https://www.icloud.com/shortcuts/028afc77715748a08e4871d5bc83657b"&gt;稳定期慢阻肺评估&lt;/a&gt;, 体验一下点啊点啊不用背的快感.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
@@ -1200,30 +1490,4 @@ end repeat
 
 &lt;p&gt;每个页面内“点击下一个”, 不超过10次, 如果你的动画太多, 可以修改这个数字. 但我建议还不如分成两页幻灯.&lt;/p&gt;
 &lt;p&gt;然后去判断现在是不是还在当前页面, 或者已经是切换到了下一张, 如果切换了, 就跳出循环, 如果还在这一页, 就继续“点击下一个”, 但如果仅仅这么写, 就会出现一口气连续点击了10次, 直接跳到结尾了.&lt;/p&gt;
-&lt;p&gt;我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”&lt;/p&gt;&lt;/div&gt;</description><category>applescript</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</guid><pubDate>Sun, 26 Aug 2018 02:00:00 GMT</pubDate></item><item><title>将书法导入成keynote形状</title><link>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己写的毛笔字仍然有诸多缺陷, 不过现代人的展示更多发生在幻灯片而不是宣纸上, 比如在做幻灯的时候用上自己写的字, 感觉很开心.&lt;/p&gt;
-&lt;p&gt;导入成Keynote形状以后, 多了许多后期调整的可能性. 很有意思.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-08-22 21.35.52" src="https://i.loli.net/2018/08/23/5b7e2d3ddb6f6.png"&gt;&lt;/p&gt;
-&lt;p&gt;先说说如何导入:&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;用手机上的&lt;a href="https://www.adobe.com/products/capture.html"&gt;adobe caputre&lt;/a&gt;拍摄, 简单修饰形状. 这个app在android和iOS上都有.&lt;/li&gt;
-&lt;li&gt;导出成SVG&lt;/li&gt;
-&lt;li&gt;发送到电脑上, 如果是iOS对mac可以很简单使用airdrop.&lt;/li&gt;
-&lt;li&gt;下载并安装 &lt;a href="https://www.christianholz.net/keynote_utilities.html#svg2keynote"&gt;SvgToKeynote&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;运行SvgToKeynote将SVG文件转换成keynote文件, 注意转换出来的是早期版本的keynote文件, 编辑或者存储时会提示升级, 升级就好了.&lt;/li&gt;
-&lt;li&gt;keynote文件内的图形就是“形状”了, 如果用右键点击可以出现“使可以编辑”, 就可以编辑顶点. 还可以“存储到我的形状”&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Keynote形状, 或者说Keynote shape的好处是可以进行逻辑运算, 能够将两个形状进行融合/ 交叉/ 减少/ 排除, 于是可以比较方便地拆分各个组件.&lt;/p&gt;
-&lt;p&gt;在书法, 可以用编辑顶点的方法修改笔画的细节, 比如笔锋, 牵丝。 还可以将各个笔势分离开来, 调整裹束, 也就是间架结构.&lt;/p&gt;
-&lt;p&gt;如果有处理SVG的专业软件, 当然直接处理可能会更简单一些.&lt;/p&gt;
-&lt;p&gt;对于PowerPoint, 需要升级到office 365以后, 能够有convert to shape功能, 但我买的不是, 所以无法处理SVG.&lt;/p&gt;
-&lt;p&gt;对于PowerPoint,  原来有三种“图像”:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;形状: 可以编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
-&lt;li&gt;图形: 不能编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
-&lt;li&gt;图片: 不能编辑顶点, 不能改变填充颜色, 是标量图&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其中后两种在keynote里都作为图片处理. 在keynote中, 如果把文件导出成powerpoint文件, 那么形状-&amp;gt;形状, 如果是在keynote中复制, 到powerpoint中粘贴, 是形状-&amp;gt;图片.&lt;/p&gt;
-&lt;p&gt;sspai里这一篇&lt;a href="https://sspai.com/post/39238"&gt;文章&lt;/a&gt;说用Libre Office把SVG转换成keynote形状也可以. 不过Libre Office有200多M, 我懒得装了, 如果有一天SvgToKeynote失效了, 记着Libre Office可用.&lt;/p&gt;
-&lt;p&gt;如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</guid><pubDate>Thu, 23 Aug 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”&lt;/p&gt;&lt;/div&gt;</description><category>applescript</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</guid><pubDate>Sun, 26 Aug 2018 02:00:00 GMT</pubDate></item></channel></rss>
