@@ -1,5 +1,5 @@
 <!--
-.. title: 蓝光的故事(2)
+.. title: 蓝光的故事(2): 紫外滤过还是蓝光滤过型人工晶状体: 证据是什么？
 .. slug: story-of-blue-light-2
 .. date: 2019-1-12 15:00:04 UTC+08:00
 .. tags: ophthalmology
