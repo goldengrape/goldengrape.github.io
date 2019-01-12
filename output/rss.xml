@@ -1,5 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 08 Jan 2019 09:15:11 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>通项公式快速求解</title><link>https://goldengrape.github.io/posts/python/carefree-princess-1018/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 12 Jan 2019 08:52:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>蓝光的故事(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天重读蓝光滤过人工晶体的文献, 随手翻译了一篇综述, 以机翻为主. 凑合看一下:&lt;/p&gt;
+&lt;p&gt;Ultraviolet or blue-filtering intraocular lenses: what is the evidence?&lt;/p&gt;
+&lt;p&gt;Eye volume30, pages215–221 (2016)
+&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4763142/"&gt;全文原文&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;紫外滤过还是蓝光滤过型人工晶状体: 证据是什么？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;摘要&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;20世纪40年代后期，现代人工晶状体的引入彻底改变了白内障手术。 到了20世纪60年代末到70年代，有证据表明短波长的光线会对视网膜和视网膜色素上皮造成光毒性。 到20世纪80年代早期，紫外线滤光片已被纳入人工晶状体。 这引起了激烈的争论，因为人们担心，过滤紫外线的发色团可能会渗入眼睛，造成毒性。 随着20世纪90年代蓝光滤过型人工晶状体(BFIOLs)的问世，人们对其安全性和潜在的不利因素展开了进一步的讨论。 对于白内障手术医生和拥有广泛IOL选择的患者来说，选择最佳的人工晶体来获得最佳的视觉效果和最少的潜在缺点已经变得复杂和具有挑战性。 现在可以选择个性化的镜片来解决散光，老花眼，球面像差，色差以及可能使视网膜免受短波长光的影响。 这些不同创新的潜在益处和可能的副作用强调评估其临床效用的证据的重要性，允许外科医生和患者权衡风险收益比并做出明智的决定。 BFIOL开发用于减少蓝视，解决色差，提高不同光照条件下的对比敏感度，以及防止短波光到达视网膜，从而潜在地降低发生年龄相关性黄斑变性的风险。 BFIOLs的进一步设计开发是模仿成年期的天然晶状体吸收和透射性质。 很多文献报道了植入蓝色滤光IOL的潜在好处和缺陷。 在过去25年的文献中提出的关于视觉功能受损和昼夜节律系统中断的潜在缺点在很大程度上被消除了。 保护视网膜免受短波长光照射的明显好处使BFIOL成为明智的选择。本文在2015年剑桥研讨会上发表，旨在回顾相关文献。
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h3&gt;引言&lt;/h3&gt;
+&lt;p&gt;蓝光滤过型人工晶状体(BFIOLs)是否可以在白内障手术后植入仍然是争论的焦点，最近发表了大约100篇关于 BFIOLs 与紫外线滤过型人工晶状体(UVFIOLs)相比的优缺点的文章，1,2,3,4,5 BFIOLs 也被称为黄色或橙色人工晶状体。 从历史上看，发展人工晶状体的动力是减少色差和蓝视症，因为有证据表明短波长的光线对视网膜和视网膜色素上皮有毒害作用。 其他建议的好处包括改善对比敏感度和减少在某些光照条件下的眩光。声称对于 BFIOL 的另一个好处包括减少血-视网膜屏障破坏。有趣的是，一些鱼，包括 masked greenling 的鱼，在暴露在明亮的光线下时，它们的角膜会从深黄色变成红色，在黑暗中变得无色; 这种特性是由角膜中可逆的色素赋予的。  滑雪者和射手经常佩戴黄色镜片以减少眩光，并减少色差. 最近，其他创新的人工晶状体设计包括研发一种称为向光性人工晶状体的人工晶状体，这种人工晶状体在没有紫外线照射的情况下是清晰的，在紫外线照射下会变黄。 [14]在过去25年中，已经提出了植入 BFIOL 与 UVFIOL 相比在理论上的缺点。 主要的问题是，植入 BFIOL 会导致色觉改变、色觉减退、暗视觉功能减退、中视觉和暗视觉条件下对比敏感度降低，以及昼夜光调节紊乱&lt;/p&gt;
+&lt;p&gt;已经有出色的综合篇审查将详细介绍这个主题, 更近的有Zhu在2012做的荟萃分析，[1, 2，3，4，5]. 从那时起有更多相关文献, BFIOL对睡眠 - 觉醒周期的影响17,18 血压，19 情绪，20 和认知功能18, 以及观察年龄相关性黄斑变性（AMD）发展早期小型研究，.21,22&lt;/p&gt;
+&lt;h3&gt;光保护与光感受器&lt;/h3&gt;
+&lt;p&gt;比较了 BFIOLs 和 UVFIOLs 的透射和吸收性能，并与天然晶状体进行了比较。 Artigas23等表明，并非所有紫外线滤光片都能提供同等的紫外线保护。 他们进一步指出，对紫外线和蓝光提供更强光保护的滤镜是黄色和橙色的，黄色和橙色的人工晶状体滤镜可能最适合需要特殊视网膜保护的情况。 Van Norren 和 Kraats 报告了以虚拟年龄表示的人工晶体的光谱透过率，这为比较不同的人工晶体不同的短波长传输和吸收特性提供了一个有用的方法。他们表明UVFIOL模拟的接近新生儿到青少年的晶状体透过率, 而BFIOL, 与晶体类型相关, 更接近中年期的晶状体通透性. 理想的人工晶状体应该是在生命中的某个时刻模仿天然的晶状体，在这个时刻有良好的传输和充分的吸收，从而平衡视觉表现和视网膜保护的需要。&lt;/p&gt;
+&lt;p&gt;光谱传输曲线应该在哪里仍然是目前争论的主题。 与自然衰老的晶状体相比，IOL可以让更多的光线进入眼睛。 人工晶体透光和吸光的好坏将影响其性能和安全性能。 Van Norren 的文章回顾了光诱导视网膜毒性的机制，这里不再回顾(Van Norren -- cambridge Symposium Paper)。 虽然关于慢性光暴露是否会引发或加重 AMD 还存在争议，但实验室和动物实验研究已经表明，短波长的光，不仅是紫外线，而且也包括蓝光也会对视网膜造成损伤。6,7(Van norren -- cambridge Symposium Paper)动物和细胞培养研究有充分的证据表明，黄色镜片可以防止光损伤。25,26,27,28,29,30,31 Tanito 等人测量了包括 BFIOLs 和 UVFIOLs 在内的54种人工晶状体的光谱传输，并估计了视网膜危害指数。 视网膜危害指数包括蓝光辐射值(其特征是一个称为危害函数的作用谱，表示每个波长对视网膜可能造成损害的相对权重)和每天观看阳光的最大允许暴露时间(tmax)。 根据特定的准则计算无晶状体眼和有晶状体眼的 tmax 值，并根据研究中使用的人工晶状体的透过率数据计算人工晶状体眼的 tmax 值。 他们的研究表明，与无晶状体眼相比，UVFIOL 的蓝光辐照度值降低了60% ，BFIOL 的蓝光辐照度值进一步降低了这个值.&lt;/p&gt;
+&lt;h3&gt;对视力的影响&lt;/h3&gt;
+&lt;p&gt;比较BFIOL和UVFIOL的临床研究发现，视力的临床表现没有差异.3 Zhu等[4]对8项关于术后最佳矫正视力（BCVA）的研究的荟萃分析显示，两组之间无显着差异。&lt;/p&gt;
+&lt;h3&gt;对明视和暗视力的影响&lt;/h3&gt;
+&lt;p&gt;关于使用BFIOL而不是UVFIOL引起的主要问题之一是暗视或低中间条件下的视觉表现可能受损.15,16,33即使在健康的眼睛中也存在与年龄相关的衰退 随着视杆细胞介导的暗适应减慢，34,35,36,37,38应该避免理论上可能加剧这种情况的任何事情，特别是因为在没有明显眼部病理的老年人群中，暗适应不良会增加跌倒的风险39&lt;/p&gt;
+&lt;p&gt;此外，在有年龄相关性黄斑变性的眼睛中，首先从旁中心丢失视杆细胞，并且视杆功能受到显著影响.40,41,42 尽管已发表实验数据表明使用BFIOL可使暗视敏感度降低14 -25％.15,43随后进行了进一步的分析，对这一原始观察结果进行了讨论，通过校正透射曲线并应用无晶状体而不是无晶状体的光谱灵敏度曲线，与有晶体的年轻受试者相比, UVFIOL和BFIOL都有暗视光谱灵敏度和可用光线的显著增加。44 此外，研究暗视敏感性的临床非理论研究未发现这两个IOL组之间存在任何差异.45,46 Kiser等人使用外部过滤器模拟蓝光过滤IOL进行了一项研究。对于平均年龄为81岁的UVFIOL双侧假性白斑患者和早期AMD患者之间进行比较。他们的表现通过观察在暗视条件下走过两个不同的移动路线来测试。那些没有戴过滤器或者带蓝色过滤器的人在表现上没有显著差异47&lt;/p&gt;
+&lt;h3&gt;对眩光的影响的临床评估&lt;/h3&gt;
+&lt;p&gt;BFIOL声称的优势是在眩光条件下具有更好的性能.48,49,50 Gray等人在驾驶模拟器中评估了33名患者的表现，其中18名患者使用BFIOL，15名患者使用UVFIOL。 与使用UVFIOL的患者相比，那些使用BFIOL患者比UVFIOL患者有更低的眩光敏感性和更大的安全边际。 然而，使用BFIOL的患者也进行了Toric矫正，而UVFIOL使用者没有，这可能会产生影响，尽管他们都完全矫正了视力.48&lt;/p&gt;
+&lt;p&gt;Hammond等人今年最近的一项研究报道了在UVFIOL患者的随机屏蔽交叉临床研究中的视觉表现。对154名参与者使用透明和蓝色过滤眼镜在强光照射后进行了光应激时间的评估。 当参与者使用蓝色滤光眼镜时，他们的光应激恢复时间和眩光失能阈值比使用非滤光眼镜时显著提高。 他的结论是 BFIOL 在强光条件下可能是有益的。50&lt;/p&gt;
+&lt;p&gt;一些研究调查了蓝光滤光片对临床测量的影响，包括神经纤维层评估，视野，视觉诱发电位和手术期间视网膜成像.51,52,53,54 使用 Cirrus SD-OCT对RNFL 的测量值和信号强度在黄色和透明人工晶状体之间没有明显的围手术期差异 [51],  Kim 等人调查了 BFIOLs 对倍频技术周期测量的影响，发现 BFIOL 患者与透明人工晶状体患者没有显著差异。
+Hoffman等人的研究通过获得所有偏心率的蓝光和中性过滤条件的多焦点VEP来评估20名患者。 他们发现没有获得对振幅的显著影响，并得出结论，使用BFIOL不会影响视觉处理。&lt;/p&gt;
+&lt;p&gt;Falkner-Radler 等报道BFIOLs对玻璃体视网膜手术、诊断或治疗没有显著影响，并得出结论 BFIOL 对视觉加工没有影响。 他们还报告说，在他们的临床试验之后，他们对所有50岁以上的患者常规使用BFIOL[54]&lt;/p&gt;
+&lt;h3&gt;对血屏障破坏的影响&lt;/h3&gt;
+&lt;p&gt;Miyake等报告说，使用UVFIOL或 BFIOL 的眼 BRB 破裂的发生率低于未经处理的人工晶状体眼睛(一个没有紫外或蓝光过滤)。 他们考虑了患者的年龄，并使用了两种临床症状: 玻璃体后部的荧光素浓度和视网膜后极部的自体荧光含量来评估长期人工晶状体眼的视网膜生理状态。 他们还指出，自体荧光随着年龄的增长而增加，即使是紫外线过滤的人工晶体也是如此，他们建议不仅要防止紫外线光线，还要防止近紫外线和蓝光到达视网膜. 55&lt;/p&gt;
+&lt;h3&gt;对色觉和色彩对比敏感度的影响&lt;/h3&gt;
+&lt;p&gt;众所周知，许多接受透明IOL治疗的患者报告说术后视觉场景呈现蓝色(蓝视症)。 一些研究已经评估了手术后患者对蓝眼症的认识，并对 BFIOL 与 UVFIOL 进行了比较。 Hayashi 等[56]报告说，BFIOL 组蓝视的发生率低于 UVFIOL 组，但有趣的是，3个月后两组都没有发现蓝视，这表明蓝视是随着时间的推移而逐渐适应的。 在朱和其他作者对比 BFIOL 和 UVFIOL 的11项研究的荟萃分析中，他们指出在术后早期总的来说 BFIOL 减少了畏光和蓝视的发生率[4], 在一组术后3个月的队列中, 患者无法确定哪只眼接受了何种IOL植入[57]. 在一个病例中, 由于颜色感知变化, BFIOL被取出. 这枚IOL是在3个月内被取出的, 这可能是适应所需要的时间[58].&lt;/p&gt;
+&lt;p&gt;有人认为 BFIOL 可以通过减少轴向色差来提高视觉质量。 Siedelecki59表明，与人类晶状体相比，透明阻挡紫外线人工晶状体的色差要高出3倍。 大多数研究表明，两种人工晶状体的色觉和对比敏感度没有差异。Zhu对11个临床试验进行了荟萃分析，比较了 BFIOL 和 UVFIOL 在术后明视条件下的色觉和对比敏感度，发现两种类型的人工晶状体具有相同的性能。 唯一的例外是 UVFIOL 在中间视觉条件下在蓝光光谱中的色觉表现更好。[4] Bandyopadhyay 等人最近的一项研究报告了他们在接受不同颜色的 BFIOL患者中的发现。 在这项研究中，33名患者接受了 BFIO-黄色型，33名患者接受了 BFIOL-橙色型，33名患者接受了 UVFIOL 型。 他们报告说，黄色或橙色的 BFIOLs 在明视和中视对比敏感度方面与透明人工晶状体相当。2004年，60 Yuan 等人对60名接受 BFIOL治疗的白内障患者与30名接受 UVFIOL 治疗的患者进行了随机对照临床试验。 发现 BFIOL 组在中低频段对比敏感度有显著提高，但不影响色觉，畏光和蓝光的发生率较低。 Niwa 等61表明 BFIOL 与中等空间频率6和12 c/deg 的对比敏感度有关。 此外，黄色人工晶状体降低了中心眩光对对比敏感度的影响。&lt;/p&gt;
+&lt;p&gt;Raj 等人报告说，有部分红绿色视力缺陷的人，植入 BFIOL 后，他们的色觉并没有恶化。&lt;/p&gt;
+&lt;h3&gt;老年黄斑变性和人工晶体类型&lt;/h3&gt;
+&lt;p&gt;关于AMD是否被白内障手术引发或加剧的争议主题在其他评论文章中有所涉及，并且几乎没有新的信息可以补充.[1,2,3] 然而，动物和细胞培养研究有很好的证据表明，BFIOL 可以发挥保护作用。25,26,27,28,29,30,31 尽管这些研究的结果表明蓝光可能造成损害, 但有人说这些研究结果可能无法直接应用于人类AMD的发展或进展。 最近，与这个问题相关的关于人类使用生殖器红细胞的早期小型研究已经发表。 Nagai等[22]观察了一小组病人，这些病人在接受眼底自体荧光造影前和2年的随访后发现，与 UVFIOLs (79只眼)相比，BFIOL 组异常AF较少(52只眼) ，并指出 BFIOL 组 AMD 的发生率较低。 Lavric 和 Pompe 报告了他们对30名一只眼睛接受了 BFIOL 和另一只眼睛接受 UVFIOL 的患者进行的为期2年的随访。 2015年，Pipis 等人报告说，BFIOL 组的地图样萎缩(GA)进展比 UVFIOL 组慢得多，当时他们检查了40名患者的66只眼睛。 其中27例植入了 BFIOL，39例植入了 UVFIOL。频域域OCT和先进的 RPE 软件分析被用来测量病变的大小和一年以上的任何进展。 比较 BFIOL 和 UVFIOL 之间 GA 区域的进展有统计学意义上的显著差异，提示 BFIOL 的保护作用.[21]&lt;/p&gt;
+&lt;h3&gt;对昼夜节律的影响, 特别是对睡眠-觉醒周期的影响&lt;/h3&gt;
+&lt;p&gt;Mainster提出了这样一种担忧，即植入BFIOL会通过阻止短波光到达视网膜来破坏昼夜节律。15由于光线不仅刺激光感受器的活动，而且直接刺激光敏视网膜神经节细胞(pRGCs) ，这种细胞对480纳米处的光线最为敏感，而且由于 BFIOL 过滤蓝光，人们担心这种人工晶体可能会破坏睡眠-觉醒周期。 pRGCs投射到大脑的多个结构，包括下丘脑前部的视交叉上核(SCN) ，起着主要昼夜节律起搏器的作用。 SCN反过来调节整个身体的昼夜生理。17,65需要从眼睛的光输入使生物钟与环境的昼夜周期同步17&lt;/p&gt;
+&lt;p&gt;许多研究已经表明，除了改善视力，白内障手术还能改善睡眠-觉醒模式[17,18,19,66]&lt;/p&gt;
+&lt;p&gt;这种好处被认为是由于到达视网膜的光量增加所致。 Landers等人[66]进行了一项横向研究睡眠质量研究，比较了31名 UVB-IOL 患者和18名 BFIOL 患者的睡眠质量。 他们表明，PSQI-衍生的睡眠质量在 UVB-IOL 和 BFIOL 晶状体类型之间没有差异。&lt;/p&gt;
+&lt;p&gt;尽管 Espindle 等人没有对睡眠进行评估，但他们调查了接受UV-IOL或 BFIOL 白内障手术治疗后257名患者的健康相关生活质量，这些患者使用视觉特异性量表(NEI VFQ-39)和一般的生理和心理健康量表(SF-12) ， 他们报告了两组术后视力相关功能的改善，但双侧 UVB-IOL 植入物和双侧 BFIOL 之间没有区别。67 Alexander 等人在一个大型的前瞻性、连续性、双点研究中，961名参与者完成了研究，显示 BFIOL 组和 UV-IOL 组之间没有区别。无论植入的晶状体类型如何，整个队列在短期内进行白内障手术后睡眠质量均有显着改善.17 Schmoll等[18]研究了睡眠 - 觉醒和认知反应时间，并表明BFIOL或UVFIOL之间没有差异。 CHUKYO研究旨在评估白内障手术中人工晶状体植入术后的血压和睡眠持续时间，并比较不同类型的人工晶状体. 使用问卷调查，以及获得血压测量和睡眠持续时间，他们从IOL植入前，IOL植入后1周和IOL植入后1个月的1367名患者（1367只眼）获得数据。他们报告说，植入后患者组的舒张压显著降低。植入后1个月收缩压的降低在接受BFIOL的患者中显着高于接受UVFIOL的患者。他们认为BFIOL对于高血压患者比UVFIOL更好。此外，他们报告说，BFIOL或UVFIOL在改善睡眠持续时间方面没有差异。他们报道IOL组之间的视力没有显着差异，但他们认为光谱透射率特性的差异可能导致对自主神经系统和褪黑激素分泌的不同影响。 他们解释说，BFIOL 患者的血压下降幅度更大，可能是因为已知正常血压的人接触蓝光后血压会升高。68 因此，未经紫外线滤光人工晶体过滤的蓝光可能抵消人工晶体植入术后的血压下降。19 Leruez 对接受 BFIOL 或 UV-IOL 植入术的患者进行了一项初步研究，以确定 BFIOLs 植入术后是否会影响情绪，或者与 UVFIOL 相比是否会诱发更多的抑郁。 他们发现 BFIOL 和 UVFIOL 之间没有区别。 术后两组患者的情绪都有所改善。20&lt;/p&gt;
+&lt;h3&gt;讨论&lt;/h3&gt;
+&lt;p&gt;人工晶状体技术有许多进步，这使得人工晶状体的选择变得复杂和具有挑战性。 在正在进行的辩论是否植入一个 BFIOL 或一个明确的人工晶体，现在有明确的证据表明，视觉表现与这两种类型的人工晶体是相似的。 临床研究表明，BFIOL 和 UVFIOL 植入物的视力、明视和暗视力和色觉性能基本相同。1,2,3,4,5,9,44,45,69&lt;/p&gt;
+&lt;p&gt;已经证明，临床成像和视野测试可能受植入BFIOL影响的担忧, 并不存在。&lt;/p&gt;
+&lt;p&gt;还有人提出使用BFIOL可以破坏昼夜节律，特别是睡眠，但这种担忧也被消除了.17,18,19,66白内障手术主要是在老年人群中进行的。老年人存在着年龄相关的视网膜光感受器和神经节细胞群的下降，以及生物钟的功能，以及随衰老变小的瞳孔。 很明显，光线的获取对这个群体很重要。 瞳孔尺寸和光线的获取比目前的人工晶体更重要.17&lt;/p&gt;
+&lt;p&gt;总的来说，使用 BFIOL 似乎没有任何缺点，而且使用人工晶体确实有好处，它可以过滤短波长的光，包括减少眩光.11,48,49,50。然而，更重要的是，短波长的光已被证明对视网膜有毒，体外试验的结果表明，动物和临床研究支持这样的假设，即保护视网膜免受短波长光的伤害是可取的，植入 BFIOL 似乎是一个明智的预防措施。 (Van norren ー cambridge Symposium Paper)6,7,25,26,27,28,29,30,31一项小型研究的早期证据表明，BFIOLs 有可能降低 GA的进展21，还有新出现的证据表明，短波长光可能对眼黑色素瘤的发展有一定作用，70以及皮肤黑色素瘤，使得保护眼睛免受短波长光的伤害成为可取的。儿童由于长期暴露在短波长光下的可能是最好接受 BFIOL 植入术的。 而且也可能最好不要在一只眼睛里植入 BFIOL，而在另一只眼睛里植入 UVFIOL，因为 Schweitzer 指出有六个病人注意到两只眼睛之间的色觉差异71。 然而，重要的是IOL设计允许光接收尽可能接近年轻成人健康晶状体，并且提供光保护以防止患者在寿命期间的收到短波长光损伤。&lt;/p&gt;
+&lt;p&gt;总之，在文献中有很好的证据表明，植入 BFIOL 不会损害视力、明视、暗视或色觉，也不会影响睡眠-觉醒周期。 此外，植入 BFIOL 有一些明确的和理论上的好处，包括改善眩光的性能，但更重要的是保护视网膜免受短波长光的伤害。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/</guid><pubDate>Sat, 12 Jan 2019 07:00:04 GMT</pubDate></item><item><title>通项公式快速求解</title><link>https://goldengrape.github.io/posts/python/carefree-princess-1018/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
@@ -1447,47 +1492,4 @@ $$&lt;/p&gt;
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><guid>https://goldengrape.github.io/posts/python/Alpha_tear/</guid><pubDate>Sat, 22 Sep 2018 17:00:00 GMT</pubDate></item><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
-&lt;p&gt;用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.&lt;/p&gt;
-&lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
-
-&lt;h3&gt;使用方法:&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;到这个&lt;a href="https://gist.github.com/goldengrape/eb4359a6467c5196435e469708c95f11"&gt;gist页面&lt;/a&gt;, 点击Download zip, 将代码下载到电脑上, 然后解压缩得到“Simple Play and Say.scpt”文件&lt;/li&gt;
-&lt;li&gt;制作好keynote, 保持当前文档打开状态&lt;/li&gt;
-&lt;li&gt;双击打开“Simple Play and Say.scpt”文件, 然后运行脚本&lt;/li&gt;
-&lt;li&gt;QuickTime Player会自动录制屏幕播放过程. 然后可以保存或者导出成其他分辨率的视频.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;这种方式可以快速生成演讲视频, 如果讲稿中有地方需要修改, 只要改动字符就可以了, 不必像对着镜头讲课录像那种必须要重新剪辑或者重新配音.&lt;/p&gt;
-&lt;p&gt;而且说个英文什么的也很方便, 只是中文语音目前只有“婷婷”可以用.&lt;/p&gt;
-&lt;h3&gt;进阶使用方法:&lt;/h3&gt;
-&lt;p&gt;&lt;!-- TEASER_END --&gt;
-直接使用QuickTime进行屏幕录像的时候, 默认使用的是“内置麦克风”, 如果环境比较嘈杂, 那么背景音也会录下来.&lt;/p&gt;
-&lt;p&gt;解决的方法是让QuickTime进行“内录”, 也就是直接劫持声卡的声音. 有一个很久远的开源软件可以达成这个目的, &lt;a href="https://github.com/mattingalls/Soundflower/releases"&gt;Soundflower&lt;/a&gt;, 点击下载安装以后, 将出现两个新的声卡.&lt;/p&gt;
-&lt;p&gt;先打开一次QuickTime Player, 新建屏幕录像, 然后点击录像按钮旁边的展开箭头, 将麦克风设定为Soundflower(2ch)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-08-26 10.59.06" src="https://i.loli.net/2018/08/26/5b8217b2b8a7e.png"&gt;&lt;/p&gt;
-&lt;p&gt;QuickTime里面貌似设定一次以后就默认保持这种设置了.&lt;/p&gt;
-&lt;p&gt;然后在运行脚本播放keynote之前, 要将系统的声音输出也设定到Soundflower(2ch)虚拟声卡上. 方法是点击屏幕顶部菜单栏中的音量图标, 就可以直接修改了.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-08-26 11.02.25" src="https://i.loli.net/2018/08/26/5b821858cc1bf.png"&gt;&lt;/p&gt;
-&lt;p&gt;记得在重放的时候, 将声音的输出设备修改会“内置扬声器”, 否则就听不到声音了.&lt;/p&gt;
-&lt;h3&gt;代码解释&lt;/h3&gt;
-&lt;p&gt;代码修改自Sal Soghoian的&lt;a href="https://iworkautomation.com/keynote/slide-presenter-notes.html"&gt;iwork &amp;amp; automation网站&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;我添加了使用QuickTime进行屏幕录像的几段.&lt;/p&gt;
-&lt;p&gt;之前一直无法解决自动播放动画的问题, 经过一上午的尝试(我可真无聊), 终于这样解决了:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;repeat 10 times
-    tell document 1
-        set cNum to (get slide number of current slide)
-    end tell
-    if cNum is not equal to i then
-        exit repeat
-    else
-        show next
-        say "," -- I really don't know why I have to say something here, english comma is a sound of silence
-    end if
-end repeat
-&lt;/pre&gt;
-
-
-&lt;p&gt;每个页面内“点击下一个”, 不超过10次, 如果你的动画太多, 可以修改这个数字. 但我建议还不如分成两页幻灯.&lt;/p&gt;
-&lt;p&gt;然后去判断现在是不是还在当前页面, 或者已经是切换到了下一张, 如果切换了, 就跳出循环, 如果还在这一页, 就继续“点击下一个”, 但如果仅仅这么写, 就会出现一口气连续点击了10次, 直接跳到结尾了.&lt;/p&gt;
-&lt;p&gt;我试过很多方法, 比如delay, do shell script "sleep " 之类, 都无法解决, 后来发现必须用say说点什么, 但又不想让在这里真的说点什么, 于是就说个逗号吧, 也算是某种“Sound of Silence”&lt;/p&gt;&lt;/div&gt;</description><category>applescript</category><category>教程</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</guid><pubDate>Sun, 26 Aug 2018 02:00:00 GMT</pubDate></item></channel></rss>
+</description><category>python</category><guid>https://goldengrape.github.io/posts/python/Alpha_tear/</guid><pubDate>Sat, 22 Sep 2018 17:00:00 GMT</pubDate></item></channel></rss>
