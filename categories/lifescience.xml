@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2018 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 20 Oct 2018 13:47:46 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 13 Jan 2019 04:37:04 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>我练习毛笔字的方法</title><link>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;简述一下我练习毛笔字的方法, (尚不敢称为书法):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;至少看一遍&lt;a href="http://my.tv.sohu.com/pl/9076183/index.shtml"&gt;《黄简讲书法》的初级课程&lt;/a&gt;, 老先生说话比较慢, 用1.5x的速度听比较舒服.&lt;/li&gt;
+&lt;li&gt;用&lt;a href="https://detail.tmall.com/item.htm?id=44531148545"&gt;A4透明胶片&lt;/a&gt;打印字帖, 每个字按2寸大小的大楷进行打印, 大约一页6个字左右, 网上很容易找到这样的字帖, 比如王羲之《兰亭序》的大字字帖. 稍微调整一下颜色和对比度, 可以得到纯黑白的.&lt;/li&gt;
+&lt;li&gt;可以描红或者临帖, 如果是四尺半切的宣纸, 可以折叠成4x2^N格, 不妨先描红一格, 然后再临帖3格.&lt;/li&gt;
+&lt;li&gt;描红, 把打印的字帖垫在宣纸下面.&lt;/li&gt;
+&lt;li&gt;临帖, 先照着写, 写完以后把透明胶片字帖放回到自己写的字上面比对. 每写完一个字都进行一次比对.&lt;/li&gt;
+&lt;li&gt;找个支架, 把手机对着写字区域夹好, 写字的时候录像, 主要是录笔和手的动作. 写完以后看一看录像, 删了或者扔到google photo里, 反正不占空间. &lt;a href="https://www.microsoft.com/en-us/microsoftpix"&gt;microsoft pix&lt;/a&gt;能够方便做成高速重放视频.&lt;/li&gt;
+&lt;li&gt;成人练习, 我觉得三天打鱼两天晒网比较好. 想写的时候就多些几天, 不想写就算了. 但是为了避免完全忘记, 建议上个闹钟, 比如每晚10点提醒一下: “要不要练练字?”, GTD那种强迫生活方式我可受不了.&lt;/li&gt;
+&lt;li&gt;写完以后拍照, 邀请几个好友/同学建群打卡或者只是留存.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;这是我个人的练习方法, 写完一个字以后再用透明胶片上的字帖拿回去比对, 看两个字的差异, 相当于做Mean Square Error. 把MSE当作loss function, 对自己的人脑神经网络进行训练, 虽然每个字都练习很多遍, 容易产生过拟合, 但是由于人脑天然具有遗忘功能, 加上三天打鱼两天晒网, 遗忘参数调得比较高, 所以个人感觉还是有不错得泛化能力.&lt;/p&gt;
+&lt;p&gt;对操作录像然后重放, 是训练手术的基本技巧. 书法也算是一种手的技术吧. 初学者通常注意力范围有限, 看不到笔锋的背面, 也看不到自己的手腕动作. 黄简老师讲吴昌硕写字偶尔还要探头看看自己笔锋的背面(为啥不用镜子?), 现在有手机录像就方便很多了.&lt;/p&gt;
+&lt;p&gt;一年不到, 练习了“永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右，引以为流觞曲水，列坐其次。” 65个字, 写到后面还经常要再返回去练练前面.&lt;/p&gt;
+&lt;p&gt;偶尔一时兴起, 想写点别的, 最简单的方法是用个防水套把iPad装起来, 然后用书法字典的app(比如&lt;a href="https://itunes.apple.com/cn/app/%E4%BA%91%E7%AB%A0%E4%B9%A6%E6%B3%95%E5%AD%97%E5%85%B8/id992025786"&gt;云章书法字典&lt;/a&gt;)找到想写的字, 也可以描红, 也可以临帖后再把宣纸铺上去比对. 但防水套和宣纸比较薄, 手指有可能会触碰屏幕导致误操作, 左手可以戴个手套. 如果反复写很多次会比透明胶片字帖麻烦一些.&lt;/p&gt;
+&lt;p&gt;写好的文字可以&lt;a href="https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/"&gt;导入keynote里&lt;/a&gt;用来做Keynote/PPT幻灯, 很好玩.&lt;/p&gt;
+&lt;p&gt;据说人们容易低估自己周期性的努力, 而高估自己一次性的努力, 这是哪个推友说过来着, 我记不起来了. 感觉挺正确的.&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</guid><pubDate>Sun, 13 Jan 2019 04:00:00 GMT</pubDate></item><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
 &lt;a href="https://www.icloud.com/shortcuts/dc244e748f3a4c79a639af520e2b05f9"&gt;点这里导入捷径&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;闭气训练:
 * 方式: CO2耐受&lt;/p&gt;
