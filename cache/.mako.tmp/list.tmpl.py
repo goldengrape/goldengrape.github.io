@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1547618295.002754
+_modified_time = 1547618722.313569
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/list.tmpl'
 _template_uri = 'list.tmpl'
@@ -38,9 +38,9 @@ def render_body(context,**pageargs):
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         items = _import_ns.get('items', context.get('items', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
         archive_nav = _mako_get_namespace(context, 'archive_nav')
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def content():
             return render_content(context._locals(__M_locals))
         __M_writer = context.writer()
@@ -65,9 +65,9 @@ def render_content(context,**pageargs):
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         items = _import_ns.get('items', context.get('items', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
         archive_nav = _mako_get_namespace(context, 'archive_nav')
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def content():
             return render_content(context)
         __M_writer = context.writer()
