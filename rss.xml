@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Jan 2019 14:11:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>好好学6个月英语, 还是等半年看看机器翻译的水平?</title><link>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如题.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 16 Jan 2019 06:05:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>好好学6个月英语, 还是等半年看看机器翻译的水平?</title><link>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如题.&lt;/p&gt;
 &lt;p&gt;现在机器学习实在进步太快, 好用的工具层出不穷. 列举一下目前使用的工具:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览网页:&lt;/li&gt;
@@ -27,7 +27,14 @@
 &lt;p&gt;语法检查工具. 每年全球各种英语考试那么多, 改错题也那么多, 不能拿来当语料库么.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;以上这些工具, 配合&lt;a href="https://goldengrape.github.io/posts/bulabula/gollum-wiki"&gt;用Gollum建立的wiki笔记工具&lt;/a&gt;, 读文献吐槽文献很爽.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</guid><pubDate>Tue, 15 Jan 2019 13:00:00 GMT</pubDate></item><item><title>用Gollum建立wiki</title><link>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;目的:&lt;/strong&gt; 建立一个文献阅读笔记.&lt;/p&gt;
+&lt;p&gt;以上这些工具, 配合&lt;a href="https://goldengrape.github.io/posts/bulabula/gollum-wiki"&gt;用Gollum建立的wiki笔记工具&lt;/a&gt;, 读文献吐槽文献很爽.&lt;/p&gt;
+&lt;p&gt;补充一下医学文献的快速浏览过程:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开&lt;a href="https://pubmed.gov/"&gt;pubmed&lt;/a&gt;检索文献&lt;/li&gt;
+&lt;li&gt;如果有html的全文, 则在文献的右侧有PMC Full Text(free)的图标&lt;img alt="图标" src="https://static.pubmed.gov/portal/portal3rc.fcgi/4183432/img/3977009"&gt;. 可以直接点击阅读, PMC的阅读器非常棒, 参考文献会放到相应段落旁边, 看综述时非常舒服. 此时可以点击&lt;a href="https://chrome.google.com/webstore/detail/lingocloud-interpreter/jmpepeebcbihafjjadogphmbgiffiajh?hl=zh-CN"&gt;彩云小译的插件按钮&lt;/a&gt;, 进行中英文对照翻译. 简要浏览, 遇到细节再看英文是具体怎么说的. 
+  优选PMC的阅读器, 因为彩云小译有些网页解析有问题, 比如对于JAMA的网站只能翻译前几段, 后面的似乎就忘记了.&lt;/li&gt;
+&lt;li&gt;如果没有html全文, 在pubmed的网址前面加入sci-hub.tw/ 下载PDF文件, 然后送进&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod&lt;/a&gt;里面, 翻译完成后下载word文档浏览译文.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</guid><pubDate>Tue, 15 Jan 2019 13:00:00 GMT</pubDate></item><item><title>用Gollum建立wiki</title><link>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;目的:&lt;/strong&gt; 建立一个文献阅读笔记.&lt;/p&gt;
 &lt;p&gt;我想要一个看文献记录笔记的工具, 由于有http://sci-hub.tw  很方便找到全文, 而且我并不需要严格的引文管理/插入这样的操作, 所以只需要记录文献的标题和DOI即可. 在阅读中的笔记, 用blog不太合适, 因为还不完全是一个时间线的模式, 一篇文献可能从不同的角度, 在不同时间阅读的时候, 会产生不同的内容, 所以要动态更新. 文献中引用的知识或者信息, 可能还有交叉引用的可能. 于是我打算用wiki来做这件事情.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;方法:&lt;/strong&gt; 建立一个wiki
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
