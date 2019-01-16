@@ -1,5 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 14 Jan 2019 18:49:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>用Gollum建立wiki</title><link>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;目的:&lt;/strong&gt; 建立一个文献阅读笔记.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Jan 2019 14:11:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>好好学6个月英语, 还是等半年看看机器翻译的水平?</title><link>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如题.&lt;/p&gt;
+&lt;p&gt;现在机器学习实在进步太快, 好用的工具层出不穷. 列举一下目前使用的工具:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览网页:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;浏览的要求就是看起来快, 大概意思清楚就可以了, 所以我不使用那种查单词的. 而是直接翻译成中英对照的, 现在用的是&lt;a href="http://caiyunapp.com/"&gt;彩云小译&lt;/a&gt; , 浏览网页用量比较大, 所以付费订阅中, 每个月1$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看文献:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然主要是医学文献, 有sci-hub看全文非常方便, 只需要把sci-hub.tw/ 加在文献页面网址的前面即可, 这样就能够下载PDF了.&lt;/p&gt;
+&lt;p&gt;此处要强力推荐这个&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod体验版&lt;/a&gt; 专职的医学文献机器翻译, 机翻的可读性还是不错的. 能够机翻PDF, 然后转换成word文件, 不但维持原格式, 连表格都原位翻译, 连上标下标都按原位翻译.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;写作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我的英语能力, 大概是听&amp;gt;说&amp;gt;&amp;gt;读&amp;gt;=写. 所以有两个辅助工具,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个是Google Translate, 写好中文看英文, 如果英文翻译得不好, 多半是中文表达不够清楚, 改中文.&lt;/li&gt;
+&lt;li&gt;另一个是&lt;a href="https://app.grammarly.com/"&gt;grammarly&lt;/a&gt;, 这个有&lt;a href="https://chrome.google.com/webstore/detail/kbfnbcaeplbcioakkpcpgfkobkghlhen"&gt;Chrome的插件&lt;/a&gt;, 能够检查出一些语法和拼写错误. 很奇怪的, Google Translate得到的结果里还是时常会有语法错误, 最常见的是丢失冠词. 按说RNN生成的序列这种问题应该概率很低.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在还缺少比较好用的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;专利机器翻译. 不过专利这种东西, 即使用中文写的, 也不是很好懂的. 我自己的发明, 看专利我也不是很明白. 所以, 最好有个“专利语”到“日常口语”, 哪怕是“工程师语”的机器翻译也行.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法检查工具. 每年全球各种英语考试那么多, 改错题也那么多, 不能拿来当语料库么.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上这些工具, 配合&lt;a href="https://goldengrape.github.io/posts/bulabula/gollum-wiki"&gt;用Gollum建立的wiki笔记工具&lt;/a&gt;, 读文献吐槽文献很爽.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</guid><pubDate>Tue, 15 Jan 2019 13:00:00 GMT</pubDate></item><item><title>用Gollum建立wiki</title><link>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;目的:&lt;/strong&gt; 建立一个文献阅读笔记.&lt;/p&gt;
 &lt;p&gt;我想要一个看文献记录笔记的工具, 由于有http://sci-hub.tw  很方便找到全文, 而且我并不需要严格的引文管理/插入这样的操作, 所以只需要记录文献的标题和DOI即可. 在阅读中的笔记, 用blog不太合适, 因为还不完全是一个时间线的模式, 一篇文献可能从不同的角度, 在不同时间阅读的时候, 会产生不同的内容, 所以要动态更新. 文献中引用的知识或者信息, 可能还有交叉引用的可能. 于是我打算用wiki来做这件事情.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;方法:&lt;/strong&gt; 建立一个wiki
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
@@ -571,24 +599,4 @@ I am.
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;严格禁止在水下进行单人闭气训练包括但不限于在脸盆澡盆泳池中&lt;/strong&gt;&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;不建议单人进行闭气训练&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</guid><pubDate>Sat, 20 Oct 2018 13:00:00 GMT</pubDate></item><item><title>MD5密码生成器的iOS捷径版本</title><link>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是我很久以前做的一个&lt;a href="https://github.com/goldengrape/md5-password-creator"&gt;密码生成器&lt;/a&gt;, 之后我还一直在用它来管理我的密码. 有了iOS捷径以后, 发现“捷径”里面也有哈希运算, 于是就顺手戳了一个.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.icloud.com/shortcuts/d65bc3750eae4925b0faaf9a81333671"&gt;点这里获取捷径&lt;/a&gt;
-在导入时, 可能会要求“加盐”, 也就是一段混淆用的字符串, 如果您以前用过我的密码生成器, 请和原来设定的一样, 如果没用过, 那么可以随意设定一段话, 只要在导入各个iOS设备时保持一样的输入就可以了.&lt;/p&gt;
-&lt;p&gt;然后保存到主屏幕就可以生成一个类似单独app的图标, 每次需要输入密码时打开它, 输入主密码和网站/应用名, 它就可以计算出一个子密码, 并且同时复制到剪贴板上, 只需要再粘贴到密码输入框里就可以了.&lt;/p&gt;
-&lt;p&gt;有兴趣详细了解的继续看:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;以前的核心代码就这一小段:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;rawString&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"srcbox1"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;salt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"srcbox2"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;str_md5&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;md5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;rawString&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;str_base64&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;b64encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;str_md5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;密码=base64(md5( 主密码+盐+网站名+版本) )&lt;/p&gt;
-&lt;p&gt;在iOS捷径中, 变量是可以为一个列表的, 可以用“添加到变量”, 将内容加入到列表中,&lt;/p&gt;
-&lt;p&gt;字符串的合并使用的是“合并文本”, 如果传入的是一个列表变量, 就是把列表中的文本join起来.&lt;/p&gt;
-&lt;p&gt;捷径中没有找到字符串切片的函数, 但有“匹配文本”, 可以用上正则表达式, 取出前N个字符的正则表达式就是&lt;code&gt;^[0-9a-zA-Z]{1,N}&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;其他没有什么好解释的了, 为了和以前密码生成器的结果一致, 我使用的是“2012sprint/2012summer...”这样的字符串作为版本, 您可以根据自己的需求修改.&lt;/p&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</guid><pubDate>Sat, 20 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</guid><pubDate>Sat, 20 Oct 2018 13:00:00 GMT</pubDate></item></channel></rss>
