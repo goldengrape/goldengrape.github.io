@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 16 Jan 2019 06:05:03 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>好好学6个月英语, 还是等半年看看机器翻译的水平?</title><link>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如题.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 23 Jan 2019 06:27:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>好好学6个月英语, 还是等半年看看机器翻译的水平?</title><link>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如题.&lt;/p&gt;
 &lt;p&gt;现在机器学习实在进步太快, 好用的工具层出不穷. 列举一下目前使用的工具:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;浏览网页:&lt;/li&gt;
@@ -9,6 +9,11 @@
 &lt;li&gt;看文献:&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;当然主要是医学文献, 有sci-hub看全文非常方便, 只需要把sci-hub.tw/ 加在文献页面网址的前面即可, 这样就能够下载PDF了.&lt;/p&gt;
+&lt;p&gt;(更新: 我发现很多人不理解把scihub加在文献页面前面的意思)&lt;/p&gt;
+&lt;p&gt;比如: 在pubmed上查到一篇文献, 网址是:
+&lt;code&gt;https://www.ncbi.nlm.nih.gov/pubmed/30651639/&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;那么通过sci-hub找到的全文网址就是: 
+ &lt;code&gt;sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/30651639/&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;此处要强力推荐这个&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod体验版&lt;/a&gt; 专职的医学文献机器翻译, 机翻的可读性还是不错的. 能够机翻PDF, 然后转换成word文件, 不但维持原格式, 连表格都原位翻译, 连上标下标都按原位翻译.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;写作&lt;/li&gt;

@@ -21,6 +21,14 @@
 
 当然主要是医学文献, 有sci-hub看全文非常方便, 只需要把sci-hub.tw/ 加在文献页面网址的前面即可, 这样就能够下载PDF了.
 
+(更新: 我发现很多人不理解把scihub加在文献页面前面的意思)
+
+比如: 在pubmed上查到一篇文献, 网址是:
+`https://www.ncbi.nlm.nih.gov/pubmed/30651639/` 
+
+那么通过sci-hub找到的全文网址就是: 
+ `sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/30651639/ `
+
 此处要强力推荐这个[TransGod体验版](https://fanyi.transgod.cn/) 专职的医学文献机器翻译, 机翻的可读性还是不错的. 能够机翻PDF, 然后转换成word文件, 不但维持原格式, 连表格都原位翻译, 连上标下标都按原位翻译.
 
 * 写作
