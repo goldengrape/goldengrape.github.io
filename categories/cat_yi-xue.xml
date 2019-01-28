@@ -1,5 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：医学)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_yi-xue.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Jan 2019 14:11:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>iOS临床捷径</title><link>https://goldengrape.github.io/posts/bulabula/clinic-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在读大学的时候, 一直有这样的怨念: “这个东西能在电脑上查到, 为什么要背下来!” 于是我的成绩很差.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：医学)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_yi-xue.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Jan 2019 07:24:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何查阅文献</title><link>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;面向对象: 不满足于查百度的人. 医疗药品/ 器械相关企业从业者. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;学习目的: 对一个自己不熟悉的领域, (此处为医学), 快速查阅文献, 了解基础知识.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;要求: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基础的英语水平: 现在青少年的初中二年级水平. 如果是成年人, 考虑到成人的能力通常会迅速下降, 大概大学4级水平吧.&lt;/li&gt;
+&lt;li&gt;会使用Chrome浏览器或Firefox浏览器.&lt;/li&gt;
+&lt;li&gt;会安装Chrome插件或Firefox插件.&lt;/li&gt;
+&lt;li&gt;可能需要具备“正常访问国际互联网”的能力.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;本教程以眼科“OK镜”为例. 场景是这样的, 你带着自己(或好友)的娃去看了看眼睛, 发现近视了. 医生推荐了OK镜, 但这东西好贵啊, 你想自己也多了解一些. 公司可能最近也有往这方面代理产品/研发产品的意图. 所以, 你打算自己再查查资料. &lt;/p&gt;
+&lt;p&gt;图文教程, 图片比较多.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;软件的准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Chrome浏览器: 
+本教程按照Chrome浏览器来讲解. 下载Chrome离线版的方法不在此赘述, 可以参考&lt;a href="https://www.zhihu.com/question/19981495"&gt;知乎上的教程&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ScholarScope插件: 
+用来显示文献的影响因子, 可以视为一个文献质量的评分吧. ScholarScope插件的下载和使用在其&lt;a href="https://www.scholarscope.cn/"&gt;官方网站上有详细的解说&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;彩云小译网页翻译插件: 
+非必须, 但我真的喜欢看中英文对照的翻译, 所以用上&lt;a href="https://chrome.google.com/webstore/detail/lingocloud-interpreter/jmpepeebcbihafjjadogphmbgiffiajh?hl=zh-CN"&gt;这个插件&lt;/a&gt;, 类似网页翻译工具应该还有很多. 国内大概有道, 腾讯, 搜狗之类的都多多少少有类似的东西.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;合适的关键词&lt;/h2&gt;
+&lt;p&gt;听到的只有“OK镜”这个词. 似乎是个缩略语, 那么应当选择什么关键词去寻找呢?&lt;/p&gt;
+&lt;p&gt;专业词汇的中英文互相翻译, 从CNKI的翻译助手开始, 网址是&lt;a href="http://dict.cnki.net/"&gt;http://dict.cnki.net/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;打开CNKI翻译助手, 输入“OK镜”
+&lt;img alt="屏幕快照 2019-01-28 14.05.47" src="https://i.loli.net/2019/01/28/5c4e9bd98c547.png"&gt;&lt;/p&gt;
+&lt;p&gt;有两个候选词汇“OK lens”和“orthokeratology lenses”, 前者似乎是后者的缩写, 本着选择题选答案最长的原则, 我们将使用“orthokeratology lenses”&lt;/p&gt;
+&lt;h2&gt;在Pubmed上查文献&lt;/h2&gt;
+&lt;p&gt;PubMed, 是美国国家医学图书馆提供的一个医学搜索引擎. 某种程度上, 你就当这是医学文献唯一的搜索引擎好了. 除非是为了某些“医学考古”的研究目的, 否则PubMed上搜不到就意味着不重要或者不存在. &lt;/p&gt;
+&lt;p&gt;PubMed的网址很长, 是啰哩啰嗦的https://www.ncbi.nlm.nih.gov/pubmed/ 但通常使用pubmed.gov或者pubmed.org甚至pubmed.com都可以访问到.&lt;/p&gt;
+&lt;p&gt;在搜索框里填入orthokeratology lenses, 然后按Search, 出现如下结果: 
+&lt;img alt="屏幕快照 2019-01-28 14.13.59" src="https://i.loli.net/2019/01/28/5c4e9dc187f96.png"&gt;&lt;/p&gt;
+&lt;h2&gt;从哪里开始看?&lt;/h2&gt;
+&lt;h3&gt;文献的重要性&lt;/h3&gt;
+&lt;p&gt;搜索orthokeratology lenses有450篇文献, 如果不是这个专业的人, 没必要也没时间都看过一遍. 而且要看, 也要有个先后顺序. 我们刚才装好的ScholarScope插件, 就是为了如此. &lt;/p&gt;
+&lt;p&gt;如果之前装好了ScholarScope插件, 那么会在每篇文献的下面有一个数字和一个Q数字, 例如这篇文献的2.12和Q2, 前面的数字越大越重要, 后面的Qx, 数字越小越重要. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-01-28 14.15.49" src="https://i.loli.net/2019/01/28/5c4e9e2355a1a.png"&gt;&lt;/p&gt;
+&lt;h3&gt;文献的类型&lt;/h3&gt;
+&lt;p&gt;在左上角, 还有一组限制条件
+&lt;img alt="屏幕快照 2019-01-28 14.21.21" src="https://i.loli.net/2019/01/28/5c4e9f7e35ce7.png"&gt;&lt;/p&gt;
+&lt;p&gt;如果只是想快速了解一个领域, 当然应该先看看别人写好的综述, 也就是Review. 如果想知道疗效如何, 则可能应该要再看看临床实验Clinical Trials. &lt;/p&gt;
+&lt;p&gt;对于某些历史悠久的领域, 还可以限定只看5年以内的文献, 在Publication dates里选上5years.&lt;/p&gt;
+&lt;p&gt;对于OK镜, 还算是一个相对较新的领域, 从右边文献与年份的关系可以看出大约是在2000年以后热起来的. 
+&lt;img alt="屏幕快照 2019-01-28 14.24.12" src="https://i.loli.net/2019/01/28/5c4ea0273242f.png"&gt;&lt;/p&gt;
+&lt;p&gt;我们先暂时不限定文献的类型, 而是快速浏览一下文献的题目和评分, 看看有没有感兴趣的. &lt;/p&gt;
+&lt;h3&gt;快速浏览&lt;/h3&gt;
+&lt;p&gt;说实话, 我只想读一篇, 满篇英文也挺烦的. 翻译一下吧:&lt;/p&gt;
+&lt;p&gt;点一下彩云小译的插件, 可以快速翻译页面中的文字, 如果觉得语句不太通顺, 影响理解, 就再看看英文原文是怎么写的. 
+&lt;img alt="屏幕快照 2019-01-28 14.36.13" src="https://i.loli.net/2019/01/28/5c4ea2f8e2c81.png"&gt;&lt;/p&gt;
+&lt;p&gt;大致看一下评分, 说实话分数都不高啊, 多数是在1-2分左右, 不过下面有一篇7分多的文章, 显得鹤立鸡群. 还是美国眼科学会报告. 看题目也是大而全, 貌似是不错的入门文章, 就从这里开始好了.
+&lt;img alt="屏幕快照 2019-01-28 14.38.31" src="https://i.loli.net/2019/01/28/5c4ea3afedd46.png"&gt;&lt;/p&gt;
+&lt;h2&gt;阅读摘要&lt;/h2&gt;
+&lt;p&gt;点开这篇&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/30476518"&gt;“Use of Orthokeratology for the Prevention of Myopic Progression in Children: A Report by the American Academy of Ophthalmology.”&lt;/a&gt; , &lt;/p&gt;
+&lt;p&gt;你会看到一段摘要Abstract, 讲述了该文献的大致内容, 如果是临床试验研究, 往往读一下摘要就可以知道其研究结果, 如果嫌弃读英文烦, 也可以用上彩云小译的插件, 此处不再赘述. &lt;/p&gt;
+&lt;p&gt;但对于大而全的综述, 最好深入到原文中去读读详细. 
+&lt;img alt="屏幕快照 2019-01-28 14.42.50" src="https://i.loli.net/2019/01/28/5c4ea4b13f74d.png"&gt;&lt;/p&gt;
+&lt;h2&gt;找到全文&lt;/h2&gt;
+&lt;p&gt;理论上, 文章的全文链接出现在右侧的“Full text links”, 但实际上往往点进去是要求付费的. 这是科学界自己也非常不爽的事情, 明明是拿着纳税人的钱做出的研究成果, 却无法分享给全社会, 而被科学杂志收取了费用, 甚至科学家自己不但没有稿费还经常要掏版面费. &lt;/p&gt;
+&lt;p&gt;于是此处应有侠盗出场, 
+&lt;img alt="Scihub_raven" src="https://i.loli.net/2019/01/28/5c4ea6d76d2db.png"&gt;&lt;/p&gt;
+&lt;p&gt;Sci-Hub, 由哈萨克斯坦软件开发暨神经技术研究生亚历珊卓·艾尔巴金（Alexandra Elbakyan）建立, 一个非常非常强大的全文数据库. &lt;/p&gt;
+&lt;p&gt;如果已经安装了ScholarScope插件, 去点击doi后面那一串数字, 就可以自动跳转到sci-hub的链接上. 
+&lt;img alt="屏幕快照 2019-01-28 14.55.41" src="https://i.loli.net/2019/01/28/5c4ea77a189c9.png"&gt;&lt;/p&gt;
+&lt;p&gt;或者, &lt;/p&gt;
+&lt;p&gt;这篇文献的网址是: https://www.ncbi.nlm.nih.gov/pubmed/30476518&lt;/p&gt;
+&lt;p&gt;那么把 sci-hub.tw/ 加在文献网址的前面, 变成sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/30476518  就可以找到全文了. &lt;/p&gt;
+&lt;p&gt;点击save, 就可以下载保存PDF全文了.&lt;img alt="屏幕快照 2019-01-28 15.00.27" src="https://i.loli.net/2019/01/28/5c4ea8b212c28.png"&gt;&lt;/p&gt;
+&lt;h2&gt;阅读全文&lt;/h2&gt;
+&lt;p&gt;显然还是阅读中文的速度快, 尤其是你可能对这个领域并不熟悉. 对于医学文献, 此处使用&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod的PDF翻译&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;打开https://fanyi.transgod.cn/ 勾选上“上传完成后自动翻译”再点击“上传文件”&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-01-28 15.06.12" src="https://i.loli.net/2019/01/28/5c4eaa0444296.png"&gt;&lt;/p&gt;
+&lt;p&gt;把刚才下载的PDF全文上传上去, 1分钟左右就能够翻译完成, 然后下载译文即可&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-01-28 15.09.27" src="https://i.loli.net/2019/01/28/5c4eaaca2d7a6.png"&gt;&lt;/p&gt;
+&lt;p&gt;得到一篇Word文档. 我对他们能够把PDF这种丧心病狂的格式处理得如此服帖非常佩服. (为什么说PDF是丧心病狂的格式, 请参考&lt;a href="https://sspai.com/post/47092"&gt;理解数字世界中的纸张：PDF | 科普&lt;/a&gt;)
+&lt;img alt="屏幕快照 2019-01-28 15.11.44" src="https://i.loli.net/2019/01/28/5c4eab4a5b89f.png"&gt;&lt;/p&gt;
+&lt;p&gt;这篇文章居然是篇Meta分析, 简单的说就是汇总以前做过的正规临床实验的结果, 按照&lt;a href="https://goldengrape.github.io/posts/bulabula/what-is-ebm/"&gt;证据的强度&lt;/a&gt;汇总出来的一份报告. &lt;/p&gt;
+&lt;p&gt;个人建议用&lt;a href="https://goldengrape.github.io/posts/bulabula/gollum-wiki"&gt;wiki&lt;/a&gt;或者其他的笔记软件, 记录一下文献阅读中获得的新识和心得. &lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</guid><pubDate>Mon, 28 Jan 2019 04:00:00 GMT</pubDate></item><item><title>iOS临床捷径</title><link>https://goldengrape.github.io/posts/bulabula/clinic-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在读大学的时候, 一直有这样的怨念: “这个东西能在电脑上查到, 为什么要背下来!” 于是我的成绩很差.&lt;/p&gt;
 &lt;p&gt;现在终于到了报复的时刻. 如果你用的是iPhone或者iPad, 已经安装了“捷径”, 那么请点击这个&lt;a href="https://www.icloud.com/shortcuts/028afc77715748a08e4871d5bc83657b"&gt;稳定期慢阻肺评估&lt;/a&gt;, 体验一下点啊点啊不用背的快感.&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
