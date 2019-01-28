@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Jan 2019 07:34:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何查阅文献</title><link>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Jan 2019 08:20:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何查阅文献</title><link>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;面向对象: 不满足于查百度的人. 医疗药品/ 器械相关企业从业者. &lt;/p&gt;
 &lt;/li&gt;
@@ -17,7 +17,7 @@
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;本教程以眼科“OK镜”为例. 场景是这样的, 你带着自己(或好友)的娃去看了看眼睛, 发现近视了. 医生推荐了OK镜, 但这东西好贵啊, 你想自己也多了解一些. 公司可能最近也有往这方面代理产品/研发产品的意图. 所以, 你打算自己再查查资料. &lt;/p&gt;
-&lt;p&gt;图文教程, 图片比较多.&lt;/p&gt;
+&lt;p&gt;图文教程, 图片比较多. (如果看不到图片, 可能是因为广告过滤器阻止了sm.ms的图床调用, 需要将i.loli.net许可)&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;软件的准备&lt;/h2&gt;
