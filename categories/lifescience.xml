@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Mar 2019 15:13:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Mar 2019 15:48:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
 &lt;p&gt;于是用相机记录下来:
 &lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
 &lt;p&gt;再记录一下拍摄过程:
@@ -13,7 +13,7 @@
 &lt;li&gt;Android
 上的&lt;a href="https://apkpure.com/cn/open-camera/net.sourceforge.opencamera"&gt;Open Camera App&lt;/a&gt;: 这是一个很强悍的相机app, 能够自定义很多参数.&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://item.taobao.com/item.htm?id=574484611225"&gt;可外接电源的LED补光灯&lt;/a&gt;, 这几天在做另一个项目, 买了一堆网红主播用品.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.ffmpeg.org/"&gt;FFmpeg&lt;/a&gt;, 这是一个命令行工具. &lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ffmpeg.org/"&gt;FFmpeg&lt;/a&gt;, 这是一个开源命令行软件. 在mac上用homebrew完全安装ffmpeg要费些功夫, (开源软件嘛, 一步安装到位就太不矜持了), &lt;a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS"&gt;要先brew tap&lt;/a&gt; 然后再&lt;a href="https://gist.github.com/Piasy/b5dfd5c048eb69d1b91719988c0325d8"&gt;安装各个options&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;摆放&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="IMG_2273" src="https://i.loli.net/2019/03/05/5c7e87ec2fa1e.jpg"&gt;&lt;/p&gt;
