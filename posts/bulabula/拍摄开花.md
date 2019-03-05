@@ -26,8 +26,7 @@
 * Android
 上的[Open Camera App](https://apkpure.com/cn/open-camera/net.sourceforge.opencamera): 这是一个很强悍的相机app, 能够自定义很多参数.
 * [可外接电源的LED补光灯](https://item.taobao.com/item.htm?id=574484611225), 这几天在做另一个项目, 买了一堆网红主播用品.
-* [FFmpeg](https://www.ffmpeg.org/), 这是一个命令行工具. 
-
+* [FFmpeg](https://www.ffmpeg.org/), 这是一个开源命令行软件. 在mac上用homebrew完全安装ffmpeg要费些功夫, (开源软件嘛, 一步安装到位就太不矜持了), [要先brew tap](https://trac.ffmpeg.org/wiki/CompilationGuide/macOS) 然后再[安装各个options](https://gist.github.com/Piasy/b5dfd5c048eb69d1b91719988c0325d8) 
 ## 摆放
 
 ![IMG_2273](https://i.loli.net/2019/03/05/5c7e87ec2fa1e.jpg)
