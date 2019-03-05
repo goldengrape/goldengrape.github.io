@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 28 Jan 2019 08:51:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何查阅文献</title><link>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Mar 2019 15:13:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
+&lt;p&gt;于是用相机记录下来:
+&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
+&lt;p&gt;再记录一下拍摄过程:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;材料与方法:&lt;/h2&gt;
+&lt;h3&gt;工具:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;待开放栀子花,&lt;/li&gt;
+&lt;li&gt;Nokia X6手机,&lt;/li&gt;
+&lt;li&gt;三脚架, 手机夹子&lt;/li&gt;
+&lt;li&gt;Android
+上的&lt;a href="https://apkpure.com/cn/open-camera/net.sourceforge.opencamera"&gt;Open Camera App&lt;/a&gt;: 这是一个很强悍的相机app, 能够自定义很多参数.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://item.taobao.com/item.htm?id=574484611225"&gt;可外接电源的LED补光灯&lt;/a&gt;, 这几天在做另一个项目, 买了一堆网红主播用品.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ffmpeg.org/"&gt;FFmpeg&lt;/a&gt;, 这是一个命令行工具. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;摆放&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="IMG_2273" src="https://i.loli.net/2019/03/05/5c7e87ec2fa1e.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;拍摄参数设定&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot_20190305-223636" src="https://i.loli.net/2019/03/05/5c7e8ab0f22d9.png"&gt;
+&lt;em&gt; 连拍模式: 无限
+&lt;/em&gt; 连拍模式间隔: 目前我设定的是30秒&lt;/p&gt;
+&lt;h3&gt;软件处理&lt;/h3&gt;
+&lt;p&gt;使用ffmpeg合成图像.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将目录里的所有jpg图像合成为视频, 帧速率=30&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' flower.mp4&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实测发现画面太大, 于是只截取画面中的一部分(宽=2200, 高=2200, x起点=800, y起点=700)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' -vf "crop=2200:2200:800:700" flower.mp4&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;微信朋友圈只有10秒, 所以提高速度, 其中setpts=10/实际时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -i flower.mp4 -b:v 2000k -filter:v "setpts=0.05714286*PTS" output.mp4&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;结果与讨论&lt;/h2&gt;
+&lt;h3&gt;结果:&lt;/h3&gt;
+&lt;p&gt;未处理的拍摄样张:
+&lt;img alt="IMG_20190305_065624_DRO" src="https://i.loli.net/2019/03/05/5c7e8fbfe5da4.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;处理后的视频:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
+&lt;h3&gt;讨论&lt;/h3&gt;
+&lt;p&gt;花开过程大约是2天, 一共拍摄了5200多张, 照片总容量达到了12G, 原本担心ffmpeg处理这么大的量会吃力, 没想到还是很容易就完成了. &lt;/p&gt;
+&lt;p&gt;平均来说, 每30秒拍摄一张有点短, 造成数据量很大, 不过反正ffmpeg处理起来也不吃力, 但如果使用常规的软件来处理, 比如photoshop之类, 有可能会吃不消. &lt;/p&gt;
+&lt;p&gt;但花瓣并不是匀速打开的, 最外层的花瓣类似是弹开的样子, 特别是第4片花瓣, 30秒之内张开了60度以上. 所以如果拍摄间隔设定太久, 就可能捕捉不到. &lt;/p&gt;
+&lt;p&gt;关于摆放位置, 现在觉得应该把镜头正对花的中心, 而不应该从侧面拍摄, 会有一半的花瓣看不见. 还是应该尽可能把镜头靠近, 使花占主体部分, 而不是后期剪裁, 感觉花朵本身的分辨率还是欠缺. &lt;/p&gt;
+&lt;p&gt;背景颜色变化明显, 是因为日光的原因. 晚上由补光灯照明, 白天日光造成的影响很明显. 补光灯应该再亮一些, 噪点还是太明显. 我不知道如果完全遮蔽日光, 使用人造光源照明, 是否会对开花过程有影响. 毕竟LED的光谱与日光还是有很大不同. &lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/flower-blossom/</guid><pubDate>Tue, 05 Mar 2019 14:00:00 GMT</pubDate></item><item><title>如何查阅文献</title><link>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;面向对象: 不满足于查百度的人. 医疗药品/ 器械相关企业从业者. &lt;/p&gt;
 &lt;/li&gt;
@@ -610,80 +657,4 @@ f_matrix(2018)
 &lt;p&gt;&lt;img alt="data" src="https://i.loli.net/2018/11/01/5bda8ea6a41e6.png"&gt;
 理想的情况下, 我们采集到的数据X可以推导出结果y. 但在实际过程中, 由于我们不知道如何从X推导出y, 只是知道存在有这样一条路径, 于是我们可能只好扩大数据的采集范围, 但只要采集到的数据X, 完全包含了能够推导出y的信息即可, 混杂了一些数据垃圾无关紧要, 可能只是影响了训练的时间, 并不影响最终的预测精度.&lt;/p&gt;
 &lt;p&gt;但在更多的情况下, 有些数据是采集不到的, 我们只能采集到X的一大部分, 有一些关键数据现阶段无论如何也拿不到, 那么拟合出来的结果就一定会有一定的误差, 这时候就看误差是否影响实际需求了. 如果够用, 那就可以了.&lt;/p&gt;
-&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item><item><title>屏霸的演讲</title><link>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="i2" src="https://i.loli.net/2018/10/27/5bd3fbce9f148.png"&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;超级英雄就是你们用来
-Superheroes are part of your brainless desire...
-
-模拟真实体验的无脑幻想之一
-to replace true experience with simulation.
-
-你们不说话  却爱看脱口秀
-You don't talk, you watch talk shows.
-
-你们不玩游戏  却爱看游戏节目
-You don't play games, you watch game shows.
-
-旅行  恋爱  冒险
-Travel, relationships, risk...
-
-这些有意义的经验都得被包装一番
-every meaningful experience must be packaged...
-
-以供你们坐得远远的进行观看
-and delivered to you to watch at a distance.
-
-这样你们就能安安稳稳
-So that you can remain ever sheltered...
-
-不思进取
-ever passive...
-
-只要做贪婪的消费者
-ever ravenous consumers...
-
-甚至都不愿意从自己的沙发上站起来
-who can't bring themselves to rise from their couches...
-
-进行一场酣畅淋漓的人生体验
-break a sweat and participate in life.
-
-你们希望超级英雄来保护你们
-You want superheroes to protect you...
-
-让你们自己变得更加无助
-and make yourselves ever more powerless in the process.
-
-你们告诉自己  有人在保护你们
-While you tell yourselves you're being looked after.
-
-你们的利益得到了满足
-That your interests are being served.
-
-你们的权利得到了维护
-And your rights are being upheld.
-
-所以系统可以继续对你们进行搜刮
-So that the system can keep stealing from you...
-
-并对你施以微笑
-smiling at you all the while.
-
-来啊  派你们的超级英雄来阻止我
-Go ahead, send your Supers to stop me.
-
-拿好你们的零食  盯紧屏幕
-Grab your snacks, watch your screens,
-
-看看会发生什么事
-and see what happens.
-
-你们不再是掌控者
-You are no longer in control.
-
-我才是
-I am.
-&lt;/pre&gt;
-
-
-&lt;p&gt;引用自&amp;lt;&amp;lt;超人总动员2&amp;gt;&amp;gt; Incredibles 2 (2018)&lt;/p&gt;
-&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item></channel></rss>
