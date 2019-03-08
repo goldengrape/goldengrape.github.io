@@ -1,5 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 05 Mar 2019 15:48:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 08 Mar 2019 04:47:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>半自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近要做一批幻灯片的配音演讲. 之前用的&lt;a href="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation"&gt;自动生成keynote演讲&lt;/a&gt;方法突然不好用了, 因为似乎苹果偷偷更新了apple script的函数定义, 一大堆命令都无法识别了. &lt;/p&gt;
+&lt;p&gt;但是自动生成配音演讲真的是很方便, 做网络课程的时候, 有什么地方需要更新改正时, 修改文字就好了. 即使是准备现场演讲, 提前生成配音听一遍, 也能够提前对演讲有一个预演, 知道哪些地方需要改进. &lt;/p&gt;
+&lt;p&gt;虽然应该自己重新用python写一个, 但本着能拖一天是一天的拖延症思想, 先用现成的东西拼凑连接起来好了. &lt;/p&gt;
+&lt;p&gt;于是有如下步骤:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;材料:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;iPhone/ iPad&lt;/li&gt;
+&lt;li&gt;mac&lt;/li&gt;
+&lt;li&gt;数据线&lt;/li&gt;
+&lt;li&gt;MTCoreAudio的AudioMonitor, &lt;a href="http://mac.softpedia.com/get/Developer-Tools/MTCoreAudio.shtml"&gt;softpedia中下载&lt;/a&gt; 或mac自家的GarageBand &lt;/li&gt;
+&lt;li&gt;讯飞阅读 app&lt;/li&gt;
+&lt;li&gt;耳机&lt;/li&gt;
+&lt;li&gt;作者本人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;软硬件连接方法:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用数据线连接iPhone和mac, 解锁iPhone&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;到mac上, 应用程序-&amp;gt;实用工具-&amp;gt;“音频MIDI设置”, 打开“音频MIDI设置”, 找到自己的iPhone, 点击“启用”
+&lt;img alt="屏幕快照 2019-03-08 12.07.51" src="https://i.loli.net/2019/03/08/5c81eb5a0582d.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把下载下来的MTCoreAudio打开, 找到里面的AudioMonitor, 复制到应用程序中, 
+&lt;img alt="" src="https://cdn.guidingtech.com/media/assets/WordPress-Import/2016/01/Screen_Shot_2016-01-25_at_8_00_20_PM.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(图片应用自guidingtech.com)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插上耳机, 然后运行 Audio Monitor, 将input改成iPhone, 点击Play Through&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-03-08 12.16.18" src="https://i.loli.net/2019/03/08/5c81eca50fd3f.png"&gt;&lt;/p&gt;
+&lt;p&gt;以上步骤就可以将iPhone里发出的声音作为mac上的音频输入, 并且同时接通音频输入和音响输出, 使自己可以监听到音频过程. &lt;/p&gt;
+&lt;p&gt;注意如果不是使用的iphone作为输入和耳机作为输出, 而是用了内建话筒和音箱, 那么可能会引起尖锐的哮鸣.&lt;/p&gt;
+&lt;h3&gt;操作流程&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;撰写演讲脚本, 保存为txt文件.&lt;/li&gt;
+&lt;li&gt;发送到iPhone上, 用讯飞阅读打开.&lt;/li&gt;
+&lt;li&gt;打开做好的keynote, “录制幻灯片放映”&lt;/li&gt;
+&lt;li&gt;点击红色的录音按钮, 倒数3秒后, 在讯飞阅读中播放朗读演讲脚本.&lt;/li&gt;
+&lt;li&gt;自己听着朗读, 到该翻页的时候翻页. 是的, 这个过程是有人参与的, 所以说是半自动.&lt;/li&gt;
+&lt;li&gt;播放完成后, 保存, keynote中文件-&amp;gt;导出到-&amp;gt;视频&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;结果与讨论&lt;/h2&gt;
+&lt;p&gt;效果很好, 而且所有的动画也都可以流畅播放和录制, 如果再DJ一点, 还可以手动暂停语音朗读, 等着动画播放完成. &lt;/p&gt;
+&lt;p&gt;建议先高速听一遍, 一边听一边把一些表达稍微修改, 比如数学公式的朗读可能有问题, 有些分词断句可能听起来很怪异, 必要时加个逗号或者空格. &lt;/p&gt;
+&lt;p&gt;注意导出的视频文件是m4v后缀, 有些教学网站傻傻的只认mp4文件, 直接改后缀成mp4就行了. 不用再转码.&lt;/p&gt;
+&lt;p&gt;没找到讯飞朗读里如何人为做一些停顿. 逗号, 句号之类都只是寻常间断, 多个标点也不能把停顿延长.&lt;/p&gt;
+&lt;p&gt;把iphone作为mac的音频输入, 再同时监听真的很有趣. 好像可以玩很多东西&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</guid><pubDate>Fri, 08 Mar 2019 04:00:00 GMT</pubDate></item><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
 &lt;p&gt;于是用相机记录下来:
 &lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
 &lt;p&gt;再记录一下拍摄过程:
@@ -629,32 +677,4 @@ f_matrix(2018)
 &lt;li&gt;出现时政新闻, 每篇-1&lt;/li&gt;
 &lt;li&gt;出现移民广告, 每篇-1&lt;/li&gt;
 &lt;li&gt;出现辟谣文, 每篇+1&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>iOS</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/zero-knowledge-fake-news-%08index/</guid><pubDate>Thu, 15 Nov 2018 04:00:00 GMT</pubDate></item><item><title>面向机器学习的研发思路</title><link>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这里仅考虑一些实际问题, 对于密码破解之类的NP-hard问题不在讨论范围之内, 对于实际问题, 也只是提供一种可行解.&lt;/p&gt;
-&lt;p&gt;机器学习/ 深度学习发展很快, 各种算法层出不穷. 我们假定机器学习是一个非常强悍的拟合器(或者分类器, 分类器可以通过拟合器拟合). 在有这样的工具协助下, 研发思路会有完全不同的方向.&lt;/p&gt;
-&lt;p&gt;那么对于要解决的问题, 要提出以下几个问题:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;从可以收集到的数据X, 是否存在至少一个通路, 可以推导出结果y?&lt;/li&gt;
-&lt;li&gt;数据集(X,y)是否可以通过低成本的方式获得?&lt;/li&gt;
-&lt;li&gt;数据集(X,y)是否可以通过计算机模拟的方式生成?&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;如果前两个问题的答案是肯定, 那么就可以直接使用机器学习/深度学习来拟合了.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;如果三个问题的答案都是肯定答案, 那么就直接使用计算机模拟的方式产生大量的数据集, 然后在用机器学习/深度学习的算法来拟合.&lt;/p&gt;
-&lt;p&gt;举个例子:&lt;/p&gt;
-&lt;p&gt;这个&lt;a href="https://people.csail.mit.edu/mrub/vidmag/"&gt;Video Magnification&lt;/a&gt; 研究小组做出了一个很厉害的算法, 通过摄像头拍摄画面能够将微小的变化放大, 甚至可以仅仅通过摄像头拍摄面部, 就能够测量心率， 注意不是那种使用闪光灯照亮手指, 然后用摄像头拍摄测心率的方法, 而是直接在自然光照明下, 在一定距离隔空拍摄. 他们还做了一个&lt;a href="https://www.cardiio.com/"&gt;app&lt;/a&gt; 非常有趣.&lt;/p&gt;
-&lt;p&gt;通过他们的研究, 可以知道:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;至少有一种算法可以从面部视频(X)计算出心率(y). 条件1满足.&lt;/li&gt;
-&lt;li&gt;数据集(面部视频, 心率)并不难采集, 对同一个人录像+心率带测量就可以采集到这两个数据. 条件2满足.&lt;/li&gt;
-&lt;li&gt;看起来不方便通过模拟的方式产生数据集, 条件3不满足.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以, 现在如果要实现这个app的效果, 并不需要去解读Video magnification的文献, 不需要去找他们的代码. 需要的只是找到足够多的人, 在不同的环境下录像, 同时监测心率, 取得足够的数据集, 然后送进机器学习/深度学习的拟合器中去拟合, 就可以得到同样的效果.&lt;/p&gt;
-&lt;p&gt;更进一步,&lt;/p&gt;
-&lt;p&gt;再来仔细看条件3, 数据集(面部视频, 心率)真的是难以模拟出来的么? 如果我们有Video magnification的算法(实际上有文献有代码), 再找到足够多的单人面部视频, 就可以通过Video magnification的算法得到这些单人面部视频所对应的心率. 单人面部视频在网上很容易找到大量, 于是这个数据集也是可以不需要找真人来录制就可以获得的了. 通过这种方法, 训练出来的深度学习拟合器, 至少不比Video magnification的算法更差, 如果再搭配一些实际录制的数据, 有可能还能做得更好.&lt;/p&gt;
-&lt;p&gt;这就是面向机器学习的研发思路.&lt;/p&gt;
-&lt;p&gt;补充关于数据的要求:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="data" src="https://i.loli.net/2018/11/01/5bda8ea6a41e6.png"&gt;
-理想的情况下, 我们采集到的数据X可以推导出结果y. 但在实际过程中, 由于我们不知道如何从X推导出y, 只是知道存在有这样一条路径, 于是我们可能只好扩大数据的采集范围, 但只要采集到的数据X, 完全包含了能够推导出y的信息即可, 混杂了一些数据垃圾无关紧要, 可能只是影响了训练的时间, 并不影响最终的预测精度.&lt;/p&gt;
-&lt;p&gt;但在更多的情况下, 有些数据是采集不到的, 我们只能采集到X的一大部分, 有一些关键数据现阶段无论如何也拿不到, 那么拟合出来的结果就一定会有一定的误差, 这时候就看误差是否影响实际需求了. 如果够用, 那就可以了.&lt;/p&gt;
-&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>iOS</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/zero-knowledge-fake-news-%08index/</guid><pubDate>Thu, 15 Nov 2018 04:00:00 GMT</pubDate></item></channel></rss>

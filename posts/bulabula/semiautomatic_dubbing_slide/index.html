@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>半自动录制幻灯片配音 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../flower-blossom/" title="拍摄开花过程" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="半自动录制幻灯片配音">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/">
+<meta property="og:description" content="最近要做一批幻灯片的配音演讲. 之前用的自动生成keynote演讲方法突然不好用了, 因为似乎苹果偷偷更新了apple script的函数定义, 一大堆命令都无法识别了. 
+但是自动生成配音演讲真的是很方便, 做网络课程的时候, 有什么地方需要更新改正时, 修改文字就好了. 即使是准备现场演讲, 提前生成配音听一遍, 也能够提前对演讲有一个预演, 知道哪些地方需要改进. 
+虽然应该自己重新用pyt">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-03-08T12:00:00+08:00">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">半自动录制幻灯片配音</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-03-08T12:00:00+08:00" itemprop="datePublished" title="2019-03-08 12:00">2019-03-08 12:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>最近要做一批幻灯片的配音演讲. 之前用的<a href="../auto_keynote_presentation">自动生成keynote演讲</a>方法突然不好用了, 因为似乎苹果偷偷更新了apple script的函数定义, 一大堆命令都无法识别了. </p>
+<p>但是自动生成配音演讲真的是很方便, 做网络课程的时候, 有什么地方需要更新改正时, 修改文字就好了. 即使是准备现场演讲, 提前生成配音听一遍, 也能够提前对演讲有一个预演, 知道哪些地方需要改进. </p>
+<p>虽然应该自己重新用python写一个, 但本着能拖一天是一天的拖延症思想, 先用现成的东西拼凑连接起来好了. </p>
+<p>于是有如下步骤:
+<!-- TEASER_END --></p>
+<h2>材料:</h2>
+<ul>
+<li>iPhone/ iPad</li>
+<li>mac</li>
+<li>数据线</li>
+<li>MTCoreAudio的AudioMonitor, <a href="http://mac.softpedia.com/get/Developer-Tools/MTCoreAudio.shtml">softpedia中下载</a> 或mac自家的GarageBand </li>
+<li>讯飞阅读 app</li>
+<li>耳机</li>
+<li>作者本人</li>
+</ul>
+<h3>软硬件连接方法:</h3>
+<ul>
+<li>用数据线连接iPhone和mac, 解锁iPhone</li>
+<li>
+<p>到mac上, 应用程序-&gt;实用工具-&gt;“音频MIDI设置”, 打开“音频MIDI设置”, 找到自己的iPhone, 点击“启用”
+<img alt="屏幕快照 2019-03-08 12.07.51" src="https://i.loli.net/2019/03/08/5c81eb5a0582d.png"></p>
+</li>
+<li>
+<p>把下载下来的MTCoreAudio打开, 找到里面的AudioMonitor, 复制到应用程序中, 
+<img alt="" src="https://cdn.guidingtech.com/media/assets/WordPress-Import/2016/01/Screen_Shot_2016-01-25_at_8_00_20_PM.png"></p>
+</li>
+</ul>
+<p>(图片应用自guidingtech.com)</p>
+<ul>
+<li>插上耳机, 然后运行 Audio Monitor, 将input改成iPhone, 点击Play Through</li>
+</ul>
+<p><img alt="屏幕快照 2019-03-08 12.16.18" src="https://i.loli.net/2019/03/08/5c81eca50fd3f.png"></p>
+<p>以上步骤就可以将iPhone里发出的声音作为mac上的音频输入, 并且同时接通音频输入和音响输出, 使自己可以监听到音频过程. </p>
+<p>注意如果不是使用的iphone作为输入和耳机作为输出, 而是用了内建话筒和音箱, 那么可能会引起尖锐的哮鸣.</p>
+<h3>操作流程</h3>
+<ol>
+<li>撰写演讲脚本, 保存为txt文件.</li>
+<li>发送到iPhone上, 用讯飞阅读打开.</li>
+<li>打开做好的keynote, “录制幻灯片放映”</li>
+<li>点击红色的录音按钮, 倒数3秒后, 在讯飞阅读中播放朗读演讲脚本.</li>
+<li>自己听着朗读, 到该翻页的时候翻页. 是的, 这个过程是有人参与的, 所以说是半自动.</li>
+<li>播放完成后, 保存, keynote中文件-&gt;导出到-&gt;视频</li>
+</ol>
+<h2>结果与讨论</h2>
+<p>效果很好, 而且所有的动画也都可以流畅播放和录制, 如果再DJ一点, 还可以手动暂停语音朗读, 等着动画播放完成. </p>
+<p>建议先高速听一遍, 一边听一边把一些表达稍微修改, 比如数学公式的朗读可能有问题, 有些分词断句可能听起来很怪异, 必要时加个逗号或者空格. </p>
+<p>注意导出的视频文件是m4v后缀, 有些教学网站傻傻的只认mp4文件, 直接改后缀成mp4就行了. 不用再转码.</p>
+<p>没找到讯飞朗读里如何人为做一些停顿. 逗号, 句号之类都只是寻常间断, 多个标点也不能把停顿延长.</p>
+<p>把iphone作为mac的音频输入, 再同时监听真的很有趣. 好像可以玩很多东西</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../flower-blossom/" rel="prev" title="拍摄开花过程">前一篇</a>
+            </li>
+        </ul></nav></aside></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
