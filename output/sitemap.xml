@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2019-01-08T09:07:00Z</lastmod>
+  <lastmod>2019-03-08T04:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-03-05T15:09:00Z</lastmod>
+  <lastmod>2019-03-08T04:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -183,7 +183,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-11.html</loc>
-  <lastmod>2019-03-05T15:09:00Z</lastmod>
+  <lastmod>2019-03-08T04:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-12.html</loc>
+  <lastmod>2019-03-08T04:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -420,6 +424,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</loc>
   <lastmod>2018-10-27T05:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</loc>
+  <lastmod>2019-03-08T04:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</loc>
