@@ -1,13 +1,19 @@
 <!--
 .. title: 人工晶体轶事(1)
 .. slug: stories_of_IOL_1
-.. date: 2018-6-1 1:00 UTC+08:00
+.. date: 2019-3-13 1:00 UTC+08:00
 .. tags: ophthalmology, IOL
 .. category: ophthalmology
 .. link:
 .. description:
 .. type: text
 -->
+
+更新了自动配音幻灯视频: 
+
+<iframe src="//player.bilibili.com/player.html?aid=46123306&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+
 最近查看了一些关于人工晶体历史的资料, 其实也不是什么考据研究, 只是在wiki上乱转. 有些故事看起来很有意思.
 
 人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
