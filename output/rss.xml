@@ -1,5 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 09 Mar 2019 16:10:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>全自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OK, 完成了自动为PowerPoint幻灯片配音的python3程序. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 13 Mar 2019 03:34:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;更新了自动配音幻灯视频: &lt;/p&gt;
+&lt;iframe src="//player.bilibili.com/player.html?aid=46123306&amp;amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
+
+&lt;p&gt;最近查看了一些关于人工晶体历史的资料, 其实也不是什么考据研究, 只是在wiki上乱转. 有些故事看起来很有意思.&lt;/p&gt;
+&lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
+&lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;p&gt;1940年8月15日, 伦敦西南的温切斯特, 空袭警报响起.&lt;/p&gt;
+&lt;p&gt;德军的轰炸机来得太快了, 直扑机场而来, 想在遇到拦截之前直接摧毁整个空军基地. 皇家空军601中队空军上尉(Flying Officer) Gordon Cleaver冒着硝烟, 奔向跑道上自己的飓风歼击机, 匆忙中他没有戴上护目镜, 就在敌机的轰炸中紧急起飞.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="http://d.ibtimes.co.uk/en/full/313242/hurricane.jpg"&gt;
+(https://www.ibtimes.co.uk)&lt;/p&gt;
+&lt;p&gt;Cleaver上尉参加过敦克尔克的战役, 他操纵飓风歼击机无比灵巧, 因此获得了"老鼠"的绰号, 在一年多的战斗飞行中击落了7-9架敌机. 升空后他很快抓到机会击落了一家德军飞机. 突然, Cleaver双眼一黑知道自己被击中了, 他已经无法控制飞机, 只好弃机跳伞, 降落在南安普敦.&lt;/p&gt;
+&lt;p&gt;在医院, Cleaver得知当时子弹击中了座舱盖, 将座舱盖打得粉碎, 碎片打中了自己的脸. 右眼已经完全看不见光感, 眼科医生Harold Ridley说对右眼已经无能为力了, 左眼也被弹片击中, 虽然角膜被打穿, 但弹片并没有打碎晶状体, 而是停留在了眼睛里, 而且座舱盖弹片是透明的, 视力虽然下降, 但多少还是能看清些东西. Ridley医生人很好, 经常过来看这只受伤的左眼, 他说只要不感染, 还是有希望恢复一些视力的.&lt;/p&gt;
+&lt;p&gt;也许当时戴上护目镜, 世界就会不一样吧.&lt;/p&gt;
+&lt;h3&gt;Harold Ridley&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;p&gt;Gordon Cleaver上尉是个坚强的军人, 头面部的创伤经过了18次的手术才算治疗完成. 他也是个有趣的病例, 飓风战斗机的座舱盖弹片居然安静地留在他的左眼里, 没有引起感染和排异反应. 最让人担心的眼内炎并没有发生.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Harold Ridley" src="https://i.loli.net/2018/06/01/5b103665eb0aa.png"&gt;
+(https://www.rayner.com/media/pdf/Invention_of_the_IOL.pdf)&lt;/p&gt;
+&lt;p&gt;Ridley医生很想知道座舱盖的材料, 战时打听战斗机的材料多多少少有些麻烦, 但后来总算查到了, 是帝国化工(ICI)生产的Perspex. 这种材料在1928年已经被制造出来, 叫做聚甲基丙烯酸甲酯, 缩写是PMMA, 也被称为有机玻璃. 1930年ICI注册了Perspex的商标. 这种材料透光性很好, 比玻璃轻很多, 有一点点弹性, 不像玻璃那么容易破碎, 即使破碎了, 碎片也一般不会那么锋利. 但显然Perspex还是无法抵抗机枪子弹的威力.&lt;/p&gt;
+&lt;p&gt;通常情况下弹片打进身体会引起严重的免疫排异反应, 毕竟这是一种异物. 但Cleaver上尉眼睛里的PMMA弹片却是个例外, 原因可能有两个, 一是PMMA是一种聚合物, 不容易释放出什么离子或者小分子, 甚至可以用来制成培养皿来饲养细胞, 后世的生物医学工程师称之为生物相容性很好; 二是眼球内血液和其他液体比如房水和玻璃体是分隔开的, 有血房水屏障, 这种屏障阻挡了免疫反应, 所以眼内也是一个免疫豁免的区域. 这两个因素在Cleaver上尉眼睛遇到了一起, 于是PMMA弹片没有产生排异反应. 他的左眼总算是保住了.&lt;/p&gt;
+&lt;p&gt;战时的临床工作忙得不可开交, Ridley医生弹片留在眼睛里的原委以后, 就记录在笔记本上, 又去忙其他病人了.&lt;/p&gt;
+&lt;h3&gt;John Pike&lt;sup id="fnref-3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
+&lt;p&gt;二战已经结束3年多了, John Pike现在是伦敦Rayner公司的光学专家. 最近他正在和Ridley医生合作研发电子眼底镜. 研发工作进展很顺利, 他也和Ridley医生成为好朋友.&lt;/p&gt;
+&lt;p&gt;一天傍晚Ridley医生打来电话, 很兴奋地说要讨论一个新项目, 还挺急, 说查房完了就过来. 在卡文迪许广场上, John Pike坐在Ridley医生的车里, 听完了8年前病例报告. Ridley医生说他打算用Perspex做一枚透镜植入到病人眼睛里, 替代天然的晶状体. John Pike觉得这事在医学上有点异想天开, 但在光学上并不困难, 不过是制造一个小一点的透镜而已. 在车里, 两个人就已经完成了大部分的设计. 这个就叫做人工晶体Intraocular lens吧.&lt;/p&gt;
+&lt;p&gt;回去以后John Pike很快就按照设计制造出了样品.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="https://www.rayner.com/en/history" src="https://www.rayner.com/skin/frontend/mtcolias/default/images/iol_box.jpg"&gt;
+https://www.rayner.com/en/history&lt;/p&gt;
+&lt;h3&gt;Harold Ridley&lt;/h3&gt;
+&lt;p&gt;1949年11月29日, 第一例人工晶体植入手术终于完成了. Ridley医生从圣托马斯医院办公室的窗户看着泰晤士河上往来的船只, 心中有些激动.&lt;/p&gt;
+&lt;p&gt;这是一个49岁&lt;sup id="fnref-4"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-4"&gt;4&lt;/a&gt;&lt;/sup&gt;的女病人名叫伊丽莎白, 她的左眼晶状体已经完全浑浊, Pike或者说Rayner公司生产的人工晶体被植入到了患者眼内. 巡台护士Doreen Clarke小姐配合得不错, 手术视野照明很清楚. 当时并没有手术显微镜, Clarke小姐用的是一把手电. 术后, Clarke小姐在记录本上记下了"Extra-capsular ext"--白内障囊外摘除术.&lt;/p&gt;
+&lt;p&gt;但其实第一例手术并不算顺利, 而且这也是第一例人工晶体手术并发症----度数算错了, 术后病人验光有高度近视, 但视力仍然提高到20/60.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Ridley's eighth IOL implantation, performed at St. Thomas' Hospital, May 8, 1951" src="https://i.loli.net/2018/06/01/5b1036f8abdf1.png"&gt;
+(https://www.rayner.com/media/pdf/Invention_of_the_IOL.pdf)&lt;/p&gt;
+&lt;p&gt;之后, Ridley医生又做了很多人工晶体植入手术, 早期的手术大约有70%的成功率. 虽然白内障病人多数是老年人, 但也有一些年轻的病人因为外伤植入人工晶体, 这些病人经过了40多年后, 仍然保持着可用的视力. &lt;sup id="fnref-5"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-5"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3&gt;Gordon Cleaver&lt;/h3&gt;
+&lt;p&gt;Cleaver上尉因为在温切斯特保卫战中的英勇表现被授予空军功勋十字勋章, 当时他年仅30岁, 但右眼失明, 左眼破裂伤使得他无法再驾驶战斗机重回蓝天.&lt;/p&gt;
+&lt;p&gt;在他70多岁的时候, 他的左眼晶状体也终于出现了白内障, 他也接受了白内障摘除手术, 并植入了一枚人工晶体. &lt;/p&gt;
+&lt;h3&gt;Harold Ridley&lt;/h3&gt;
+&lt;p&gt;2000年2月, Ridley医生被英女王授予爵士勋衔(Knight Bachelor), 以表彰他在白内障手术中的开创性工作.&lt;/p&gt;
+&lt;p&gt;Harold Ridley爵士逝世于2001年5月25日, 享年94岁.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://images-na.ssl-images-amazon.com/images/I/51udsOifu8L._SX398_BO1,204,203,200_.jpg"&gt;&lt;/p&gt;
+&lt;!-- EOF --&gt;
+
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;https://en.wikipedia.org/wiki/Gordon_Cleaver &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-2"&gt;
+&lt;p&gt;https://en.wikipedia.org/wiki/Harold_Ridley_(ophthalmologist) &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-3"&gt;
+&lt;p&gt;https://en.wikipedia.org/wiki/Rayner_(company) &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-3" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-4"&gt;
+&lt;p&gt;维基百科上说年龄是45岁, 但按照"Sir Harold Ridley and His Fight for Sight"中的记录, 还是应当为49岁. &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-4" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-5"&gt;
+&lt;p&gt;&lt;a href="https://www.sciencedirect.com/science/article/pii/S0886335099800613"&gt;Letocha, C. E.; Pavlin, C. J. (1999). "Follow-up of 3 patients with Ridley intraocular lens implantation". Journal of cataract and refractive surgery. 25 (4): 587–591.&lt;/a&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-5" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>IOL</category><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</guid><pubDate>Tue, 12 Mar 2019 17:00:00 GMT</pubDate></item><item><title>全自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OK, 完成了自动为PowerPoint幻灯片配音的python3程序. &lt;/p&gt;
 &lt;p&gt;提取每一页幻灯片中的备注, 使用语音合成(Text-To-Speech, TTS)产生配音, 并将配音音频插入到幻灯片中. 如果在PowerPoint/ Keyote中导出成视频, 可以产生自动配演讲解的视频.&lt;/p&gt;
 &lt;p&gt;当前仅仅支持mac OS.&lt;/p&gt;
 &lt;p&gt;项目页面在&lt;a href="https://github.com/goldengrape/dubbing-pptx"&gt;https://github.com/goldengrape/dubbing-pptx&lt;/a&gt;&lt;/p&gt;
@@ -623,36 +686,4 @@ f_matrix(2018)
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><guid>https://goldengrape.github.io/posts/python/carefree-princess-1018/</guid><pubDate>Tue, 08 Jan 2019 08:00:00 GMT</pubDate></item><item><title>iOS临床捷径</title><link>https://goldengrape.github.io/posts/bulabula/clinic-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在读大学的时候, 一直有这样的怨念: “这个东西能在电脑上查到, 为什么要背下来!” 于是我的成绩很差.&lt;/p&gt;
-&lt;p&gt;现在终于到了报复的时刻. 如果你用的是iPhone或者iPad, 已经安装了“捷径”, 那么请点击这个&lt;a href="https://www.icloud.com/shortcuts/028afc77715748a08e4871d5bc83657b"&gt;稳定期慢阻肺评估&lt;/a&gt;, 体验一下点啊点啊不用背的快感.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;待改进的表格&lt;/h2&gt;
-&lt;p&gt;这个捷径的内容来自第九版内科学第24页.
-&lt;img alt="内科学 第九版, 第24页" src="https://i.loli.net/2018/11/22/5bf6282e73056.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;里面除了我很厌恶的各种分级, 还有非常邪恶的药物缩写, 但在捷径里, 我都给展开啦. 是不是有一种往陷阱里扔石头的快感.&lt;/p&gt;
-&lt;p&gt;另外, 当写了程序以后, 你会发现表2-3-3设计得很差. 用来定义“病人综合评估分组”到底是ABCD组的是什么参数呢? 能够用上的只有“上一年急性加重次数”和“mMRC分级”, 当使用了这两个信息以后, 就可以分割出4组了.&lt;/p&gt;
-&lt;p&gt;那个“特征”里面的信息是无用的, 而且并不定量, 只是一组模糊的定性描述, 放在这里大约就是提示记忆用的. 临床医生没学过数据库的基本知识, 编制表格其实欠考虑. 此处顺便推荐欧姆社的&lt;a href="https://book.douban.com/subject/4829597/"&gt;《漫画数据库》&lt;/a&gt;
-&lt;img alt="s4649991" src="https://i.loli.net/2018/11/22/5bf6331be48ac.jpg"&gt;&lt;/p&gt;
-&lt;h2&gt;如何编写&lt;/h2&gt;
-&lt;p&gt;下面说一下如何编写捷径, 或者更准确的说, 怎么用手指戳出一个捷径.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;单列表格&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;mMRC问卷这样的, 使用描述性语句作为输入, 得到一个分级结果. 可以使用:&lt;/p&gt;
-&lt;p&gt;“从菜单中选取”, 将表格中的每一行作为一个菜单选项.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="IMG_F9D82155C3F2-1" src="https://i.loli.net/2018/11/22/5bf62c4a0da87.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;在将每个菜单项输入进去以后, 底部会出现每个菜单项, 就是说当用户选择了该菜单项以后应该做什么, 以mMRC问卷为例来说, 4级 = “因严重呼吸困难而不能离开家, 或在穿衣脱衣时即出现呼吸困难”&lt;/p&gt;
-&lt;p&gt;我们可以在“因严重呼吸困难而不能离开家, 或在穿衣脱衣时即出现呼吸困难”这个菜单项中, 设定一个数字=4, 然后再把这个数字“设定变量”给一个变量, 那么在后面使用时就可以调用了.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="IMG_48CF3F23C0D9-1" src="https://i.loli.net/2018/11/22/5bf62e21c6591.jpeg"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;两列或更多列的表格&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;比如刚才我吐槽的表2-3-3, 要通过急性加重次数和mMRC分级来确定分组, 那么就只好依次做出区分了, 先判断“急性加重次数”是不是&amp;lt;=1的, 如果是, 再判断mMRC是否是0-1级.
-&lt;img alt="IMG_44C656FED209-1" src="https://i.loli.net/2018/11/22/5bf62f4dd8e1a.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;这里有个小伎俩, 捷径的“如果”语句居然没有小于等于, 要判定是否是&amp;lt;=1的, 只好先写成&amp;lt;1.001.&lt;/p&gt;
-&lt;p&gt;总的来说, 用捷径去戳出一个临床用的分级分期“计算器”, 很直观, 但很繁琐, 不过怎样也比背下来强.&lt;/p&gt;
-&lt;h2&gt;戒烟&lt;/h2&gt;
-&lt;p&gt;吸烟的人往往觉得吸烟是自己的事情, “大不了一死”. 但很多疾病的死亡过程是漫长而痛苦的.&lt;/p&gt;
-&lt;p&gt;比如mMRC分级4级 = “因严重呼吸困难而不能离开家, 或在穿衣脱衣时即出现呼吸困难”. 这是怎样的苦难, 脱衣服的时候, 头在套头衫里还没出来的时候就已经喘不上气来了, 而头上还罩着衣服, 却已经没有能力取下来.&lt;/p&gt;
-&lt;p&gt;想体验一下呼吸困难的感觉, 大可以试试练习闭气. 坐好, 在空气中练习闭气是安全的, &lt;a href="https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/"&gt;试试这个闭气训练的iOS捷径&lt;/a&gt; 当呼吸渴望已经出现时, 膈肌在抽动时, 你真的可以无动于衷么?&lt;/p&gt;&lt;/div&gt;</description><category>iOS shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/clinic-shortcut/</guid><pubDate>Thu, 22 Nov 2018 04:00:00 GMT</pubDate></item></channel></rss>
+</description><category>python</category><guid>https://goldengrape.github.io/posts/python/carefree-princess-1018/</guid><pubDate>Tue, 08 Jan 2019 08:00:00 GMT</pubDate></item></channel></rss>
