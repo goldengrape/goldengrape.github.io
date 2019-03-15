@@ -1,13 +1,16 @@
 <!--
 .. title: 如何查阅文献
 .. slug: how-to-use-pubmed-and-read-paper
-.. date: 2019-1-28 12:00 UTC+08:00
+.. date: 2019-3-15 12:00 UTC+08:00
 .. tags: 
 .. category: 医学
 .. link:
 .. description:
 .. type: text
 -->
+
+更新配音幻灯视频:
+<iframe src="//player.bilibili.com/player.html?aid=45981183&cid=80563574&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 * 面向对象: 不满足于查百度的人. 医疗药品/ 器械相关企业从业者. 
 
