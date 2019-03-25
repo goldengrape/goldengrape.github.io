@@ -1,5 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 15 Jan 2019 14:11:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>通项公式快速求解</title><link>https://goldengrape.github.io/posts/python/carefree-princess-1018/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 25 Mar 2019 04:34:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>根据字幕做视频摘要</title><link>https://goldengrape.github.io/posts/python/video_keynote/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+    &lt;div class="container" id="notebook-container"&gt;
+
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;周末做了一个奇怪的小东西.&lt;/p&gt;
+&lt;p&gt;一个根据字幕来做出视频缩略版的工具, 效果参见&lt;a href="https://www.youtube.com/watch?v=wxlySg9TBBI"&gt;李永乐老师讲柏拉图立体的复习缩略版&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/wxlySg9TBBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;p&gt;这是一段remix的视频, 是从&lt;a href="https://www.youtube.com/watch?v=m9AE_G_9c7Y"&gt;李永乐老师讲柏拉图立体&lt;/a&gt; 的课程中节选了数学概念的部分, 去掉了推导与展开的部分. 原视频大约12分钟, 剪辑后的视频只有4分钟. 可以方便用来快速复习概念.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;过程是这样的, 先从youtube下载某个视频的字幕, 然后你可以对字幕进行编辑, 删去不重要的部分, 只留下需要保留的文字, 但注意仍然要保留原来的换行. 然后程序会自动在字幕中查找保留文字, 并找到对应的时间. 把对应时间的视频片段下载下来, 连成一体.&lt;/p&gt;
+&lt;p&gt;这个程序最好是在Google Colab上运行, 在本地电脑上运行要令终端也可以&lt;strong&gt;正常访问国际互联网&lt;/strong&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这个程序依赖于&lt;a href="https://webvtt-py.readthedocs.io/en/latest/"&gt;webvtt-py&lt;/a&gt;、&lt;a href="https://rg3.github.io/youtube-dl/"&gt;youtube-dl&lt;/a&gt; 和 &lt;a href="https://ffmpeg.org/"&gt;ffmpeg&lt;/a&gt; , 当然还有&lt;a href="https://pandas.pydata.org/"&gt;pandas&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;注意在Google Colab上, webvtt-py和youtube-dl都是需要每次安装的.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [4]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;webvtt&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;!&lt;/span&gt;pip install webvtt-py
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;webvtt&lt;/span&gt;
+&lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;youtube_dl&lt;/span&gt;
+&lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="o"&gt;!&lt;/span&gt;pip install youtube_dl
+    &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;youtube_dl&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nn"&gt;difflib&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="下载youtube视频字幕"&gt;下载youtube视频字幕&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E4%B8%8B%E8%BD%BDyoutube%E8%A7%86%E9%A2%91%E5%AD%97%E5%B9%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;首先是要下载youtube上的视频字幕, youtube的字幕有两类, 一是作者自己上传的文字字幕, 一是由youtube进行语音识别后生成的自动字幕, 其中自动字幕又会被机器翻译成各种语言.&lt;/p&gt;
+&lt;p&gt;youtube字幕是一种叫做WebVTT的格式, 可以使用youtube-dl进行下载. 虽然youtube-dl有python运行方式, 但我还不能熟练掌握, 于是使用了subprocess.call运行命令行进行下载.&lt;/p&gt;
+&lt;p&gt;如果是下载自动字幕, 要使用&lt;code&gt;--write-auto-sub&lt;/code&gt;, 如果是下载作者上传的字幕, 则是&lt;code&gt;--write-sub&lt;/code&gt;, 下载字幕的时候, 我觉得并不需要将视频也下载下来, 所以要使用&lt;code&gt;--skip-download&lt;/code&gt;, 字幕的语言简体中文=zh-Hans, 英文=en&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [5]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;download_youtube_sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"zh-Hans"&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;vtt_command&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'youtube-dl'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+               &lt;span class="s1"&gt;'--write-auto-sub'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 如果下载作者自制的字幕则使用--write-sub&lt;/span&gt;
+               &lt;span class="s1"&gt;'--sub-lang'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 选择语言&lt;/span&gt;
+               &lt;span class="s1"&gt;'--skip-download'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;  &lt;span class="c1"&gt;# 不下载视频, 只下载字幕&lt;/span&gt;
+               &lt;span class="s1"&gt;'--no-continue'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;    &lt;span class="c1"&gt;# 强制覆盖已经下载的文件&lt;/span&gt;
+                   &lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+              &lt;span class="s1"&gt;'--output'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="c1"&gt;# 输出文件名格式&lt;/span&gt;
+    &lt;span class="c1"&gt;# final out filename=out_filename+lang+'.vtt'&lt;/span&gt;
+    &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;call&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt_command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STDOUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;!=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"utf-8"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="清理vtt字幕"&gt;清理vtt字幕&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E6%B8%85%E7%90%86vtt%E5%AD%97%E5%B9%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;vtt的字幕, 是一种还挺丰富(=复杂)的字幕格式, 里面不仅仅是时间戳和文字, 文字里可以加入丰富的特效.  特别是英文版本的vtt字幕, 为了表现出连贯的效果, 会把当前行与下一行字幕都显示出来, 于是每一句话其实记录了两次(中文似乎没有). 所以要进行一点清理. 将重复的部分删去. 只保留当前说的一句话, 和这句话的起止时间戳. 保存到一个pandas Dataframe里. 毕竟pandas后期好处理&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [6]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;clean_vtt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;lines&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;starts&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;ends&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;extend_text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strip&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitlines&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extend_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extend_text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;starts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;ends&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;repeat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;previous&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;
+    &lt;span class="n"&gt;new_lines&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;new_starts&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="n"&gt;new_ends&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;
+
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lines&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;starts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;ends&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="n"&gt;previous&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="k"&gt;continue&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;new_lines&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;l&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;new_starts&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;new_ends&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;previous&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;l&lt;/span&gt;
+
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s2"&gt;"start"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;new_starts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"end"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;new_ends&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"text"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;new_lines&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="合并vtt字幕成为脚本"&gt;合并vtt字幕成为脚本&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E5%90%88%E5%B9%B6vtt%E5%AD%97%E5%B9%95%E6%88%90%E4%B8%BA%E8%84%9A%E6%9C%AC"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;无他, 一行一句, 保留换行之后比较好看也好编辑.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [7]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;vtt_to_transcript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;clean_vtt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;transcript&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"text"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;transcript&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="在字幕中找到对应的句子"&gt;在字幕中找到对应的句子&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E5%9C%A8%E5%AD%97%E5%B9%95%E4%B8%AD%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8F%A5%E5%AD%90"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;给定一句话, 要在字幕中找到这一句话的时间戳, 这样才能按照时间对视频切片. python的标准库里有一个difflib, 专门用来比较, 其中我使用的是get_close_matches, 找到最接近的文字. 这样即使只截取了一句话中的一部分, 也有可能找到相应的话语.&lt;/p&gt;
+&lt;p&gt;考虑到给定的一句话, 一定是从字幕中提取出来, 所以没有考虑找不到的情况.&lt;/p&gt;
+&lt;p&gt;使用pandas的优点在此显现, 只需要merge两个数据库, 就可以把相同字段, 相同内容的部分求出交集, 这样就可以获得时间戳了.&lt;/p&gt;
+&lt;p&gt;(在这里记录url, 是为了日后扩展成从多个字幕中找句子, 那时就要记录每个字幕从哪里来的, 这是后话, 暂时还没有开始)&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [8]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;find_text_in_vtt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;clean_vtt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"url"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;youtube_url&lt;/span&gt;
+    &lt;span class="n"&gt;chosen_text&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[]&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;splitlines&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;sentence&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;difflib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_close_matches&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"text"&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;sentence&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;chosen_text&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extend&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sentence&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;df_chosen&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;DataFrame&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;chosen_text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;columns&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"text"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;df_chosen&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;df_chosen&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;merge&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;df_chosen&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;以上就是处理字幕的部分.&lt;/p&gt;
+&lt;p&gt;还是以李永乐老师讲课的视频为例, 这堂课的字幕内容&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [11]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'https://www.youtube.com/watch?v=m9AE_G_9c7Y'&lt;/span&gt;
+    &lt;span class="n"&gt;vtt_pre&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"test"&lt;/span&gt;
+    &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'zh-Hans'&lt;/span&gt;
+    &lt;span class="n"&gt;vtt_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="n"&gt;vtt_pre&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s2"&gt;"vtt"&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="n"&gt;download_youtube_sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vtt_pre&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;lang&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    
+    &lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;webvtt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt_filename&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt_to_transcript&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;)[:&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="c1"&gt;#blog中只显示100个字符&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;各位同学大家好 我是李永乐老师
+最近有小朋友说 他看综艺节目里面谈到了
+柏拉图立体和阿基米德多面体
+他想问我这是什么
+那我们今天就来先研究一下柏拉图立体
+以前其实我们也曾经说过柏拉图立体
+什么叫柏拉图
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="手工选择必要的关键部分"&gt;手工选择必要的关键部分&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E6%89%8B%E5%B7%A5%E9%80%89%E6%8B%A9%E5%BF%85%E8%A6%81%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E5%88%86"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;对, 这个程序做不到人工智能, 只有手工智能, 我怎么知道你觉得那一部分更重要, 所以请复制粘贴上面打印出来的字幕, 然后删掉其中不想要的部分, 保留下需要的, 注意不要改变换行的方式.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [13]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;keynote&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;span class="s1"&gt;什么叫柏拉图立体呢&lt;/span&gt;
+&lt;span class="s1"&gt;他提出正多面体只有五种&lt;/span&gt;
+&lt;span class="s1"&gt;所以我们就把正多面体称为柏拉图立体&lt;/span&gt;
+&lt;span class="s1"&gt;首先它必须每一个面… 它是个正多面体&lt;/span&gt;
+&lt;span class="s1"&gt;每个面都是同样的正多边形&lt;/span&gt;
+&lt;span class="s1"&gt;除此之外 它还有一个要求&lt;/span&gt;
+&lt;span class="s1"&gt;就是每个顶点的情况必须是相同的&lt;/span&gt;
+&lt;span class="s1"&gt;比如说如果每一个顶点都连接三条棱&lt;/span&gt;
+&lt;span class="s1"&gt;那所有顶点都必须是这样&lt;/span&gt;
+&lt;span class="s1"&gt;然后你如果把这个图形稍微转一个方向&lt;/span&gt;
+&lt;span class="s1"&gt;你会发现所有顶点都会跟以前重合&lt;/span&gt;
+&lt;span class="s1"&gt;这个就叫每个顶点的情况是相同的&lt;/span&gt;
+&lt;span class="s1"&gt;我们就把这种立体称之为正多面体&lt;/span&gt;
+&lt;span class="s1"&gt;或者叫柏拉图立体&lt;/span&gt;
+&lt;span class="s1"&gt;我们现在想证明一下 正多面体只有五种&lt;/span&gt;
+&lt;span class="s1"&gt;首先我们先来看由正三角形所组成的&lt;/span&gt;
+&lt;span class="s1"&gt;我们知道三角形每一个内角是60度&lt;/span&gt;
+&lt;span class="s1"&gt;'''&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;然后我们就可以给出一句话的起止时间了:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [14]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;find_text_in_vtt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keynote&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;head&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="output_wrapper"&gt;
+&lt;div class="output"&gt;
+
+
+&lt;div class="output_area"&gt;
+
+&lt;div class="prompt"&gt;&lt;/div&gt;
+
+
+&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
+&lt;pre&gt;                 text           end         start  \
+0           什么叫柏拉图立体呢  00:00:15.539  00:00:13.859   
+1         他提出正多面体只有五种  00:00:24.339  00:00:21.719   
+2   所以我们就把正多面体称为柏拉图立体  00:00:27.019  00:00:24.519   
+3  首先它必须每一个面… 它是个正多面体  00:00:32.520  00:00:29.160   
+4        每个面都是同样的正多边形  00:00:38.100  00:00:32.679   
+
+                                           url  
+0  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+1  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+2  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+3  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+4  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="下载youtube片段"&gt;下载youtube片段&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E4%B8%8B%E8%BD%BDyoutube%E7%89%87%E6%AE%B5"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;根据上面获得的起止时间, 去下载youtube视频中的片段. 很遗憾, youtube-dl虽然可以方便下载youtube视频, 但却无法只下载某个片段. 所以这里有两个事情要做:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;获得真实的youtube视频文件地址. 真正的视频文件并不是你看到的www.youtube.com/watch?v=m9AE_G_9c7Y 而是一个带有签名的超复杂地址, 我猜测可能还会在不同电脑或者不同时间段有变化. 但YouTube-dl是能够获得这个地址的, 方便起见, 我直接抓取的是视频+音频合并的格式. 此时也不必下载视频.&lt;/li&gt;
+&lt;li&gt;通过ffmpeg下载视频片段, ffmpeg的&lt;code&gt;-ss -to&lt;/code&gt;可以设定起止时间, 但如果直接使用起止时间, 应当用&lt;code&gt;-copyts&lt;/code&gt;来强制使用原始视频的绝对时间. 而且&lt;code&gt;-ss&lt;/code&gt;放在&lt;code&gt;-i&lt;/code&gt;之前还是之后,也有不少学问. 具体请参考&lt;a href="https://trac.ffmpeg.org/wiki/Seeking"&gt;https://trac.ffmpeg.org/wiki/Seeking&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里使用了x264和mp3分别对视频和音频进行了重新编码, 导致速度较慢. 理论上可以使用“copy”, 但实测发现因为每个片段都很短, 高概率丢失关键帧, 所以不重新编码的话, 很有可能画面是静止的.&lt;/p&gt;
+&lt;p&gt;虽然ffmpeg也有python的处理版本, 但是那个库也是生成了ffmpeg的命令行, 还要学一堆他自定的语法, 还不如我直接用subprocess.run呢&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;download_part_youtube&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;video_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="n"&gt;youtube_dl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;YoutubeDL&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="s1"&gt;'format'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;'22'&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;ydl&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;info_dict&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;ydl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;extract_info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;video_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;real_video_url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;info_dict&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"url"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kc"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="n"&gt;ffmpeg_command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'ffmpeg'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     &lt;span class="s1"&gt;'-ss'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     &lt;span class="s1"&gt;'-i'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     &lt;span class="n"&gt;real_video_url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     &lt;span class="s1"&gt;'-to'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+     &lt;span class="s1"&gt;'-c:v'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'libx264'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'-c:a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'libmp3lame'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#视频重编码使用x264, 音频重编码使用mp3&lt;/span&gt;
+     &lt;span class="s1"&gt;'-copyts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 强制使用原视频的绝对时间&lt;/span&gt;
+     &lt;span class="s1"&gt;'-y'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;# 强制覆盖&lt;/span&gt;
+     &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ffmpeg_command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;PIPE&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;stderr&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;STDOUT&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;stdout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;decode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"utf-8"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="根据文字截取视频片段并合并"&gt;根据文字截取视频片段并合并&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E6%A0%B9%E6%8D%AE%E6%96%87%E5%AD%97%E6%88%AA%E5%8F%96%E8%A7%86%E9%A2%91%E7%89%87%E6%AE%B5%E5%B9%B6%E5%90%88%E5%B9%B6"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这就是把前面的准备工作合并到一起了, 根据摘取的数据库中的url、起止时间, 去到每个url中下载起止时间的视频片段. 这些视频片段都下载到了本地, 将文件名写入一个txt文件进行记录. 然后使用ffmpeg的concat功能将txt文件中的文件合并成一个视频文件. 最后再打扫一下临时文件, 就大功告成了.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;get_youtube_by_keynote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;final_output&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c1"&gt;#临时文件命名, 记录临时文件列表&lt;/span&gt;
+    &lt;span class="n"&gt;temp_file_list&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"tmp_&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt;.mp4"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;))]&lt;/span&gt;
+    &lt;span class="n"&gt;temp_input&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'tmp_input_files.txt'&lt;/span&gt;
+    &lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;temp_input&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'w'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;)):&lt;/span&gt;
+            &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"file '&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s2"&gt;'&lt;/span&gt;&lt;span class="se"&gt;\n&lt;/span&gt;&lt;span class="s2"&gt;"&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;temp_file_list&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;    
+
+    
+    &lt;span class="c1"&gt;# 遍历数据库, 下载每个视频片段&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;iterrows&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+        &lt;span class="n"&gt;download_part_youtube&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;row&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;temp_file_list&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    
+    &lt;span class="c1"&gt;# 将临时文件合并起来&lt;/span&gt;
+    &lt;span class="n"&gt;ff_concat_command&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;"ffmpeg"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; 
+                   &lt;span class="s1"&gt;'-f'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'concat'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                   &lt;span class="s1"&gt;'-safe'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'0'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                   &lt;span class="s1"&gt;'-i'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;temp_input&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                   &lt;span class="s1"&gt;'-c:v'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'copy'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'-c:a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'copy'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'-copyts'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;#合并似乎不需要重新编码&lt;/span&gt;
+                   &lt;span class="s1"&gt;'-y'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                   &lt;span class="n"&gt;final_output&lt;/span&gt;
+                   &lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="n"&gt;subprocess&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;run&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ff_concat_command&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shell&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="kc"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# 打扫临时文件&lt;/span&gt;
+    &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;temp_input&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;temp_file_list&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;remove&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;合并到一起, 如果是在本地运行, 只需要找本地目录中的内容. 如果是放在colab上, 下载文件是要调用google.colab库中的file.download函数&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;find_text_in_vtt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keynote&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;vtt&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;youtube_url&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;final_output&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"final.mp4"&lt;/span&gt;
+    &lt;span class="n"&gt;get_youtube_by_keynote&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;final_output&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    
+    &lt;span class="c1"&gt;# download from google colab&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;google.colab&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;files&lt;/span&gt;
+        &lt;span class="n"&gt;files&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;final_output&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"not in google colab"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="使用与进一步改进"&gt;使用与进一步改进&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/video_keynote/#%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%BF%9B%E4%B8%80%E6%AD%A5%E6%94%B9%E8%BF%9B"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这个小工具可以用来制作公开课的快速复习视频. 比如OCW, deeplearning.ai中的课程, 都是放在youtube上的. 一些上过的课时间一久就该忘了, 太可惜了. 但完全重看一遍又没有必要, 如果用此方法可以制作出快速复习视频. 只需要很短的时间就可以唤起回忆.&lt;/p&gt;
+&lt;p&gt;另一个可能的诡异应用是, 我也可以不视频字幕中的文字, 而是自己撰写一些常用的语句, 如果difflib.get_close_matches能够找到接近的语句, 就可以摘取下来. 那么给定一组视频, 比如某个总统的演讲视频. 也可以制作出一份“断章取义”的视频来. 当然每句话之间是断断续续, 背景也可能不断转换. 但可能很有趣吧. 这个功能需要对查找的部分进行一些修改, 以后有时间再进行了.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</description><category>python</category><guid>https://goldengrape.github.io/posts/python/video_keynote/</guid><pubDate>Mon, 25 Mar 2019 04:00:00 GMT</pubDate></item><item><title>通项公式快速求解</title><link>https://goldengrape.github.io/posts/python/carefree-princess-1018/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
@@ -2616,324 +3105,4 @@ Variable containing:
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><guid>https://goldengrape.github.io/posts/python/semi-freeform-raytracing/</guid><pubDate>Thu, 29 Mar 2018 14:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;最近在学Michigan大学Data science课程的第三门&lt;a href="https://www.coursera.org/learn/python-machine-learning/home/welcome"&gt;Applied Machine Learning in Python&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;唉, 老师讲课好差劲. 听一遍一点印象都没有, 很快就忘了. 如果一个老师如果上课的时候不写板书, 只用PPT, 高概率不是个好老师. 连作业里的代码风格都很差劲, 哪有在函数内部import的, 交作业的时候还得自己把matplotlib给注释掉.&lt;/p&gt;
-&lt;p&gt;就是这个老师啦:&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://coursera-instructor-photos.s3.amazonaws.com/61/58158043d011e69605657346ccd592/kevyn.jpg" alt=""&gt;&lt;/p&gt;
-&lt;p&gt;Kevyn Collins-Thompson&lt;/p&gt;
-&lt;p&gt;所以, 得趁着刚写完作业, 还有些印象, 赶紧记录下来.&lt;/p&gt;
-&lt;p&gt;这门课讲的也是机器学习, 但不是深度学习, 而是更为"传统"一些的. 用到的主要是Scikit-Learn.&lt;/p&gt;
-&lt;p&gt;关于Scikit-learn, datacamp上有个&lt;a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet"&gt;cheat sheet&lt;/a&gt;看起来不错, 而且&lt;a href="http://scikit-learn.org/stable/documentation.html"&gt;SciKit-Learn自己的说明文档&lt;/a&gt;也很不错. 以后还是看这些文档参考.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="常用算法"&gt;常用算法&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%B8%B8%E7%94%A8%E7%AE%97%E6%B3%95"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;这门课主要讲了SciKit-Learn里几个常用的算法:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;KNN&lt;/li&gt;
-&lt;li&gt;线性回归: 最小二乘拟合, Ridge, Lasso, Polynomial Regression&lt;/li&gt;
-&lt;li&gt;Logistic Regression&lt;/li&gt;
-&lt;li&gt;支持向量机: 线性和Kernelized&lt;/li&gt;
-&lt;li&gt;多层分类&lt;/li&gt;
-&lt;li&gt;Cross-Validation&lt;/li&gt;
-&lt;li&gt;Decision Trees&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="通用步骤"&gt;通用步骤&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E9%80%9A%E7%94%A8%E6%AD%A5%E9%AA%A4"&gt;¶&lt;/a&gt;&lt;/h2&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="分开数据集"&gt;分开数据集&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%88%86%E5%BC%80%E6%95%B0%E6%8D%AE%E9%9B%86"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;之前可能还需要归一化.&lt;/p&gt;
-&lt;p&gt;传统的机器学习方法, 数据集的数量可能并不大, 因此还是会留出1/5~1/4的数据作为test set. 要用train_test_split把数据集分开.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [15]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 随便给个数据集&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
-&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;reshape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random_sample&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;shape&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt output_prompt"&gt;Out[15]:&lt;/div&gt;
-
-
-
-
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a1493f5c0&amp;gt;]&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-
-
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,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"&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [16]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.model_selection&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;train_test_split&lt;/span&gt;
-&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;train_test_split&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [17]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"red"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'o'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;color&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;"blue"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt output_prompt"&gt;Out[17]:&lt;/div&gt;
-
-
-
-
-&lt;div class="output_text output_subarea output_execute_result"&gt;
-&lt;pre&gt;[&amp;lt;matplotlib.lines.Line2D at 0x1a14881f28&amp;gt;]&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-
-
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXQAAAD8CAYAAABn919SAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAADl0RVh0U29mdHdhcmUAbWF0cGxvdGxpYiB2ZXJzaW9uIDIuMi4wLCBodHRwOi8vbWF0cGxvdGxpYi5vcmcvFvnyVgAAEAxJREFUeJzt3W+MZfVdx/HPZ5YSHaoRsguhwMythtQSkoLeNIwkZu2KQSWCDzQl12ZjGscHbaWmiYHOg/bJZHlQqz4wTa4F2cQb1FASiJJasnZDmkxoZ2lVcG1ocGe6dmWHoJY6DxD4+uDc6c5O5849988595zfeb8Scu757Zk9v5tdPvz4/n6/cxwRAgDU39ysOwAAmA4CHQASQaADQCIIdABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJCIK8q82eHDh6PVapV5SwCovTNnzrwWEUeGXVdqoLdaLa2vr5d5SwCoPdsbea6j5AIAiSDQASARBDoAJIJAB4BEEOgAkAgCHQAK1OtJrZY0N5cde73i7lXqskUAaJJeT1pelra3s/ONjexckjqd6d+PEToAFGRl5VKY79jeztqLQKADQEE2N0drnxSBDgAFWVgYrX1SBDoAFGR1VZqfv7xtfj5rLwKBDgDjWFuTTpzIjgN0OlK3Ky0uSnZ27HaLmRCVWOUCAKNbW5OOHZPefFO68krp1ClpaWnfSzud4gJ8L0boADCq06ezMH/77ex4+vSseySJQAeA0R09mo3MDx3KjkePzrpHkii5AMDolpayMsvp01mYDyi3lI1AB4BxLC1VJsh3UHIBgEQQ6ACQCAIdABJBoANAIoYGuu2bbH/V9lnbL9l+oN9+je1nbb/cP15dfHcBAIPkGaG/JelTEfF+SXdI+pjtWyQ9KOlURNws6VT/HAAwI0MDPSIuRMQL/c9vSDor6QZJ90o62b/spKT7iuokAJShzLcLFWGkdei2W5Jul/S8pOsi4oKUhb7ta6feOwAoSdlvFypC7klR2++W9CVJn4yI74/wc8u2122vb21tjdNHAJhMjicjlv12oSLkGqHbfpeyMO9FxJP95ldtX98fnV8v6eJ+PxsRXUldSWq32zGFPgNAfjmfjFj224WKkGeViyU9IulsRHx+1y89Lel4//NxSU9Nv3sAMKGcT0Ys++1CRchTcrlT0kckfcj2t/r//JqkhyXdZftlSXf1zwGgWnI+GbHstwsVYWjJJSK+JskDfvnYdLsDAFOW88mIOxOfKytZmWVhIQvzukyISpIjyitrt9vtWF9fL+1+AJAC22cioj3sOrb+A0AiCHQASASBDgCJINAB1FeODUNNwivoANRTzg1DTcIIHUA95dww1CQEOoB6yrlhqEkouQCop5wbhpqEQAdQX0tLBPkulFwAVAsrV8bGCB1AdbByZSKM0AFUBytXJkKgA6gOVq5MhJILgHKsrQ1fkcLKlYkQ6ACKN0ptnJUrY6PkAqB41MZLQaADKB618VJQcgFQPGrjpSDQAZSD2njhKLkAQCIIdABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAMbHs8srhXXoAMbDs8srhxE6gPHwfJbKIdABjIfns1QOJRcA4+H5LJVDoAMYH89nqRRKLgAu0+tJrZY0N5cde71Z9wh5MUIH8EO9nrS8LG1vZ+cbG9m5JHU6s+sX8mGEDjRFjjXjKyuXwnzH9nbWjupjhA40Qc4145ub+//4oHZUCyN0oAlyrhlfWNj/xwe1o1oIdKAJcq4ZX12V5ucvb5ufz9pRfZRcgCbIuWZ8Z+JzZSUrsywsZGHOhGg9OCIOvsB+VNI9ki5GxK39ts9K+j1JW/3LPh0Rzwy7WbvdjvX19Yk6DABNY/tMRLSHXZen5PKYpLv3af+TiLit/8/QMAcAFGtooEfEc5JeL6EvAIAJTDIp+nHb/2z7UdtXT61HAICxjBvoX5D0M5Juk3RB0h8PutD2su112+tbW1uDLgMATGisQI+IVyPi7Yh4R9JfSPrgAdd2I6IdEe0jR46M208AwBBjBbrt63ed/qakF6fTHQDAuIauQ7f9uKSjkg7bPi/pM5KO2r5NUkg6J+n3C+wjgIOsrfFMckjKEegRcf8+zY8U0BcAo+K9ntiFrf9AnfFeT+xCoAN1xns9sQvPcgHqjPd6YhcCHag73uuJPkouAJAIAh0AEkGgA0AiCHSgTDle1AyMi0lRoCyjbAJi9yfGQKADZdlvE9B+Yc3uT4yJkgtQlrybgNj9iTExQgfKkncT0E7w74zQ2f2JnAh0oEx5NgGx+xNjItCBKmL3J8ZADR0AEkGgA0AiCHQASASBDgCJINABIBEEOgAkgkAHgEQQ6MCkeIIiKoKNRcAkeJAWKoQROjAJHqSFCiHQgUnkfYIiUAJKLsAkeJAWKoRABwbJ+9YgHqSFiiDQgf0w2YkaooYO7IfJTtQQgQ7sh8lO1BAlF2A/THaihgh0NEveiU6JyU7UDoGO5mCiE4mjho7mYKITiSPQ0RxMdCJxlFyQhjy1cSY6kTgCHfU3Sm2ciU4kjJIL6o/aOCCJQEcKqI0DknKUXGw/KukeSRcj4tZ+2zWS/kZSS9I5Sb8dEf9VXDeBA1AbByTlG6E/JunuPW0PSjoVETdLOtU/B2ZnaUl66CHCHI02NNAj4jlJr+9pvlfSyf7nk5Lum3K/AAAjGreGfl1EXJCk/vHaQRfaXra9bnt9a2trzNsBAIYpfFI0IroR0Y6I9pEjR4q+HQA01riB/qrt6yWpf7w4vS4BAMYxbqA/Lel4//NxSU9NpzsAgHENDXTbj0tak/Q+2+dtf1TSw5Lusv2ypLv658DU9HpSqyXNzWXHXm/WPQKqb+g69Ii4f8AvHZtyXwBJWXgvL0vb29n5xkZ2Lkmdzuz6BVQdO0VROSsrl8J8x/Z21g5gMAIdlbO5OVo7gAyBjspZWBitHUCGQEep8kx2rq5K8/OXt83PZ+0ABiPQUZqdyc6NDSni0mTn3lDvdKRuV1pclOzs2O0yIQoM44go7WbtdjvW19dLux+qpdXKQnyvxUXp3LmyewPUh+0zEdEedh0jdJSGyU6gWAQ6SsNkJ1AsAh3TsbYmnTiRHQdgshMoFi+JxuRyvqR5Z1JzZSUrsywsZGHOZCcwHQQ6Dra2NvzVbvu9pHnAtZ0OAQ4UhUDHYDlH3j98SfPOdbykGZgJAh2D5R1585JmoBIIdAw2ysh7aYkgB2aMQMdgjLyBWiHQcTBG3kBtsA4dABJBoANAIgj0JsqxqxNA/VBDb5q8a8sB1A4j9KbZb205gCQQ6E2zs7b80CF2dQKJoeTSNKwtB5JFoDcRa8uBJFFyAYBEEOgAkAgCHQASQaADQCII9JSwAxRoNFa5pIIdoEDjMUJPBTtAgcYj0FPBDlCg8Si5pIIdoEDjEegpYQco0GiUXAAgEQQ6ACSCQAeARBDoAJCIiSZFbZ+T9IaktyW9FRHtaXQKu6ytsXIFQC7TWOXySxHx2hR+H+zF7k8AI6DkMgO9ntRqSXNz2bHXG3Ahuz8BjGDSQA9JX7F9xvbyNDqUul5PWl6WNjakiOy4vDwg1Nn9CWAEjojxf9h+T0R8z/a1kp6V9ImIeG7PNcuSliVpYWHh5zc2Nibpb+21WlmI77W4KJ07t88PUEMHGs/2mTxzlBMF+p4bflbSDyLic4Ouabfbsb6+PpX71dXcXDYy38uW3nmn/P4AqL68gT52ycX2VbZ/YuezpF+R9OK4v19TLCyM1g4AeU1SQ79O0tds/5Okr0v6+4j48nS6la7VVWl+/vK2+fmsHQAmMfayxYh4RdIHptiXRuh0suPKirS5mY3MV1cvtQPAuHja4jTlnMDsdAhwANNHoE8Lm4AAzBgbi4ZgExCAumCEfoCdTUDb29n5ziYgaZ+Syc4moJ0ROpuAAJRsauvQ86jbOnQ2AQGogrzr0BmhH2Bzc7R2XgEHYJaooR+ATUAA6oRAPwCbgADUCYF+gE5H6nazmrmdHbtd1pADqCZq6EOwCQhAXTBCB4BEEOgAkIjmBvramnTiRHYEgAQ0s4bOc1cAJKiZI3SeuwIgQc0MdF6+DCBBzSy5LC1lZRaeuwIgIc0MdInnrgBITjNLLgCQIAIdABKRXqCzvhxAQ6VVQ2d9OYAGS2uEzvpyAA2WVqCzvhxAg6VVcmF9OYAGSyvQJdaXA2istEouANBgBDoAJIJAB4BEEOgAkIjKB3qvJ7Va0txcduz1Zt0jAKimSq9y6fWk5WVpezs739jIziWp05ldvwCgiio9Ql9ZuRTmO7a3s3YAwOUqHeibm6O1A0CTVTrQFxZGaweAJqt0oK+uSvPzl7fNz2ftAIDLVTrQOx2p25UWFyU7O3a7TIgCwH4qvcpFysKbAAeA4So9QgcA5DdRoNu+2/a3bX/H9oPT6hQAYHRjB7rtQ5L+XNKvSrpF0v22b5lWxwAAo5lkhP5BSd+JiFci4k1Jfy3p3ul0CwAwqkkC/QZJ3911fr7fBgCYgUlWuXiftviRi+xlSf0nsOgHtr895v0OS3ptzJ+tK75zM/Cdm2GS77yY56JJAv28pJt2nd8o6Xt7L4qIrqTuBPeRJNlej4j2pL9PnfCdm4Hv3AxlfOdJSi7fkHSz7ffavlLShyU9PZ1uAQBGNfYIPSLesv1xSf8g6ZCkRyPipan1DAAwkol2ikbEM5KemVJfhpm4bFNDfOdm4Ds3Q+Hf2RE/Mo8JAKghtv4DQCJqEehNe8SA7Ztsf9X2Wdsv2X5g1n0qg+1Dtr9p++9m3Zcy2P4p20/Y/rf+n/XSrPtUNNt/2P87/aLtx23/2Kz7NG22H7V90faLu9qusf2s7Zf7x6uLuHflA72hjxh4S9KnIuL9ku6Q9LEGfGdJekDS2Vl3okR/JunLEfGzkj6gxL+77Rsk/YGkdkTcqmwxxYdn26tCPCbp7j1tD0o6FRE3SzrVP5+6yge6GviIgYi4EBEv9D+/oexf9KR34dq+UdKvS/rirPtSBts/KekXJT0iSRHxZkT892x7VYorJP247SskzWufvSt1FxHPSXp9T/O9kk72P5+UdF8R965DoDf6EQO2W5Jul/T8bHtSuD+V9EeS3pl1R0ry05K2JP1lv8z0RdtXzbpTRYqI/5D0OUmbki5I+p+I+Mpse1Wa6yLigpQN2CRdW8RN6hDouR4xkCLb75b0JUmfjIjvz7o/RbF9j6SLEXFm1n0p0RWSfk7SFyLidkn/q4L+N7wq+nXjeyW9V9J7JF1l+3dm26u01CHQcz1iIDW236UszHsR8eSs+1OwOyX9hu1zykpqH7L9V7PtUuHOSzofETv/5/WEsoBP2S9L+veI2IqI/5P0pKRfmHGfyvKq7eslqX+8WMRN6hDojXvEgG0rq62ejYjPz7o/RYuIhyLixohoKfvz/ceISHrkFhH/Kem7tt/Xbzom6V9n2KUybEq6w/Z8/+/4MSU+EbzL05KO9z8fl/RUETep/DtFG/qIgTslfUTSv9j+Vr/t0/2duUjHJyT1+gOVVyT97oz7U6iIeN72E5JeULaS65tKcMeo7cclHZV02PZ5SZ+R9LCkv7X9UWX/YfutQu7NTlEASEMdSi4AgBwIdABIBIEOAIkg0AEgEQQ6ACSCQAeARBDoAJAIAh0AEvH/kxiRJ7tq2C4AAAAASUVORK5CYII="&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="设模型并训练"&gt;设模型并训练&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E8%AE%BE%E6%A8%A1%E5%9E%8B%E5%B9%B6%E8%AE%AD%E7%BB%83"&gt;¶&lt;/a&gt;&lt;/h3&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;一般来说设定模型就是模型().fit(X_train,y_train),&lt;/p&gt;
-&lt;p&gt;要应用训练好的模型就用模型.predict(X),&lt;/p&gt;
-&lt;p&gt;评估的话, 就是模型.score(X_train, y_train) 和模型.score(X_test, y_test)&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [24]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.linear_model&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LinearRegression&lt;/span&gt;
-&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;LinearRegression&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;figure&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="s1"&gt;'.'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;plot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;predict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (training): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
-     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'R-squared score (test): &lt;/span&gt;&lt;span class="si"&gt;{:.3f}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;
-     &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;linreg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_test&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_test&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;R-squared score (training): 0.997
-R-squared score (test): 0.998
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_area"&gt;
-
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-
-
-
-&lt;div class="output_png output_subarea "&gt;
-&lt;img src="data:image/png;base64,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"&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="各模型总结"&gt;各模型总结&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/scikit-learn-note/#%E5%90%84%E6%A8%A1%E5%9E%8B%E6%80%BB%E7%BB%93"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;
-&lt;th style="text-align:left"&gt;含义&lt;/th&gt;
-&lt;th style="text-align:left"&gt;函数&lt;/th&gt;
-&lt;th style="text-align:left"&gt;cost function&lt;/th&gt;
-&lt;th style="text-align:left"&gt;参数&lt;/th&gt;
-&lt;th&gt;过拟合时调参&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;常规线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;LinearRegression&lt;/td&gt;
-&lt;td style="text-align:left"&gt;MSE&lt;/td&gt;
-&lt;td style="text-align:left"&gt;无&lt;/td&gt;
-&lt;td&gt;无&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;参数L2约束(平方和)的线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;Ridge&lt;/td&gt;
-&lt;td style="text-align:left"&gt;MSE+alpha* Sum(w^2)&lt;/td&gt;
-&lt;td style="text-align:left"&gt;alpha&lt;/td&gt;
-&lt;td&gt;增大alpha&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;参数L1约束(稀疏)的线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;Lasso&lt;/td&gt;
-&lt;td style="text-align:left"&gt;MSE+ alpha* Sum(abs(w))&lt;/td&gt;
-&lt;td style="text-align:left"&gt;alpha=2.0, max_iter = 10000&lt;/td&gt;
-&lt;td&gt;增大alpha&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;多项式拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;PolynomialFeatures&lt;/td&gt;
-&lt;td style="text-align:left"&gt;先poly = PolynomialFeatures(degree=2), 然后X_poly = poly.fit_transform(X), 再送入各种线性拟合&lt;/td&gt;
-&lt;td style="text-align:left"&gt;同Ridge或Lasso&lt;/td&gt;
-&lt;td&gt;同Ridge或Lasso&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;其实就是Sigmoid&lt;/td&gt;
-&lt;td style="text-align:left"&gt;LogisticRegression&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;C, 负责L2约束&lt;/td&gt;
-&lt;td&gt;减小C&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;线性SVM&lt;/td&gt;
-&lt;td style="text-align:left"&gt;LinearSVC&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;C&lt;/td&gt;
-&lt;td&gt;减小C&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;Kernelized SVM&lt;/td&gt;
-&lt;td style="text-align:left"&gt;SVC(kernel = "rbf")&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;C, 负责曲面的平滑, gamma, 负责局部点的重要性&lt;/td&gt;
-&lt;td&gt;减小C, 减小gamma&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;决策树&lt;/td&gt;
-&lt;td style="text-align:left"&gt;DecisionTreeClassifier&lt;/td&gt;
-&lt;td style="text-align:left"&gt;&lt;/td&gt;
-&lt;td style="text-align:left"&gt;max_depth, min_samples_leaf&lt;/td&gt;
-&lt;td&gt;减小max_depth, 增大min_samples_leaf&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note/</guid><pubDate>Sun, 25 Mar 2018 15:30:00 GMT</pubDate></item></channel></rss>
+</description><category>python</category><guid>https://goldengrape.github.io/posts/python/semi-freeform-raytracing/</guid><pubDate>Thu, 29 Mar 2018 14:30:00 GMT</pubDate></item></channel></rss>

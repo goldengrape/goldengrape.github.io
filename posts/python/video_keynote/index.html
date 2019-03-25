@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " vocab="http://ogp.me/ns" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>根据字幕做视频摘要 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/video_keynote/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../bulabula/how-to-use-pubmed-and-read-paper/" title="如何查阅文献" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="根据字幕做视频摘要">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/video_keynote/">
+<meta property="og:description" content="周末做了一个奇怪的小东西.
+一个根据字幕来做出视频缩略版的工具, 效果参见李永乐老师讲柏拉图立体的复习缩略版
+这是一段remix的视频, 是从李永乐老师讲柏拉图立体 的课程中节选了数学概念的部分, 去掉了推导与展开的部分. 原视频大约12分钟, 剪辑后的视频只有4分钟. 可以方便用来快速复习概念.
+
+
+
+
+
+
+
+
+过程是这样的, 先从youtube下载某个视频的字幕, 然后你可以对字幕进行编辑, ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-03-25T12:00:00+08:00">
+<meta property="article:tag" content="python">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">根据字幕做视频摘要</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-03-25T12:00:00+08:00" itemprop="datePublished" title="2019-03-25 12:00">2019-03-25 12:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div tabindex="-1" id="notebook" class="border-box-sizing">
+    <div class="container" id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>周末做了一个奇怪的小东西.</p>
+<p>一个根据字幕来做出视频缩略版的工具, 效果参见<a href="https://www.youtube.com/watch?v=wxlySg9TBBI">李永乐老师讲柏拉图立体的复习缩略版</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wxlySg9TBBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>这是一段remix的视频, 是从<a href="https://www.youtube.com/watch?v=m9AE_G_9c7Y">李永乐老师讲柏拉图立体</a> 的课程中节选了数学概念的部分, 去掉了推导与展开的部分. 原视频大约12分钟, 剪辑后的视频只有4分钟. 可以方便用来快速复习概念.</p>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>过程是这样的, 先从youtube下载某个视频的字幕, 然后你可以对字幕进行编辑, 删去不重要的部分, 只留下需要保留的文字, 但注意仍然要保留原来的换行. 然后程序会自动在字幕中查找保留文字, 并找到对应的时间. 把对应时间的视频片段下载下来, 连成一体.</p>
+<p>这个程序最好是在Google Colab上运行, 在本地电脑上运行要令终端也可以<strong>正常访问国际互联网</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这个程序依赖于<a href="https://webvtt-py.readthedocs.io/en/latest/">webvtt-py</a>、<a href="https://rg3.github.io/youtube-dl/">youtube-dl</a> 和 <a href="https://ffmpeg.org/">ffmpeg</a> , 当然还有<a href="https://pandas.pydata.org/">pandas</a></p>
+<p>注意在Google Colab上, webvtt-py和youtube-dl都是需要每次安装的.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">webvtt</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip install webvtt-py
+    <span class="kn">import</span> <span class="nn">webvtt</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">youtube_dl</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="o">!</span>pip install youtube_dl
+    <span class="kn">import</span> <span class="nn">youtube_dl</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span><span class="o">,</span> <span class="nn">subprocess</span><span class="o">,</span> <span class="nn">difflib</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="下载youtube视频字幕">下载youtube视频字幕<a class="anchor-link" href="#%E4%B8%8B%E8%BD%BDyoutube%E8%A7%86%E9%A2%91%E5%AD%97%E5%B9%95">¶</a>
+</h2>
+<p>首先是要下载youtube上的视频字幕, youtube的字幕有两类, 一是作者自己上传的文字字幕, 一是由youtube进行语音识别后生成的自动字幕, 其中自动字幕又会被机器翻译成各种语言.</p>
+<p>youtube字幕是一种叫做WebVTT的格式, 可以使用youtube-dl进行下载. 虽然youtube-dl有python运行方式, 但我还不能熟练掌握, 于是使用了subprocess.call运行命令行进行下载.</p>
+<p>如果是下载自动字幕, 要使用<code>--write-auto-sub</code>, 如果是下载作者上传的字幕, 则是<code>--write-sub</code>, 下载字幕的时候, 我觉得并不需要将视频也下载下来, 所以要使用<code>--skip-download</code>, 字幕的语言简体中文=zh-Hans, 英文=en</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_youtube_sub</span><span class="p">(</span><span class="n">youtube_url</span><span class="p">,</span><span class="n">out_filename</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="s2">"zh-Hans"</span><span class="p">):</span>
+    <span class="n">vtt_command</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'youtube-dl'</span><span class="p">,</span>
+               <span class="s1">'--write-auto-sub'</span><span class="p">,</span> <span class="c1"># 如果下载作者自制的字幕则使用--write-sub</span>
+               <span class="s1">'--sub-lang'</span><span class="p">,</span> <span class="n">lang</span><span class="p">,</span> <span class="c1"># 选择语言</span>
+               <span class="s1">'--skip-download'</span><span class="p">,</span>  <span class="c1"># 不下载视频, 只下载字幕</span>
+               <span class="s1">'--no-continue'</span><span class="p">,</span>    <span class="c1"># 强制覆盖已经下载的文件</span>
+                   <span class="n">youtube_url</span><span class="p">,</span>
+              <span class="s1">'--output'</span><span class="p">,</span> <span class="n">out_filename</span><span class="p">]</span> <span class="c1"># 输出文件名格式</span>
+    <span class="c1"># final out filename=out_filename+lang+'.vtt'</span>
+    <span class="n">p</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">vtt_command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">p</span><span class="o">!=</span><span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="清理vtt字幕">清理vtt字幕<a class="anchor-link" href="#%E6%B8%85%E7%90%86vtt%E5%AD%97%E5%B9%95">¶</a>
+</h2>
+<p>vtt的字幕, 是一种还挺丰富(=复杂)的字幕格式, 里面不仅仅是时间戳和文字, 文字里可以加入丰富的特效.  特别是英文版本的vtt字幕, 为了表现出连贯的效果, 会把当前行与下一行字幕都显示出来, 于是每一句话其实记录了两次(中文似乎没有). 所以要进行一点清理. 将重复的部分删去. 只保留当前说的一句话, 和这句话的起止时间戳. 保存到一个pandas Dataframe里. 毕竟pandas后期好处理</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">clean_vtt</span><span class="p">(</span><span class="n">vtt</span><span class="p">):</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">starts</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">ends</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">vtt</span><span class="p">:</span>
+        <span class="n">extend_text</span><span class="o">=</span><span class="n">line</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">splitlines</span><span class="p">()</span>
+        <span class="n">repeat</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">extend_text</span><span class="p">)</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">extend_text</span><span class="p">)</span>
+        <span class="n">starts</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">line</span><span class="o">.</span><span class="n">start</span><span class="p">]</span> <span class="o">*</span> <span class="n">repeat</span><span class="p">)</span>
+        <span class="n">ends</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">line</span><span class="o">.</span><span class="n">end</span><span class="p">]</span> <span class="o">*</span> <span class="n">repeat</span><span class="p">)</span>
+
+    <span class="n">previous</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">new_lines</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">new_starts</span><span class="o">=</span><span class="p">[]</span>
+    <span class="n">new_ends</span><span class="o">=</span><span class="p">[]</span>
+
+    <span class="k">for</span> <span class="n">l</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">e</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span><span class="n">starts</span><span class="p">,</span><span class="n">ends</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">l</span> <span class="o">==</span> <span class="n">previous</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+            <span class="n">new_starts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+            <span class="n">new_ends</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="n">previous</span> <span class="o">=</span> <span class="n">l</span>
+
+    <span class="n">df</span><span class="o">=</span><span class="p">{</span><span class="s2">"start"</span><span class="p">:</span><span class="n">new_starts</span><span class="p">,</span><span class="s2">"end"</span><span class="p">:</span><span class="n">new_ends</span><span class="p">,</span><span class="s2">"text"</span><span class="p">:</span><span class="n">new_lines</span><span class="p">}</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="合并vtt字幕成为脚本">合并vtt字幕成为脚本<a class="anchor-link" href="#%E5%90%88%E5%B9%B6vtt%E5%AD%97%E5%B9%95%E6%88%90%E4%B8%BA%E8%84%9A%E6%9C%AC">¶</a>
+</h2>
+<p>无他, 一行一句, 保留换行之后比较好看也好编辑.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">vtt_to_transcript</span><span class="p">(</span><span class="n">vtt</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">clean_vtt</span><span class="p">(</span><span class="n">vtt</span><span class="p">)</span>
+    <span class="n">transcript</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"text"</span><span class="p">])</span>
+    <span class="k">return</span> <span class="n">transcript</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="在字幕中找到对应的句子">在字幕中找到对应的句子<a class="anchor-link" href="#%E5%9C%A8%E5%AD%97%E5%B9%95%E4%B8%AD%E6%89%BE%E5%88%B0%E5%AF%B9%E5%BA%94%E7%9A%84%E5%8F%A5%E5%AD%90">¶</a>
+</h2>
+<p>给定一句话, 要在字幕中找到这一句话的时间戳, 这样才能按照时间对视频切片. python的标准库里有一个difflib, 专门用来比较, 其中我使用的是get_close_matches, 找到最接近的文字. 这样即使只截取了一句话中的一部分, 也有可能找到相应的话语.</p>
+<p>考虑到给定的一句话, 一定是从字幕中提取出来, 所以没有考虑找不到的情况.</p>
+<p>使用pandas的优点在此显现, 只需要merge两个数据库, 就可以把相同字段, 相同内容的部分求出交集, 这样就可以获得时间戳了.</p>
+<p>(在这里记录url, 是为了日后扩展成从多个字幕中找句子, 那时就要记录每个字幕从哪里来的, 这是后话, 暂时还没有开始)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_text_in_vtt</span><span class="p">(</span><span class="n">text</span><span class="p">,</span><span class="n">vtt</span><span class="p">,</span><span class="n">youtube_url</span><span class="p">):</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">clean_vtt</span><span class="p">(</span><span class="n">vtt</span><span class="p">)</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">"url"</span><span class="p">]</span><span class="o">=</span><span class="n">youtube_url</span>
+    <span class="n">chosen_text</span><span class="o">=</span><span class="p">[]</span>
+    <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">splitlines</span><span class="p">():</span>
+        <span class="n">sentence</span><span class="o">=</span><span class="n">difflib</span><span class="o">.</span><span class="n">get_close_matches</span><span class="p">(</span><span class="n">t</span><span class="p">,</span><span class="n">df</span><span class="p">[</span><span class="s2">"text"</span><span class="p">],</span><span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">sentence</span><span class="p">:</span>
+            <span class="n">chosen_text</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">sentence</span><span class="p">)</span>
+    <span class="n">df_chosen</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">chosen_text</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"text"</span><span class="p">])</span>
+    <span class="n">df_chosen</span><span class="o">=</span><span class="n">df_chosen</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">df_chosen</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>以上就是处理字幕的部分.</p>
+<p>还是以李永乐老师讲课的视频为例, 这堂课的字幕内容</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">youtube_url</span><span class="o">=</span><span class="s1">'https://www.youtube.com/watch?v=m9AE_G_9c7Y'</span>
+    <span class="n">vtt_pre</span><span class="o">=</span><span class="s2">"test"</span>
+    <span class="n">lang</span><span class="o">=</span><span class="s1">'zh-Hans'</span>
+    <span class="n">vtt_filename</span><span class="o">=</span><span class="s1">'.'</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">vtt_pre</span><span class="p">,</span><span class="n">lang</span><span class="p">,</span><span class="s2">"vtt"</span><span class="p">])</span>
+    <span class="n">download_youtube_sub</span><span class="p">(</span><span class="n">youtube_url</span><span class="p">,</span><span class="n">vtt_pre</span><span class="p">,</span> <span class="n">lang</span><span class="o">=</span><span class="n">lang</span><span class="p">)</span>
+    
+    <span class="n">vtt</span><span class="o">=</span><span class="n">webvtt</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">vtt_filename</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">vtt_to_transcript</span><span class="p">(</span><span class="n">vtt</span><span class="p">)[:</span><span class="mi">100</span><span class="p">])</span> <span class="c1">#blog中只显示100个字符</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>各位同学大家好 我是李永乐老师
+最近有小朋友说 他看综艺节目里面谈到了
+柏拉图立体和阿基米德多面体
+他想问我这是什么
+那我们今天就来先研究一下柏拉图立体
+以前其实我们也曾经说过柏拉图立体
+什么叫柏拉图
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="手工选择必要的关键部分">手工选择必要的关键部分<a class="anchor-link" href="#%E6%89%8B%E5%B7%A5%E9%80%89%E6%8B%A9%E5%BF%85%E8%A6%81%E7%9A%84%E5%85%B3%E9%94%AE%E9%83%A8%E5%88%86">¶</a>
+</h2>
+<p>对, 这个程序做不到人工智能, 只有手工智能, 我怎么知道你觉得那一部分更重要, 所以请复制粘贴上面打印出来的字幕, 然后删掉其中不想要的部分, 保留下需要的, 注意不要改变换行的方式.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">keynote</span><span class="o">=</span><span class="s1">'''</span>
+<span class="s1">什么叫柏拉图立体呢</span>
+<span class="s1">他提出正多面体只有五种</span>
+<span class="s1">所以我们就把正多面体称为柏拉图立体</span>
+<span class="s1">首先它必须每一个面… 它是个正多面体</span>
+<span class="s1">每个面都是同样的正多边形</span>
+<span class="s1">除此之外 它还有一个要求</span>
+<span class="s1">就是每个顶点的情况必须是相同的</span>
+<span class="s1">比如说如果每一个顶点都连接三条棱</span>
+<span class="s1">那所有顶点都必须是这样</span>
+<span class="s1">然后你如果把这个图形稍微转一个方向</span>
+<span class="s1">你会发现所有顶点都会跟以前重合</span>
+<span class="s1">这个就叫每个顶点的情况是相同的</span>
+<span class="s1">我们就把这种立体称之为正多面体</span>
+<span class="s1">或者叫柏拉图立体</span>
+<span class="s1">我们现在想证明一下 正多面体只有五种</span>
+<span class="s1">首先我们先来看由正三角形所组成的</span>
+<span class="s1">我们知道三角形每一个内角是60度</span>
+<span class="s1">'''</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>然后我们就可以给出一句话的起止时间了:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">find_text_in_vtt</span><span class="p">(</span><span class="n">keynote</span><span class="p">,</span><span class="n">vtt</span><span class="p">,</span><span class="n">youtube_url</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>                 text           end         start  \
+0           什么叫柏拉图立体呢  00:00:15.539  00:00:13.859   
+1         他提出正多面体只有五种  00:00:24.339  00:00:21.719   
+2   所以我们就把正多面体称为柏拉图立体  00:00:27.019  00:00:24.519   
+3  首先它必须每一个面… 它是个正多面体  00:00:32.520  00:00:29.160   
+4        每个面都是同样的正多边形  00:00:38.100  00:00:32.679   
+
+                                           url  
+0  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+1  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+2  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+3  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+4  https://www.youtube.com/watch?v=m9AE_G_9c7Y  
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="下载youtube片段">下载youtube片段<a class="anchor-link" href="#%E4%B8%8B%E8%BD%BDyoutube%E7%89%87%E6%AE%B5">¶</a>
+</h2>
+<p>根据上面获得的起止时间, 去下载youtube视频中的片段. 很遗憾, youtube-dl虽然可以方便下载youtube视频, 但却无法只下载某个片段. 所以这里有两个事情要做:</p>
+<ul>
+<li>获得真实的youtube视频文件地址. 真正的视频文件并不是你看到的www.youtube.com/watch?v=m9AE_G_9c7Y 而是一个带有签名的超复杂地址, 我猜测可能还会在不同电脑或者不同时间段有变化. 但YouTube-dl是能够获得这个地址的, 方便起见, 我直接抓取的是视频+音频合并的格式. 此时也不必下载视频.</li>
+<li>通过ffmpeg下载视频片段, ffmpeg的<code>-ss -to</code>可以设定起止时间, 但如果直接使用起止时间, 应当用<code>-copyts</code>来强制使用原始视频的绝对时间. 而且<code>-ss</code>放在<code>-i</code>之前还是之后,也有不少学问. 具体请参考<a href="https://trac.ffmpeg.org/wiki/Seeking">https://trac.ffmpeg.org/wiki/Seeking</a>
+</li>
+</ul>
+<p>这里使用了x264和mp3分别对视频和音频进行了重新编码, 导致速度较慢. 理论上可以使用“copy”, 但实测发现因为每个片段都很短, 高概率丢失关键帧, 所以不重新编码的话, 很有可能画面是静止的.</p>
+<p>虽然ffmpeg也有python的处理版本, 但是那个库也是生成了ffmpeg的命令行, 还要学一堆他自定的语法, 还不如我直接用subprocess.run呢</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">download_part_youtube</span><span class="p">(</span><span class="n">video_url</span><span class="p">,</span> <span class="n">start</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span><span class="n">output_filename</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">youtube_dl</span><span class="o">.</span><span class="n">YoutubeDL</span><span class="p">({</span><span class="s1">'format'</span><span class="p">:</span> <span class="s1">'22'</span><span class="p">})</span> <span class="k">as</span> <span class="n">ydl</span><span class="p">:</span>
+        <span class="n">info_dict</span> <span class="o">=</span> <span class="n">ydl</span><span class="o">.</span><span class="n">extract_info</span><span class="p">(</span><span class="n">video_url</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">real_video_url</span> <span class="o">=</span> <span class="n">info_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"url"</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="n">ffmpeg_command</span><span class="o">=</span><span class="p">[</span><span class="s1">'ffmpeg'</span><span class="p">,</span>
+     <span class="s1">'-ss'</span><span class="p">,</span><span class="n">start</span><span class="p">,</span>
+     <span class="s1">'-i'</span><span class="p">,</span>
+     <span class="n">real_video_url</span><span class="p">,</span>
+     <span class="s1">'-to'</span><span class="p">,</span> <span class="n">end</span><span class="p">,</span>
+     <span class="s1">'-c:v'</span><span class="p">,</span> <span class="s1">'libx264'</span><span class="p">,</span> <span class="s1">'-c:a'</span><span class="p">,</span> <span class="s1">'libmp3lame'</span><span class="p">,</span> <span class="c1">#视频重编码使用x264, 音频重编码使用mp3</span>
+     <span class="s1">'-copyts'</span><span class="p">,</span> <span class="c1"># 强制使用原视频的绝对时间</span>
+     <span class="s1">'-y'</span><span class="p">,</span> <span class="c1"># 强制覆盖</span>
+     <span class="n">output_filename</span><span class="p">]</span>
+    <span class="n">p</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">ffmpeg_command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">)</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">))</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="根据文字截取视频片段并合并">根据文字截取视频片段并合并<a class="anchor-link" href="#%E6%A0%B9%E6%8D%AE%E6%96%87%E5%AD%97%E6%88%AA%E5%8F%96%E8%A7%86%E9%A2%91%E7%89%87%E6%AE%B5%E5%B9%B6%E5%90%88%E5%B9%B6">¶</a>
+</h2>
+<p>这就是把前面的准备工作合并到一起了, 根据摘取的数据库中的url、起止时间, 去到每个url中下载起止时间的视频片段. 这些视频片段都下载到了本地, 将文件名写入一个txt文件进行记录. 然后使用ffmpeg的concat功能将txt文件中的文件合并成一个视频文件. 最后再打扫一下临时文件, 就大功告成了.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">get_youtube_by_keynote</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">final_output</span><span class="p">):</span>
+    <span class="c1">#临时文件命名, 记录临时文件列表</span>
+    <span class="n">temp_file_list</span><span class="o">=</span><span class="p">[</span><span class="s2">"tmp_</span><span class="si">{}</span><span class="s2">.mp4"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">index</span><span class="p">)</span> <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))]</span>
+    <span class="n">temp_input</span><span class="o">=</span><span class="s1">'tmp_input_files.txt'</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">temp_input</span><span class="p">,</span><span class="s1">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)):</span>
+            <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"file '</span><span class="si">{}</span><span class="s2">'</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">temp_file_list</span><span class="p">[</span><span class="n">index</span><span class="p">]))</span>    
+
+    
+    <span class="c1"># 遍历数据库, 下载每个视频片段</span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+        <span class="n">download_part_youtube</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">url</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">start</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">end</span><span class="p">,</span><span class="n">temp_file_list</span><span class="p">[</span><span class="n">index</span><span class="p">])</span>
+    
+    <span class="c1"># 将临时文件合并起来</span>
+    <span class="n">ff_concat_command</span><span class="o">=</span><span class="p">[</span><span class="s2">"ffmpeg"</span><span class="p">,</span> 
+                   <span class="s1">'-f'</span><span class="p">,</span><span class="s1">'concat'</span><span class="p">,</span>
+                   <span class="s1">'-safe'</span><span class="p">,</span><span class="s1">'0'</span><span class="p">,</span>
+                   <span class="s1">'-i'</span><span class="p">,</span> <span class="n">temp_input</span><span class="p">,</span>
+                   <span class="s1">'-c:v'</span><span class="p">,</span> <span class="s1">'copy'</span><span class="p">,</span> <span class="s1">'-c:a'</span><span class="p">,</span> <span class="s1">'copy'</span><span class="p">,</span> <span class="s1">'-copyts'</span><span class="p">,</span> <span class="c1">#合并似乎不需要重新编码</span>
+                   <span class="s1">'-y'</span><span class="p">,</span>
+                   <span class="n">final_output</span>
+                   <span class="p">]</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">ff_concat_command</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="c1"># 打扫临时文件</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">temp_input</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">temp_file_list</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>合并到一起, 如果是在本地运行, 只需要找本地目录中的内容. 如果是放在colab上, 下载文件是要调用google.colab库中的file.download函数</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span><span class="o">==</span><span class="s2">"__main__"</span><span class="p">:</span>
+    <span class="n">df</span><span class="o">=</span><span class="n">find_text_in_vtt</span><span class="p">(</span><span class="n">keynote</span><span class="p">,</span><span class="n">vtt</span><span class="p">,</span><span class="n">youtube_url</span><span class="p">)</span>
+    <span class="n">final_output</span><span class="o">=</span><span class="s2">"final.mp4"</span>
+    <span class="n">get_youtube_by_keynote</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">final_output</span><span class="p">)</span>
+    
+    <span class="c1"># download from google colab</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">google.colab</span> <span class="k">import</span> <span class="n">files</span>
+        <span class="n">files</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="n">final_output</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"not in google colab"</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="使用与进一步改进">使用与进一步改进<a class="anchor-link" href="#%E4%BD%BF%E7%94%A8%E4%B8%8E%E8%BF%9B%E4%B8%80%E6%AD%A5%E6%94%B9%E8%BF%9B">¶</a>
+</h2>
+<p>这个小工具可以用来制作公开课的快速复习视频. 比如OCW, deeplearning.ai中的课程, 都是放在youtube上的. 一些上过的课时间一久就该忘了, 太可惜了. 但完全重看一遍又没有必要, 如果用此方法可以制作出快速复习视频. 只需要很短的时间就可以唤起回忆.</p>
+<p>另一个可能的诡异应用是, 我也可以不视频字幕中的文字, 而是自己撰写一些常用的语句, 如果difflib.get_close_matches能够找到接近的语句, 就可以摘取下来. 那么给定一组视频, 比如某个总统的演讲视频. 也可以制作出一份“断章取义”的视频来. 当然每句话之间是断断续续, 背景也可能不断转换. 但可能很有趣吧. 这个功能需要对查找的部分进行一些修改, 以后有时间再进行了.</p>
+
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../bulabula/how-to-use-pubmed-and-read-paper/" rel="prev" title="如何查阅文献">前一篇</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
