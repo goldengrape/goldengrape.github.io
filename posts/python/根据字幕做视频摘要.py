@@ -13,7 +13,7 @@
 
 # 过程是这样的, 先从youtube下载某个视频的字幕, 然后你可以对字幕进行编辑, 删去不重要的部分, 只留下需要保留的文字, 但注意仍然要保留原来的换行. 然后程序会自动在字幕中查找保留文字, 并找到对应的时间. 把对应时间的视频片段下载下来, 连成一体.
 # 
-# 这个程序最好是在Google Colab上运行, 在本地电脑上运行要令终端也可以__正常访问国际互联网__
+# 这个程序最好是在Google Colab上运行, 在本地电脑上运行要令终端也可以__正常访问国际互联网__ 本文的[代码在github上](https://github.com/goldengrape/goldengrape.github.io/blob/master/posts/python/video_keynote/index.ipynb), 可以上传至[google colab](https://colab.research.google.com/)中运行
 
 # 这个程序依赖于[webvtt-py](https://webvtt-py.readthedocs.io/en/latest/)、[youtube-dl](https://rg3.github.io/youtube-dl/) 和 [ffmpeg](https://ffmpeg.org/) , 当然还有[pandas](https://pandas.pydata.org/)
 # 
