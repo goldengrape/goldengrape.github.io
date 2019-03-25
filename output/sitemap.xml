@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-03-13T03:34:00Z</lastmod>
+  <lastmod>2019-03-25T04:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -187,7 +187,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-12.html</loc>
-  <lastmod>2019-03-13T03:34:00Z</lastmod>
+  <lastmod>2019-03-25T04:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -704,6 +704,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</loc>
   <lastmod>2017-12-29T04:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/video_keynote/</loc>
+  <lastmod>2019-03-25T04:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/worldbank-data-cleaner/</loc>
