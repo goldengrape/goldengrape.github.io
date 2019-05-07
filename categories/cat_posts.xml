@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 07 May 2019 09:21:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>半自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近要做一批幻灯片的配音演讲. 之前用的&lt;a href="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation"&gt;自动生成keynote演讲&lt;/a&gt;方法突然不好用了, 因为似乎苹果偷偷更新了apple script的函数定义, 一大堆命令都无法识别了. &lt;/p&gt;
+&lt;p&gt;但是自动生成配音演讲真的是很方便, 做网络课程的时候, 有什么地方需要更新改正时, 修改文字就好了. 即使是准备现场演讲, 提前生成配音听一遍, 也能够提前对演讲有一个预演, 知道哪些地方需要改进. &lt;/p&gt;
+&lt;p&gt;虽然应该自己重新用python写一个, 但本着能拖一天是一天的拖延症思想, 先用现成的东西拼凑连接起来好了. &lt;/p&gt;
+&lt;p&gt;于是有如下步骤:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;材料:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;iPhone/ iPad&lt;/li&gt;
+&lt;li&gt;mac&lt;/li&gt;
+&lt;li&gt;数据线&lt;/li&gt;
+&lt;li&gt;MTCoreAudio的AudioMonitor, &lt;a href="http://mac.softpedia.com/get/Developer-Tools/MTCoreAudio.shtml"&gt;softpedia中下载&lt;/a&gt; 或mac自家的GarageBand &lt;/li&gt;
+&lt;li&gt;讯飞阅读 app&lt;/li&gt;
+&lt;li&gt;耳机&lt;/li&gt;
+&lt;li&gt;作者本人&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;软硬件连接方法:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;用数据线连接iPhone和mac, 解锁iPhone&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;到mac上, 应用程序-&amp;gt;实用工具-&amp;gt;“音频MIDI设置”, 打开“音频MIDI设置”, 找到自己的iPhone, 点击“启用”
+&lt;img alt="屏幕快照 2019-03-08 12.07.51" src="https://i.loli.net/2019/03/08/5c81eb5a0582d.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把下载下来的MTCoreAudio打开, 找到里面的AudioMonitor, 复制到应用程序中, 
+&lt;img alt="" src="https://cdn.guidingtech.com/media/assets/WordPress-Import/2016/01/Screen_Shot_2016-01-25_at_8_00_20_PM.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(图片应用自guidingtech.com)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;插上耳机, 然后运行 Audio Monitor, 将input改成iPhone, 点击Play Through&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-03-08 12.16.18" src="https://i.loli.net/2019/03/08/5c81eca50fd3f.png"&gt;&lt;/p&gt;
+&lt;p&gt;以上步骤就可以将iPhone里发出的声音作为mac上的音频输入, 并且同时接通音频输入和音响输出, 使自己可以监听到音频过程. &lt;/p&gt;
+&lt;p&gt;注意如果不是使用的iphone作为输入和耳机作为输出, 而是用了内建话筒和音箱, 那么可能会引起尖锐的哮鸣.&lt;/p&gt;
+&lt;h3&gt;操作流程&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;撰写演讲脚本, 保存为txt文件.&lt;/li&gt;
+&lt;li&gt;发送到iPhone上, 用讯飞阅读打开.&lt;/li&gt;
+&lt;li&gt;打开做好的keynote, “录制幻灯片放映”&lt;/li&gt;
+&lt;li&gt;点击红色的录音按钮, 倒数3秒后, 在讯飞阅读中播放朗读演讲脚本.&lt;/li&gt;
+&lt;li&gt;自己听着朗读, 到该翻页的时候翻页. 是的, 这个过程是有人参与的, 所以说是半自动.&lt;/li&gt;
+&lt;li&gt;播放完成后, 保存, keynote中文件-&amp;gt;导出到-&amp;gt;视频&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;结果与讨论&lt;/h2&gt;
+&lt;p&gt;效果很好, 而且所有的动画也都可以流畅播放和录制, 如果再DJ一点, 还可以手动暂停语音朗读, 等着动画播放完成. &lt;/p&gt;
+&lt;p&gt;建议先高速听一遍, 一边听一边把一些表达稍微修改, 比如数学公式的朗读可能有问题, 有些分词断句可能听起来很怪异, 必要时加个逗号或者空格. &lt;/p&gt;
+&lt;p&gt;注意导出的视频文件是m4v后缀, 有些教学网站傻傻的只认mp4文件, 直接改后缀成mp4就行了. 不用再转码.&lt;/p&gt;
+&lt;p&gt;没找到讯飞朗读里如何人为做一些停顿. 逗号, 句号之类都只是寻常间断, 多个标点也不能把停顿延长.&lt;/p&gt;
+&lt;p&gt;把iphone作为mac的音频输入, 再同时监听真的很有趣. 好像可以玩很多东西&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</guid><pubDate>Fri, 08 Mar 2019 04:00:00 GMT</pubDate></item><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
+&lt;p&gt;于是用相机记录下来:
+&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
+&lt;p&gt;再记录一下拍摄过程:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;材料与方法:&lt;/h2&gt;
+&lt;h3&gt;工具:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;待开放栀子花,&lt;/li&gt;
+&lt;li&gt;Nokia X6手机,&lt;/li&gt;
+&lt;li&gt;三脚架, 手机夹子&lt;/li&gt;
+&lt;li&gt;Android
+上的&lt;a href="https://apkpure.com/cn/open-camera/net.sourceforge.opencamera"&gt;Open Camera App&lt;/a&gt;: 这是一个很强悍的相机app, 能够自定义很多参数.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://item.taobao.com/item.htm?id=574484611225"&gt;可外接电源的LED补光灯&lt;/a&gt;, 这几天在做另一个项目, 买了一堆网红主播用品.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.ffmpeg.org/"&gt;FFmpeg&lt;/a&gt;, 这是一个开源命令行软件. 在mac上用homebrew完全安装ffmpeg要费些功夫, (开源软件嘛, 一步安装到位就太不矜持了), &lt;a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS"&gt;要先brew tap&lt;/a&gt; 然后再&lt;a href="https://gist.github.com/Piasy/b5dfd5c048eb69d1b91719988c0325d8"&gt;安装各个options&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;摆放&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="IMG_2273" src="https://i.loli.net/2019/03/05/5c7e87ec2fa1e.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;拍摄参数设定&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="Screenshot_20190305-223636" src="https://i.loli.net/2019/03/05/5c7e8ab0f22d9.png"&gt;
+&lt;em&gt; 连拍模式: 无限
+&lt;/em&gt; 连拍模式间隔: 目前我设定的是30秒&lt;/p&gt;
+&lt;h3&gt;软件处理&lt;/h3&gt;
+&lt;p&gt;使用ffmpeg合成图像.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将目录里的所有jpg图像合成为视频, 帧速率=30&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' flower.mp4&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实测发现画面太大, 于是只截取画面中的一部分(宽=2200, 高=2200, x起点=800, y起点=700)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' -vf "crop=2200:2200:800:700" flower.mp4&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;微信朋友圈只有10秒, 所以提高速度, 其中setpts=10/实际时间&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ffmpeg -i flower.mp4 -b:v 2000k -filter:v "setpts=0.05714286*PTS" output.mp4&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;结果与讨论&lt;/h2&gt;
+&lt;h3&gt;结果:&lt;/h3&gt;
+&lt;p&gt;未处理的拍摄样张:
+&lt;img alt="IMG_20190305_065624_DRO" src="https://i.loli.net/2019/03/05/5c7e8fbfe5da4.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;处理后的视频:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
+&lt;h3&gt;讨论&lt;/h3&gt;
+&lt;p&gt;花开过程大约是2天, 一共拍摄了5200多张, 照片总容量达到了12G, 原本担心ffmpeg处理这么大的量会吃力, 没想到还是很容易就完成了. &lt;/p&gt;
+&lt;p&gt;平均来说, 每30秒拍摄一张有点短, 造成数据量很大, 不过反正ffmpeg处理起来也不吃力, 但如果使用常规的软件来处理, 比如photoshop之类, 有可能会吃不消. &lt;/p&gt;
+&lt;p&gt;但花瓣并不是匀速打开的, 最外层的花瓣类似是弹开的样子, 特别是第4片花瓣, 30秒之内张开了60度以上. 所以如果拍摄间隔设定太久, 就可能捕捉不到. &lt;/p&gt;
+&lt;p&gt;关于摆放位置, 现在觉得应该把镜头正对花的中心, 而不应该从侧面拍摄, 会有一半的花瓣看不见. 还是应该尽可能把镜头靠近, 使花占主体部分, 而不是后期剪裁, 感觉花朵本身的分辨率还是欠缺. &lt;/p&gt;
+&lt;p&gt;背景颜色变化明显, 是因为日光的原因. 晚上由补光灯照明, 白天日光造成的影响很明显. 补光灯应该再亮一些, 噪点还是太明显. 我不知道如果完全遮蔽日光, 使用人造光源照明, 是否会对开花过程有影响. 毕竟LED的光谱与日光还是有很大不同. &lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/flower-blossom/</guid><pubDate>Tue, 05 Mar 2019 14:00:00 GMT</pubDate></item><item><title>好好学6个月英语, 还是等半年看看机器翻译的水平?</title><link>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如题.&lt;/p&gt;
+&lt;p&gt;现在机器学习实在进步太快, 好用的工具层出不穷. 列举一下目前使用的工具:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览网页:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;浏览的要求就是看起来快, 大概意思清楚就可以了, 所以我不使用那种查单词的. 而是直接翻译成中英对照的, 现在用的是&lt;a href="http://caiyunapp.com/"&gt;彩云小译&lt;/a&gt; , 浏览网页用量比较大, 所以付费订阅中, 每个月1$&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;看文献:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当然主要是医学文献, 有sci-hub看全文非常方便, 只需要把sci-hub.tw/ 加在文献页面网址的前面即可, 这样就能够下载PDF了.&lt;/p&gt;
+&lt;p&gt;(更新: 我发现很多人不理解把scihub加在文献页面前面的意思)&lt;/p&gt;
+&lt;p&gt;比如: 在pubmed上查到一篇文献, 网址是:
+&lt;code&gt;https://www.ncbi.nlm.nih.gov/pubmed/30651639/&lt;/code&gt; &lt;/p&gt;
+&lt;p&gt;那么通过sci-hub找到的全文网址就是: 
+ &lt;code&gt;sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/30651639/&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;此处要强力推荐这个&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod体验版&lt;/a&gt; 专职的医学文献机器翻译, 机翻的可读性还是不错的. 能够机翻PDF, 然后转换成word文件, 不但维持原格式, 连表格都原位翻译, 连上标下标都按原位翻译.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;写作&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我的英语能力, 大概是听&amp;gt;说&amp;gt;&amp;gt;读&amp;gt;=写. 所以有两个辅助工具,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个是Google Translate, 写好中文看英文, 如果英文翻译得不好, 多半是中文表达不够清楚, 改中文.&lt;/li&gt;
+&lt;li&gt;另一个是&lt;a href="https://app.grammarly.com/"&gt;grammarly&lt;/a&gt;, 这个有&lt;a href="https://chrome.google.com/webstore/detail/kbfnbcaeplbcioakkpcpgfkobkghlhen"&gt;Chrome的插件&lt;/a&gt;, 能够检查出一些语法和拼写错误. 很奇怪的, Google Translate得到的结果里还是时常会有语法错误, 最常见的是丢失冠词. 按说RNN生成的序列这种问题应该概率很低.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在还缺少比较好用的:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;专利机器翻译. 不过专利这种东西, 即使用中文写的, 也不是很好懂的. 我自己的发明, 看专利我也不是很明白. 所以, 最好有个“专利语”到“日常口语”, 哪怕是“工程师语”的机器翻译也行.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语法检查工具. 每年全球各种英语考试那么多, 改错题也那么多, 不能拿来当语料库么.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上这些工具, 配合&lt;a href="https://goldengrape.github.io/posts/bulabula/gollum-wiki"&gt;用Gollum建立的wiki笔记工具&lt;/a&gt;, 读文献吐槽文献很爽.&lt;/p&gt;
+&lt;p&gt;补充一下医学文献的快速浏览过程:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开&lt;a href="https://pubmed.gov/"&gt;pubmed&lt;/a&gt;检索文献&lt;/li&gt;
+&lt;li&gt;如果有html的全文, 则在文献的右侧有PMC Full Text(free)的图标&lt;img alt="图标" src="https://static.pubmed.gov/portal/portal3rc.fcgi/4183432/img/3977009"&gt;. 可以直接点击阅读, PMC的阅读器非常棒, 参考文献会放到相应段落旁边, 看综述时非常舒服. 此时可以点击&lt;a href="https://chrome.google.com/webstore/detail/lingocloud-interpreter/jmpepeebcbihafjjadogphmbgiffiajh?hl=zh-CN"&gt;彩云小译的插件按钮&lt;/a&gt;, 进行中英文对照翻译. 简要浏览, 遇到细节再看英文是具体怎么说的. 
+  优选PMC的阅读器, 因为彩云小译有些网页解析有问题, 比如对于JAMA的网站只能翻译前几段, 后面的似乎就忘记了.&lt;/li&gt;
+&lt;li&gt;如果没有html全文, 在pubmed的网址前面加入sci-hub.tw/ 下载PDF文件, 然后送进&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod&lt;/a&gt;里面, 翻译完成后下载word文档浏览译文.&lt;/li&gt;
+&lt;/ol&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Study-English-or-wait-for-machine-translation/</guid><pubDate>Tue, 15 Jan 2019 13:00:00 GMT</pubDate></item><item><title>用Gollum建立wiki</title><link>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;目的:&lt;/strong&gt; 建立一个文献阅读笔记.&lt;/p&gt;
+&lt;p&gt;我想要一个看文献记录笔记的工具, 由于有http://sci-hub.tw  很方便找到全文, 而且我并不需要严格的引文管理/插入这样的操作, 所以只需要记录文献的标题和DOI即可. 在阅读中的笔记, 用blog不太合适, 因为还不完全是一个时间线的模式, 一篇文献可能从不同的角度, 在不同时间阅读的时候, 会产生不同的内容, 所以要动态更新. 文献中引用的知识或者信息, 可能还有交叉引用的可能. 于是我打算用wiki来做这件事情.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;方法:&lt;/strong&gt; 建立一个wiki
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;现在建立这类的工具, 必须有一份本地的, 有一份云端的. 单纯本地, 长时间不写, 就不知道丢到哪里去了; 单纯云端, 那天服务商倒闭/ 付费/ 降权/ 导入导出, 也是一堆麻烦.&lt;/p&gt;
+&lt;p&gt;所以, 必须有本地一份, 远端一份. 本blog也是如此.&lt;/p&gt;
+&lt;p&gt;我选择的本地应用是gollum, 远端是github.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按照gollum的&lt;a href="https://github.com/gollum/gollum/wiki/Installation"&gt;官方安装说明&lt;/a&gt;进行操作, mac上按官方homebrew方式安装成功. (真是难得的开源软件, 居然一次成功)&lt;/li&gt;
+&lt;li&gt;有一个中文文件/目录名称的bug, 所以补充安装&lt;code&gt;gem install gollum-rugged_adapter&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;github上随便建一个github repository, 到wiki页面, 找到wiki的git地址, (与repo本身的地址是不同的), 然后git clone到本地&lt;/li&gt;
+&lt;li&gt;运行&lt;code&gt;gollum --mathjax  --adapter rugged&lt;/code&gt;, 启动本地服务&lt;/li&gt;
+&lt;li&gt;用浏览器打开 localhost:4567&lt;/li&gt;
+&lt;li&gt;用markdown语法直接写文档&lt;/li&gt;
+&lt;li&gt;如果对wiki不熟, 新建一个页面使用&lt;code&gt;[[文件名]]&lt;/code&gt;的方式直接写出来就可以了. save以后双击就可以产生新的页面.&lt;/li&gt;
+&lt;li&gt;写好以后用git命令add,commit,push到远端&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;本地以markdown的.md文件形式保存, 使用git push 推到远端.
+当使用gollum --mathjax启动时, 支持$$包裹的LaTeX数学公式.
+远端github那边是否能够正常显示LaTeX我不在乎.(迟早吧, 要不太可耻了)&lt;/p&gt;
+&lt;p&gt;文献按照领域归类在不同的页面路径之下, 文献笔记的页面中记录文献的标题和DOI, 以及指向sci-hub的全文链接. 文献中的图片需要记录原始文献中的Figure编号, 如果有html全文, 则指向原始文献页面中的图片地址, 如果没有html全文, 则在PDF中截图, 并将截图存放在网上免费的公共图库中. 如果图片丢失, 可以从原文中查找.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;结果:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;整个过程还挺容易的.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;讨论:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Gollum作为一个开源软件,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;居然按照原生说明一次安装成功,&lt;/li&gt;
+&lt;li&gt;居然在国内运行良好不用换源,&lt;/li&gt;
+&lt;li&gt;居然只遇到一个中文bug, 锅还是别人的.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;怎么说呢, 实在是太不矜持了.&lt;/p&gt;
+&lt;p&gt;如果不想自己麻烦, 还有其他网友推荐的服务:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.zotero.org/"&gt;Zotero&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://hackmd.io"&gt;Hackmd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</guid><pubDate>Mon, 14 Jan 2019 18:00:00 GMT</pubDate></item><item><title>我练习毛笔字的方法</title><link>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;简述一下我练习毛笔字的方法, (尚不敢称为书法):&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;至少看一遍&lt;a href="http://my.tv.sohu.com/pl/9076183/index.shtml"&gt;《黄简讲书法》的初级课程&lt;/a&gt;, 老先生说话比较慢, 用1.5x的速度听比较舒服.&lt;/li&gt;
+&lt;li&gt;用&lt;a href="https://detail.tmall.com/item.htm?id=44531148545"&gt;A4透明胶片&lt;/a&gt;打印字帖, 每个字按2寸大小的大楷进行打印, 大约一页6个字左右, 网上很容易找到这样的字帖, 比如王羲之《兰亭序》的大字字帖. 稍微调整一下颜色和对比度, 可以得到纯黑白的.&lt;/li&gt;
+&lt;li&gt;可以描红或者临帖, 如果是四尺半切的宣纸, 可以折叠成4x2^N格, 不妨先描红一格, 然后再临帖3格.&lt;/li&gt;
+&lt;li&gt;描红, 把打印的字帖垫在宣纸下面.&lt;/li&gt;
+&lt;li&gt;临帖, 先照着写, 写完以后把透明胶片字帖放回到自己写的字上面比对. 每写完一个字都进行一次比对.&lt;/li&gt;
+&lt;li&gt;找个支架, 把手机对着写字区域夹好, 写字的时候录像, 主要是录笔和手的动作. 写完以后看一看录像, 删了或者扔到google photo里, 反正不占空间. &lt;a href="https://www.microsoft.com/en-us/microsoftpix"&gt;microsoft pix&lt;/a&gt;能够方便做成高速重放视频.&lt;/li&gt;
+&lt;li&gt;成人练习, 我觉得三天打鱼两天晒网比较好. 想写的时候就多些几天, 不想写就算了. 但是为了避免完全忘记, 建议上个闹钟, 比如每晚10点提醒一下: “要不要练练字?”, GTD那种强迫生活方式我可受不了.&lt;/li&gt;
+&lt;li&gt;写完以后拍照, 邀请几个好友/同学建群打卡或者只是留存.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;这是我个人的练习方法, 写完一个字以后再用透明胶片上的字帖拿回去比对, 看两个字的差异, 相当于做Mean Square Error. 把MSE当作loss function, 对自己的人脑神经网络进行训练, 虽然每个字都练习很多遍, 容易产生过拟合, 但是由于人脑天然具有遗忘功能, 加上三天打鱼两天晒网, 遗忘参数调得比较高, 所以个人感觉还是有不错得泛化能力.&lt;/p&gt;
+&lt;p&gt;对操作录像然后重放, 是训练手术的基本技巧. 书法也算是一种手的技术吧. 初学者通常注意力范围有限, 看不到笔锋的背面, 也看不到自己的手腕动作. 黄简老师讲吴昌硕写字偶尔还要探头看看自己笔锋的背面(为啥不用镜子?), 现在有手机录像就方便很多了.&lt;/p&gt;
+&lt;p&gt;一年不到, 练习了“永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右，引以为流觞曲水，列坐其次。” 65个字, 写到后面还经常要再返回去练练前面.&lt;/p&gt;
+&lt;p&gt;偶尔一时兴起, 想写点别的, 最简单的方法是用个防水套把iPad装起来, 然后用书法字典的app(比如&lt;a href="https://itunes.apple.com/cn/app/%E4%BA%91%E7%AB%A0%E4%B9%A6%E6%B3%95%E5%AD%97%E5%85%B8/id992025786"&gt;云章书法字典&lt;/a&gt;)找到想写的字, 也可以描红, 也可以临帖后再把宣纸铺上去比对. 但防水套和宣纸比较薄, 手指有可能会触碰屏幕导致误操作, 左手可以戴个手套. 如果反复写很多次会比透明胶片字帖麻烦一些.&lt;/p&gt;
+&lt;p&gt;写好的文字可以&lt;a href="https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/"&gt;导入keynote里&lt;/a&gt;用来做Keynote/PPT幻灯, 很好玩.&lt;/p&gt;
+&lt;p&gt;据说人们容易低估自己周期性的努力, 而高估自己一次性的努力, 这是哪个推友说过来着, 我记不起来了. 感觉挺正确的.&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</guid><pubDate>Sun, 13 Jan 2019 04:00:00 GMT</pubDate></item><item><title>面向机器学习的研发思路</title><link>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这里仅考虑一些实际问题, 对于密码破解之类的NP-hard问题不在讨论范围之内, 对于实际问题, 也只是提供一种可行解.&lt;/p&gt;
+&lt;p&gt;机器学习/ 深度学习发展很快, 各种算法层出不穷. 我们假定机器学习是一个非常强悍的拟合器(或者分类器, 分类器可以通过拟合器拟合). 在有这样的工具协助下, 研发思路会有完全不同的方向.&lt;/p&gt;
+&lt;p&gt;那么对于要解决的问题, 要提出以下几个问题:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从可以收集到的数据X, 是否存在至少一个通路, 可以推导出结果y?&lt;/li&gt;
+&lt;li&gt;数据集(X,y)是否可以通过低成本的方式获得?&lt;/li&gt;
+&lt;li&gt;数据集(X,y)是否可以通过计算机模拟的方式生成?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果前两个问题的答案是肯定, 那么就可以直接使用机器学习/深度学习来拟合了.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;如果三个问题的答案都是肯定答案, 那么就直接使用计算机模拟的方式产生大量的数据集, 然后在用机器学习/深度学习的算法来拟合.&lt;/p&gt;
+&lt;p&gt;举个例子:&lt;/p&gt;
+&lt;p&gt;这个&lt;a href="https://people.csail.mit.edu/mrub/vidmag/"&gt;Video Magnification&lt;/a&gt; 研究小组做出了一个很厉害的算法, 通过摄像头拍摄画面能够将微小的变化放大, 甚至可以仅仅通过摄像头拍摄面部, 就能够测量心率， 注意不是那种使用闪光灯照亮手指, 然后用摄像头拍摄测心率的方法, 而是直接在自然光照明下, 在一定距离隔空拍摄. 他们还做了一个&lt;a href="https://www.cardiio.com/"&gt;app&lt;/a&gt; 非常有趣.&lt;/p&gt;
+&lt;p&gt;通过他们的研究, 可以知道:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;至少有一种算法可以从面部视频(X)计算出心率(y). 条件1满足.&lt;/li&gt;
+&lt;li&gt;数据集(面部视频, 心率)并不难采集, 对同一个人录像+心率带测量就可以采集到这两个数据. 条件2满足.&lt;/li&gt;
+&lt;li&gt;看起来不方便通过模拟的方式产生数据集, 条件3不满足.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以, 现在如果要实现这个app的效果, 并不需要去解读Video magnification的文献, 不需要去找他们的代码. 需要的只是找到足够多的人, 在不同的环境下录像, 同时监测心率, 取得足够的数据集, 然后送进机器学习/深度学习的拟合器中去拟合, 就可以得到同样的效果.&lt;/p&gt;
+&lt;p&gt;更进一步,&lt;/p&gt;
+&lt;p&gt;再来仔细看条件3, 数据集(面部视频, 心率)真的是难以模拟出来的么? 如果我们有Video magnification的算法(实际上有文献有代码), 再找到足够多的单人面部视频, 就可以通过Video magnification的算法得到这些单人面部视频所对应的心率. 单人面部视频在网上很容易找到大量, 于是这个数据集也是可以不需要找真人来录制就可以获得的了. 通过这种方法, 训练出来的深度学习拟合器, 至少不比Video magnification的算法更差, 如果再搭配一些实际录制的数据, 有可能还能做得更好.&lt;/p&gt;
+&lt;p&gt;这就是面向机器学习的研发思路.&lt;/p&gt;
+&lt;p&gt;补充关于数据的要求:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="data" src="https://i.loli.net/2018/11/01/5bda8ea6a41e6.png"&gt;
+理想的情况下, 我们采集到的数据X可以推导出结果y. 但在实际过程中, 由于我们不知道如何从X推导出y, 只是知道存在有这样一条路径, 于是我们可能只好扩大数据的采集范围, 但只要采集到的数据X, 完全包含了能够推导出y的信息即可, 混杂了一些数据垃圾无关紧要, 可能只是影响了训练的时间, 并不影响最终的预测精度.&lt;/p&gt;
+&lt;p&gt;但在更多的情况下, 有些数据是采集不到的, 我们只能采集到X的一大部分, 有一些关键数据现阶段无论如何也拿不到, 那么拟合出来的结果就一定会有一定的误差, 这时候就看误差是否影响实际需求了. 如果够用, 那就可以了.&lt;/p&gt;
+&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item><item><title>屏霸的演讲</title><link>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="i2" src="https://i.loli.net/2018/10/27/5bd3fbce9f148.png"&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;超级英雄就是你们用来
+Superheroes are part of your brainless desire...
+
+模拟真实体验的无脑幻想之一
+to replace true experience with simulation.
+
+你们不说话  却爱看脱口秀
+You don't talk, you watch talk shows.
+
+你们不玩游戏  却爱看游戏节目
+You don't play games, you watch game shows.
+
+旅行  恋爱  冒险
+Travel, relationships, risk...
+
+这些有意义的经验都得被包装一番
+every meaningful experience must be packaged...
+
+以供你们坐得远远的进行观看
+and delivered to you to watch at a distance.
+
+这样你们就能安安稳稳
+So that you can remain ever sheltered...
+
+不思进取
+ever passive...
+
+只要做贪婪的消费者
+ever ravenous consumers...
+
+甚至都不愿意从自己的沙发上站起来
+who can't bring themselves to rise from their couches...
+
+进行一场酣畅淋漓的人生体验
+break a sweat and participate in life.
+
+你们希望超级英雄来保护你们
+You want superheroes to protect you...
+
+让你们自己变得更加无助
+and make yourselves ever more powerless in the process.
+
+你们告诉自己  有人在保护你们
+While you tell yourselves you're being looked after.
+
+你们的利益得到了满足
+That your interests are being served.
+
+你们的权利得到了维护
+And your rights are being upheld.
+
+所以系统可以继续对你们进行搜刮
+So that the system can keep stealing from you...
+
+并对你施以微笑
+smiling at you all the while.
+
+来啊  派你们的超级英雄来阻止我
+Go ahead, send your Supers to stop me.
+
+拿好你们的零食  盯紧屏幕
+Grab your snacks, watch your screens,
+
+看看会发生什么事
+and see what happens.
+
+你们不再是掌控者
+You are no longer in control.
+
+我才是
+I am.
+&lt;/pre&gt;
+
+
+&lt;p&gt;引用自&amp;lt;&amp;lt;超人总动员2&amp;gt;&amp;gt; Incredibles 2 (2018)&lt;/p&gt;
+&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item><item><title>将书法导入成keynote形状</title><link>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己写的毛笔字仍然有诸多缺陷, 不过现代人的展示更多发生在幻灯片而不是宣纸上, 比如在做幻灯的时候用上自己写的字, 感觉很开心.&lt;/p&gt;
+&lt;p&gt;导入成Keynote形状以后, 多了许多后期调整的可能性. 很有意思.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-08-22 21.35.52" src="https://i.loli.net/2018/08/23/5b7e2d3ddb6f6.png"&gt;&lt;/p&gt;
+&lt;p&gt;先说说如何导入:&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;ol&gt;
+&lt;li&gt;用手机上的&lt;a href="https://www.adobe.com/products/capture.html"&gt;adobe caputre&lt;/a&gt;拍摄, 简单修饰形状. 这个app在android和iOS上都有.&lt;/li&gt;
+&lt;li&gt;导出成SVG&lt;/li&gt;
+&lt;li&gt;发送到电脑上, 如果是iOS对mac可以很简单使用airdrop.&lt;/li&gt;
+&lt;li&gt;下载并安装 &lt;a href="https://www.christianholz.net/keynote_utilities.html#svg2keynote"&gt;SvgToKeynote&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;运行SvgToKeynote将SVG文件转换成keynote文件, 注意转换出来的是早期版本的keynote文件, 编辑或者存储时会提示升级, 升级就好了.&lt;/li&gt;
+&lt;li&gt;keynote文件内的图形就是“形状”了, 如果用右键点击可以出现“使可以编辑”, 就可以编辑顶点. 还可以“存储到我的形状”&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Keynote形状, 或者说Keynote shape的好处是可以进行逻辑运算, 能够将两个形状进行融合/ 交叉/ 减少/ 排除, 于是可以比较方便地拆分各个组件.&lt;/p&gt;
+&lt;p&gt;在书法, 可以用编辑顶点的方法修改笔画的细节, 比如笔锋, 牵丝。 还可以将各个笔势分离开来, 调整裹束, 也就是间架结构.&lt;/p&gt;
+&lt;p&gt;如果有处理SVG的专业软件, 当然直接处理可能会更简单一些.&lt;/p&gt;
+&lt;p&gt;对于PowerPoint, 需要升级到office 365以后, 能够有convert to shape功能, 但我买的不是, 所以无法处理SVG.&lt;/p&gt;
+&lt;p&gt;对于PowerPoint,  原来有三种“图像”:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;形状: 可以编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
+&lt;li&gt;图形: 不能编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
+&lt;li&gt;图片: 不能编辑顶点, 不能改变填充颜色, 是标量图&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其中后两种在keynote里都作为图片处理. 在keynote中, 如果把文件导出成powerpoint文件, 那么形状-&amp;gt;形状, 如果是在keynote中复制, 到powerpoint中粘贴, 是形状-&amp;gt;图片.&lt;/p&gt;
+&lt;p&gt;sspai里这一篇&lt;a href="https://sspai.com/post/39238"&gt;文章&lt;/a&gt;说用Libre Office把SVG转换成keynote形状也可以. 不过Libre Office有200多M, 我懒得装了, 如果有一天SvgToKeynote失效了, 记着Libre Office可用.&lt;/p&gt;
+&lt;p&gt;如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</guid><pubDate>Thu, 23 Aug 2018 04:00:00 GMT</pubDate></item><item><title> 区块链儿化音添加方案(建议稿)</title><link>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;霍炬首先发现&lt;a href="https://twitter.com/virushuo/status/1017977810017632256"&gt;这个问题&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;virushuo: 惊呆了，区块儿链儿这个儿化音在哪竟然是争议问题。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;为尽快形成共识&lt;sup id="fnref-0"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-0"&gt;1&lt;/a&gt;&lt;/sup&gt;, 在此提出
+《区块链儿话音添加方案(建议稿)》:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;在互联网大会发言时，应吐词清晰不宜使用儿话音，不慎加入时，注意不可在词尾加入。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;儿话表示物体较小&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-1"&gt;2&lt;/a&gt;&lt;/sup&gt;, 为显示本公司参与者众多，链长，可以把儿话音加在块儿上。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;简称时可使用我司的链儿，以表示可作为套在颈上&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-2"&gt;3&lt;/a&gt;&lt;/sup&gt;的智能合约，并且可延长。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;作为从业者，不宜使用吞音，例如圈儿链。但应识别出吞音明显的使用者通常是南城五套房的土豪，宜跟进!&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果不适应儿话音，则不要强行添加，必要时可使用block chain的英文，例如对粤语区，可使用波克钦&lt;sup id="fnref-3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-3"&gt;4&lt;/a&gt;&lt;/sup&gt;的发音.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn-0"&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/shell909090/status/1018004112246337537"&gt;@shell909090说&lt;/a&gt; : 我觉得加哪都好，但是务必要尽快形成共识。只有有了共识，才能产生价值。 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-0" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-1"&gt;
+&lt;p&gt;以维基百科记录的&lt;a href="https://zh.wikipedia.org/wiki/%E5%85%92%E5%8C%96%E9%9F%B3"&gt;儿化音使用&lt;/a&gt;为例, “有时是否使用一些儿化音难以从道理推断，其中有复杂的历史或音韵原因或者为了和同音字区别，由此也可以用来推测一个人是否本地人。如在北京的城门中，多数如前门、西直门、复兴门等不能儿化，而西便门、广渠门却通常使用儿化。”
+&lt;em&gt;其实, 这里面还是有规律可循, 前门, 西直门, 复兴门都是正门, 庄重肃穆, 不可随意儿化, 而“西便门”、“广渠门”则是后开的小门, 小就可能加上儿化音.&lt;/em&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-1" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-2"&gt;
+&lt;p&gt;参见&lt;a href="https://twitter.com/cxiaoji/status/1017988309283319808"&gt;消极姐推文&lt;/a&gt;:  @cxiaoji说: 只有栓脖子上的才叫链儿 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-2" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn-3"&gt;
+&lt;p&gt;注意粤式英文词尾务必要使用平声. 单词发音以短促跳跃为佳 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-3" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</guid><pubDate>Fri, 27 Jul 2018 04:00:00 GMT</pubDate></item><item><title>octopus视野报告数据提取</title><link>https://goldengrape.github.io/posts/python/octopus-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;又写好了一段PDF报告数据提取的小程序, 这次是针对Octopus 900动态视野计的. 可以提取PDF的视野检查结果报告中的数据, 能够提取的数据包括: 姓名, 生日, 检查日期, 眼别, 检查程序名称, RF, MS, MD, sLV, 还有视野测量的原始数据. &lt;/p&gt;
+&lt;p&gt;提取出来的数据保存在csv文件里, 可以使用excel打开和处理.
+&lt;img alt="示例" src="https://i.loli.net/2018/07/09/5b43624ad0d9f.png"&gt;
+其中以G standard程序测量的原始数据是按照从中心开始顺时针螺线的方式排列成一行的.
+&lt;img alt="屏幕快照 2018-07-08 20.11.26" src="https://i.loli.net/2018/07/09/5b437a3ac6eed.png"&gt;&lt;/p&gt;
+&lt;p&gt;也可以处理一个一个文件夹下所有的PDF报告, 把提取的数据汇总到一个csv里面.&lt;/p&gt;
+&lt;p&gt;项目文件开源, 放在在&lt;a href="https://github.com/goldengrape/read_medical_device_data/blob/master/python/pdf_parser/Octopus_VF.ipynb"&gt;github&lt;/a&gt;上, 如果已经比较熟悉github, python和jupyter, 打开看看就很容易理解.  &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;注意: 目前我还只能处理未加密的PDF, 并且PDF的页面大小必须严格是A4, 否则无法取得数据. 切记切记.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;但如果以前没怎么接触过python, 又临时需要处理些数据, 那么以下是使用教程:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;云端运行&lt;/h2&gt;
+&lt;p&gt;如果不是写python已经比较熟练的人, 我一般不推荐在本地计算机上安装python和相关的工具包, 很容易出错. 我建议是在云端运行, 可以选择的服务商很多, 但微软的 &lt;a href="https://notebooks.azure.com"&gt;Azure notebook&lt;/a&gt; 免费, 国内可以访问, 还可以运行私有项目以免泄露病人数据, 因此比较推荐.&lt;/p&gt;
+&lt;p&gt;1.
+打开微软的&lt;a href="https://notebooks.azure.com"&gt;Azure notebook&lt;/a&gt;, 地址是https://notebooks.azure.com , 点击页面右上的Sign In, 使用微软账户登陆, 如果没有微软账户的话, 需要自己注册一个.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 21.34.01" src="https://i.loli.net/2018/07/09/5b4364976e694.png"&gt;&lt;/p&gt;
+&lt;p&gt;2.
+登陆进来以后, 点击左上的Libraries, 将列出您已经建立过的Library, 如果以前没用过, 下面是空的.
+&lt;img alt="屏幕快照 2018-07-09 21.36.27" src="https://i.loli.net/2018/07/09/5b43652cc37a4.png"&gt;&lt;/p&gt;
+&lt;p&gt;3.
+点击 + New Library, 建立一个新的Library.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在选项卡中, 选择From GitHub,&lt;/li&gt;
+&lt;li&gt;在GitHub repository里面填上https://github.com/goldengrape/read_medical_device_data&lt;/li&gt;
+&lt;li&gt;给自己的Library起个名字, 再起个ID, 比如都叫Octopus&lt;/li&gt;
+&lt;li&gt;然后点击Import&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 21.40.09" src="https://i.loli.net/2018/07/09/5b4365d3b854f.png"&gt;&lt;/p&gt;
+&lt;p&gt;4.
+稍等, 或者刷新一下页面, 你会看到刚才建立的Library已经出现了, 点击进入.&lt;/p&gt;
+&lt;h2&gt;上传数据&lt;/h2&gt;
+&lt;p&gt;1.
+在上传数据之前, 先把这个Library设定成私有,
+&lt;img alt="屏幕快照 2018-07-09 21.46.04" src="https://i.loli.net/2018/07/09/5b4367339bc4b.png"&gt;
+点击齿轮⚙️图标&lt;/p&gt;
+&lt;p&gt;把Public Library前面的钩去掉, 然后Save
+&lt;img alt="屏幕快照 2018-07-09 21.47.41" src="https://i.loli.net/2018/07/09/5b43679c89bac.png"&gt;&lt;/p&gt;
+&lt;p&gt;2.
+点击加号➕图标, 就在刚才的齿轮⚙️左边.
+&lt;img alt="屏幕快照 2018-07-09 21.50.40" src="https://i.loli.net/2018/07/09/5b4368753d62d.png"&gt;
+在item type里面选上Folder, 给自己的数据文件夹起个名字, 比如testdata, 然后点击New&lt;/p&gt;
+&lt;p&gt;3.
+你会发现出现了一个testdata的文件夹, 跟电脑上差不多的操作, 点击进入
+&lt;img alt="屏幕快照 2018-07-09 21.53.00" src="https://i.loli.net/2018/07/09/5b4368e5980ac.png"&gt;&lt;/p&gt;
+&lt;p&gt;4.
+再次点击加号➕图标, 这次选择From Computer
+&lt;img alt="屏幕快照 2018-07-09 21.54.22" src="https://i.loli.net/2018/07/09/5b43693e70341.png"&gt;
+
+然后点击Choose files, 会打开本地文件的选择器, 选上要上传的文件.
+&lt;img alt="屏幕快照 2018-07-09 21.56.31" src="https://i.loli.net/2018/07/09/5b4369f19e608.png"&gt;
+然后upload, 跟发邮件时添加附件的动作没什么区别.
+&lt;img alt="屏幕快照 2018-07-09 21.56.55" src="https://i.loli.net/2018/07/09/5b4369f1703ac.png"&gt;&lt;/p&gt;
+&lt;h2&gt;设定参数&lt;/h2&gt;
+&lt;p&gt;1.
+点击Library &amp;gt; Octopus &amp;gt; testdata 中的Octopus, 回到上一级目录
+&lt;img alt="屏幕快照 2018-07-09 22.01.53" src="https://i.loli.net/2018/07/09/5b436b2151b69.png"&gt;&lt;/p&gt;
+&lt;p&gt;2.
+依次进入目录, 到Octopus &amp;gt; python &amp;gt; pdf_parser
+&lt;img alt="屏幕快照 2018-07-09 22.04.00" src="https://i.loli.net/2018/07/09/5b436b82038fd.png"&gt;
+找到Octopus_VF.ipynb, 点击打开&lt;/p&gt;
+&lt;p&gt;3.
+打开这个ipynb文件以后, 就进入这样一个页面:
+&lt;img alt="屏幕快照 2018-07-09 22.14.14" src="https://i.loli.net/2018/07/09/5b436df1c0a29.png"&gt;
+把input_path修改成您刚才设定好的数据文件夹名称, 如果也是使用的testdata, 那就不用修改了.
+注意我这里使用的是文件的“相对路径”, ../表示从当前文件夹Octopus &amp;gt; python &amp;gt; pdf_parser退回到上一级Octopus &amp;gt; python, 然后再../退回一级到Octopus, 再进入/testdata.&lt;/p&gt;
+&lt;p&gt;output_path可以和input_path一样.&lt;/p&gt;
+&lt;p&gt;fname, 如果您需要针对某一个特定文件进行处理, 就把文件名写上, 注意区分大小写, 要带有.pdf的后缀.&lt;/p&gt;
+&lt;p&gt;所有的名称都必须在双引号之内.&lt;/p&gt;
+&lt;h2&gt;运行&lt;/h2&gt;
+&lt;p&gt;1.
+把页面一直拖动到最底部,
+&lt;img alt="屏幕快照 2018-07-09 22.23.33" src="https://i.loli.net/2018/07/09/5b4370061795e.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果是想处理整个文件夹里所有的PDF文件, 就应该是图中这样的形式,&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;process_folder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;output_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_together&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_individual&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;如果想在处理文件夹的同时, 还想把每个PDF文件的数据单独提取成一个csv文件, 就把save_individual=True&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2.
+点击顶部菜单中的Kernel, 选择Restart &amp;amp; Run All
+&lt;img alt="屏幕快照 2018-07-09 22.26.58" src="https://i.loli.net/2018/07/09/5b4370d34efb6.png"&gt;&lt;/p&gt;
+&lt;p&gt;第一次运行的时候会比较慢, 因为用来处理PDF文件的工具包PDFminer.six需要安装. 会看到在import那一堆代码下面出现这样的安装过程, 第二次运行就不会有了.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 22.47.41" src="https://i.loli.net/2018/07/09/5b4375b8a9be6.png"&gt;
+注意, 免费版本的azure notebook会在没有操作后1小时清空所有用户安装的软件包, 所以, 如果第二天再来, 仍然是“第一次”运行的状态. 但之前保存的数据文件不会被消除.&lt;/p&gt;
+&lt;p&gt;3.
+处理完成的文件会列出来, 如果有处理不了的PDF文件, 比如页面大小不是A4的, 或者是有密码限制了复制功能的, 都会标记出failed
+&lt;img alt="屏幕快照 2018-07-09 22.35.45" src="https://i.loli.net/2018/07/09/5b4372d9d0581.png"&gt;&lt;/p&gt;
+&lt;h2&gt;取得结果&lt;/h2&gt;
+&lt;p&gt;1.
+再次回到Octopus &amp;gt; testdata 文件夹之下,
+&lt;img alt="屏幕快照 2018-07-09 22.41.31" src="https://i.loli.net/2018/07/09/5b437454be49f.png"&gt;
+会看到octopus_data.csv文件已经生成了, 点击Download下载下来即可.&lt;/p&gt;
+&lt;p&gt;2.
+excel中的数据, 每一行是一个文件中一页的数据, 因为经常病人是做双眼的检查, 但却放在同一个PDF文件里. 如何处理excel中的数据, 就是您自己的事情了.
+&lt;img alt="屏幕快照 2018-07-09 22.46.25" src="https://i.loli.net/2018/07/09/5b43756c49355.png"&gt;&lt;/p&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;p&gt;Octupus自家有数据处理软件, 叫&lt;a href="https://www.haag-streit.com/haag-streit-diagnostics/products/perimetry/eyesuite/"&gt;EyeSuite&lt;/a&gt;, 还有人用R语言做好了一个开源的工具包OPI - &lt;a href="https://people.eng.unimelb.edu.au/aturpin/opi/index.html"&gt;Open Perimetry Initiative&lt;/a&gt;, 比我这个高级多了.&lt;/p&gt;
+&lt;p&gt;如果没有这些工具包, 那么用我这个小程序还有点意义, 我抓取了视野检查中的values, 也就是检查时的原始数据, 而不仅仅是MD之类统计好的数据.&lt;/p&gt;
+&lt;p&gt;比如示例中的这个病人, 4次检查的MD分别是15.2/ 16.5/ 17/ 16.1, 虽然MD在增加, 但好像又有些波动. 那么视野是否在恶化呢?&lt;/p&gt;
+&lt;p&gt;MD是平均缺损, 只能反应整体平均的状态. 由于有了原始数据, 聚可以方便分析每个区域了. 比如很简单而不严格的, 我们可以对这4次检查的数据进行一次线性拟合, 得到的斜率如果是负数, 说明越来越差.&lt;/p&gt;
+&lt;p&gt;Excel的线性拟合使用LINEST函数.
+&lt;img alt="屏幕快照 2018-07-09 22.57.17" src="https://i.loli.net/2018/07/09/5b43787de7cb2.png"&gt;
+拖动复制, 对每列的value值都进行这样的操作.
+&lt;img alt="屏幕快照 2018-07-09 22.57.37" src="https://i.loli.net/2018/07/09/5b43787e56617.png"&gt;&lt;/p&gt;
+&lt;p&gt;注意看这个区域恶化非常明显, 斜率已经分别是-2,-3,-1.8&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 23.01.49" src="https://i.loli.net/2018/07/09/5b4378fe5ec66.png"&gt;&lt;/p&gt;
+&lt;p&gt;实际上这个区域对应的是中央视野附近.
+&lt;img alt="屏幕快照 2018-07-09 23.03.44" src="https://i.loli.net/2018/07/09/5b4379841f450.png"&gt;
+&lt;img alt="屏幕快照 2018-07-09 23.03.52" src="https://i.loli.net/2018/07/09/5b437982e149a.png"&gt;
+&lt;img alt="屏幕快照 2018-07-09 23.04.02" src="https://i.loli.net/2018/07/09/5b43798326b1b.png"&gt;
+&lt;img alt="屏幕快照 2018-07-09 23.04.09" src="https://i.loli.net/2018/07/09/5b4379840f876.png"&gt;&lt;/p&gt;
+&lt;h2&gt;随机森林&lt;/h2&gt;
+&lt;p&gt;作为数据读取项目的一部分, octopus数据处理已经可以纳入到随机森林的机器学习功能之中, 详情请参考&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;眼科数据随机森林&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;更新&lt;/h2&gt;
+&lt;p&gt;这是一个业余程序员建立的开源项目, 我水平所限不要要求太高. 但我也还是会不断更新的, 修复bug或者添加新功能.&lt;/p&gt;
+&lt;p&gt;如果您已经导入到了azure notebooks里面, 也还是可以更新的. 更新代码的方法, 一种是可以新开一个library, 一种是在本library里更新. 如何新开一个之前已经讲过, 下面讲解一下如何更新.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;点击Terminal 图标
+&lt;img alt="屏幕快照 2018-07-10 19.18.22" src="https://i.loli.net/2018/07/10/5b449a27d0f60.png"&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将打开一个命令行界面.
+&lt;img alt="屏幕快照 2018-07-10 19.32.20" src="https://i.loli.net/2018/07/10/5b449a70abf86.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;输入如下命令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd library
+&lt;/pre&gt;
+
+
+&lt;p&gt;进入到library文件夹里
+&lt;img alt="屏幕快照 2018-07-10 19.41.22" src="https://i.loli.net/2018/07/10/5b449b67dea1a.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;要更新代码, 需要先把之前您修改过的代码清除掉, 否则有冲突. 输入如下命令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout .
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.44.51" src="https://i.loli.net/2018/07/10/5b449c371555d.png"&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从github上把新代码“拉”到自己的library里. 输入如下命令:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git pull
+&lt;/pre&gt;
+
+
+&lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.46.31" src="https://i.loli.net/2018/07/10/5b449ca3d43d6.png"&gt;&lt;/p&gt;
+&lt;p&gt;这样代码就更新完毕了, 关闭页面即可.&lt;/p&gt;
+&lt;p&gt;顺便, 推荐一下git, 如果您的电脑上存了很多“最终版”,“最终不变版本”,“最终最终版本”和“赌咒发誓这是最后一版”之类的文件名, 想必知道版本管理的重要性. git是一个很好的版本管理工具, 以后我会再详细讲解.&lt;/p&gt;
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item></channel></rss>
