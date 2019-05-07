@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1553488793.0445771
+_modified_time = 1557221945.8110778
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/comments_helper_intensedebate.tmpl'
 _template_uri = 'comments_helper_intensedebate.tmpl'
@@ -37,7 +37,7 @@ def render_comment_form(context,url,title,identifier):
         __M_writer(str(identifier))
         __M_writer('";\nvar idcomments_post_url = "')
         __M_writer(str(url))
-        __M_writer('";\n</script>\n<span id="IDCommentsPostTitle" style="display:none"></span>\n<script src=\'http://www.intensedebate.com/js/genericCommentWrapperV2.js\'></script>\n</script>\n')
+        __M_writer('";\n</script>\n<span id="IDCommentsPostTitle" style="display:none"></span>\n<script src="https://www.intensedebate.com/js/genericCommentWrapperV2.js"></script>\n</script>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -58,7 +58,7 @@ def render_comment_link(context,link,identifier):
         __M_writer(str(identifier))
         __M_writer('";\nvar idcomments_post_url = "')
         __M_writer(str(link))
-        __M_writer('";\n</script>\n<script src="http://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>\n</a>\n')
+        __M_writer('";\n</script>\n<script src="https://www.intensedebate.com/js/genericLinkWrapperV2.js"></script>\n</a>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()

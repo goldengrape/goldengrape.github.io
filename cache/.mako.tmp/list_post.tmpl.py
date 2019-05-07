@@ -5,12 +5,12 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1553488793.23906
+_modified_time = 1557221945.552095
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/list_post.tmpl'
 _template_uri = 'list_post.tmpl'
 _source_encoding = 'utf-8'
-_exports = ['content']
+_exports = ['extra_head', 'content']
 
 
 def _mako_get_namespace(context, name):
@@ -36,22 +36,49 @@ def render_body(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
         date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        archive_nav = _mako_get_namespace(context, 'archive_nav')
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         def content():
             return render_content(context._locals(__M_locals))
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        archive_nav = _mako_get_namespace(context, 'archive_nav')
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
+        __M_writer('\n\n')
+        if 'parent' not in context._data or not hasattr(context._data['parent'], 'extra_head'):
+            context['self'].extra_head(**pageargs)
+        
+
         __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
 
+        __M_writer('\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
+def render_extra_head(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        _import_ns = {}
+        _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
+        _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
+        def extra_head():
+            return render_extra_head(context)
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
+        __M_writer = context.writer()
+        __M_writer('\n    ')
+        __M_writer(str(feeds_translations.head(kind=kind, rss_override=False)))
         __M_writer('\n')
         return ''
     finally:
@@ -64,21 +91,22 @@ def render_content(context,**pageargs):
         _import_ns = {}
         _mako_get_namespace(context, 'archive_nav')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
         date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        archive_nav = _mako_get_namespace(context, 'archive_nav')
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
         def content():
             return render_content(context)
-        feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        archive_nav = _mako_get_namespace(context, 'archive_nav')
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n<article class="listpage">\n    <header>\n        <h1>')
         __M_writer(filters.html_escape(str(title)))
         __M_writer('</h1>\n    </header>\n    ')
         __M_writer(str(archive_nav.archive_navigation()))
         __M_writer('\n    ')
-        __M_writer(str(feeds_translations.translation_link()))
+        __M_writer(str(feeds_translations.translation_link(kind)))
         __M_writer('\n')
         if posts:
             __M_writer('    <ul class="postlist">\n')
@@ -107,6 +135,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/list_post.tmpl", "uri": "list_post.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "26": 4, "32": 0, "48": 2, "49": 3, "50": 4, "55": 23, "61": 6, "76": 6, "77": 9, "78": 9, "79": 11, "80": 11, "81": 12, "82": 12, "83": 13, "84": 14, "85": 15, "86": 16, "87": 16, "88": 16, "89": 16, "90": 16, "91": 16, "92": 16, "93": 16, "94": 16, "95": 16, "96": 16, "97": 18, "98": 19, "99": 20, "100": 20, "101": 20, "102": 22, "108": 102}}
+{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/list_post.tmpl", "uri": "list_post.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "26": 4, "32": 0, "51": 2, "52": 3, "53": 4, "58": 8, "63": 27, "69": 6, "80": 6, "81": 7, "82": 7, "88": 10, "104": 10, "105": 13, "106": 13, "107": 15, "108": 15, "109": 16, "110": 16, "111": 17, "112": 18, "113": 19, "114": 20, "115": 20, "116": 20, "117": 20, "118": 20, "119": 20, "120": 20, "121": 20, "122": 20, "123": 20, "124": 20, "125": 22, "126": 23, "127": 24, "128": 24, "129": 24, "130": 26, "136": 130}}
 __M_END_METADATA
 """

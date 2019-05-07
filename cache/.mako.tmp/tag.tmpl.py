@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1553488793.2262049
+_modified_time = 1557221945.516865
 _enable_loop = True
 _template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/tag.tmpl'
 _template_uri = 'tag.tmpl'
@@ -32,19 +32,19 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        tag = _import_ns.get('tag', context.get('tag', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
-        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
-        def content():
-            return render_content(context._locals(__M_locals))
+        subcategories = _import_ns.get('subcategories', context.get('subcategories', UNDEFINED))
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
+        date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        tag = _import_ns.get('tag', context.get('tag', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
-        subcategories = _import_ns.get('subcategories', context.get('subcategories', UNDEFINED))
-        parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
+        def content():
+            return render_content(context._locals(__M_locals))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n')
@@ -52,7 +52,7 @@ def render_body(context,**pageargs):
             context['self'].extra_head(**pageargs)
         
 
-        __M_writer('\n\n\n')
+        __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
@@ -68,16 +68,14 @@ def render_extra_head(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        parent = _import_ns.get('parent', context.get('parent', UNDEFINED))
-        tag = _import_ns.get('tag', context.get('tag', UNDEFINED))
         def extra_head():
             return render_extra_head(context)
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        tag = _import_ns.get('tag', context.get('tag', UNDEFINED))
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n    ')
-        __M_writer(str(parent.extra_head()))
-        __M_writer('\n    ')
-        __M_writer(str(feeds_translations.head(tag)))
+        __M_writer(str(feeds_translations.head(tag, kind, rss_override=False)))
         __M_writer('\n')
         return ''
     finally:
@@ -89,16 +87,17 @@ def render_content(context,**pageargs):
     try:
         _import_ns = {}
         _mako_get_namespace(context, 'feeds_translations')._populate(_import_ns, ['*'])
-        description = _import_ns.get('description', context.get('description', UNDEFINED))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
-        tag = _import_ns.get('tag', context.get('tag', UNDEFINED))
-        title = _import_ns.get('title', context.get('title', UNDEFINED))
-        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        subcategories = _import_ns.get('subcategories', context.get('subcategories', UNDEFINED))
         date_format = _import_ns.get('date_format', context.get('date_format', UNDEFINED))
+        posts = _import_ns.get('posts', context.get('posts', UNDEFINED))
+        title = _import_ns.get('title', context.get('title', UNDEFINED))
+        tag = _import_ns.get('tag', context.get('tag', UNDEFINED))
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        description = _import_ns.get('description', context.get('description', UNDEFINED))
         def content():
             return render_content(context)
-        subcategories = _import_ns.get('subcategories', context.get('subcategories', UNDEFINED))
         feeds_translations = _mako_get_namespace(context, 'feeds_translations')
+        kind = _import_ns.get('kind', context.get('kind', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n<article class="tagpage">\n    <header>\n        <h1>')
         __M_writer(filters.html_escape(str(title)))
@@ -119,9 +118,9 @@ def render_content(context,**pageargs):
                 __M_writer('</a></li>\n')
             __M_writer('        </ul>\n')
         __M_writer('        <div class="metadata">\n            ')
-        __M_writer(str(feeds_translations.feed_link(tag)))
+        __M_writer(str(feeds_translations.feed_link(tag, kind=kind)))
         __M_writer('\n        </div>\n        ')
-        __M_writer(str(feeds_translations.translation_link()))
+        __M_writer(str(feeds_translations.translation_link(kind)))
         __M_writer('\n    </header>\n')
         if posts:
             __M_writer('        <ul class="postlist">\n')
@@ -146,6 +145,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/tag.tmpl", "uri": "tag.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "29": 0, "49": 2, "50": 3, "55": 8, "60": 39, "66": 5, "77": 5, "78": 6, "79": 6, "80": 7, "81": 7, "87": 11, "103": 11, "104": 14, "105": 14, "106": 15, "107": 16, "108": 16, "109": 16, "110": 18, "111": 19, "112": 19, "113": 19, "114": 21, "115": 22, "116": 22, "117": 22, "118": 22, "119": 22, "120": 24, "121": 26, "122": 27, "123": 27, "124": 29, "125": 29, "126": 31, "127": 32, "128": 33, "129": 34, "130": 34, "131": 34, "132": 34, "133": 34, "134": 34, "135": 34, "136": 34, "137": 34, "138": 34, "139": 34, "140": 36, "141": 38, "147": 141}}
+{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/tag.tmpl", "uri": "tag.tmpl", "source_encoding": "utf-8", "line_map": {"23": 3, "29": 0, "49": 2, "50": 3, "55": 7, "60": 37, "66": 5, "77": 5, "78": 6, "79": 6, "85": 9, "102": 9, "103": 12, "104": 12, "105": 13, "106": 14, "107": 14, "108": 14, "109": 16, "110": 17, "111": 17, "112": 17, "113": 19, "114": 20, "115": 20, "116": 20, "117": 20, "118": 20, "119": 22, "120": 24, "121": 25, "122": 25, "123": 27, "124": 27, "125": 29, "126": 30, "127": 31, "128": 32, "129": 32, "130": 32, "131": 32, "132": 32, "133": 32, "134": 32, "135": 32, "136": 32, "137": 32, "138": 32, "139": 34, "140": 36, "146": 140}}
 __M_END_METADATA
 """

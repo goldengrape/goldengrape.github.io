@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (文章分类：ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 13 Mar 2019 03:34:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;更新了自动配音幻灯视频: &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 07 May 2019 09:31:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献赏析: 古代如何测视力</title><link>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;读到一篇文献, 觉得太有趣了.
+&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;《古代如何测视力————用星星》&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;全文可以在&lt;a href="https://sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;sci-hub上找到&lt;/a&gt;. 在此简单叙述.&lt;/p&gt;
+&lt;p&gt;在视力表出现之前, 古代波斯/阿拉伯, 使用北斗七星勺子柄上中间的开阳星作为视力检测标准.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="IMG_3639" src="https://i.loli.net/2018/08/10/5b6c82feabafd.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这是双星, (所以北斗其实是八星?)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;亮的那颗中文名叫开阳, 英文名叫Mizar,&lt;/li&gt;
+&lt;li&gt;暗的那颗中文名叫辅, 英文名叫Alcor&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果能够裸眼看出两颗星, 那么就认为被试视力不错. 虽然古代文人可能对视力要求不高, 但士兵可能一直是要有严格体检的, 所以Alcor往往作为对士兵视力的检查标准.&lt;/p&gt;
+&lt;p&gt;通常天文学家/ 历史学家只讲到这里, 但这是篇眼科文献, 于是...
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h2&gt;视力&lt;/h2&gt;
+&lt;p&gt;正常视力20/20, 或者说1.0, 是说视角=1分, 而开阳双星的&lt;a href="http://aeea.nmns.edu.tw/2006/0606/ap060615.html"&gt;赤经赤纬坐标&lt;/a&gt;分别是:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开阳(13:23:55.5, +54:55:31)&lt;/li&gt;
+&lt;li&gt;辅((13:23:56.3, +54:55:18))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但是, 两颗星之间的视角大约是12分, 那么相当于视力20/200, 也就是0.1左右, 其实很差. 用0.1左右的视标去检查士兵, 显然并不靠谱.&lt;/p&gt;
+&lt;h2&gt;对比度与眩光&lt;/h2&gt;
+&lt;p&gt;又但是, Mizar是二等星(2.27), Alcor是四等星(3.95), 亮度差距其实很大(22:9.4), 所以这个测试除了测量视力, 还相当于糅合了对比敏感度和眩光检查.&lt;/p&gt;
+&lt;h2&gt;等效性实验&lt;/h2&gt;
+&lt;p&gt;文献中记载有好事者做了一个等效性实验,&lt;/p&gt;
+&lt;p&gt;先找了一组正视眼的人, 都能看清20/20的视标, 在冬天月亮不明显的晴天夜里去看开阳双星, 大家都能看见. 然后在眼前加正度数透镜, 一直加到看不到Alcor为止, 得到的球面镜度数范围是在+0.5到+0.75.&lt;/p&gt;
+&lt;p&gt;第二天, 还是这些人, 去看视力表20/20这一行, 也是同样加球面镜, 直到看不清这一行为止, 得到的球面镜度数范围仍然是+0.5到+0.75.&lt;/p&gt;
+&lt;p&gt;这个实验在我看来并不严谨, 但是貌似将开阳双星检查和20/20等效起来.&lt;/p&gt;
+&lt;p&gt;其中还有一个有趣的病例, 在等效实验中, 有个20/20的65岁被试, 分不出开阳双星, 考虑是因为早期白内障, 对比敏感度降低.&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</guid><pubDate>Tue, 07 May 2019 03:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;更新了自动配音幻灯视频: &lt;/p&gt;
 &lt;iframe src="//player.bilibili.com/player.html?aid=46123306&amp;amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
 
 &lt;p&gt;最近查看了一些关于人工晶体历史的资料, 其实也不是什么考据研究, 只是在wiki上乱转. 有些故事看起来很有意思.&lt;/p&gt;
@@ -767,44 +794,4 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;《双眼视觉学》，ISBN 978-7-117-14654-8/R*14655&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</guid><pubDate>Wed, 28 Feb 2018 07:00:00 GMT</pubDate></item><item><title>眼科科普索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;请使用CTRL+F或+F查找相应关键词.&lt;/p&gt;
-&lt;p&gt;有些文章写作时间较早, 可能有必要更新. 有些文章我可能会从果壳的日志上逐渐搬运过来. 果壳的图床有时会出问题, 还是放在自己这里安心一些.&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;hr&gt;
-&lt;h2&gt;总论&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/"&gt;如何看病&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼病的视觉感受&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/article/156504/"&gt;眼睛一生病，世界就变样&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;高度近视&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/114894/"&gt;简介：高度近视定期查眼底&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/176929/"&gt;近视眼坐过山车容易视网膜脱落么？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/102643/"&gt;有没有通过纠正晶状体治疗近视的方法？近视导致是否会反应速度减慢？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;近视手术&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://songshuhui.net/archives/58085"&gt;准分子激光角膜屈光手术——问与答(上)&lt;/a&gt;
-&lt;a href="http://songshuhui.net/archives/58100"&gt;准分子激光角膜屈光手术——问与答(中)&lt;/a&gt;
-&lt;a href="http://songshuhui.net/archives/58110"&gt;准分子激光角膜屈光手术——问与答(下)&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;散光&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/102489/"&gt;跟进宝学眼科之散光&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/102222/"&gt;微博刷屏会导致眼睛散光，视力下降吗？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;隐形眼镜&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/article/94773/"&gt;“美瞳”：美丽是否要付出代价&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/195649/"&gt;如何挑选适合的隐形眼镜？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/177378/"&gt;隐形眼镜能滑到眼球后面吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/177392/"&gt;晚上睡觉不摘隐形眼镜会有什么后果？隐形眼镜一次可以戴几小时？ 戴隐形眼镜有什么注意事项么？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/118776/"&gt;闺蜜说，隐形眼镜等于有男友，是真的吗？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼药水&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/article/87604/"&gt;眼药水闪亮不了你的双眼&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/96843/"&gt;人乳治疗眼部炎症是可行的吗?&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;青光眼&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/117302/"&gt;跟进宝学眼科之青光眼&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;白内障&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/blog/73506/"&gt;白内障FAQ&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;麦粒肿&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/115715/"&gt;指甲上画十字能治疗麦粒肿？如果是谣言，正确的方法是什么？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼外伤&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.guokr.com/question/172712/"&gt;眼球受到外来的尖锐物品的刺伤，后果会是怎样？&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;灯光&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light/"&gt;蓝光的故事&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;VR/AR&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-and-mypia/"&gt;关于VR与近视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</guid><pubDate>Tue, 16 Jan 2018 05:00:01 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp/</guid><pubDate>Wed, 28 Feb 2018 07:00:00 GMT</pubDate></item></channel></rss>
