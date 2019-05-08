@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-05-07T09:31:00Z</lastmod>
+  <lastmod>2019-05-08T12:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2019-05-07T09:21:00Z</lastmod>
+  <lastmod>2019-05-08T12:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -44,6 +44,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/art/</loc>
   <lastmod>2018-01-05T18:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/cat_3d-print/</loc>
+  <lastmod>2019-05-08T12:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_applescript/</loc>
@@ -191,7 +195,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-12.html</loc>
-  <lastmod>2019-05-07T09:31:00Z</lastmod>
+  <lastmod>2019-05-08T12:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -284,6 +288,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/Machine_Learning/facenet-modify/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</loc>
+  <lastmod>2019-05-08T12:50:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</loc>

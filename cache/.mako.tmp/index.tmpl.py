@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1557285709.828778
+_modified_time = 1557319902.785221
 _enable_loop = True
 _template_filename = 'themes/lanyon/templates/index.tmpl'
 _template_uri = 'index.tmpl'
@@ -33,21 +33,21 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        index_teasers = context.get('index_teasers', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
+        permalink = context.get('permalink', UNDEFINED)
         def extra_head():
             return render_extra_head(context._locals(__M_locals))
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        index_file = context.get('index_file', UNDEFINED)
-        parent = context.get('parent', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
-        def content():
-            return render_content(context._locals(__M_locals))
-        permalink = context.get('permalink', UNDEFINED)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        index_teasers = context.get('index_teasers', UNDEFINED)
         def content_header():
             return render_content_header(context._locals(__M_locals))
-        posts = context.get('posts', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
+        index_file = context.get('index_file', UNDEFINED)
+        parent = context.get('parent', UNDEFINED)
+        def content():
+            return render_content(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -70,12 +70,12 @@ def render_body(context,**pageargs):
 def render_extra_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        permalink = context.get('permalink', UNDEFINED)
         def extra_head():
             return render_extra_head(context)
-        permalink = context.get('permalink', UNDEFINED)
-        index_file = context.get('index_file', UNDEFINED)
         posts = context.get('posts', UNDEFINED)
         parent = context.get('parent', UNDEFINED)
+        index_file = context.get('index_file', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n    ')
         __M_writer(str(parent.extra_head()))
@@ -92,16 +92,16 @@ def render_extra_head(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        index_teasers = context.get('index_teasers', UNDEFINED)
-        helper = _mako_get_namespace(context, 'helper')
-        site_has_comments = context.get('site_has_comments', UNDEFINED)
-        date_format = context.get('date_format', UNDEFINED)
         comments = _mako_get_namespace(context, 'comments')
-        def content():
-            return render_content(context)
+        site_has_comments = context.get('site_has_comments', UNDEFINED)
+        posts = context.get('posts', UNDEFINED)
+        index_teasers = context.get('index_teasers', UNDEFINED)
         def content_header():
             return render_content_header(context)
-        posts = context.get('posts', UNDEFINED)
+        date_format = context.get('date_format', UNDEFINED)
+        helper = _mako_get_namespace(context, 'helper')
+        def content():
+            return render_content(context)
         __M_writer = context.writer()
         __M_writer('\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content_header'):
