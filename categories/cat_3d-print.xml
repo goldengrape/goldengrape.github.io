@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 3D print)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_3d-print.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 08 May 2019 14:53:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>3D打印盔甲</title><link>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;咏春拳里有大量用前臂进行格挡的动作，尺骨上也没什么肉，所以很疼啊。小腿上吃了亏，以后对练时肯定要戴上护腿板，但手臂上没有找到现成的护具。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 3D print)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_3d-print.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 12 May 2019 00:40:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>齿条绘制</title><link>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学会了绘制齿条rack。就是和齿轮配合，将圆周运动变换成直线运动的结构。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="rack" src="https://i.loli.net/2019/05/12/5cd767b4bdd0f.jpg"&gt;&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;有一个&lt;a href="https://knowledge.autodesk.com/support/fusion-360/learn-explore/caas/screencast/Main/Details/a7992d99-5d4d-48c2-b971-a86ba3014608.html"&gt;fusion360官方制作教程参考&lt;/a&gt;，但是我觉得绘制过程太麻烦。而且在实际使用中，要真实确定齿条和齿轮的具体位置，否则其他支架不好安装。&lt;/p&gt;
+&lt;p&gt;所以自己学习了一下齿轮的知识，齿轮的主要参数有3个：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;module：模数，这个描述了齿的大小&lt;/li&gt;
+&lt;li&gt;齿数：很好理解，一圈有多少个齿&lt;/li&gt;
+&lt;li&gt;压力角：也就是齿轮上每个齿的斜边角度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;module x 齿数 = 齿轮的“分度圆”直径&lt;/p&gt;
+&lt;p&gt;关于齿轮和齿条的知识，强烈推荐小原齿轮工业株式会社(暨KHK株式会社)制作的&lt;a href="https://khkgears.net/china/gearknowledge/index.html"&gt;《齿轮设计所需的齿轮基础知识》&lt;/a&gt; &lt;/p&gt;
+&lt;p&gt;这种在日常生活中无处不在，却又隐藏在后台，完全不懂也不影响工作学习生活的，无比有用又非常无用的知识，非常酷。&lt;/p&gt;
+&lt;p&gt;画齿条的原理：&lt;/p&gt;
+&lt;p&gt;两个齿轮之间的是按齿轮的“分度圆”来接触的，比如两个完全相等的齿轮互相咬合时，圆心相当于在分度圆的切线上是对称的。&lt;/p&gt;
+&lt;p&gt;如果把齿条看作一个直径无穷大的齿轮，那么也是以分度圆的切线作为对称线，将一个齿镜像即可。这就是画图的原理。&lt;/p&gt;
+&lt;p&gt;详细步骤请参考我放在SlideShare上的&lt;a href="https://www.slideshare.net/goldengrape/draw-a-rack-with-fusion-360"&gt;幻灯&lt;/a&gt;。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</guid><pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate></item><item><title>3D打印盔甲</title><link>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;咏春拳里有大量用前臂进行格挡的动作，尺骨上也没什么肉，所以很疼啊。小腿上吃了亏，以后对练时肯定要戴上护腿板，但手臂上没有找到现成的护具。&lt;/p&gt;
 &lt;p&gt;遇到困难，我当然是选择投机取巧而不是勤学苦练。我只是想健身强体，没打算去打比赛和实战。&lt;/p&gt;
 &lt;p&gt;所以，按照这个&lt;a href="https://www.thingiverse.com/thing:2787803"&gt;3D打印到织物上的方法&lt;/a&gt;，制作了两片鱼鳞甲，用来保护自己的手臂。
 &lt;img alt="arm" src="https://i.loli.net/2019/05/08/5cd2ec5de5b0d.jpg"&gt;&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
 &lt;p&gt;打印的时候直接打印整条的。要用到打印到尼龙网上的技巧
 &lt;img alt="armor" src="https://i.loli.net/2019/05/08/5cd2ece07c48a.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;我用的方法与&lt;a href="https://www.thingiverse.com/thing:2787803"&gt;网上说的暂停打印的方法&lt;/a&gt;略有不同。因为我发现暂停打印以后，如果在铺设尼龙网时用了比较长的时间，打印机可能就休眠或者中断打印了。与其手忙脚乱地赶时间，还不如干脆分成两个文件来打印。&lt;/p&gt;

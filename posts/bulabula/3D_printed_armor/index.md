@@ -16,6 +16,8 @@
 所以，按照这个[3D打印到织物上的方法](https://www.thingiverse.com/thing:2787803)，制作了两片鱼鳞甲，用来保护自己的手臂。
 ![arm](https://i.loli.net/2019/05/08/5cd2ec5de5b0d.jpg)
 
+<!-- TEASER_END -->
+
 打印的时候直接打印整条的。要用到打印到尼龙网上的技巧
 ![armor](https://i.loli.net/2019/05/08/5cd2ece07c48a.jpg)
 
