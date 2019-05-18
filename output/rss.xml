@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 12 May 2019 00:40:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>齿条绘制</title><link>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学会了绘制齿条rack。就是和齿轮配合，将圆周运动变换成直线运动的结构。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 18 May 2019 14:45:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data School有一篇非常好的评测，写了6个在线的Jupyter服务，建议去看看。
+&lt;a href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/"&gt;Six easy ways to run your Jupyter Notebook in the cloud&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里还有一个太长不看的&lt;a href="https://docs.google.com/spreadsheets/d/12thaaXg1Idr3iWST8QyASNDs08sjdPd6m9mbCGtHFn0"&gt;总结表格&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Jupyter&lt;/h2&gt;
+&lt;p&gt;如果你是python的初学者, 非常推荐Jupyter.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/Jupyter.org"&gt;Juypter&lt;/a&gt;是一个交互式的编程环境,  号称&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;The Notebook has support for over 40 programming languages,
+including Python, R, Julia, and Scala.
+&lt;/pre&gt;
+
+
+&lt;p&gt;支持超过40种语言, 其中包括Python,  R,  Julia和Scala. 虽然除了Python, 目前提到的其他语言我还都不会, 但是看起来是很强大很有前途的样子.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;Jupyter的编程环境我很喜欢, 你可以写一段markdown图文并茂的说明, 再写一段代码, 然后单独运行刚刚写过的这一段代码, 看到结果, 调试代码, 改好以后再进行下一段.&lt;/p&gt;
+&lt;p&gt;最终完成的文本+代码, 是所谓的&lt;a href="https://zh.wikipedia.org/wiki/%E6%96%87%E5%AD%A6%E7%BC%96%E7%A8%8B"&gt;"文学编程"&lt;/a&gt;, 文字甚至图片说明作者的思路, 中间夹杂着代码, 来教导计算机进行操作. 这样带来了完美的可读性.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sx"&gt;!不要! 相信什么"代码才是最好的注释".&lt;/span&gt;
+那是穿格子衬衫背双肩背半夜三点还在写代码的专职程序员才相信的东西&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;如果你不是一个每天必须写代码十几个小时的专业程序员, 而是利用代码去完成自己专业的特殊需求, 可能一个程序要间断好多天才能写完, 那么这种方式能够帮你迅速找到前几天的思路. 继续完成之前的作品.&lt;/p&gt;
+&lt;h2&gt;在本地安装Jupyter(跳过吧, 别看)&lt;/h2&gt;
+&lt;p&gt;Jupyter当然可以安装在本地, 安装好&lt;a href="https://www.anaconda.com/"&gt;Anaconda&lt;/a&gt;以后, 相对比较容易安装jupyter了.  &lt;/p&gt;
+&lt;p&gt;但如果你之前只在windows上安装过商业软件, 一路点next, 或者在mac上从dmg中把应用程序直接拖动到文件夹里就可以运行. 那么安装anaconda, jupyter, 以及在运行jupyter时再安装各种python的依赖包, 是非常痛苦的.&lt;/p&gt;
+&lt;p&gt;完全不建议新手进行, 至于那些常年泡在&lt;a href="https://twitter.com/bgm38/status/932512531251216385"&gt;linux里面已经 "&lt;strong&gt;久病成医&lt;/strong&gt; "&lt;/a&gt;的病友, 推荐你们试试.&lt;/p&gt;
+&lt;h2&gt;在线的Jupyter&lt;/h2&gt;
+&lt;p&gt;如果你是python的初学者, 非常推荐使用在线的Jupyter.&lt;/p&gt;
+&lt;p&gt;利用在线的Jupyter要轻松得多, 只需要有网络连接, 有浏览器就可以了. 我测试了mac版的Chrome, Safari, 甚至android上的Chrome和iOS上的Safari, Chrome, 都可以运行在线的Jupyter.&lt;/p&gt;
+&lt;p&gt;目前已经有这些服务:&lt;/p&gt;
+&lt;h3&gt;Cocalc&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://cocalc.com"&gt;https://cocalc.com&lt;/a&gt; ,
+这是一个科学计算平台, 除了提供jupyter, 还提供了sagemath.
+sagemath也是一个强大的数学计算工具, 可以当作一个开源的mathematica, 随手解个方程, 求个微分之列都很方便.&lt;/p&gt;
+&lt;p&gt;CoCalc已经安装好了大量的python包, 比如numpy, tensorflow, keras, pytorch. . .&lt;/p&gt;
+&lt;p&gt;Cocalc有免费版和付费版, 免费版没有额外的网络连接, 也就是说你无法在cocalc里面再访问其他网页, 比如你用jupyter写了一个网络服务程序, 那么是无法用在cocalc免费版里面的. 用git也会受限制. 没有网络连接最麻烦的是如果cocalc没有预装的包, 你是无法自行安装的. 不过如果确实是很常用有名的python包, 那么可以向cocalc网站的支持发个email, 他们的响应速度超级快, 很有可能就帮你装好了.&lt;/p&gt;
+&lt;p&gt;我写过&lt;a href="https://goldengrape.github.io/Python-for-ophthalmologist/lesson_01_jupyter.html"&gt;CoCalc的使用教程&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Azure notebook&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://notebooks.azure.com"&gt;https://notebooks.azure.com&lt;/a&gt;
+这是微软提供的在线jupyter服务, 财大气粗的微软提供的内存, cpu, 存储空间都不错.&lt;/p&gt;
+&lt;p&gt;很有特色的功能有二:
+1. 方便一键clone, 看好其他人的做得不错的东西, 可以方便clone一份自己研究.
+2. 可以从github导入, 只需要将看中的github repo页面添加, 就可以自动clone, 如果对方更新了, 自己这边也可以方便使用git pull&lt;/p&gt;
+&lt;p&gt;微软的这个服务是有网络连接的, 你可以远程下载数据或者导入其他的库. 因此如果出现没有预装的库, 可以自己手动安装. 但麻烦的是, 如果你的notebook停用1小时以后, 远程的server就会停止, 然后你之前安装的东西就会被清除(数据和文件不会), 所以如果有额外的库, 就需要在每次打开的时候预先再次安装一遍.&lt;/p&gt;
+&lt;p&gt;好在会有脚本可以做, 你可以参照这个&lt;a href="https://github.com/Microsoft/AzureNotebooks/issues/201#issuecomment-338466615"&gt;帖子&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;到你的 library &amp;gt; settings &amp;gt; Environment
+选择 ShellScript 然后选择 特定的脚本
+保存
+重启 server
+&lt;/pre&gt;
+
+
+&lt;p&gt;安装pytorch的脚本&lt;a href="https://github.com/Microsoft/AzureNotebooks/files/1404777/script.txt"&gt;例子&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export PATH=~/anaconda3_410/bin:$PATH
+conda install pytorch torchvision -c soumith --yes
+&lt;/pre&gt;
+
+
+&lt;p&gt;安装其他的库, 只需要在anaconda里面搜索一下conda的安装方法, 然后替换上面脚本中的conda install pytorch那一段.&lt;/p&gt;
+&lt;h3&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Mybinder
+&lt;a href="https://mybinder.org/"&gt;https://mybinder.org/&lt;/a&gt;
+这个我也还没用过, 据说可以从github里面直接导入, 生成一个docker. 需要什么库的话, 好像也可以通过脚本预先声明, 不一定像azure notebook那样要反复安装.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Colaboratory
+&lt;a href="https://colab.research.google.com/"&gt;https://colab.research.google.com/&lt;/a&gt;
+这是Google的jupyter服务, 但目前还没有完全开放, 点击注册以后会有"您已成功加入到候补名单。一旦 Colaboratory 可供您使用，我们会立即发送电子邮件通知您。"&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;在移动设备上使用&lt;/h2&gt;
+&lt;p&gt;主流的手机/平板浏览器, 上面的服务都可以访问, 编辑的时候稍微有点别扭, 特别是在小屏幕的时候, 操作也还是不够方便, 但如果外接键盘/蓝牙键盘也还是不错的.&lt;/p&gt;
+&lt;p&gt;除了内置的浏览器, 我还发现了专用的iOS app, &lt;a href="https://juno.sh/"&gt;Juno&lt;/a&gt; 目前还处于testflight状态, 可以去他家网页上申请beta测试. Juno中还内置了Mybinder的demo. 如果你购买了cocalc付费版, 也可以开放出一个远程的jupyter server供Juno使用.&lt;/p&gt;
+&lt;h2&gt;自己建立Jupyter在线服务&lt;/h2&gt;
+&lt;p&gt;开源社区现在越来越友好了, 有可能的话, 你也可以在自己的服务器或者VPS上建立一个在线的Jupyter服务, 为自己/学生/客户服务. 但我这么怕麻烦的人, 本地电脑都懒得装, 所以我都没有测试过.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jupyter Hub: &lt;a href="https://github.com/jupyterhub/jupyterhub"&gt;https://github.com/jupyterhub/jupyterhub&lt;/a&gt; 这是jupyter官方的服务器安装程序.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Binder Hub:  &lt;a href="https://github.com/jupyterhub/binderhub"&gt;https://github.com/jupyterhub/binderhub&lt;/a&gt;也是从属与jupyter官方的, 但是用docker技术封装, 大概安装调试会方便一些吧.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cocalc/sagemath: &lt;a href="https://github.com/sagemathinc/cocalc"&gt;https://github.com/sagemathinc/cocalc&lt;/a&gt; 这个也是用docker的, 还带有sagemath.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ps.
+如果你在本地计算机上安装了jupyter, 非常推荐下面这个插件, 能够在保存jupyter文件的时候, 同时保存同名的 .html 和 .py 形式的文件. 这样在其他的python程序中导入自己写的函数会非常方便. 也很容易在github page上发布文档.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html"&gt;http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;EOF()&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</guid><pubDate>Sat, 18 May 2019 04:00:00 GMT</pubDate></item><item><title>齿条绘制</title><link>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学会了绘制齿条rack。就是和齿轮配合，将圆周运动变换成直线运动的结构。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="rack" src="https://i.loli.net/2019/05/12/5cd767b4bdd0f.jpg"&gt;&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
@@ -856,51 +949,4 @@ https://www.rayner.com/en/history&lt;/p&gt;
 &lt;p&gt;建议先高速听一遍, 一边听一边把一些表达稍微修改, 比如数学公式的朗读可能有问题, 有些分词断句可能听起来很怪异, 必要时加个逗号或者空格. &lt;/p&gt;
 &lt;p&gt;注意导出的视频文件是m4v后缀, 有些教学网站傻傻的只认mp4文件, 直接改后缀成mp4就行了. 不用再转码.&lt;/p&gt;
 &lt;p&gt;没找到讯飞朗读里如何人为做一些停顿. 逗号, 句号之类都只是寻常间断, 多个标点也不能把停顿延长.&lt;/p&gt;
-&lt;p&gt;把iphone作为mac的音频输入, 再同时监听真的很有趣. 好像可以玩很多东西&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</guid><pubDate>Fri, 08 Mar 2019 04:00:00 GMT</pubDate></item><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
-&lt;p&gt;于是用相机记录下来:
-&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
-&lt;p&gt;再记录一下拍摄过程:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;材料与方法:&lt;/h2&gt;
-&lt;h3&gt;工具:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;待开放栀子花,&lt;/li&gt;
-&lt;li&gt;Nokia X6手机,&lt;/li&gt;
-&lt;li&gt;三脚架, 手机夹子&lt;/li&gt;
-&lt;li&gt;Android
-上的&lt;a href="https://apkpure.com/cn/open-camera/net.sourceforge.opencamera"&gt;Open Camera App&lt;/a&gt;: 这是一个很强悍的相机app, 能够自定义很多参数.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://item.taobao.com/item.htm?id=574484611225"&gt;可外接电源的LED补光灯&lt;/a&gt;, 这几天在做另一个项目, 买了一堆网红主播用品.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.ffmpeg.org/"&gt;FFmpeg&lt;/a&gt;, 这是一个开源命令行软件. 在mac上用homebrew完全安装ffmpeg要费些功夫, (开源软件嘛, 一步安装到位就太不矜持了), &lt;a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS"&gt;要先brew tap&lt;/a&gt; 然后再&lt;a href="https://gist.github.com/Piasy/b5dfd5c048eb69d1b91719988c0325d8"&gt;安装各个options&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;摆放&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="IMG_2273" src="https://i.loli.net/2019/03/05/5c7e87ec2fa1e.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;拍摄参数设定&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Screenshot_20190305-223636" src="https://i.loli.net/2019/03/05/5c7e8ab0f22d9.png"&gt;
-&lt;em&gt; 连拍模式: 无限
-&lt;/em&gt; 连拍模式间隔: 目前我设定的是30秒&lt;/p&gt;
-&lt;h3&gt;软件处理&lt;/h3&gt;
-&lt;p&gt;使用ffmpeg合成图像.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将目录里的所有jpg图像合成为视频, 帧速率=30&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' flower.mp4&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;实测发现画面太大, 于是只截取画面中的一部分(宽=2200, 高=2200, x起点=800, y起点=700)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' -vf "crop=2200:2200:800:700" flower.mp4&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;微信朋友圈只有10秒, 所以提高速度, 其中setpts=10/实际时间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -i flower.mp4 -b:v 2000k -filter:v "setpts=0.05714286*PTS" output.mp4&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;结果与讨论&lt;/h2&gt;
-&lt;h3&gt;结果:&lt;/h3&gt;
-&lt;p&gt;未处理的拍摄样张:
-&lt;img alt="IMG_20190305_065624_DRO" src="https://i.loli.net/2019/03/05/5c7e8fbfe5da4.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;处理后的视频:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
-&lt;h3&gt;讨论&lt;/h3&gt;
-&lt;p&gt;花开过程大约是2天, 一共拍摄了5200多张, 照片总容量达到了12G, 原本担心ffmpeg处理这么大的量会吃力, 没想到还是很容易就完成了. &lt;/p&gt;
-&lt;p&gt;平均来说, 每30秒拍摄一张有点短, 造成数据量很大, 不过反正ffmpeg处理起来也不吃力, 但如果使用常规的软件来处理, 比如photoshop之类, 有可能会吃不消. &lt;/p&gt;
-&lt;p&gt;但花瓣并不是匀速打开的, 最外层的花瓣类似是弹开的样子, 特别是第4片花瓣, 30秒之内张开了60度以上. 所以如果拍摄间隔设定太久, 就可能捕捉不到. &lt;/p&gt;
-&lt;p&gt;关于摆放位置, 现在觉得应该把镜头正对花的中心, 而不应该从侧面拍摄, 会有一半的花瓣看不见. 还是应该尽可能把镜头靠近, 使花占主体部分, 而不是后期剪裁, 感觉花朵本身的分辨率还是欠缺. &lt;/p&gt;
-&lt;p&gt;背景颜色变化明显, 是因为日光的原因. 晚上由补光灯照明, 白天日光造成的影响很明显. 补光灯应该再亮一些, 噪点还是太明显. 我不知道如果完全遮蔽日光, 使用人造光源照明, 是否会对开花过程有影响. 毕竟LED的光谱与日光还是有很大不同. &lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/flower-blossom/</guid><pubDate>Tue, 05 Mar 2019 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;把iphone作为mac的音频输入, 再同时监听真的很有趣. 好像可以玩很多东西&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</guid><pubDate>Fri, 08 Mar 2019 04:00:00 GMT</pubDate></item></channel></rss>

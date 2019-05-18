@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 07 May 2019 09:20:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 18 May 2019 14:45:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data School有一篇非常好的评测，写了6个在线的Jupyter服务，建议去看看。
+&lt;a href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/"&gt;Six easy ways to run your Jupyter Notebook in the cloud&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里还有一个太长不看的&lt;a href="https://docs.google.com/spreadsheets/d/12thaaXg1Idr3iWST8QyASNDs08sjdPd6m9mbCGtHFn0"&gt;总结表格&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Jupyter&lt;/h2&gt;
+&lt;p&gt;如果你是python的初学者, 非常推荐Jupyter.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/Jupyter.org"&gt;Juypter&lt;/a&gt;是一个交互式的编程环境,  号称&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;The Notebook has support for over 40 programming languages,
+including Python, R, Julia, and Scala.
+&lt;/pre&gt;
+
+
+&lt;p&gt;支持超过40种语言, 其中包括Python,  R,  Julia和Scala. 虽然除了Python, 目前提到的其他语言我还都不会, 但是看起来是很强大很有前途的样子.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;Jupyter的编程环境我很喜欢, 你可以写一段markdown图文并茂的说明, 再写一段代码, 然后单独运行刚刚写过的这一段代码, 看到结果, 调试代码, 改好以后再进行下一段.&lt;/p&gt;
+&lt;p&gt;最终完成的文本+代码, 是所谓的&lt;a href="https://zh.wikipedia.org/wiki/%E6%96%87%E5%AD%A6%E7%BC%96%E7%A8%8B"&gt;"文学编程"&lt;/a&gt;, 文字甚至图片说明作者的思路, 中间夹杂着代码, 来教导计算机进行操作. 这样带来了完美的可读性.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sx"&gt;!不要! 相信什么"代码才是最好的注释".&lt;/span&gt;
+那是穿格子衬衫背双肩背半夜三点还在写代码的专职程序员才相信的东西&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;如果你不是一个每天必须写代码十几个小时的专业程序员, 而是利用代码去完成自己专业的特殊需求, 可能一个程序要间断好多天才能写完, 那么这种方式能够帮你迅速找到前几天的思路. 继续完成之前的作品.&lt;/p&gt;
+&lt;h2&gt;在本地安装Jupyter(跳过吧, 别看)&lt;/h2&gt;
+&lt;p&gt;Jupyter当然可以安装在本地, 安装好&lt;a href="https://www.anaconda.com/"&gt;Anaconda&lt;/a&gt;以后, 相对比较容易安装jupyter了.  &lt;/p&gt;
+&lt;p&gt;但如果你之前只在windows上安装过商业软件, 一路点next, 或者在mac上从dmg中把应用程序直接拖动到文件夹里就可以运行. 那么安装anaconda, jupyter, 以及在运行jupyter时再安装各种python的依赖包, 是非常痛苦的.&lt;/p&gt;
+&lt;p&gt;完全不建议新手进行, 至于那些常年泡在&lt;a href="https://twitter.com/bgm38/status/932512531251216385"&gt;linux里面已经 "&lt;strong&gt;久病成医&lt;/strong&gt; "&lt;/a&gt;的病友, 推荐你们试试.&lt;/p&gt;
+&lt;h2&gt;在线的Jupyter&lt;/h2&gt;
+&lt;p&gt;如果你是python的初学者, 非常推荐使用在线的Jupyter.&lt;/p&gt;
+&lt;p&gt;利用在线的Jupyter要轻松得多, 只需要有网络连接, 有浏览器就可以了. 我测试了mac版的Chrome, Safari, 甚至android上的Chrome和iOS上的Safari, Chrome, 都可以运行在线的Jupyter.&lt;/p&gt;
+&lt;p&gt;目前已经有这些服务:&lt;/p&gt;
+&lt;h3&gt;Cocalc&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://cocalc.com"&gt;https://cocalc.com&lt;/a&gt; ,
+这是一个科学计算平台, 除了提供jupyter, 还提供了sagemath.
+sagemath也是一个强大的数学计算工具, 可以当作一个开源的mathematica, 随手解个方程, 求个微分之列都很方便.&lt;/p&gt;
+&lt;p&gt;CoCalc已经安装好了大量的python包, 比如numpy, tensorflow, keras, pytorch. . .&lt;/p&gt;
+&lt;p&gt;Cocalc有免费版和付费版, 免费版没有额外的网络连接, 也就是说你无法在cocalc里面再访问其他网页, 比如你用jupyter写了一个网络服务程序, 那么是无法用在cocalc免费版里面的. 用git也会受限制. 没有网络连接最麻烦的是如果cocalc没有预装的包, 你是无法自行安装的. 不过如果确实是很常用有名的python包, 那么可以向cocalc网站的支持发个email, 他们的响应速度超级快, 很有可能就帮你装好了.&lt;/p&gt;
+&lt;p&gt;我写过&lt;a href="https://goldengrape.github.io/Python-for-ophthalmologist/lesson_01_jupyter.html"&gt;CoCalc的使用教程&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Azure notebook&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://notebooks.azure.com"&gt;https://notebooks.azure.com&lt;/a&gt;
+这是微软提供的在线jupyter服务, 财大气粗的微软提供的内存, cpu, 存储空间都不错.&lt;/p&gt;
+&lt;p&gt;很有特色的功能有二:
+1. 方便一键clone, 看好其他人的做得不错的东西, 可以方便clone一份自己研究.
+2. 可以从github导入, 只需要将看中的github repo页面添加, 就可以自动clone, 如果对方更新了, 自己这边也可以方便使用git pull&lt;/p&gt;
+&lt;p&gt;微软的这个服务是有网络连接的, 你可以远程下载数据或者导入其他的库. 因此如果出现没有预装的库, 可以自己手动安装. 但麻烦的是, 如果你的notebook停用1小时以后, 远程的server就会停止, 然后你之前安装的东西就会被清除(数据和文件不会), 所以如果有额外的库, 就需要在每次打开的时候预先再次安装一遍.&lt;/p&gt;
+&lt;p&gt;好在会有脚本可以做, 你可以参照这个&lt;a href="https://github.com/Microsoft/AzureNotebooks/issues/201#issuecomment-338466615"&gt;帖子&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;到你的 library &amp;gt; settings &amp;gt; Environment
+选择 ShellScript 然后选择 特定的脚本
+保存
+重启 server
+&lt;/pre&gt;
+
+
+&lt;p&gt;安装pytorch的脚本&lt;a href="https://github.com/Microsoft/AzureNotebooks/files/1404777/script.txt"&gt;例子&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export PATH=~/anaconda3_410/bin:$PATH
+conda install pytorch torchvision -c soumith --yes
+&lt;/pre&gt;
+
+
+&lt;p&gt;安装其他的库, 只需要在anaconda里面搜索一下conda的安装方法, 然后替换上面脚本中的conda install pytorch那一段.&lt;/p&gt;
+&lt;h3&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Mybinder
+&lt;a href="https://mybinder.org/"&gt;https://mybinder.org/&lt;/a&gt;
+这个我也还没用过, 据说可以从github里面直接导入, 生成一个docker. 需要什么库的话, 好像也可以通过脚本预先声明, 不一定像azure notebook那样要反复安装.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Colaboratory
+&lt;a href="https://colab.research.google.com/"&gt;https://colab.research.google.com/&lt;/a&gt;
+这是Google的jupyter服务, 但目前还没有完全开放, 点击注册以后会有"您已成功加入到候补名单。一旦 Colaboratory 可供您使用，我们会立即发送电子邮件通知您。"&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;在移动设备上使用&lt;/h2&gt;
+&lt;p&gt;主流的手机/平板浏览器, 上面的服务都可以访问, 编辑的时候稍微有点别扭, 特别是在小屏幕的时候, 操作也还是不够方便, 但如果外接键盘/蓝牙键盘也还是不错的.&lt;/p&gt;
+&lt;p&gt;除了内置的浏览器, 我还发现了专用的iOS app, &lt;a href="https://juno.sh/"&gt;Juno&lt;/a&gt; 目前还处于testflight状态, 可以去他家网页上申请beta测试. Juno中还内置了Mybinder的demo. 如果你购买了cocalc付费版, 也可以开放出一个远程的jupyter server供Juno使用.&lt;/p&gt;
+&lt;h2&gt;自己建立Jupyter在线服务&lt;/h2&gt;
+&lt;p&gt;开源社区现在越来越友好了, 有可能的话, 你也可以在自己的服务器或者VPS上建立一个在线的Jupyter服务, 为自己/学生/客户服务. 但我这么怕麻烦的人, 本地电脑都懒得装, 所以我都没有测试过.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jupyter Hub: &lt;a href="https://github.com/jupyterhub/jupyterhub"&gt;https://github.com/jupyterhub/jupyterhub&lt;/a&gt; 这是jupyter官方的服务器安装程序.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Binder Hub:  &lt;a href="https://github.com/jupyterhub/binderhub"&gt;https://github.com/jupyterhub/binderhub&lt;/a&gt;也是从属与jupyter官方的, 但是用docker技术封装, 大概安装调试会方便一些吧.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cocalc/sagemath: &lt;a href="https://github.com/sagemathinc/cocalc"&gt;https://github.com/sagemathinc/cocalc&lt;/a&gt; 这个也是用docker的, 还带有sagemath.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ps.
+如果你在本地计算机上安装了jupyter, 非常推荐下面这个插件, 能够在保存jupyter文件的时候, 同时保存同名的 .html 和 .py 形式的文件. 这样在其他的python程序中导入自己写的函数会非常方便. 也很容易在github page上发布文档.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html"&gt;http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;EOF()&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</guid><pubDate>Sat, 18 May 2019 04:00:00 GMT</pubDate></item><item><title>自动生成Keynote演讲视频</title><link>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;目的:&lt;/h3&gt;
 &lt;p&gt;用mac上的系统语音, 自动播放keynote幻灯, 并且朗读keynote中的“演讲者备注”, 如果页面中有动画, 就依次播放完动画, 然后再切换到下一页.&lt;/p&gt;
 &lt;!-- &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/AOMDt7xrIU4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt; --&gt;
 
@@ -3075,139 +3168,4 @@ dtype: int64&lt;/pre&gt;
 &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/dejunkifying-a-plot/</guid><pubDate>Sat, 20 Jan 2018 08:30:00 GMT</pubDate></item><item><title>如何写一个球面Ray tracing程序(1)</title><link>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="直线与平面的交点"&gt;直线与平面的交点&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E4%B8%8E%E5%B9%B3%E9%9D%A2%E7%9A%84%E4%BA%A4%E7%82%B9"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;在Ray tracing的时候，如果光线最终打到一个平面屏幕上，就需要知道每个光线的落点。直线和平面的交点求解比较简单，先用来练手热身。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;
-&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ray-tracing-1.1.png" alt=""&gt;&lt;/p&gt;
-&lt;h3 id="直线的表示"&gt;直线的表示&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%9B%B4%E7%BA%BF%E7%9A%84%E8%A1%A8%E7%A4%BA"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;一条直线上任意一点P可以用直线上已知一点PLine，和直线方向的向量NLine来表示，写出参数方程就是，注意啊，这里的PLine,NLine都是矢量，但t是标量, 有如下(1)式
-$$
-P_{(t)}= P_{Line}+t \times N_{Line}
-$$&lt;/p&gt;
-&lt;h3 id="平面的表示"&gt;平面的表示&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E5%B9%B3%E9%9D%A2%E7%9A%84%E8%A1%A8%E7%A4%BA"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;一个平面，可以用平面上已知一点PPlane，和垂直于这个平面的法向量NPlane来表示。&lt;/p&gt;
-&lt;h3 id="用参数方程求交点"&gt;用参数方程求交点&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/#%E7%94%A8%E5%8F%82%E6%95%B0%E6%96%B9%E7%A8%8B%E6%B1%82%E4%BA%A4%E7%82%B9"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;假设现在直线与平面交点是P点，那么可以画一个从平面上已知点PPlane到P点的向量，比如叫V=P-PPlane&lt;/p&gt;
-&lt;p&gt;代入上面（1）式
-得到(2)式
-$$ 
-V=P_t-P_{Plane}
-\\
-V=(P_{Line}+t \times N_{Line}) -P_{Plane}
-$$&lt;/p&gt;
-&lt;p&gt;显然V矢量是在平面内的，那么“垂直于这个平面的法向量NPlane”当然也垂直于V矢量，NPlane⊥V，这件事情在数学上有明确的表示，就是NPlane矢量和V矢量的dot product是等于0的。
-$$
-dot(V,N_{Plane})=0
-$$&lt;/p&gt;
-&lt;p&gt;把V替换成(2)式&lt;/p&gt;
-$$
-dot(P_{Line}+t \times N_{Line}-P_{Plane}, N_{Plane})=0
-$$&lt;p&gt;dot product是满足分配律的，于是有
-$$
-dot(P_{Line}-P_{Plane}, N_{Plane}) + dot( t \times N_{Line}, N{Plane})=0
-$$&lt;/p&gt;
-&lt;p&gt;其中t是标量，可以提取到dot product外面来
-$$
-dot(P_{Line}-P_{Plane}, N_{Plane}) + t \times dot( N_{Line}, N{Plane})==0
-$$
-化简一下：&lt;/p&gt;
-$$
-t= - \frac{dot(P_{Line}-P_{Plane}, N_{Plane})}{dot( N_{Line}, N{Plane})}
-$$&lt;p&gt;里面再调换一下位置，把难看的负号去掉。铛铛：&lt;/p&gt;
-$$
-t=\frac{dot(P_{Plane}-P_{Line}, N_{Plane})}{dot( N_{Line}, N{Plane})}
-$$&lt;p&gt;这就是程序里算出t的方法了。有t的值，只要代入(1)式就可以求出交点P了。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [26]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;lineCrossPlane&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;NLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;PPlane&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="sd"&gt;'''&lt;/span&gt;
-&lt;span class="sd"&gt;    直线以起点PLine和方向向量NLine表示&lt;/span&gt;
-&lt;span class="sd"&gt;    平面以平面上一点PPlane和法向量NPlane表示&lt;/span&gt;
-&lt;span class="sd"&gt;    求其交点P&lt;/span&gt;
-&lt;span class="sd"&gt;    直线有多组，平面仅一个&lt;/span&gt;
-&lt;span class="sd"&gt;    '''&lt;/span&gt;
-    &lt;span class="n"&gt;tup&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;PPlane&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;tdown&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;dot&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;NLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;NPlane&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;tup&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;tdown&lt;/span&gt;
-    &lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expand_dims&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;axis&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 为了满足与t与NLine的乘法, 需要将t扩展一维&lt;/span&gt;
-    &lt;span class="n"&gt;P&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;PLine&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;NLine&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;P&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [27]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 测试结果: &lt;/span&gt;
-&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="vm"&gt;__name__&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s2"&gt;"__main__"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
-    &lt;span class="n"&gt;pline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-    &lt;span class="n"&gt;nline&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]])&lt;/span&gt;
-    &lt;span class="n"&gt;pplane&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-    &lt;span class="n"&gt;nplane&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;lineCrossPlane&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;pplane&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;nplane&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-
-
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;[[ 5.  0.  0.]
- [ 5.  1.  2.]]
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-    &lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
-&lt;/pre&gt;&lt;/div&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/pyathon-ray-tracing-1/</guid><pubDate>Mon, 15 Jan 2018 15:30:00 GMT</pubDate></item></channel></rss>
+</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/dejunkifying-a-plot/</guid><pubDate>Sat, 20 Jan 2018 08:30:00 GMT</pubDate></item></channel></rss>
