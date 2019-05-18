@@ -1,13 +1,20 @@
 <!--
 .. title: 那些在线的jupyter
 .. slug: na-xie-zai-xian-de-jupyter
-.. date: 2017-12-18 03:19:31 UTC+08:00
+.. date: 2019-5-18 12:00 UTC+08:00
 .. tags: 现代眼科医生知识扩展包, python
 .. category:
 .. link:
 .. description:
 .. type: text
 -->
+
+### update:
+
+>Data School有一篇非常好的评测，写了6个在线的Jupyter服务，建议去看看。
+[Six easy ways to run your Jupyter Notebook in the cloud](https://www.dataschool.io/cloud-services-for-jupyter-notebook/)
+
+>这里还有一个太长不看的[总结表格](https://docs.google.com/spreadsheets/d/12thaaXg1Idr3iWST8QyASNDs08sjdPd6m9mbCGtHFn0)。
 
 # Jupyter
 
@@ -114,4 +121,7 @@ ps.
 如果你在本地计算机上安装了jupyter, 非常推荐下面这个插件, 能够在保存jupyter文件的时候, 同时保存同名的 .html 和 .py 形式的文件. 这样在其他的python程序中导入自己写的函数会非常方便. 也很容易在github page上发布文档.
 
 [http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html](http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html)
+
+
+
 EOF()

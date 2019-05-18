@@ -1,5 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 07 May 2019 09:21:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>半自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近要做一批幻灯片的配音演讲. 之前用的&lt;a href="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation"&gt;自动生成keynote演讲&lt;/a&gt;方法突然不好用了, 因为似乎苹果偷偷更新了apple script的函数定义, 一大堆命令都无法识别了. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 18 May 2019 14:45:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Data School有一篇非常好的评测，写了6个在线的Jupyter服务，建议去看看。
+&lt;a href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/"&gt;Six easy ways to run your Jupyter Notebook in the cloud&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这里还有一个太长不看的&lt;a href="https://docs.google.com/spreadsheets/d/12thaaXg1Idr3iWST8QyASNDs08sjdPd6m9mbCGtHFn0"&gt;总结表格&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Jupyter&lt;/h2&gt;
+&lt;p&gt;如果你是python的初学者, 非常推荐Jupyter.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/Jupyter.org"&gt;Juypter&lt;/a&gt;是一个交互式的编程环境,  号称&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;The Notebook has support for over 40 programming languages,
+including Python, R, Julia, and Scala.
+&lt;/pre&gt;
+
+
+&lt;p&gt;支持超过40种语言, 其中包括Python,  R,  Julia和Scala. 虽然除了Python, 目前提到的其他语言我还都不会, 但是看起来是很强大很有前途的样子.
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;p&gt;Jupyter的编程环境我很喜欢, 你可以写一段markdown图文并茂的说明, 再写一段代码, 然后单独运行刚刚写过的这一段代码, 看到结果, 调试代码, 改好以后再进行下一段.&lt;/p&gt;
+&lt;p&gt;最终完成的文本+代码, 是所谓的&lt;a href="https://zh.wikipedia.org/wiki/%E6%96%87%E5%AD%A6%E7%BC%96%E7%A8%8B"&gt;"文学编程"&lt;/a&gt;, 文字甚至图片说明作者的思路, 中间夹杂着代码, 来教导计算机进行操作. 这样带来了完美的可读性.&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="sx"&gt;!不要! 相信什么"代码才是最好的注释".&lt;/span&gt;
+那是穿格子衬衫背双肩背半夜三点还在写代码的专职程序员才相信的东西&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;如果你不是一个每天必须写代码十几个小时的专业程序员, 而是利用代码去完成自己专业的特殊需求, 可能一个程序要间断好多天才能写完, 那么这种方式能够帮你迅速找到前几天的思路. 继续完成之前的作品.&lt;/p&gt;
+&lt;h2&gt;在本地安装Jupyter(跳过吧, 别看)&lt;/h2&gt;
+&lt;p&gt;Jupyter当然可以安装在本地, 安装好&lt;a href="https://www.anaconda.com/"&gt;Anaconda&lt;/a&gt;以后, 相对比较容易安装jupyter了.  &lt;/p&gt;
+&lt;p&gt;但如果你之前只在windows上安装过商业软件, 一路点next, 或者在mac上从dmg中把应用程序直接拖动到文件夹里就可以运行. 那么安装anaconda, jupyter, 以及在运行jupyter时再安装各种python的依赖包, 是非常痛苦的.&lt;/p&gt;
+&lt;p&gt;完全不建议新手进行, 至于那些常年泡在&lt;a href="https://twitter.com/bgm38/status/932512531251216385"&gt;linux里面已经 "&lt;strong&gt;久病成医&lt;/strong&gt; "&lt;/a&gt;的病友, 推荐你们试试.&lt;/p&gt;
+&lt;h2&gt;在线的Jupyter&lt;/h2&gt;
+&lt;p&gt;如果你是python的初学者, 非常推荐使用在线的Jupyter.&lt;/p&gt;
+&lt;p&gt;利用在线的Jupyter要轻松得多, 只需要有网络连接, 有浏览器就可以了. 我测试了mac版的Chrome, Safari, 甚至android上的Chrome和iOS上的Safari, Chrome, 都可以运行在线的Jupyter.&lt;/p&gt;
+&lt;p&gt;目前已经有这些服务:&lt;/p&gt;
+&lt;h3&gt;Cocalc&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://cocalc.com"&gt;https://cocalc.com&lt;/a&gt; ,
+这是一个科学计算平台, 除了提供jupyter, 还提供了sagemath.
+sagemath也是一个强大的数学计算工具, 可以当作一个开源的mathematica, 随手解个方程, 求个微分之列都很方便.&lt;/p&gt;
+&lt;p&gt;CoCalc已经安装好了大量的python包, 比如numpy, tensorflow, keras, pytorch. . .&lt;/p&gt;
+&lt;p&gt;Cocalc有免费版和付费版, 免费版没有额外的网络连接, 也就是说你无法在cocalc里面再访问其他网页, 比如你用jupyter写了一个网络服务程序, 那么是无法用在cocalc免费版里面的. 用git也会受限制. 没有网络连接最麻烦的是如果cocalc没有预装的包, 你是无法自行安装的. 不过如果确实是很常用有名的python包, 那么可以向cocalc网站的支持发个email, 他们的响应速度超级快, 很有可能就帮你装好了.&lt;/p&gt;
+&lt;p&gt;我写过&lt;a href="https://goldengrape.github.io/Python-for-ophthalmologist/lesson_01_jupyter.html"&gt;CoCalc的使用教程&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;Azure notebook&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://notebooks.azure.com"&gt;https://notebooks.azure.com&lt;/a&gt;
+这是微软提供的在线jupyter服务, 财大气粗的微软提供的内存, cpu, 存储空间都不错.&lt;/p&gt;
+&lt;p&gt;很有特色的功能有二:
+1. 方便一键clone, 看好其他人的做得不错的东西, 可以方便clone一份自己研究.
+2. 可以从github导入, 只需要将看中的github repo页面添加, 就可以自动clone, 如果对方更新了, 自己这边也可以方便使用git pull&lt;/p&gt;
+&lt;p&gt;微软的这个服务是有网络连接的, 你可以远程下载数据或者导入其他的库. 因此如果出现没有预装的库, 可以自己手动安装. 但麻烦的是, 如果你的notebook停用1小时以后, 远程的server就会停止, 然后你之前安装的东西就会被清除(数据和文件不会), 所以如果有额外的库, 就需要在每次打开的时候预先再次安装一遍.&lt;/p&gt;
+&lt;p&gt;好在会有脚本可以做, 你可以参照这个&lt;a href="https://github.com/Microsoft/AzureNotebooks/issues/201#issuecomment-338466615"&gt;帖子&lt;/a&gt;&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;到你的 library &amp;gt; settings &amp;gt; Environment
+选择 ShellScript 然后选择 特定的脚本
+保存
+重启 server
+&lt;/pre&gt;
+
+
+&lt;p&gt;安装pytorch的脚本&lt;a href="https://github.com/Microsoft/AzureNotebooks/files/1404777/script.txt"&gt;例子&lt;/a&gt;:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;export PATH=~/anaconda3_410/bin:$PATH
+conda install pytorch torchvision -c soumith --yes
+&lt;/pre&gt;
+
+
+&lt;p&gt;安装其他的库, 只需要在anaconda里面搜索一下conda的安装方法, 然后替换上面脚本中的conda install pytorch那一段.&lt;/p&gt;
+&lt;h3&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Mybinder
+&lt;a href="https://mybinder.org/"&gt;https://mybinder.org/&lt;/a&gt;
+这个我也还没用过, 据说可以从github里面直接导入, 生成一个docker. 需要什么库的话, 好像也可以通过脚本预先声明, 不一定像azure notebook那样要反复安装.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Google Colaboratory
+&lt;a href="https://colab.research.google.com/"&gt;https://colab.research.google.com/&lt;/a&gt;
+这是Google的jupyter服务, 但目前还没有完全开放, 点击注册以后会有"您已成功加入到候补名单。一旦 Colaboratory 可供您使用，我们会立即发送电子邮件通知您。"&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;在移动设备上使用&lt;/h2&gt;
+&lt;p&gt;主流的手机/平板浏览器, 上面的服务都可以访问, 编辑的时候稍微有点别扭, 特别是在小屏幕的时候, 操作也还是不够方便, 但如果外接键盘/蓝牙键盘也还是不错的.&lt;/p&gt;
+&lt;p&gt;除了内置的浏览器, 我还发现了专用的iOS app, &lt;a href="https://juno.sh/"&gt;Juno&lt;/a&gt; 目前还处于testflight状态, 可以去他家网页上申请beta测试. Juno中还内置了Mybinder的demo. 如果你购买了cocalc付费版, 也可以开放出一个远程的jupyter server供Juno使用.&lt;/p&gt;
+&lt;h2&gt;自己建立Jupyter在线服务&lt;/h2&gt;
+&lt;p&gt;开源社区现在越来越友好了, 有可能的话, 你也可以在自己的服务器或者VPS上建立一个在线的Jupyter服务, 为自己/学生/客户服务. 但我这么怕麻烦的人, 本地电脑都懒得装, 所以我都没有测试过.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jupyter Hub: &lt;a href="https://github.com/jupyterhub/jupyterhub"&gt;https://github.com/jupyterhub/jupyterhub&lt;/a&gt; 这是jupyter官方的服务器安装程序.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Binder Hub:  &lt;a href="https://github.com/jupyterhub/binderhub"&gt;https://github.com/jupyterhub/binderhub&lt;/a&gt;也是从属与jupyter官方的, 但是用docker技术封装, 大概安装调试会方便一些吧.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cocalc/sagemath: &lt;a href="https://github.com/sagemathinc/cocalc"&gt;https://github.com/sagemathinc/cocalc&lt;/a&gt; 这个也是用docker的, 还带有sagemath.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ps.
+如果你在本地计算机上安装了jupyter, 非常推荐下面这个插件, 能够在保存jupyter文件的时候, 同时保存同名的 .html 和 .py 形式的文件. 这样在其他的python程序中导入自己写的函数会非常方便. 也很容易在github page上发布文档.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html"&gt;http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;EOF()&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</guid><pubDate>Sat, 18 May 2019 04:00:00 GMT</pubDate></item><item><title>半自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/semiautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近要做一批幻灯片的配音演讲. 之前用的&lt;a href="https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation"&gt;自动生成keynote演讲&lt;/a&gt;方法突然不好用了, 因为似乎苹果偷偷更新了apple script的函数定义, 一大堆命令都无法识别了. &lt;/p&gt;
 &lt;p&gt;但是自动生成配音演讲真的是很方便, 做网络课程的时候, 有什么地方需要更新改正时, 修改文字就好了. 即使是准备现场演讲, 提前生成配音听一遍, 也能够提前对演讲有一个预演, 知道哪些地方需要改进. &lt;/p&gt;
 &lt;p&gt;虽然应该自己重新用python写一个, 但本着能拖一天是一天的拖延症思想, 先用现成的东西拼凑连接起来好了. &lt;/p&gt;
 &lt;p&gt;于是有如下步骤:
@@ -358,156 +451,4 @@ I am.
 &lt;p&gt;注意粤式英文词尾务必要使用平声. 单词发音以短促跳跃为佳 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-3" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</guid><pubDate>Fri, 27 Jul 2018 04:00:00 GMT</pubDate></item><item><title>octopus视野报告数据提取</title><link>https://goldengrape.github.io/posts/python/octopus-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;又写好了一段PDF报告数据提取的小程序, 这次是针对Octopus 900动态视野计的. 可以提取PDF的视野检查结果报告中的数据, 能够提取的数据包括: 姓名, 生日, 检查日期, 眼别, 检查程序名称, RF, MS, MD, sLV, 还有视野测量的原始数据. &lt;/p&gt;
-&lt;p&gt;提取出来的数据保存在csv文件里, 可以使用excel打开和处理.
-&lt;img alt="示例" src="https://i.loli.net/2018/07/09/5b43624ad0d9f.png"&gt;
-其中以G standard程序测量的原始数据是按照从中心开始顺时针螺线的方式排列成一行的.
-&lt;img alt="屏幕快照 2018-07-08 20.11.26" src="https://i.loli.net/2018/07/09/5b437a3ac6eed.png"&gt;&lt;/p&gt;
-&lt;p&gt;也可以处理一个一个文件夹下所有的PDF报告, 把提取的数据汇总到一个csv里面.&lt;/p&gt;
-&lt;p&gt;项目文件开源, 放在在&lt;a href="https://github.com/goldengrape/read_medical_device_data/blob/master/python/pdf_parser/Octopus_VF.ipynb"&gt;github&lt;/a&gt;上, 如果已经比较熟悉github, python和jupyter, 打开看看就很容易理解.  &lt;/p&gt;
-&lt;p&gt;&lt;em&gt;注意: 目前我还只能处理未加密的PDF, 并且PDF的页面大小必须严格是A4, 否则无法取得数据. 切记切记.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;但如果以前没怎么接触过python, 又临时需要处理些数据, 那么以下是使用教程:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;云端运行&lt;/h2&gt;
-&lt;p&gt;如果不是写python已经比较熟练的人, 我一般不推荐在本地计算机上安装python和相关的工具包, 很容易出错. 我建议是在云端运行, 可以选择的服务商很多, 但微软的 &lt;a href="https://notebooks.azure.com"&gt;Azure notebook&lt;/a&gt; 免费, 国内可以访问, 还可以运行私有项目以免泄露病人数据, 因此比较推荐.&lt;/p&gt;
-&lt;p&gt;1.
-打开微软的&lt;a href="https://notebooks.azure.com"&gt;Azure notebook&lt;/a&gt;, 地址是https://notebooks.azure.com , 点击页面右上的Sign In, 使用微软账户登陆, 如果没有微软账户的话, 需要自己注册一个.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 21.34.01" src="https://i.loli.net/2018/07/09/5b4364976e694.png"&gt;&lt;/p&gt;
-&lt;p&gt;2.
-登陆进来以后, 点击左上的Libraries, 将列出您已经建立过的Library, 如果以前没用过, 下面是空的.
-&lt;img alt="屏幕快照 2018-07-09 21.36.27" src="https://i.loli.net/2018/07/09/5b43652cc37a4.png"&gt;&lt;/p&gt;
-&lt;p&gt;3.
-点击 + New Library, 建立一个新的Library.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在选项卡中, 选择From GitHub,&lt;/li&gt;
-&lt;li&gt;在GitHub repository里面填上https://github.com/goldengrape/read_medical_device_data&lt;/li&gt;
-&lt;li&gt;给自己的Library起个名字, 再起个ID, 比如都叫Octopus&lt;/li&gt;
-&lt;li&gt;然后点击Import&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 21.40.09" src="https://i.loli.net/2018/07/09/5b4365d3b854f.png"&gt;&lt;/p&gt;
-&lt;p&gt;4.
-稍等, 或者刷新一下页面, 你会看到刚才建立的Library已经出现了, 点击进入.&lt;/p&gt;
-&lt;h2&gt;上传数据&lt;/h2&gt;
-&lt;p&gt;1.
-在上传数据之前, 先把这个Library设定成私有,
-&lt;img alt="屏幕快照 2018-07-09 21.46.04" src="https://i.loli.net/2018/07/09/5b4367339bc4b.png"&gt;
-点击齿轮⚙️图标&lt;/p&gt;
-&lt;p&gt;把Public Library前面的钩去掉, 然后Save
-&lt;img alt="屏幕快照 2018-07-09 21.47.41" src="https://i.loli.net/2018/07/09/5b43679c89bac.png"&gt;&lt;/p&gt;
-&lt;p&gt;2.
-点击加号➕图标, 就在刚才的齿轮⚙️左边.
-&lt;img alt="屏幕快照 2018-07-09 21.50.40" src="https://i.loli.net/2018/07/09/5b4368753d62d.png"&gt;
-在item type里面选上Folder, 给自己的数据文件夹起个名字, 比如testdata, 然后点击New&lt;/p&gt;
-&lt;p&gt;3.
-你会发现出现了一个testdata的文件夹, 跟电脑上差不多的操作, 点击进入
-&lt;img alt="屏幕快照 2018-07-09 21.53.00" src="https://i.loli.net/2018/07/09/5b4368e5980ac.png"&gt;&lt;/p&gt;
-&lt;p&gt;4.
-再次点击加号➕图标, 这次选择From Computer
-&lt;img alt="屏幕快照 2018-07-09 21.54.22" src="https://i.loli.net/2018/07/09/5b43693e70341.png"&gt;
-
-然后点击Choose files, 会打开本地文件的选择器, 选上要上传的文件.
-&lt;img alt="屏幕快照 2018-07-09 21.56.31" src="https://i.loli.net/2018/07/09/5b4369f19e608.png"&gt;
-然后upload, 跟发邮件时添加附件的动作没什么区别.
-&lt;img alt="屏幕快照 2018-07-09 21.56.55" src="https://i.loli.net/2018/07/09/5b4369f1703ac.png"&gt;&lt;/p&gt;
-&lt;h2&gt;设定参数&lt;/h2&gt;
-&lt;p&gt;1.
-点击Library &amp;gt; Octopus &amp;gt; testdata 中的Octopus, 回到上一级目录
-&lt;img alt="屏幕快照 2018-07-09 22.01.53" src="https://i.loli.net/2018/07/09/5b436b2151b69.png"&gt;&lt;/p&gt;
-&lt;p&gt;2.
-依次进入目录, 到Octopus &amp;gt; python &amp;gt; pdf_parser
-&lt;img alt="屏幕快照 2018-07-09 22.04.00" src="https://i.loli.net/2018/07/09/5b436b82038fd.png"&gt;
-找到Octopus_VF.ipynb, 点击打开&lt;/p&gt;
-&lt;p&gt;3.
-打开这个ipynb文件以后, 就进入这样一个页面:
-&lt;img alt="屏幕快照 2018-07-09 22.14.14" src="https://i.loli.net/2018/07/09/5b436df1c0a29.png"&gt;
-把input_path修改成您刚才设定好的数据文件夹名称, 如果也是使用的testdata, 那就不用修改了.
-注意我这里使用的是文件的“相对路径”, ../表示从当前文件夹Octopus &amp;gt; python &amp;gt; pdf_parser退回到上一级Octopus &amp;gt; python, 然后再../退回一级到Octopus, 再进入/testdata.&lt;/p&gt;
-&lt;p&gt;output_path可以和input_path一样.&lt;/p&gt;
-&lt;p&gt;fname, 如果您需要针对某一个特定文件进行处理, 就把文件名写上, 注意区分大小写, 要带有.pdf的后缀.&lt;/p&gt;
-&lt;p&gt;所有的名称都必须在双引号之内.&lt;/p&gt;
-&lt;h2&gt;运行&lt;/h2&gt;
-&lt;p&gt;1.
-把页面一直拖动到最底部,
-&lt;img alt="屏幕快照 2018-07-09 22.23.33" src="https://i.loli.net/2018/07/09/5b4370061795e.png"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果是想处理整个文件夹里所有的PDF文件, 就应该是图中这样的形式,&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;    &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;process_folder&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;input_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;output_path&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_together&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;save_individual&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;ul&gt;
-&lt;li&gt;如果想在处理文件夹的同时, 还想把每个PDF文件的数据单独提取成一个csv文件, 就把save_individual=True&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2.
-点击顶部菜单中的Kernel, 选择Restart &amp;amp; Run All
-&lt;img alt="屏幕快照 2018-07-09 22.26.58" src="https://i.loli.net/2018/07/09/5b4370d34efb6.png"&gt;&lt;/p&gt;
-&lt;p&gt;第一次运行的时候会比较慢, 因为用来处理PDF文件的工具包PDFminer.six需要安装. 会看到在import那一堆代码下面出现这样的安装过程, 第二次运行就不会有了.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 22.47.41" src="https://i.loli.net/2018/07/09/5b4375b8a9be6.png"&gt;
-注意, 免费版本的azure notebook会在没有操作后1小时清空所有用户安装的软件包, 所以, 如果第二天再来, 仍然是“第一次”运行的状态. 但之前保存的数据文件不会被消除.&lt;/p&gt;
-&lt;p&gt;3.
-处理完成的文件会列出来, 如果有处理不了的PDF文件, 比如页面大小不是A4的, 或者是有密码限制了复制功能的, 都会标记出failed
-&lt;img alt="屏幕快照 2018-07-09 22.35.45" src="https://i.loli.net/2018/07/09/5b4372d9d0581.png"&gt;&lt;/p&gt;
-&lt;h2&gt;取得结果&lt;/h2&gt;
-&lt;p&gt;1.
-再次回到Octopus &amp;gt; testdata 文件夹之下,
-&lt;img alt="屏幕快照 2018-07-09 22.41.31" src="https://i.loli.net/2018/07/09/5b437454be49f.png"&gt;
-会看到octopus_data.csv文件已经生成了, 点击Download下载下来即可.&lt;/p&gt;
-&lt;p&gt;2.
-excel中的数据, 每一行是一个文件中一页的数据, 因为经常病人是做双眼的检查, 但却放在同一个PDF文件里. 如何处理excel中的数据, 就是您自己的事情了.
-&lt;img alt="屏幕快照 2018-07-09 22.46.25" src="https://i.loli.net/2018/07/09/5b43756c49355.png"&gt;&lt;/p&gt;
-&lt;h2&gt;其他&lt;/h2&gt;
-&lt;p&gt;Octupus自家有数据处理软件, 叫&lt;a href="https://www.haag-streit.com/haag-streit-diagnostics/products/perimetry/eyesuite/"&gt;EyeSuite&lt;/a&gt;, 还有人用R语言做好了一个开源的工具包OPI - &lt;a href="https://people.eng.unimelb.edu.au/aturpin/opi/index.html"&gt;Open Perimetry Initiative&lt;/a&gt;, 比我这个高级多了.&lt;/p&gt;
-&lt;p&gt;如果没有这些工具包, 那么用我这个小程序还有点意义, 我抓取了视野检查中的values, 也就是检查时的原始数据, 而不仅仅是MD之类统计好的数据.&lt;/p&gt;
-&lt;p&gt;比如示例中的这个病人, 4次检查的MD分别是15.2/ 16.5/ 17/ 16.1, 虽然MD在增加, 但好像又有些波动. 那么视野是否在恶化呢?&lt;/p&gt;
-&lt;p&gt;MD是平均缺损, 只能反应整体平均的状态. 由于有了原始数据, 聚可以方便分析每个区域了. 比如很简单而不严格的, 我们可以对这4次检查的数据进行一次线性拟合, 得到的斜率如果是负数, 说明越来越差.&lt;/p&gt;
-&lt;p&gt;Excel的线性拟合使用LINEST函数.
-&lt;img alt="屏幕快照 2018-07-09 22.57.17" src="https://i.loli.net/2018/07/09/5b43787de7cb2.png"&gt;
-拖动复制, 对每列的value值都进行这样的操作.
-&lt;img alt="屏幕快照 2018-07-09 22.57.37" src="https://i.loli.net/2018/07/09/5b43787e56617.png"&gt;&lt;/p&gt;
-&lt;p&gt;注意看这个区域恶化非常明显, 斜率已经分别是-2,-3,-1.8&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-07-09 23.01.49" src="https://i.loli.net/2018/07/09/5b4378fe5ec66.png"&gt;&lt;/p&gt;
-&lt;p&gt;实际上这个区域对应的是中央视野附近.
-&lt;img alt="屏幕快照 2018-07-09 23.03.44" src="https://i.loli.net/2018/07/09/5b4379841f450.png"&gt;
-&lt;img alt="屏幕快照 2018-07-09 23.03.52" src="https://i.loli.net/2018/07/09/5b437982e149a.png"&gt;
-&lt;img alt="屏幕快照 2018-07-09 23.04.02" src="https://i.loli.net/2018/07/09/5b43798326b1b.png"&gt;
-&lt;img alt="屏幕快照 2018-07-09 23.04.09" src="https://i.loli.net/2018/07/09/5b4379840f876.png"&gt;&lt;/p&gt;
-&lt;h2&gt;随机森林&lt;/h2&gt;
-&lt;p&gt;作为数据读取项目的一部分, octopus数据处理已经可以纳入到随机森林的机器学习功能之中, 详情请参考&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;眼科数据随机森林&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;更新&lt;/h2&gt;
-&lt;p&gt;这是一个业余程序员建立的开源项目, 我水平所限不要要求太高. 但我也还是会不断更新的, 修复bug或者添加新功能.&lt;/p&gt;
-&lt;p&gt;如果您已经导入到了azure notebooks里面, 也还是可以更新的. 更新代码的方法, 一种是可以新开一个library, 一种是在本library里更新. 如何新开一个之前已经讲过, 下面讲解一下如何更新.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;点击Terminal 图标
-&lt;img alt="屏幕快照 2018-07-10 19.18.22" src="https://i.loli.net/2018/07/10/5b449a27d0f60.png"&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;将打开一个命令行界面.
-&lt;img alt="屏幕快照 2018-07-10 19.32.20" src="https://i.loli.net/2018/07/10/5b449a70abf86.png"&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;输入如下命令:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;cd library
-&lt;/pre&gt;
-
-
-&lt;p&gt;进入到library文件夹里
-&lt;img alt="屏幕快照 2018-07-10 19.41.22" src="https://i.loli.net/2018/07/10/5b449b67dea1a.png"&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;要更新代码, 需要先把之前您修改过的代码清除掉, 否则有冲突. 输入如下命令:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git checkout .
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.44.51" src="https://i.loli.net/2018/07/10/5b449c371555d.png"&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;从github上把新代码“拉”到自己的library里. 输入如下命令:&lt;/li&gt;
-&lt;/ol&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;git pull
-&lt;/pre&gt;
-
-
-&lt;p&gt;&lt;img alt="屏幕快照 2018-07-10 19.46.31" src="https://i.loli.net/2018/07/10/5b449ca3d43d6.png"&gt;&lt;/p&gt;
-&lt;p&gt;这样代码就更新完毕了, 关闭页面即可.&lt;/p&gt;
-&lt;p&gt;顺便, 推荐一下git, 如果您的电脑上存了很多“最终版”,“最终不变版本”,“最终最终版本”和“赌咒发誓这是最后一版”之类的文件名, 想必知道版本管理的重要性. git是一个很好的版本管理工具, 以后我会再详细讲解.&lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</guid><pubDate>Fri, 27 Jul 2018 04:00:00 GMT</pubDate></item></channel></rss>

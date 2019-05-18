@@ -68,7 +68,29 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/US20160270656A1-0/" class="u-url">magic leap VR/AR与眼科检查专利解读(0)</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/double-click-open-ipynb/" class="u-url">Mac上双击打开jupyter文件</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/bulabula/double-click-open-ipynb/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-07T19:00:00+08:00" title="2018-03-07 19:00">2018-03-07 19:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>jupyter的文件是.ipynb文件, 实际上是纯文本写的json, 但要按可编辑可运行的方式打开它, 有几种方式:</p>
+<ol>
+<li>在命令行运行jupyter notebook 文件名<ul>
+<li>或者在命令行运行jupyter lab 文件名</li>
+</ul>
+</li>
+<li>用nteract打开</li>
+<li>在atom里安装jupyter notebook package, 然后用atom打开.</li>
+</ol>
+<p>第一种最佳, 但不方便, 我不是常规打开终端的. 第二种有时候特慢, 而且如果没有设置好kernel的话, 运行jupyter文件总是容易报错. 第三种大概比第二种略差, 而且我每次装这个package的时候都会被杀毒软件拦下来.</p>
+<p>我很希望有个能够双击打开.ipynb文件的方式. 打开以后还能够正常编辑和运行. 上推一问. 果然在<a href="https://twitter.com/xuanyuanzhiyuan/status/971321483896213504">@xuanyuanzhiyuan</a>和<a href="https://twitter.com/kyleehee/status/971317968822038528">@kyleehee</a>的指导下成功了. 写blog以记录之.
+</p>
+<p class="more"><a href="posts/bulabula/double-click-open-ipynb/">阅读更多…</a></p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/US20160270656A1-0/" class="u-url">magic leap VR/AR与眼科检查专利解读(0)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/US20160270656A1-0/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-03-05T23:30:00+08:00" title="2018-03-05 23:30">2018-03-05 23:30</time></a></p>
@@ -289,31 +311,6 @@ MathJax.Hub.Config({
 <ul>
 <li>搜索"金", 出现164次, 搜索"玉", 出现249次. 我本来以为金可能是金属的统称, 但单独搜索"铁"的话, 也有41处. 有可能金包含了Au和Cu还有一些其他的什么.</li>
 </ul>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/beware-Free-variables-and-bound-variables/" class="u-url">用jupyter写程序时小心意外的全局变量</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/python/beware-Free-variables-and-bound-variables/" rel="bookmark"><time class="post-date published dt-published" datetime="2018-02-07T17:00:00+08:00" title="2018-02-07 17:00">2018-02-07 17:00</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>这周写作业, 用jupyter时遇坑一枚, 导致我改了作业10次以后才全对通过. 
-<img src="https://i.loli.net/2018/02/07/5a7abfe105014.png" alt="10次交作业">
-而且这个坑与我当前的编程习惯有关. 有必要记录下来, 以免未来再犯. 
-</p>
-<p class="more"><a href="posts/python/beware-Free-variables-and-bound-variables/">阅读更多…</a></p>
-</div>
-</div>
-</div>
-</div>
 </div>
     </div>
     </article>
