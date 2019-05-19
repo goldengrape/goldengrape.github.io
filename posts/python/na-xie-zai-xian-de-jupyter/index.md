@@ -16,6 +16,9 @@
 
 >这里还有一个太长不看的[总结表格](https://docs.google.com/spreadsheets/d/12thaaXg1Idr3iWST8QyASNDs08sjdPd6m9mbCGtHFn0)。
 
+
+__以下部分写于2年前，部分内容与现实略有差异__
+
 # Jupyter
 
 如果你是python的初学者, 非常推荐Jupyter.
