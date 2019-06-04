@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-05-18T14:44:00Z</lastmod>
+  <lastmod>2019-06-04T15:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -195,7 +195,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-12.html</loc>
-  <lastmod>2019-05-18T14:44:00Z</lastmod>
+  <lastmod>2019-06-04T15:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -640,6 +640,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/abcd-matrix/</loc>
   <lastmod>2018-01-16T12:16:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/asphereicle_anti_decenter/</loc>
+  <lastmod>2019-06-04T15:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/auto-numba-jit/</loc>
