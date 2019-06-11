@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 19 May 2019 09:08:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 11 Jun 2019 18:07:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有些是可变的，是变量，比如努力的程度、认真的程度，对待事情的态度……&lt;/li&gt;
+&lt;li&gt;有些是不可变的，或者在可观测的短时间内无法改变，是常量，比如性别、种族、成年以后的身高、父母、出生地、信仰、国籍……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果批评或者表扬的目的是为了让对象有所改变，那么至少是应该针对那些可以改变的&lt;strong&gt;变量&lt;/strong&gt;属性，而不要针对那些对方无法改变的&lt;strong&gt;常量&lt;/strong&gt;属性。&lt;/p&gt;
+&lt;p&gt;也就是说，在批评或者表扬的时候，要将原因归结于人的可变属性。&lt;/p&gt;
+&lt;p&gt;我觉得这个道理还是挺浅显的。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</guid><pubDate>Tue, 11 Jun 2019 17:00:00 GMT</pubDate></item><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Data School有一篇非常好的评测，写了6个在线的Jupyter服务，建议去看看。
 &lt;a href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/"&gt;Six easy ways to run your Jupyter Notebook in the cloud&lt;/a&gt;&lt;/p&gt;
@@ -412,44 +420,4 @@ I am.
 &lt;/ul&gt;
 &lt;p&gt;其中后两种在keynote里都作为图片处理. 在keynote中, 如果把文件导出成powerpoint文件, 那么形状-&amp;gt;形状, 如果是在keynote中复制, 到powerpoint中粘贴, 是形状-&amp;gt;图片.&lt;/p&gt;
 &lt;p&gt;sspai里这一篇&lt;a href="https://sspai.com/post/39238"&gt;文章&lt;/a&gt;说用Libre Office把SVG转换成keynote形状也可以. 不过Libre Office有200多M, 我懒得装了, 如果有一天SvgToKeynote失效了, 记着Libre Office可用.&lt;/p&gt;
-&lt;p&gt;如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</guid><pubDate>Thu, 23 Aug 2018 04:00:00 GMT</pubDate></item><item><title> 区块链儿化音添加方案(建议稿)</title><link>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;霍炬首先发现&lt;a href="https://twitter.com/virushuo/status/1017977810017632256"&gt;这个问题&lt;/a&gt;:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;virushuo: 惊呆了，区块儿链儿这个儿化音在哪竟然是争议问题。。。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;为尽快形成共识&lt;sup id="fnref-0"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-0"&gt;1&lt;/a&gt;&lt;/sup&gt;, 在此提出
-《区块链儿话音添加方案(建议稿)》:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;在互联网大会发言时，应吐词清晰不宜使用儿话音，不慎加入时，注意不可在词尾加入。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;儿话表示物体较小&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-1"&gt;2&lt;/a&gt;&lt;/sup&gt;, 为显示本公司参与者众多，链长，可以把儿话音加在块儿上。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;简称时可使用我司的链儿，以表示可作为套在颈上&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-2"&gt;3&lt;/a&gt;&lt;/sup&gt;的智能合约，并且可延长。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;作为从业者，不宜使用吞音，例如圈儿链。但应识别出吞音明显的使用者通常是南城五套房的土豪，宜跟进!&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;如果不适应儿话音，则不要强行添加，必要时可使用block chain的英文，例如对粤语区，可使用波克钦&lt;sup id="fnref-3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fn-3"&gt;4&lt;/a&gt;&lt;/sup&gt;的发音.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn-0"&gt;
-&lt;p&gt;&lt;a href="https://twitter.com/shell909090/status/1018004112246337537"&gt;@shell909090说&lt;/a&gt; : 我觉得加哪都好，但是务必要尽快形成共识。只有有了共识，才能产生价值。 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-0" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-1"&gt;
-&lt;p&gt;以维基百科记录的&lt;a href="https://zh.wikipedia.org/wiki/%E5%85%92%E5%8C%96%E9%9F%B3"&gt;儿化音使用&lt;/a&gt;为例, “有时是否使用一些儿化音难以从道理推断，其中有复杂的历史或音韵原因或者为了和同音字区别，由此也可以用来推测一个人是否本地人。如在北京的城门中，多数如前门、西直门、复兴门等不能儿化，而西便门、广渠门却通常使用儿化。”
-&lt;em&gt;其实, 这里面还是有规律可循, 前门, 西直门, 复兴门都是正门, 庄重肃穆, 不可随意儿化, 而“西便门”、“广渠门”则是后开的小门, 小就可能加上儿化音.&lt;/em&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-1" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-2"&gt;
-&lt;p&gt;参见&lt;a href="https://twitter.com/cxiaoji/status/1017988309283319808"&gt;消极姐推文&lt;/a&gt;:  @cxiaoji说: 只有栓脖子上的才叫链儿 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-2" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-3"&gt;
-&lt;p&gt;注意粤式英文词尾务必要使用平声. 单词发音以短促跳跃为佳 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/#fnref-3" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/sound-addition-for-blockchain/</guid><pubDate>Fri, 27 Jul 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</guid><pubDate>Thu, 23 Aug 2018 04:00:00 GMT</pubDate></item></channel></rss>
