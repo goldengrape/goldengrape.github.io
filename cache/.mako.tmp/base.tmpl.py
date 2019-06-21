@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1561112677.919165
+_modified_time = 1561112960.253386
 _enable_loop = True
 _template_filename = 'themes/lanyon/templates/base.tmpl'
 _template_uri = 'base.tmpl'
@@ -40,25 +40,25 @@ def render_body(context,**pageargs):
         _mako_get_namespace(context, 'base')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'header')._populate(_import_ns, ['*'])
         _mako_get_namespace(context, 'footer')._populate(_import_ns, ['*'])
-        base = _mako_get_namespace(context, 'base')
-        header = _mako_get_namespace(context, 'header')
         set_locale = _import_ns.get('set_locale', context.get('set_locale', UNDEFINED))
-        def content():
-            return render_content(context._locals(__M_locals))
-        lanyon_subtheme = _import_ns.get('lanyon_subtheme', context.get('lanyon_subtheme', UNDEFINED))
-        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
-        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
-        def extra_head():
-            return render_extra_head(context._locals(__M_locals))
-        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
-        date_fanciness = _import_ns.get('date_fanciness', context.get('date_fanciness', UNDEFINED))
-        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
-        js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
-        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
-        footer = _mako_get_namespace(context, 'footer')
+        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
         def extra_js():
             return render_extra_js(context._locals(__M_locals))
-        messages = _import_ns.get('messages', context.get('messages', UNDEFINED))
+        template_hooks = _import_ns.get('template_hooks', context.get('template_hooks', UNDEFINED))
+        def extra_head():
+            return render_extra_head(context._locals(__M_locals))
+        base = _mako_get_namespace(context, 'base')
+        def content():
+            return render_content(context._locals(__M_locals))
+        body_end = _import_ns.get('body_end', context.get('body_end', UNDEFINED))
+        lang = _import_ns.get('lang', context.get('lang', UNDEFINED))
+        date_fanciness = _import_ns.get('date_fanciness', context.get('date_fanciness', UNDEFINED))
+        header = _mako_get_namespace(context, 'header')
+        momentjs_locales = _import_ns.get('momentjs_locales', context.get('momentjs_locales', UNDEFINED))
+        js_date_format = _import_ns.get('js_date_format', context.get('js_date_format', UNDEFINED))
+        lanyon_subtheme = _import_ns.get('lanyon_subtheme', context.get('lanyon_subtheme', UNDEFINED))
+        footer = _mako_get_namespace(context, 'footer')
+        search_form = _import_ns.get('search_form', context.get('search_form', UNDEFINED))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
