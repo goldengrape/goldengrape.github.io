@@ -34,6 +34,7 @@
 * eyetube: [https://eyetube.net/](https://eyetube.net/)  这里面是分类细致的眼科视频资源，有很多手术视频可以看，也有很多讲课、发言、演示。需要注册一下，但注册是免费的。
 
 * youtube：[https://youtube.com/](https://youtube.com/)  youtube是万能的，它已经是一个互联网的基础服务平台，要找视频很难忽视它，有无数的医生、学者把自己的手术视频、教学、讲课甚至论文讲解放在youtube上。比如连续环形撕囊的发明者Dr. Gimbel老爷爷亲自在黑板前讲解撕囊。不过很遗憾，youtube在国内是难以访问的，需要有"!正常访问国际互联网!"的能力。
+    * Neuro-Ophthalmology with Dr. Andrew G. Lee: [https://www.youtube.com/channel/UC5HcfsELV0W9AqtvJvpQQSg](https://www.youtube.com/channel/UC5HcfsELV0W9AqtvJvpQQSg) Dr.Lee 讲解神经眼科的视频，短小精悍清晰易懂。虽然我还是很恐惧神经眼科，但也许慢慢看会懂更多吧。
 
 * B站：[https://www.bilibili.com/](https://www.bilibili.com/) 最近B站的学术氛围令人惊讶，很多具有"!正常访问国际互联网!"能力的人，把国外优秀的视频资源搬运到B站了。比如
     * [3B1B甚至开了官方镜像](https://space.bilibili.com/88461692) 这是一个很好的数学课程演示。据我所知，国内的医学教育数学基础极差，很多所谓知名大学一流大学连线性代数都没开，可以在这里快速补习。

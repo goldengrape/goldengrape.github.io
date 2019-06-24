@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 24 Jun 2019 04:48:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科网络索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 24 Jun 2019 04:52:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科网络索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;眼科图谱：&lt;/h2&gt;
@@ -29,6 +29,9 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;youtube：&lt;a href="https://youtube.com/"&gt;https://youtube.com/&lt;/a&gt;  youtube是万能的，它已经是一个互联网的基础服务平台，要找视频很难忽视它，有无数的医生、学者把自己的手术视频、教学、讲课甚至论文讲解放在youtube上。比如连续环形撕囊的发明者Dr. Gimbel老爷爷亲自在黑板前讲解撕囊。不过很遗憾，youtube在国内是难以访问的，需要有"!正常访问国际互联网!"的能力。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Neuro-Ophthalmology with Dr. Andrew G. Lee: &lt;a href="https://www.youtube.com/channel/UC5HcfsELV0W9AqtvJvpQQSg"&gt;https://www.youtube.com/channel/UC5HcfsELV0W9AqtvJvpQQSg&lt;/a&gt; Dr.Lee 讲解神经眼科的视频，短小精悍清晰易懂。虽然我还是很恐惧神经眼科，但也许慢慢看会懂更多吧。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;B站：&lt;a href="https://www.bilibili.com/"&gt;https://www.bilibili.com/&lt;/a&gt; 最近B站的学术氛围令人惊讶，很多具有"!正常访问国际互联网!"能力的人，把国外优秀的视频资源搬运到B站了。比如&lt;/p&gt;
