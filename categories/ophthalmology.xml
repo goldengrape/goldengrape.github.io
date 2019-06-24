@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Jun 2019 10:29:09 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>EDoF综述翻译</title><link>https://goldengrape.github.io/posts/ophthalmology/EDoF_review/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 24 Jun 2019 04:48:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科网络索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;眼科图谱：&lt;/h2&gt;
+&lt;p&gt;眼科是看图像识别的疾病的学科。图谱的资源在眼科是最重要的了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;眼科学数据库（Atlas of Ophthalmology）是由该领域专家编著的公开的在线免费数据库。&lt;a href="https://www.atlasophthalmology.net/"&gt;https://www.atlasophthalmology.net/&lt;/a&gt; 这个图谱之中有各种语言，其中也有中文。分类很清楚。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;哈佛大学的眼科数字期刊：&lt;a href="http://www.djo.harvard.edu/"&gt;http://www.djo.harvard.edu/&lt;/a&gt; 喜欢看各种病例的话，这里有很多。各种大查房的记录，讨论，现在还增加了许多review&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;哥伦比亚大学的眼科图谱：&lt;a href="https://www.columbiaeye.org/education/digital-reference-of-ophthalmology"&gt;https://www.columbiaeye.org/education/digital-reference-of-ophthalmology&lt;/a&gt; 
+这是我最喜欢的眼科图谱了，分类清楚，访问速度快，我曾经下载了整个网站制作成电子书收藏。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IOWA 大学的眼科论坛也做得相当不错：&lt;a href="http://webeye.ophth.uiowa.edu/eyeforum/atlas/index.htm"&gt;http://webeye.ophth.uiowa.edu/eyeforum/atlas/index.htm&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ICO： &lt;a href="http://www.icoph.org/"&gt;http://www.icoph.org/&lt;/a&gt; 这就是大名鼎鼎的ICO考试的网站了，不过除了考试内容，其实里面也有很多学习资源。其中要特别推荐&lt;a href="http://www.icoph.org/resources/230/Surgical-Assessment-Tool-ICO-OSCAR-in-English-and-Spanish.html"&gt;ICO OSCAR(ICO Ophthalmology Surgical Competency Assessment Rubric, ICO-OSCAR)&lt;/a&gt; 是手术技能评分系统，很细致，既可以当作自我评估工具也可以当作学习要点和大纲。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;视频资源：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;eyetube: &lt;a href="https://eyetube.net/"&gt;https://eyetube.net/&lt;/a&gt;  这里面是分类细致的眼科视频资源，有很多手术视频可以看，也有很多讲课、发言、演示。需要注册一下，但注册是免费的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;youtube：&lt;a href="https://youtube.com/"&gt;https://youtube.com/&lt;/a&gt;  youtube是万能的，它已经是一个互联网的基础服务平台，要找视频很难忽视它，有无数的医生、学者把自己的手术视频、教学、讲课甚至论文讲解放在youtube上。比如连续环形撕囊的发明者Dr. Gimbel老爷爷亲自在黑板前讲解撕囊。不过很遗憾，youtube在国内是难以访问的，需要有"!正常访问国际互联网!"的能力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B站：&lt;a href="https://www.bilibili.com/"&gt;https://www.bilibili.com/&lt;/a&gt; 最近B站的学术氛围令人惊讶，很多具有"!正常访问国际互联网!"能力的人，把国外优秀的视频资源搬运到B站了。比如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://space.bilibili.com/88461692"&gt;3B1B甚至开了官方镜像&lt;/a&gt; 这是一个很好的数学课程演示。据我所知，国内的医学教育数学基础极差，很多所谓知名大学一流大学连线性代数都没开，可以在这里快速补习。&lt;/li&gt;
+&lt;li&gt;搜Lynda会有惊喜&lt;/li&gt;
+&lt;li&gt;大量计算机课程。但目前眼科手术和课程比较少。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;视频下载：&lt;/h2&gt;
+&lt;p&gt;高概率你需要具有"!正常访问国际互联网!"，然后你可能需要有一定的编程基础知识。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;youtub-dl：&lt;a href="https://rg3.github.io/youtube-dl/"&gt;https://rg3.github.io/youtube-dl/&lt;/a&gt; 非常强大的命令行下载工具，可以下载很多网站的视频资源，甚至，如果你能够找到一些微信直播课程里的视频链接或者"m3u8"文件地址，也可以把很多微课下载到本地。&lt;/li&gt;
+&lt;li&gt;miku tools：&lt;a href="https://miku.tools/"&gt;https://miku.tools/&lt;/a&gt; 一个工具包网站，不要在里面迷失了自己。&lt;/li&gt;
+&lt;li&gt;eyetube的视频页面，如果查看页面源代码，可能可以找到视频的mp4文件。
+&lt;img alt="屏幕快照 2019-06-24 12.17.55" src="https://i.loli.net/2019/06/24/5d104f080ddb377256.png"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;专利资源：&lt;/h2&gt;
+&lt;p&gt;多数眼科医生对专利的知识很少。常常听到会有人说这个技术是某个公司的专利，所以我们不知道。错了！“专利”是公开的、可查阅的，“技术秘密”才是隐蔽的。眼科有很多新技术，医生接触的大多数是销售，他们对技术的解读是经过包装删减的，缺乏细节，要想直接了解技术细节，应该要看专利。&lt;/p&gt;
+&lt;p&gt;各国的专利局/知识产权局都是政府机构，都有自己的查询网站。政府网站嘛，你了解的，通常不好用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;soopat：&lt;a href="http://www.soopat.com/"&gt;http://www.soopat.com/&lt;/a&gt; 国内比较好用的专利检索工具，下载全文要注册一下。&lt;/li&gt;
+&lt;li&gt;Google Patent：&lt;a href="https://patents.google.com/"&gt;https://patents.google.com/&lt;/a&gt; 谷歌的专利检索，国外专利最方便的检索工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;文献、书籍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sci-hub: &lt;a href="https://sci-hub.tw"&gt;https://sci-hub.tw&lt;/a&gt; 众所周知，sci-hub也是万能的。网址一段时间可能会改变，但 .tw网址已经存活了相当长的时间。&lt;/li&gt;
+&lt;li&gt;libgen：&lt;a href="http://libgen.io/"&gt;http://libgen.io/&lt;/a&gt; 大量的电子书&lt;/li&gt;
+&lt;li&gt;AAO eyewiki: &lt;a href="https://eyewiki.aao.org/Main_Page"&gt;https://eyewiki.aao.org/Main_Page&lt;/a&gt; 可以说是眼科学的维基百科了，不同的是，这是由专家编写的。&lt;/li&gt;
+&lt;li&gt;WebVision:&lt;a href="https://webvision.med.utah.edu/"&gt;https://webvision.med.utah.edu/&lt;/a&gt; 这是一本在线的视网膜生理学病理生理学教科书。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;英语辅助工具：&lt;/h2&gt;
+&lt;p&gt;"!正常访问国际互联网!"的能力和英语(至少是阅读和听力)能力，是保持先进的必备能力。&lt;/p&gt;
+&lt;p&gt;当前已经无法合法地讲解"!正常访问国际互联网!"的能力，所以只能讲解一下英语辅助工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cnki的在线词典：&lt;a href="http://dict.cnki.net/"&gt;http://dict.cnki.net/&lt;/a&gt;  如果遇到某些专业词汇感觉有困难，推荐使用cnki的在线词典，专业词汇的中英互译，也可以看看同道们是怎么说的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;彩云小译：&lt;a href="https://fanyi.caiyunapp.com/#/app"&gt;https://fanyi.caiyunapp.com/#/app&lt;/a&gt; app不错，网页翻译也不错，但网页翻译插件在官网上找不到了，不知道是否以后还会继续提供。翻译量大了要订阅付费，反正每月只要几块钱我就订了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;transgod：&lt;a href="https://fanyi.transgod.cn/"&gt;https://fanyi.transgod.cn/&lt;/a&gt; 值得反复推荐、极端优秀的医学全文翻译工具。导致我现在很爱看文献。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;我的贡献：&lt;/h2&gt;
+&lt;p&gt;我自己也做了很多眼科教学的东西。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/"&gt;现代眼科医生知识扩展包&lt;/a&gt; 算了，我不指望有人能看进去。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/Python-for-ophthalmologist"&gt;面向眼科医生的Python教程&lt;/a&gt; 算了，我也不指望有人能看进去。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;phaco训练手册&lt;/a&gt; 我正在进行插图和ppt化，完成版本将是一个有配音的视频教程。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/phacoTools"&gt;phaco手术器械插图&lt;/a&gt; 这是为了训练手册而准备的插图，可免费使用。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/read_medical_device_data"&gt;医学数据读取工具&lt;/a&gt; 眼科设备很多，产生的数据也很多，大厂商还往往比较抠门，不愿意共享或者导出数据，这是我写的一个读取数据的工具包。&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</guid><pubDate>Mon, 24 Jun 2019 03:00:01 GMT</pubDate></item><item><title>EDoF综述翻译</title><link>https://goldengrape.github.io/posts/ophthalmology/EDoF_review/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;今天查文献，看了一篇扩展焦深(Extended Depth of Foucs, EDoF)的综述。&lt;/p&gt;
@@ -1005,121 +1089,4 @@ $$&lt;/p&gt;
 &lt;li&gt;学会调整手术床&lt;/li&gt;
 &lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>眼科数据随机森林</title><link>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;要讲解"随机森林", 先要简介一下"决策树". 各位眼科大夫在眼科门诊每天都在用"决策树", 比如一位单侧眼痛伴同侧头痛的病人进入门诊:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;眼压&amp;gt;21mmHg吗?&lt;ul&gt;
-&lt;li&gt;不是, 考虑其他可能&lt;/li&gt;
-&lt;li&gt;是的, 考虑青光眼可能, 还有鉴别诊断1, 2, 3..., 进入下一题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;前房浅吗?&lt;ul&gt;
-&lt;li&gt;不是, 考虑其他可能&lt;/li&gt;
-&lt;li&gt;是的, 考虑急性闭角型青光眼发作, 还有鉴别诊断x,y,z...,, 进入下一题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;瞳孔光反射存在吗?&lt;ul&gt;
-&lt;li&gt;存在, 考虑其他可能&lt;/li&gt;
-&lt;li&gt;瞳孔固定, 考虑急性闭角型青光眼发作, 进入下一题
-. . . .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这就是一颗"决策树", 就是一堆判断题, 一层一层筛选, 最终将数据(病人)分成几类(急闭, 其他)&lt;/p&gt;
-&lt;p&gt;"随机森林"就是由一组这样的"决策树"组成的分类器.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;随机森林的优劣&lt;/h2&gt;
-&lt;h3&gt;优点就是简单好用:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;它对输入的数据没什么特殊要求, 不需要很严格的预处理, 比如不需要归一化, 不需要正态分布化. 定量的数据也行, 定性的数据也行. 完全不挑食.&lt;/li&gt;
-&lt;li&gt;它得到模型预测准确率还不差, 甚至使用默认参数也不差. 如果用同样的数据集实验, 不用深度学习的话. 随机森林的准确率大概可以排进前三.&lt;/li&gt;
-&lt;li&gt;需要的数据量和运算量, 都还是在可接受范围内, 比如一两百个的数据, 用笔记本电脑跑上几分钟, 也许就能给出不错的结果.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;缺点:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;结果不好解释. 不过大概除了线性模型, 哪个机器学习出来的结果都不好解释.&lt;/li&gt;
-&lt;li&gt;还是属于"传统"的机器学习方法. 有些太复杂的问题还是需要深度学习来做.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以, 个人意见是遇到问题先用随机森林试试呗, 不好再换深度学习.&lt;/p&gt;
-&lt;h2&gt;随机森林代码&lt;/h2&gt;
-&lt;p&gt;通过python scikit-learn建立并且训练一个随机森林模型的代码非常好写, 实际上只有两句话:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;clf&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;RandomForestClassifier&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;clf&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X_train&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y_train&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;比较复杂的是如何标记数据, 如何把数据读取进来, 如何把数据整理清洗拆分. . .  干些体力活, 得到X_train, y_train这两个东西.&lt;/p&gt;
-&lt;p&gt;程序世界的好处是, 体力活大多只需要干一次, 做好模板, 以后就轻松了. 所以我就在这里把眼科这部分的脏活累活先做好.&lt;/p&gt;
-&lt;p&gt;目前支持的有医疗设备已经有:
-&lt;em&gt; &lt;a href="http://www.zeaomed.com/jmdxty/772.html"&gt;Sirius角膜地形图&lt;/a&gt;
-&lt;/em&gt; &lt;a href="https://www.pentacam.com/int/ophthalmologist-with-pentacam.html"&gt;PentaCam角膜地形图&lt;/a&gt;
-&lt;em&gt; &lt;a href="http://www.wiskeymedical.com.cn/product/v1049"&gt;Grand Seiko WAM5500视调节力测量仪&lt;/a&gt;
-&lt;/em&gt; &lt;a href="https://www.zeiss.com.cn/meditec/products/ophthalmology-optometry/glaucoma/diagnostics/perimetry/humphrey-field-analyzer-3.html"&gt;Humphrey视野(PDF需预先处理)&lt;/a&gt;
-* &lt;a href="http://www.gvchina.com/product.aspx?t=1&amp;amp;c=12"&gt;HRT(PDF需预先处理)&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;开源项目已经&lt;a href="https://github.com/goldengrape/read_medical_device_data"&gt;放在github上&lt;/a&gt;,
-推荐通过&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/notebooks.azure.com"&gt;微软的azure notebooks&lt;/a&gt;在线使用, 使用azure notebook的教程, 请参考&lt;a href="https://goldengrape.github.io/Python-for-ophthalmologist/"&gt;这篇教程&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;眼科数据随机森林模型的使用方法&lt;/h2&gt;
-&lt;h3&gt;上传数据&lt;/h3&gt;
-&lt;p&gt;如果你用的是微软azure notebooks, 那么在clone本项目以后, 可以设定成私有项目, 这样再传数据的时候, 不至于泄露给其他人. 你需要用浏览器在云端建立一个目录, 然后把医疗设备的数据报告一个一个上传上去, 看网速吧.&lt;/p&gt;
-&lt;p&gt;如果你已经有能力在本地运行python, 甚至装好了anaconda,pandas,scikit-learn, 那无需太多解释, 你只需要把数据放在程序能够找到的路径里即可.&lt;/p&gt;
-&lt;h3&gt;PDF数据预处理:&lt;/h3&gt;
-&lt;p&gt;目前能够处理的是HRT和Humphrey视野计两种PDF报告, 找到python/pdf_parser目录,&lt;/p&gt;
-&lt;p&gt;分别按照HRT.ipynb和Humphrey_VF.ipynb文件中的要求, 修改好路径, 运行. PDF文件的报告会被转换成csv文件.&lt;/p&gt;
-&lt;p&gt;csv文件是"逗号分割的"电子表格文件, 可以方便使用excel编辑或者查看, 记得编辑完成后使用"另存为"csv文件.&lt;/p&gt;
-&lt;h3&gt;class.csv文件设定&lt;/h3&gt;
-&lt;p&gt;需要使用excel编辑这样一个表格, 示例请见\testdata\class.csv
-&lt;img alt="屏幕快照 2018-05-14 22.21.30" src="https://i.loli.net/2018/05/14/5af99ba24ed2d.png"&gt;
-第一列是class, 记录每一行所代表的病人的诊断, 有病/没病, 也可以有多个诊断.&lt;/p&gt;
-&lt;p&gt;之后的每个单元格里填入的是该病人的数据文件名, 其中列标题要注明是哪种设备. (注意大小写, 业余作品不要太挑拣)&lt;/p&gt;
-&lt;h3&gt;分析项目设定&lt;/h3&gt;
-&lt;p&gt;需要使用excel再编辑一个表格, 示例请见\testdata\analysis_category.csv&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-05-14 22.31.13" src="https://i.loli.net/2018/05/14/5af99df6d5270.png"&gt;&lt;/p&gt;
-&lt;p&gt;列标题是设备的名称, 每个单元格里是需要分析该设备数据文件中的哪些项目, 项目的名称在各个设备的json中找, (注意大小写, 业余作品不要太挑拣)&lt;/p&gt;
-&lt;p&gt;GrandSeikoWAM5500中的项目有:
-&lt;em&gt; date: 检查时间
-&lt;/em&gt; start_time: 检查开始时间
-&lt;em&gt; eye: 眼别
-&lt;/em&gt; time: 测量时间点
-&lt;em&gt; power: 屈光状态
-&lt;/em&gt; pupil: 瞳孔直径&lt;/p&gt;
-&lt;p&gt;HRT中的项目有:
-&lt;em&gt; "DOB": 出生日期, 操作员不一定都好好填的
-&lt;/em&gt; "sex": 性别
-&lt;em&gt; "date": 检查时间
-&lt;/em&gt; "OS_data":左眼数据
-&lt;em&gt; "OD_data":右眼数据
-&lt;/em&gt; "Asymmetry_data": 非对称数据
-* "classifiction": HRT设备给出的分类诊断, (不建议包含)&lt;/p&gt;
-&lt;p&gt;humphrey视野计的项目有:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;"DOB":生日,&lt;/li&gt;
-&lt;li&gt;"eye": 眼别&lt;/li&gt;
-&lt;li&gt;"date":检查日期&lt;/li&gt;
-&lt;li&gt;"False POS Errors":假阳性&lt;/li&gt;
-&lt;li&gt;"False NEG Errors":假阴性, 这两个是判定视野检查质量的&lt;/li&gt;
-&lt;li&gt;"VFI": 忘了是啥了.&lt;/li&gt;
-&lt;li&gt;"MD": 平均缺损, 有重要随访意义&lt;/li&gt;
-&lt;li&gt;"PSD": 又忘了是啥了&lt;/li&gt;
-&lt;li&gt;"data": 这是二维的视野数据, 在送进随机森林的时候, 会抻成一列使用, 所以左右眼的排布会是不同的.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;pentacam角膜地形图:
-"FRONT", "BACK", "Cornea", "Pachy", "Chamber","K",
-"Pupil", "X", "Y"
-注意, 这些数据里大多也是二维数据, 将抻成一维使用, 左右眼可能会有不同.&lt;/p&gt;
-&lt;p&gt;sirius 角膜地形图:
-&lt;em&gt; "Radii":,
-&lt;/em&gt; "CornealThickness":,
-&lt;em&gt; "ElevationAnterior":,
-&lt;/em&gt; "ElevationPosterior":,
-&lt;em&gt; "RefractiveEquivalentPower":,
-&lt;/em&gt; "RefractiveFrontalPowerAnterior":,
-&lt;em&gt; "RefractiveFrontalPowerPosterior":,
-&lt;/em&gt; "SagittalAnterior":,
-&lt;em&gt; "SagittalPosterior":,
-&lt;/em&gt; "TangentialAnterior":,
-* "TangentialPosterior":
-这里面数据好多, 也是注意二维数据的问题, 要注意左右眼的问题.&lt;/p&gt;
-&lt;h3&gt;运行随机森林模型&lt;/h3&gt;
-&lt;p&gt;随机森林模型在python/random_forest_model.ipynb, 如果设定好class.csv和analysis_category.csv, 大概就不需要什么修改,可以直接训练了,&lt;/p&gt;
-&lt;p&gt;训练完成后要观察一下ROC曲线和AUC评分. ROC曲线越靠近左上越好, AUC评分越接近1越好. 在该文件中, 我也有说明如何进行进一步的参数调节和优化. 但, 如果AUC评分巨高就直接发文章好了, 如果AUC评分接近0.5, 就算了吧, 换深度学习方式好了.&lt;/p&gt;
-&lt;p&gt;最后, 这是一个业余项目, 代码并不完善, 还在缓慢而持续地改进中.  &lt;/p&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item></channel></rss>
