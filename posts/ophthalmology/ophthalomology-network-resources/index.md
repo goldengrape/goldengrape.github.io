@@ -1,5 +1,5 @@
 <!--
-.. title: 眼科网络索引贴
+.. title: 眼科网络资源索引贴
 .. slug: ophthalomology-network-resources
 .. date: 2019-6-24 11:00:01 UTC+08:00
 .. tags: ophthalmology
