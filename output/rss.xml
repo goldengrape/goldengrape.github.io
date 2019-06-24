@@ -1,5 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 21 Jun 2019 10:29:08 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>EDoF综述翻译</title><link>https://goldengrape.github.io/posts/ophthalmology/EDoF_review/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 24 Jun 2019 04:48:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科网络索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;眼科图谱：&lt;/h2&gt;
+&lt;p&gt;眼科是看图像识别的疾病的学科。图谱的资源在眼科是最重要的了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;眼科学数据库（Atlas of Ophthalmology）是由该领域专家编著的公开的在线免费数据库。&lt;a href="https://www.atlasophthalmology.net/"&gt;https://www.atlasophthalmology.net/&lt;/a&gt; 这个图谱之中有各种语言，其中也有中文。分类很清楚。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;哈佛大学的眼科数字期刊：&lt;a href="http://www.djo.harvard.edu/"&gt;http://www.djo.harvard.edu/&lt;/a&gt; 喜欢看各种病例的话，这里有很多。各种大查房的记录，讨论，现在还增加了许多review&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;哥伦比亚大学的眼科图谱：&lt;a href="https://www.columbiaeye.org/education/digital-reference-of-ophthalmology"&gt;https://www.columbiaeye.org/education/digital-reference-of-ophthalmology&lt;/a&gt; 
+这是我最喜欢的眼科图谱了，分类清楚，访问速度快，我曾经下载了整个网站制作成电子书收藏。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IOWA 大学的眼科论坛也做得相当不错：&lt;a href="http://webeye.ophth.uiowa.edu/eyeforum/atlas/index.htm"&gt;http://webeye.ophth.uiowa.edu/eyeforum/atlas/index.htm&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;ICO： &lt;a href="http://www.icoph.org/"&gt;http://www.icoph.org/&lt;/a&gt; 这就是大名鼎鼎的ICO考试的网站了，不过除了考试内容，其实里面也有很多学习资源。其中要特别推荐&lt;a href="http://www.icoph.org/resources/230/Surgical-Assessment-Tool-ICO-OSCAR-in-English-and-Spanish.html"&gt;ICO OSCAR(ICO Ophthalmology Surgical Competency Assessment Rubric, ICO-OSCAR)&lt;/a&gt; 是手术技能评分系统，很细致，既可以当作自我评估工具也可以当作学习要点和大纲。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;视频资源：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;eyetube: &lt;a href="https://eyetube.net/"&gt;https://eyetube.net/&lt;/a&gt;  这里面是分类细致的眼科视频资源，有很多手术视频可以看，也有很多讲课、发言、演示。需要注册一下，但注册是免费的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;youtube：&lt;a href="https://youtube.com/"&gt;https://youtube.com/&lt;/a&gt;  youtube是万能的，它已经是一个互联网的基础服务平台，要找视频很难忽视它，有无数的医生、学者把自己的手术视频、教学、讲课甚至论文讲解放在youtube上。比如连续环形撕囊的发明者Dr. Gimbel老爷爷亲自在黑板前讲解撕囊。不过很遗憾，youtube在国内是难以访问的，需要有"!正常访问国际互联网!"的能力。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;B站：&lt;a href="https://www.bilibili.com/"&gt;https://www.bilibili.com/&lt;/a&gt; 最近B站的学术氛围令人惊讶，很多具有"!正常访问国际互联网!"能力的人，把国外优秀的视频资源搬运到B站了。比如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://space.bilibili.com/88461692"&gt;3B1B甚至开了官方镜像&lt;/a&gt; 这是一个很好的数学课程演示。据我所知，国内的医学教育数学基础极差，很多所谓知名大学一流大学连线性代数都没开，可以在这里快速补习。&lt;/li&gt;
+&lt;li&gt;搜Lynda会有惊喜&lt;/li&gt;
+&lt;li&gt;大量计算机课程。但目前眼科手术和课程比较少。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;视频下载：&lt;/h2&gt;
+&lt;p&gt;高概率你需要具有"!正常访问国际互联网!"，然后你可能需要有一定的编程基础知识。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;youtub-dl：&lt;a href="https://rg3.github.io/youtube-dl/"&gt;https://rg3.github.io/youtube-dl/&lt;/a&gt; 非常强大的命令行下载工具，可以下载很多网站的视频资源，甚至，如果你能够找到一些微信直播课程里的视频链接或者"m3u8"文件地址，也可以把很多微课下载到本地。&lt;/li&gt;
+&lt;li&gt;miku tools：&lt;a href="https://miku.tools/"&gt;https://miku.tools/&lt;/a&gt; 一个工具包网站，不要在里面迷失了自己。&lt;/li&gt;
+&lt;li&gt;eyetube的视频页面，如果查看页面源代码，可能可以找到视频的mp4文件。
+&lt;img alt="屏幕快照 2019-06-24 12.17.55" src="https://i.loli.net/2019/06/24/5d104f080ddb377256.png"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;专利资源：&lt;/h2&gt;
+&lt;p&gt;多数眼科医生对专利的知识很少。常常听到会有人说这个技术是某个公司的专利，所以我们不知道。错了！“专利”是公开的、可查阅的，“技术秘密”才是隐蔽的。眼科有很多新技术，医生接触的大多数是销售，他们对技术的解读是经过包装删减的，缺乏细节，要想直接了解技术细节，应该要看专利。&lt;/p&gt;
+&lt;p&gt;各国的专利局/知识产权局都是政府机构，都有自己的查询网站。政府网站嘛，你了解的，通常不好用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;soopat：&lt;a href="http://www.soopat.com/"&gt;http://www.soopat.com/&lt;/a&gt; 国内比较好用的专利检索工具，下载全文要注册一下。&lt;/li&gt;
+&lt;li&gt;Google Patent：&lt;a href="https://patents.google.com/"&gt;https://patents.google.com/&lt;/a&gt; 谷歌的专利检索，国外专利最方便的检索工具。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;文献、书籍&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;sci-hub: &lt;a href="https://sci-hub.tw"&gt;https://sci-hub.tw&lt;/a&gt; 众所周知，sci-hub也是万能的。网址一段时间可能会改变，但 .tw网址已经存活了相当长的时间。&lt;/li&gt;
+&lt;li&gt;libgen：&lt;a href="http://libgen.io/"&gt;http://libgen.io/&lt;/a&gt; 大量的电子书&lt;/li&gt;
+&lt;li&gt;AAO eyewiki: &lt;a href="https://eyewiki.aao.org/Main_Page"&gt;https://eyewiki.aao.org/Main_Page&lt;/a&gt; 可以说是眼科学的维基百科了，不同的是，这是由专家编写的。&lt;/li&gt;
+&lt;li&gt;WebVision:&lt;a href="https://webvision.med.utah.edu/"&gt;https://webvision.med.utah.edu/&lt;/a&gt; 这是一本在线的视网膜生理学病理生理学教科书。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;英语辅助工具：&lt;/h2&gt;
+&lt;p&gt;"!正常访问国际互联网!"的能力和英语(至少是阅读和听力)能力，是保持先进的必备能力。&lt;/p&gt;
+&lt;p&gt;当前已经无法合法地讲解"!正常访问国际互联网!"的能力，所以只能讲解一下英语辅助工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;cnki的在线词典：&lt;a href="http://dict.cnki.net/"&gt;http://dict.cnki.net/&lt;/a&gt;  如果遇到某些专业词汇感觉有困难，推荐使用cnki的在线词典，专业词汇的中英互译，也可以看看同道们是怎么说的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;彩云小译：&lt;a href="https://fanyi.caiyunapp.com/#/app"&gt;https://fanyi.caiyunapp.com/#/app&lt;/a&gt; app不错，网页翻译也不错，但网页翻译插件在官网上找不到了，不知道是否以后还会继续提供。翻译量大了要订阅付费，反正每月只要几块钱我就订了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;transgod：&lt;a href="https://fanyi.transgod.cn/"&gt;https://fanyi.transgod.cn/&lt;/a&gt; 值得反复推荐、极端优秀的医学全文翻译工具。导致我现在很爱看文献。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;我的贡献：&lt;/h2&gt;
+&lt;p&gt;我自己也做了很多眼科教学的东西。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/"&gt;现代眼科医生知识扩展包&lt;/a&gt; 算了，我不指望有人能看进去。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/Python-for-ophthalmologist"&gt;面向眼科医生的Python教程&lt;/a&gt; 算了，我也不指望有人能看进去。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;phaco训练手册&lt;/a&gt; 我正在进行插图和ppt化，完成版本将是一个有配音的视频教程。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/phacoTools"&gt;phaco手术器械插图&lt;/a&gt; 这是为了训练手册而准备的插图，可免费使用。&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/goldengrape/read_medical_device_data"&gt;医学数据读取工具&lt;/a&gt; 眼科设备很多，产生的数据也很多，大厂商还往往比较抠门，不愿意共享或者导出数据，这是我写的一个读取数据的工具包。&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</guid><pubDate>Mon, 24 Jun 2019 03:00:01 GMT</pubDate></item><item><title>EDoF综述翻译</title><link>https://goldengrape.github.io/posts/ophthalmology/EDoF_review/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;今天查文献，看了一篇扩展焦深(Extended Depth of Foucs, EDoF)的综述。&lt;/p&gt;
@@ -2366,100 +2450,4 @@ conda install pytorch torchvision -c soumith --yes
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/video_keynote/</guid><pubDate>Mon, 25 Mar 2019 04:00:00 GMT</pubDate></item><item><title>如何查阅文献</title><link>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;更新配音幻灯视频:
-&lt;iframe src="//player.bilibili.com/player.html?aid=45981183&amp;amp;cid=80563574&amp;amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;面向对象: 不满足于查百度的人. 医疗药品/ 器械相关企业从业者. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;学习目的: 对一个自己不熟悉的领域, (此处为医学), 快速查阅文献, 了解基础知识.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;要求: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基础的英语水平: 现在青少年的初中二年级水平. 如果是成年人, 考虑到成人的能力通常会迅速下降, 大概大学4级水平吧.&lt;/li&gt;
-&lt;li&gt;会使用Chrome浏览器或Firefox浏览器.&lt;/li&gt;
-&lt;li&gt;会安装Chrome插件或Firefox插件.&lt;/li&gt;
-&lt;li&gt;可能需要具备“正常访问国际互联网”的能力.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;本教程以眼科“OK镜”为例. 场景是这样的, 你带着自己(或好友)的娃去看了看眼睛, 发现近视了. 医生推荐了OK镜, 但这东西好贵啊, 你想自己也多了解一些. 公司可能最近也有往这方面代理产品/研发产品的意图. 所以, 你打算自己再查查资料. &lt;/p&gt;
-&lt;p&gt;图文教程, 图片比较多. (如果看不到图片, 可能是因为广告过滤器阻止了sm.ms的图床调用, 需要将i.loli.net许可)&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;软件的准备&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Chrome浏览器: 
-本教程按照Chrome浏览器来讲解. 下载Chrome离线版的方法不在此赘述, 可以参考&lt;a href="https://www.zhihu.com/question/19981495"&gt;知乎上的教程&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ScholarScope插件: 
-用来显示文献的影响因子, 可以视为一个文献质量的评分吧. ScholarScope插件的下载和使用在其&lt;a href="https://www.scholarscope.cn/"&gt;官方网站上有详细的解说&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;彩云小译网页翻译插件: 
-非必须, 但我真的喜欢看中英文对照的翻译, 所以用上&lt;a href="https://chrome.google.com/webstore/detail/lingocloud-interpreter/jmpepeebcbihafjjadogphmbgiffiajh?hl=zh-CN"&gt;这个插件&lt;/a&gt;, 类似网页翻译工具应该还有很多. 国内大概有道, 腾讯, 搜狗之类的都多多少少有类似的东西.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;合适的关键词&lt;/h2&gt;
-&lt;p&gt;听到的只有“OK镜”这个词. 似乎是个缩略语, 那么应当选择什么关键词去寻找呢?&lt;/p&gt;
-&lt;p&gt;专业词汇的中英文互相翻译, 从CNKI的翻译助手开始, 网址是&lt;a href="http://dict.cnki.net/"&gt;http://dict.cnki.net/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;打开CNKI翻译助手, 输入“OK镜”
-&lt;img alt="屏幕快照 2019-01-28 14.05.47" src="https://i.loli.net/2019/01/28/5c4e9bd98c547.png"&gt;&lt;/p&gt;
-&lt;p&gt;有两个候选词汇“OK lens”和“orthokeratology lenses”, 前者似乎是后者的缩写, 本着选择题选答案最长的原则, 我们将使用“orthokeratology lenses”&lt;/p&gt;
-&lt;h2&gt;在Pubmed上查文献&lt;/h2&gt;
-&lt;p&gt;PubMed, 是美国国家医学图书馆提供的一个医学搜索引擎. 某种程度上, 你就当这是医学文献唯一的搜索引擎好了. 除非是为了某些“医学考古”的研究目的, 否则PubMed上搜不到就意味着不重要或者不存在. &lt;/p&gt;
-&lt;p&gt;PubMed的网址很长, 是啰哩啰嗦的https://www.ncbi.nlm.nih.gov/pubmed/ 但通常使用pubmed.gov或者pubmed.org甚至pubmed.com都可以访问到.&lt;/p&gt;
-&lt;p&gt;在搜索框里填入orthokeratology lenses, 然后按Search, 出现如下结果: 
-&lt;img alt="屏幕快照 2019-01-28 14.13.59" src="https://i.loli.net/2019/01/28/5c4e9dc187f96.png"&gt;&lt;/p&gt;
-&lt;h2&gt;从哪里开始看?&lt;/h2&gt;
-&lt;h3&gt;文献的重要性&lt;/h3&gt;
-&lt;p&gt;搜索orthokeratology lenses有450篇文献, 如果不是这个专业的人, 没必要也没时间都看过一遍. 而且要看, 也要有个先后顺序. 我们刚才装好的ScholarScope插件, 就是为了如此. &lt;/p&gt;
-&lt;p&gt;如果之前装好了ScholarScope插件, 那么会在每篇文献的下面有一个数字和一个Q数字, 例如这篇文献的2.12和Q2, 前面的数字越大越重要, 后面的Qx, 数字越小越重要. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-01-28 14.15.49" src="https://i.loli.net/2019/01/28/5c4e9e2355a1a.png"&gt;&lt;/p&gt;
-&lt;h3&gt;文献的类型&lt;/h3&gt;
-&lt;p&gt;在左上角, 还有一组限制条件
-&lt;img alt="屏幕快照 2019-01-28 14.21.21" src="https://i.loli.net/2019/01/28/5c4e9f7e35ce7.png"&gt;&lt;/p&gt;
-&lt;p&gt;如果只是想快速了解一个领域, 当然应该先看看别人写好的综述, 也就是Review. 如果想知道疗效如何, 则可能应该要再看看临床实验Clinical Trials. &lt;/p&gt;
-&lt;p&gt;对于某些历史悠久的领域, 还可以限定只看5年以内的文献, 在Publication dates里选上5years.&lt;/p&gt;
-&lt;p&gt;对于OK镜, 还算是一个相对较新的领域, 从右边文献与年份的关系可以看出大约是在2000年以后热起来的. 
-&lt;img alt="屏幕快照 2019-01-28 14.24.12" src="https://i.loli.net/2019/01/28/5c4ea0273242f.png"&gt;&lt;/p&gt;
-&lt;p&gt;我们先暂时不限定文献的类型, 而是快速浏览一下文献的题目和评分, 看看有没有感兴趣的. &lt;/p&gt;
-&lt;h3&gt;快速浏览&lt;/h3&gt;
-&lt;p&gt;说实话, 我只想读一篇, 满篇英文也挺烦的. 翻译一下吧:&lt;/p&gt;
-&lt;p&gt;点一下彩云小译的插件, 可以快速翻译页面中的文字, 如果觉得语句不太通顺, 影响理解, 就再看看英文原文是怎么写的. 
-&lt;img alt="屏幕快照 2019-01-28 14.36.13" src="https://i.loli.net/2019/01/28/5c4ea2f8e2c81.png"&gt;&lt;/p&gt;
-&lt;p&gt;大致看一下评分, 说实话分数都不高啊, 多数是在1-2分左右, 不过下面有一篇7分多的文章, 显得鹤立鸡群. 还是美国眼科学会报告. 看题目也是大而全, 貌似是不错的入门文章, 就从这里开始好了.
-&lt;img alt="屏幕快照 2019-01-28 14.38.31" src="https://i.loli.net/2019/01/28/5c4ea3afedd46.png"&gt;&lt;/p&gt;
-&lt;h2&gt;阅读摘要&lt;/h2&gt;
-&lt;p&gt;点开这篇&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/30476518"&gt;“Use of Orthokeratology for the Prevention of Myopic Progression in Children: A Report by the American Academy of Ophthalmology.”&lt;/a&gt; , &lt;/p&gt;
-&lt;p&gt;你会看到一段摘要Abstract, 讲述了该文献的大致内容, 如果是临床试验研究, 往往读一下摘要就可以知道其研究结果, 如果嫌弃读英文烦, 也可以用上彩云小译的插件, 此处不再赘述. &lt;/p&gt;
-&lt;p&gt;但对于大而全的综述, 最好深入到原文中去读读详细. 
-&lt;img alt="屏幕快照 2019-01-28 14.42.50" src="https://i.loli.net/2019/01/28/5c4ea4b13f74d.png"&gt;&lt;/p&gt;
-&lt;h2&gt;找到全文&lt;/h2&gt;
-&lt;p&gt;理论上, 文章的全文链接出现在右侧的“Full text links”, 但实际上往往点进去是要求付费的. 这是科学界自己也非常不爽的事情, 明明是拿着纳税人的钱做出的研究成果, 却无法分享给全社会, 而被科学杂志收取了费用, 甚至科学家自己不但没有稿费还经常要掏版面费. &lt;/p&gt;
-&lt;p&gt;于是此处应有侠盗出场, 
-&lt;img alt="Scihub_raven" src="https://i.loli.net/2019/01/28/5c4ea6d76d2db.png"&gt;&lt;/p&gt;
-&lt;p&gt;Sci-Hub, 由哈萨克斯坦软件开发暨神经技术研究生亚历珊卓·艾尔巴金（Alexandra Elbakyan）建立, 一个非常非常强大的全文数据库. &lt;/p&gt;
-&lt;p&gt;如果已经安装了ScholarScope插件, 去点击doi后面那一串数字, 就可以自动跳转到sci-hub的链接上. 
-&lt;img alt="屏幕快照 2019-01-28 14.55.41" src="https://i.loli.net/2019/01/28/5c4ea77a189c9.png"&gt;&lt;/p&gt;
-&lt;p&gt;或者, &lt;/p&gt;
-&lt;p&gt;这篇文献的网址是: https://www.ncbi.nlm.nih.gov/pubmed/30476518&lt;/p&gt;
-&lt;p&gt;那么把 sci-hub.tw/ 加在文献网址的前面, 变成sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/30476518  就可以找到全文了. &lt;/p&gt;
-&lt;p&gt;点击save, 就可以下载保存PDF全文了.&lt;img alt="屏幕快照 2019-01-28 15.00.27" src="https://i.loli.net/2019/01/28/5c4ea8b212c28.png"&gt;&lt;/p&gt;
-&lt;h2&gt;阅读全文&lt;/h2&gt;
-&lt;p&gt;显然还是阅读中文的速度快, 尤其是你可能对这个领域并不熟悉. 对于医学文献, 此处使用&lt;a href="https://fanyi.transgod.cn/"&gt;TransGod的PDF翻译&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;打开https://fanyi.transgod.cn/ 勾选上“上传完成后自动翻译”再点击“上传文件”&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-01-28 15.06.12" src="https://i.loli.net/2019/01/28/5c4eaa0444296.png"&gt;&lt;/p&gt;
-&lt;p&gt;把刚才下载的PDF全文上传上去, 1分钟左右就能够翻译完成, 然后下载译文即可&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-01-28 15.09.27" src="https://i.loli.net/2019/01/28/5c4eaaca2d7a6.png"&gt;&lt;/p&gt;
-&lt;p&gt;得到一篇Word文档. 我对他们能够把PDF这种丧心病狂的格式处理得如此服帖非常佩服. (为什么说PDF是丧心病狂的格式, 请参考&lt;a href="https://sspai.com/post/47092"&gt;理解数字世界中的纸张：PDF | 科普&lt;/a&gt;)
-&lt;img alt="屏幕快照 2019-01-28 15.11.44" src="https://i.loli.net/2019/01/28/5c4eab4a5b89f.png"&gt;&lt;/p&gt;
-&lt;p&gt;这篇文章居然是篇Meta分析, 简单的说就是汇总以前做过的正规临床实验的结果, 按照&lt;a href="https://goldengrape.github.io/posts/bulabula/what-is-ebm/"&gt;证据的强度&lt;/a&gt;汇总出来的一份报告. &lt;/p&gt;
-&lt;p&gt;个人建议用&lt;a href="https://goldengrape.github.io/posts/bulabula/gollum-wiki"&gt;wiki&lt;/a&gt;或者其他的笔记软件, 记录一下文献阅读中获得的新识和心得. &lt;/p&gt;
-&lt;p&gt;注意, 虽然现在机器学习机器翻译的进步飞快, 但仍然不能代替阅读原文, 机器翻译的译文只是作为辅助, 用来快速浏览, 在涉及到细节的地方, 还是要仔细阅读原文的. &lt;/p&gt;
-&lt;h2&gt;作业&lt;/h2&gt;
-&lt;p&gt;你在微信里被问到这篇文章&lt;a href="http://www.360doc7.net/wxarticlenew/710434757.html"&gt;《帕金森终于有了特效药！》&lt;/a&gt; 中提到“CBD（大麻二酚）对于改善帕金森病患者病情效果非常显著。”. 本能的, 你觉得这很不靠谱, 请找出你的证据.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how-to-use-pubmed-and-read-paper/</guid><pubDate>Fri, 15 Mar 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/video_keynote/</guid><pubDate>Mon, 25 Mar 2019 04:00:00 GMT</pubDate></item></channel></rss>

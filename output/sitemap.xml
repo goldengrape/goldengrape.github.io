@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2019-03-08T04:42:00Z</lastmod>
+  <lastmod>2019-06-24T04:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-06-21T06:23:00Z</lastmod>
+  <lastmod>2019-06-24T04:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -187,15 +187,19 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-10.html</loc>
-  <lastmod>2019-05-18T14:44:00Z</lastmod>
+  <lastmod>2019-06-24T04:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-11.html</loc>
-  <lastmod>2019-05-18T14:44:00Z</lastmod>
+  <lastmod>2019-06-24T04:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-12.html</loc>
-  <lastmod>2019-06-21T06:23:00Z</lastmod>
+  <lastmod>2019-06-24T04:19:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-13.html</loc>
+  <lastmod>2019-06-24T04:19:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -556,6 +560,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</loc>
   <lastmod>2018-07-03T16:34:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</loc>
+  <lastmod>2019-06-24T04:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-pop-sci-index/</loc>
