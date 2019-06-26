@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 11 Jun 2019 18:07:52 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 26 Jun 2019 16:10:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>出考试题</title><link>https://goldengrape.github.io/posts/bulabula/Exam-questions/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;明天给8个人讲课然后出题考试，考试结果和他们奖金挂钩，这种得罪人的事我才不干呢，而且我最烦出题了，因为要想出干扰项是很困难的。&lt;/p&gt;
+&lt;p&gt;于是想出了非常&lt;strong&gt;心狠手辣&lt;/strong&gt;的出题方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;抽签轮流互相出题，&lt;/li&gt;
+&lt;li&gt;每讲完一个部分，按抽签序列由1个人出题，出完题目以后教给主考官收藏，全部讲完后一起公开题目。&lt;/li&gt;
+&lt;li&gt;题目必须是4选1的单项选择题.&lt;/li&gt;
+&lt;li&gt;每1个人出题，由另外7个人回答，&lt;/li&gt;
+&lt;li&gt;其余人全答对或者全答错，出题人得0分。&lt;/li&gt;
+&lt;li&gt;其余人答对1或6题，出题人得0.3分。&lt;/li&gt;
+&lt;li&gt;其余人答对2或5题，出题人得0.7分。&lt;/li&gt;
+&lt;li&gt;其余人答对3或4题，出题人得1分。&lt;/li&gt;
+&lt;li&gt;当然，如果题目出错了，出题人应被扣1分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;定性分析一下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;得到的题目不会太难太偏，似乎也不容易太简单放水。&lt;/li&gt;
+&lt;li&gt;一个解是每个人都放水，出特别简单的题，其余人都答对，自己得0分，这样每个人的分数相同，最终平分奖金，但把自己的命运寄托于其他人，这显然不是个稳定的解，形成了&lt;strong&gt;多人囚徒困境&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;如果限定题目是判断题，出题人可以出最难的题，其余人随机作答，出题人得到1分，于是应该要限定题目类型，&lt;/li&gt;
+&lt;li&gt;目前我设想是限定4选项的选择题，那么可能出现随机作答，于是有1-2人做对，出题人得分0.3或0.7，而有两人得分1，出题人自己吃亏。其实选项越多越好，选项越多，出最难题的可能性越小。&lt;/li&gt;
+&lt;li&gt;有可能先出题和后出题之间有优势差异。（但也不一定，比如依次出题并且出题后立刻就做，那么对于最后一个人如果他放水，自己就吃亏了。）&lt;ul&gt;
+&lt;li&gt;一是可以随机抽签，但因为只考一次，随机的公平性不明显。&lt;/li&gt;
+&lt;li&gt;二是可以每个人出题以后考官收藏起来，收集完整以后再统一公布。打算使用这种方式。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;如果是最后一起考，似乎互相抄袭的作弊可能性就很小了。当然也有可能全体一起作弊，达到均衡，但这种均衡太明显了，完全可以重考。&lt;/li&gt;
+&lt;li&gt;如果人数足够多，比如一个50人班级，这样可以出期末考试题了。&lt;/li&gt;
+&lt;li&gt;或者人数太多时也可以分组互虐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实在太有趣了。&lt;/p&gt;
+&lt;p&gt;另外，要使囚徒困境有效，向每个人讲解一下囚徒困境是有必要的，不然碰上没听明白的，反而容易偏离均衡点。&lt;/p&gt;
+&lt;p&gt;那么问题来了，每人考试成绩的期望值是多少呢？&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><category>math</category><guid>https://goldengrape.github.io/posts/bulabula/Exam-questions/</guid><pubDate>Wed, 26 Jun 2019 15:00:12 GMT</pubDate></item><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;有些是可变的，是变量，比如努力的程度、认真的程度，对待事情的态度……&lt;/li&gt;
 &lt;li&gt;有些是不可变的，或者在可观测的短时间内无法改变，是常量，比如性别、种族、成年以后的身高、父母、出生地、信仰、国籍……&lt;/li&gt;
@@ -394,30 +426,4 @@ I am.
 
 
 &lt;p&gt;引用自&amp;lt;&amp;lt;超人总动员2&amp;gt;&amp;gt; Incredibles 2 (2018)&lt;/p&gt;
-&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item><item><title>将书法导入成keynote形状</title><link>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己写的毛笔字仍然有诸多缺陷, 不过现代人的展示更多发生在幻灯片而不是宣纸上, 比如在做幻灯的时候用上自己写的字, 感觉很开心.&lt;/p&gt;
-&lt;p&gt;导入成Keynote形状以后, 多了许多后期调整的可能性. 很有意思.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-08-22 21.35.52" src="https://i.loli.net/2018/08/23/5b7e2d3ddb6f6.png"&gt;&lt;/p&gt;
-&lt;p&gt;先说说如何导入:&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;用手机上的&lt;a href="https://www.adobe.com/products/capture.html"&gt;adobe caputre&lt;/a&gt;拍摄, 简单修饰形状. 这个app在android和iOS上都有.&lt;/li&gt;
-&lt;li&gt;导出成SVG&lt;/li&gt;
-&lt;li&gt;发送到电脑上, 如果是iOS对mac可以很简单使用airdrop.&lt;/li&gt;
-&lt;li&gt;下载并安装 &lt;a href="https://www.christianholz.net/keynote_utilities.html#svg2keynote"&gt;SvgToKeynote&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;运行SvgToKeynote将SVG文件转换成keynote文件, 注意转换出来的是早期版本的keynote文件, 编辑或者存储时会提示升级, 升级就好了.&lt;/li&gt;
-&lt;li&gt;keynote文件内的图形就是“形状”了, 如果用右键点击可以出现“使可以编辑”, 就可以编辑顶点. 还可以“存储到我的形状”&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Keynote形状, 或者说Keynote shape的好处是可以进行逻辑运算, 能够将两个形状进行融合/ 交叉/ 减少/ 排除, 于是可以比较方便地拆分各个组件.&lt;/p&gt;
-&lt;p&gt;在书法, 可以用编辑顶点的方法修改笔画的细节, 比如笔锋, 牵丝。 还可以将各个笔势分离开来, 调整裹束, 也就是间架结构.&lt;/p&gt;
-&lt;p&gt;如果有处理SVG的专业软件, 当然直接处理可能会更简单一些.&lt;/p&gt;
-&lt;p&gt;对于PowerPoint, 需要升级到office 365以后, 能够有convert to shape功能, 但我买的不是, 所以无法处理SVG.&lt;/p&gt;
-&lt;p&gt;对于PowerPoint,  原来有三种“图像”:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;形状: 可以编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
-&lt;li&gt;图形: 不能编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
-&lt;li&gt;图片: 不能编辑顶点, 不能改变填充颜色, 是标量图&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其中后两种在keynote里都作为图片处理. 在keynote中, 如果把文件导出成powerpoint文件, 那么形状-&amp;gt;形状, 如果是在keynote中复制, 到powerpoint中粘贴, 是形状-&amp;gt;图片.&lt;/p&gt;
-&lt;p&gt;sspai里这一篇&lt;a href="https://sspai.com/post/39238"&gt;文章&lt;/a&gt;说用Libre Office把SVG转换成keynote形状也可以. 不过Libre Office有200多M, 我懒得装了, 如果有一天SvgToKeynote失效了, 记着Libre Office可用.&lt;/p&gt;
-&lt;p&gt;如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</guid><pubDate>Thu, 23 Aug 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>
