@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 26 Jun 2019 16:10:43 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>出考试题</title><link>https://goldengrape.github.io/posts/bulabula/Exam-questions/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;明天给8个人讲课然后出题考试，考试结果和他们奖金挂钩，这种得罪人的事我才不干呢，而且我最烦出题了，因为要想出干扰项是很困难的。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 27 Jun 2019 11:21:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>出考试题</title><link>https://goldengrape.github.io/posts/bulabula/Exam-questions/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;明天给8个人讲课然后出题考试，考试结果和他们奖金挂钩，这种得罪人的事我才不干呢，而且我最烦出题了，因为要想出干扰项是很困难的。&lt;/p&gt;
 &lt;p&gt;于是想出了非常&lt;strong&gt;心狠手辣&lt;/strong&gt;的出题方式：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;抽签轮流互相出题，&lt;/li&gt;
@@ -31,7 +31,21 @@
 &lt;/ul&gt;
 &lt;p&gt;实在太有趣了。&lt;/p&gt;
 &lt;p&gt;另外，要使囚徒困境有效，向每个人讲解一下囚徒困境是有必要的，不然碰上没听明白的，反而容易偏离均衡点。&lt;/p&gt;
-&lt;p&gt;那么问题来了，每人考试成绩的期望值是多少呢？&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><category>math</category><guid>https://goldengrape.github.io/posts/bulabula/Exam-questions/</guid><pubDate>Wed, 26 Jun 2019 15:00:12 GMT</pubDate></item><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
+&lt;p&gt;那么问题来了，每人考试成绩的期望值是多少呢？&lt;/p&gt;
+&lt;h3&gt;次日更新&lt;/h3&gt;
+&lt;p&gt;实测结果，因为首次使用，所以略混乱，前几题还好，后面他们发现自己出题的分值影响很小就放水了，这个是我考虑不周。&lt;/p&gt;
+&lt;p&gt;所以如果改进，应当是计算出自己出题得到的系数后，要乘个倍数，比如x5甚至x10，那么与其他题目就具有可比性。或者，如果是学习小组反复多次进行快速小测试，甚至可以舍弃其他题目的得分，仅仅以出题分来衡量。&lt;/p&gt;
+&lt;p&gt;补充一下计算公式:&lt;/p&gt;
+&lt;p&gt;$$
+s_i=K\times (1 - \frac{\lvert c_i-0.5\rvert}{0.5})
+$$&lt;/p&gt;
+&lt;p&gt;其中:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;s(i)是第i题出题人的得分 &lt;/li&gt;
+&lt;li&gt;c(i)是第i题其他人的正确率&lt;/li&gt;
+&lt;li&gt;K是一个常数系数，用来调整出题分的吸引力&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这个方法如果用在一个学习小组，比如小奥班什么的，可能会产生非常强的学习动力。&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><category>math</category><guid>https://goldengrape.github.io/posts/bulabula/Exam-questions/</guid><pubDate>Wed, 26 Jun 2019 15:00:12 GMT</pubDate></item><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;有些是可变的，是变量，比如努力的程度、认真的程度，对待事情的态度……&lt;/li&gt;
 &lt;li&gt;有些是不可变的，或者在可观测的短时间内无法改变，是常量，比如性别、种族、成年以后的身高、父母、出生地、信仰、国籍……&lt;/li&gt;
