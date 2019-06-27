@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 27 Jun 2019 11:21:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>出考试题</title><link>https://goldengrape.github.io/posts/bulabula/Exam-questions/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;明天给8个人讲课然后出题考试，考试结果和他们奖金挂钩，这种得罪人的事我才不干呢，而且我最烦出题了，因为要想出干扰项是很困难的。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 27 Jun 2019 11:38:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>出考试题</title><link>https://goldengrape.github.io/posts/bulabula/Exam-questions/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;明天给8个人讲课然后出题考试，考试结果和他们奖金挂钩，这种得罪人的事我才不干呢，而且我最烦出题了，因为要想出干扰项是很困难的。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;于是想出了非常&lt;strong&gt;心狠手辣&lt;/strong&gt;的出题方式：&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;ul&gt;
 &lt;li&gt;抽签轮流互相出题，&lt;/li&gt;
 &lt;li&gt;每讲完一个部分，按抽签序列由1个人出题，出完题目以后教给主考官收藏，全部讲完后一起公开题目。&lt;/li&gt;
@@ -10,10 +27,15 @@
 &lt;li&gt;其余人答对1或6题，出题人得0.3分。&lt;/li&gt;
 &lt;li&gt;其余人答对2或5题，出题人得0.7分。&lt;/li&gt;
 &lt;li&gt;其余人答对3或4题，出题人得1分。&lt;/li&gt;
-&lt;li&gt;当然，如果题目出错了，出题人应被扣1分。&lt;/li&gt;
+&lt;li&gt;当然，如果题目出错了，出题人应被扣1分。&lt;!-- TEASER_END --&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- TEASER_END --&gt;
 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;定性分析一下：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;得到的题目不会太难太偏，似乎也不容易太简单放水。&lt;/li&gt;
@@ -32,20 +54,29 @@
 &lt;p&gt;实在太有趣了。&lt;/p&gt;
 &lt;p&gt;另外，要使囚徒困境有效，向每个人讲解一下囚徒困境是有必要的，不然碰上没听明白的，反而容易偏离均衡点。&lt;/p&gt;
 &lt;p&gt;那么问题来了，每人考试成绩的期望值是多少呢？&lt;/p&gt;
-&lt;h3&gt;次日更新&lt;/h3&gt;
-&lt;p&gt;实测结果，因为首次使用，所以略混乱，前几题还好，后面他们发现自己出题的分值影响很小就放水了，这个是我考虑不周。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="次日更新"&gt;次日更新&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/Exam-questions/#%E6%AC%A1%E6%97%A5%E6%9B%B4%E6%96%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;实测结果，因为首次使用，所以略混乱，前几题还好，后面他们发现自己出题的分值影响很小就放水了，这个是我考虑不周。&lt;/p&gt;
 &lt;p&gt;所以如果改进，应当是计算出自己出题得到的系数后，要乘个倍数，比如x5甚至x10，那么与其他题目就具有可比性。或者，如果是学习小组反复多次进行快速小测试，甚至可以舍弃其他题目的得分，仅仅以出题分来衡量。&lt;/p&gt;
 &lt;p&gt;补充一下计算公式:&lt;/p&gt;
-&lt;p&gt;$$
-s_i=K\times (1 - \frac{\lvert c_i-0.5\rvert}{0.5})
-$$&lt;/p&gt;
-&lt;p&gt;其中:&lt;/p&gt;
+$$
+s_i=K \times(1 - \frac{\lvert c_i-0.5\rvert}{0.5})
+$$&lt;p&gt;其中:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;s(i)是第i题出题人的得分 &lt;/li&gt;
 &lt;li&gt;c(i)是第i题其他人的正确率&lt;/li&gt;
 &lt;li&gt;K是一个常数系数，用来调整出题分的吸引力&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;这个方法如果用在一个学习小组，比如小奥班什么的，可能会产生非常强的学习动力。&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><category>math</category><guid>https://goldengrape.github.io/posts/bulabula/Exam-questions/</guid><pubDate>Wed, 26 Jun 2019 15:00:12 GMT</pubDate></item><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
+&lt;p&gt;这个方法如果用在一个学习小组，比如小奥班什么的，可能会产生非常强的学习动力。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Exam-questions/</guid><pubDate>Thu, 27 Jun 2019 10:00:00 GMT</pubDate></item><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;眼科图谱：&lt;/h2&gt;
