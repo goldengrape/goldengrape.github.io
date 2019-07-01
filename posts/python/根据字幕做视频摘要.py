@@ -2,16 +2,16 @@
 # coding: utf-8
 
 # 周末做了一个奇怪的小东西.
+# >I made a strange gadget on the weekend.
 # 
 # 一个根据字幕来做出视频缩略版的工具, 效果参见[李永乐老师讲柏拉图立体的复习缩略版](https://www.youtube.com/watch?v=wxlySg9TBBI)
+# 
+# >It is a tool to make a abbreviated video based on subtitles. See [Teacher Li Yongle explained the Platonic solid（review version)](https://www.youtube.com/watch?v=wxlySg9TBBI)
+# 
 # 
 # <iframe width="560" height="315" src="https://www.youtube.com/embed/wxlySg9TBBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 # 
 # 这是一段remix的视频, 是从[李永乐老师讲柏拉图立体](https://www.youtube.com/watch?v=m9AE_G_9c7Y) 的课程中节选了数学概念的部分, 去掉了推导与展开的部分. 原视频大约12分钟, 剪辑后的视频只有4分钟. 可以方便用来快速复习概念. 
-
-# >I made a strange gadget on the weekend.
-# 
-# >It is a tool to make a abbreviated video based on subtitles. See [Teacher Li Yongle explained the Platonic solid（review version)](https://www.youtube.com/watch?v=wxlySg9TBBI)
 # 
 # >This is a remix video, which is selected from the course of [Platonic solid](https://www.youtube.com/watch?v=m9AE_G_9c7Y), and the deduction and expansion part were removed. The original video is about 12 minutes, and the remix video is only 4 minutes. It is convenient for quick review of concepts.
 # 
