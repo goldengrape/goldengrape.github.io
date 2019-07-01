@@ -114,10 +114,6 @@
   <lastmod>2019-05-07T09:20:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://goldengrape.github.io/categories/math.xml</loc>
-  <lastmod>2019-06-27T11:27:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://goldengrape.github.io/categories/microsurgery.xml</loc>
   <lastmod>2019-05-07T09:20:00Z</lastmod>
  </sitemap>
@@ -139,7 +135,7 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/python.xml</loc>
-  <lastmod>2019-06-04T15:45:00Z</lastmod>
+  <lastmod>2019-07-01T08:37:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/sheng-huo-fang-shi.xml</loc>
@@ -163,10 +159,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2019-06-27T11:38:00Z</lastmod>
+  <lastmod>2019-07-01T08:37:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2019-06-27T11:38:00Z</lastmod>
+  <lastmod>2019-07-01T08:37:00Z</lastmod>
  </sitemap>
 </sitemapindex>
