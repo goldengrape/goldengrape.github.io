@@ -30,3 +30,9 @@
 链接: [https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg](https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg ) 提取码: fsmu 
 
 需要强调的是，这个课程还在制作中，内容也有可能不断修订。但愿我能一直坚持下去把它做完。
+
+如果您对教程中的插图感兴趣，我已经做好了一份开源的图集：[https://github.com/goldengrape/phacoTools](https://github.com/goldengrape/phacoTools)
+
+如果您对给PPT自动配音感兴趣，这是我以前做好的配音程序: [https://github.com/goldengrape/dubbing-pptx](https://github.com/goldengrape/dubbing-pptx)
+
+关于此训练手册，您有什么意见建议，可以在github上提issue：[https://github.com/goldengrape/phaco-training-manual/issues](https://github.com/goldengrape/phaco-training-manual/issues), 也可以fork自行修改，这是一个开放的项目，希望能够帮助更多的医生。
