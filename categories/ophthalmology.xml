@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 24 Jun 2019 11:37:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 04 Jul 2019 07:18:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。今年的项目是“Phaco训练手册视频版”。但我低估了工作量，光是做关于主切口的ppt，我就做了好几天，还没写完。所以到今天只能说开始连载，而无法做到完全发布。大概每周我会再继续发布一两个视频。&lt;/p&gt;
+&lt;p&gt;说是视频，更多其实是配音PPT。插图我尽量采用绘制的图像，少量使用照片，这样讲解更清楚，而且与各个厂家特定的产品关联不大。&lt;/p&gt;
+&lt;p&gt;考虑到要方便修改，所以我使用的是text to speech进行的配音，配音的文本在每个ppt的“备注”里，需要的话您也可以打开看。&lt;/p&gt;
+&lt;p&gt;目前使用的是讯飞的语音引擎。其中会有一点点小问题，比如讯飞会把phaco读成“Ph-ar-co”，把“粘弹剂”读成可怕的“沾-蛋-剂”，所以在配音文本里把phaco写成了pheico，把“粘弹剂”写成了“年弹剂”，仅仅是为了读音好听。&lt;/p&gt;
+&lt;p&gt;所有的PPT和文本，放在：
+&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;https://github.com/goldengrape/phaco-training-manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;视频存放有点问题，在国内难以找到一个对我舒适的分享网站，要不就要实名认证要不就要审核或者干脆不允许医学教学视频出现。&lt;/p&gt;
+&lt;p&gt;所以视频在YouTube 上有一份，如果您能正常访问国际互联网，可以打开：
+&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UPYE9xxD1DnlcVZV7SrQnj"&gt;https://www.youtube.com/playlist?list=PLMDNnNJK3B1UPYE9xxD1DnlcVZV7SrQnj&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;国内的视频播放，我可以非独占地授权给一些公众号，让他们自己上传到自己的公众号中供大家看。如果想直接下载源视频，我暂时先放在百度云里：&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href="https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg"&gt;https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg&lt;/a&gt; 提取码: fsmu &lt;/p&gt;
+&lt;p&gt;需要强调的是，这个课程还在制作中，内容也有可能不断修订。但愿我能一直坚持下去把它做完。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</guid><pubDate>Thu, 04 Jul 2019 04:00:00 GMT</pubDate></item><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;眼科图谱：&lt;/h2&gt;
@@ -1004,93 +1015,4 @@ $$&lt;/p&gt;
 &lt;li&gt;开、关显微镜灯光，并调整亮度&lt;/li&gt;
 &lt;li&gt;借阅手术显微镜说明书&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item><item><title>显微操作训练(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;眼科是一个手术科室, 其中又有大量的手术是在显微镜下完成的, 显微镜下的操作是最重要的基本功之一了.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;良好的习惯产生手术安全,&lt;/li&gt;
-&lt;li&gt;正确勤勉的练习产生良好的习惯,&lt;/li&gt;
-&lt;li&gt;理解设备的原理和操作的原理指导正确的练习.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;下面我来简介一下眼科操作显微镜的原理和基本训练. 非本专业同学可以顺便体会一下手术科室的强迫症和碎碎念.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;术前设备检查&lt;/h2&gt;
-&lt;p&gt;在全天的手术开始之前, 应当亲自检查显微镜. 就好像上战场之前需要检查自己的武器.&lt;/p&gt;
-&lt;p&gt;检查的项目有:&lt;/p&gt;
-&lt;h3&gt;是否使用了正确的显微镜?&lt;/h3&gt;
-&lt;p&gt;显微镜会搭载不同的外设或者本身具有不同的结构, 有些特殊的手术, 是需要特定的显微镜的.&lt;/p&gt;
-&lt;p&gt;例如青光眼房角手术, 是使用半球状的房角镜操作, 这时候就需要显微镜的主镜能够倾斜, 但并非所有显微镜都可以做到这点, 术前需要确认.&lt;/p&gt;
-&lt;h3&gt;头&lt;/h3&gt;
-&lt;p&gt;显微镜是否可以在床头附近自由移动?
-&lt;img alt="幻灯片04" src="https://i.loli.net/2018/06/20/5b2a080664c3b.jpeg"&gt;
-(图片选自师弟援外时的手术照片, 赞师弟)&lt;/p&gt;
-&lt;p&gt;如图中所示, 示意图是俯视图, 红色弧线画出的关节是显微镜的主关节, 要保证这个关节是弯曲的状态.&lt;/p&gt;
-&lt;p&gt;从俯视图看, 显微镜是由两个固定臂转动构成, 如果这个关节是完全伸直才能达到患者的头部, 那么再弯曲就够不着了.&lt;/p&gt;
-&lt;p&gt;术前要把显微镜挪动到合适的位置, 保持有足够的冗余. 否则术中再移动显微镜底座就非常困难.&lt;/p&gt;
-&lt;h3&gt;脚&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="幻灯片05" src="https://i.loli.net/2018/06/20/5b2a572576765.jpeg"&gt;
-脚踏的位置要在术前事先摆好. 这样术中, 不需要多想脚就可以找到相应的位置.&lt;/p&gt;
-&lt;p&gt;多数医院是使用左脚显微镜, 右脚phaco/玻切踏板的设定. 但如果去郑大一附院的时候要小心, 有可能他们的设定相反.&lt;/p&gt;
-&lt;p&gt;两个踏板放在与肩同宽或者略宽的位置, 稍微分开成60度左右, 以主刀坐下膝盖90度可舒适踩到踏板为准. 如果太远或太近, 都会造成紧张. 这个后面会详述.&lt;/p&gt;
-&lt;h3&gt;床的高度&lt;/h3&gt;
-&lt;p&gt;当显微镜座机的位置, 座椅的位置, 脚踏的位置都摆好以后, 相当于在俯视图上把各个物体安顿好了.&lt;/p&gt;
-&lt;p&gt;这时候需要调整高度了, 我们转入到侧视图来观察.
-&lt;img alt="幻灯片06" src="https://i.loli.net/2018/06/20/5b2a5a3d0ab34.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;从上到下观察, 显微镜的工作距离是不可变的, 虽然显微镜物镜还可以移动, 但距离其实很小. 手术床的厚度给定不可变, 床的高度可调, 凳子的高度可调.&lt;/p&gt;
-&lt;p&gt;在操作中凳子的高度要根据术者的小腿长度来设定, 尽量使膝关节弯曲在90度左右. &lt;/p&gt;
-&lt;p&gt;显微镜的目镜位置应当在术者平视的位置.&lt;/p&gt;
-&lt;p&gt;床的位置需要使术者能够放松放置前臂和手腕, 大约是屈肘90度-120度左右.&lt;/p&gt;
-&lt;p&gt;所以综合考虑, 手术床的高度需要有一定的调整, 手术床高了术者的手举高, 容易紧张, 床低了, 可能膝关节活动有影响, 或者手太低也不舒服.&lt;/p&gt;
-&lt;p&gt;在准备工作阶段, 术者的舒适感是最优先考虑的事项, 只有术者舒适患者舒适手术才能平稳进行.&lt;/p&gt;
-&lt;p&gt;在确定了各个设备的位置之后, 还要检查显微镜的功能&lt;/p&gt;
-&lt;h3&gt;显微镜的功能&lt;/h3&gt;
-&lt;p&gt;检查显微镜的功能要分别检查主镜和助手镜的功能, 功能检查可以从光/机/电来分类考虑, 不容易漏项.&lt;/p&gt;
-&lt;h4&gt;显微镜的光学功能&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;目镜是否插紧是否复位&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;显微镜的目镜是可以拆卸的, 有时候前一个使用者反复调整或者昨天护士在擦拭时目镜可能会松动.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="幻灯片08" src="https://i.loli.net/2018/06/20/5b2a5dc96fcf3.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;如果目镜松动, 特别是单个松动, 那样调焦是无论如何无法舒适的. 所以需要确认一下目镜是否塞紧了.&lt;/p&gt;
-&lt;p&gt;最好顺手将目镜的屈光度放置到0, 或者设定为第一个术者的屈光度.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;物镜是否太脏&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在眼科手术中, 我们经常需要向患者的角膜上点生理盐水, 偶尔会有少许水滴飞溅到物镜上, 一段时间后水干了会留下盐的痕迹. 会影响成像的对比度, 你不会希望透过一层模糊的镜头来观察前囊的.
-&lt;img alt="幻灯片09" src="https://i.loli.net/2018/06/20/5b2a5f5b35c63.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;擦拭物镜需要用擦镜纸, 而不是棉签或者纱布, 用蒸馏水而不是生理盐水.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;助手镜是否打开&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;很多助手镜是可以左右互换的, 如果开关切换到了另一端, 助手镜就是黑的. 刷手之前简单检查一下就好. 如果上台以后才发现有问题, 只好请巡台护士帮忙了, 不但遭到巡台护士的白眼, 而且增加了污染机会.&lt;br&gt;
-&lt;img alt="幻灯片10" src="https://i.loli.net/2018/06/20/5b2a60e0e33af.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;注意助手镜的观察角度是可调的, 有一个调节环可以修正角度. 也应当在术前找好与主刀一致的角度, 否则助手操作起来也很困难.&lt;/p&gt;
-&lt;p&gt;方法是在镜下放一个物体, 例如一只笔, 按床的长轴方向放置, 然后看着助手镜调整调节环, 使笔的方向合理.&lt;/p&gt;
-&lt;p&gt;如果是到一个新的环境, 要弄清楚助手镜的性能, 有的助手镜没有立体感, 放大率不可调, 焦距如何调整要问清楚.&lt;/p&gt;
-&lt;h4&gt;机械功能: 悬臂阻尼&lt;/h4&gt;
-&lt;p&gt;&lt;img alt="幻灯片11" src="https://i.loli.net/2018/06/20/5b2a61aec1195.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;手术显微镜的悬臂上有多个阻力调节钮, 如果太紧了, 首次调整显微镜位置时很难推动.&lt;/p&gt;
-&lt;p&gt;如果阻尼太松了, 显微镜的悬臂可能无法保持位置, 会因为重力缓慢下坠, 术中会发现视物越来越模糊.&lt;/p&gt;
-&lt;h4&gt;电器功能:&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;照明是否正常&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;试试灯是不是亮的, 想想如果大家都准备好了病人也躺在手术床上才发现灯泡不亮赶着换灯泡的尴尬场面.&lt;/p&gt;
-&lt;p&gt;万一术中真的突然灯泡烧了, 每个显微镜常规是有一个可以快速切换的备用灯泡的.
-&lt;img alt="幻灯片12" src="https://i.loli.net/2018/06/20/5b2a62eb30c44.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;常规而言灯泡的位置都是在悬臂上有散热格栅的地方, 有一个可以拔出的面板, 里面会有两个灯泡, 旋转180度重新插回就可以启动备用灯泡了. 术后记得要及时换掉烧坏的灯泡.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;录像系统是否接好&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;学习手术必须录像.
-学习手术必须录像.
-学习手术必须录像.&lt;/p&gt;
-&lt;h2&gt;有记录的失败才是成功之母,&lt;/h2&gt;
-&lt;h2&gt;没有记录的失败仅仅是场灾难.&lt;/h2&gt;
-&lt;h2&gt;作业&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;帮助护士准备和收纳显微镜，认清各种可调整部分。&lt;/li&gt;
-&lt;li&gt;学会换灯泡。&lt;/li&gt;
-&lt;li&gt;学会使用手术录像设备&lt;/li&gt;
-&lt;li&gt;学会调整手术床&lt;/li&gt;
-&lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_2/</guid><pubDate>Thu, 21 Jun 2018 18:00:00 GMT</pubDate></item></channel></rss>
