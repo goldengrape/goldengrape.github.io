@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 24 Jun 2019 11:37:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 04 Jul 2019 07:18:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。今年的项目是“Phaco训练手册视频版”。但我低估了工作量，光是做关于主切口的ppt，我就做了好几天，还没写完。所以到今天只能说开始连载，而无法做到完全发布。大概每周我会再继续发布一两个视频。&lt;/p&gt;
+&lt;p&gt;说是视频，更多其实是配音PPT。插图我尽量采用绘制的图像，少量使用照片，这样讲解更清楚，而且与各个厂家特定的产品关联不大。&lt;/p&gt;
+&lt;p&gt;考虑到要方便修改，所以我使用的是text to speech进行的配音，配音的文本在每个ppt的“备注”里，需要的话您也可以打开看。&lt;/p&gt;
+&lt;p&gt;目前使用的是讯飞的语音引擎。其中会有一点点小问题，比如讯飞会把phaco读成“Ph-ar-co”，把“粘弹剂”读成可怕的“沾-蛋-剂”，所以在配音文本里把phaco写成了pheico，把“粘弹剂”写成了“年弹剂”，仅仅是为了读音好听。&lt;/p&gt;
+&lt;p&gt;所有的PPT和文本，放在：
+&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;https://github.com/goldengrape/phaco-training-manual&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;视频存放有点问题，在国内难以找到一个对我舒适的分享网站，要不就要实名认证要不就要审核或者干脆不允许医学教学视频出现。&lt;/p&gt;
+&lt;p&gt;所以视频在YouTube 上有一份，如果您能正常访问国际互联网，可以打开：
+&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UPYE9xxD1DnlcVZV7SrQnj"&gt;https://www.youtube.com/playlist?list=PLMDNnNJK3B1UPYE9xxD1DnlcVZV7SrQnj&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;国内的视频播放，我可以非独占地授权给一些公众号，让他们自己上传到自己的公众号中供大家看。如果想直接下载源视频，我暂时先放在百度云里：&lt;/p&gt;
+&lt;p&gt;链接: &lt;a href="https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg"&gt;https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg&lt;/a&gt; 提取码: fsmu &lt;/p&gt;
+&lt;p&gt;需要强调的是，这个课程还在制作中，内容也有可能不断修订。但愿我能一直坚持下去把它做完。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</guid><pubDate>Thu, 04 Jul 2019 04:00:00 GMT</pubDate></item><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
 &lt;h2&gt;眼科图谱：&lt;/h2&gt;
@@ -647,42 +658,4 @@ $$&lt;/p&gt;
 &lt;li&gt;学会调整手术床&lt;/li&gt;
 &lt;li&gt;学会助手镜的焦距调节和镜下角度调节&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item><item><title>VR／AR临床实验设计中的注意事项-太长不看版</title><link>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;伴吐槽&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;前面那篇《&lt;a href="https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp"&gt;VR／AR临床实验设计中的注意事项&lt;/a&gt;》文章太长了，以至于按照十五言的统计，“深读”率维持在10%以下，（那篇文章值一大笔顾问费的好么我为了国内的VR/AR社区就这么给捐了你们居然不仔细读）。因此作者推出了TL;DR版。&lt;/p&gt;
-&lt;h3&gt;实验准备：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;伦理：不通过伦理委员会没签知情同意书，一告一个准；&lt;/li&gt;
-&lt;li&gt;研究团队：就算企业出钱也得找些懂行的行家；&lt;/li&gt;
-&lt;li&gt;实验设计：答辩叫defence，得尽量无懈可击才行；&lt;/li&gt;
-&lt;li&gt;实验目的：一次一小步，题目太大就民科了；&lt;/li&gt;
-&lt;li&gt;实验对象：纳入排除标准预先定，把搞不定的都排除在外&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;实验测量的指标：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;视力：用LogMAR&lt;/li&gt;
-&lt;li&gt;CSF色觉能查就查一下&lt;/li&gt;
-&lt;li&gt;屈光：电脑验光仪不准&lt;/li&gt;
-&lt;li&gt;眼压：摊上青光眼就麻烦了&lt;/li&gt;
-&lt;li&gt;干眼：用泪液分析仪&lt;/li&gt;
-&lt;li&gt;双眼视、调节、斜视、AC/A、立体视：一般医生都搞不定，还是找专业人士玩&lt;/li&gt;
-&lt;li&gt;问卷调查：青少年问卷调查你也信？&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;数据：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;别作弊；&lt;/li&gt;
-&lt;li&gt;画图得有error bar；&lt;/li&gt;
-&lt;li&gt;科研图不准用3D，别扯什么信息图示；&lt;/li&gt;
-&lt;li&gt;连个P都没有，怎么让人相信&lt;/li&gt;
-&lt;li&gt;统计方法不对有个P用&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;结果与讨论：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;garbage in garbage out ;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;眼科与视光学专业的注意事项:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;硬件限制：人类科技还很低下；&lt;/li&gt;
-&lt;li&gt;软件限制：别撞上NP hard；&lt;/li&gt;
-&lt;li&gt;商业限制：医生想的通常不赚钱没人愿意做&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/vr-ar-exp-tldr/</guid><pubDate>Wed, 28 Feb 2018 07:15:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;(未完待续)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_1/</guid><pubDate>Wed, 20 Jun 2018 14:00:00 GMT</pubDate></item></channel></rss>
