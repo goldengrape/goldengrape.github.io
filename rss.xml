@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 04 Jul 2019 07:30:23 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。今年的项目是“Phaco训练手册视频版”。但我低估了工作量，光是做关于主切口的ppt，我就做了好几天，还没写完。所以到今天只能说开始连载，而无法做到完全发布。大概每周我会再继续发布一两个视频。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2019 07:23:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>根据字幕做视频摘要续集</title><link>https://goldengrape.github.io/posts/python/video_keynote_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我又继续做奇怪的小工具了。上一次做完了&lt;a href="https://goldengrape.github.io/posts/python/video_keynote/"&gt;根据字幕做视频摘要&lt;/a&gt;之后，仍然不太满意，因为那个工具只是面向youtube的，对于本地的视频，或者是下载到本地的视频课程，仍然不够好用。所以我做了一些修改，已经&lt;a href="https://github.com/goldengrape/video_keynotes"&gt;发布到了github上&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;现在可以先通过&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;下载整个课程，然后再通过字幕划出重点，生成复习用的视频摘要。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;使用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;需先下载课程视频和字幕文件&lt;ul&gt;
+&lt;li&gt;coursera上的课程可以使用&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;进行下载。注意其中的&lt;a href="https://github.com/coursera-dl/coursera-dl#china-issues"&gt;china-issues&lt;/a&gt;, 可能需要通过VPN才能正常访问国际互联网。&lt;ul&gt;
+&lt;li&gt;使用coursera-dl下载出现"HTTPError:400"问题，请参考&lt;a href="https://github.com/coursera-dl/coursera-dl/issues/702#issuecomment-506929946"&gt;此解决方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Youtube上的课程，例如OCW，可以使用&lt;a href="https://rg3.github.io/youtube-dl/"&gt;youtube-dl&lt;/a&gt;进行下载。注意需要将对应的字幕也下载下来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将字幕文件处理成txt脚本&lt;ul&gt;
+&lt;li&gt;处理单个文件：&lt;code&gt;python sub2txt.py -i &amp;lt;subtitle file name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;处理整个目录：&lt;code&gt;python sub2txt.py -p &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;手动编辑txt脚本，将你认为不重要的部分删除后保存，尽量不要修改txt文件名&lt;/li&gt;
+&lt;li&gt;按编辑后的txt脚本剪辑视频课程：&lt;ul&gt;
+&lt;li&gt;处理单个文件：&lt;code&gt;python clip_by_txt.py -t &amp;lt;txt file&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;处理整个目录：&lt;code&gt;python clip_by_txt.py -p &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;剪辑完成的视频将以summary_开头，存储在视频课程原位，并且附带有srt的字幕。&lt;/p&gt;
+&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;这是一个剪辑自coursera上的learning how to learn课程第一周第一课&lt;a href="https://www.coursera.org/learn/learning-how-to-learn/lecture/75EsZ/introduction-to-the-focused-and-diffuse-modes"&gt;introduction-to-the-focused-and-diffuse-modes&lt;/a&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/embed/UjkYY6HUSyY"&gt;Youtube视频&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;p&gt;似乎用来剪辑电影也会很方便吧。&lt;/p&gt;
+&lt;p&gt;说到剪辑电影，我还发现了一个有趣的工具&lt;a href="https://antiboredom.github.io/videogrep/"&gt;videogrep&lt;/a&gt;，与我做的工具类似，但他是在字幕中检索关键词或者使用正则表达式来检索，效果惊艳：
+&lt;a href="https://www.youtube.com/watch?v=PQMzOUeprlk"&gt;All the instances of the phrase “time” in the movie “In Time”&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/video_keynote_2/</guid><pubDate>Fri, 05 Jul 2019 04:00:00 GMT</pubDate></item><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。&lt;/p&gt;
+&lt;p&gt;今年的项目是“Phaco训练手册视频版”。但我低估了工作量，光是做关于主切口的ppt，我就做了好几天，还没写完。所以到今天只能说开始连载，而无法做到完全发布。大概每周我会再继续发布一两个视频。&lt;/p&gt;
 &lt;p&gt;说是视频，更多其实是配音PPT。插图我尽量采用绘制的图像，少量使用照片，这样讲解更清楚，而且与各个厂家特定的产品关联不大。&lt;/p&gt;
 &lt;p&gt;考虑到要方便修改，所以我使用的是text to speech进行的配音，配音的文本在每个ppt的“备注”里，需要的话您也可以打开看。&lt;/p&gt;
 &lt;p&gt;目前使用的是讯飞的语音引擎。其中会有一点点小问题，比如讯飞会把phaco读成“Ph-ar-co”，把“粘弹剂”读成可怕的“沾-蛋-剂”，所以在配音文本里把phaco写成了pheico，把“粘弹剂”写成了“年弹剂”，仅仅是为了读音好听。&lt;/p&gt;
@@ -1944,96 +1980,4 @@ conda install pytorch torchvision -c soumith --yes
 &lt;p&gt;补充一下，用Fusion360画六边形平铺二维平面的方法：&lt;/p&gt;
 &lt;p&gt;本质上还是一个矩形阵列，但“矩形”的两个边并不是互相垂直的，你需要画出60度夹角的两个方向，就是画好六边形以后，画两个中点连线，然后选择矩形阵列，再方向上，按住command键选上两个方向，间距就是六边形两个平行边的宽度或者再加上空隙。注意这样平铺的结构不是矩形的，而是平行四边形，若做成矩形的样子，要勾选掉一些。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="屏幕快照 2019-05-08 21.27.14" src="https://i.loli.net/2019/05/08/5cd2d98eac1e1.png"&gt;&lt;/p&gt;
-&lt;p&gt;哦，忘了放上&lt;a href="https://www.thingiverse.com/thing:3615893"&gt;模型的链接&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</guid><pubDate>Wed, 08 May 2019 04:00:00 GMT</pubDate></item><item><title>病例一则：夜间睡眠时疼痛</title><link>https://goldengrape.github.io/posts/bulabula/case-report/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
-&lt;p&gt;警告：文中这样擅自修改医嘱的行为是非常危险的，仅由专业人士进行，或在专业人士指导下进行。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我平时对疾病诊断没什么兴趣，碰到病例讨论查房，往往处于神游乃至半昏迷状态。在我看来诊断更多像是在抽屉里找卡片，缺乏连续的推理过程。不过这次遇到的这个病例引起了我的极大兴趣。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;因为这是我自己。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;病人自诉：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;右腿胫骨碰撞后疼痛7天，&lt;/p&gt;
-&lt;p&gt;7天前练习咏春拳时，右腿胫骨与对方手肘多次碰撞。碰撞后疼痛，夜间睡眠时加重，可疼醒，平卧小腿肌肉紧张时加重，白天直立稍活动后可缓解。小腿外侧肿胀，踝关节轻肿胀，足跟部及足2-4趾附近有淤血痕迹。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img alt="未命名1" src="https://i.loli.net/2019/05/07/5cd13106184c9.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;这是用肘外侧防御高鞭腿的动作，高鞭腿大概是排名第二位的“不会打架”动作，（第一位是揪领子，这部分以后再展开讲）。但练习嘛，我就很认真地去踢，于是被磕得很疼。&lt;/p&gt;
-&lt;p&gt;疼了一星期，而且糟糕的是夜里更疼，睡着了疼，睡眠质量很差。即使是睡着了以后，身体也是时不时要动一下的，动的时候，肌肉就会紧张收缩用力，然后就会引起一阵腿疼。我昨天终于受不了了，去看病。&lt;/p&gt;
-&lt;p&gt;打算去的医院是骨科同学指导过的医院，所以先问了问。到了以后意外发现医院还挺大，就诊环境也不错。主任没出门诊，于是挂了个普通号先看看。大夫很规矩，流程清晰，诊断和治疗方案都是对的。&lt;/p&gt;
-&lt;p&gt;以下纯学术讨论，没有任何责怪医生的部分。本人非骨科专业，而且由于SARS当年完全没轮转骨科，有不当之处还请指出。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h3&gt;主诉&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;患者自述：
-右腿胫骨碰撞后疼痛7天，
-7天前练习咏春拳时，右腿胫骨与对方手肘多次碰撞。碰撞后疼痛，夜间睡眠时加重，可疼醒，平卧小腿肌肉紧张时加重，白天直立稍活动后可缓解。小腿外侧肿胀，踝关节轻肿胀，足跟部及足2-4趾附近有淤血痕迹。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;查体&lt;/h3&gt;
-&lt;p&gt;如患者所诉：小腿外侧肿胀，踝关节轻肿胀，足跟部及足2-4趾附近有淤血痕迹。&lt;/p&gt;
-&lt;h3&gt;辅助检查&lt;/h3&gt;
-&lt;p&gt;右胫腓骨正侧位：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;影像所见： 右侧胫腓骨骨质完整，未见明显异常征象，所示关节关系可。
-诊断意见：右侧胫腓骨未见明显异常，请结合临床。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;此处批评放射科，表扬一下门诊大夫，看片更仔细一些，发现腓骨中部骨膜增厚，还专门在电脑上指给我看。
-&lt;img alt="" src="https://i.loli.net/2019/05/07/5cd13905b3a19.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;诊断和处理&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;诊断：软组织损伤&lt;/li&gt;
-&lt;li&gt;Rx：抬高患肢高于心脏平面休息，外用药膏（患者自备）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;他那里的是药酒，我觉得水剂用着不方便，而且我这有运医神剂“创伤止痛乳”（现在叫“当红创伤乳膏”），于是就没开药。&lt;/p&gt;
-&lt;p&gt;我仔细问了问，夜间睡眠时疼痛加重是什么原因。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;"夜间睡眠时加重，可疼醒，平卧小腿肌肉紧张时加重，白天直立稍活动后可缓解。"&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h3&gt;夜间睡眠时疼痛原因：&lt;/h3&gt;
-&lt;p&gt;医生的解释是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;外界干扰降低，对痛觉敏感&lt;/li&gt;
-&lt;li&gt;副交感神经兴奋&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这么说当然是没错啦，大夫还很仔细地讲解了一下“植物神经系统”，比我以前出门诊解释都多。我只好说我以前是眼科医生，才尽快去拍了片子。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;但是&lt;/strong&gt;，这两条并不能完全解释“白天直立稍活动后可缓解。”&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;于是我就回家躺着了，夜里睡着了还是被疼醒了几次。一直到早上6点多，我迷迷糊糊地，又疼醒了一次，心里念叨着我的骨膜啊，然后突然灵光闪现。立刻爬起来查我重金购买的&lt;a href="https://3d4medical.com/"&gt;Complete Anatomy 2019解剖软件&lt;/a&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;关键在于白天站立与夜间平卧时的区别&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="夜间睡眠时疼痛" src="https://i.loli.net/2019/05/08/5cd2301858d9a.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;踝关节的命名比较奇怪，抬脚叫做伸，绷脚叫做屈。在平卧放松的状态，踝关节并不是90度的，而是脚尖更远，这时候脚背面和小腿前侧的肌肉是处于拉伸的状态。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-05-07 16.16.35" src="https://i.loli.net/2019/05/07/5cd13efb2df3b.png"&gt;&lt;/p&gt;
-&lt;p&gt;右侧小腿，如果把从踝关节后面拉住的肌肉和足内部的肌肉去掉，剩下是主管抬脚足伸肌群：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;胫骨前肌 Tibialis Anterior Muscle&lt;/li&gt;
-&lt;li&gt;趾长伸肌 Extensor Digitorum Longus Muscle&lt;/li&gt;
-&lt;li&gt;踇长伸肌 Extensor Hallucis Longus Muscle&lt;/li&gt;
-&lt;li&gt;第三腓骨肌/腓外侧肌 Fibularis Tertius Muscle&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img alt="幻灯片5" src="https://i.loli.net/2019/05/07/5cd148bf62096.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;其中Extensor Hallucis Longus Muscle的止点就在腓骨的中部
-&lt;img alt="幻灯片6" src="https://i.loli.net/2019/05/07/5cd14a3b060df.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="未命名.2019-05-07 16_55_03" src="https://i.loli.net/2019/05/07/5cd1482b66ae4.gif"&gt;)&lt;/p&gt;
-&lt;p&gt;我现在高度怀疑是它的肌肉止点附近有损伤。&lt;/p&gt;
-&lt;p&gt;这个链条是这样的：&lt;/p&gt;
-&lt;p&gt;平卧-&amp;gt;踝关节曲-&amp;gt;伸肌拉长-&amp;gt;收缩时牵扯肌肉止点-&amp;gt;牵扯腓骨骨膜-&amp;gt;疼痛&lt;/p&gt;
-&lt;p&gt;对于睡眠状态，这个肌肉拉伸的状态保持更久，所以在翻身或者有肌肉收缩时，会对腓骨骨膜有更大的刺激。而当起身站立之后，足伸肌群处于相对放松的状态，于是直立活动后反而疼痛会有所缓解。&lt;/p&gt;
-&lt;p&gt;因此，现在我的处理方式是：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;平卧时，利用护踝保持踝关节伸位&lt;/li&gt;
-&lt;li&gt;抬高患肢高于心脏休息&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;当病人说的是“夜间睡眠时疼痛加重，白天活动后缓解”，他的实际意思是“长时间平卧踝关节屈曲时疼痛加重，直立踝关节伸位时疼痛缓解”。&lt;/p&gt;
-&lt;p&gt;这还是医学专业病人自己的症状描述，非专业的病人还不知道要说成是什么样子。&lt;/p&gt;
-&lt;p&gt;但愿今晚能睡个好觉。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;次日晨起更新：&lt;/p&gt;
-&lt;p&gt;仅仅用护踝固定还是不够的，护踝在脚底面的距离太短，在运动中，因为有体重的压力，将踝关节控制在90度不需要很大的力，但在平卧时护踝脚底面承受的压力则太大，导致足弓很不舒服。&lt;/p&gt;
-&lt;p&gt;咨询了同学，应该用“夜靴”，在淘宝上直接搜夜靴会找到一堆夜店穿的靴子，正确的关键词是“夜靴+医”，大概就是一个靴子，鞋尖和鞋帮用弹力绷带连起来。构成一个直角三角形，一个边是鞋底/脚底，一个边是鞋帮/小腿背侧，斜边是弹力绷带。&lt;/p&gt;
-&lt;p&gt;经过工程拆解后，可以找到它的等效解：一个位于脚底的边，一个位于脚后跟到小腿背侧的硬边，两个边的连接点，和一个弹力绷带。&lt;/p&gt;
-&lt;p&gt;所以我昨天晚上用护踝+护腿板搭了一个，
-&lt;img alt="未命名" src="https://i.loli.net/2019/05/08/5cd23315c4599.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;早起想更明白了一点，其实用拖鞋和护腿板搭建会更好。&lt;/p&gt;
-&lt;h2&gt;实验结果：&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;昨天晚上睡了个好觉！&lt;/strong&gt;
-单点非盲实验，没有统计学意义。&lt;/p&gt;
-&lt;p&gt;考虑修正第一诊断为：&lt;/p&gt;
-&lt;p&gt;踇长伸肌腓骨止点软组织损伤&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/case-report/</guid><pubDate>Tue, 07 May 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;哦，忘了放上&lt;a href="https://www.thingiverse.com/thing:3615893"&gt;模型的链接&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</guid><pubDate>Wed, 08 May 2019 04:00:00 GMT</pubDate></item></channel></rss>

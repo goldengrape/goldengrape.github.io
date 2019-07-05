@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 07 May 2019 09:21:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>全自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OK, 完成了自动为PowerPoint幻灯片配音的python3程序. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2019 07:23:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>根据字幕做视频摘要续集</title><link>https://goldengrape.github.io/posts/python/video_keynote_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我又继续做奇怪的小工具了。上一次做完了&lt;a href="https://goldengrape.github.io/posts/python/video_keynote/"&gt;根据字幕做视频摘要&lt;/a&gt;之后，仍然不太满意，因为那个工具只是面向youtube的，对于本地的视频，或者是下载到本地的视频课程，仍然不够好用。所以我做了一些修改，已经&lt;a href="https://github.com/goldengrape/video_keynotes"&gt;发布到了github上&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;现在可以先通过&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;下载整个课程，然后再通过字幕划出重点，生成复习用的视频摘要。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;使用&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;需先下载课程视频和字幕文件&lt;ul&gt;
+&lt;li&gt;coursera上的课程可以使用&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;进行下载。注意其中的&lt;a href="https://github.com/coursera-dl/coursera-dl#china-issues"&gt;china-issues&lt;/a&gt;, 可能需要通过VPN才能正常访问国际互联网。&lt;ul&gt;
+&lt;li&gt;使用coursera-dl下载出现"HTTPError:400"问题，请参考&lt;a href="https://github.com/coursera-dl/coursera-dl/issues/702#issuecomment-506929946"&gt;此解决方案&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Youtube上的课程，例如OCW，可以使用&lt;a href="https://rg3.github.io/youtube-dl/"&gt;youtube-dl&lt;/a&gt;进行下载。注意需要将对应的字幕也下载下来&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;将字幕文件处理成txt脚本&lt;ul&gt;
+&lt;li&gt;处理单个文件：&lt;code&gt;python sub2txt.py -i &amp;lt;subtitle file name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;处理整个目录：&lt;code&gt;python sub2txt.py -p &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;手动编辑txt脚本，将你认为不重要的部分删除后保存，尽量不要修改txt文件名&lt;/li&gt;
+&lt;li&gt;按编辑后的txt脚本剪辑视频课程：&lt;ul&gt;
+&lt;li&gt;处理单个文件：&lt;code&gt;python clip_by_txt.py -t &amp;lt;txt file&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;处理整个目录：&lt;code&gt;python clip_by_txt.py -p &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;剪辑完成的视频将以summary_开头，存储在视频课程原位，并且附带有srt的字幕。&lt;/p&gt;
+&lt;h2&gt;Demo&lt;/h2&gt;
+&lt;p&gt;这是一个剪辑自coursera上的learning how to learn课程第一周第一课&lt;a href="https://www.coursera.org/learn/learning-how-to-learn/lecture/75EsZ/introduction-to-the-focused-and-diffuse-modes"&gt;introduction-to-the-focused-and-diffuse-modes&lt;/a&gt; &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/embed/UjkYY6HUSyY"&gt;Youtube视频&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;其他&lt;/h2&gt;
+&lt;p&gt;似乎用来剪辑电影也会很方便吧。&lt;/p&gt;
+&lt;p&gt;说到剪辑电影，我还发现了一个有趣的工具&lt;a href="https://antiboredom.github.io/videogrep/"&gt;videogrep&lt;/a&gt;，与我做的工具类似，但他是在字幕中检索关键词或者使用正则表达式来检索，效果惊艳：
+&lt;a href="https://www.youtube.com/watch?v=PQMzOUeprlk"&gt;All the instances of the phrase “time” in the movie “In Time”&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/video_keynote_2/</guid><pubDate>Fri, 05 Jul 2019 04:00:00 GMT</pubDate></item><item><title>全自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OK, 完成了自动为PowerPoint幻灯片配音的python3程序. &lt;/p&gt;
 &lt;p&gt;提取每一页幻灯片中的备注, 使用语音合成(Text-To-Speech, TTS)产生配音, 并将配音音频插入到幻灯片中. 如果在PowerPoint/ Keyote中导出成视频, 可以产生自动配演讲解的视频.&lt;/p&gt;
 &lt;p&gt;当前仅仅支持mac OS.&lt;/p&gt;
 &lt;p&gt;项目页面在&lt;a href="https://github.com/goldengrape/dubbing-pptx"&gt;https://github.com/goldengrape/dubbing-pptx&lt;/a&gt;&lt;/p&gt;
