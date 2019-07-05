@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-07-04T07:18:00Z</lastmod>
+  <lastmod>2019-07-05T07:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -199,7 +199,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-13.html</loc>
-  <lastmod>2019-07-04T07:18:00Z</lastmod>
+  <lastmod>2019-07-05T07:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -760,6 +760,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/video_keynote/</loc>
   <lastmod>2019-03-25T04:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/video_keynote_2/</loc>
+  <lastmod>2019-07-05T07:22:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/worldbank-data-cleaner/</loc>
