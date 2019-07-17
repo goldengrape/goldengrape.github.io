@@ -22,9 +22,10 @@
 ![](https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/comparison-of-the-css_0.jpg)
 图片来自https://www.battlefields.org/learn/galleries/battle-hampton-roads
 
-CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首位有很多门炮。而USS Monitor有一个可以旋转的炮台。
+CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首尾有很多门炮。而USS Monitor有一个可以旋转的炮台。
 
 一条战舰需要满足两个功能：
+
 * 调整航行方向
 * 调整炮击方向
 
