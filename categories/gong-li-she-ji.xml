@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 公理设计)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/gong-li-she-ji.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 Jul 2019 16:54:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（2）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好，虽然在后续的语境中确实好用，但复习笔记中还是以平实的语言描述比较好。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;有四个域（Domain）：&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;ul&gt;
+&lt;li&gt;CNs：Customer Needs，&lt;ul&gt;
+&lt;li&gt;客户需求。&lt;/li&gt;
+&lt;li&gt;客户域&lt;/li&gt;
+&lt;li&gt;就是客户描述的一大堆自然语言也说不清楚的事情，什么高端大气上档次之类的东西。&lt;/li&gt;
+&lt;li&gt;What adds value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;FRs：Functional Requirements，&lt;ul&gt;
+&lt;li&gt;功能需求。&lt;/li&gt;
+&lt;li&gt;功能域&lt;/li&gt;
+&lt;li&gt;从CNs域到FRs域的变换，就是把客户漫无边际的需求翻译成一些可定量的参数，比如战舰控制系统的FR有二：1）控制航行方向。2）控制开炮方向。&lt;/li&gt;
+&lt;li&gt;What it does&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;DPs：Design Parameters，&lt;ul&gt;
+&lt;li&gt;设计参数。&lt;/li&gt;
+&lt;li&gt;物理域&lt;/li&gt;
+&lt;li&gt;实现FRs的物理参数，比如航向控制器和炮塔控制器。&lt;/li&gt;
+&lt;li&gt;What it looks like&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;PVs：Process Variables，&lt;ul&gt;
+&lt;li&gt;过程变量。&lt;/li&gt;
+&lt;li&gt;过程域&lt;/li&gt;
+&lt;li&gt;没细说，大概是如何实现DPs&lt;/li&gt;
+&lt;li&gt;How you make it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这四个域里，最重要的是FRs（功能需求）到DPs（设计参数）的映射。 （考虑到我一向憎恶缩写，我会在每一个FRs后面都写上功能需求四个字）&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;FRs（功能需求）会有很多啦，可以写成&lt;/p&gt;
+$$
+FRs=
+\begin{bmatrix}FR_1 
+\\ FR_2
+\\ ...
+\\ FR_n
+\end{bmatrix}
+$$&lt;p&gt;类似的，能够达成FRs（功能需求）的DPs（设计参数）也有很多，可以写成&lt;/p&gt;
+$$
+DPs=
+\begin{bmatrix}DP_1 
+\\ DP_2
+\\ ...
+\\ DP_m
+\end{bmatrix}
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;于是，DPs（设计参数）实现FRs（功能需求）这件事情，就可以写成矩阵乘法的形式
+$$
+FRs=A \times DPs
+$$
+或者说：
+$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\\ ...
+\\ FR_n
+\end{bmatrix}=
+\begin{bmatrix}A_{11} &amp;amp; A_{12} &amp;amp; ... &amp;amp; A_{1m}
+\\ A_{21} &amp;amp;  A_{22} &amp;amp; ... &amp;amp; A_{2m}
+\\ ...
+\\ A_{n1} &amp;amp;  A_{n2} &amp;amp; ... &amp;amp; A_{nm}
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\\ DP_2
+\\ ...
+\\ DP_m
+\end{bmatrix}
+$$&lt;/p&gt;
+&lt;p&gt;当然，不一定是线性的，那工科标准做法就是就求导，反正在小量范围内可以近似成线性的。其实还是类似上面的矩阵，只不过带上了偏导符号而已，还不如原来看得清楚，所以后面就按线性近似来说了。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;然后，华丽丽的矩阵写好以后，其实我们不关心$A_{ij}$的系数具体是怎样的，只关心是否为0，如果不是0，就画个x。
+比如USS Monitor号上的情况。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$FR_1$（功能需求1）：调整航向&lt;/li&gt;
+&lt;li&gt;$FR_2$（功能需求2）：调整开炮方向&lt;/li&gt;
+&lt;li&gt;$DP_1$（设计参数1）：船舵&lt;/li&gt;
+&lt;li&gt;$DP_2$（设计参数1）：旋转炮塔&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\end{bmatrix}=
+\begin{bmatrix}A_{11} &amp;amp;  A_{12}
+\\ A_{21} &amp;amp;  A_{22}
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\\ DP_2
+\end{bmatrix}
+$$$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\end{bmatrix}=
+\begin{bmatrix}X &amp;amp;  0
+\\ X &amp;amp;  X
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\\ DP_2
+\end{bmatrix}
+$$&lt;p&gt;其中转动船舵的时候，船会转向，所以$A_{11}$这里是X，同时船身上的炮塔也跟着船一起转向，所以也影响开炮方向$FR_2$，因此$A_{21}$也是X。
+而在旋转炮塔的时候，不影响船的航行方向，所以$A_{12}$这里是0。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="好的设计"&gt;好的设计&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/#%E5%A5%BD%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;一个好的设计是什么呢？&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先FRs（功能需求）的数量N，应当等于DPs(设计参数）的数量M。&lt;/li&gt;
+&lt;li&gt;每一个FR（功能需求）有且只有一个DP（设计参数）来调整。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是A矩阵应当是一个对角矩阵，也就是说：&lt;/p&gt;
+$$
+A=\begin{bmatrix}
+X &amp;amp; 0 &amp;amp; ... &amp;amp; 0
+\\ 0 &amp;amp;  X &amp;amp; ... &amp;amp; 0
+\\ ...
+\\ 0 &amp;amp;  0 &amp;amp; ... &amp;amp; X
+\end{bmatrix}
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="可行的设计"&gt;可行的设计&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/#%E5%8F%AF%E8%A1%8C%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A矩阵是一个三角形矩阵，如果按照调整顺序来规划DPs(设计参数），那么更确切的说，应当是上三角矩阵&lt;/p&gt;
+$$
+\mathbf{A}=\left[\begin{array}{ccccc}{X} &amp;amp; {} &amp;amp; {\cdots} &amp;amp; {} &amp;amp; {0} \\ {X} &amp;amp; {X} &amp;amp; {} &amp;amp; {(0)} &amp;amp; {} \\ {X} &amp;amp; {X} &amp;amp; {\ddots} &amp;amp; {} &amp;amp; {\vdots} \\ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\ddots} &amp;amp; {} \\ {X} &amp;amp; {X} &amp;amp; {\dots} &amp;amp; {X} &amp;amp; {X}\end{array}\right]
+$$&lt;p&gt;在这种情况下，DPs(设计参数）仍然是可以一定程度decouple的，比如先调整船的航向，然后再调整炮塔的方向，但炮塔方向要先补偿船的转向，再加上需要旋转的角度。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="糟糕的设计"&gt;糟糕的设计&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/#%E7%B3%9F%E7%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A里面到处都是X，并且无法通过交换FRs（功能需求）和DPs（设计参数）的顺序来形成三角形矩阵。比如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;FRs（功能需求）的数量N，小于 DPs(设计参数）的数量M。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CSS Virginia号的情况就是这样，有2个FRs(功能需求）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$FR_1$（功能需求1）：调整航向&lt;/li&gt;
+&lt;li&gt;$FR_2$（功能需求2）：调整开炮方向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;但只有一个DP(设计参数）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$DP_1$（设计参数1）：船舵&lt;/li&gt;
+&lt;/ul&gt;
+$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\end{bmatrix}=
+\begin{bmatrix}X 
+\\ X 
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\end{bmatrix}
+$$&lt;p&gt;写不成三角矩阵&lt;/p&gt;
+&lt;p&gt;于是只好靠装甲厚实扛打&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</guid><pubDate>Wed, 17 Jul 2019 14:00:00 GMT</pubDate></item><item><title>公理设计笔记（1）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个夏日的上午，我在图书馆里闲逛（据@cxqn 说这是有闲阶级才能做的事情），偶遇一本&lt;a href="https://book.douban.com/subject/1238993/"&gt;《公理设计》&lt;/a&gt;，看书名觉得好奇于是拿出来翻了翻，觉得内容不错。网上还可以找到一篇文献&lt;a href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;amp;id=40989"&gt;《公理设计理论及其应用》&lt;/a&gt; 做了一些基本介绍。&lt;/p&gt;
+&lt;p&gt;但看起来这是一门课了，所以估计会有公开课来讲解。于是上网搜了一下，还真是找到了&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UlhdIfsFaezkHWbofX7Blj"&gt;MFE 594 An Introduction to Axiomatic Design&lt;/a&gt;，有4节课，大约一共4个多小时，花了两天看完，再回来翻翻书，有一些收获，决定写一点笔记。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;首先从1862年11月13日的&lt;a href="https://www.history.com/this-day-in-history/u-s-s-monitor-battles-c-s-s-virginia"&gt;一场海战&lt;/a&gt;讲起。这场海战“标志着蒸汽动力铁甲舰新时代的到来。”&lt;/p&gt;
+&lt;p&gt;南方C.S.S的Virginia号战舰，体型庞大，非常凶悍。已经击沉了两艘联邦军舰。北方U.S.S派出了Monitor号，一艘小得多的军舰。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/comparison-of-the-css_0.jpg"&gt;
+图片来自https://www.battlefields.org/learn/galleries/battle-hampton-roads&lt;/p&gt;
+&lt;p&gt;CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首尾有很多门炮。而USS Monitor有一个可以旋转的炮台。&lt;/p&gt;
+&lt;p&gt;一条战舰需要满足两个功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调整航行方向&lt;/li&gt;
+&lt;li&gt;调整炮击方向&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于CSS Virginia，这两个功能需求是“耦合”couple 的，要改变炮击方向，就需要将船只转向。而对于USS Monitor，这两个功能需求则是“解耦合”decouple 的，航行方向与炮击方向无关，炮击方向可以独立调整。&lt;/p&gt;
+&lt;p&gt;于是Monitor一直尽量守在Virginia的射击死角攻击，而Virginia则必须不断绕开，于是就不断绕圈。这两条船打了4个小时，Virginia撤退了。&lt;/p&gt;
+&lt;p&gt;这是视频公开课上老师讲的一个有趣的例子。&lt;/p&gt;
+&lt;p&gt;可以引出设计公理的第一条：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;满足功能需求（Functional Requirements, FRs)的参数设计（Design Parameter, DPs) 应当要解耦合（decouple）&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item></channel></rss>

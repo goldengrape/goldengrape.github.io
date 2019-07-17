@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>公理设计笔记（2） | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../axiomatic_design_note_1/" title="公理设计笔记（1）" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="公理设计笔记（2）">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/">
+<meta property="og:description" content="如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好，虽然在后续的语境中确实好用，但复习笔记中还是以平实的语言描述比较好。
+
+
+
+
+
+
+
+有四个域（Domain）：
+
+
+
+
+
+
+
+
+CNs：Customer Needs，
+客户需求。
+客户域
+就是客户描述的一大堆自然语言也说不清楚的事情，什么高端大气上档次之类的东西。
+What adds value
+
+
+FRs：Fun">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-07-17T22:00:00+08:00">
+<meta property="article:tag" content="公理设计">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">公理设计笔记（2）</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-07-17T22:00:00+08:00" itemprop="datePublished" title="2019-07-17 22:00">2019-07-17 22:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好，虽然在后续的语境中确实好用，但复习笔记中还是以平实的语言描述比较好。</p>
+<!-- TEASER_END -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>有四个域（Domain）：</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>CNs：Customer Needs，<ul>
+<li>客户需求。</li>
+<li>客户域</li>
+<li>就是客户描述的一大堆自然语言也说不清楚的事情，什么高端大气上档次之类的东西。</li>
+<li>What adds value</li>
+</ul>
+</li>
+<li>FRs：Functional Requirements，<ul>
+<li>功能需求。</li>
+<li>功能域</li>
+<li>从CNs域到FRs域的变换，就是把客户漫无边际的需求翻译成一些可定量的参数，比如战舰控制系统的FR有二：1）控制航行方向。2）控制开炮方向。</li>
+<li>What it does</li>
+</ul>
+</li>
+<li>DPs：Design Parameters，<ul>
+<li>设计参数。</li>
+<li>物理域</li>
+<li>实现FRs的物理参数，比如航向控制器和炮塔控制器。</li>
+<li>What it looks like</li>
+</ul>
+</li>
+<li>PVs：Process Variables，<ul>
+<li>过程变量。</li>
+<li>过程域</li>
+<li>没细说，大概是如何实现DPs</li>
+<li>How you make it</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这四个域里，最重要的是FRs（功能需求）到DPs（设计参数）的映射。 （考虑到我一向憎恶缩写，我会在每一个FRs后面都写上功能需求四个字）</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>FRs（功能需求）会有很多啦，可以写成</p>
+$$
+FRs=
+\begin{bmatrix}FR_1 
+\\ FR_2
+\\ ...
+\\ FR_n
+\end{bmatrix}
+$$<p>类似的，能够达成FRs（功能需求）的DPs（设计参数）也有很多，可以写成</p>
+$$
+DPs=
+\begin{bmatrix}DP_1 
+\\ DP_2
+\\ ...
+\\ DP_m
+\end{bmatrix}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>于是，DPs（设计参数）实现FRs（功能需求）这件事情，就可以写成矩阵乘法的形式
+$$
+FRs=A \times DPs
+$$
+或者说：
+$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\\ ...
+\\ FR_n
+\end{bmatrix}=
+\begin{bmatrix}A_{11} &amp; A_{12} &amp; ... &amp; A_{1m}
+\\ A_{21} &amp;  A_{22} &amp; ... &amp; A_{2m}
+\\ ...
+\\ A_{n1} &amp;  A_{n2} &amp; ... &amp; A_{nm}
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\\ DP_2
+\\ ...
+\\ DP_m
+\end{bmatrix}
+$$</p>
+<p>当然，不一定是线性的，那工科标准做法就是就求导，反正在小量范围内可以近似成线性的。其实还是类似上面的矩阵，只不过带上了偏导符号而已，还不如原来看得清楚，所以后面就按线性近似来说了。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>然后，华丽丽的矩阵写好以后，其实我们不关心$A_{ij}$的系数具体是怎样的，只关心是否为0，如果不是0，就画个x。
+比如USS Monitor号上的情况。</p>
+<ul>
+<li>$FR_1$（功能需求1）：调整航向</li>
+<li>$FR_2$（功能需求2）：调整开炮方向</li>
+<li>$DP_1$（设计参数1）：船舵</li>
+<li>$DP_2$（设计参数1）：旋转炮塔</li>
+</ul>
+$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\end{bmatrix}=
+\begin{bmatrix}A_{11} &amp;  A_{12}
+\\ A_{21} &amp;  A_{22}
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\\ DP_2
+\end{bmatrix}
+$$$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\end{bmatrix}=
+\begin{bmatrix}X &amp;  0
+\\ X &amp;  X
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\\ DP_2
+\end{bmatrix}
+$$<p>其中转动船舵的时候，船会转向，所以$A_{11}$这里是X，同时船身上的炮塔也跟着船一起转向，所以也影响开炮方向$FR_2$，因此$A_{21}$也是X。
+而在旋转炮塔的时候，不影响船的航行方向，所以$A_{12}$这里是0。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="好的设计">好的设计<a class="anchor-link" href="#%E5%A5%BD%E7%9A%84%E8%AE%BE%E8%AE%A1">¶</a>
+</h2>
+<p>一个好的设计是什么呢？</p>
+<ul>
+<li>首先FRs（功能需求）的数量N，应当等于DPs(设计参数）的数量M。</li>
+<li>每一个FR（功能需求）有且只有一个DP（设计参数）来调整。</li>
+</ul>
+<p>就是A矩阵应当是一个对角矩阵，也就是说：</p>
+$$
+A=\begin{bmatrix}
+X &amp; 0 &amp; ... &amp; 0
+\\ 0 &amp;  X &amp; ... &amp; 0
+\\ ...
+\\ 0 &amp;  0 &amp; ... &amp; X
+\end{bmatrix}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="可行的设计">可行的设计<a class="anchor-link" href="#%E5%8F%AF%E8%A1%8C%E7%9A%84%E8%AE%BE%E8%AE%A1">¶</a>
+</h2>
+<p>A矩阵是一个三角形矩阵，如果按照调整顺序来规划DPs(设计参数），那么更确切的说，应当是上三角矩阵</p>
+$$
+\mathbf{A}=\left[\begin{array}{ccccc}{X} &amp; {} &amp; {\cdots} &amp; {} &amp; {0} \\ {X} &amp; {X} &amp; {} &amp; {(0)} &amp; {} \\ {X} &amp; {X} &amp; {\ddots} &amp; {} &amp; {\vdots} \\ {\vdots} &amp; {\vdots} &amp; {\ddots} &amp; {\ddots} &amp; {} \\ {X} &amp; {X} &amp; {\dots} &amp; {X} &amp; {X}\end{array}\right]
+$$<p>在这种情况下，DPs(设计参数）仍然是可以一定程度decouple的，比如先调整船的航向，然后再调整炮塔的方向，但炮塔方向要先补偿船的转向，再加上需要旋转的角度。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="糟糕的设计">糟糕的设计<a class="anchor-link" href="#%E7%B3%9F%E7%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1">¶</a>
+</h2>
+<p>A里面到处都是X，并且无法通过交换FRs（功能需求）和DPs（设计参数）的顺序来形成三角形矩阵。比如：</p>
+<ul>
+<li>FRs（功能需求）的数量N，小于 DPs(设计参数）的数量M。</li>
+</ul>
+<p>CSS Virginia号的情况就是这样，有2个FRs(功能需求）</p>
+<ul>
+<li>$FR_1$（功能需求1）：调整航向</li>
+<li>$FR_2$（功能需求2）：调整开炮方向</li>
+</ul>
+<p>但只有一个DP(设计参数）</p>
+<ul>
+<li>$DP_1$（设计参数1）：船舵</li>
+</ul>
+$$
+\begin{bmatrix}FR_1 
+\\ FR_2
+\end{bmatrix}=
+\begin{bmatrix}X 
+\\ X 
+\end{bmatrix}
+\begin{bmatrix}DP_1 
+\end{bmatrix}
+$$<p>写不成三角矩阵</p>
+<p>于是只好靠装甲厚实扛打</p>
+
+</div>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/gong-li-she-ji/" rel="tag">公理设计</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../axiomatic_design_note_1/" rel="prev" title="公理设计笔记（1）">上一篇文章</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

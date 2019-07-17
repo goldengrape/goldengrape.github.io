@@ -2,7 +2,7 @@
 .. title: 公理设计笔记（1）
 .. slug: axiomatic_design_note_1
 .. date: 2019-07-17 18:00 UTC+08:00
-.. tags: 设计
+.. tags: 公理设计
 .. category: 
 .. link:
 .. description:
