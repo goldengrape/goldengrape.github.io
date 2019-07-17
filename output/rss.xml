@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 13 Jul 2019 16:39:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>急诊儿童外伤缝合经验一则</title><link>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;整理网盘，发现很久很久以前我当医生时写的一则经验总结，很有趣。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 Jul 2019 13:31:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（1）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个夏日的上午，我在图书馆里闲逛（据@cxqn 说这是有闲阶级才能做的事情），偶遇一本&lt;a href="https://book.douban.com/subject/1238993/"&gt;《公理设计》&lt;/a&gt;，看书名觉得好奇于是拿出来翻了翻，觉得内容不错。网上还可以找到一篇文献&lt;a href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;amp;id=40989"&gt;《公理设计理论及其应用》&lt;/a&gt; 做了一些基本介绍。&lt;/p&gt;
+&lt;p&gt;但看起来这是一门课了，所以估计会有公开课来讲解。于是上网搜了一下，还真是找到了&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UlhdIfsFaezkHWbofX7Blj"&gt;MFE 594 An Introduction to Axiomatic Design&lt;/a&gt;，有4节课，大约一共4个多小时，花了两天看完，再回来翻翻书，有一些收获，决定写一点笔记。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;首先从1862年11月13日的&lt;a href="https://www.history.com/this-day-in-history/u-s-s-monitor-battles-c-s-s-virginia"&gt;一场海战&lt;/a&gt;讲起。这场海战“标志着蒸汽动力铁甲舰新时代的到来。”&lt;/p&gt;
+&lt;p&gt;南方C.S.S的Virginia号战舰，体型庞大，非常凶悍。已经击沉了两艘联邦军舰。北方U.S.S派出了Monitor号，一艘小得多的军舰。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/comparison-of-the-css_0.jpg"&gt;
+图片来自https://www.battlefields.org/learn/galleries/battle-hampton-roads&lt;/p&gt;
+&lt;p&gt;CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首位有很多门炮。而USS Monitor有一个可以旋转的炮台。&lt;/p&gt;
+&lt;p&gt;一条战舰需要满足两个功能：
+&lt;em&gt; 调整航行方向
+&lt;/em&gt; 调整炮击方向&lt;/p&gt;
+&lt;p&gt;对于CSS Virginia，这两个功能需求是“耦合”couple 的，要改变炮击方向，就需要将船只转向。而对于USS Monitor，这两个功能需求则是“解耦合”decouple 的，航行方向与炮击方向无关，炮击方向可以独立调整。&lt;/p&gt;
+&lt;p&gt;于是Monitor一直尽量守在Virginia的射击死角攻击，而Virginia则必须不断绕开，于是就不断绕圈。这两条船打了4个小时，Virginia撤退了。&lt;/p&gt;
+&lt;p&gt;这是视频公开课上老师讲的一个有趣的例子。&lt;/p&gt;
+&lt;p&gt;可以引出设计公理的第一条：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;满足功能需求（Functional Requirements, FRs)的参数设计（Design Parameter, DPs) 应当要解耦合（decouple）&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item><item><title>急诊儿童外伤缝合经验一则</title><link>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;整理网盘，发现很久很久以前我当医生时写的一则经验总结，很有趣。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;总结一下急诊儿童缝合：
 &lt;!-- TEASER_END --&gt;&lt;/p&gt;
@@ -1966,21 +1984,4 @@ conda install pytorch torchvision -c soumith --yes
 &lt;p&gt;ps.
 如果你在本地计算机上安装了jupyter, 非常推荐下面这个插件, 能够在保存jupyter文件的时候, 同时保存同名的 .html 和 .py 形式的文件. 这样在其他的python程序中导入自己写的函数会非常方便. 也很容易在github page上发布文档.&lt;/p&gt;
 &lt;p&gt;&lt;a href="http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html"&gt;http://protips.maxmasnick.com/ipython-notebooks-automatically-export-py-and-html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;EOF()&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</guid><pubDate>Sat, 18 May 2019 04:00:00 GMT</pubDate></item><item><title>齿条绘制</title><link>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学会了绘制齿条rack。就是和齿轮配合，将圆周运动变换成直线运动的结构。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="rack" src="https://i.loli.net/2019/05/12/5cd767b4bdd0f.jpg"&gt;&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;有一个&lt;a href="https://knowledge.autodesk.com/support/fusion-360/learn-explore/caas/screencast/Main/Details/a7992d99-5d4d-48c2-b971-a86ba3014608.html"&gt;fusion360官方制作教程参考&lt;/a&gt;，但是我觉得绘制过程太麻烦。而且在实际使用中，要真实确定齿条和齿轮的具体位置，否则其他支架不好安装。&lt;/p&gt;
-&lt;p&gt;所以自己学习了一下齿轮的知识，齿轮的主要参数有3个：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;module：模数，这个描述了齿的大小&lt;/li&gt;
-&lt;li&gt;齿数：很好理解，一圈有多少个齿&lt;/li&gt;
-&lt;li&gt;压力角：也就是齿轮上每个齿的斜边角度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;module x 齿数 = 齿轮的“分度圆”直径&lt;/p&gt;
-&lt;p&gt;关于齿轮和齿条的知识，强烈推荐小原齿轮工业株式会社(暨KHK株式会社)制作的&lt;a href="https://khkgears.net/china/gearknowledge/index.html"&gt;《齿轮设计所需的齿轮基础知识》&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;这种在日常生活中无处不在，却又隐藏在后台，完全不懂也不影响工作学习生活的，无比有用又非常无用的知识，非常酷。&lt;/p&gt;
-&lt;p&gt;画齿条的原理：&lt;/p&gt;
-&lt;p&gt;两个齿轮之间的是按齿轮的“分度圆”来接触的，比如两个完全相等的齿轮互相咬合时，圆心相当于在分度圆的切线上是对称的。&lt;/p&gt;
-&lt;p&gt;如果把齿条看作一个直径无穷大的齿轮，那么也是以分度圆的切线作为对称线，将一个齿镜像即可。这就是画图的原理。&lt;/p&gt;
-&lt;p&gt;详细步骤请参考我放在SlideShare上的&lt;a href="https://www.slideshare.net/goldengrape/draw-a-rack-with-fusion-360"&gt;幻灯&lt;/a&gt;。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</guid><pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;EOF()&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</guid><pubDate>Sat, 18 May 2019 04:00:00 GMT</pubDate></item></channel></rss>
