@@ -47,7 +47,7 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_posts.xml</loc>
-  <lastmod>2019-07-17T14:48:00Z</lastmod>
+  <lastmod>2019-07-17T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_python.xml</loc>
@@ -76,6 +76,10 @@
  <sitemap>
   <loc>https://goldengrape.github.io/categories/fa-ming.xml</loc>
   <lastmod>2019-05-07T09:20:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://goldengrape.github.io/categories/gong-li-she-ji.xml</loc>
+  <lastmod>2019-07-17T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/iol.xml</loc>
@@ -163,10 +167,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2019-07-17T14:48:00Z</lastmod>
+  <lastmod>2019-07-17T15:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2019-07-17T14:48:00Z</lastmod>
+  <lastmod>2019-07-17T15:59:00Z</lastmod>
  </sitemap>
 </sitemapindex>
