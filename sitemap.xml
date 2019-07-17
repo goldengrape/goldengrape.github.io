@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-07-13T16:37:00Z</lastmod>
+  <lastmod>2019-07-17T11:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2019-06-27T11:39:00Z</lastmod>
+  <lastmod>2019-07-17T11:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -162,6 +162,10 @@
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/she-ji/</loc>
+  <lastmod>2019-07-17T11:58:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/sheng-huo-fang-shi/</loc>
   <lastmod>2018-01-14T17:08:00Z</lastmod>
  </url>
@@ -199,7 +203,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-13.html</loc>
-  <lastmod>2019-07-13T16:37:00Z</lastmod>
+  <lastmod>2019-07-17T11:58:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -360,6 +364,14 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</loc>
   <lastmod>2018-08-26T03:18:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note/</loc>
+  <lastmod>2019-07-17T11:58:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</loc>
+  <lastmod>2019-07-17T13:06:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/brush-pen-research-0/</loc>

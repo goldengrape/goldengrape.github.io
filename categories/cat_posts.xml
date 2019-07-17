@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 27 Jun 2019 11:38:29 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 17 Jul 2019 13:31:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（1）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个夏日的上午，我在图书馆里闲逛（据@cxqn 说这是有闲阶级才能做的事情），偶遇一本&lt;a href="https://book.douban.com/subject/1238993/"&gt;《公理设计》&lt;/a&gt;，看书名觉得好奇于是拿出来翻了翻，觉得内容不错。网上还可以找到一篇文献&lt;a href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;amp;id=40989"&gt;《公理设计理论及其应用》&lt;/a&gt; 做了一些基本介绍。&lt;/p&gt;
+&lt;p&gt;但看起来这是一门课了，所以估计会有公开课来讲解。于是上网搜了一下，还真是找到了&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UlhdIfsFaezkHWbofX7Blj"&gt;MFE 594 An Introduction to Axiomatic Design&lt;/a&gt;，有4节课，大约一共4个多小时，花了两天看完，再回来翻翻书，有一些收获，决定写一点笔记。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;首先从1862年11月13日的&lt;a href="https://www.history.com/this-day-in-history/u-s-s-monitor-battles-c-s-s-virginia"&gt;一场海战&lt;/a&gt;讲起。这场海战“标志着蒸汽动力铁甲舰新时代的到来。”&lt;/p&gt;
+&lt;p&gt;南方C.S.S的Virginia号战舰，体型庞大，非常凶悍。已经击沉了两艘联邦军舰。北方U.S.S派出了Monitor号，一艘小得多的军舰。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/comparison-of-the-css_0.jpg"&gt;
+图片来自https://www.battlefields.org/learn/galleries/battle-hampton-roads&lt;/p&gt;
+&lt;p&gt;CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首位有很多门炮。而USS Monitor有一个可以旋转的炮台。&lt;/p&gt;
+&lt;p&gt;一条战舰需要满足两个功能：
+&lt;em&gt; 调整航行方向
+&lt;/em&gt; 调整炮击方向&lt;/p&gt;
+&lt;p&gt;对于CSS Virginia，这两个功能需求是“耦合”couple 的，要改变炮击方向，就需要将船只转向。而对于USS Monitor，这两个功能需求则是“解耦合”decouple 的，航行方向与炮击方向无关，炮击方向可以独立调整。&lt;/p&gt;
+&lt;p&gt;于是Monitor一直尽量守在Virginia的射击死角攻击，而Virginia则必须不断绕开，于是就不断绕圈。这两条船打了4个小时，Virginia撤退了。&lt;/p&gt;
+&lt;p&gt;这是视频公开课上老师讲的一个有趣的例子。&lt;/p&gt;
+&lt;p&gt;可以引出设计公理的第一条：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;满足功能需求（Functional Requirements, FRs)的参数设计（Design Parameter, DPs) 应当要解耦合（decouple）&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;有些是可变的，是变量，比如努力的程度、认真的程度，对待事情的态度……&lt;/li&gt;
 &lt;li&gt;有些是不可变的，或者在可观测的短时间内无法改变，是常量，比如性别、种族、成年以后的身高、父母、出生地、信仰、国籍……&lt;/li&gt;
@@ -394,30 +412,4 @@ I am.
 
 
 &lt;p&gt;引用自&amp;lt;&amp;lt;超人总动员2&amp;gt;&amp;gt; Incredibles 2 (2018)&lt;/p&gt;
-&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item><item><title>将书法导入成keynote形状</title><link>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己写的毛笔字仍然有诸多缺陷, 不过现代人的展示更多发生在幻灯片而不是宣纸上, 比如在做幻灯的时候用上自己写的字, 感觉很开心.&lt;/p&gt;
-&lt;p&gt;导入成Keynote形状以后, 多了许多后期调整的可能性. 很有意思.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2018-08-22 21.35.52" src="https://i.loli.net/2018/08/23/5b7e2d3ddb6f6.png"&gt;&lt;/p&gt;
-&lt;p&gt;先说说如何导入:&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;用手机上的&lt;a href="https://www.adobe.com/products/capture.html"&gt;adobe caputre&lt;/a&gt;拍摄, 简单修饰形状. 这个app在android和iOS上都有.&lt;/li&gt;
-&lt;li&gt;导出成SVG&lt;/li&gt;
-&lt;li&gt;发送到电脑上, 如果是iOS对mac可以很简单使用airdrop.&lt;/li&gt;
-&lt;li&gt;下载并安装 &lt;a href="https://www.christianholz.net/keynote_utilities.html#svg2keynote"&gt;SvgToKeynote&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;运行SvgToKeynote将SVG文件转换成keynote文件, 注意转换出来的是早期版本的keynote文件, 编辑或者存储时会提示升级, 升级就好了.&lt;/li&gt;
-&lt;li&gt;keynote文件内的图形就是“形状”了, 如果用右键点击可以出现“使可以编辑”, 就可以编辑顶点. 还可以“存储到我的形状”&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Keynote形状, 或者说Keynote shape的好处是可以进行逻辑运算, 能够将两个形状进行融合/ 交叉/ 减少/ 排除, 于是可以比较方便地拆分各个组件.&lt;/p&gt;
-&lt;p&gt;在书法, 可以用编辑顶点的方法修改笔画的细节, 比如笔锋, 牵丝。 还可以将各个笔势分离开来, 调整裹束, 也就是间架结构.&lt;/p&gt;
-&lt;p&gt;如果有处理SVG的专业软件, 当然直接处理可能会更简单一些.&lt;/p&gt;
-&lt;p&gt;对于PowerPoint, 需要升级到office 365以后, 能够有convert to shape功能, 但我买的不是, 所以无法处理SVG.&lt;/p&gt;
-&lt;p&gt;对于PowerPoint,  原来有三种“图像”:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;形状: 可以编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
-&lt;li&gt;图形: 不能编辑顶点, 可以改变填充颜色, 是矢量图&lt;/li&gt;
-&lt;li&gt;图片: 不能编辑顶点, 不能改变填充颜色, 是标量图&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;其中后两种在keynote里都作为图片处理. 在keynote中, 如果把文件导出成powerpoint文件, 那么形状-&amp;gt;形状, 如果是在keynote中复制, 到powerpoint中粘贴, 是形状-&amp;gt;图片.&lt;/p&gt;
-&lt;p&gt;sspai里这一篇&lt;a href="https://sspai.com/post/39238"&gt;文章&lt;/a&gt;说用Libre Office把SVG转换成keynote形状也可以. 不过Libre Office有200多M, 我懒得装了, 如果有一天SvgToKeynote失效了, 记着Libre Office可用.&lt;/p&gt;
-&lt;p&gt;如果直接使用书法字典(有很多网站)里面的位图图片, 用inkscape转换成SVG也不错. 而且用inkscape把adobe capture拍摄的SVG化简非常好用.&lt;/p&gt;&lt;/div&gt;</description><category>mac</category><guid>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</guid><pubDate>Thu, 23 Aug 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>
