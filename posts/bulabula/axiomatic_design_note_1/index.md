@@ -22,6 +22,16 @@
 ![](https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/comparison-of-the-css_0.jpg)
 图片来自https://www.battlefields.org/learn/galleries/battle-hampton-roads
 
+||USS Monitor|CSS Virginia| V : M|
+|:--|:--|:--|:--|
+|长度|173.00ft|262.75 ft|1.52|
+|宽度| 41.33 ft| 51.16 ft|1.24|
+|排水量|  987 tons|3,200 tons|3.25|
+|船员|52|350|6.73|
+|火炮|2|12|6|
+
+这个比例看起来就是大雄vs胖虎之战。
+
 CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首尾有很多门炮。而USS Monitor有一个可以旋转的炮台。
 
 一条战舰需要满足两个功能：
@@ -33,7 +43,7 @@ CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首�
 
 于是Monitor一直尽量守在Virginia的射击死角攻击，而Virginia则必须不断绕开，于是就不断绕圈。这两条船打了4个小时，Virginia撤退了。
 
-这是视频公开课上老师讲的一个有趣的例子。
+这是视频公开课上老师讲的一个有趣的例子。老师在课上讲解的时候说Virginia被Monitor给neutralize了，所谓[neutralize](https://www.vocabulary.com/dictionary/neutralize)，军事上解释为 make incapable of military action，丧失军事能力。但按照history.com的记录，Virginia只是撤退了，毕竟Monitor只有两门炮，而Virginia还有很厚的铁甲。但大雄把胖虎打到先撤退跑了，如果再来一艘结果就不一定了。
 
 可以引出设计公理的第一条：
 
