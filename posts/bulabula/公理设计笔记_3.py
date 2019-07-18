@@ -13,7 +13,7 @@
 # \end{bmatrix} DPs
 # $$
 # 
-# 或者至少形成矩阵：
+# 或者至少形成三角形矩阵：
 # $$
 # FRs=\begin{bmatrix}
 # X & 0 & ... & 0
@@ -23,7 +23,7 @@
 # \end{bmatrix} DPs
 # $$
 # 
-# 
+# <!-- TEASER_END -->
 
 # 实际过程中是分层级对FRs（功能需求）与DPs(设计参数）进行分解的。先从
 # 
