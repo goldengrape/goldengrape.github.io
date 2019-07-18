@@ -73,8 +73,7 @@ MathJax.Hub.Config({
             <p class="dateline"><a href="posts/bulabula/axiomatic_design_note_3/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-07-18T10:00:00+08:00" title="2019-07-18 10:00">2019-07-18 10:00</time></a></p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div>
-<div class="cell border-box-sizing text_cell rendered">
+    <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
@@ -89,7 +88,7 @@ X &amp; 0 &amp; ... &amp; 0
 \\ 0 &amp;  0 &amp; ... &amp; X
 \end{bmatrix} DPs
 $$</p>
-<p>或者至少形成矩阵：
+<p>或者至少形成三角形矩阵：
 $$
 FRs=\begin{bmatrix}
 X &amp; 0 &amp; ... &amp; 0
@@ -98,152 +97,7 @@ X &amp; 0 &amp; ... &amp; 0
 \\ 0 &amp;  X &amp; ... &amp; X
 \end{bmatrix} DPs
 $$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>实际过程中是分层级对FRs（功能需求）与DPs(设计参数）进行分解的。先从</p>
-$$
-\begin{bmatrix}
-FR_1
-\\ FR_2
-\end{bmatrix}
-=
-\begin{bmatrix}
-X &amp; 0 
-\\ X &amp;  X 
-\end{bmatrix} 
-\begin{bmatrix}
-DP_1
-\\ DP_2
-\end{bmatrix}
-$$<p>开始，</p>
-<p>然后再把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，变成类似这个意思：</p>
-$$
-\begin{bmatrix}
-\begin{bmatrix}
-FR_{1.1}
-\\ FR_{1.2}
-\end{bmatrix}
-\\ FR_2
-\end{bmatrix}
-=
-\begin{bmatrix}
-\begin{bmatrix}
-X &amp; 0
-\\ X &amp; X
-\end{bmatrix}&amp; 0 
-\\ X &amp;  X 
-\end{bmatrix} 
-\begin{bmatrix}
-\begin{bmatrix}
-DP_{1.1}
-\\ DP_{1.2}
-\end{bmatrix}
-\\ DP_2
-\end{bmatrix}
-$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>在拆分FRs（功能需求）的时候，要求是<a href="https://zh.wikipedia.org/zh-hans/MECE%E5%8E%9F%E5%88%99">MECE</a> min原则，也就是"不重复不漏项"并且总数尽量少。MECE := Mutually Exclusive Collectively Exhaustive，课程中使用的是CEME，可能商科里用MECE更多，反正一个意思。</p>
-<p>比如3D打印机的FR(功能需求)之一是要求在$FR_1$打印头空间内移动，那么就可以拆分成：</p>
-<ul>
-<li>$FR_{1.1}$ 在X轴方向移动</li>
-<li>$FR_{1.2}$ 在Y轴方向移动</li>
-<li>$FR_{1.3}$ 在Z轴方向移动</li>
-</ul>
-<p>这样的拆分方式显然是MECE的，当然也可以拆分成圆柱坐标系、球坐标系等等。不同的分解方式对应着不同的解决方案。</p>
-<p>对于DPs(设计参数)的拆分，目的是尽量形成对角矩阵，或者至少是三角形矩阵，那么就应当尽量让右上角的区域保持为0。而且在拆分DPs(设计参数)的时候，约束条件是继承的，比如$DP_1$是在中国建厂，那么$DP_{1.1},DP_{1.2}$就不能把工厂建立到越南去。</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>在实际操作中，拆分是一点一点来进行的。说叫ZigZag。</p>
-<p>先把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，拆分好$FR_1$（功能需求）以后，再去拆分$DP_1$(设计参数)，拆好了DPs(设计参数)以后，再返回来拆下一个$FR$（功能需求）</p>
-<p><img src="https://i.loli.net/2019/07/18/5d3030b9d457e37686.png" alt="屏幕快照 2019-07-18 16.40.58.png"></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>拆分过程可以用个电子表格来做，最好再弄成可折叠的，似乎有专用的软件可以画图，但不知道excel或者其他通用的简单工具有没有这样的功能。注意子节点上的相关性X，一定要表现在父节点上。比如检查时发现调整$DP_{2}$时$FR_{12}$也跟着变，那$DP_{2}$其实与$FR_1$就是耦合的，中间肯定在某个步骤出错了。</p>
-<table>
-<thead><tr>
-<th style="text-align:left">FRs</th>
-<th style="text-align:left">$DP_1$</th>
-<th style="text-align:left">$DP_{11}$</th>
-<th style="text-align:left">$DP_{12}$</th>
-<th style="text-align:left">$DP_{121}$</th>
-<th style="text-align:left">$DP_{122}$</th>
-<th style="text-align:left">$DP_{123}$</th>
-<th style="text-align:left">$DP_{2}$</th>
-</tr></thead>
-<tbody>
-<tr>
-<td style="text-align:left">$FR_1$</td>
-<td style="text-align:left">X</td>
-<td style="text-align:left">X</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">X</td>
-</tr>
-<tr>
-<td style="text-align:left">$FR_{11}$</td>
-<td style="text-align:left">$\space$</td>
-<td style="text-align:left">X</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-</tr>
-<tr>
-<td style="text-align:left">$FR_{12}$</td>
-<td style="text-align:left">$\space$</td>
-<td style="text-align:left">X</td>
-<td style="text-align:left">X</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">0</td>
-<td style="text-align:left">X</td>
-</tr>
-<tr>
-<td style="text-align:left">$FR_{121}$</td>
-</tr>
-<tr>
-<td style="text-align:left">$FR_{122}$</td>
-</tr>
-<tr>
-<td style="text-align:left">$FR_{123}$</td>
-</tr>
-<tr>
-<td style="text-align:left">$FR_{2}$</td>
-</tr>
-</tbody>
-</table>
-</div>
+<p class="more"><a href="posts/bulabula/axiomatic_design_note_3/">阅读更多…</a></p>
 </div>
 </div>
 </div>
@@ -259,7 +113,7 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好，虽然在后续的语境中确实好用，但复习笔记中还是以平实的语言描述比较好。</p>
+<p>如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好。</p>
 <p class="more"><a href="posts/bulabula/axiomatic_design_note_2/">阅读更多…</a></p>
 </div>
 </div>
