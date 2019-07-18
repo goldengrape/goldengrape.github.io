@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jul 2019 09:23:14 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（3）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jul 2019 13:34:35 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（4）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;所以“公理设计”，就是基于两个公理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;最大化功能模块的独立性&lt;/li&gt;
+&lt;li&gt;最小化信息量（～=最大化成功实施的可能性）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这样做的好处：&lt;/p&gt;
+&lt;h2 id="甲方总是善变的"&gt;甲方总是善变的&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/#%E7%94%B2%E6%96%B9%E6%80%BB%E6%98%AF%E5%96%84%E5%8F%98%E7%9A%84"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;客户需求就是用来不断改变的，就是用来不断折腾乙方的，因为甲方通常也不知道到底要什么，得折腾几次试试看，才能明确目标。如果把搜索引擎看作是乙方，这跟搜索个信息是一样的，搜索就是个学习的过程，一开始的时候往往我也不知道搜索什么，搜几个词试过以后才能明确到底要找什么。我当过甲方也当过乙方，我知道大家都是地球人，客户需求就是个不断变化的过程。&lt;/p&gt;
+&lt;p&gt;但deadline是不变的。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;如果能够一开始把FRs(功能需求)和DPs(设计参数)独立得很好，那么已经做过的事情就不算完全浪费，还有可重用的可能性。独立性越高，浪费的工作就越少。&lt;/p&gt;
+&lt;p&gt;而如果各个功能模块一开始就搅合在一起，那需求改了，就只好从头开始了。&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2019/07/18/5d3071310697641566.png" alt="MFE 594 An Introduction to Axiomatic Design Part 4-qURM1A1BZJw-0001.png"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="面向对象与结构化"&gt;面向对象与结构化&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8C%96"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我最早学计算机语言的时候，还是结构化编程的时代，后来才开始面向对象编程。我其实一直尽量躲避面向对象编程。一部分是因为我只是做些科学计算，多数情况下一个东西算一遍就完了，不需要建立同一个类的多个实体；另一部分原因是因为设定类这事太“艺术”了，我不知道应该怎么设定，比如一个光路追踪的程序，是把光线设一个类，还是把界面设一个类，还是光线和界面都设定成类。&lt;/p&gt;
+&lt;p&gt;《公理设计》这本书中专门有一章讲面向对象的软件设计，我还要再仔细看看这部分。争取能再深入理解一些。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="创新发明的套路"&gt;创新发明的套路&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/#%E5%88%9B%E6%96%B0%E5%8F%91%E6%98%8E%E7%9A%84%E5%A5%97%E8%B7%AF"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;发明是有套路的，作为发明家我知道一些。这里又提供了一组思路。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果现有技术中有耦合的部分，看看能否解耦合？&lt;/li&gt;
+&lt;li&gt;现有技术中的FRs(功能需求)是否满足“不重复不漏项”的原则？&lt;/li&gt;
+&lt;li&gt;重新在不同的域上划分不同层级的FRs(功能需求)&lt;/li&gt;
+&lt;li&gt;新的技术/其他领域的技术是否可以突破现有的约束条件？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/</guid><pubDate>Thu, 18 Jul 2019 12:00:00 GMT</pubDate></item><item><title>公理设计笔记（3）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;前面讲解了目的，要尽量形成FRs（功能需求）与DPs(设计参数）的解耦合对应关系&lt;/p&gt;
@@ -159,6 +213,37 @@ $$
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;当有几个不同的拆分FRs(功能需求)的方法，得到了不同的DPs(设计参数)以后。如何判定那种方式更好呢？毫无疑问会陷入到办公室争吵中。&lt;/p&gt;
+&lt;p&gt;公理设计的第二条公理：&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;要令信息量最小&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这里的信息量，是原教旨的信息量。记住这是MIT教授的书，WPI教授的课。&lt;/p&gt;
+$$
+I=-\sum_{i}^{\sigma(\mathrm{FR})} \log _{2} P_{i}
+$$&lt;p&gt;其中$P_i$是$FR_i$实现的概率&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;在我理解，这只是实现概率最大化的恐怖公式表达而已。这一部分我还没有深究，毕竟我能想到一组DPs(设计参数)就已经不错了。&lt;/p&gt;
+&lt;p&gt;这个公理大约对硬件选型的时候更有意义，比如同一个目的，在资金约束条件下，要选精度高一点，冗余大一点的零件。&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1120,12 +1205,4 @@ $$
 &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/EDoF_review/</guid><pubDate>Fri, 21 Jun 2019 04:00:00 GMT</pubDate></item><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;有些是可变的，是变量，比如努力的程度、认真的程度，对待事情的态度……&lt;/li&gt;
-&lt;li&gt;有些是不可变的，或者在可观测的短时间内无法改变，是常量，比如性别、种族、成年以后的身高、父母、出生地、信仰、国籍……&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果批评或者表扬的目的是为了让对象有所改变，那么至少是应该针对那些可以改变的&lt;strong&gt;变量&lt;/strong&gt;属性，而不要针对那些对方无法改变的&lt;strong&gt;常量&lt;/strong&gt;属性。&lt;/p&gt;
-&lt;p&gt;也就是说，在批评或者表扬的时候，要将原因归结于人的可变属性。&lt;/p&gt;
-&lt;p&gt;我觉得这个道理还是挺浅显的。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</guid><pubDate>Tue, 11 Jun 2019 17:00:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/EDoF_review/</guid><pubDate>Fri, 21 Jun 2019 04:00:00 GMT</pubDate></item></channel></rss>

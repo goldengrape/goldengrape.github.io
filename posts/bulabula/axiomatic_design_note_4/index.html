@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>公理设计笔记（4） | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../axiomatic_design_note_3/" title="公理设计笔记（3）" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="公理设计笔记（4）">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/">
+<meta property="og:description" content="所以“公理设计”，就是基于两个公理：
+
+最大化功能模块的独立性
+最小化信息量（～=最大化成功实施的可能性）
+
+
+
+
+
+
+
+
+这样做的好处：
+甲方总是善变的¶客户需求就是用来不断改变的，就是用来不断折腾乙方的，因为甲方通常也不知道到底要什么，得折腾几次试试看，才能明确目标。如果把搜索引擎看作是乙方，这跟搜索个信息是一样的，搜索就是个学习的过程，一开始的时候往往我也不知道搜索什么，搜几个词试过以后才能">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-07-18T20:00:00+08:00">
+<meta property="article:tag" content="公理设计">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">公理设计笔记（4）</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-07-18T20:00:00+08:00" itemprop="datePublished" title="2019-07-18 20:00">2019-07-18 20:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>所以“公理设计”，就是基于两个公理：</p>
+<ul>
+<li>最大化功能模块的独立性</li>
+<li>最小化信息量（～=最大化成功实施的可能性）</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这样做的好处：</p>
+<h2 id="甲方总是善变的">甲方总是善变的<a class="anchor-link" href="#%E7%94%B2%E6%96%B9%E6%80%BB%E6%98%AF%E5%96%84%E5%8F%98%E7%9A%84">¶</a>
+</h2>
+<p>客户需求就是用来不断改变的，就是用来不断折腾乙方的，因为甲方通常也不知道到底要什么，得折腾几次试试看，才能明确目标。如果把搜索引擎看作是乙方，这跟搜索个信息是一样的，搜索就是个学习的过程，一开始的时候往往我也不知道搜索什么，搜几个词试过以后才能明确到底要找什么。我当过甲方也当过乙方，我知道大家都是地球人，客户需求就是个不断变化的过程。</p>
+<p>但deadline是不变的。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如果能够一开始把FRs(功能需求)和DPs(设计参数)独立得很好，那么已经做过的事情就不算完全浪费，还有可重用的可能性。独立性越高，浪费的工作就越少。</p>
+<p>而如果各个功能模块一开始就搅合在一起，那需求改了，就只好从头开始了。</p>
+<p><img src="https://i.loli.net/2019/07/18/5d3071310697641566.png" alt="MFE 594 An Introduction to Axiomatic Design Part 4-qURM1A1BZJw-0001.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="面向对象与结构化">面向对象与结构化<a class="anchor-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8C%96">¶</a>
+</h2>
+<p>我最早学计算机语言的时候，还是结构化编程的时代，后来才开始面向对象编程。我其实一直尽量躲避面向对象编程。一部分是因为我只是做些科学计算，多数情况下一个东西算一遍就完了，不需要建立同一个类的多个实体；另一部分原因是因为设定类这事太“艺术”了，我不知道应该怎么设定，比如一个光路追踪的程序，是把光线设一个类，还是把界面设一个类，还是光线和界面都设定成类。</p>
+<p>《公理设计》这本书中专门有一章讲面向对象的软件设计，我还要再仔细看看这部分。争取能再深入理解一些。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="创新发明的套路">创新发明的套路<a class="anchor-link" href="#%E5%88%9B%E6%96%B0%E5%8F%91%E6%98%8E%E7%9A%84%E5%A5%97%E8%B7%AF">¶</a>
+</h2>
+<p>发明是有套路的，作为发明家我知道一些。这里又提供了一组思路。</p>
+<ul>
+<li>如果现有技术中有耦合的部分，看看能否解耦合？</li>
+<li>现有技术中的FRs(功能需求)是否满足“不重复不漏项”的原则？</li>
+<li>重新在不同的域上划分不同层级的FRs(功能需求)</li>
+<li>新的技术/其他领域的技术是否可以突破现有的约束条件？</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/gong-li-she-ji/" rel="tag">公理设计</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../axiomatic_design_note_3/" rel="prev" title="公理设计笔记（3）">上一篇文章</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

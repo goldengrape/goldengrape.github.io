@@ -22,6 +22,7 @@ MathJax.Hub.Config({
 });
 </script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
 <link rel="prev" href="../axiomatic_design_note_2/" title="公理设计笔记（2）" type="text/html">
+<link rel="next" href="../axiomatic_design_note_4/" title="公理设计笔记（4）" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="公理设计笔记（3）">
 <meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/">
@@ -266,6 +267,44 @@ $$
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>当有几个不同的拆分FRs(功能需求)的方法，得到了不同的DPs(设计参数)以后。如何判定那种方式更好呢？毫无疑问会陷入到办公室争吵中。</p>
+<p>公理设计的第二条公理：</p>
+<blockquote>
+<p>要令信息量最小</p>
+</blockquote>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这里的信息量，是原教旨的信息量。记住这是MIT教授的书，WPI教授的课。</p>
+$$
+I=-\sum_{i}^{\sigma(\mathrm{FR})} \log _{2} P_{i}
+$$<p>其中$P_i$是$FR_i$实现的概率</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在我理解，这只是实现概率最大化的恐怖公式表达而已。这一部分我还没有深究，毕竟我能想到一组DPs(设计参数)就已经不错了。</p>
+<p>这个公理大约对硬件选型的时候更有意义，比如同一个目的，在资金约束条件下，要选精度高一点，冗余大一点的零件。</p>
+
+</div>
+</div>
+</div>
 </div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -274,6 +313,9 @@ $$
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../axiomatic_design_note_2/" rel="prev" title="公理设计笔记（2）">上一篇文章</a>
+            </li>
+            <li class="next">
+                <a href="../axiomatic_design_note_4/" rel="next" title="公理设计笔记（4）">下一篇文章</a>
             </li>
         </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
