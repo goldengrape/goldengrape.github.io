@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>公理设计笔记（3） | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../axiomatic_design_note_2/" title="公理设计笔记（2）" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="公理设计笔记（3）">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/">
+<meta property="og:description" content="前面讲解了目的，要尽量形成FRs（功能需求）与DPs(设计参数）的解耦合对应关系
+尽量对角矩阵形成：
+$$
+FRs=\begin{bmatrix}
+X &amp; 0 &amp; ... &amp; 0
+\\ 0 &amp;  X &amp; ... &amp; 0
+\\ ...
+\\ 0 &amp;  0 &amp; ... &amp; X
+\end{bmatrix} DPs
+$$
+或者至少形成矩阵：
+$$
+FRs=\begin{bmatrix}
+X &amp; 0 &amp; .">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-07-18T10:00:00+08:00">
+<meta property="article:tag" content="公理设计">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">公理设计笔记（3）</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-07-18T10:00:00+08:00" itemprop="datePublished" title="2019-07-18 10:00">2019-07-18 10:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>前面讲解了目的，要尽量形成FRs（功能需求）与DPs(设计参数）的解耦合对应关系</p>
+<p>尽量对角矩阵形成：
+$$
+FRs=\begin{bmatrix}
+X &amp; 0 &amp; ... &amp; 0
+\\ 0 &amp;  X &amp; ... &amp; 0
+\\ ...
+\\ 0 &amp;  0 &amp; ... &amp; X
+\end{bmatrix} DPs
+$$</p>
+<p>或者至少形成矩阵：
+$$
+FRs=\begin{bmatrix}
+X &amp; 0 &amp; ... &amp; 0
+\\ X &amp;  X &amp; ... &amp; 0
+\\ ...
+\\ 0 &amp;  X &amp; ... &amp; X
+\end{bmatrix} DPs
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>实际过程中是分层级对FRs（功能需求）与DPs(设计参数）进行分解的。先从</p>
+$$
+\begin{bmatrix}
+FR_1
+\\ FR_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+X &amp; 0 
+\\ X &amp;  X 
+\end{bmatrix} 
+\begin{bmatrix}
+DP_1
+\\ DP_2
+\end{bmatrix}
+$$<p>开始，</p>
+<p>然后再把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，变成类似这个意思：</p>
+$$
+\begin{bmatrix}
+\begin{bmatrix}
+FR_{1.1}
+\\ FR_{1.2}
+\end{bmatrix}
+\\ FR_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+\begin{bmatrix}
+X &amp; 0
+\\ X &amp; X
+\end{bmatrix}&amp; 0 
+\\ X &amp;  X 
+\end{bmatrix} 
+\begin{bmatrix}
+\begin{bmatrix}
+DP_{1.1}
+\\ DP_{1.2}
+\end{bmatrix}
+\\ DP_2
+\end{bmatrix}
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在拆分FRs（功能需求）的时候，要求是<a href="https://zh.wikipedia.org/zh-hans/MECE%E5%8E%9F%E5%88%99">MECE</a> min原则，也就是"不重复不漏项"并且总数尽量少。MECE := Mutually Exclusive Collectively Exhaustive，课程中使用的是CEME，可能商科里用MECE更多，反正一个意思。</p>
+<p>比如3D打印机的FR(功能需求)之一是要求在$FR_1$打印头空间内移动，那么就可以拆分成：</p>
+<ul>
+<li>$FR_{1.1}$ 在X轴方向移动</li>
+<li>$FR_{1.2}$ 在Y轴方向移动</li>
+<li>$FR_{1.3}$ 在Z轴方向移动</li>
+</ul>
+<p>这样的拆分方式显然是MECE的，当然也可以拆分成圆柱坐标系、球坐标系等等。不同的分解方式对应着不同的解决方案。</p>
+<p>对于DPs(设计参数)的拆分，目的是尽量形成对角矩阵，或者至少是三角形矩阵，那么就应当尽量让右上角的区域保持为0。而且在拆分DPs(设计参数)的时候，约束条件是继承的，比如$DP_1$是在中国建厂，那么$DP_{1.1},DP_{1.2}$就不能把工厂建立到越南去。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>在实际操作中，拆分是一点一点来进行的。说叫ZigZag。</p>
+<p>先把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，拆分好$FR_1$（功能需求）以后，再去拆分$DP_1$(设计参数)，拆好了DPs(设计参数)以后，再返回来拆下一个$FR$（功能需求）</p>
+<p><img src="https://i.loli.net/2019/07/18/5d3030b9d457e37686.png" alt="屏幕快照 2019-07-18 16.40.58.png"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>拆分过程可以用个电子表格来做，最好再弄成可折叠的，似乎有专用的软件可以画图，但不知道excel或者其他通用的简单工具有没有这样的功能。注意子节点上的相关性X，一定要表现在父节点上。比如检查时发现调整$DP_{2}$时$FR_{12}$也跟着变，那$DP_{2}$其实与$FR_1$就是耦合的，中间肯定在某个步骤出错了。</p>
+<table>
+<thead><tr>
+<th style="text-align:left">FRs</th>
+<th style="text-align:left">$DP_1$</th>
+<th style="text-align:left">$DP_{11}$</th>
+<th style="text-align:left">$DP_{12}$</th>
+<th style="text-align:left">$DP_{121}$</th>
+<th style="text-align:left">$DP_{122}$</th>
+<th style="text-align:left">$DP_{123}$</th>
+<th style="text-align:left">$DP_{2}$</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">$FR_1$</td>
+<td style="text-align:left">X</td>
+<td style="text-align:left">X</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">X</td>
+</tr>
+<tr>
+<td style="text-align:left">$FR_{11}$</td>
+<td style="text-align:left">$\space$</td>
+<td style="text-align:left">X</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+</tr>
+<tr>
+<td style="text-align:left">$FR_{12}$</td>
+<td style="text-align:left">$\space$</td>
+<td style="text-align:left">X</td>
+<td style="text-align:left">X</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">0</td>
+<td style="text-align:left">X</td>
+</tr>
+<tr>
+<td style="text-align:left">$FR_{121}$</td>
+</tr>
+<tr>
+<td style="text-align:left">$FR_{122}$</td>
+</tr>
+<tr>
+<td style="text-align:left">$FR_{123}$</td>
+</tr>
+<tr>
+<td style="text-align:left">$FR_{2}$</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/gong-li-she-ji/" rel="tag">公理设计</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../axiomatic_design_note_2/" rel="prev" title="公理设计笔记（2）">上一篇文章</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

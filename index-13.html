@@ -68,7 +68,44 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/na-xie-zai-xian-de-jupyter/" class="u-url">那些在线的jupyter</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/asphereicle_anti_decenter/" class="u-url">抗偏位非球面人工晶体设计</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/python/asphereicle_anti_decenter/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-05-31T12:00:00+08:00" title="2019-05-31 12:00">2019-05-31 12:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>先给非眼科学的读者介绍一下知识背景。1949年，Ridly爵士发明了人工晶状体（Intraocluar lens，IOL，人工晶体），是一枚有机玻璃镜片，可以植入到眼内，替代人眼的天然晶状体。这是唯一，也是非常有效的治疗白内障的方法，将因为白内障浑浊的天然晶状体，更换成人工晶体。</p>
+<p>早期人工晶体的加工和光学设计显然是和光学镜头一致的，是球面镜。人工晶体的材料逐渐从硬质的PMMA，进化到了有弹性可折叠的硅胶、亲水/疏水丙烯酸酯、胶原等材料，切口也越来越小。但人工晶体的光学设计一直到1990s末才发生改变。</p>
+<p>人眼的角膜，是具有球差的，是一个“正球差”的凸透镜，也就是说，周边的屈光力更强，中央的弱一些，周边的光线会被聚焦得更<strong>近</strong> ，人眼的晶状体，这东西不但形状不是标准球面镜，内部的折射率还是渐变的，最终的结果是人眼的晶状体是一个“负球差”的透镜。一定程度上，两个透镜的结合导致球差能够互相抵消一部分。</p>
+<p>对于球面镜的人工晶体，一定是一枚“正球差”的凸透镜，所以，即使屈光度计算正确，仍然会与角膜搭配增加球差。于是眼科医生们希望能够设计出非球面的人工晶体。</p>
+<ul>
+<li>参考文献1:姚克, 陆道炎, 王丽天, 等. 非球面等视像后房型人工晶状体的临床应用. 中华眼科杂志, 1989, 25:262-264.</li>
+<li><a href="https://www.ncbi.nlm.nih.gov/pubmed/12458861">参考文献2: A new intraocular lens design to reduce spherical aberration of pseudophakic eyes.</a></li>
+</ul>
+<p>第一枚上市的非球面人工晶体是AMO公司(现在属于强生)的Tecnis Z9000, <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P990080S001">FDA: 09/05/2001 </a></p>
+<p>非球面IOL上市以后，人们发现，由于IOL是通过手术植入的，多多少少可能有些偏位，也就是人工晶体的光学中心与角膜的光轴可能有差距。这个量很小，只有0.x mm。当消球差的两个非球面镜之间发生偏位的时候，平行光入射，会发生偏移，会形成新的像差，叫做慧差，于是一部分厂商认为慧差也是需要纠正的。</p>
+<p>但在术前并无法知道术后IOL的偏位量，所以博士伦公司推出了“零球差”的IOL，也就是较少矫正角膜球差，虽然可能有偏位，但并不因为偏位而产生慧差。</p>
+<p>在此之后，更多的厂商利用光学设计推出了“抗偏位”的非球面人工晶体，也就是说，在矫正角膜球差的基础上，即使发生了偏位，也不会引起比较大的慧差。</p>
+<p>相应的，各个厂商也给自己的非球面人工晶体起了各种名字，比如：</p>
+<ul>
+<li>HOYA： 非球面平衡曲线（ABC曲线）</li>
+<li>爱博诺德：高次非球面</li>
+<li>蕾明视康：轴向渐进非球面</li>
+<li>蔡司：非恒定像差</li>
+</ul>
+<p>那么接下来就讲解抗偏位非球面人工晶体设计的基本原理。
+</p>
+<p class="more"><a href="posts/python/asphereicle_anti_decenter/">阅读更多…</a></p>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/na-xie-zai-xian-de-jupyter/" class="u-url">那些在线的jupyter</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/python/na-xie-zai-xian-de-jupyter/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-05-18T12:00:00+08:00" title="2019-05-18 12:00">2019-05-18 12:00</time></a></p>

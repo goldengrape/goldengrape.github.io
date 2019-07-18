@@ -1,5 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 公理设计)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/gong-li-she-ji.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jul 2019 01:33:18 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（2）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 公理设计)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/gong-li-she-ji.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jul 2019 09:19:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（3）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;前面讲解了目的，要尽量形成FRs（功能需求）与DPs(设计参数）的解耦合对应关系&lt;/p&gt;
+&lt;p&gt;尽量对角矩阵形成：
+$$
+FRs=\begin{bmatrix}
+X &amp;amp; 0 &amp;amp; ... &amp;amp; 0
+\\ 0 &amp;amp;  X &amp;amp; ... &amp;amp; 0
+\\ ...
+\\ 0 &amp;amp;  0 &amp;amp; ... &amp;amp; X
+\end{bmatrix} DPs
+$$&lt;/p&gt;
+&lt;p&gt;或者至少形成矩阵：
+$$
+FRs=\begin{bmatrix}
+X &amp;amp; 0 &amp;amp; ... &amp;amp; 0
+\\ X &amp;amp;  X &amp;amp; ... &amp;amp; 0
+\\ ...
+\\ 0 &amp;amp;  X &amp;amp; ... &amp;amp; X
+\end{bmatrix} DPs
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;实际过程中是分层级对FRs（功能需求）与DPs(设计参数）进行分解的。先从&lt;/p&gt;
+$$
+\begin{bmatrix}
+FR_1
+\\ FR_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+X &amp;amp; 0 
+\\ X &amp;amp;  X 
+\end{bmatrix} 
+\begin{bmatrix}
+DP_1
+\\ DP_2
+\end{bmatrix}
+$$&lt;p&gt;开始，&lt;/p&gt;
+&lt;p&gt;然后再把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，变成类似这个意思：&lt;/p&gt;
+$$
+\begin{bmatrix}
+\begin{bmatrix}
+FR_{1.1}
+\\ FR_{1.2}
+\end{bmatrix}
+\\ FR_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+\begin{bmatrix}
+X &amp;amp; 0
+\\ X &amp;amp; X
+\end{bmatrix}&amp;amp; 0 
+\\ X &amp;amp;  X 
+\end{bmatrix} 
+\begin{bmatrix}
+\begin{bmatrix}
+DP_{1.1}
+\\ DP_{1.2}
+\end{bmatrix}
+\\ DP_2
+\end{bmatrix}
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;在拆分FRs（功能需求）的时候，要求是&lt;a href="https://zh.wikipedia.org/zh-hans/MECE%E5%8E%9F%E5%88%99"&gt;MECE&lt;/a&gt; min原则，也就是"不重复不漏项"并且总数尽量少。MECE := Mutually Exclusive Collectively Exhaustive，课程中使用的是CEME，可能商科里用MECE更多，反正一个意思。&lt;/p&gt;
+&lt;p&gt;比如3D打印机的FR(功能需求)之一是要求在$FR_1$打印头空间内移动，那么就可以拆分成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$FR_{1.1}$ 在X轴方向移动&lt;/li&gt;
+&lt;li&gt;$FR_{1.2}$ 在Y轴方向移动&lt;/li&gt;
+&lt;li&gt;$FR_{1.3}$ 在Z轴方向移动&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这样的拆分方式显然是MECE的，当然也可以拆分成圆柱坐标系、球坐标系等等。不同的分解方式对应着不同的解决方案。&lt;/p&gt;
+&lt;p&gt;对于DPs(设计参数)的拆分，目的是尽量形成对角矩阵，或者至少是三角形矩阵，那么就应当尽量让右上角的区域保持为0。而且在拆分DPs(设计参数)的时候，约束条件是继承的，比如$DP_1$是在中国建厂，那么$DP_{1.1},DP_{1.2}$就不能把工厂建立到越南去。&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;在实际操作中，拆分是一点一点来进行的。说叫ZigZag。&lt;/p&gt;
+&lt;p&gt;先把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，拆分好$FR_1$（功能需求）以后，再去拆分$DP_1$(设计参数)，拆好了DPs(设计参数)以后，再返回来拆下一个$FR$（功能需求）&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2019/07/18/5d3030b9d457e37686.png" alt="屏幕快照 2019-07-18 16.40.58.png"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;拆分过程可以用个电子表格来做，最好再弄成可折叠的，似乎有专用的软件可以画图，但不知道excel或者其他通用的简单工具有没有这样的功能。注意子节点上的相关性X，一定要表现在父节点上。比如检查时发现调整$DP_{2}$时$FR_{12}$也跟着变，那$DP_{2}$其实与$FR_1$就是耦合的，中间肯定在某个步骤出错了。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th style="text-align:left"&gt;FRs&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_1$&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_{11}$&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_{12}$&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_{121}$&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_{122}$&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_{123}$&lt;/th&gt;
+&lt;th style="text-align:left"&gt;$DP_{2}$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_1$&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_{11}$&lt;/td&gt;
+&lt;td style="text-align:left"&gt;$\space$&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_{12}$&lt;/td&gt;
+&lt;td style="text-align:left"&gt;$\space$&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;0&lt;/td&gt;
+&lt;td style="text-align:left"&gt;X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_{121}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_{122}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_{123}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;$FR_{2}$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</guid><pubDate>Thu, 18 Jul 2019 02:00:00 GMT</pubDate></item><item><title>公理设计笔记（2）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好，虽然在后续的语境中确实好用，但复习笔记中还是以平实的语言描述比较好。&lt;/p&gt;
@@ -55,7 +218,7 @@
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;这四个域里，最重要的是FRs（功能需求）到DPs（设计参数）的映射。 （考虑到我一向憎恶缩写，我会在每一个FRs后面都写上功能需求四个字）&lt;/p&gt;
+&lt;p&gt;这四个域里，最重要的是FRs（功能需求）到DPs（设计参数）的映射。 （考虑到我一向憎恶缩写，我会在每一个FRs后面都写上功能需求四个字）。其实我觉得从CNs(客户需求)到FRs(功能需求)的翻译也很重要，但这涉及到人类语言的模糊性，这个步骤还很难科学化。至于DPs(涉及参数）到PVs（过程变量）也就是实现过程，我们写发明通常就是引述为“现有技术”了。&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
