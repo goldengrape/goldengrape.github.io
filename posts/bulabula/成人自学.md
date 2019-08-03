@@ -28,7 +28,6 @@ python上手应该很容易，如果有老师在身边督促指导，就用这15
 # 解决方案：
 
 * 尽量平滑学习曲线：放弃的理由常常是一丝一毫的困难，一旦放下就很难再捡起来，或者很久以后才能捡起来。那么，就尽量不要制造额外的一丝一毫的困难吧，比如：
-  
   * 用1500页的书去学python。天呐，1500页的小说我都要犹豫是不是去看，何况1500的教科书。[15页的python教程](https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN)已经都觉得长了。
   * 在本地电脑上用pip安装python库。类似可以推广到在本地电脑上安装开发环境学习某种语言。那绝对是可怕的拦路虎。[REPL.it](https://repl.it)上已经做好了几乎所有语言，打开网页用就行了。或者用各种[在线的jupyter](https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/)
 
