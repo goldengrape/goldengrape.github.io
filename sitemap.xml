@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2019-06-24T04:18:00Z</lastmod>
+  <lastmod>2019-08-03T04:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2018/</loc>
@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-07-21T14:39:00Z</lastmod>
+  <lastmod>2019-08-03T04:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2019-07-17T16:54:00Z</lastmod>
+  <lastmod>2019-08-03T04:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -67,11 +67,15 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_posts/</loc>
   <lastmod>2019-05-07T09:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/cat_python-jiao-cheng/</loc>
+  <lastmod>2019-08-03T04:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_python/</loc>
@@ -79,7 +83,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_tutorial/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_yi-xue/</loc>
@@ -91,7 +95,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/csf/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/diy/</loc>
@@ -119,7 +123,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/jiao-cheng/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/ke-pu/</loc>
@@ -127,7 +131,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/lambda/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/life-science/</loc>
@@ -147,7 +151,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/ml/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/movie/</loc>
@@ -183,11 +187,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/</loc>
-  <lastmod>2017-12-28T17:23:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
-  <lastmod>2019-07-07T06:37:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-10.html</loc>
@@ -203,11 +207,15 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-13.html</loc>
-  <lastmod>2019-07-21T14:39:00Z</lastmod>
+  <lastmod>2019-08-03T04:00:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-14.html</loc>
+  <lastmod>2019-08-03T04:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
-  <lastmod>2019-07-07T06:37:00Z</lastmod>
+  <lastmod>2019-07-30T10:20:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
@@ -628,6 +636,14 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</loc>
   <lastmod>2018-04-01T04:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/15_pages_python_tutorial/</loc>
+  <lastmod>2019-08-03T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</loc>
+  <lastmod>2019-08-03T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Alpha_tear/</loc>

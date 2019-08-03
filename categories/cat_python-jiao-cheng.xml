@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python, 教程)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_python-jiao-cheng.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Aug 2019 04:23:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>15页python教程翻译</title><link>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;起因是有人把一句戏言当真了。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/wangpei/status/1133030820128550912"&gt;王佩说&lt;/a&gt;开始看：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;中文版的《Python学习手册》，厚厚两大本，1500页。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我一看就觉得他学Python的计划要危险了：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;别把这事弄复杂了，python就是轻巧的语言，15页的教程满足日常上手即可，然后每用到一个模块再临时去stackoverflow上查。等各个常用模块都用过一遍了，再去看书什么的。
+买回来1500页的厚书，高概率是学不下去了。
+动手，并且体验写代码的乐趣，才是学语言最重要的事情&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;两个月以后&lt;a href="https://twitter.com/YvCii/status/1147408620755120128"&gt;波澜&lt;/a&gt;翻出这条推，问&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请教15页的教程有名字吗？谢谢&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我其实只是把1500页删掉两个0，随口说出的15页。但我确实觉得网上高概率能有个15页的python教程。于是搜了搜，果然找到一个还不错的。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/CambridgeEngineering/PartIA-Computing-Michaelmas"&gt;PartIA-Computing-Michaelmas&lt;/a&gt; 是剑桥大学Engineering &lt;a href="https://en.wikipedia.org/wiki/Tripos"&gt;Tripos&lt;/a&gt;的课程。关于python的13节，关于IPython magic command的1节，关于Jupyter notebook使用的1节，一共正好15节课。每课一个jupyter页面，一共15“页”。&lt;/p&gt;
+&lt;p&gt;我看了看内容，还不错，覆盖的多数科学计算所需要的内容，也就是我说的“满足日常上手”。而且附带有练习题，并且可以直接在&lt;a href="https://notebooks.azure.com/garth-wells/projects/CUED-IA-Computing-Michaelmas"&gt;azure notebooks上运行&lt;/a&gt;。满足我说的：“动手，并且体验写代码的乐趣，才是学语言最重要的事情。”&lt;/p&gt;
+&lt;p&gt;里面还有不少我以前不知道的知识与八卦，比如&lt;a href="https://en.wikipedia.org/wiki/Cluster_(spacecraft)#Launch_failure"&gt;阿丽亚娜5号为什么爆炸&lt;/a&gt;，&lt;a href="https://en.wikipedia.org/wiki/MIM-104_Patriot#Failure_at_Dhahran"&gt;爱国者导弹为什么工作100小时以后就放过了飞毛腿&lt;/a&gt;，&lt;a href="https://www.theguardian.com/business/2015/may/01/us-aviation-authority-boeing-787-dreamliner-bug-could-cause-loss-of-control"&gt;波音787为什么每284天就要重启&lt;/a&gt;……很有意思。&lt;/p&gt;
+&lt;p&gt;比我自己写的&lt;a href="https://github.com/goldengrape/Python-for-ophthalmologist"&gt;面向眼科医生的python教程&lt;/a&gt;要好。考虑到我一直想着有朝一日可以开个工作坊给一群眼科大夫们培训一下午python，让大家学会写基本的程序，以后也方便交流。所以我就把这15页的教程给翻译成中文了。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN"&gt;15页python教程的中文翻译版&lt;/a&gt; ： https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN&lt;/p&gt;
+&lt;p&gt;目前翻译得比较粗略，可能还有很多需要修改的地方，反正是在github上，随手就可以修正。也欢迎各位读者多多提issue，帮忙改进。&lt;/p&gt;
+&lt;p&gt;谢谢。学习愉快。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</guid><pubDate>Sat, 03 Aug 2019 04:00:00 GMT</pubDate></item></channel></rss>
