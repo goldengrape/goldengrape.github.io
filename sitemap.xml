@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-08-03T04:00:00Z</lastmod>
+  <lastmod>2019-08-03T06:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -211,7 +211,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-14.html</loc>
-  <lastmod>2019-08-03T04:00:00Z</lastmod>
+  <lastmod>2019-08-03T06:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -368,6 +368,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/Write-Spring-Festival-couplets/</loc>
   <lastmod>2018-02-11T15:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/adult_self_study/</loc>
+  <lastmod>2019-08-03T06:00:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/auto_keynote_presentation/</loc>
@@ -636,10 +640,6 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</loc>
   <lastmod>2018-04-01T04:10:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/python/15_pages_python_tutorial/</loc>
-  <lastmod>2019-08-03T03:02:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</loc>

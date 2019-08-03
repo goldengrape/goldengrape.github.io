@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 18 Jul 2019 07:36:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>公理设计笔记（1）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个夏日的上午，我在图书馆里闲逛（据@cxqn 说这是有闲阶级才能做的事情），偶遇一本&lt;a href="https://book.douban.com/subject/1238993/"&gt;《公理设计》&lt;/a&gt;，看书名觉得好奇于是拿出来翻了翻，觉得内容不错。网上还可以找到一篇文献&lt;a href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;amp;id=40989"&gt;《公理设计理论及其应用》&lt;/a&gt; 做了一些基本介绍。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Aug 2019 06:00:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>成人自学的困难</title><link>https://goldengrape.github.io/posts/bulabula/adult_self_study/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;昨天翻译完了&lt;a href="https://goldengrape.github.io/posts/bulabula/python/15_pages_python_tutorial_translated/"&gt;15页的python教程&lt;/a&gt;，想就成人自学再说说。&lt;/p&gt;
+&lt;h2&gt;现象&lt;/h2&gt;
+&lt;p&gt;python上手应该很容易，如果有老师在身边督促指导，就用这15页的教程，恐怕快则一下午，慢则一周就可以自己写一些简单的应用了。&lt;/p&gt;
+&lt;p&gt;但学python真的花费了我很长很长时间，我发现我从2003年就开始学习python，一直学到2017年才算学会了基础（因此万幸躲过了python 2）。用时14年，而不是7天。&lt;/p&gt;
+&lt;h2&gt;原因&lt;/h2&gt;
+&lt;p&gt;究其原因，我觉得是因为&lt;strong&gt;放弃太容易&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;成年人有稳定的收入，有常规的工作、生活。要维持这些，以前学会的东西已经够用了。学习新东西在短期内并不会对生活造成什么太大改善，如果放弃学习，短期内也不会产生什么不良后果。&lt;/p&gt;
+&lt;p&gt;相比起来学生时代就非常不同，别说放弃一门课，就是一门课的成绩稍微下降一些，也会寝食难安。如果挂科了，简直是天塌下来一半。想起来我大一的时候每周40节课上满，必修加选修上了13门课。（没错，我翘了一门必修课在同一时间选了另一门选修课）。&lt;/p&gt;
+&lt;p&gt;理论上，要把学习压力重新加在自己身上，成人也可以快速学习，大家都是学霸出身，没什么理由学不会。但实际上，虚拟的压力并不是压力，没有实质性的威胁算不上威胁。&lt;/p&gt;
+&lt;h2&gt;解决方案：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;尽量平滑学习曲线：放弃的理由常常是一丝一毫的困难，一旦放下就很难再捡起来，或者很久以后才能捡起来。那么，就尽量不要制造额外的一丝一毫的困难吧，比如：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用1500页的书去学python。天呐，1500页的小说我都要犹豫是不是去看，何况1500的教科书。&lt;a href="https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN"&gt;15页的python教程&lt;/a&gt;已经都觉得长了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在本地电脑上用pip安装python库。类似可以推广到在本地电脑上安装开发环境学习某种语言。那绝对是可怕的拦路虎。&lt;a href="https://repl.it"&gt;REPL.it&lt;/a&gt;上已经做好了几乎所有语言，打开网页用就行了。或者用各种&lt;a href="https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/"&gt;在线的jupyter&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;享受过程(process)，而不是追求结果(product)。这是从coursera课程&lt;a href="https://www.coursera.org/learn/learning-how-to-learn/home/welcome"&gt;“学习如何学习”&lt;/a&gt;上学来的一招。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;这一部分的视频&lt;a href="https://www.youtube.com/watch?v=gCKcqLVGnSg&amp;amp;list=PLievC1UeaSOD3EBaJaHstTKIXS51Sfjwo&amp;amp;index=20&amp;amp;t=0s"&gt;在此&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;就是说把学习作为日常消遣的一个选项，既然都是kill time，那么看电视剧和看公开课也是可能互换的。&lt;a href="https://www.coursera.org/learn/shiji"&gt;《史记》&lt;/a&gt;、&lt;a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+00612642X+sp/about"&gt;《资治通鉴》&lt;/a&gt;里，随便翻出个故事，不比现在电视剧里的情节狗血多了。&lt;ul&gt;
+&lt;li&gt;市场环境不好，公司里能干的员工一个接一个辞职。有一天一个基层程序员刚跑，CFO就去追了，追回来以后还让CEO给提升到CTO的职位。CEO看了看简历，该程序员原来在竞争对手那边一直就是个小PM，没做过什么大项目，还曾经被拖库攻击过。但CFO坚持。现在如果你是CEO，该怎么办？剧情狗血吧，哪有这种公司会发生这种事情呢。这个故事又叫做“萧何月下追韩信”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;既然是享受过程，就不要问自己学了多少，学到什么水平了，练习慢慢做，经常做就可以。三天打鱼两天晒网是最佳，不要给自己太大压力，也不要有太大幻想。“无挂碍故，远离颠倒梦想，究竟涅槃”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如，这是前一段练字的结果，写到开心就好。
+&lt;img alt="未命名" src="https://i.loli.net/2019/08/03/AuevRE7mDhYxKaj.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/adult_self_study/</guid><pubDate>Sat, 03 Aug 2019 04:01:00 GMT</pubDate></item><item><title>公理设计笔记（1）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个夏日的上午，我在图书馆里闲逛（据@cxqn 说这是有闲阶级才能做的事情），偶遇一本&lt;a href="https://book.douban.com/subject/1238993/"&gt;《公理设计》&lt;/a&gt;，看书名觉得好奇于是拿出来翻了翻，觉得内容不错。网上还可以找到一篇文献&lt;a href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;amp;id=40989"&gt;《公理设计理论及其应用》&lt;/a&gt; 做了一些基本介绍。&lt;/p&gt;
 &lt;p&gt;但看起来这是一门课了，所以估计会有公开课来讲解。于是上网搜了一下，还真是找到了&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UlhdIfsFaezkHWbofX7Blj"&gt;MFE 594 An Introduction to Axiomatic Design&lt;/a&gt;，有4节课，大约一共4个多小时，花了两天看完，再回来翻翻书，有一些收获，决定写一点笔记。&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
@@ -381,80 +412,4 @@ conda install pytorch torchvision -c soumith --yes
 &lt;p&gt;&lt;img alt="data" src="https://i.loli.net/2018/11/01/5bda8ea6a41e6.png"&gt;
 理想的情况下, 我们采集到的数据X可以推导出结果y. 但在实际过程中, 由于我们不知道如何从X推导出y, 只是知道存在有这样一条路径, 于是我们可能只好扩大数据的采集范围, 但只要采集到的数据X, 完全包含了能够推导出y的信息即可, 混杂了一些数据垃圾无关紧要, 可能只是影响了训练的时间, 并不影响最终的预测精度.&lt;/p&gt;
 &lt;p&gt;但在更多的情况下, 有些数据是采集不到的, 我们只能采集到X的一大部分, 有一些关键数据现阶段无论如何也拿不到, 那么拟合出来的结果就一定会有一定的误差, 这时候就看误差是否影响实际需求了. 如果够用, 那就可以了.&lt;/p&gt;
-&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item><item><title>屏霸的演讲</title><link>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="i2" src="https://i.loli.net/2018/10/27/5bd3fbce9f148.png"&gt;&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;超级英雄就是你们用来
-Superheroes are part of your brainless desire...
-
-模拟真实体验的无脑幻想之一
-to replace true experience with simulation.
-
-你们不说话  却爱看脱口秀
-You don't talk, you watch talk shows.
-
-你们不玩游戏  却爱看游戏节目
-You don't play games, you watch game shows.
-
-旅行  恋爱  冒险
-Travel, relationships, risk...
-
-这些有意义的经验都得被包装一番
-every meaningful experience must be packaged...
-
-以供你们坐得远远的进行观看
-and delivered to you to watch at a distance.
-
-这样你们就能安安稳稳
-So that you can remain ever sheltered...
-
-不思进取
-ever passive...
-
-只要做贪婪的消费者
-ever ravenous consumers...
-
-甚至都不愿意从自己的沙发上站起来
-who can't bring themselves to rise from their couches...
-
-进行一场酣畅淋漓的人生体验
-break a sweat and participate in life.
-
-你们希望超级英雄来保护你们
-You want superheroes to protect you...
-
-让你们自己变得更加无助
-and make yourselves ever more powerless in the process.
-
-你们告诉自己  有人在保护你们
-While you tell yourselves you're being looked after.
-
-你们的利益得到了满足
-That your interests are being served.
-
-你们的权利得到了维护
-And your rights are being upheld.
-
-所以系统可以继续对你们进行搜刮
-So that the system can keep stealing from you...
-
-并对你施以微笑
-smiling at you all the while.
-
-来啊  派你们的超级英雄来阻止我
-Go ahead, send your Supers to stop me.
-
-拿好你们的零食  盯紧屏幕
-Grab your snacks, watch your screens,
-
-看看会发生什么事
-and see what happens.
-
-你们不再是掌控者
-You are no longer in control.
-
-我才是
-I am.
-&lt;/pre&gt;
-
-
-&lt;p&gt;引用自&amp;lt;&amp;lt;超人总动员2&amp;gt;&amp;gt; Incredibles 2 (2018)&lt;/p&gt;
-&lt;p&gt;字幕翻译来源于&lt;a href="http://www.zimuzu.tv/resource/36151"&gt;人人影视&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>movie</category><guid>https://goldengrape.github.io/posts/bulabula/screenslaver-speech/</guid><pubDate>Sat, 27 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;另一个例子, 参考&lt;a href="https://github.com/vsitzmann/deepoptics"&gt;End-to-end Optimization of Optics and Image Processing for Achromatic Extended Depth of Field and Super-resolution Imaging&lt;/a&gt;, 很喜欢这篇文章的研究思路.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/ML-oriented-RnD/</guid><pubDate>Thu, 01 Nov 2018 04:00:00 GMT</pubDate></item></channel></rss>

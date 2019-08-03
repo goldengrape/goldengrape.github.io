@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Aug 2019 04:23:39 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>15页python教程翻译</title><link>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;起因是有人把一句戏言当真了。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 03 Aug 2019 06:00:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>成人自学的困难</title><link>https://goldengrape.github.io/posts/bulabula/adult_self_study/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;昨天翻译完了&lt;a href="https://goldengrape.github.io/posts/bulabula/python/15_pages_python_tutorial_translated/"&gt;15页的python教程&lt;/a&gt;，想就成人自学再说说。&lt;/p&gt;
+&lt;h2&gt;现象&lt;/h2&gt;
+&lt;p&gt;python上手应该很容易，如果有老师在身边督促指导，就用这15页的教程，恐怕快则一下午，慢则一周就可以自己写一些简单的应用了。&lt;/p&gt;
+&lt;p&gt;但学python真的花费了我很长很长时间，我发现我从2003年就开始学习python，一直学到2017年才算学会了基础（因此万幸躲过了python 2）。用时14年，而不是7天。&lt;/p&gt;
+&lt;h2&gt;原因&lt;/h2&gt;
+&lt;p&gt;究其原因，我觉得是因为&lt;strong&gt;放弃太容易&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;成年人有稳定的收入，有常规的工作、生活。要维持这些，以前学会的东西已经够用了。学习新东西在短期内并不会对生活造成什么太大改善，如果放弃学习，短期内也不会产生什么不良后果。&lt;/p&gt;
+&lt;p&gt;相比起来学生时代就非常不同，别说放弃一门课，就是一门课的成绩稍微下降一些，也会寝食难安。如果挂科了，简直是天塌下来一半。想起来我大一的时候每周40节课上满，必修加选修上了13门课。（没错，我翘了一门必修课在同一时间选了另一门选修课）。&lt;/p&gt;
+&lt;p&gt;理论上，要把学习压力重新加在自己身上，成人也可以快速学习，大家都是学霸出身，没什么理由学不会。但实际上，虚拟的压力并不是压力，没有实质性的威胁算不上威胁。&lt;/p&gt;
+&lt;h2&gt;解决方案：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;尽量平滑学习曲线：放弃的理由常常是一丝一毫的困难，一旦放下就很难再捡起来，或者很久以后才能捡起来。那么，就尽量不要制造额外的一丝一毫的困难吧，比如：&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用1500页的书去学python。天呐，1500页的小说我都要犹豫是不是去看，何况1500的教科书。&lt;a href="https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN"&gt;15页的python教程&lt;/a&gt;已经都觉得长了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在本地电脑上用pip安装python库。类似可以推广到在本地电脑上安装开发环境学习某种语言。那绝对是可怕的拦路虎。&lt;a href="https://repl.it"&gt;REPL.it&lt;/a&gt;上已经做好了几乎所有语言，打开网页用就行了。或者用各种&lt;a href="https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/"&gt;在线的jupyter&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;享受过程(process)，而不是追求结果(product)。这是从coursera课程&lt;a href="https://www.coursera.org/learn/learning-how-to-learn/home/welcome"&gt;“学习如何学习”&lt;/a&gt;上学来的一招。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;这一部分的视频&lt;a href="https://www.youtube.com/watch?v=gCKcqLVGnSg&amp;amp;list=PLievC1UeaSOD3EBaJaHstTKIXS51Sfjwo&amp;amp;index=20&amp;amp;t=0s"&gt;在此&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;就是说把学习作为日常消遣的一个选项，既然都是kill time，那么看电视剧和看公开课也是可能互换的。&lt;a href="https://www.coursera.org/learn/shiji"&gt;《史记》&lt;/a&gt;、&lt;a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+00612642X+sp/about"&gt;《资治通鉴》&lt;/a&gt;里，随便翻出个故事，不比现在电视剧里的情节狗血多了。&lt;ul&gt;
+&lt;li&gt;市场环境不好，公司里能干的员工一个接一个辞职。有一天一个基层程序员刚跑，CFO就去追了，追回来以后还让CEO给提升到CTO的职位。CEO看了看简历，该程序员原来在竞争对手那边一直就是个小PM，没做过什么大项目，还曾经被拖库攻击过。但CFO坚持。现在如果你是CEO，该怎么办？剧情狗血吧，哪有这种公司会发生这种事情呢。这个故事又叫做“萧何月下追韩信”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;既然是享受过程，就不要问自己学了多少，学到什么水平了，练习慢慢做，经常做就可以。三天打鱼两天晒网是最佳，不要给自己太大压力，也不要有太大幻想。“无挂碍故，远离颠倒梦想，究竟涅槃”。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如，这是前一段练字的结果，写到开心就好。
+&lt;img alt="未命名" src="https://i.loli.net/2019/08/03/AuevRE7mDhYxKaj.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/adult_self_study/</guid><pubDate>Sat, 03 Aug 2019 04:01:00 GMT</pubDate></item><item><title>15页python教程翻译</title><link>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;起因是有人把一句戏言当真了。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://twitter.com/wangpei/status/1133030820128550912"&gt;王佩说&lt;/a&gt;开始看：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;中文版的《Python学习手册》，厚厚两大本，1500页。&lt;/p&gt;
@@ -647,81 +678,4 @@ $$&lt;p&gt;写不成三角矩阵&lt;/p&gt;
 &lt;p&gt;需要强调的是，这个课程还在制作中，内容也有可能不断修订。但愿我能一直坚持下去把它做完。&lt;/p&gt;
 &lt;p&gt;如果您对教程中的插图感兴趣，我已经做好了一份开源的图集：&lt;a href="https://github.com/goldengrape/phacoTools"&gt;https://github.com/goldengrape/phacoTools&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;如果您对给PPT自动配音感兴趣，这是我以前做好的配音程序: &lt;a href="https://github.com/goldengrape/dubbing-pptx"&gt;https://github.com/goldengrape/dubbing-pptx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;关于此训练手册，您有什么意见建议，可以在github上提issue：&lt;a href="https://github.com/goldengrape/phaco-training-manual/issues"&gt;https://github.com/goldengrape/phaco-training-manual/issues&lt;/a&gt;, 也可以fork自行修改，这是一个开放的项目，希望能够帮助更多的医生。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</guid><pubDate>Thu, 04 Jul 2019 04:00:00 GMT</pubDate></item><item><title>出考试题</title><link>https://goldengrape.github.io/posts/bulabula/Exam-questions/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;明天给8个人讲课然后出题考试，考试结果和他们奖金挂钩，这种得罪人的事我才不干呢，而且我最烦出题了，因为要想出干扰项是很困难的。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;于是想出了非常&lt;strong&gt;心狠手辣&lt;/strong&gt;的出题方式：&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;抽签轮流互相出题，&lt;/li&gt;
-&lt;li&gt;每讲完一个部分，按抽签序列由1个人出题，出完题目以后教给主考官收藏，全部讲完后一起公开题目。&lt;/li&gt;
-&lt;li&gt;题目必须是4选1的单项选择题.&lt;/li&gt;
-&lt;li&gt;每1个人出题，由另外7个人回答，&lt;/li&gt;
-&lt;li&gt;其余人全答对或者全答错，出题人得0分。&lt;/li&gt;
-&lt;li&gt;其余人答对1或6题，出题人得0.3分。&lt;/li&gt;
-&lt;li&gt;其余人答对2或5题，出题人得0.7分。&lt;/li&gt;
-&lt;li&gt;其余人答对3或4题，出题人得1分。&lt;/li&gt;
-&lt;li&gt;当然，如果题目出错了，出题人应被扣1分。&lt;!-- TEASER_END --&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;定性分析一下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;得到的题目不会太难太偏，似乎也不容易太简单放水。&lt;/li&gt;
-&lt;li&gt;一个解是每个人都放水，出特别简单的题，其余人都答对，自己得0分，这样每个人的分数相同，最终平分奖金，但把自己的命运寄托于其他人，这显然不是个稳定的解，形成了&lt;strong&gt;多人囚徒困境&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;如果限定题目是判断题，出题人可以出最难的题，其余人随机作答，出题人得到1分，于是应该要限定题目类型，&lt;/li&gt;
-&lt;li&gt;目前我设想是限定4选项的选择题，那么可能出现随机作答，于是有1-2人做对，出题人得分0.3或0.7，而有两人得分1，出题人自己吃亏。其实选项越多越好，选项越多，出最难题的可能性越小。&lt;/li&gt;
-&lt;li&gt;有可能先出题和后出题之间有优势差异。（但也不一定，比如依次出题并且出题后立刻就做，那么对于最后一个人如果他放水，自己就吃亏了。）&lt;ul&gt;
-&lt;li&gt;一是可以随机抽签，但因为只考一次，随机的公平性不明显。&lt;/li&gt;
-&lt;li&gt;二是可以每个人出题以后考官收藏起来，收集完整以后再统一公布。打算使用这种方式。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;如果是最后一起考，似乎互相抄袭的作弊可能性就很小了。当然也有可能全体一起作弊，达到均衡，但这种均衡太明显了，完全可以重考。&lt;/li&gt;
-&lt;li&gt;如果人数足够多，比如一个50人班级，这样可以出期末考试题了。&lt;/li&gt;
-&lt;li&gt;或者人数太多时也可以分组互虐。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;实在太有趣了。&lt;/p&gt;
-&lt;p&gt;另外，要使囚徒困境有效，向每个人讲解一下囚徒困境是有必要的，不然碰上没听明白的，反而容易偏离均衡点。&lt;/p&gt;
-&lt;p&gt;那么问题来了，每人考试成绩的期望值是多少呢？&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="次日更新"&gt;次日更新&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/Exam-questions/#%E6%AC%A1%E6%97%A5%E6%9B%B4%E6%96%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;实测结果，因为首次使用，所以略混乱，前几题还好，后面他们发现自己出题的分值影响很小就放水了，这个是我考虑不周。&lt;/p&gt;
-&lt;p&gt;所以如果改进，应当是计算出自己出题得到的系数后，要乘个倍数，比如x5甚至x10，那么与其他题目就具有可比性。或者，如果是学习小组反复多次进行快速小测试，甚至可以舍弃其他题目的得分，仅仅以出题分来衡量。&lt;/p&gt;
-&lt;p&gt;补充一下计算公式:&lt;/p&gt;
-$$
-s_i=K \times(1 - \frac{\lvert c_i-0.5\rvert}{0.5})
-$$&lt;p&gt;其中:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;s(i)是第i题出题人的得分 &lt;/li&gt;
-&lt;li&gt;c(i)是第i题其他人的正确率&lt;/li&gt;
-&lt;li&gt;K是一个常数系数，用来调整出题分的吸引力&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这个方法如果用在一个学习小组，比如小奥班什么的，可能会产生非常强的学习动力。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Exam-questions/</guid><pubDate>Thu, 27 Jun 2019 10:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;关于此训练手册，您有什么意见建议，可以在github上提issue：&lt;a href="https://github.com/goldengrape/phaco-training-manual/issues"&gt;https://github.com/goldengrape/phaco-training-manual/issues&lt;/a&gt;, 也可以fork自行修改，这是一个开放的项目，希望能够帮助更多的医生。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</guid><pubDate>Thu, 04 Jul 2019 04:00:00 GMT</pubDate></item></channel></rss>
