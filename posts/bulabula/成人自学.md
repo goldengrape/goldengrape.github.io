@@ -9,7 +9,7 @@
 .. type: text
 -->
 
-昨天翻译完了[15页的python教程](../python/15_pages_python_tutorial_translated/)，想就成人自学再说说。
+昨天翻译完了[15页的python教程](../../python/15_pages_python_tutorial_translated/)，想就成人自学再说说。
 
 # 现象
 python上手应该很容易，如果有老师在身边督促指导，就用这15页的教程，恐怕快则一下午，慢则一周就可以自己写一些简单的应用了。
