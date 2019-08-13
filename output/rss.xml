@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 04 Aug 2019 01:17:17 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>成人自学的困难</title><link>https://goldengrape.github.io/posts/bulabula/adult_self_study/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;昨天翻译完了&lt;a href="https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/"&gt;15页的python教程&lt;/a&gt;，想就成人自学再说说。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 13 Aug 2019 13:54:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>金葡流简报术</title><link>https://goldengrape.github.io/posts/bulabula/goldengrape_style_ppt/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;简报两大困难&lt;/h3&gt;
+&lt;p&gt;根据我多年来做简报，包括但不限于PPT/ Keynote的经验，做简报有两大困难：&lt;strong&gt;一不做二不休&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;所谓“一不做”，是不开始做，严重的拖延症发作，几张PPT可能要做上一个星期。只要打开电脑就不可避免会被其他的网站所影响，即使在查阅与简报相关的资料，也可能在维基百科甚至是在pubmed中迷失方向，看了一大堆不相干的文件，学会了许多不相干的知识，但PPT还是没有动。&lt;/p&gt;
+&lt;p&gt;另一大困难是“二不休”，可能直到deadline绕颈，被逼不得不动手以后，又在PPT中塞入了太多的内容，写下了太多的文字，加入了太多的动画，在真正演讲的时候排练不足，时间控制不好，讲着讲着发觉时间不够用了，于是不断的“过、过、下一张、下一张”，之前的辛苦制作，给浪费了许多，还给人留下了准备仓促的坏印象。&lt;/p&gt;
+&lt;h3&gt;金葡流简报术&lt;/h3&gt;
+&lt;p&gt;综上，我根据自己平时的工作特点，开发了一种做简报的新流程，被网友&lt;a href="https://twitter.com/octw"&gt;@octw&lt;/a&gt; 赐名为“金葡流简报术”。&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;这个简报术很容易，分为以下几个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用笔和纸先写下演讲时要说的讲稿，&lt;/li&gt;
+&lt;li&gt;用语音输入的软件将写好的讲稿输入电脑，分段粘贴进幻灯片的备注中，&lt;/li&gt;
+&lt;li&gt;根据每页的讲稿，来选择图片图表，或书写文字，&lt;/li&gt;
+&lt;li&gt;其中，如果是书写文字，推荐使用毛笔来写。写完后用Adobe Capture转换成svg，再转换成PPT或者Keynote中的“形状”。&lt;/li&gt;
+&lt;li&gt;​然后是利用自己写好的程序，将带有备注的PPT生成由TTS转换语音后的视频，然后自己看看，再作少许修改、排练。也可以简单使用朗读软件，将讲稿文本朗读出来，记录个时间。甚至可以自己去充当朗读软件，只要对着讲稿念出来，进行幻灯片录制即可。​&lt;/li&gt;
+&lt;li&gt;录好的语音幻灯可以导出成视频，既可以存档又可以传到网上分享，还可以给听众或学生作为课后复习&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这个简报术的特点就是&lt;strong&gt;慢&lt;/strong&gt;，&lt;strong&gt;目的也是慢&lt;/strong&gt;，通过缓慢的过程是进入使自己进入工作流、心流的状态。&lt;/p&gt;
+&lt;h3&gt;免拖延&lt;/h3&gt;
+&lt;p&gt;在写讲稿的时候最好选择一个安静不受干扰的环境，比如图书馆，给自己留出一定的工作时间，比如上一个25分钟的倒计时，还可以给自己准备一点小小的奖励，比如一块巧克力，但只能在连续工作25分钟以后才可以吃一小块，&lt;/p&gt;
+&lt;p&gt;最后也是最重要的准备，将电脑和手机放到够不着的地方，比如图书馆的储物柜里锁上，连续工作25分钟以后才能去查看一下微信和邮件之类。&lt;/p&gt;
+&lt;p&gt;这些都是避免被干扰避免触发拖延行为的好方法，更详细的步骤，请参考coursera上面的一门课叫做&lt;a href="https://www.coursera.org/learn/learning-how-to-learn"&gt;learning how to learn&lt;/a&gt;，学习如何学习。其中关于拖延症的治疗讲得很好，我拖延了几个星期以后学完了，受益匪浅。&lt;/p&gt;
+&lt;h3&gt;写作文&lt;/h3&gt;
+&lt;p&gt;撰写演讲讲稿的过程，其实我们自己已经受了很多年的训练了，就是&lt;strong&gt;写作文&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;一切均按照写作文的流程来，首先给自己出一个作文题，根据简报内容，根据简报要讲的目的写出一个作文题，然后估计出字数。&lt;/p&gt;
+&lt;p&gt;常见的演讲学术会议发言通常是5到10分钟，商业演讲、小讲座可能是15到20分钟，一堂课一般是30到40分钟。通过时间来估计字数，播音员的语速可能会达到每分钟300字以上。但是作为演讲，是要让台下能够听清楚，并理解。因此每分钟最好控制在150到200字。&lt;/p&gt;
+&lt;p&gt;那么一个10分钟的小演讲小讲座大约是1500字到2000字，高考作文是要求800字以上，写作时间一般至少留出40分钟，于是你大约需要工作1到2个小时可以写完讲稿。&lt;/p&gt;
+&lt;p&gt;写讲稿的时候，如果有什么需要查询的细节内容，可以先画出空格，空着。等完全写完了之后再去打开电脑查找，很多人常年不写字了，可能提笔忘字，正好借此机会多多练习写字，龙飞凤舞即可，是供自己阅读的草稿，不必太工整。&lt;/p&gt;
+&lt;p&gt;一旦开始动笔写，恐怕自己会很惊讶于自己的速度。因为通常要准备的简报都是自己熟悉的东西。之前的拖延其实也常常在心中想着草稿，只是没有将其记录下来，所以一旦动笔开始，就写得飞快。&lt;/p&gt;
+&lt;p&gt;对了，在行云流水写的时候要有一支好写的笔，就给钢笔灌好墨水或者使用舒服的自动铅笔之类。&lt;/p&gt;
+&lt;p&gt;手写讲稿，令我对演讲内容非常熟悉，自己手写的要比输入的印象更深刻，不大可能出现讲着讲着忘词或者卡壳的情况，手写的速度大约是每分钟20字，演讲时说话的速度是每分钟200字，有着10倍的差距，因此我有充足的时间来组织语言。更因为手写慢，所以我这样懒散的人，必定尽量言简意赅。&lt;/p&gt;
+&lt;p&gt;用纸和笔还有一大好处是，要增加一倍的显示面积，只需要再添加一张纸就好了。我可以随时调用出之前写的部分或者提纲，也可以随手圈出一段，画个箭头指向另一处。如果临时想到什么，比如所需插图的样子，或者示意图的画法就可以直接在纸上潦草画出讲稿。&lt;/p&gt;
+&lt;p&gt;写完之后我的工作就算完成一大半了，有一份手写稿，甚至不必做PPT，我也应该可以在现场写板书的，要知道写板书才是讲课最高境界，PPT什么的都是下等。&lt;/p&gt;
+&lt;h3&gt;后处理&lt;/h3&gt;
+&lt;p&gt;将手写稿变成电子版，理论上可以用OCR软件，但实际用起来效果并不好，倒是用语音输入软件，念一遍，又快又好。有些过于书面的表达或者容易引起听觉错误的表达方式，在语音输入的时候也比较容易发现。&lt;/p&gt;
+&lt;p&gt;录入完成后又是语文课的基本功：分段摘出重点作为每一张幻灯片的展示内容。尽量避免在幻灯片上留下一堆文字，其实留下太多文字是不自信的表现，幻灯片上的大段文字往往是给自己照着念做准备的。现在有了手写稿，应当有充分的信心，所以尽量少写文字。&lt;/p&gt;
+&lt;p&gt;能够用图片表达的搜索出图片，需要图表的放入图表，关键数据怕观众听不清才可以打字的方式写出来，最后多多少少还是会有些标题什么的，我建议找比手写更慢的方式：用毛笔来写。&lt;/p&gt;
+&lt;p&gt;比起钢笔每分钟20字的速度，我估计毛笔还要再慢一个数量级，每分钟两个字吧，这是最具有个性化的艺术字了，孙过庭说过“书则一字可见其心”。&lt;/p&gt;
+&lt;p&gt;​毛笔字可以加工成幻灯片中的“形状”，我&lt;a href="https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape"&gt;另外写过教程&lt;/a&gt;，不再详述。转换成形状以后可以有很多华丽的处理。现代的平面展示媒介是投影仪，而不再是宣纸，书法当然也可以与时俱进，&lt;/p&gt;
+&lt;p&gt;一切都完成后，可以再把文字转换成语音，这我也做好了&lt;a href="https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide"&gt;现成的程序&lt;/a&gt;，转好后自己可以听听效果。修改完成后导出成视频可以供大家分享，&lt;/p&gt;
+&lt;p&gt;以上就是金葡流简报术的基本方法，驽马十驾功在不舍，输出慢一点完成更快。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/goldengrape_style_ppt/</guid><pubDate>Tue, 13 Aug 2019 10:00:00 GMT</pubDate></item><item><title>成人自学的困难</title><link>https://goldengrape.github.io/posts/bulabula/adult_self_study/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;昨天翻译完了&lt;a href="https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/"&gt;15页的python教程&lt;/a&gt;，想就成人自学再说说。&lt;/p&gt;
 &lt;h2&gt;现象&lt;/h2&gt;
 &lt;p&gt;python上手应该很容易，如果有老师在身边督促指导，就用这15页的教程，恐怕快则一下午，慢则一周就可以自己写一些简单的应用了。&lt;/p&gt;
 &lt;p&gt;但学python真的花费了我很长很长时间，我发现我从2003年就开始学习python，一直学到2017年才算学会了基础（因此万幸躲过了python 2）。用时14年，而不是7天。&lt;/p&gt;
@@ -670,19 +710,4 @@ $$&lt;p&gt;写不成三角矩阵&lt;/p&gt;
 &lt;h2&gt;其他&lt;/h2&gt;
 &lt;p&gt;似乎用来剪辑电影也会很方便吧。&lt;/p&gt;
 &lt;p&gt;说到剪辑电影，我还发现了一个有趣的工具&lt;a href="https://antiboredom.github.io/videogrep/"&gt;videogrep&lt;/a&gt;，与我做的工具类似，但他是在字幕中检索关键词或者使用正则表达式来检索，效果惊艳：
-&lt;a href="https://www.youtube.com/watch?v=PQMzOUeprlk"&gt;All the instances of the phrase “time” in the movie “In Time”&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/video_keynote_2/</guid><pubDate>Fri, 05 Jul 2019 04:00:00 GMT</pubDate></item><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。&lt;/p&gt;
-&lt;p&gt;今年的项目是“Phaco训练手册视频版”。但我低估了工作量，光是做关于主切口的ppt，我就做了好几天，还没写完。所以到今天只能说开始连载，而无法做到完全发布。大概每周我会再继续发布一两个视频。&lt;/p&gt;
-&lt;p&gt;说是视频，更多其实是配音PPT。插图我尽量采用绘制的图像，少量使用照片，这样讲解更清楚，而且与各个厂家特定的产品关联不大。&lt;/p&gt;
-&lt;p&gt;考虑到要方便修改，所以我使用的是text to speech进行的配音，配音的文本在每个ppt的“备注”里，需要的话您也可以打开看。&lt;/p&gt;
-&lt;p&gt;目前使用的是讯飞的语音引擎。其中会有一点点小问题，比如讯飞会把phaco读成“Ph-ar-co”，把“粘弹剂”读成可怕的“沾-蛋-剂”，所以在配音文本里把phaco写成了pheico，把“粘弹剂”写成了“年弹剂”，仅仅是为了读音好听。&lt;/p&gt;
-&lt;p&gt;所有的PPT和文本，放在：
-&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;https://github.com/goldengrape/phaco-training-manual&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;视频存放有点问题，在国内难以找到一个对我舒适的分享网站，要不就要实名认证要不就要审核或者干脆不允许医学教学视频出现。&lt;/p&gt;
-&lt;p&gt;所以视频在YouTube 上有一份，如果您能正常访问国际互联网，可以打开：
-&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UPYE9xxD1DnlcVZV7SrQnj"&gt;https://www.youtube.com/playlist?list=PLMDNnNJK3B1UPYE9xxD1DnlcVZV7SrQnj&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;国内的视频播放，我可以非独占地授权给一些公众号，让他们自己上传到自己的公众号中供大家看。如果想直接下载源视频，我暂时先放在百度云里：&lt;/p&gt;
-&lt;p&gt;链接: &lt;a href="https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg"&gt;https://pan.baidu.com/s/1KwY_WEr85i8vPNtWy4rOTg&lt;/a&gt; 提取码: fsmu &lt;/p&gt;
-&lt;p&gt;需要强调的是，这个课程还在制作中，内容也有可能不断修订。但愿我能一直坚持下去把它做完。&lt;/p&gt;
-&lt;p&gt;如果您对教程中的插图感兴趣，我已经做好了一份开源的图集：&lt;a href="https://github.com/goldengrape/phacoTools"&gt;https://github.com/goldengrape/phacoTools&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;如果您对给PPT自动配音感兴趣，这是我以前做好的配音程序: &lt;a href="https://github.com/goldengrape/dubbing-pptx"&gt;https://github.com/goldengrape/dubbing-pptx&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;关于此训练手册，您有什么意见建议，可以在github上提issue：&lt;a href="https://github.com/goldengrape/phaco-training-manual/issues"&gt;https://github.com/goldengrape/phaco-training-manual/issues&lt;/a&gt;, 也可以fork自行修改，这是一个开放的项目，希望能够帮助更多的医生。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</guid><pubDate>Thu, 04 Jul 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;a href="https://www.youtube.com/watch?v=PQMzOUeprlk"&gt;All the instances of the phrase “time” in the movie “In Time”&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/video_keynote_2/</guid><pubDate>Fri, 05 Jul 2019 04:00:00 GMT</pubDate></item></channel></rss>
