@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 13 Aug 2019 13:54:50 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>金葡流简报术</title><link>https://goldengrape.github.io/posts/bulabula/goldengrape_style_ppt/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;简报两大困难&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Aug 2019 08:03:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何快速进入工作学习状态</title><link>https://goldengrape.github.io/posts/bulabula/How_to_get_into_work_or_study_quickly/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;工作日前的准备:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;前一天晚上睡前确保在微信“发现页”中已经关闭了朋友圈. &lt;/li&gt;
+&lt;li&gt;前一天晚上或之前, 订阅好“无忧公主的数学时间”, 微信号是 wuyoushuxue .&lt;/li&gt;
+&lt;li&gt;前一天晚上或之前, 将“无忧公主的数学时间” “添加到桌面”.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;工作日当日早上:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;工作日当天早起, 不要打开微信, 先点击桌面上的“无忧公主的数学时间”快捷方式.&lt;/li&gt;
+&lt;li&gt;看一道数学题, 如果一眼就能看出答案, 另外找一道. &lt;/li&gt;
+&lt;li&gt;开始日常的洗漱、吃早饭、通勤……, 开始工作.&lt;/li&gt;
+&lt;li&gt;注意, 通勤时不要看朋友圈以及其他社交网络, 不要看新闻, 可以通过“讯飞有声”听电子书.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;工作开始后:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;首先进行输出工作, 至少一个番茄时间段(25分钟). 所谓输出就是自己写东西, 比如写代码、写email、写文章、做ppt等.&lt;/li&gt;
+&lt;li&gt;休息时可以拿出一张草稿纸, 试着解决无忧公主出的数学题. &lt;/li&gt;
+&lt;li&gt;第一个输出时间段之后才可以摸鱼.&lt;/li&gt;
+&lt;li&gt;如果刷微信朋友圈, 可以临时开启“发现页”中的朋友圈, 看完后及时关闭.&lt;/li&gt;
+&lt;li&gt;刷其他社交网络类似, 尽快及时关闭. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;以上流程的关键是:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;在早起后第一时间, 先往脑子里装一道数学题. 并使之保持悬而未决的状态.&lt;/li&gt;
+&lt;li&gt;第一组输出之后才开始允许输入. &lt;/li&gt;
+&lt;li&gt;为浏览新闻、社交网络造成一定的困难.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;以上流程对我自己有一定的作用.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h2&gt;可能的原理&lt;/h2&gt;
+&lt;p&gt;工作记忆内存一般只有4个扩展槽, 早起装一道数学题, 并且暂时不准使用草稿纸, 导致这道数学题一直占据一个工作内存槽. &lt;/p&gt;
+&lt;p&gt;在保持思考数学题的时候, 更容易以客观视角看待问题, 不容易被情绪左右. 而新闻与社交网络中的信息主要以强烈情绪争夺注意力. 因此在第一时间植入数学题后, 能够增强一点免疫. 也就是说, 看到刷屏标题后第一反应不是好奇, 而是“关我屁事”. &lt;/p&gt;
+&lt;p&gt;如果要加强效果, 可以将手机放在包里, 不取出, 不放在手边, 反正有信息也会响, 或者手环会提醒.&lt;/p&gt;
+&lt;p&gt;如果要更增强效果, 在第一个工作输出时, 使用笔和纸, 不打开电脑.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/How_to_get_into_work_or_study_quickly/</guid><pubDate>Sat, 17 Aug 2019 04:00:00 GMT</pubDate></item><item><title>金葡流简报术</title><link>https://goldengrape.github.io/posts/bulabula/goldengrape_style_ppt/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;简报两大困难&lt;/h3&gt;
 &lt;p&gt;根据我多年来做简报，包括但不限于PPT/ Keynote的经验，做简报有两大困难：&lt;strong&gt;一不做二不休&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;所谓“一不做”，是不开始做，严重的拖延症发作，几张PPT可能要做上一个星期。只要打开电脑就不可避免会被其他的网站所影响，即使在查阅与简报相关的资料，也可能在维基百科甚至是在pubmed中迷失方向，看了一大堆不相干的文件，学会了许多不相干的知识，但PPT还是没有动。&lt;/p&gt;
 &lt;p&gt;另一大困难是“二不休”，可能直到deadline绕颈，被逼不得不动手以后，又在PPT中塞入了太多的内容，写下了太多的文字，加入了太多的动画，在真正演讲的时候排练不足，时间控制不好，讲着讲着发觉时间不够用了，于是不断的“过、过、下一张、下一张”，之前的辛苦制作，给浪费了许多，还给人留下了准备仓促的坏印象。&lt;/p&gt;
@@ -413,22 +447,4 @@ conda install pytorch torchvision -c soumith --yes
 &lt;li&gt;&lt;a href="https://www.zotero.org/"&gt;Zotero&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://hackmd.io"&gt;Hackmd&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- EOF --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</guid><pubDate>Mon, 14 Jan 2019 18:00:00 GMT</pubDate></item><item><title>我练习毛笔字的方法</title><link>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;简述一下我练习毛笔字的方法, (尚不敢称为书法):&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;至少看一遍&lt;a href="http://my.tv.sohu.com/pl/9076183/index.shtml"&gt;《黄简讲书法》的初级课程&lt;/a&gt;, 老先生说话比较慢, 用1.5x的速度听比较舒服.&lt;/li&gt;
-&lt;li&gt;用&lt;a href="https://detail.tmall.com/item.htm?id=44531148545"&gt;A4透明胶片&lt;/a&gt;打印字帖, 每个字按2寸大小的大楷进行打印, 大约一页6个字左右, 网上很容易找到这样的字帖, 比如王羲之《兰亭序》的大字字帖. 稍微调整一下颜色和对比度, 可以得到纯黑白的.&lt;/li&gt;
-&lt;li&gt;可以描红或者临帖, 如果是四尺半切的宣纸, 可以折叠成4x2^N格, 不妨先描红一格, 然后再临帖3格.&lt;/li&gt;
-&lt;li&gt;描红, 把打印的字帖垫在宣纸下面.&lt;/li&gt;
-&lt;li&gt;临帖, 先照着写, 写完以后把透明胶片字帖放回到自己写的字上面比对. 每写完一个字都进行一次比对.&lt;/li&gt;
-&lt;li&gt;找个支架, 把手机对着写字区域夹好, 写字的时候录像, 主要是录笔和手的动作. 写完以后看一看录像, 删了或者扔到google photo里, 反正不占空间. &lt;a href="https://www.microsoft.com/en-us/microsoftpix"&gt;microsoft pix&lt;/a&gt;能够方便做成高速重放视频.&lt;/li&gt;
-&lt;li&gt;成人练习, 我觉得三天打鱼两天晒网比较好. 想写的时候就多些几天, 不想写就算了. 但是为了避免完全忘记, 建议上个闹钟, 比如每晚10点提醒一下: “要不要练练字?”, GTD那种强迫生活方式我可受不了.&lt;/li&gt;
-&lt;li&gt;写完以后拍照, 邀请几个好友/同学建群打卡或者只是留存.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;这是我个人的练习方法, 写完一个字以后再用透明胶片上的字帖拿回去比对, 看两个字的差异, 相当于做Mean Square Error. 把MSE当作loss function, 对自己的人脑神经网络进行训练, 虽然每个字都练习很多遍, 容易产生过拟合, 但是由于人脑天然具有遗忘功能, 加上三天打鱼两天晒网, 遗忘参数调得比较高, 所以个人感觉还是有不错得泛化能力.&lt;/p&gt;
-&lt;p&gt;对操作录像然后重放, 是训练手术的基本技巧. 书法也算是一种手的技术吧. 初学者通常注意力范围有限, 看不到笔锋的背面, 也看不到自己的手腕动作. 黄简老师讲吴昌硕写字偶尔还要探头看看自己笔锋的背面(为啥不用镜子?), 现在有手机录像就方便很多了.&lt;/p&gt;
-&lt;p&gt;一年不到, 练习了“永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右，引以为流觞曲水，列坐其次。” 65个字, 写到后面还经常要再返回去练练前面.&lt;/p&gt;
-&lt;p&gt;偶尔一时兴起, 想写点别的, 最简单的方法是用个防水套把iPad装起来, 然后用书法字典的app(比如&lt;a href="https://itunes.apple.com/cn/app/%E4%BA%91%E7%AB%A0%E4%B9%A6%E6%B3%95%E5%AD%97%E5%85%B8/id992025786"&gt;云章书法字典&lt;/a&gt;)找到想写的字, 也可以描红, 也可以临帖后再把宣纸铺上去比对. 但防水套和宣纸比较薄, 手指有可能会触碰屏幕导致误操作, 左手可以戴个手套. 如果反复写很多次会比透明胶片字帖麻烦一些.&lt;/p&gt;
-&lt;p&gt;写好的文字可以&lt;a href="https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/"&gt;导入keynote里&lt;/a&gt;用来做Keynote/PPT幻灯, 很好玩.&lt;/p&gt;
-&lt;p&gt;据说人们容易低估自己周期性的努力, 而高估自己一次性的努力, 这是哪个推友说过来着, 我记不起来了. 感觉挺正确的.&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</guid><pubDate>Sun, 13 Jan 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;!-- EOF --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/gollum-wiki/</guid><pubDate>Mon, 14 Jan 2019 18:00:00 GMT</pubDate></item></channel></rss>
