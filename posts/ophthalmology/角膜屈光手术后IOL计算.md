@@ -56,11 +56,11 @@
 
 # excel实现
 
-考虑到真正的眼科医生, 是不大可能认真看python程序的, 也不大可能真的去点一下azure notebooks上的clone按钮, 更不可能有一天自己写个处理数据的程序, 用import把我写好的公式导入. 
+<!-- 考虑到真正的眼科医生, 是不大可能认真看python程序的, 也不大可能真的去点一下azure notebooks上的clone按钮, 更不可能有一天自己写个处理数据的程序, 用import把我写好的公式导入.  -->
+<!-- 
+(是的, 我了解你们, 看看“什么值得买”类的评测才是临床看病的正经事, 至于原理不重要, 实现反正机器都有内置的. 我对你们很绝望, 但我仍然爱你们) -->
 
-(是的, 我了解你们, 看看“什么值得买”类的评测才是临床看病的正经事, 至于原理不重要, 实现反正机器都有内置的. 我对你们很绝望, 但我仍然爱你们)
-
-所以我随手写了个[excel文件](https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery/raw/master/IOL_calc.xlsx).
+我还随手写了个[excel文件](https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery/raw/master/IOL_calc.xlsx).
 里面包含了Double K SRK/T、SRK/T、 Hoffer Q、Haigis、Haigis L、Shammas、BESSt公式, 以及一个简单的术后K值转换公式. (原来VB的函数和python差不多, 几乎可以复制粘贴)
 
 ![excel](https://i.loli.net/2019/08/19/H8hRcxvlanGTspz.png)

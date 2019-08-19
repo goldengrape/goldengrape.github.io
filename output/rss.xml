@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Aug 2019 04:53:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Aug 2019 05:15:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
 &lt;p&gt;好在发明新的人工晶体计算公式是名利双收的好事, 于是过去15年, 至少出现有30种以上的公式. 然后还有更多的临床研究, 对比各种公式的优劣. (医学领域的“什么值得买”)&lt;/p&gt;
 &lt;p&gt;最近读了一篇这样的对比综述, &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;python实现&lt;/h3&gt;
@@ -31,9 +31,12 @@
 &lt;p&gt;原来是Hoffer老先生觉得之前的回归曲线不直, 看起来像tangent曲线, 于是用卡西欧fx-8500G图形计算器开始试, 试啊试, 直到凑出来的公式符合曲线的形态(by trial and error, until a formular produced the desired curve).&lt;/p&gt;
 &lt;p&gt;上古文献里的八卦真多.&lt;/p&gt;
 &lt;h2&gt;excel实现&lt;/h2&gt;
-&lt;p&gt;考虑到真正的眼科医生, 是不大可能认真看python程序的, 也不大可能真的去点一下azure notebooks上的clone按钮, 更不可能有一天自己写个处理数据的程序, 用import把我写好的公式导入. &lt;/p&gt;
-&lt;p&gt;(是的, 我了解你们, 看看“什么值得买”类的评测才是临床看病的正经事, 至于原理不重要, 实现反正机器都有内置的. 我对你们很绝望, 但我仍然爱你们)&lt;/p&gt;
-&lt;p&gt;所以我随手写了个&lt;a href="https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery/raw/master/IOL_calc.xlsx"&gt;excel文件&lt;/a&gt;.
+&lt;!-- 考虑到真正的眼科医生, 是不大可能认真看python程序的, 也不大可能真的去点一下azure notebooks上的clone按钮, 更不可能有一天自己写个处理数据的程序, 用import把我写好的公式导入.  --&gt;
+
+&lt;!-- 
+(是的, 我了解你们, 看看“什么值得买”类的评测才是临床看病的正经事, 至于原理不重要, 实现反正机器都有内置的. 我对你们很绝望, 但我仍然爱你们) --&gt;
+
+&lt;p&gt;我还随手写了个&lt;a href="https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery/raw/master/IOL_calc.xlsx"&gt;excel文件&lt;/a&gt;.
 里面包含了Double K SRK/T、SRK/T、 Hoffer Q、Haigis、Haigis L、Shammas、BESSt公式, 以及一个简单的术后K值转换公式. (原来VB的函数和python差不多, 几乎可以复制粘贴)&lt;/p&gt;
 &lt;p&gt;&lt;img alt="excel" src="https://i.loli.net/2019/08/19/H8hRcxvlanGTspz.png"&gt;&lt;/p&gt;
 &lt;p&gt;只要像引用普通的excel函数那样使用就可以了. 如果遇到要处理几百个病人数据, 对比上面这些公式的结果, 又懒得一个一个往IOL Master或者PentaCam机器里输入, 那么就可以用这个excel文件了. &lt;/p&gt;
