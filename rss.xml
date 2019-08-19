@@ -1,5 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 17 Aug 2019 08:02:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何快速进入工作学习状态</title><link>https://goldengrape.github.io/posts/bulabula/How_to_get_into_work_or_study_quickly/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;工作日前的准备:&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Aug 2019 04:53:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
+&lt;p&gt;好在发明新的人工晶体计算公式是名利双收的好事, 于是过去15年, 至少出现有30种以上的公式. 然后还有更多的临床研究, 对比各种公式的优劣. (医学领域的“什么值得买”)&lt;/p&gt;
+&lt;p&gt;最近读了一篇这样的对比综述, &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;python实现&lt;/h3&gt;
+&lt;p&gt;于是把其中的各种公式重新用python写了一遍. 代码放在github上: 
+&lt;a href="https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery"&gt;https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery&lt;/a&gt;&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;p&gt;而且, 这次我是练习使用ipywidget做成了交互式的jupyter笔记本. 可以使用滑动条或者填空格来填入参数, 可以实时显示出结果.&lt;/p&gt;
+&lt;p&gt;例如:
+&lt;!-- TEASER_END --&gt;&lt;img alt="屏幕快照 2019-08-19 11.54.42" src="https://i.loli.net/2019/08/19/hJucql4jdELfyxv.png"&gt;&lt;/p&gt;
+&lt;p&gt;但是要实现交互, 在github的ipynb静态渲染不行, 必须要一个能够真正计算的空间才行. 虽然理论上mybinder.org提供了从github直接导入的功能, 但实际上用起来特别慢, 还没搞定. &lt;/p&gt;
+&lt;p&gt;因此, 要想测试交互式的功能, 国内只好使用azure notebooks了. 我也放了一份: &lt;a href="https://notebooks.azure.com/goldengrape/projects/iol-calculation-lasik/html/IOL_calc.ipynb"&gt;https://notebooks.azure.com/goldengrape/projects/iol-calculation-lasik/html/IOL_calc.ipynb&lt;/a&gt; 点击硕大的&lt;strong&gt;绿色Clone按钮&lt;/strong&gt;, 给自己Clone一份, 就可以运行交互了. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-08-19 12.48.07" src="https://i.loli.net/2019/08/19/8p3TeWOG5Alfdcs.png"&gt;&lt;/p&gt;
+&lt;h3&gt;读后感&lt;/h3&gt;
+&lt;p&gt;阅读带有公式的论文, 还是应该自己亲手复现一下.即使是这个领域的经典文章, 里面也有很多错误. 比如: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://sci-hub.tw/10.1016/j.jcrs.2006.08.037"&gt;BESSt公式&lt;/a&gt;的文献里, 这个r没有定义, 猜测应该是rF.
+&lt;img alt="BESSt公式" src="https://i.loli.net/2019/08/19/KS6T4azZOhjdLv9.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/14670413"&gt;Double K SRK/T公式&lt;/a&gt;的文献里, rpre2和Cw2的2都应该是上标, 是平方.
+&lt;img alt="double K" src="https://i.loli.net/2019/08/19/UJnhDqfbxR7eGgF.png"&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;到不完全是吹毛求疵, 而是你直接对着文献敲代码运行结果肯定是错的. 也许有一天强AI能够自行阅读医学文献的时候, 一定会惊异人类的容错能力. 这也算是人类的自我保护吧.&lt;/p&gt;
+&lt;p&gt;另外, 有些公式的来源真是...我复现Hoffer Q公式的时候, 发现还有tan K这样的过程, 对角膜曲率K求正切? 什么道理, 这量纲不对啊. 是不是印错了? 于是&lt;a href="https://sci-hub.tw/10.1016/S0886-3350(13)80338-0"&gt;仔细读原文&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Haigis" src="https://i.loli.net/2019/08/19/Xch1WpuDea6kJ42.png"&gt;&lt;/p&gt;
+&lt;p&gt;原来是Hoffer老先生觉得之前的回归曲线不直, 看起来像tangent曲线, 于是用卡西欧fx-8500G图形计算器开始试, 试啊试, 直到凑出来的公式符合曲线的形态(by trial and error, until a formular produced the desired curve).&lt;/p&gt;
+&lt;p&gt;上古文献里的八卦真多.&lt;/p&gt;
+&lt;h2&gt;excel实现&lt;/h2&gt;
+&lt;p&gt;考虑到真正的眼科医生, 是不大可能认真看python程序的, 也不大可能真的去点一下azure notebooks上的clone按钮, 更不可能有一天自己写个处理数据的程序, 用import把我写好的公式导入. &lt;/p&gt;
+&lt;p&gt;(是的, 我了解你们, 看看“什么值得买”类的评测才是临床看病的正经事, 至于原理不重要, 实现反正机器都有内置的. 我对你们很绝望, 但我仍然爱你们)&lt;/p&gt;
+&lt;p&gt;所以我随手写了个&lt;a href="https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery/raw/master/IOL_calc.xlsx"&gt;excel文件&lt;/a&gt;.
+里面包含了Double K SRK/T、SRK/T、 Hoffer Q、Haigis、Haigis L、Shammas、BESSt公式, 以及一个简单的术后K值转换公式. (原来VB的函数和python差不多, 几乎可以复制粘贴)&lt;/p&gt;
+&lt;p&gt;&lt;img alt="excel" src="https://i.loli.net/2019/08/19/H8hRcxvlanGTspz.png"&gt;&lt;/p&gt;
+&lt;p&gt;只要像引用普通的excel函数那样使用就可以了. 如果遇到要处理几百个病人数据, 对比上面这些公式的结果, 又懒得一个一个往IOL Master或者PentaCam机器里输入, 那么就可以用这个excel文件了. &lt;/p&gt;
+&lt;p&gt;但这些公式只是绑定到这个文件里的, 暂时我还没搞定如何弄成一个可以导入到公式库里面的东西. &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;以上开源小代码, 作为医师节小礼物送给各位同道. 祝医师节快乐.&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</guid><pubDate>Mon, 19 Aug 2019 04:00:00 GMT</pubDate></item><item><title>如何快速进入工作学习状态</title><link>https://goldengrape.github.io/posts/bulabula/How_to_get_into_work_or_study_quickly/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;工作日前的准备:&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;前一天晚上睡前确保在微信“发现页”中已经关闭了朋友圈. &lt;/li&gt;
 &lt;li&gt;前一天晚上或之前, 订阅好“无忧公主的数学时间”, 微信号是 wuyoushuxue .&lt;/li&gt;
@@ -687,26 +726,4 @@ $$&lt;p&gt;写不成三角矩阵&lt;/p&gt;
 &lt;p&gt;可以引出设计公理的第一条：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;满足功能需求（Functional Requirements, FRs)的参数设计（Design Parameter, DPs) 应当要解耦合（decouple）&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item><item><title>急诊儿童外伤缝合经验一则</title><link>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;整理网盘，发现很久很久以前我当医生时写的一则经验总结，很有趣。&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;总结一下急诊儿童缝合：
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;通常是男孩，接诊以后，如果父亲陪同，则将母亲支走。对男孩的称呼一律使用成年人称呼，如小伙子，男子汉等。检查的时候明确告诉孩子不会疼痛，若触及伤口，则事先声明可能略疼痛，检查完成后，向孩子及其父亲交待病情，需要缝合；缝合的时候要打麻药；打麻药的时候会疼；缝合的时候不疼。&lt;/p&gt;
-&lt;p&gt;反复向孩子明确：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;打麻药的时候会疼，与平时打针相似。&lt;/li&gt;
-&lt;li&gt;允许哭但绝不允许动。&lt;/li&gt;
-&lt;li&gt;缝合的时候不会疼痛。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;待孩子同意“允许哭，但不允许动”以后，带入手术室，孩子父亲控制，陪同。&lt;/p&gt;
-&lt;p&gt;消毒时事先声明，可能有不适感。打麻药前再次向孩子告知不许动。但很疼的话，可以哭。打完麻药后向孩子询问是否疼痛，并表扬，鼓励。以齿镊测试麻醉效果，再行缝合。&lt;/p&gt;
-&lt;p&gt;注意：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;明确告知何时会有疼痛，何时没有疼痛。&lt;/li&gt;
-&lt;li&gt;不要否认孩子的主观感受。&lt;/li&gt;
-&lt;li&gt;不要恐吓或欺骗孩子，任何利诱的承诺应有家长作出。&lt;/li&gt;
-&lt;li&gt;尽可能使孩子认为自己是成年人。&lt;/li&gt;
-&lt;li&gt;避免使用“快完了”“很快”等语言。直接告诉孩子还需要缝合几针，如果感觉疼痛，可以再补麻药。&lt;/li&gt;
-&lt;li&gt;语调尽可能平静、沉稳、客观，甚至可以毫无感情色彩。&lt;/li&gt;
-&lt;li&gt;缝合以后，称赞、鼓励。&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</guid><pubDate>Sat, 13 Jul 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item></channel></rss>
