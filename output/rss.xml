@@ -1,5 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Aug 2019 05:15:42 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 01 Sep 2019 05:23:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>以电视剧的方式工业化生产MOOC</title><link>https://goldengrape.github.io/posts/bulabula/Industrial_production_of_MOOC_as_TV_series/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在2013年的时候, 我写过《以电视剧的方式工业化生产MOOC》, 提出&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;网络课程可以『电视剧化』的。
+完！全！可！以！雇！佣！演！员！ 来！表！演！讲！课！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;昨天发现一个Socratica做的&lt;a href="https://www.youtube.com/playlist?list=PLi01XoE8jYoi3SgnnGorR_XOW3IcK-TP6"&gt;抽象代数课程&lt;/a&gt;, 课程浅显易懂, 而且老师非常漂亮, 甚至有一点魅惑, 一口气就看了20多节课, 把以前在看&lt;a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/about"&gt;《组合数学》&lt;/a&gt;时留下的群论补充了不少. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="21-Simple Groups - Abstract Algebra-0001" src="https://i.loli.net/2019/09/01/oaVRWPjQp4tAkbf.png"&gt;&lt;/p&gt;
+&lt;p&gt;今天经&lt;a href="https://twitter.com/goophile/status/1168011061825425409"&gt;@goophile&lt;/a&gt; 提示, 原来讲课老师是&lt;a href="https://en.wikipedia.org/wiki/Liliana_Castro"&gt;Liliana Castro&lt;/a&gt; 一位巴西女演员, 演过不少电影和电视剧. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liliana_Castro01.jpg/640px-Liliana_Castro01.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;真是表演与公开课结合的典范.&lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;hr&gt;
+&lt;p&gt;以下是2013年写的blog&lt;/p&gt;
+&lt;p&gt;MOOC有一个好处，就是非实时交流，很多人把这个当成弊端，但其实非实时交流可以使课程制作过程工业化，也就是将老师从一个人拆分成：知识顾问、编剧、导演、演员、配音、配乐、多媒体制作等很多个互相独立的工种。
+在此之前课堂上必须由一个人完成，于是会有很多人学问很好但是讲不出来；会讲，但是形象不佳；形象尚可但情绪不到位；情绪有了，却口头语、小动作多；课堂表演不错PPT配色则一塌糊涂；干脆不用PPT了板书的字却拿不出手……所以出一个讲课很好的老师很难。&lt;/p&gt;
+&lt;p&gt;网络课程可以『电视剧化』的。
+完！全！可！以！雇！佣！演！员！ 来！表！演！讲！课！
+《生活大爆炸》这个美剧表明，理论物理学博士是可以由一个不懂物理的演员演出来的。
+http://tv.sohu.com/s2013/4402/s383695385/
+http://tv.sohu.com/s2013/4402/s383695385/
+TBBT表明人们可以相信一个演员演出来的理论物理博士是一个理论物理博士。&lt;/p&gt;
+&lt;p&gt;同理，讲课也是。
+去表演系请专业演员，把他/她按照学术明星那样包装，幕后由一批顶尖的专业教授为他来写讲稿、教案，由编剧组织情节，甚至还应该埋下一些悬念。讲课的时候用分镜头，每一句台词在导演的监督下，情绪饱满的演很多遍，不断的喊cut，直到精确的把知识通过情绪传达给观众以后才罢休。&lt;/p&gt;
+&lt;p&gt;网络课程制作起来并不困难，要点是：
+&lt;em&gt; 每15分钟一个视频，
+&lt;/em&gt; 只讲一个知识点，
+&lt;em&gt; 不要用PPT!!! 最好是写板书，
+&lt;/em&gt; 要有真人的活动&lt;/p&gt;
+&lt;p&gt;家用摄像机在办公室录制都可以，很多coursera、edx上的课程都是在教授的办公室里录制的，直接在课堂上录制也可以，但要注意声音应该单独用话筒采集。
+由于老师的站位一般活动范围不大，甚至用单反录制效果还会更好。(2019年补充, 使用DJI的OSMO mobile 3, 接手机拍摄, 可以自动跟踪, 效果不错.)&lt;/p&gt;
+&lt;p&gt;这是几门老师表演不错的课程：&lt;/p&gt;
+&lt;p&gt;model thinking：
+（人物活动与板书/ppt之间的关系）
+生物学导论：
+（情绪！讲课是要有激情的）
+台湾大学的几门课也还不错
+https://www.coursera.org/taiwan&lt;/p&gt;
+&lt;p&gt;沃顿的《市场导论》：https://www.coursera.org/course/marketing
+已经可以看出是团队制作的样子了：讲产品的时候就到商场里面去取外景；摄像的用光、虚化之类是专业人士所为；老师从头到尾讲话一个错误和停顿都没有，大概是反复录制剪辑过……确实是市场部的人做事的风格。&lt;/p&gt;
+&lt;p&gt;以电视剧的方式制作出来的课程，也可以按照电视剧的方式来定价、出售和盈利，前后也可以插播广告，捧出来的明星也可以代言产品，没有长出锥子脸的演员也不必自怨自艾。&lt;/p&gt;
+&lt;p&gt;康庄大道&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Industrial_production_of_MOOC_as_TV_series/</guid><pubDate>Sun, 01 Sep 2019 04:00:00 GMT</pubDate></item><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
 &lt;p&gt;好在发明新的人工晶体计算公式是名利双收的好事, 于是过去15年, 至少出现有30种以上的公式. 然后还有更多的临床研究, 对比各种公式的优劣. (医学领域的“什么值得买”)&lt;/p&gt;
 &lt;p&gt;最近读了一篇这样的对比综述, &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;python实现&lt;/h3&gt;
@@ -666,67 +707,4 @@ $$&lt;p&gt;写不成三角矩阵&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</guid><pubDate>Wed, 17 Jul 2019 14:00:00 GMT</pubDate></item><item><title>公理设计笔记（1）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个夏日的上午，我在图书馆里闲逛（据@cxqn 说这是有闲阶级才能做的事情），偶遇一本&lt;a href="https://book.douban.com/subject/1238993/"&gt;《公理设计》&lt;/a&gt;，看书名觉得好奇于是拿出来翻了翻，觉得内容不错。网上还可以找到一篇文献&lt;a href="http://blog.sciencenet.cn/home.php?mod=attachment&amp;amp;id=40989"&gt;《公理设计理论及其应用》&lt;/a&gt; 做了一些基本介绍。&lt;/p&gt;
-&lt;p&gt;但看起来这是一门课了，所以估计会有公开课来讲解。于是上网搜了一下，还真是找到了&lt;a href="https://www.youtube.com/playlist?list=PLMDNnNJK3B1UlhdIfsFaezkHWbofX7Blj"&gt;MFE 594 An Introduction to Axiomatic Design&lt;/a&gt;，有4节课，大约一共4个多小时，花了两天看完，再回来翻翻书，有一些收获，决定写一点笔记。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;首先从1862年11月13日的&lt;a href="https://www.history.com/this-day-in-history/u-s-s-monitor-battles-c-s-s-virginia"&gt;一场海战&lt;/a&gt;讲起。这场海战“标志着蒸汽动力铁甲舰新时代的到来。”&lt;/p&gt;
-&lt;p&gt;南方C.S.S的Virginia号战舰，体型庞大，非常凶悍。已经击沉了两艘联邦军舰。北方U.S.S派出了Monitor号，一艘小得多的军舰。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://www.battlefields.org/sites/default/files/styles/gallery_item/public/thumbnails/image/comparison-of-the-css_0.jpg"&gt;
-图片来自https://www.battlefields.org/learn/galleries/battle-hampton-roads&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th align="left"&gt;&lt;/th&gt;
-&lt;th align="left"&gt;USS Monitor&lt;/th&gt;
-&lt;th align="left"&gt;CSS Virginia&lt;/th&gt;
-&lt;th align="left"&gt;V : M&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;长度&lt;/td&gt;
-&lt;td align="left"&gt;173.00ft&lt;/td&gt;
-&lt;td align="left"&gt;262.75 ft&lt;/td&gt;
-&lt;td align="left"&gt;1.52&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;宽度&lt;/td&gt;
-&lt;td align="left"&gt;41.33 ft&lt;/td&gt;
-&lt;td align="left"&gt;51.16 ft&lt;/td&gt;
-&lt;td align="left"&gt;1.24&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;排水量&lt;/td&gt;
-&lt;td align="left"&gt;987 tons&lt;/td&gt;
-&lt;td align="left"&gt;3,200 tons&lt;/td&gt;
-&lt;td align="left"&gt;3.25&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;船员&lt;/td&gt;
-&lt;td align="left"&gt;52&lt;/td&gt;
-&lt;td align="left"&gt;350&lt;/td&gt;
-&lt;td align="left"&gt;6.73&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td align="left"&gt;火炮&lt;/td&gt;
-&lt;td align="left"&gt;2&lt;/td&gt;
-&lt;td align="left"&gt;12&lt;/td&gt;
-&lt;td align="left"&gt;6&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;这个比例看起来就是大雄vs胖虎之战。&lt;/p&gt;
-&lt;p&gt;CSS Virginia的特点除了大，还有就是都是固定炮塔，两侧和首尾有很多门炮。而USS Monitor有一个可以旋转的炮台。&lt;/p&gt;
-&lt;p&gt;一条战舰需要满足两个功能：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;调整航行方向&lt;/li&gt;
-&lt;li&gt;调整炮击方向&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;对于CSS Virginia，这两个功能需求是“耦合”couple 的，要改变炮击方向，就需要将船只转向。而对于USS Monitor，这两个功能需求则是“解耦合”decouple 的，航行方向与炮击方向无关，炮击方向可以独立调整。&lt;/p&gt;
-&lt;p&gt;于是Monitor一直尽量守在Virginia的射击死角攻击，而Virginia则必须不断绕开，于是就不断绕圈。这两条船打了4个小时，Virginia撤退了。&lt;/p&gt;
-&lt;p&gt;这是视频公开课上老师讲的一个有趣的例子。老师在课上讲解的时候说Virginia被Monitor给neutralize了，所谓&lt;a href="https://www.vocabulary.com/dictionary/neutralize"&gt;neutralize&lt;/a&gt;，军事上解释为 make incapable of military action，丧失军事能力。但按照history.com的记录，Virginia只是撤退了，毕竟Monitor只有两门炮，而Virginia还有很厚的铁甲。但大雄把胖虎打到先撤退跑了，如果再来一艘结果就不一定了。&lt;/p&gt;
-&lt;p&gt;可以引出设计公理的第一条：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;满足功能需求（Functional Requirements, FRs)的参数设计（Design Parameter, DPs) 应当要解耦合（decouple）&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</guid><pubDate>Wed, 17 Jul 2019 14:00:00 GMT</pubDate></item></channel></rss>
