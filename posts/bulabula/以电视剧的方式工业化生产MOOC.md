@@ -17,13 +17,13 @@
 
 昨天发现一个Socratica做的[抽象代数课程](https://www.youtube.com/playlist?list=PLi01XoE8jYoi3SgnnGorR_XOW3IcK-TP6), 课程浅显易懂, 而且老师非常漂亮, 甚至有一点魅惑, 一口气就看了20多节课, 把以前在看[《组合数学》](http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/about)时留下的群论补充了不少. 
 
-![21-Simple Groups - Abstract Algebra-0001](https://i.loli.net/2019/09/01/oaVRWPjQp4tAkbf.png)
+![21-Simple Groups - Abstract Algebra-0001](https://i.loli.net/2019/09/01/uxNL68KgnkvZBFO.png)
 
 今天经[@goophile](https://twitter.com/goophile/status/1168011061825425409) 提示, 原来讲课老师是[Liliana Castro](https://en.wikipedia.org/wiki/Liliana_Castro) 一位巴西女演员, 演过不少电影和电视剧. 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Liliana_Castro01.jpg/640px-Liliana_Castro01.jpg)
 
-真是表演与公开课结合的典范.
+真是表演与公开课结合的典范. 想到其实是一位女演员在讲解李群, 有一种[中文屋](https://zh.wikipedia.org/zh-hans/%E4%B8%AD%E6%96%87%E6%88%BF%E9%97%B4) 的实验戏剧之感.
 
 <!-- TEASER_END -->
 ----
