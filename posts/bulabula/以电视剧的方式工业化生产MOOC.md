@@ -15,7 +15,7 @@
 > 网络课程可以『电视剧化』的。
 > 完！全！可！以！雇！佣！演！员！ 来！表！演！讲！课！
 
-昨天发现一个Socratica做的[抽象代数课程](https://www.youtube.com/playlist?list=PLi01XoE8jYoi3SgnnGorR_XOW3IcK-TP6), 课程浅显易懂, 而且老师非常漂亮, 甚至有一点魅惑, 一口气就看了20多节课, 把以前在看[《组合数学》](http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/about)时留下的群论补充了不少. 
+昨天发现一个Socratica做的抽象代数课程([Youtube链接](https://www.youtube.com/playlist?list=PLi01XoE8jYoi3SgnnGorR_XOW3IcK-TP6), [国内Bilibili搬运](https://www.bilibili.com/video/av16765924) ), 课程浅显易懂, 而且老师非常漂亮, 甚至有一点魅惑(参考第5节习题课), 一口气就看了20多节课, 把以前在看[《组合数学》](http://www.xuetangx.com/courses/course-v1:TsinghuaX+60240013X+sp/about)时留下的群论补充了不少. 
 
 ![21-Simple Groups - Abstract Algebra-0001](https://i.loli.net/2019/09/01/uxNL68KgnkvZBFO.png)
 
