@@ -1,5 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 03 Sep 2019 04:59:37 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>以电视剧的方式工业化生产MOOC</title><link>https://goldengrape.github.io/posts/bulabula/Industrial_production_of_MOOC_as_TV_series/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在2013年的时候, 我写过《以电视剧的方式工业化生产MOOC》, 提出&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 04 Sep 2019 05:24:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;n = 1.3375&lt;/li&gt;
+&lt;li&gt;n = 1.376&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;真实的角膜折射率是1.376, 而1.3375是一个测量角膜K值时使用的&lt;strong&gt;人为设定&lt;/strong&gt;的测量用折射率.&lt;/p&gt;
+&lt;p&gt;下面听我解释: 
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;h3&gt;K值有几个&lt;/h3&gt;
+&lt;p&gt;所有计算人工晶体度数的公式, 都要用上角膜曲率K, 也就是角膜的屈光力. 比如最基本的SRK公式:&lt;/p&gt;
+&lt;p&gt;$$
+Power= A - 0.9 K - 2.5 AL
+$$&lt;/p&gt;
+&lt;p&gt;我们来看一下角膜的解剖，角膜都有两个面前表面和后表面，前后表面肯定不是完全平行的，那样的话角膜就没有屈光能力了，所以角膜前后表面是各自有一个屈光力的，那么应该有两个k值。&lt;/p&gt;
+&lt;p&gt;&lt;img alt="p1" src="https://i.loli.net/2019/09/04/iy5URPQrwWBv8Cn.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;但我们看最简单的SRK公式，这里面只有一个K值. 是不是有矛盾? &lt;/p&gt;
+&lt;p&gt;这是因为这是一个合成的K值，是角膜前后表面的屈光力之和。&lt;/p&gt;
+&lt;h3&gt;测量设备&lt;/h3&gt;
+&lt;p&gt;对于大多数测量角膜曲率的仪器，比如角膜曲率计(我估计手动角膜曲率计的使用已经快失传了)，这里面包含了自动验光仪 和 IOL Master，都是测量角膜前表面的曲率半径，&lt;/p&gt;
+&lt;p&gt;如果用Plasicdo环原理测量的角膜地形图，就是那种可以看到一个一个圆环的那种角膜地形图，能够测量的也只是角膜的前表面。&lt;/p&gt;
+&lt;p&gt;因为他们的原理都是看一个图像在角膜前表面的反射像, 虽然角膜后表面也可能有反射像, 但是被前表面的反射像给遮挡了, 于是后表面的数据测不到.
+&lt;img alt="p2" src="https://i.loli.net/2019/09/04/xdnGSyH5Bs1WbmT.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;测能够测量角膜后表面的设备并不多，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;基于 scheimpflug原理的PentaCam、&lt;/li&gt;
+&lt;li&gt;使用Placido环和Scheimpflug原理的SIRIUS天狼星，&lt;/li&gt;
+&lt;li&gt;基于扫描的Obscan，&lt;/li&gt;
+&lt;li&gt;用点光源的Cassini，&lt;/li&gt;
+&lt;li&gt;还有前节OCT，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;到2019年大概也就这几种。一个设备如果能够测量角膜后表面的曲率，一定会大张旗鼓地宣传的, 所以他们的海报上一定会有一个角膜的断面图.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="PentaCam" src="https://www.pentacam.com/fileadmin/_processed_/3/c/csm_General_Overview_16_9_EN_1.21r59_b2274acd47.png"&gt;&lt;/p&gt;
+&lt;p&gt;现在问题来了，角膜实际有两个面，K值应当是综合这两个面的，而现在只能测量一个面，那怎么办呢？&lt;/p&gt;
+&lt;h3&gt;整合前后表面的K值&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.28.17" src="https://i.loli.net/2019/09/04/ikwNxTdojR51yva.png"&gt;&lt;/p&gt;
+&lt;p&gt;这是从曲率半径算角膜屈光力的公式，如果是前后两个面，那么&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.28.27" src="https://i.loli.net/2019/09/04/4S3cXB1C6FdPtvj.png"&gt;&lt;/p&gt;
+&lt;p&gt;为了只从前表面的数据得出整体的数据。人们假设前后表面的曲率半径是成比例变化的，于是可以把后表面的曲率半径写成前表面曲率半径乘个系数.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.34.18" src="https://i.loli.net/2019/09/04/sAJnFpXClGu4SBt.png"&gt;&lt;/p&gt;
+&lt;p&gt;把这个式子代入到前面公式中:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.28.38" src="https://i.loli.net/2019/09/04/kKx4sNUdImybvSD.png"&gt;&lt;/p&gt;
+&lt;p&gt;于是就可以把1/r提取出来，得到:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="p4" src="https://i.loli.net/2019/09/04/aQyz3riHhRweUbW.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这里面除了1/r都是常数, 加减乘除之后当然也是得到一个常数. 那么就可以直接用数值相等的常数等效替换之. 为了跟其他的光学公式一致. 于是写成:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="p5" src="https://i.loli.net/2019/09/04/5hZfYp4V3mugeBj.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这就是1.3375的来历. 是一个为了仅仅测量前表面就可以得到前后两个表面屈光力之和的权宜之计. &lt;/p&gt;
+&lt;p&gt;至于为何等于1.3375, 因为前表面曲率半径=7.5mm时, 算出来的K值等于45.&lt;/p&gt;
+&lt;h3&gt;1.3375的失效&lt;/h3&gt;
+&lt;p&gt;当角膜前表面进行了屈光手术以后, 之前角膜后表面曲率半径与前表面曲率半径成比例的这个假设就不成立了. 虽然你仍然可以用角膜后表面的曲率半径去除前表面, 但每个做屈光手术的人切削的程度不同, 除出来的系数不再是一个常数了. &lt;/p&gt;
+&lt;p&gt;由于基本的假设失效, 那么连带着后面的推导也就都失效了, 1.3375这个数值不再能够使用.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="p6" src="https://i.loli.net/2019/09/04/aTWvZVuxMtlDH5z.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;影响&lt;/h3&gt;
+&lt;p&gt;所以, 当一个做完了角膜屈光手术的病人来到你的面前. 即使你亲自动手给他测量了角膜曲率, 比如设备告诉你说K=40, 你也不能相信这个数据, 因为这个数据是从1.3375算出来的. 真实的K值, 很可能只有39.6左右. &lt;/p&gt;
+&lt;h3&gt;参考文献&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt; 这是一篇2018年关于角膜屈光手术后人工晶体度数计算的综述, 作者是Giacomo Savini和 Kenneth J. Hoffer, 前面的名字可能不熟悉, 后面的Hoffer, 就是Hoffer Q公式的作者K.J. Hoffer&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</guid><pubDate>Wed, 04 Sep 2019 04:00:00 GMT</pubDate></item><item><title>以电视剧的方式工业化生产MOOC</title><link>https://goldengrape.github.io/posts/bulabula/Industrial_production_of_MOOC_as_TV_series/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在2013年的时候, 我写过《以电视剧的方式工业化生产MOOC》, 提出&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;网络课程可以『电视剧化』的。
 完！全！可！以！雇！佣！演！员！ 来！表！演！讲！课！&lt;/p&gt;
@@ -504,216 +560,4 @@ $$&lt;p&gt;其中$P_i$是$FR_i$实现的概率&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</guid><pubDate>Thu, 18 Jul 2019 02:00:00 GMT</pubDate></item><item><title>公理设计笔记（2）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;如同商学院说事一定要画四格表，工学院说事一定要写向量和矩阵的。这种表述就是工科癖好。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;有四个域（Domain）：&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;ul&gt;
-&lt;li&gt;CNs：Customer Needs，&lt;ul&gt;
-&lt;li&gt;客户需求。&lt;/li&gt;
-&lt;li&gt;客户域&lt;/li&gt;
-&lt;li&gt;就是客户描述的一大堆自然语言也说不清楚的事情，什么高端大气上档次之类的东西。&lt;/li&gt;
-&lt;li&gt;What adds value&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;FRs：Functional Requirements，&lt;ul&gt;
-&lt;li&gt;功能需求。&lt;/li&gt;
-&lt;li&gt;功能域&lt;/li&gt;
-&lt;li&gt;从CNs域到FRs域的变换，就是把客户漫无边际的需求翻译成一些可定量的参数，比如战舰控制系统的FR有二：1）控制航行方向。2）控制开炮方向。&lt;/li&gt;
-&lt;li&gt;What it does&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;DPs：Design Parameters，&lt;ul&gt;
-&lt;li&gt;设计参数。&lt;/li&gt;
-&lt;li&gt;物理域&lt;/li&gt;
-&lt;li&gt;实现FRs的物理参数，比如航向控制器和炮塔控制器。&lt;/li&gt;
-&lt;li&gt;What it looks like&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;PVs：Process Variables，&lt;ul&gt;
-&lt;li&gt;过程变量。&lt;/li&gt;
-&lt;li&gt;过程域&lt;/li&gt;
-&lt;li&gt;没细说，大概是如何实现DPs&lt;/li&gt;
-&lt;li&gt;How you make it&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;这四个域里，最重要的是FRs（功能需求）到DPs（设计参数）的映射。 （考虑到我一向憎恶缩写，我会在每一个FRs后面都写上功能需求四个字）。其实我觉得从CNs(客户需求)到FRs(功能需求)的翻译也很重要，但这涉及到人类语言的模糊性，这个步骤还很难科学化。至于DPs(涉及参数）到PVs（过程变量）也就是实现过程，我们写发明通常就是引述为“现有技术”了。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;FRs（功能需求）会有很多啦，可以写成&lt;/p&gt;
-$$
-FRs=
-\begin{bmatrix}FR_1 
-\\ FR_2
-\\ ...
-\\ FR_n
-\end{bmatrix}
-$$&lt;p&gt;类似的，能够达成FRs（功能需求）的DPs（设计参数）也有很多，可以写成&lt;/p&gt;
-$$
-DPs=
-\begin{bmatrix}DP_1 
-\\ DP_2
-\\ ...
-\\ DP_m
-\end{bmatrix}
-$$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;于是，DPs（设计参数）实现FRs（功能需求）这件事情，就可以写成矩阵乘法的形式
-$$
-FRs=A \times DPs
-$$
-或者说：
-$$
-\begin{bmatrix}FR_1 
-\\ FR_2
-\\ ...
-\\ FR_n
-\end{bmatrix}=
-\begin{bmatrix}A_{11} &amp;amp; A_{12} &amp;amp; ... &amp;amp; A_{1m}
-\\ A_{21} &amp;amp;  A_{22} &amp;amp; ... &amp;amp; A_{2m}
-\\ ...
-\\ A_{n1} &amp;amp;  A_{n2} &amp;amp; ... &amp;amp; A_{nm}
-\end{bmatrix}
-\begin{bmatrix}DP_1 
-\\ DP_2
-\\ ...
-\\ DP_m
-\end{bmatrix}
-$$&lt;/p&gt;
-&lt;p&gt;当然，不一定是线性的，那工科标准做法就是就求导，反正在小量范围内可以近似成线性的。其实还是类似上面的矩阵，只不过带上了偏导符号而已，还不如原来看得清楚，所以后面就按线性近似来说了。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;然后，华丽丽的矩阵写好以后，其实我们不关心$A_{ij}$的系数具体是怎样的，只关心是否为0，如果不是0，就画个x。
-比如USS Monitor号上的情况。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$FR_1$（功能需求1）：调整航向&lt;/li&gt;
-&lt;li&gt;$FR_2$（功能需求2）：调整开炮方向&lt;/li&gt;
-&lt;li&gt;$DP_1$（设计参数1）：船舵&lt;/li&gt;
-&lt;li&gt;$DP_2$（设计参数1）：旋转炮塔&lt;/li&gt;
-&lt;/ul&gt;
-$$
-\begin{bmatrix}FR_1 
-\\ FR_2
-\end{bmatrix}=
-\begin{bmatrix}A_{11} &amp;amp;  A_{12}
-\\ A_{21} &amp;amp;  A_{22}
-\end{bmatrix}
-\begin{bmatrix}DP_1 
-\\ DP_2
-\end{bmatrix}
-$$$$
-\begin{bmatrix}FR_1 
-\\ FR_2
-\end{bmatrix}=
-\begin{bmatrix}X &amp;amp;  0
-\\ X &amp;amp;  X
-\end{bmatrix}
-\begin{bmatrix}DP_1 
-\\ DP_2
-\end{bmatrix}
-$$&lt;p&gt;其中转动船舵的时候，船会转向，所以$A_{11}$这里是X，同时船身上的炮塔也跟着船一起转向，所以也影响开炮方向$FR_2$，因此$A_{21}$也是X。
-而在旋转炮塔的时候，不影响船的航行方向，所以$A_{12}$这里是0。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="好的设计"&gt;好的设计&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/#%E5%A5%BD%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;一个好的设计是什么呢？&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;首先FRs（功能需求）的数量N，应当等于DPs(设计参数）的数量M。&lt;/li&gt;
-&lt;li&gt;每一个FR（功能需求）有且只有一个DP（设计参数）来调整。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;就是A矩阵应当是一个对角矩阵，也就是说：&lt;/p&gt;
-$$
-A=\begin{bmatrix}
-X &amp;amp; 0 &amp;amp; ... &amp;amp; 0
-\\ 0 &amp;amp;  X &amp;amp; ... &amp;amp; 0
-\\ ...
-\\ 0 &amp;amp;  0 &amp;amp; ... &amp;amp; X
-\end{bmatrix}
-$$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="可行的设计"&gt;可行的设计&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/#%E5%8F%AF%E8%A1%8C%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A矩阵是一个三角形矩阵，如果按照调整顺序来规划DPs(设计参数），那么更确切的说，应当是上三角矩阵&lt;/p&gt;
-$$
-\mathbf{A}=\left[\begin{array}{ccccc}{X} &amp;amp; {} &amp;amp; {\cdots} &amp;amp; {} &amp;amp; {0} \\ {X} &amp;amp; {X} &amp;amp; {} &amp;amp; {(0)} &amp;amp; {} \\ {X} &amp;amp; {X} &amp;amp; {\ddots} &amp;amp; {} &amp;amp; {\vdots} \\ {\vdots} &amp;amp; {\vdots} &amp;amp; {\ddots} &amp;amp; {\ddots} &amp;amp; {} \\ {X} &amp;amp; {X} &amp;amp; {\dots} &amp;amp; {X} &amp;amp; {X}\end{array}\right]
-$$&lt;p&gt;在这种情况下，DPs(设计参数）仍然是可以一定程度decouple的，比如先调整船的航向，然后再调整炮塔的方向，但炮塔方向要先补偿船的转向，再加上需要旋转的角度。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="糟糕的设计"&gt;糟糕的设计&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/#%E7%B3%9F%E7%B3%95%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;A里面到处都是X，并且无法通过交换FRs（功能需求）和DPs（设计参数）的顺序来形成三角形矩阵。比如：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;FRs（功能需求）的数量N，小于 DPs(设计参数）的数量M。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;CSS Virginia号的情况就是这样，有2个FRs(功能需求）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$FR_1$（功能需求1）：调整航向&lt;/li&gt;
-&lt;li&gt;$FR_2$（功能需求2）：调整开炮方向&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;但只有一个DP(设计参数）&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$DP_1$（设计参数1）：船舵&lt;/li&gt;
-&lt;/ul&gt;
-$$
-\begin{bmatrix}FR_1 
-\\ FR_2
-\end{bmatrix}=
-\begin{bmatrix}X 
-\\ X 
-\end{bmatrix}
-\begin{bmatrix}DP_1 
-\end{bmatrix}
-$$&lt;p&gt;写不成三角矩阵&lt;/p&gt;
-&lt;p&gt;于是只好靠装甲厚实扛打&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_2/</guid><pubDate>Wed, 17 Jul 2019 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</guid><pubDate>Thu, 18 Jul 2019 02:00:00 GMT</pubDate></item></channel></rss>

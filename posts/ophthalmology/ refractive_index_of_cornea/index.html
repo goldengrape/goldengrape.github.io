@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>角膜的折射率 | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../bulabula/Industrial_production_of_MOOC_as_TV_series/" title="以电视剧的方式工业化生产MOOC" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="角膜的折射率">
+<meta property="og:url" content="https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/">
+<meta property="og:description" content="如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率
+
+n = 1.3375
+n = 1.376
+
+真实的角膜折射率是1.376, 而1.3375是一个测量角膜K值时使用的人为设定的测量用折射率.
+下面听我解释: 
+
+K值有几个
+所有计算人工晶体度数的公式, 都要用上角膜曲率K, 也就是角膜的屈光力. 比如最基本的SRK公式:
+$$
+Power= A - 0.9 K - 2.5 AL
+">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-09-04T12:00:00+08:00">
+<meta property="article:tag" content="ophthalmology">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="../%20refractive_index_of_cornea/" class="u-url">角膜的折射率</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="../%20refractive_index_of_cornea/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-09-04T12:00:00+08:00" itemprop="datePublished" title="2019-09-04 12:00">2019-09-04 12:00</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率</p>
+<ul>
+<li>n = 1.3375</li>
+<li>n = 1.376</li>
+</ul>
+<p>真实的角膜折射率是1.376, 而1.3375是一个测量角膜K值时使用的<strong>人为设定</strong>的测量用折射率.</p>
+<p>下面听我解释: 
+<!-- TEASER_END --></p>
+<h3>K值有几个</h3>
+<p>所有计算人工晶体度数的公式, 都要用上角膜曲率K, 也就是角膜的屈光力. 比如最基本的SRK公式:</p>
+<p>$$
+Power= A - 0.9 K - 2.5 AL
+$$</p>
+<p>我们来看一下角膜的解剖，角膜都有两个面前表面和后表面，前后表面肯定不是完全平行的，那样的话角膜就没有屈光能力了，所以角膜前后表面是各自有一个屈光力的，那么应该有两个k值。</p>
+<p><img alt="p1" src="https://i.loli.net/2019/09/04/iy5URPQrwWBv8Cn.jpg"></p>
+<p>但我们看最简单的SRK公式，这里面只有一个K值. 是不是有矛盾? </p>
+<p>这是因为这是一个合成的K值，是角膜前后表面的屈光力之和。</p>
+<h3>测量设备</h3>
+<p>对于大多数测量角膜曲率的仪器，比如角膜曲率计(我估计手动角膜曲率计的使用已经快失传了)，这里面包含了自动验光仪 和 IOL Master，都是测量角膜前表面的曲率半径，</p>
+<p>如果用Plasicdo环原理测量的角膜地形图，就是那种可以看到一个一个圆环的那种角膜地形图，能够测量的也只是角膜的前表面。</p>
+<p>因为他们的原理都是看一个图像在角膜前表面的反射像, 虽然角膜后表面也可能有反射像, 但是被前表面的反射像给遮挡了, 于是后表面的数据测不到.
+<img alt="p2" src="https://i.loli.net/2019/09/04/xdnGSyH5Bs1WbmT.jpg"></p>
+<p>测能够测量角膜后表面的设备并不多，</p>
+<ul>
+<li>基于 scheimpflug原理的PentaCam、</li>
+<li>使用Placido环和Scheimpflug原理的SIRIUS天狼星，</li>
+<li>基于扫描的Obscan，</li>
+<li>用点光源的Cassini，</li>
+<li>还有前节OCT，</li>
+</ul>
+<p>到2019年大概也就这几种。一个设备如果能够测量角膜后表面的曲率，一定会大张旗鼓地宣传的, 所以他们的海报上一定会有一个角膜的断面图.</p>
+<p><img alt="PentaCam" src="https://www.pentacam.com/fileadmin/_processed_/3/c/csm_General_Overview_16_9_EN_1.21r59_b2274acd47.png"></p>
+<p>现在问题来了，角膜实际有两个面，K值应当是综合这两个面的，而现在只能测量一个面，那怎么办呢？</p>
+<h3>整合前后表面的K值</h3>
+<p><img alt="屏幕快照 2019-09-04 11.28.17" src="https://i.loli.net/2019/09/04/ikwNxTdojR51yva.png"></p>
+<p>这是从曲率半径算角膜屈光力的公式，如果是前后两个面，那么</p>
+<p><img alt="屏幕快照 2019-09-04 11.28.27" src="https://i.loli.net/2019/09/04/4S3cXB1C6FdPtvj.png"></p>
+<p>为了只从前表面的数据得出整体的数据。人们假设前后表面的曲率半径是成比例变化的，于是可以把后表面的曲率半径写成前表面曲率半径乘个系数.</p>
+<p><img alt="屏幕快照 2019-09-04 11.34.18" src="https://i.loli.net/2019/09/04/sAJnFpXClGu4SBt.png"></p>
+<p>把这个式子代入到前面公式中:</p>
+<p><img alt="屏幕快照 2019-09-04 11.28.38" src="https://i.loli.net/2019/09/04/kKx4sNUdImybvSD.png"></p>
+<p>于是就可以把1/r提取出来，得到:</p>
+<p><img alt="p4" src="https://i.loli.net/2019/09/04/aQyz3riHhRweUbW.jpg"></p>
+<p>这里面除了1/r都是常数, 加减乘除之后当然也是得到一个常数. 那么就可以直接用数值相等的常数等效替换之. 为了跟其他的光学公式一致. 于是写成:</p>
+<p><img alt="p5" src="https://i.loli.net/2019/09/04/5hZfYp4V3mugeBj.jpg"></p>
+<p>这就是1.3375的来历. 是一个为了仅仅测量前表面就可以得到前后两个表面屈光力之和的权宜之计. </p>
+<p>至于为何等于1.3375, 因为前表面曲率半径=7.5mm时, 算出来的K值等于45.</p>
+<h3>1.3375的失效</h3>
+<p>当角膜前表面进行了屈光手术以后, 之前角膜后表面曲率半径与前表面曲率半径成比例的这个假设就不成立了. 虽然你仍然可以用角膜后表面的曲率半径去除前表面, 但每个做屈光手术的人切削的程度不同, 除出来的系数不再是一个常数了. </p>
+<p>由于基本的假设失效, 那么连带着后面的推导也就都失效了, 1.3375这个数值不再能够使用.</p>
+<p><img alt="p6" src="https://i.loli.net/2019/09/04/aTWvZVuxMtlDH5z.jpg"></p>
+<h3>影响</h3>
+<p>所以, 当一个做完了角膜屈光手术的病人来到你的面前. 即使你亲自动手给他测量了角膜曲率, 比如设备告诉你说K=40, 你也不能相信这个数据, 因为这个数据是从1.3375算出来的. 真实的K值, 很可能只有39.6左右. </p>
+<h3>参考文献</h3>
+<ul>
+<li>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/">Intraocular lens power calculation in eyes with previous corneal refractive surgery</a> 这是一篇2018年关于角膜屈光手术后人工晶体度数计算的综述, 作者是Giacomo Savini和 Kenneth J. Hoffer, 前面的名字可能不熟悉, 后面的Hoffer, 就是Hoffer Q公式的作者K.J. Hoffer</li>
+</ul>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../categories/ophthalmology/" rel="tag">ophthalmology</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../bulabula/Industrial_production_of_MOOC_as_TV_series/" rel="prev" title="以电视剧的方式工业化生产MOOC">上一篇文章</a>
+            </li>
+        </ul></nav></aside></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
