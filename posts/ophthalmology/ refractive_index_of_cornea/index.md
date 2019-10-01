@@ -98,6 +98,12 @@ $$
 
 所以, 当一个做完了角膜屈光手术的病人来到你的面前. 即使你亲自动手给他测量了角膜曲率, 比如设备告诉你说K=40, 你也不能相信这个数据, 因为这个数据是从1.3375算出来的. 真实的K值, 很可能只有39.6左右. 
 
+## IOL Master
+
+研读[IOL Master的说明书](https://www.doctor-hill.com/physicians/docs/iolmaster_5-4.pdf), IOL master的测量结果可以显示为K值或者角膜曲率半径Radius.
+
+![屏幕快照 2019-09-11 12.46.13](https://i.loli.net/2019/09/11/l3VUOfS8mXhsg92.png)
+
 ## 参考文献
 
 * [Intraocular lens power calculation in eyes with previous corneal refractive surgery](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/) 这是一篇2018年关于角膜屈光手术后人工晶体度数计算的综述, 作者是Giacomo Savini和 Kenneth J. Hoffer, 前面的名字可能不熟悉, 后面的Hoffer, 就是Hoffer Q公式的作者K.J. Hoffer
