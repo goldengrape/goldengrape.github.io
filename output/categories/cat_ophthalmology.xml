@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 04 Sep 2019 05:24:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 01 Oct 2019 11:21:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;n = 1.3375&lt;/li&gt;
 &lt;li&gt;n = 1.376&lt;/li&gt;
@@ -52,6 +52,9 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;img alt="p6" src="https://i.loli.net/2019/09/04/aTWvZVuxMtlDH5z.jpg"&gt;&lt;/p&gt;
 &lt;h3&gt;影响&lt;/h3&gt;
 &lt;p&gt;所以, 当一个做完了角膜屈光手术的病人来到你的面前. 即使你亲自动手给他测量了角膜曲率, 比如设备告诉你说K=40, 你也不能相信这个数据, 因为这个数据是从1.3375算出来的. 真实的K值, 很可能只有39.6左右. &lt;/p&gt;
+&lt;h3&gt;IOL Master&lt;/h3&gt;
+&lt;p&gt;研读&lt;a href="https://www.doctor-hill.com/physicians/docs/iolmaster_5-4.pdf"&gt;IOL Master的说明书&lt;/a&gt;, IOL master的测量结果可以显示为K值或者角膜曲率半径Radius.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-09-11 12.46.13" src="https://i.loli.net/2019/09/11/l3VUOfS8mXhsg92.png"&gt;&lt;/p&gt;
 &lt;h3&gt;参考文献&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt; 这是一篇2018年关于角膜屈光手术后人工晶体度数计算的综述, 作者是Giacomo Savini和 Kenneth J. Hoffer, 前面的名字可能不熟悉, 后面的Hoffer, 就是Hoffer Q公式的作者K.J. Hoffer&lt;/li&gt;

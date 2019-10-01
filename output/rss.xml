@@ -1,5 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 04 Sep 2019 05:24:45 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 01 Oct 2019 11:22:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>纸牌加密</title><link>https://goldengrape.github.io/posts/bulabula/Solitaire_Encryption/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是记录在&lt;a href="https://book.douban.com/subject/27077159/"&gt;《编码宝典》&lt;/a&gt;附录里的一个手工加密方法.&lt;/p&gt;
+&lt;p&gt;所谓手工加密, 就是完全不依赖于计算机, 靠一副纸牌就可以产生连续的加密用密钥. 纸牌的顺序就是密码, 所以密码的可能数量=54的阶乘, 大致是2.31 后面跟上71个0.&lt;/p&gt;
+&lt;p&gt;军用级.&lt;/p&gt;
+&lt;p&gt;很可惜, 这个加密方法并不是RSA那样的公私钥加密系统. 所以, 密码必须事先传递好. 加密/ 解密的双方, 必须知道同一副纸牌的顺序. 可以是双方把牌的顺序背下来, 也可以是双方各自持有一副同样顺序的纸牌. 我觉得背下来更保险, 貌似也是可以做到的.&lt;/p&gt;
+&lt;p&gt;产生连续密钥的方法是这样的:
+&lt;!-- TEASER_END --&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;拿出纸牌, 面向上. 下面的讲解中, 我以一副新的纸牌为例, 起始纸牌的顺序如下, 这也是牌面的数值, 从1-52,53,54:
+♣️A, ♣2...♣️K, ♦️A...♦️K, ♥️A...♥️K ♠️A...♠️K, 小王, 大王&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到小王, 向下移动一张, 如果小王已经是最后一张牌, 则挪到第一张. 
+♣️A, ♣2...♣️K, ♦️A...♦️K, ♥️A...♥️K ♠️A...♠️K, 大王, 小王&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到大王, 向下移动两张. 
+♣️A, 大王, ♣2...♣️K, ♦️A...♦️K, ♥️A...♥️K ♠️A...♠️K, 小王&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;做一次三切牌. 将两个王和其之间的牌作为B组, 从第一张到上面的王前一张是A组, 从下面的王后一张到最后一张牌是C组. 交换A组和C组的牌, 从A-B-C,变换成C-B-A.
+大王, ♣2...♣️K, ♦️A...♦️K, ♥️A...♥️K ♠️A...♠️K, 小王, ♣️A&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;找到最后一张牌, 看其数字N(大小王都按照53来计数), 从第一张开始数N张牌, 作为A组, 第N+1张牌到倒数第2张牌为B组, 交换A组和B组,
+♣2...♣️K, ♦️A...♦️K, ♥️A...♥️K ♠️A...♠️K, 小王, 大王, ♣️A&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;看第一张牌的数字N, 数N张牌, 找到第N+1张牌, 就是一个输出的密钥了. 这个例子中是♣4. 
+♣2, ♣3, [♣4]...♣️K, ♦️A...♦️K, ♥️A...♥️K ♠️A...♠️K, 小王, 大王, ♣️A&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重复上面步骤1-5, 连续产生新的密钥. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于每一个密钥, 用法就是简单的移位密码, 比如♣4的数值就是4, 如果比26大, 那么就除以26求余数, 比如30 mod 26=4. 那么如果要加密字母A, 就是从A+4, 数B,C,D,E, 得到字母E. &lt;/p&gt;
+&lt;p&gt;如果是解密, 则只是做减法, 比如得到的密文是E, 减去4, 得到原文A. &lt;/p&gt;
+&lt;p&gt;操作要练习几次, 自己容易乱, 特别是数数的时候.&lt;/p&gt;
+&lt;p&gt;按照作者的说明, 如果从一副新牌开始, 则连续输出的密钥是:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;49&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;53&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="mi"&gt;24&lt;/span&gt; &lt;span class="mi"&gt;8&lt;/span&gt; &lt;span class="mi"&gt;51&lt;/span&gt; &lt;span class="mi"&gt;44&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;33&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;其中遇到大王小王则跳过. &lt;/p&gt;
+&lt;p&gt;如果对AAAAA AAAAA加密, 得到的密文结果应当是EXKYI  ZSGEH.&lt;/p&gt;
+&lt;p&gt;注意:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不可以用同一个密码去加密两个不同的信息!&lt;/li&gt;
+&lt;li&gt;不可以用同一个密码去加密两个不同的信息!&lt;/li&gt;
+&lt;li&gt;不可以用同一个密码去加密两个不同的信息!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因为将两个密文相减, 密钥的作用就消除了, 然后大概可以通过统计学的方式进行解密. &lt;/p&gt;
+&lt;p&gt;我这段时间正在学习C++, 所以也用C++实现了一遍纸牌加密的算法. 代码在&lt;a href="https://github.com/goldengrape/SolitaireEncryption"&gt;https://github.com/goldengrape/SolitaireEncryption&lt;/a&gt; 还在调试中, 暂时和作者的结果有一点点区别(应该得到51的那个数, 我得到了54, 前后都一样, 很诡异). &lt;/p&gt;
+&lt;p&gt;参考资料:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.schneier.com/academic/solitaire/"&gt;https://www.schneier.com/academic/solitaire/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Solitaire_Encryption/</guid><pubDate>Tue, 01 Oct 2019 04:00:00 GMT</pubDate></item><item><title>理解的含义</title><link>https://goldengrape.github.io/posts/bulabula/%20meaning_of_understanding/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;理解: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我知道这道题我做对了&lt;/li&gt;
+&lt;li&gt;我知道你做错了&lt;/li&gt;
+&lt;li&gt;我知道你错在哪里了&lt;/li&gt;
+&lt;li&gt;甚至我知道你为什么会出这个错误&lt;ul&gt;
+&lt;li&gt;我知道你错在哪里, 并不意味我认为你这道题做对了.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;或者&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我看到你的答案与我的不同&lt;/li&gt;
+&lt;li&gt;我认真分析你的解题过程和我的解题过程的差异&lt;/li&gt;
+&lt;li&gt;我发现我做错了&lt;/li&gt;
+&lt;li&gt;于是我改了过来&lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/%20meaning_of_understanding/</guid><pubDate>Wed, 04 Sep 2019 16:00:00 GMT</pubDate></item><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;n = 1.3375&lt;/li&gt;
 &lt;li&gt;n = 1.376&lt;/li&gt;
@@ -52,6 +124,9 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;img alt="p6" src="https://i.loli.net/2019/09/04/aTWvZVuxMtlDH5z.jpg"&gt;&lt;/p&gt;
 &lt;h3&gt;影响&lt;/h3&gt;
 &lt;p&gt;所以, 当一个做完了角膜屈光手术的病人来到你的面前. 即使你亲自动手给他测量了角膜曲率, 比如设备告诉你说K=40, 你也不能相信这个数据, 因为这个数据是从1.3375算出来的. 真实的K值, 很可能只有39.6左右. &lt;/p&gt;
+&lt;h3&gt;IOL Master&lt;/h3&gt;
+&lt;p&gt;研读&lt;a href="https://www.doctor-hill.com/physicians/docs/iolmaster_5-4.pdf"&gt;IOL Master的说明书&lt;/a&gt;, IOL master的测量结果可以显示为K值或者角膜曲率半径Radius.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-09-11 12.46.13" src="https://i.loli.net/2019/09/11/l3VUOfS8mXhsg92.png"&gt;&lt;/p&gt;
 &lt;h3&gt;参考文献&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt; 这是一篇2018年关于角膜屈光手术后人工晶体度数计算的综述, 作者是Giacomo Savini和 Kenneth J. Hoffer, 前面的名字可能不熟悉, 后面的Hoffer, 就是Hoffer Q公式的作者K.J. Hoffer&lt;/li&gt;
@@ -312,252 +387,4 @@ https://www.coursera.org/taiwan&lt;/li&gt;
 &lt;p&gt;面镜下缘取出后，小心把镜片装入到胶套中，确保胶套包裹住镜片边缘的内外表面。然后再将面镜下缘重新插入回去即可。注意插入的时候，那个三角形结构的底边要紧贴面镜的上缘部分。在将面镜下缘插入时，要小心不要让胶套变形太厉害，免得好不容易插回去时镜片没有放对位置。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;学会这一招以后，似乎可以用来更换面镜的镜片了。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</guid><pubDate>Sun, 21 Jul 2019 13:00:00 GMT</pubDate></item><item><title>公理设计笔记（4）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;所以“公理设计”，就是基于两个公理：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;最大化功能模块的独立性&lt;/li&gt;
-&lt;li&gt;最小化信息量（～=最大化成功实施的可能性）&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;这样做的好处：&lt;/p&gt;
-&lt;h2 id="甲方总是善变的"&gt;甲方总是善变的&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/#%E7%94%B2%E6%96%B9%E6%80%BB%E6%98%AF%E5%96%84%E5%8F%98%E7%9A%84"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;客户需求就是用来不断改变的，就是用来不断折腾乙方的，因为甲方通常也不知道到底要什么，得折腾几次试试看，才能明确目标。如果把搜索引擎看作是乙方，这跟搜索个信息是一样的，搜索就是个学习的过程，一开始的时候往往我也不知道搜索什么，搜几个词试过以后才能明确到底要找什么。我当过甲方也当过乙方，我知道大家都是地球人，客户需求就是个不断变化的过程。&lt;/p&gt;
-&lt;p&gt;但deadline是不变的。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;如果能够一开始把FRs(功能需求)和DPs(设计参数)独立得很好，那么已经做过的事情就不算完全浪费，还有可重用的可能性。独立性越高，浪费的工作就越少。&lt;/p&gt;
-&lt;p&gt;而如果各个功能模块一开始就搅合在一起，那需求改了，就只好从头开始了。&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://i.loli.net/2019/07/18/5d3071310697641566.png" alt="MFE 594 An Introduction to Axiomatic Design Part 4-qURM1A1BZJw-0001.png"&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="面向对象与结构化"&gt;面向对象与结构化&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%BB%93%E6%9E%84%E5%8C%96"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;我最早学计算机语言的时候，还是结构化编程的时代，后来才开始面向对象编程。我其实一直尽量躲避面向对象编程。一部分是因为我只是做些科学计算，多数情况下一个东西算一遍就完了，不需要建立同一个类的多个实体；另一部分原因是因为设定类这事太“艺术”了，我不知道应该怎么设定，比如一个光路追踪的程序，是把光线设一个类，还是把界面设一个类，还是光线和界面都设定成类。&lt;/p&gt;
-&lt;p&gt;《公理设计》这本书中专门有一章讲面向对象的软件设计，我还要再仔细看看这部分。争取能再深入理解一些。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="创新发明的套路"&gt;创新发明的套路&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/#%E5%88%9B%E6%96%B0%E5%8F%91%E6%98%8E%E7%9A%84%E5%A5%97%E8%B7%AF"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;发明是有套路的，作为发明家我知道一些。这里又提供了一组思路。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果现有技术中有耦合的部分，看看能否解耦合？&lt;/li&gt;
-&lt;li&gt;现有技术中的FRs(功能需求)是否满足“不重复不漏项”的原则？&lt;/li&gt;
-&lt;li&gt;重新在不同的域上划分不同层级的FRs(功能需求)&lt;/li&gt;
-&lt;li&gt;新的技术/其他领域的技术是否可以突破现有的约束条件？&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_4/</guid><pubDate>Thu, 18 Jul 2019 12:00:00 GMT</pubDate></item><item><title>公理设计笔记（3）</title><link>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;前面讲解了目的，要尽量形成FRs（功能需求）与DPs(设计参数）的解耦合对应关系&lt;/p&gt;
-&lt;p&gt;尽量对角矩阵形成：
-$$
-FRs=\begin{bmatrix}
-X &amp;amp; 0 &amp;amp; ... &amp;amp; 0
-\\ 0 &amp;amp;  X &amp;amp; ... &amp;amp; 0
-\\ ...
-\\ 0 &amp;amp;  0 &amp;amp; ... &amp;amp; X
-\end{bmatrix} DPs
-$$&lt;/p&gt;
-&lt;p&gt;或者至少形成三角形矩阵：
-$$
-FRs=\begin{bmatrix}
-X &amp;amp; 0 &amp;amp; ... &amp;amp; 0
-\\ X &amp;amp;  X &amp;amp; ... &amp;amp; 0
-\\ ...
-\\ 0 &amp;amp;  X &amp;amp; ... &amp;amp; X
-\end{bmatrix} DPs
-$$&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;实际过程中是分层级对FRs（功能需求）与DPs(设计参数）进行分解的。先从&lt;/p&gt;
-$$
-\begin{bmatrix}
-FR_1
-\\ FR_2
-\end{bmatrix}
-=
-\begin{bmatrix}
-X &amp;amp; 0 
-\\ X &amp;amp;  X 
-\end{bmatrix} 
-\begin{bmatrix}
-DP_1
-\\ DP_2
-\end{bmatrix}
-$$&lt;p&gt;开始，&lt;/p&gt;
-&lt;p&gt;然后再把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，变成类似这个意思：&lt;/p&gt;
-$$
-\begin{bmatrix}
-\begin{bmatrix}
-FR_{1.1}
-\\ FR_{1.2}
-\end{bmatrix}
-\\ FR_2
-\end{bmatrix}
-=
-\begin{bmatrix}
-\begin{bmatrix}
-X &amp;amp; 0
-\\ X &amp;amp; X
-\end{bmatrix}&amp;amp; 0 
-\\ X &amp;amp;  X 
-\end{bmatrix} 
-\begin{bmatrix}
-\begin{bmatrix}
-DP_{1.1}
-\\ DP_{1.2}
-\end{bmatrix}
-\\ DP_2
-\end{bmatrix}
-$$
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;在拆分FRs（功能需求）的时候，要求是&lt;a href="https://zh.wikipedia.org/zh-hans/MECE%E5%8E%9F%E5%88%99"&gt;MECE&lt;/a&gt; min原则，也就是"不重复不漏项"并且总数尽量少。MECE := Mutually Exclusive Collectively Exhaustive，课程中使用的是CEME，可能商科里用MECE更多，反正一个意思。&lt;/p&gt;
-&lt;p&gt;比如3D打印机的FR(功能需求)之一是要求在$FR_1$打印头空间内移动，那么就可以拆分成：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;$FR_{1.1}$ 在X轴方向移动&lt;/li&gt;
-&lt;li&gt;$FR_{1.2}$ 在Y轴方向移动&lt;/li&gt;
-&lt;li&gt;$FR_{1.3}$ 在Z轴方向移动&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这样的拆分方式显然是MECE的，当然也可以拆分成圆柱坐标系、球坐标系等等。不同的分解方式对应着不同的解决方案。&lt;/p&gt;
-&lt;p&gt;对于DPs(设计参数)的拆分，目的是尽量形成对角矩阵，或者至少是三角形矩阵，那么就应当尽量让右上角的区域保持为0。而且在拆分DPs(设计参数)的时候，约束条件是继承的，比如$DP_1$是在中国建厂，那么$DP_{1.1},DP_{1.2}$就不能把工厂建立到越南去。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;在实际操作中，拆分是一点一点来进行的。说叫ZigZag。&lt;/p&gt;
-&lt;p&gt;先把$FR_1$（功能需求）拆解成$FR_{1.1}, FR_{1.2}$，拆分好$FR_1$（功能需求）以后，再去拆分$DP_1$(设计参数)，拆好了DPs(设计参数)以后，再返回来拆下一个$FR$（功能需求）&lt;/p&gt;
-&lt;p&gt;&lt;img src="https://i.loli.net/2019/07/18/5d3030b9d457e37686.png" alt="屏幕快照 2019-07-18 16.40.58.png"&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;拆分过程可以用个电子表格来做，最好再弄成可折叠的，似乎有专用的软件可以画图，但不知道excel或者其他通用的简单工具有没有这样的功能。注意子节点上的相关性X，一定要表现在父节点上。比如检查时发现调整$DP_{2}$时$FR_{12}$也跟着变，那$DP_{2}$其实与$FR_1$就是耦合的，中间肯定在某个步骤出错了。&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;
-&lt;th style="text-align:left"&gt;FRs&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_1$&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_{11}$&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_{12}$&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_{121}$&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_{122}$&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_{123}$&lt;/th&gt;
-&lt;th style="text-align:left"&gt;$DP_{2}$&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_1$&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_{11}$&lt;/td&gt;
-&lt;td style="text-align:left"&gt;$\space$&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_{12}$&lt;/td&gt;
-&lt;td style="text-align:left"&gt;$\space$&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;0&lt;/td&gt;
-&lt;td style="text-align:left"&gt;X&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_{121}$&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_{122}$&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_{123}$&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;$FR_{2}$&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;当有几个不同的拆分FRs(功能需求)的方法，得到了不同的DPs(设计参数)以后。如何判定那种方式更好呢？毫无疑问会陷入到办公室争吵中。&lt;/p&gt;
-&lt;p&gt;公理设计的第二条公理：&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;要令信息量最小&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;这里的信息量，是原教旨的信息量。记住这是MIT教授的书，WPI教授的课。&lt;/p&gt;
-$$
-I=-\sum_{i}^{\sigma(\mathrm{FR})} \log _{2} P_{i}
-$$&lt;p&gt;其中$P_i$是$FR_i$实现的概率&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;在我理解，这只是实现概率最大化的恐怖公式表达而已。这一部分我还没有深究，毕竟我能想到一组DPs(设计参数)就已经不错了。&lt;/p&gt;
-&lt;p&gt;这个公理大约对硬件选型的时候更有意义，比如同一个目的，在资金约束条件下，要选精度高一点，冗余大一点的零件。&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_3/</guid><pubDate>Thu, 18 Jul 2019 02:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;学会这一招以后，似乎可以用来更换面镜的镜片了。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</guid><pubDate>Sun, 21 Jul 2019 13:00:00 GMT</pubDate></item></channel></rss>
