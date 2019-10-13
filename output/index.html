@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://goldengrape.github.io/">
-<link rel="next" href="index-14.html" type="text/html">
+<link rel="next" href="index-15.html" type="text/html">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/Solitaire_Encryption/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,282 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/Solitaire_Encryption/" class="u-url">纸牌加密</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" class="u-url">人工晶体度数计算公式推导(2)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-10-13T15:00:00+08:00" title="2019-10-13 15:00">2019-10-13 15:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/" class="u-url">人工晶体度数计算公式推导(1)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-10-13T12:00:00+08:00" title="2019-10-13 12:00">2019-10-13 12:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>按照Thomas Olsen的综述: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0420.2007.00879.x">Calculation of intraocular lens power: a review</a> 进行推导, Thomas Olsen就是Olsen公式的作者, 算是很新的公式了. 这是他在2007年发的一篇综述.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>讲人工晶体度数计算的文章, 大概一开始都要八卦一下第一枚人工晶体植入的故事, Ridley爵士在1949年进行了第一枚人工晶体植入, 但是度数算错了, -20D! Ridley用了Gullstrand模型眼的曲率参数, 但忘了PMMA的高折射率. (<a href="https://books.google.com/books?id=tMVSVumHzHUC&amp;lpg=PP1&amp;dq=Sir%20Harold%20Ridley%20and%20his%20Fight%20for%20Sight&amp;hl=zh-CN&amp;pg=PR9#v=onepage&amp;q=Sir%20Harold%20Ridley%20and%20his%20Fight%20for%20Sight&amp;f=false">Sir Harold Ridley and his Fight for Sight</a> )</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="基础光学">基础光学<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%9F%BA%E7%A1%80%E5%85%89%E5%AD%A6">¶</a>
+</h2>
+<p>四则运算、不超过初中数学, 不必紧张</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="屈光度">屈光度<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%B1%88%E5%85%89%E5%BA%A6">¶</a>
+</h3>$$
+F=\frac{n_2-n_1}{r}
+\tag 1
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>一个界面的屈光度F, 定义如上单位为D, 也是$M^{-1}$, 单位要千万小心, 如果一直都是字母没什么关系, 但如果代入具体的数字时, 要小心区分毫米、米. 其中:</p>
+<ul>
+<li>$n_1$ 是光线入射到界面之前, 介质的折射率.</li>
+<li>$n_2$ 是光线从界面出射之后, 介质的折射率.</li>
+<li>r 是界面的曲率半径. 如果是向入射光方向凸起的, r的符号为正, 否则为负.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="聚散度">聚散度<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E8%81%9A%E6%95%A3%E5%BA%A6">¶</a>
+</h3>$$
+V=\frac{n}{d}
+\tag 2
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>V: 光线的聚散度</li>
+<li>d: 从当前面到聚焦点的距离, 注意也是有正负的.</li>
+<li>n: 介质的折射率</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如果聚散度为$V_1$的光线, 经过屈光度为F的透镜面, 出射光的聚散度$V_2$为
+$$
+V_2=V_1+F
+\tag 3
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="补充:">补充:<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E8%A1%A5%E5%85%85:">¶</a>
+</h4>
+<p>对于平行光, 聚焦于无穷远点, 也就是d=∞, 那么V=0</p>
+<p>如果聚散度为$V_0=\frac{n}{d}$的光, 在原来的介质中, 前进了$d_0$距离, 那么还剩$d-d_0$的距离就聚焦了, 所以这时候的聚散度$V=\frac{n}{d-d_0}$, 如果已知$V_0, n$, 那么:
+$$ 
+d=\frac{n}{V_0}
+\tag {3.1}
+$$</p>
+<p>将公式(3.1)代入
+$$
+V=\frac{n}{d-d_0}
+\tag {3.2}
+$$</p>
+<p>得到:
+$$
+V =\frac{n}{\frac{n}{V_0}-d_0}
+$$</p>
+<p>上下同时除以n化简, 得到
+$$
+V =\frac{1}{\frac{1}{V_0}-\frac{d_0}{n}}
+\tag {3.3}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="作为“薄透镜”的人工晶体">作为“薄透镜”的人工晶体<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E4%BD%9C%E4%B8%BA%E2%80%9C%E8%96%84%E9%80%8F%E9%95%9C%E2%80%9D%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>如果平行光通过曲率为<code>K</code>的角膜, 眼轴长为<code>Ax</code>, 有效晶体位置为<code>d</code>, 眼内介质的折射率为<code>n</code>, 那么要达成正视眼, IOL的度数应当是多少?</p>
+<p>原文中的推导太快, 我稍微慢一点推:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>平行光的屈光度=0, 经过曲率为K的角膜, 按照公式(3),
+$$
+V_{离开角膜}=0+K=K
+\tag {4.1}
+$$</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>光线经过距离d, 到达人工晶体的位置, 这是的聚散度$V_1$的计算, 和刚才补充公式(3.3)的过程一致, 将公式(4.1)代入到公式(3.3)中, 得到:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+V_{进入人工晶体}=\frac{1}{\frac{1}{V_{离开角膜}}-\frac{d}{n_{房水}}}
+$$$$
+V_{进入人工晶体}=\frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}
+\tag 4
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>此处假设人工晶体的厚度忽略不计, 那么从人工晶体出来, 只要再走(眼轴长Ax - 人工晶体位置d)的距离就到达了视网膜. 为了能够聚焦到视网膜上, 离开人工晶体的光线, 聚散度应当满足如下公式:</p>
+$$
+V_{离开人工晶体}=\frac{n_{玻璃体}}{Ax-d}
+\tag 5
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>根据公式(3), 进入人工晶体和离开人工晶体的屈光度变化, 应当由人工晶体的度数$P_0$提供:
+$$
+V_{离开人工晶体}=V_{进入人工晶体}+P_0
+\tag 3
+$$</p>
+<p>将公式(4)和(5)代入:</p>
+$$
+\frac{n_{玻璃体}}{Ax-d}=\frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}+P_0
+$$$$
+P_0=\frac{n_{玻璃体}}{Ax-d} - \frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}
+\tag 6
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>这就是最简单的薄透镜公式. 里面$n_{玻璃体}, n_{房水}$ 是常数, <code>Ax, K</code>是可以测量到的, <code>d</code>在手术前其实是不知道的, 但可以通过各种方式来预测.</p>
+<p>要在薄透镜公式进化,</p>
+<ul>
+<li>将角膜和晶体作为有一定厚度的透镜, 前后表面还有着不同的曲率半径.</li>
+<li>不仅仅考虑近轴光线, 还要考虑上周边光线造成的像差.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>未完待续</p>
+
+</div>
+</div>
+</div>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/Solitaire_Encryption/" class="u-url">纸牌加密</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/Solitaire_Encryption/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-10-01T12:00:00+08:00" title="2019-10-01 12:00">2019-10-01 12:00</time></a></p>
@@ -266,63 +541,26 @@ MathJax.Hub.Config({
 <p>所以前面我给出的解决方案中，就是要<strong>放弃</strong>明确的学习目的，转而体会学习过程中的乐趣。这种乐趣才是持久的，可记忆的。</p>
 </div>
     </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/python/15_pages_python_tutorial_translated/" class="u-url">15页python教程翻译</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/python/15_pages_python_tutorial_translated/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-08-03T12:00:00+08:00" title="2019-08-03 12:00">2019-08-03 12:00</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>起因是有人把一句戏言当真了。</p>
-<p><a href="https://twitter.com/wangpei/status/1133030820128550912">王佩说</a>开始看：</p>
-<blockquote>
-<p>中文版的《Python学习手册》，厚厚两大本，1500页。</p>
-</blockquote>
-<p>我一看就觉得他学Python的计划要危险了：</p>
-<blockquote>
-<p>别把这事弄复杂了，python就是轻巧的语言，15页的教程满足日常上手即可，然后每用到一个模块再临时去stackoverflow上查。等各个常用模块都用过一遍了，再去看书什么的。
-买回来1500页的厚书，高概率是学不下去了。
-动手，并且体验写代码的乐趣，才是学语言最重要的事情</p>
-</blockquote>
-<p>两个月以后<a href="https://twitter.com/YvCii/status/1147408620755120128">波澜</a>翻出这条推，问</p>
-<blockquote>
-<p>请教15页的教程有名字吗？谢谢</p>
-</blockquote>
-<p>我其实只是把1500页删掉两个0，随口说出的15页。但我确实觉得网上高概率能有个15页的python教程。于是搜了搜，果然找到一个还不错的。</p>
-<p><a href="https://github.com/CambridgeEngineering/PartIA-Computing-Michaelmas">PartIA-Computing-Michaelmas</a> 是剑桥大学Engineering <a href="https://en.wikipedia.org/wiki/Tripos">Tripos</a>的课程。关于python的13节，关于IPython magic command的1节，关于Jupyter notebook使用的1节，一共正好15节课。每课一个jupyter页面，一共15“页”。</p>
-<p>我看了看内容，还不错，覆盖的多数科学计算所需要的内容，也就是我说的“满足日常上手”。而且附带有练习题，并且可以直接在<a href="https://notebooks.azure.com/garth-wells/projects/CUED-IA-Computing-Michaelmas">azure notebooks上运行</a>。满足我说的：“动手，并且体验写代码的乐趣，才是学语言最重要的事情。”</p>
-<p>里面还有不少我以前不知道的知识与八卦，比如<a href="https://en.wikipedia.org/wiki/Cluster_(spacecraft)#Launch_failure">阿丽亚娜5号为什么爆炸</a>，<a href="https://en.wikipedia.org/wiki/MIM-104_Patriot#Failure_at_Dhahran">爱国者导弹为什么工作100小时以后就放过了飞毛腿</a>，<a href="https://www.theguardian.com/business/2015/may/01/us-aviation-authority-boeing-787-dreamliner-bug-could-cause-loss-of-control">波音787为什么每284天就要重启</a>……很有意思。</p>
-<p>比我自己写的<a href="https://github.com/goldengrape/Python-for-ophthalmologist">面向眼科医生的python教程</a>要好。考虑到我一直想着有朝一日可以开个工作坊给一群眼科大夫们培训一下午python，让大家学会写基本的程序，以后也方便交流。所以我就把这15页的教程给翻译成中文了。</p>
-<p><a href="https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN">15页python教程的中文翻译版</a> ： https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN</p>
-<p>目前翻译得比较粗略，可能还有很多需要修改的地方，反正是在github上，随手就可以修正。也欢迎各位读者多多提issue，帮忙改进。</p>
-<p>谢谢。学习愉快。</p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/how_to_fix_aqua_lung_sphera_mask/" class="u-url">大神面镜维修</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/how_to_fix_aqua_lung_sphera_mask/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-07-21T21:00:00+08:00" title="2019-07-21 21:00">2019-07-21 21:00</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>今天潜水的时候，发现面镜漏水。仔细观察，发现是胶垫没有很好包裹面镜镜片的边缘。可能是挤压造成了镜片和胶套的变形，导致有一点点松脱。</p>
-<p><img alt="IMG_20190721_214540" src="https://i.loli.net/2019/07/21/5d347437d6c0c44307.jpg">
-（事后复原出问题的部分）</p>
-<p>在水边弄了一会儿没有搞定，反而把镜片整个给拆下来了。这面镜可是我自由潜水老师赠我的宝物，回来后经过一番努力终于修好，</p>
-<p>大神面镜，准确的说应该是Aqua Lung Sphera Mask，</p>
-<p><img alt="IMG_20190721_214303" src="https://i.loli.net/2019/07/21/5d34756a82b2d47149.jpg">
-拆解过程详解如下，不失一般性以右眼为例：</p>
-<p class="more"><a href="posts/bulabula/how_to_fix_aqua_lung_sphera_mask/">阅读更多…</a></p>
-</div>
-    </div>
     </article>
 </div>
 
         <nav class="postindexpager"><ul class="pager">
 <li class="next">
-                <a href="index-14.html" rel="next">以前的文章</a>
+                <a href="index-15.html" rel="next">以前的文章</a>
             </li>
-        </ul></nav><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+        </ul></nav><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
             
         </footer>
 </div>

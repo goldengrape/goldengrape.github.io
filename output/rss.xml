@@ -1,5 +1,222 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 01 Oct 2019 11:22:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>纸牌加密</title><link>https://goldengrape.github.io/posts/bulabula/Solitaire_Encryption/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是记录在&lt;a href="https://book.douban.com/subject/27077159/"&gt;《编码宝典》&lt;/a&gt;附录里的一个手工加密方法.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 13 Oct 2019 08:00:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>人工晶体度数计算公式推导(2)</title><link>https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/</guid><pubDate>Sun, 13 Oct 2019 07:00:00 GMT</pubDate></item><item><title>人工晶体度数计算公式推导(1)</title><link>https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;按照Thomas Olsen的综述: &lt;a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0420.2007.00879.x"&gt;Calculation of intraocular lens power: a review&lt;/a&gt; 进行推导, Thomas Olsen就是Olsen公式的作者, 算是很新的公式了. 这是他在2007年发的一篇综述.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;讲人工晶体度数计算的文章, 大概一开始都要八卦一下第一枚人工晶体植入的故事, Ridley爵士在1949年进行了第一枚人工晶体植入, 但是度数算错了, -20D! Ridley用了Gullstrand模型眼的曲率参数, 但忘了PMMA的高折射率. (&lt;a href="https://books.google.com/books?id=tMVSVumHzHUC&amp;amp;lpg=PP1&amp;amp;dq=Sir%20Harold%20Ridley%20and%20his%20Fight%20for%20Sight&amp;amp;hl=zh-CN&amp;amp;pg=PR9#v=onepage&amp;amp;q=Sir%20Harold%20Ridley%20and%20his%20Fight%20for%20Sight&amp;amp;f=false"&gt;Sir Harold Ridley and his Fight for Sight&lt;/a&gt; )&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h2 id="基础光学"&gt;基础光学&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%9F%BA%E7%A1%80%E5%85%89%E5%AD%A6"&gt;¶&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;四则运算、不超过初中数学, 不必紧张&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="屈光度"&gt;屈光度&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%B1%88%E5%85%89%E5%BA%A6"&gt;¶&lt;/a&gt;&lt;/h3&gt;$$
+F=\frac{n_2-n_1}{r}
+\tag 1
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;一个界面的屈光度F, 定义如上单位为D, 也是$M^{-1}$, 单位要千万小心, 如果一直都是字母没什么关系, 但如果代入具体的数字时, 要小心区分毫米、米. 其中:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$n_1$ 是光线入射到界面之前, 介质的折射率.&lt;/li&gt;
+&lt;li&gt;$n_2$ 是光线从界面出射之后, 介质的折射率.&lt;/li&gt;
+&lt;li&gt;r 是界面的曲率半径. 如果是向入射光方向凸起的, r的符号为正, 否则为负.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="聚散度"&gt;聚散度&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E8%81%9A%E6%95%A3%E5%BA%A6"&gt;¶&lt;/a&gt;&lt;/h3&gt;$$
+V=\frac{n}{d}
+\tag 2
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;ul&gt;
+&lt;li&gt;V: 光线的聚散度&lt;/li&gt;
+&lt;li&gt;d: 从当前面到聚焦点的距离, 注意也是有正负的.&lt;/li&gt;
+&lt;li&gt;n: 介质的折射率&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;如果聚散度为$V_1$的光线, 经过屈光度为F的透镜面, 出射光的聚散度$V_2$为
+$$
+V_2=V_1+F
+\tag 3
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h4 id="补充:"&gt;补充:&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E8%A1%A5%E5%85%85:"&gt;¶&lt;/a&gt;&lt;/h4&gt;&lt;p&gt;对于平行光, 聚焦于无穷远点, 也就是d=∞, 那么V=0&lt;/p&gt;
+&lt;p&gt;如果聚散度为$V_0=\frac{n}{d}$的光, 在原来的介质中, 前进了$d_0$距离, 那么还剩$d-d_0$的距离就聚焦了, 所以这时候的聚散度$V=\frac{n}{d-d_0}$, 如果已知$V_0, n$, 那么:
+$$ 
+d=\frac{n}{V_0}
+\tag {3.1}
+$$&lt;/p&gt;
+&lt;p&gt;将公式(3.1)代入
+$$
+V=\frac{n}{d-d_0}
+\tag {3.2}
+$$&lt;/p&gt;
+&lt;p&gt;得到:
+$$
+V =\frac{n}{\frac{n}{V_0}-d_0}
+$$&lt;/p&gt;
+&lt;p&gt;上下同时除以n化简, 得到
+$$
+V =\frac{1}{\frac{1}{V_0}-\frac{d_0}{n}}
+\tag {3.3}
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="作为“薄透镜”的人工晶体"&gt;作为“薄透镜”的人工晶体&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E4%BD%9C%E4%B8%BA%E2%80%9C%E8%96%84%E9%80%8F%E9%95%9C%E2%80%9D%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93"&gt;¶&lt;/a&gt;&lt;/h3&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;如果平行光通过曲率为&lt;code&gt;K&lt;/code&gt;的角膜, 眼轴长为&lt;code&gt;Ax&lt;/code&gt;, 有效晶体位置为&lt;code&gt;d&lt;/code&gt;, 眼内介质的折射率为&lt;code&gt;n&lt;/code&gt;, 那么要达成正视眼, IOL的度数应当是多少?&lt;/p&gt;
+&lt;p&gt;原文中的推导太快, 我稍微慢一点推:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;平行光的屈光度=0, 经过曲率为K的角膜, 按照公式(3),
+$$
+V_{离开角膜}=0+K=K
+\tag {4.1}
+$$&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;光线经过距离d, 到达人工晶体的位置, 这是的聚散度$V_1$的计算, 和刚才补充公式(3.3)的过程一致, 将公式(4.1)代入到公式(3.3)中, 得到:&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+$$
+V_{进入人工晶体}=\frac{1}{\frac{1}{V_{离开角膜}}-\frac{d}{n_{房水}}}
+$$$$
+V_{进入人工晶体}=\frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}
+\tag 4
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;此处假设人工晶体的厚度忽略不计, 那么从人工晶体出来, 只要再走(眼轴长Ax - 人工晶体位置d)的距离就到达了视网膜. 为了能够聚焦到视网膜上, 离开人工晶体的光线, 聚散度应当满足如下公式:&lt;/p&gt;
+$$
+V_{离开人工晶体}=\frac{n_{玻璃体}}{Ax-d}
+\tag 5
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;根据公式(3), 进入人工晶体和离开人工晶体的屈光度变化, 应当由人工晶体的度数$P_0$提供:
+$$
+V_{离开人工晶体}=V_{进入人工晶体}+P_0
+\tag 3
+$$&lt;/p&gt;
+&lt;p&gt;将公式(4)和(5)代入:&lt;/p&gt;
+$$
+\frac{n_{玻璃体}}{Ax-d}=\frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}+P_0
+$$$$
+P_0=\frac{n_{玻璃体}}{Ax-d} - \frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}
+\tag 6
+$$
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;这就是最简单的薄透镜公式. 里面$n_{玻璃体}, n_{房水}$ 是常数, &lt;code&gt;Ax, K&lt;/code&gt;是可以测量到的, &lt;code&gt;d&lt;/code&gt;在手术前其实是不知道的, 但可以通过各种方式来预测.&lt;/p&gt;
+&lt;p&gt;要在薄透镜公式进化,&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将角膜和晶体作为有一定厚度的透镜, 前后表面还有着不同的曲率半径.&lt;/li&gt;
+&lt;li&gt;不仅仅考虑近轴光线, 还要考虑上周边光线造成的像差.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;未完待续&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/</guid><pubDate>Sun, 13 Oct 2019 04:00:00 GMT</pubDate></item><item><title>纸牌加密</title><link>https://goldengrape.github.io/posts/bulabula/Solitaire_Encryption/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是记录在&lt;a href="https://book.douban.com/subject/27077159/"&gt;《编码宝典》&lt;/a&gt;附录里的一个手工加密方法.&lt;/p&gt;
 &lt;p&gt;所谓手工加密, 就是完全不依赖于计算机, 靠一副纸牌就可以产生连续的加密用密钥. 纸牌的顺序就是密码, 所以密码的可能数量=54的阶乘, 大致是2.31 后面跟上71个0.&lt;/p&gt;
 &lt;p&gt;军用级.&lt;/p&gt;
 &lt;p&gt;很可惜, 这个加密方法并不是RSA那样的公私钥加密系统. 所以, 密码必须事先传递好. 加密/ 解密的双方, 必须知道同一副纸牌的顺序. 可以是双方把牌的顺序背下来, 也可以是双方各自持有一副同样顺序的纸牌. 我觉得背下来更保险, 貌似也是可以做到的.&lt;/p&gt;
@@ -334,57 +551,4 @@ https://www.coursera.org/taiwan&lt;/li&gt;
 &lt;p&gt;有明确需求驱动的学习过程确实是高效的，但是这也是最容易被放弃的。对于成年人的学习，最容易质疑的就是需求本身。比如“建立个人网站”，是自己学成全栈，还是直接找个静态网站生成工具然后写写markdown？甚至找个外包花钱做一个。这样一比较，得出的结论很可能是“我这岁数再学习______实属浪费时间”。&lt;/p&gt;
 &lt;p&gt;很可能在一定经济实力之后，各种明确的目标都是可以被购买的。而自身的时间价值如果又很高，两者比较就容易选择外包购买而不是自己学习。这和年轻学生又不一样，当学生的时候外包买不起，只好自己学。&lt;/p&gt;
 &lt;p&gt;欲速则不达。&lt;/p&gt;
-&lt;p&gt;所以前面我给出的解决方案中，就是要&lt;strong&gt;放弃&lt;/strong&gt;明确的学习目的，转而体会学习过程中的乐趣。这种乐趣才是持久的，可记忆的。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/adult_self_study/</guid><pubDate>Sat, 03 Aug 2019 04:01:00 GMT</pubDate></item><item><title>15页python教程翻译</title><link>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;起因是有人把一句戏言当真了。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://twitter.com/wangpei/status/1133030820128550912"&gt;王佩说&lt;/a&gt;开始看：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;中文版的《Python学习手册》，厚厚两大本，1500页。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我一看就觉得他学Python的计划要危险了：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;别把这事弄复杂了，python就是轻巧的语言，15页的教程满足日常上手即可，然后每用到一个模块再临时去stackoverflow上查。等各个常用模块都用过一遍了，再去看书什么的。
-买回来1500页的厚书，高概率是学不下去了。
-动手，并且体验写代码的乐趣，才是学语言最重要的事情&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;两个月以后&lt;a href="https://twitter.com/YvCii/status/1147408620755120128"&gt;波澜&lt;/a&gt;翻出这条推，问&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;请教15页的教程有名字吗？谢谢&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;我其实只是把1500页删掉两个0，随口说出的15页。但我确实觉得网上高概率能有个15页的python教程。于是搜了搜，果然找到一个还不错的。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/CambridgeEngineering/PartIA-Computing-Michaelmas"&gt;PartIA-Computing-Michaelmas&lt;/a&gt; 是剑桥大学Engineering &lt;a href="https://en.wikipedia.org/wiki/Tripos"&gt;Tripos&lt;/a&gt;的课程。关于python的13节，关于IPython magic command的1节，关于Jupyter notebook使用的1节，一共正好15节课。每课一个jupyter页面，一共15“页”。&lt;/p&gt;
-&lt;p&gt;我看了看内容，还不错，覆盖的多数科学计算所需要的内容，也就是我说的“满足日常上手”。而且附带有练习题，并且可以直接在&lt;a href="https://notebooks.azure.com/garth-wells/projects/CUED-IA-Computing-Michaelmas"&gt;azure notebooks上运行&lt;/a&gt;。满足我说的：“动手，并且体验写代码的乐趣，才是学语言最重要的事情。”&lt;/p&gt;
-&lt;p&gt;里面还有不少我以前不知道的知识与八卦，比如&lt;a href="https://en.wikipedia.org/wiki/Cluster_(spacecraft)#Launch_failure"&gt;阿丽亚娜5号为什么爆炸&lt;/a&gt;，&lt;a href="https://en.wikipedia.org/wiki/MIM-104_Patriot#Failure_at_Dhahran"&gt;爱国者导弹为什么工作100小时以后就放过了飞毛腿&lt;/a&gt;，&lt;a href="https://www.theguardian.com/business/2015/may/01/us-aviation-authority-boeing-787-dreamliner-bug-could-cause-loss-of-control"&gt;波音787为什么每284天就要重启&lt;/a&gt;……很有意思。&lt;/p&gt;
-&lt;p&gt;比我自己写的&lt;a href="https://github.com/goldengrape/Python-for-ophthalmologist"&gt;面向眼科医生的python教程&lt;/a&gt;要好。考虑到我一直想着有朝一日可以开个工作坊给一群眼科大夫们培训一下午python，让大家学会写基本的程序，以后也方便交流。所以我就把这15页的教程给翻译成中文了。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN"&gt;15页python教程的中文翻译版&lt;/a&gt; ： https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN&lt;/p&gt;
-&lt;p&gt;目前翻译得比较粗略，可能还有很多需要修改的地方，反正是在github上，随手就可以修正。也欢迎各位读者多多提issue，帮忙改进。&lt;/p&gt;
-&lt;p&gt;谢谢。学习愉快。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</guid><pubDate>Sat, 03 Aug 2019 04:00:00 GMT</pubDate></item><item><title>大神面镜维修</title><link>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;今天潜水的时候，发现面镜漏水。仔细观察，发现是胶垫没有很好包裹面镜镜片的边缘。可能是挤压造成了镜片和胶套的变形，导致有一点点松脱。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="IMG_20190721_214540" src="https://i.loli.net/2019/07/21/5d347437d6c0c44307.jpg"&gt;
-（事后复原出问题的部分）&lt;/p&gt;
-&lt;p&gt;在水边弄了一会儿没有搞定，反而把镜片整个给拆下来了。这面镜可是我自由潜水老师赠我的宝物，回来后经过一番努力终于修好，&lt;/p&gt;
-&lt;p&gt;大神面镜，准确的说应该是Aqua Lung Sphera Mask，&lt;/p&gt;
-&lt;p&gt;&lt;img alt="IMG_20190721_214303" src="https://i.loli.net/2019/07/21/5d34756a82b2d47149.jpg"&gt;
-拆解过程详解如下，不失一般性以右眼为例：&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;将面镜翻90度，底面(鼻孔区域)向上。
-&lt;img alt="MVIMG_20190721_212535" src="https://i.loli.net/2019/07/21/5d3476de4dc2618712.jpg"&gt;
-&lt;img alt="IMG_20190721_214343" src="https://i.loli.net/2019/07/21/5d3475f43d64398116.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在灰黑交接处，使用一个小号的一字改锥，从此处插入。插入位置尽量靠近内侧边缘
-&lt;img alt="IMG_20190721_214359" src="https://i.loli.net/2019/07/21/5d3476548b38753663.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;改锥下压并且手轻轻向鼻侧移动，撬动灰色塑料套，面镜的下缘会松脱。
-&lt;img alt="IMG_20190721_214450" src="https://i.loli.net/2019/07/21/5d3476a1ee4aa44054.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;这张图片可以看出面镜的黑色下缘通过一个卡扣固定在灰色的塑料套内。图中绿色圆圈标出。一字改锥就是把这个卡扣给松脱了，就可以取出面镜下缘。
-&lt;img alt="MVIMG_20190721_212627" src="https://i.loli.net/2019/07/21/5d34778b13eee39262.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;面镜下缘取出后，小心把镜片装入到胶套中，确保胶套包裹住镜片边缘的内外表面。然后再将面镜下缘重新插入回去即可。注意插入的时候，那个三角形结构的底边要紧贴面镜的上缘部分。在将面镜下缘插入时，要小心不要让胶套变形太厉害，免得好不容易插回去时镜片没有放对位置。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;学会这一招以后，似乎可以用来更换面镜的镜片了。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</guid><pubDate>Sun, 21 Jul 2019 13:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;所以前面我给出的解决方案中，就是要&lt;strong&gt;放弃&lt;/strong&gt;明确的学习目的，转而体会学习过程中的乐趣。这种乐趣才是持久的，可记忆的。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/adult_self_study/</guid><pubDate>Sat, 03 Aug 2019 04:01:00 GMT</pubDate></item></channel></rss>
