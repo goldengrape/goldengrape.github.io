@@ -22,10 +22,12 @@ MathJax.Hub.Config({
 });
 </script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
 <link rel="prev" href="../Derivation-of-calculation-formula-of-intraocular-lens-1/" title="人工晶体度数计算公式推导(1)" type="text/html">
+<link rel="next" href="../../bulabula/music_coding/" title="音乐编程" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="人工晶体度数计算公式推导(2)">
 <meta property="og:url" content="https://goldengrape.github.io/posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/">
-<meta property="og:description" content="In [ ]:">
+<meta property="og:description" content="考虑到Olsen T那篇综述后面基本是在吐槽, 没有继续讨论具体公式的推导. 所以我换一篇文献, 这次看的是Barrett Universal公式的初始形态, Intraocular lens calculation formulas for new intraocular lens implants80037-8)
+1987年的Graham D. Barrett, M. D.还是一位具有分享精神">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2019-10-13T15:00:00+08:00">
 <meta property="article:tag" content="ophthalmology">
@@ -80,7 +82,41 @@ MathJax.Hub.Config({
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div class="cell border-box-sizing code_cell rendered">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>考虑到Olsen T那篇综述后面基本是在吐槽, 没有继续讨论具体公式的推导. 所以我换一篇文献, 这次看的是Barrett Universal公式的初始形态, <a href="https://sci-hub.tw/10.1016/s0886-3350(87">Intraocular lens calculation formulas for new intraocular lens implants</a>80037-8)</p>
+<p>1987年的Graham D. Barrett, M. D.还是一位具有分享精神并且自己会写GW Basic的青年. 不像现在这么吝啬, 满世界也翻不到他的<a href="http://calc.apacrs.org/barrett_universal2105/">Barrett Universal II</a>和<a href="http://calc.apacrs.org/Barrett_True_K_Universal_2105/">Barrett True K</a>公式的解析形式, 只有网页上才有计算器.</p>
+<p>眼科医生保有“公式的手算能力”是非常重要的, 谁知道哪个程序员会不会把毫米和米弄混, 把某个参数和另一个参数搞错? 真弄明白的时候都是大规模回顾数据的时候, 那时人工晶体早在眼内稳定好多年了.</p>
+<p>大概那个乐于分享的时代快要逝去了吧.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Barrett Universal公式是基于Gaussian optical principals的, 是基于计算厚透镜用的公式, 于上集见到的薄透镜公式有所不同. 这里要考虑透镜的厚度, 还要考虑厚透镜的主平面</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.loli.net/2019/10/13/G8tcU6w9XuVaRBJ.png" alt="Fig3"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -93,6 +129,68 @@ MathJax.Hub.Config({
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>示意图看起来很复杂, 一点一点解释:</p>
+<p>人工晶体就是中间的那个, Barrett当时是为了给水凝胶晶体推导公式, 所以人工晶体的长相比较奇怪. 
+设定人工晶体的厚度是<code>t</code>, 折射率是$n_2$, 人工晶体的前表面距离角膜顶点为<code>d</code>.</p>
+<p>人工晶体前表面的屈光度是$FP_1$, 后表面的屈光度是$FP_2$, 接下来两个参数$e_1, e_2$要稍微解释下</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>回忆一下中学光学作图的时候, 画出一个薄透镜折射时, 我们只需要用一条直线代替透镜, 然后画出平行光与这个直线相交的点. 也就是把透镜当作一个没有厚度的平面来处理.</p>
+<p>对于厚透镜, 要考虑前后两个面, 但这两个面的位置并不是紧贴着前后表面的顶点, 而是离开一点距离, 这两个面称为Principal Plane, 与光轴的交点成为Principal Point(主点).</p>
+<p>Principal Plane, 是把入射光和出射光各自的延长线相交, 得到的平面. (补插图)</p>
+<p>示意图中的$e_1, e_2$就是前后Principal Plane到透镜实际顶点之间的距离.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>S</code>是眼镜到角膜之间的距离, 眼镜度数<code>Rs</code>就是验光得到的结果, 角膜的屈光度是<code>K</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+FC=K+\frac{Rs}{1-S \times Rs}
+\tag 1
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../../categories/ophthalmology/" rel="tag">ophthalmology</a></li>
@@ -100,6 +198,9 @@ MathJax.Hub.Config({
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../Derivation-of-calculation-formula-of-intraocular-lens-1/" rel="prev" title="人工晶体度数计算公式推导(1)">上一篇文章</a>
+            </li>
+            <li class="next">
+                <a href="../../bulabula/music_coding/" rel="next" title="音乐编程">下一篇文章</a>
             </li>
         </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
