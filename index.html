@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/music_coding/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/learn_sonic_pi_and_music_with_nicechord/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,7 +67,44 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/music_coding/" class="u-url">音乐编程</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/learn_sonic_pi_and_music_with_nicechord/" class="u-url">看好和弦学音乐和sonic-pi</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/bulabula/learn_sonic_pi_and_music_with_nicechord/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-11-20T13:00:00+08:00" title="2019-11-20 13:00">2019-11-20 13:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p><a href="https://sonic-pi.net/">Sonic-Pi</a>是一个用Ruby语言写的音乐编程工具, 可以使用代码来即兴“演奏”音乐. 所谓演奏,live coding music,  是可以在程序中修改代码, 随时更新, 使音乐发生变化. 有点像是用命令行的DJ. 比如<a href="http://player.bilibili.com/player.html?aid=74702936&amp;cid=127783914&amp;page=1">这个演出</a></p>
+<p>不过学习Sonic-Pi就有两个内容要学习了, 一个是Ruby语言, 一个是音乐语言. </p>
+<ul>
+<li>
+<p>Ruby语言</p>
+<ul>
+<li>Sonic-Pi本身使用的是Ruby语言, 用来编写音乐的也是Ruby的一个子集, Sonic-Pi自带的mehackit上有个快速上手的<a href="http://sonic-pi.mehackit.org/index_chs.html">中文教程</a>, 文字阅读困难的, 这里也有<a href="https://www.bilibili.com/video/av47554214">视频教程</a>
+</li>
+<li>如果需要更复杂的功能, 可能需要加强Ruby语言的学习, 引入更多数据结构、函数定义之类. Ruby是个很流行的语言, 有大量的教程可以参考, 比如<a href="https://www.yiibai.com/ruby/quick-start.html">30分钟的快速入门</a> 或者更完全一些的<a href="https://www.runoob.com/ruby/ruby-tutorial.html">教程</a>
+</li>
+<li>对于Sonic-Pi, 简单的音乐或者midi处理, 似乎还用不到面向对象编程, 多数是面向过程的, 如果会其他的编程语言, 很容易学会.</li>
+</ul>
+</li>
+<li>
+<p>音乐语言</p>
+<ul>
+<li>音乐语言就要复杂多了, 概括地说音乐只是模式涌现. 但为了让人类的大脑觉得好听, 还有很多的规律. </li>
+<li>很多“学习音乐”的人, 比如我小时候学琴, 只是学习了乐器的演奏, 并没有学习用音乐来表达. 学习演奏类似于学习写字, 高等一点的类似于学习书法. 音乐则是类似文学, 至少要有一些写作的训练才行, 也就是乐理的学习.</li>
+</ul>
+</li>
+</ul>
+<p>好和弦(<a href="https://nicechord.com/">NiceChord</a>)是一个台湾作曲家做的“作曲、編曲、即興和電腦音樂的 YouTube 教學頻道”, 从2014年到现在已经更新了200多集了. 每一集5-10分钟, 轻松有趣. 是很好的乐理课程. </p>
+<p>既然我同时在学习这两者, 我就干脆结合在一起学. 所以我对着好和弦的课程, 尽量给每一集写一段对应的Sonic-Pi代码. 目前写了10集左右, 如果我不太懒的话, 就持续更新. </p>
+<p>您可以将代码贴到sonic-pi的编辑器里然后运行, 就可以听到结果了. 推荐顺手改改其中的代码, 也许能够产生更好的效果. </p>
+<p>其中也有很多比较固定的音乐表达方式, 比如常用的和弦琶音生成、12小节蓝调. 我还可能会加入一些自己会的编程技巧, 比如马尔可夫链、状态转移之类. </p>
+<p>这些代码供抛砖引玉, 您可以直接拿到自己的sonic-pi音乐中.</p>
+<p>项目地址: 
+<a href="https://github.com/goldengrape/sonic_pi_for_nice_chord">https://github.com/goldengrape/sonic_pi_for_nice_chord</a></p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/music_coding/" class="u-url">音乐编程</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/bulabula/music_coding/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-11-20T12:00:00+08:00" title="2019-11-20 12:00">2019-11-20 12:00</time></a></p>
@@ -760,22 +797,6 @@ $$
 </ol>
 <p>以上流程对我自己有一定的作用.</p>
 <p class="more"><a href="posts/bulabula/How_to_get_into_work_or_study_quickly/">阅读更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/goldengrape_style_ppt/" class="u-url">金葡流简报术</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/goldengrape_style_ppt/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-08-13T18:00:00+08:00" title="2019-08-13 18:00">2019-08-13 18:00</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<h3>简报两大困难</h3>
-<p>根据我多年来做简报，包括但不限于PPT/ Keynote的经验，做简报有两大困难：<strong>一不做二不休</strong>。</p>
-<p>所谓“一不做”，是不开始做，严重的拖延症发作，几张PPT可能要做上一个星期。只要打开电脑就不可避免会被其他的网站所影响，即使在查阅与简报相关的资料，也可能在维基百科甚至是在pubmed中迷失方向，看了一大堆不相干的文件，学会了许多不相干的知识，但PPT还是没有动。</p>
-<p>另一大困难是“二不休”，可能直到deadline绕颈，被逼不得不动手以后，又在PPT中塞入了太多的内容，写下了太多的文字，加入了太多的动画，在真正演讲的时候排练不足，时间控制不好，讲着讲着发觉时间不够用了，于是不断的“过、过、下一张、下一张”，之前的辛苦制作，给浪费了许多，还给人留下了准备仓促的坏印象。</p>
-<h3>金葡流简报术</h3>
-<p>综上，我根据自己平时的工作特点，开发了一种做简报的新流程，被网友<a href="https://twitter.com/octw">@octw</a> 赐名为“金葡流简报术”。</p>
-<p class="more"><a href="posts/bulabula/goldengrape_style_ppt/">阅读更多…</a></p>
 </div>
     </div>
     </article>
