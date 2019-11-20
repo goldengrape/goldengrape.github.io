@@ -22,7 +22,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/music_coding/" type="text/html">
 </head>
 <body class="theme-base-09">
     <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -67,13 +67,111 @@ MathJax.Hub.Config({
         
 
 <div class="posts">
-    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" class="u-url">人工晶体度数计算公式推导(2)</a></h1>
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/music_coding/" class="u-url">音乐编程</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/bulabula/music_coding/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-11-20T12:00:00+08:00" title="2019-11-20 12:00">2019-11-20 12:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>一个月前我买了一件电子乐器<a href="https://artiphon.com/">artiphon instrument1</a>, 然后就沉迷于音乐不能自拔. </p>
+<h3>sonic-pi</h3>
+<p>前几天重新翻看<a href="https://nicechord.com/">好和弦</a>, 其中<a href="https://youtu.be/8nmSsjQgO7s?t=593">有一集</a>说到用各种开源或者免费的软件制作音乐, 里面提到了<a href="https://sonic-pi.net/">sonic-pi</a>, 说可以用写程序的方法做现场音乐演出. </p>
+<p>于是我就去下载了<a href="https://sonic-pi.net/">sonic-pi</a>来玩, 确实很有趣. 可以play音符, 可以播放采样(sample), 也就是事先录制好的声音, 可以循环播放一组音符或者声音, 于是就有节拍、和弦, 还可以引入随机数, 可以产生变化的旋律. 还可以和midi硬件交互. </p>
+<p>我写了一段代码, 可以将我的<a href="https://artiphon.com/">artiphon instrument1</a> 中的特别低的低音(反正平时很少用到), 映射到和弦上, 于是我就可以用一个键来演奏需要好几个手指扭来扭去才能弹出的和弦了.<a href="https://github.com/goldengrape/artiphon_gadget">代码</a></p>
+<p><img alt="" src="https://cdn.shopify.com/s/files/1/0229/7157/products/06_Connectivity_2eb1d183-14a2-48f3-98c0-ad7821be2f63_928x896.jpg?v=1569094989"></p>
+<p>我开始以为这只是一个专门用来写音乐的语言, 随着学习的深入. 怎么看到了越来越多的编程内容, 数组、分支、循环甚至函数. 看完了基础教程以后, 感觉这就是个图灵完备的计算机语言啊. 搜索了一下sonic-pi的来历, 果然, 其实sonic-pi是Ruby语言的一个方言. 没想到我为了弹吉他偷懒, 居然顺手学了一多半Ruby.</p>
+<h3>Live Coding Music</h3>
+<p>我对音乐编程更有兴趣了. 在github上搜了一下, 发现这个<a href="https://github.com/pjagielski/awesome-live-coding-music">Awesome Live Coding Music</a>的列表.</p>
+<ul>
+<li>
+<a href="https://github.com/supercollider/supercollider/">SuperCollider</a>  Smalltalk-like (SClang)</li>
+<li>
+<a href="https://github.com/samaaron/sonic-pi">Sonic Pi</a>   Ruby</li>
+<li>
+<a href="https://github.com/overtone/overtone">Overtone</a>  Clojure</li>
+<li>
+<a href="https://github.com/tidalcycles/Tidal">Tidal</a>  Haskell</li>
+<li>
+<a href="https://github.com/alda-lang/alda">Alda</a>  Alda/Clojure</li>
+<li>
+<a href="https://github.com/charlieroberts/Gibber">Gibber</a> Javascript</li>
+<li>
+<a href="https://github.com/digego/extempore">Extempore</a>  Scheme-like</li>
+<li>
+<a href="https://github.com/Qirky/FoxDot">FoxDot</a> Python</li>
+</ul>
+<p>大名鼎鼎的潮流解释型语言一网打尽呐, 艺术家们果然是技术先行者. </p>
+<p>感觉Live Coding Music非常适合儿童(/中老年)编程教育, </p>
+<ul>
+<li>语法循序渐进,</li>
+<li>从语法上, play声音的命令远远比print、cout要有趣得多, 又比画个GUI简单得多. </li>
+<li>变量命名时, 音符本来就有do/re/mi,CDE, 123, 几类名字混在一起, 所以对变量应该比较容易理解.</li>
+<li>loop和循环天然对应.</li>
+<li>函数/块完全是复用性出发. </li>
+<li>多乐器、多音轨天然对应多线程.</li>
+<li>还有众多midi硬件、通讯问题</li>
+<li>写出来的东西很容易出成就感</li>
+<li>sonic-pi的口号是“没有错误, 只有机会”, 用在编程学习上, 不容易出现挫折感. 音乐这种东西, 规律出现了就不会太难听. </li>
+<li>编程的结果是产生音乐, 可以录制成wav、mp3文件, 很容易分享. 即使在别人没有安装什么额外软件的条件下, 也可以播放成果. 当然也可以放在soundcloud这样的音乐作品分享网站上. 比如我按照好和弦的指导做的<a href="https://soundcloud.com/user-544914923/continuum-with-ghost-note">这首伴奏</a>. 炫耀是互联网第一生产力, 也可以用来督促学习.</li>
+<li>编程技巧上, live coding对程序需求的修改又是大量、即时的, 演奏者自己就是个不断改需求的甲方, 所以慢慢各种编程技巧都会自然加入. 为了快速切换风格, 很可能要准备上各种设计模式. </li>
+</ul>
+<p>所以等我学完了Ruby(sonic-pi), 考虑把Clojure和一直没啃下来的JavaScript通过音乐来搞定. </p>
+<h3>对冲式学习</h3>
+<ul>
+<li>我最近学习弹吉他, 为了偷懒学会了Ruby, </li>
+<li>我之前想研究书法的用笔, 虽然没搞定写书法的机械臂, 却好好练习了书法.</li>
+<li>再往远想, 我高中时就是用Mathematica(那时候还是4.0, 现在都12了)写数学和物理作业. </li>
+</ul>
+<p>所以可以引入“对冲式学习”的概念: 同时学习两个东西, 互补没学好的风险, 其中:</p>
+<ul>
+<li>一个是古老的对技巧要求很高的技艺, 比如乐器、书法、解数学物理题;</li>
+<li>一个是现代的可自动重复的工具, 有可能降低前者的难度, 比如音乐编程、CNC、mathematica. </li>
+</ul>
+<p>两者同时学习, 反正学会其中一个就很有收获, 也可能慢慢两者都会了. </p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" class="u-url">人工晶体度数计算公式推导(2)</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
             <p class="dateline"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-10-13T15:00:00+08:00" title="2019-10-13 15:00">2019-10-13 15:00</time></a></p>
         </div>
     </header><div class="p-summary entry-summary">
-    <div class="cell border-box-sizing code_cell rendered">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>考虑到Olsen T那篇综述后面基本是在吐槽, 没有继续讨论具体公式的推导. 所以我换一篇文献, 这次看的是Barrett Universal公式的初始形态, <a href="https://sci-hub.tw/10.1016/s0886-3350(87">Intraocular lens calculation formulas for new intraocular lens implants</a>80037-8)</p>
+<p>1987年的Graham D. Barrett, M. D.还是一位具有分享精神并且自己会写GW Basic的青年. 不像现在这么吝啬, 满世界也翻不到他的<a href="http://calc.apacrs.org/barrett_universal2105/">Barrett Universal II</a>和<a href="http://calc.apacrs.org/Barrett_True_K_Universal_2105/">Barrett True K</a>公式的解析形式, 只有网页上才有计算器.</p>
+<p>眼科医生保有“公式的手算能力”是非常重要的, 谁知道哪个程序员会不会把毫米和米弄混, 把某个参数和另一个参数搞错? 真弄明白的时候都是大规模回顾数据的时候, 那时人工晶体早在眼内稳定好多年了.</p>
+<p>大概那个乐于分享的时代快要逝去了吧.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Barrett Universal公式是基于Gaussian optical principals的, 是基于计算厚透镜用的公式, 于上集见到的薄透镜公式有所不同. 这里要考虑透镜的厚度, 还要考虑厚透镜的主平面</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.loli.net/2019/10/13/G8tcU6w9XuVaRBJ.png" alt="Fig3"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
@@ -85,6 +183,68 @@ MathJax.Hub.Config({
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>示意图看起来很复杂, 一点一点解释:</p>
+<p>人工晶体就是中间的那个, Barrett当时是为了给水凝胶晶体推导公式, 所以人工晶体的长相比较奇怪. 
+设定人工晶体的厚度是<code>t</code>, 折射率是$n_2$, 人工晶体的前表面距离角膜顶点为<code>d</code>.</p>
+<p>人工晶体前表面的屈光度是$FP_1$, 后表面的屈光度是$FP_2$, 接下来两个参数$e_1, e_2$要稍微解释下</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>回忆一下中学光学作图的时候, 画出一个薄透镜折射时, 我们只需要用一条直线代替透镜, 然后画出平行光与这个直线相交的点. 也就是把透镜当作一个没有厚度的平面来处理.</p>
+<p>对于厚透镜, 要考虑前后两个面, 但这两个面的位置并不是紧贴着前后表面的顶点, 而是离开一点距离, 这两个面称为Principal Plane, 与光轴的交点成为Principal Point(主点).</p>
+<p>Principal Plane, 是把入射光和出射光各自的延长线相交, 得到的平面. (补插图)</p>
+<p>示意图中的$e_1, e_2$就是前后Principal Plane到透镜实际顶点之间的距离.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>S</code>是眼镜到角膜之间的距离, 眼镜度数<code>Rs</code>就是验光得到的结果, 角膜的屈光度是<code>K</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+FC=K+\frac{Rs}{1-S \times Rs}
+\tag 1
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 </div>
     </div>
     </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/" class="u-url">人工晶体度数计算公式推导(1)</a></h1>
@@ -335,7 +495,133 @@ $$
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>未完待续</p>
+<h3 id="对ELP的预测:">对ELP的预测:<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%AF%B9ELP%E7%9A%84%E9%A2%84%E6%B5%8B:">¶</a>
+</h3>
+<p>有效人工晶体位置, ELP, 上面薄透镜中的d. 在手术之前是不知道的. 也是最关键的误差产生因素, 所以各种公式都在尽量预测ELP, 某种程度上也就是术后的前房深度ACD.</p>
+<p>Olsen在该论文里吐槽了各种角膜测量、眼轴测量、超声vs激光测量之后, 列出了一个不错的表格, 说明了各种公式中用了哪些参数来预测ELP(ACD), 并且有各个公式的文献, 我就直接把sci-hub的全文链接附上了</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th style="text-align:left">ACD predictor</th>
+<th style="text-align:left">Formula ⁄ author</th>
+<th style="text-align:left"></th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">Axial length</td>
+<td style="text-align:left">Binkhorst</td>
+<td style="text-align:left"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/sci-hub.tw/10.1097/00004397-197901940-00010">Binkhorst 1979</a></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Hoffer</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Hoffer 1993</a>80338-0)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">SRK T</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Sanders et al. 1990</a>80706-7)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Holladay</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/s0886-3350(88">Holladay et al. 1988</a>80059-2)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Haigis</td>
+<td style="text-align:left">
+<a href="https://books.google.com/books?id=NhWJsGFK6qgC&amp;lpg=PR5&amp;ots=j0Zry4_HKc&amp;dq=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;lr&amp;pg=PA41#v=onepage&amp;q=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;f=false">Haigis 2004</a> (原文似乎是到Shammas的书里找)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Olsen</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(87">Olsen 1987a</a>80128-1), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">2006</a>;<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Olsen &amp; Gimbel 1993</a>80337-9); <a href="https://sci-hub.tw/10.1016/s0886-3350(13">Olsen et al. 1995</a>80140-x)</td>
+</tr>
+<tr>
+<td style="text-align:left">Corneal height</td>
+<td style="text-align:left">Fyodorov</td>
+<td style="text-align:left">Fyodorov et al. 1975</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">SRK T</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Sanders et al. 1990</a>80706-7)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Holladay I + II</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/s0886-3350(88">Holladay et al. 1988</a>80059-2)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Hoffer</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Hoffer 1993</a>80338-0)</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Olsen</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(86">Olsen 1986b</a>80099-2), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">2006</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">Preoperative ACD</td>
+<td style="text-align:left">Haigis</td>
+<td style="text-align:left"><a href="https://books.google.com/books?id=NhWJsGFK6qgC&amp;lpg=PR5&amp;ots=j0Zry4_HKc&amp;dq=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;lr&amp;pg=PA41#v=onepage&amp;q=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;f=false">Haigis 2004</a></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Holladay II, Olsen</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/S0886-3350(86">Olsen 1986b</a>80099-2), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">2006</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">Lens thickness</td>
+<td style="text-align:left">Holladay II, Olsen</td>
+<td style="text-align:left">
+<a href="https://sci-hub.tw/10.1016/s0886-3350(13">Olsen et al. 1995</a>80140-x), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">Olsen 2006</a>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">Others</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">Age</td>
+<td style="text-align:left">Holladay II</td>
+<td style="text-align:left">Unpublished data</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">Olsen</td>
+<td style="text-align:left"><a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">Olsen 2006</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Refraction</td>
+<td style="text-align:left">Holladay II, Olsen</td>
+<td style="text-align:left"><a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">Olsen 2006</a></td>
+</tr>
+</tbody>
+</table>
+<p>先贤们的文献很多, 慢慢看吧.</p>
 
 </div>
 </div>
@@ -490,55 +776,6 @@ $$
 <h3>金葡流简报术</h3>
 <p>综上，我根据自己平时的工作特点，开发了一种做简报的新流程，被网友<a href="https://twitter.com/octw">@octw</a> 赐名为“金葡流简报术”。</p>
 <p class="more"><a href="posts/bulabula/goldengrape_style_ppt/">阅读更多…</a></p>
-</div>
-    </div>
-    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/adult_self_study/" class="u-url">成人自学的困难</a></h1>
-        <div class="metadata">
-            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
-            <p class="dateline"><a href="posts/bulabula/adult_self_study/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-08-03T12:01:00+08:00" title="2019-08-03 12:01">2019-08-03 12:01</time></a></p>
-        </div>
-    </header><div class="p-summary entry-summary">
-    <div>
-<p>昨天翻译完了<a href="posts/python/15_pages_python_tutorial_translated/">15页的python教程</a>，想就成人自学再说说。</p>
-<h2>现象</h2>
-<p>python上手应该很容易，如果有老师在身边督促指导，就用这15页的教程，恐怕快则一下午，慢则一周就可以自己写一些简单的应用了。</p>
-<p>但学python真的花费了我很长很长时间，我发现我从2003年就开始学习python，一直学到2017年才算学会了基础（因此万幸躲过了python 2）。用时14年，而不是7天。</p>
-<h2>原因</h2>
-<p>究其原因，我觉得是因为<strong>放弃太容易</strong>。</p>
-<p>成年人有稳定的收入，有常规的工作、生活。要维持这些，以前学会的东西已经够用了。学习新东西在短期内并不会对生活造成什么太大改善，如果放弃学习，短期内也不会产生什么不良后果。</p>
-<p>相比起来学生时代就非常不同，别说放弃一门课，就是一门课的成绩稍微下降一些，也会寝食难安。如果挂科了，简直是天塌下来一半。想起来我大一的时候每周40节课上满，必修加选修上了13门课。（没错，我翘了一门必修课在同一时间选了另一门选修课）。</p>
-<p>理论上，要把学习压力重新加在自己身上，成人也可以快速学习，大家都是学霸出身，没什么理由学不会。但实际上，虚拟的压力并不是压力，没有实质性的威胁算不上威胁。</p>
-<h2>解决方案：</h2>
-<ul>
-<li>尽量平滑学习曲线：放弃的理由常常是一丝一毫的困难，一旦放下就很难再捡起来，或者很久以后才能捡起来。那么，就尽量不要制造额外的一丝一毫的困难吧，比如：</li>
-<li>用1500页的书去学python。天呐，1500页的小说我都要犹豫是不是去看，何况1500的教科书。<a href="https://github.com/goldengrape/PartIA-Computing-Michaelmas-zh-CN">15页的python教程</a>已经都觉得长了。</li>
-<li>
-<p>在本地电脑上用pip安装python库。类似可以推广到在本地电脑上安装开发环境学习某种语言。那绝对是可怕的拦路虎。<a href="https://repl.it">REPL.it</a>上已经做好了几乎所有语言，打开网页用就行了。或者用各种<a href="https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/">在线的jupyter</a></p>
-</li>
-<li>
-<p>享受过程(process)，而不是追求结果(product)。这是从coursera课程<a href="https://www.coursera.org/learn/learning-how-to-learn/home/welcome">“学习如何学习”</a>上学来的一招。</p>
-</li>
-<li>这一部分的视频<a href="https://www.youtube.com/watch?v=gCKcqLVGnSg&amp;list=PLievC1UeaSOD3EBaJaHstTKIXS51Sfjwo&amp;index=20&amp;t=0s">在此</a>
-</li>
-<li>就是说把学习作为日常消遣的一个选项，既然都是kill time，那么看电视剧和看公开课也是可能互换的。<a href="https://www.coursera.org/learn/shiji">《史记》</a>、<a href="http://www.xuetangx.com/courses/course-v1:TsinghuaX+00612642X+sp/about">《资治通鉴》</a>里，随便翻出个故事，不比现在电视剧里的情节狗血多了。<ul>
-<li>市场环境不好，公司里能干的员工一个接一个辞职。有一天一个基层程序员刚跑，CFO就去追了，追回来以后还让CEO给提升到CTO的职位。CEO看了看简历，该程序员原来在竞争对手那边一直就是个小PM，没做过什么大项目，还曾经被拖库攻击过。但CFO坚持。现在如果你是CEO，该怎么办？剧情狗血吧，哪有这种公司会发生这种事情呢。这个故事又叫做“萧何月下追韩信”。</li>
-</ul>
-</li>
-<li>既然是享受过程，就不要问自己学了多少，学到什么水平了，练习慢慢做，经常做就可以。三天打鱼两天晒网是最佳，不要给自己太大压力，也不要有太大幻想。“无挂碍故，远离颠倒梦想，究竟涅槃”。</li>
-</ul>
-<p>比如，这是前一段练字的结果，写到开心就好。
-<img alt="未命名" src="https://i.loli.net/2019/08/03/AuevRE7mDhYxKaj.png"></p>
-<p>补充一下：</p>
-<p>享受学习的过程本身，享受学到的知识和技能，这种“自由而无用”的事情，只有成人才能体会到乐趣。儿童是很难从练琴、练字、练球、练拳……体会到乐趣的。能够把重复行为作为冥想过程来享受的，只能是衣食无忧的成人。</p>
-<h2>误解</h2>
-<p>贴出本文后，<a href="https://twitter.com/eMuyi/status/1157559988799209472">eMuyi认为</a></p>
-<blockquote>
-<p>没有明确 motivation 的学习就是很低效。如果有一个明确目标，比如建立个人网站，学编程就很简单。</p>
-</blockquote>
-<p>有明确需求驱动的学习过程确实是高效的，但是这也是最容易被放弃的。对于成年人的学习，最容易质疑的就是需求本身。比如“建立个人网站”，是自己学成全栈，还是直接找个静态网站生成工具然后写写markdown？甚至找个外包花钱做一个。这样一比较，得出的结论很可能是“我这岁数再学习______实属浪费时间”。</p>
-<p>很可能在一定经济实力之后，各种明确的目标都是可以被购买的。而自身的时间价值如果又很高，两者比较就容易选择外包购买而不是自己学习。这和年轻学生又不一样，当学生的时候外包买不起，只好自己学。</p>
-<p>欲速则不达。</p>
-<p>所以前面我给出的解决方案中，就是要<strong>放弃</strong>明确的学习目的，转而体会学习过程中的乐趣。这种乐趣才是持久的，可记忆的。</p>
 </div>
     </div>
     </article>
