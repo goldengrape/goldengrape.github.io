@@ -46,6 +46,10 @@
   <lastmod>2019-10-01T11:21:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/cat_patent.xml</loc>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_posts.xml</loc>
   <lastmod>2019-11-20T07:19:00Z</lastmod>
  </sitemap>
@@ -142,6 +146,10 @@
   <lastmod>2019-11-20T06:32:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/patent.xml</loc>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/python.xml</loc>
   <lastmod>2019-07-01T08:47:00Z</lastmod>
  </sitemap>
@@ -162,15 +170,19 @@
   <lastmod>2019-05-07T09:20:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/wipo_analytics_tools.xml</loc>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml</loc>
   <lastmod>2019-07-30T10:20:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2019-11-20T07:19:00Z</lastmod>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2019-11-20T07:19:00Z</lastmod>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
  </sitemap>
 </sitemapindex>

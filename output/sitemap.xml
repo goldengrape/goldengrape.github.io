@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2019-10-13T08:00:00Z</lastmod>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-11-20T07:19:00Z</lastmod>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2019-08-03T04:00:00Z</lastmod>
+  <lastmod>2019-12-07T06:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -68,6 +68,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology/</loc>
   <lastmod>2019-07-30T10:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/cat_patent/</loc>
+  <lastmod>2019-12-07T06:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/cat_posts/</loc>
@@ -166,6 +170,10 @@
   <lastmod>2018-01-05T18:57:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/patent/</loc>
+  <lastmod>2019-12-07T06:55:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/python/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
@@ -184,6 +192,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/vr/</loc>
   <lastmod>2018-03-05T16:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/wipo_analytics_tools/</loc>
+  <lastmod>2019-12-07T06:55:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/</loc>
@@ -215,7 +227,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-15.html</loc>
-  <lastmod>2019-11-20T07:19:00Z</lastmod>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-16.html</loc>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -564,6 +580,46 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/why-magicleap-fall/</loc>
   <lastmod>2018-01-16T09:21:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_0/</loc>
+  <lastmod>2019-12-07T06:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_1/</loc>
+  <lastmod>2019-12-07T06:59:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_2/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_4/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_5/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_6/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/</loc>
+  <lastmod>2019-12-07T07:10:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/</loc>
+  <lastmod>2019-12-07T08:17:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/zermelo-theorem/</loc>
