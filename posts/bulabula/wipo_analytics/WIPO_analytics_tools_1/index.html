@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>专利分析工具概述(1)通用工具 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_1/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../WIPO_analytics_tools_0/" title="专利分析工具概述(0)" type="text/html">
+<link rel="next" href="../WIPO_analytics_tools_2/" title="专利分析工具概述(2)数据清洗工具" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="专利分析工具概述(1)通用工具">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_1/">
+<meta property="og:description" content="通用工具
+大量免费工具可用于多种任务，例如专利数据的基本清洗和可视化。 我们在这里重点介绍三个免费工具。
+
+Open Office
+许多专利分析师将使用Excel作为默认程序，包括较小数据集的基本清理。 但是，值得考虑将Apache Open Office作为免费的替代方案。 虽然专利分析通常使用电子表格（Open Office Calc），但Open Office中还有一个非常有用的数据库可以替">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-12-07T12:01:00+08:00">
+<meta property="article:tag" content="patent">
+<meta property="article:tag" content="WIPO_analytics_tools">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">专利分析工具概述(1)通用工具</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-12-07T12:01:00+08:00" itemprop="datePublished" title="2019-12-07 12:01">2019-12-07 12:01</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>通用工具</h3>
+<p>大量免费工具可用于多种任务，例如专利数据的基本清洗和可视化。 我们在这里重点介绍三个免费工具。
+<!-- TEASER_END --></p>
+<h4><a href="https://www.openoffice.org">Open Office</a></h4>
+<p>许多专利分析师将使用Excel作为默认程序，包括较小数据集的基本清理。 但是，值得考虑将Apache Open Office作为免费的替代方案。 虽然专利分析通常使用电子表格（Open Office Calc），但Open Office中还有一个非常有用的数据库可以替代Microsoft Access。</p>
+<ul>
+<li>为您的系统下载并安装[Apache Open Office]（https://www.openoffice.org）。</li>
+<li>提示：保存电子表格文件时，请选择另存为 <strong>.csv</strong> 以避免其他程序无法读取默认 <strong>.odt</strong> 文件。</li>
+</ul>
+<h4><a href="https://www.google.co.uk/sheets/about/">Google Sheets</a></h4>
+<p>Google Sheets需要一个免费的Google帐户，那些熟悉Excel的人可能会想为什么有了Excel还需要Google Sheets。其实, Google Sheets可以与其他人在线共享，并且有大量免费的附件可用于协助清理数据，例如“拆分名称”或“删除重复项”，如下所示:</p>
+<p><img alt="" src="https://wipo-analytics.github.io/images/overview/google_sheets_addon.png"></p>
+<p>(在中国大陆, 使用Google Sheets需要您具有“正常访问国际互联网”的能力, 无奈的译者注)</p>
+<h4><a href="https://support.google.com/fusiontables/answer/2571232?hl=en">Google Fusion Tables</a></h4>
+<p>(Google Fusion已经于2019年12月3日停止服务, 无奈的译者注, 于是这一段懒得翻译了)</p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/patent/" rel="tag">patent</a></li>
+            <li><a class="tag p-category" href="../../../../categories/wipo_analytics_tools/" rel="tag">WIPO_analytics_tools</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../WIPO_analytics_tools_0/" rel="prev" title="专利分析工具概述(0)">上一篇文章</a>
+            </li>
+            <li class="next">
+                <a href="../WIPO_analytics_tools_2/" rel="next" title="专利分析工具概述(2)数据清洗工具">下一篇文章</a>
+            </li>
+        </ul></nav></aside></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

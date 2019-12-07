@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="This is a blog site for GoldenGrape.">
+<meta name="viewport" content="width=device-width">
+<title>GoldenGrape's Blog (旧文章页 16) | GoldenGrape's Blog</title>
+<link href="assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/index-16.html">
+<link rel="prev" href="." type="text/html">
+<link rel="next" href="index-15.html" type="text/html">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="index.html">首页</a>
+        <a class="sidebar-nav-item" href="archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="categories/">标签</a>
+        <a class="sidebar-nav-item" href="categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+
+<div class="posts">
+    <article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/learn_sonic_pi_and_music_with_nicechord/" class="u-url">看好和弦学音乐和sonic-pi</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/bulabula/learn_sonic_pi_and_music_with_nicechord/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-11-20T13:00:00+08:00" title="2019-11-20 13:00">2019-11-20 13:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p><a href="https://sonic-pi.net/">Sonic-Pi</a>是一个用Ruby语言写的音乐编程工具, 可以使用代码来即兴“演奏”音乐. 所谓演奏,live coding music,  是可以在程序中修改代码, 随时更新, 使音乐发生变化. 有点像是用命令行的DJ. 比如<a href="http://player.bilibili.com/player.html?aid=74702936&amp;cid=127783914&amp;page=1">这个演出</a></p>
+<p>不过学习Sonic-Pi就有两个内容要学习了, 一个是Ruby语言, 一个是音乐语言. </p>
+<ul>
+<li>
+<p>Ruby语言</p>
+<ul>
+<li>Sonic-Pi本身使用的是Ruby语言, 用来编写音乐的也是Ruby的一个子集, Sonic-Pi自带的mehackit上有个快速上手的<a href="http://sonic-pi.mehackit.org/index_chs.html">中文教程</a>, 文字阅读困难的, 这里也有<a href="https://www.bilibili.com/video/av47554214">视频教程</a>
+</li>
+<li>如果需要更复杂的功能, 可能需要加强Ruby语言的学习, 引入更多数据结构、函数定义之类. Ruby是个很流行的语言, 有大量的教程可以参考, 比如<a href="https://www.yiibai.com/ruby/quick-start.html">30分钟的快速入门</a> 或者更完全一些的<a href="https://www.runoob.com/ruby/ruby-tutorial.html">教程</a>
+</li>
+<li>对于Sonic-Pi, 简单的音乐或者midi处理, 似乎还用不到面向对象编程, 多数是面向过程的, 如果会其他的编程语言, 很容易学会.</li>
+</ul>
+</li>
+<li>
+<p>音乐语言</p>
+<ul>
+<li>音乐语言就要复杂多了, 概括地说音乐只是模式涌现. 但为了让人类的大脑觉得好听, 还有很多的规律. </li>
+<li>很多“学习音乐”的人, 比如我小时候学琴, 只是学习了乐器的演奏, 并没有学习用音乐来表达. 学习演奏类似于学习写字, 高等一点的类似于学习书法. 音乐则是类似文学, 至少要有一些写作的训练才行, 也就是乐理的学习.</li>
+</ul>
+</li>
+</ul>
+<p>好和弦(<a href="https://nicechord.com/">NiceChord</a>)是一个台湾作曲家做的“作曲、編曲、即興和電腦音樂的 YouTube 教學頻道”, 从2014年到现在已经更新了200多集了. 每一集5-10分钟, 轻松有趣. 是很好的乐理课程. </p>
+<p>既然我同时在学习这两者, 我就干脆结合在一起学. 所以我对着好和弦的课程, 尽量给每一集写一段对应的Sonic-Pi代码. 目前写了10集左右, 如果我不太懒的话, 就持续更新. </p>
+<p>您可以将代码贴到sonic-pi的编辑器里然后运行, 就可以听到结果了. 推荐顺手改改其中的代码, 也许能够产生更好的效果. </p>
+<p>其中也有很多比较固定的音乐表达方式, 比如常用的和弦琶音生成、12小节蓝调. 我还可能会加入一些自己会的编程技巧, 比如马尔可夫链、状态转移之类. </p>
+<p>这些代码供抛砖引玉, 您可以直接拿到自己的sonic-pi音乐中.</p>
+<p>项目地址: 
+<a href="https://github.com/goldengrape/sonic_pi_for_nice_chord">https://github.com/goldengrape/sonic_pi_for_nice_chord</a></p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/bulabula/music_coding/" class="u-url">音乐编程</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/bulabula/music_coding/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-11-20T12:00:00+08:00" title="2019-11-20 12:00">2019-11-20 12:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<p>一个月前我买了一件电子乐器<a href="https://artiphon.com/">artiphon instrument1</a>, 然后就沉迷于音乐不能自拔. </p>
+<h3>sonic-pi</h3>
+<p>前几天重新翻看<a href="https://nicechord.com/">好和弦</a>, 其中<a href="https://youtu.be/8nmSsjQgO7s?t=593">有一集</a>说到用各种开源或者免费的软件制作音乐, 里面提到了<a href="https://sonic-pi.net/">sonic-pi</a>, 说可以用写程序的方法做现场音乐演出. </p>
+<p>于是我就去下载了<a href="https://sonic-pi.net/">sonic-pi</a>来玩, 确实很有趣. 可以play音符, 可以播放采样(sample), 也就是事先录制好的声音, 可以循环播放一组音符或者声音, 于是就有节拍、和弦, 还可以引入随机数, 可以产生变化的旋律. 还可以和midi硬件交互. </p>
+<p>我写了一段代码, 可以将我的<a href="https://artiphon.com/">artiphon instrument1</a> 中的特别低的低音(反正平时很少用到), 映射到和弦上, 于是我就可以用一个键来演奏需要好几个手指扭来扭去才能弹出的和弦了.<a href="https://github.com/goldengrape/artiphon_gadget">代码</a></p>
+<p><img alt="" src="https://cdn.shopify.com/s/files/1/0229/7157/products/06_Connectivity_2eb1d183-14a2-48f3-98c0-ad7821be2f63_928x896.jpg?v=1569094989"></p>
+<p>我开始以为这只是一个专门用来写音乐的语言, 随着学习的深入. 怎么看到了越来越多的编程内容, 数组、分支、循环甚至函数. 看完了基础教程以后, 感觉这就是个图灵完备的计算机语言啊. 搜索了一下sonic-pi的来历, 果然, 其实sonic-pi是Ruby语言的一个方言. 没想到我为了弹吉他偷懒, 居然顺手学了一多半Ruby.</p>
+<h3>Live Coding Music</h3>
+<p>我对音乐编程更有兴趣了. 在github上搜了一下, 发现这个<a href="https://github.com/pjagielski/awesome-live-coding-music">Awesome Live Coding Music</a>的列表.</p>
+<ul>
+<li>
+<a href="https://github.com/supercollider/supercollider/">SuperCollider</a>  Smalltalk-like (SClang)</li>
+<li>
+<a href="https://github.com/samaaron/sonic-pi">Sonic Pi</a>   Ruby</li>
+<li>
+<a href="https://github.com/overtone/overtone">Overtone</a>  Clojure</li>
+<li>
+<a href="https://github.com/tidalcycles/Tidal">Tidal</a>  Haskell</li>
+<li>
+<a href="https://github.com/alda-lang/alda">Alda</a>  Alda/Clojure</li>
+<li>
+<a href="https://github.com/charlieroberts/Gibber">Gibber</a> Javascript</li>
+<li>
+<a href="https://github.com/digego/extempore">Extempore</a>  Scheme-like</li>
+<li>
+<a href="https://github.com/Qirky/FoxDot">FoxDot</a> Python</li>
+</ul>
+<p>大名鼎鼎的潮流解释型语言一网打尽呐, 艺术家们果然是技术先行者. </p>
+<p>感觉Live Coding Music非常适合儿童(/中老年)编程教育, </p>
+<ul>
+<li>语法循序渐进,</li>
+<li>从语法上, play声音的命令远远比print、cout要有趣得多, 又比画个GUI简单得多. </li>
+<li>变量命名时, 音符本来就有do/re/mi,CDE, 123, 几类名字混在一起, 所以对变量应该比较容易理解.</li>
+<li>loop和循环天然对应.</li>
+<li>函数/块完全是复用性出发. </li>
+<li>多乐器、多音轨天然对应多线程.</li>
+<li>还有众多midi硬件、通讯问题</li>
+<li>写出来的东西很容易出成就感</li>
+<li>sonic-pi的口号是“没有错误, 只有机会”, 用在编程学习上, 不容易出现挫折感. 音乐这种东西, 规律出现了就不会太难听. </li>
+<li>编程的结果是产生音乐, 可以录制成wav、mp3文件, 很容易分享. 即使在别人没有安装什么额外软件的条件下, 也可以播放成果. 当然也可以放在soundcloud这样的音乐作品分享网站上. 比如我按照好和弦的指导做的<a href="https://soundcloud.com/user-544914923/continuum-with-ghost-note">这首伴奏</a>. 炫耀是互联网第一生产力, 也可以用来督促学习.</li>
+<li>编程技巧上, live coding对程序需求的修改又是大量、即时的, 演奏者自己就是个不断改需求的甲方, 所以慢慢各种编程技巧都会自然加入. 为了快速切换风格, 很可能要准备上各种设计模式. </li>
+</ul>
+<p>所以等我学完了Ruby(sonic-pi), 考虑把Clojure和一直没啃下来的JavaScript通过音乐来搞定. </p>
+<h3>对冲式学习</h3>
+<ul>
+<li>我最近学习弹吉他, 为了偷懒学会了Ruby, </li>
+<li>我之前想研究书法的用笔, 虽然没搞定写书法的机械臂, 却好好练习了书法.</li>
+<li>再往远想, 我高中时就是用Mathematica(那时候还是4.0, 现在都12了)写数学和物理作业. </li>
+</ul>
+<p>所以可以引入“对冲式学习”的概念: 同时学习两个东西, 互补没学好的风险, 其中:</p>
+<ul>
+<li>一个是古老的对技巧要求很高的技艺, 比如乐器、书法、解数学物理题;</li>
+<li>一个是现代的可自动重复的工具, 有可能降低前者的难度, 比如音乐编程、CNC、mathematica. </li>
+</ul>
+<p>两者同时学习, 反正学会其中一个就很有收获, 也可能慢慢两者都会了. </p>
+</div>
+    </div>
+    </article><article class="post h-entry post-text"><header><h1 class="post-title p-name"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" class="u-url">人工晶体度数计算公式推导(2)</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-2/" rel="bookmark"><time class="post-date published dt-published" datetime="2019-10-13T15:00:00+08:00" title="2019-10-13 15:00">2019-10-13 15:00</time></a></p>
+        </div>
+    </header><div class="p-summary entry-summary">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>考虑到Olsen T那篇综述后面基本是在吐槽, 没有继续讨论具体公式的推导. 所以我换一篇文献, 这次看的是Barrett Universal公式的初始形态, <a href="https://sci-hub.tw/10.1016/s0886-3350(87">Intraocular lens calculation formulas for new intraocular lens implants</a>80037-8)</p>
+<p>1987年的Graham D. Barrett, M. D.还是一位具有分享精神并且自己会写GW Basic的青年. 不像现在这么吝啬, 满世界也翻不到他的<a href="http://calc.apacrs.org/barrett_universal2105/">Barrett Universal II</a>和<a href="http://calc.apacrs.org/Barrett_True_K_Universal_2105/">Barrett True K</a>公式的解析形式, 只有网页上才有计算器.</p>
+<p>眼科医生保有“公式的手算能力”是非常重要的, 谁知道哪个程序员会不会把毫米和米弄混, 把某个参数和另一个参数搞错? 真弄明白的时候都是大规模回顾数据的时候, 那时人工晶体早在眼内稳定好多年了.</p>
+<p>大概那个乐于分享的时代快要逝去了吧.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Barrett Universal公式是基于Gaussian optical principals的, 是基于计算厚透镜用的公式, 于上集见到的薄透镜公式有所不同. 这里要考虑透镜的厚度, 还要考虑厚透镜的主平面</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://i.loli.net/2019/10/13/G8tcU6w9XuVaRBJ.png" alt="Fig3"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>示意图看起来很复杂, 一点一点解释:</p>
+<p>人工晶体就是中间的那个, Barrett当时是为了给水凝胶晶体推导公式, 所以人工晶体的长相比较奇怪. 
+设定人工晶体的厚度是<code>t</code>, 折射率是$n_2$, 人工晶体的前表面距离角膜顶点为<code>d</code>.</p>
+<p>人工晶体前表面的屈光度是$FP_1$, 后表面的屈光度是$FP_2$, 接下来两个参数$e_1, e_2$要稍微解释下</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>回忆一下中学光学作图的时候, 画出一个薄透镜折射时, 我们只需要用一条直线代替透镜, 然后画出平行光与这个直线相交的点. 也就是把透镜当作一个没有厚度的平面来处理.</p>
+<p>对于厚透镜, 要考虑前后两个面, 但这两个面的位置并不是紧贴着前后表面的顶点, 而是离开一点距离, 这两个面称为Principal Plane, 与光轴的交点成为Principal Point(主点).</p>
+<p>Principal Plane, 是把入射光和出射光各自的延长线相交, 得到的平面. (补插图)</p>
+<p>示意图中的$e_1, e_2$就是前后Principal Plane到透镜实际顶点之间的距离.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><code>S</code>是眼镜到角膜之间的距离, 眼镜度数<code>Rs</code>就是验光得到的结果, 角膜的屈光度是<code>K</code></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+FC=K+\frac{Rs}{1-S \times Rs}
+\tag 1
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    </article>
+</div>
+
+        <nav class="postindexpager"><ul class="pager">
+<li class="previous">
+                <a href="." rel="prev">较新的文章</a>
+            </li>
+            <li class="next">
+                <a href="index-15.html" rel="next">以前的文章</a>
+            </li>
+        </ul></nav><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha256-SDRP1VVYu+tgAGKhddBSl5+ezofHKZeI+OzxakbIe/Y=" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>

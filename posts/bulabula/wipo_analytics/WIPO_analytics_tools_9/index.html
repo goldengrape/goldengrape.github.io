@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html prefix="" lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>专利分析工具概述(9)总结 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../WIPO_analytics_tools_8/" title="专利分析工具概述(8)文本挖掘" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="专利分析工具概述(9)总结">
+<meta property="og:url" content="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/">
+<meta property="og:description" content="总结
+在本章中，我们介绍了一些可用于专利分析的主要免费和开源工具。 这些不是专利专用工具，但可以很容易地应用于专利分析。 除了清洗专利申请人和发明人的姓名以及相关字段以外，专利数据非常适合可视化和网络映射。 国家级数据，地址字段和地名在文本中的可用性也意味着专利数据可轻松用于地理制图。
+实际上，重要的是要确定一组最适合您以及最适合您的专利分析任务的工具。
+
+
+同样重要的是要强调，在实践中，您可以混">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-12-07T12:09:00+08:00">
+<meta property="article:tag" content="patent">
+<meta property="article:tag" content="WIPO_analytics_tools">
+</head>
+<body class="theme-base-09">
+    <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+            styles, `#sidebar-checkbox` for behavior. -->
+    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox"><!-- Toggleable sidebar --><div class="sidebar" id="sidebar">
+        <div class="sidebar-item">
+            
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+        </div>
+        
+    <nav id="menu" role="navigation" class="sidebar-nav"><a class="sidebar-nav-item" href="../../../../index.html">首页</a>
+        <a class="sidebar-nav-item" href="../../../../archive.html">文章存档</a>
+        <a class="sidebar-nav-item" href="../../../../categories/">标签</a>
+        <a class="sidebar-nav-item" href="../../../../categories/jiao-cheng/">教程</a>
+        <a class="sidebar-nav-item" href="../../../../github-projects/">开源项目</a>
+        <a class="sidebar-nav-item" href="../../../../rss.xml">RSS feed</a>
+    
+    
+    </nav>
+</div>
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          
+    <h3 id="brand" class="masthead-title">
+      <a href="https://goldengrape.github.io/" title="GoldenGrape's Blog" rel="home">GoldenGrape's Blog</a>
+    </h3>
+
+        </div>
+      </div>
+
+      <div class="container content" id="content">
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="post-title p-name entry-title" itemprop="headline name"><a href="." class="u-url">专利分析工具概述(9)总结</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn">Golden Grape</span></p>
+            <p class="dateline"><a href="." rel="bookmark"><time class="post-date published dt-published" datetime="2019-12-07T12:09:00+08:00" itemprop="datePublished" title="2019-12-07 12:09">2019-12-07 12:09</time></a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<h3>总结</h3>
+<p>在本章中，我们介绍了一些可用于专利分析的主要免费和开源工具。 这些不是专利专用工具，但可以很容易地应用于专利分析。 除了清洗专利申请人和发明人的姓名以及相关字段以外，专利数据非常适合可视化和网络映射。 国家级数据，地址字段和地名在文本中的可用性也意味着专利数据可轻松用于地理制图。</p>
+<p>实际上，重要的是要确定一组最适合您以及最适合您的专利分析任务的工具。</p>
+<!-- TEASER_END -->
+
+<p>同样重要的是要强调，在实践中，您可以混合使用付费工具和免费工具。 例如，最近的<a href="http://www.wipo.int/patentscope/en/programs/patent_landscapes/reports/animal_gr.html">WIPO动物遗传资源专利态势</a> 对1100万份全文专利进行了文本挖掘, 其中涉及使用GNU Parallel和Map Reduce进行大规模并行运算, 使用Ruby中的模式匹配，使用PATSTAT进行统计，使用Thomson Innovation和VantagePoint进行验证，以及使用Tableau和Gephi进行可视化. 简而言之，虽然可以使用免费工具执行几乎所有专利分析任务，但实际上，开源和商业工具的混合生态系统可能会为您执行的任务提供最佳的工作流程。 因此，重要的是要考虑所需的工具，以及它们在何处支持和增强现有的分析工作流程。</p>
+<h3>检查清单</h3>
+<p>如果是初次使用开源软件，则可能需要问一系列基本问题，以评估它们是一种工具还是一组工具将满足您的特定需求。 以下列表并非旨在详尽无遗，而是旨在鼓励考虑您的特定要求。  </p>
+<ol>
+<li>
+<p>这个工具有意义吗？ 也就是说，是否立即清楚工具的目的是什么？ 如果答案是肯定的，这是一个好兆头。 如果答案是否定的，则该工具可能太满足您的特定需求，或者创建者可能在努力明确表达该工具正在尝试做的事情（不好的信号）。</p>
+</li>
+<li>
+<p>您了解该工具使用的语言吗？ 如果不是，可能有问题（见下文）？ 值得用这种语言训练某人吗？ 有免费或负担得起的课程吗？</p>
+</li>
+<li>
+<p>源代码是开放的还是专有的，开放源代码许可的条款和条件是什么？ 使用开放源代码或免费软件时，务必要清楚许可证的确切规定。 例如，您是否需要使用与原始许可完全相同的条款对其他人可用的源代码进行任何修改？ 如果您正在使用源代码，那么这是一个重要的IP问题。 如果您不是在源代码级别上工作，那么这可能不是问题，但是了解开放源代码许可证总是很有意义的。</p>
+</li>
+<li>
+<p>谁拥有数据？ 如果您将数据上传到基于Web的服务，那么上传后数据的所有者是谁，其他人又可以在什么条件下访问它？ 这些问题与数据在商业上相关时特别相关。</p>
+</li>
+<li>
+<p>免费实际上意味着什么？ 免费版本通常是优质服务的引导（因此称为“免费增值”）。 这种过渡是开源业务模型的关键功能。 在某些情况下，在保存或导出的数据方面，免费版本可能受到严格限制。 在其他情况下，不限制使用该工具。 但是，有关使用该工具的知识可能是真正的溢价或成本因素，尤其是如果您依赖该工具时。 为此做好准备。</p>
+</li>
+<li>
+<p>还有哪些公司（或专利代理所）正在使用此工具？ 这可以表示信心，也可以提供具体用例的示例。</p>
+</li>
+<li>
+<p>该工具是否受到文档和教程的良好支持？ 这是开发人员和用户社区是否成熟和“买进”的指标。</p>
+</li>
+<li>
+<p>用户社区有多大，他们是否积极创建论坛和博客等以支持更广泛的用户社区？ </p>
+</li>
+<li>
+<p>这是一个单功能工具还是多功能工具？ 也就是说，该工具将满足几乎所有需求，还是工具箱中的特定组件？ 在某些情况下，做得很好的工具是一项真正的资产，而其他工具会因为尝试做太多事情而做得不好而倒下。 在上面列出的工具中，R和Python（可能是结合使用）最接近可用于从数据获取到可视化的完整专利分析工作流程的工具。 实际上，大多数专利分析工具套件将由通用工具和特定工具组成 </p>
+</li>
+<li>
+<p>我可以破坏这个工具吗？ 找出软件的局限性总是一个好主意，这样以后在尝试执行关键任务时就不会感到惊讶。 特别是，软件可能声称可以执行特定的任务，例如处理成千上万的记录，但是如果执行起来非常糟糕。 通过将工具推到极限，可以确定极限在哪里以及如何从中获得最大的收益。</p>
+</li>
+<li>
+<p>工具符合我的需求吗？ 最近，关于“大数据”以及使用<a href="https://hadoop.apache.org">Hadoop</a> 使用分布式计算来处理大量数据，人们感到非常兴奋。 尽管Hadoop是开源的，所以任何人都可以使用它，但是对于大多数专利分析而言，采用Hadoop通常不成比例，除非处理几乎整个全球专利文献集，大量文献和大量科学数据。 作为说明，如上所述，WIPO动物遗传资源态势报告使用GNU Parallel处理了1100万条专利记录。 使用GNU Parallel的决定, 部分是基于Hadoop对于特定用例而言，实施起来会太过复杂。 简而言之，值得仔细考虑一种工具是否既合适又与当前任务相称。</p>
+</li>
+<li>
+<p>最后，采用任何一种专利分析工具的黄金法则都可以非常简单地表达出来。 这对我有用吗？</p>
+</li>
+</ol>
+<p>如果您对手册中应该包含的免费或开源工具有任何建议，欢迎在本章的电子版本中添加注释。</p>
+<h3>致谢</h3>
+<p>开源工具列表的开发受益于以下文章。</p>
+<ol>
+<li>
+<a href="http://www.creativebloq.com/design-tools/data-visualization-712402">Creative Bloq 11/11/2014 The 37 best tools for data visualization</a> </li>
+<li><a href="http://thenextweb.com/dd/2015/04/21/the-14-best-data-visualization-tools/">Nismith Sharma 2015 The 14 best data visualization tools. TNW News</a></li>
+</ol>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/patent/" rel="tag">patent</a></li>
+            <li><a class="tag p-category" href="../../../../categories/wipo_analytics_tools/" rel="tag">WIPO_analytics_tools</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../WIPO_analytics_tools_8/" rel="prev" title="专利分析工具概述(8)文本挖掘">上一篇文章</a>
+            </li>
+        </ul></nav></aside></article><footer id="footer"><p>Contents © 2019         <a href="https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>          </p>
+            
+        </footer>
+</div>
+    </div>
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+<script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script><script src="../../../../assets/js/all-nocdn.js"></script><!-- fancy dates --><script>
+    moment.locale("zh-cn");
+    fancydates(0, "YYYY-MM-DD HH:mm");
+    </script><!-- end fancy dates -->
+</body>
+</html>
