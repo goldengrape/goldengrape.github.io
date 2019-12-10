@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 20 Nov 2019 07:19:20 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>看好和弦学音乐和sonic-pi</title><link>https://goldengrape.github.io/posts/bulabula/learn_sonic_pi_and_music_with_nicechord/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://sonic-pi.net/"&gt;Sonic-Pi&lt;/a&gt;是一个用Ruby语言写的音乐编程工具, 可以使用代码来即兴“演奏”音乐. 所谓演奏,live coding music,  是可以在程序中修改代码, 随时更新, 使音乐发生变化. 有点像是用命令行的DJ. 比如&lt;a href="http://player.bilibili.com/player.html?aid=74702936&amp;amp;cid=127783914&amp;amp;page=1"&gt;这个演出&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 posts)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_posts.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 10 Dec 2019 03:21:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献分析一则: 查文献找医院</title><link>https://goldengrape.github.io/posts/bulabula/paper_analysis/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个有趣的文献分析案例, 有人在朋友圈问质子射线治疗肺癌在中国哪家医院比较好. &lt;/p&gt;
+&lt;p&gt;最近正在研究&lt;a href="http://lens.org"&gt;Lens&lt;/a&gt;这个搜索引擎, 是一个文献和专利的分析引擎, 所以拿来测试一下. &lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h3&gt;假设&lt;/h3&gt;
+&lt;p&gt;某个疾病治疗得比较好, 某项治疗方法应用得比较好, 处于国内领先地位的医院, 发文章也会多. &lt;/p&gt;
+&lt;h3&gt;方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;检索关键词: (proton ( lung cancer ))&lt;/li&gt;
+&lt;li&gt;检索范围: &lt;a href="https://www.lens.org/lens/new-search?type=SCHOLAR"&gt;学术文献检索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;限制条件: Institution Country/Region 限定在China.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;结果&lt;/h3&gt;
+&lt;p&gt;于是得到了330篇&lt;a href="https://link.lens.org/ips07WpBLog"&gt;检索结果&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-12-10 10.42.47" src="https://i.loli.net/2019/12/10/iIr9n6aGdyCROBz.png"&gt;&lt;/p&gt;
+&lt;p&gt;点击Analysis, 可以进入到Lens的分析工具中. &lt;/p&gt;
+&lt;p&gt;按照发文章的机构分类, 最多的是中科院, 其次是复旦, 第三位是得克萨斯大学的一个癌症研究中心, 看起来可能是常见的合作单位, 然后是中国药科大学跟香港大学. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/ykEneFPJVQgMY1j.png"&gt;&lt;/p&gt;
+&lt;p&gt;但似乎没听说过中科院有临床医院, 再往下看看不同的研究领域和机构之间的细分关系. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/qrj3XonNp6ksVFI.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;药物: 复旦, 得克萨斯大学&lt;/li&gt;
+&lt;li&gt;生物: 中科院, 香港大学&lt;/li&gt;
+&lt;li&gt;癌症: 复旦, 上海交大&lt;/li&gt;
+&lt;li&gt;化学: 中科院, 中国药科大学&lt;/li&gt;
+&lt;li&gt;生物化学: 中科院, 香港大学&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以比较明显了, 复旦、上海交大可能在临床治疗上做得比较好, 而中科院、中国药科大学、香港大学可能更多偏向的是基础研究. &lt;/p&gt;
+&lt;h3&gt;讨论&lt;/h3&gt;
+&lt;p&gt;文献检索要看查全率和查准率. 这里都没有统计. &lt;/p&gt;
+&lt;p&gt;数据没有仔细进行清洗, 有可能需要排除综述、meta分析之类的文章类型. 但这类文章数量不会太多, 可能对结果影响不大. &lt;/p&gt;
+&lt;p&gt;对于临床治疗的医生, 特别是手术治疗的医生, 开始的假设有可能不成立. 有些医生手巧, 手术做得干净漂亮, 但口拙, 不会写文章. 这是有可能的. 不过对于国内比较大的医学院/教学医院, 医教研是互相关联的评价指标. 所以以科室或者医院为单位进行考虑, 文章数量与临床水平正相关的假设还是很大概率能成立的. 而且看病看的不仅仅是一个医生, 还是整个医疗团队如何, 医生手再巧护理一团糟的话术后感染风险也很高了. &lt;/p&gt;
+&lt;p&gt;对于作者的统计可能不可靠, 除了上面说的原因, 科学论文里一作是干活的, 通讯作者是老板, 临床治疗的文章, 一作可能是整理收集数据撰写的, 出门诊做手术的可能是通讯作者, 所以要区别对待. 目前看Lens对作者的统计没有明确区分. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/S6RuaOoC7jYMtZf.png"&gt;&lt;/p&gt;
+&lt;p&gt;关于治疗方法是否真的好, 还是要看临床实验和临床经验, 从数据上可以看出一些端倪, 但具体是否适合于某个病人可能要单独分析.&lt;/p&gt;
+&lt;p&gt;例如限定中国时, 看文章发表数量与时间的关系
+&lt;img alt="" src="https://i.loli.net/2019/12/10/NPfIJqjh5CToVvp.png"&gt;
+不限定中国时, 看全世界的文章发表数量与时间的关系:
+&lt;img alt="" src="https://i.loli.net/2019/12/10/zTJDd654oL7aAX3.png"&gt;&lt;/p&gt;
+&lt;p&gt;两者的趋势很一致, 都是在2016年达到了高峰, 然后迅速回落. 如果是专利分析, 因为公开时间的关系, 会有两年左右的滞后时间, 但科学文献还算是比较及时的. 2016年后的快速回落值得注意. &lt;/p&gt;
+&lt;p&gt;这个数据的解读就需要分析具体的原因了, 有可能是出现了更好的替代治疗手段, 有可能是回顾研究发现效果不如预期的好, 有可能是其他什么原因. 需要看看近期的综述或者看看&lt;a href="https://www.uptodate.com"&gt;uptodate&lt;/a&gt;上的循证医学证据. &lt;/p&gt;
+&lt;h3&gt;结论&lt;/h3&gt;
+&lt;p&gt;这个检索只是粗略给出了大致方向, 具体的信息可能还是需要有业内人士的建议. 不过动动鼠标就有了大致方向已经很不错了, 这时候就可以考虑问问在复旦学医的同学, 哪个医院更好, 哪个医生更好, 不用全国到处找. &lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/paper_analysis/</guid><pubDate>Tue, 10 Dec 2019 02:00:00 GMT</pubDate></item><item><title>看好和弦学音乐和sonic-pi</title><link>https://goldengrape.github.io/posts/bulabula/learn_sonic_pi_and_music_with_nicechord/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://sonic-pi.net/"&gt;Sonic-Pi&lt;/a&gt;是一个用Ruby语言写的音乐编程工具, 可以使用代码来即兴“演奏”音乐. 所谓演奏,live coding music,  是可以在程序中修改代码, 随时更新, 使音乐发生变化. 有点像是用命令行的DJ. 比如&lt;a href="http://player.bilibili.com/player.html?aid=74702936&amp;amp;cid=127783914&amp;amp;page=1"&gt;这个演出&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;不过学习Sonic-Pi就有两个内容要学习了, 一个是Ruby语言, 一个是音乐语言. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -367,12 +409,4 @@ https://www.coursera.org/taiwan&lt;/li&gt;
 &lt;p&gt;可以引出设计公理的第一条：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;满足功能需求（Functional Requirements, FRs)的参数设计（Design Parameter, DPs) 应当要解耦合（decouple）&lt;/p&gt;
-&lt;/blockquote&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item><item><title>有意义的批评是针对可变量的</title><link>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;人有很多属性，&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;有些是可变的，是变量，比如努力的程度、认真的程度，对待事情的态度……&lt;/li&gt;
-&lt;li&gt;有些是不可变的，或者在可观测的短时间内无法改变，是常量，比如性别、种族、成年以后的身高、父母、出生地、信仰、国籍……&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;如果批评或者表扬的目的是为了让对象有所改变，那么至少是应该针对那些可以改变的&lt;strong&gt;变量&lt;/strong&gt;属性，而不要针对那些对方无法改变的&lt;strong&gt;常量&lt;/strong&gt;属性。&lt;/p&gt;
-&lt;p&gt;也就是说，在批评或者表扬的时候，要将原因归结于人的可变属性。&lt;/p&gt;
-&lt;p&gt;我觉得这个道理还是挺浅显的。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</guid><pubDate>Tue, 11 Jun 2019 17:00:00 GMT</pubDate></item></channel></rss>
+&lt;/blockquote&gt;&lt;/div&gt;</description><category>公理设计</category><guid>https://goldengrape.github.io/posts/bulabula/axiomatic_design_note_1/</guid><pubDate>Wed, 17 Jul 2019 10:00:00 GMT</pubDate></item></channel></rss>
