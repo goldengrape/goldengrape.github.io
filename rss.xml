@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 10 Dec 2019 03:21:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献分析一则: 查文献找医院</title><link>https://goldengrape.github.io/posts/bulabula/paper_analysis/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个有趣的文献分析案例, 有人在朋友圈问质子射线治疗肺癌在中国哪家医院比较好. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 10 Dec 2019 13:34:10 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献分析一则: 查文献找医院</title><link>https://goldengrape.github.io/posts/bulabula/paper_analysis/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个有趣的文献分析案例, 有人在朋友圈问质子射线治疗肺癌在中国哪家医院比较好. &lt;/p&gt;
 &lt;p&gt;最近正在研究&lt;a href="http://lens.org"&gt;Lens&lt;/a&gt;这个搜索引擎, 是一个文献和专利的分析引擎, 所以拿来测试一下. &lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
 
@@ -15,7 +15,7 @@
 &lt;p&gt;于是得到了330篇&lt;a href="https://link.lens.org/ips07WpBLog"&gt;检索结果&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="屏幕快照 2019-12-10 10.42.47" src="https://i.loli.net/2019/12/10/iIr9n6aGdyCROBz.png"&gt;&lt;/p&gt;
 &lt;p&gt;点击Analysis, 可以进入到Lens的分析工具中. &lt;/p&gt;
-&lt;p&gt;按照发文章的机构分类, 最多的是中科院, 其次是复旦, 第三位是得克萨斯大学的一个癌症研究中心, 看起来可能是常见的合作单位, 然后是中国药科大学跟香港大学. &lt;/p&gt;
+&lt;p&gt;按照发文章的机构分类, 最多的是中科院, 其次是复旦, 第三位是得克萨斯大学的一个癌症研究中心, 看起来可能是常见的合作单位, 然后是中国医科大学跟香港大学. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/ykEneFPJVQgMY1j.png"&gt;&lt;/p&gt;
 &lt;p&gt;但似乎没听说过中科院有临床医院, 再往下看看不同的研究领域和机构之间的细分关系. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/qrj3XonNp6ksVFI.png"&gt;&lt;/p&gt;
@@ -23,10 +23,10 @@
 &lt;li&gt;药物: 复旦, 得克萨斯大学&lt;/li&gt;
 &lt;li&gt;生物: 中科院, 香港大学&lt;/li&gt;
 &lt;li&gt;癌症: 复旦, 上海交大&lt;/li&gt;
-&lt;li&gt;化学: 中科院, 中国药科大学&lt;/li&gt;
+&lt;li&gt;化学: 中科院, 中国医科大学&lt;/li&gt;
 &lt;li&gt;生物化学: 中科院, 香港大学&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;所以比较明显了, 复旦、上海交大可能在临床治疗上做得比较好, 而中科院、中国药科大学、香港大学可能更多偏向的是基础研究. &lt;/p&gt;
+&lt;p&gt;所以比较明显了, 复旦、上海交大可能在临床治疗上做得比较好, 而中科院、中国医科大学、香港大学可能更多偏向的是基础研究. &lt;/p&gt;
 &lt;h3&gt;讨论&lt;/h3&gt;
 &lt;p&gt;文献检索要看查全率和查准率. 这里都没有统计. &lt;/p&gt;
 &lt;p&gt;数据没有仔细进行清洗, 有可能需要排除综述、meta分析之类的文章类型. 但这类文章数量不会太多, 可能对结果影响不大. &lt;/p&gt;
