@@ -1,5 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 07 Dec 2019 08:19:02 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>专利分析工具概述(9)总结</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;总结&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 10 Dec 2019 03:21:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>文献分析一则: 查文献找医院</title><link>https://goldengrape.github.io/posts/bulabula/paper_analysis/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一个有趣的文献分析案例, 有人在朋友圈问质子射线治疗肺癌在中国哪家医院比较好. &lt;/p&gt;
+&lt;p&gt;最近正在研究&lt;a href="http://lens.org"&gt;Lens&lt;/a&gt;这个搜索引擎, 是一个文献和专利的分析引擎, 所以拿来测试一下. &lt;/p&gt;
+&lt;!-- TEASER_END --&gt;
+
+&lt;h3&gt;假设&lt;/h3&gt;
+&lt;p&gt;某个疾病治疗得比较好, 某项治疗方法应用得比较好, 处于国内领先地位的医院, 发文章也会多. &lt;/p&gt;
+&lt;h3&gt;方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;检索关键词: (proton ( lung cancer ))&lt;/li&gt;
+&lt;li&gt;检索范围: &lt;a href="https://www.lens.org/lens/new-search?type=SCHOLAR"&gt;学术文献检索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;限制条件: Institution Country/Region 限定在China.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;结果&lt;/h3&gt;
+&lt;p&gt;于是得到了330篇&lt;a href="https://link.lens.org/ips07WpBLog"&gt;检索结果&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2019-12-10 10.42.47" src="https://i.loli.net/2019/12/10/iIr9n6aGdyCROBz.png"&gt;&lt;/p&gt;
+&lt;p&gt;点击Analysis, 可以进入到Lens的分析工具中. &lt;/p&gt;
+&lt;p&gt;按照发文章的机构分类, 最多的是中科院, 其次是复旦, 第三位是得克萨斯大学的一个癌症研究中心, 看起来可能是常见的合作单位, 然后是中国药科大学跟香港大学. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/ykEneFPJVQgMY1j.png"&gt;&lt;/p&gt;
+&lt;p&gt;但似乎没听说过中科院有临床医院, 再往下看看不同的研究领域和机构之间的细分关系. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/qrj3XonNp6ksVFI.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;药物: 复旦, 得克萨斯大学&lt;/li&gt;
+&lt;li&gt;生物: 中科院, 香港大学&lt;/li&gt;
+&lt;li&gt;癌症: 复旦, 上海交大&lt;/li&gt;
+&lt;li&gt;化学: 中科院, 中国药科大学&lt;/li&gt;
+&lt;li&gt;生物化学: 中科院, 香港大学&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以比较明显了, 复旦、上海交大可能在临床治疗上做得比较好, 而中科院、中国药科大学、香港大学可能更多偏向的是基础研究. &lt;/p&gt;
+&lt;h3&gt;讨论&lt;/h3&gt;
+&lt;p&gt;文献检索要看查全率和查准率. 这里都没有统计. &lt;/p&gt;
+&lt;p&gt;数据没有仔细进行清洗, 有可能需要排除综述、meta分析之类的文章类型. 但这类文章数量不会太多, 可能对结果影响不大. &lt;/p&gt;
+&lt;p&gt;对于临床治疗的医生, 特别是手术治疗的医生, 开始的假设有可能不成立. 有些医生手巧, 手术做得干净漂亮, 但口拙, 不会写文章. 这是有可能的. 不过对于国内比较大的医学院/教学医院, 医教研是互相关联的评价指标. 所以以科室或者医院为单位进行考虑, 文章数量与临床水平正相关的假设还是很大概率能成立的. 而且看病看的不仅仅是一个医生, 还是整个医疗团队如何, 医生手再巧护理一团糟的话术后感染风险也很高了. &lt;/p&gt;
+&lt;p&gt;对于作者的统计可能不可靠, 除了上面说的原因, 科学论文里一作是干活的, 通讯作者是老板, 临床治疗的文章, 一作可能是整理收集数据撰写的, 出门诊做手术的可能是通讯作者, 所以要区别对待. 目前看Lens对作者的统计没有明确区分. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://i.loli.net/2019/12/10/S6RuaOoC7jYMtZf.png"&gt;&lt;/p&gt;
+&lt;p&gt;关于治疗方法是否真的好, 还是要看临床实验和临床经验, 从数据上可以看出一些端倪, 但具体是否适合于某个病人可能要单独分析.&lt;/p&gt;
+&lt;p&gt;例如限定中国时, 看文章发表数量与时间的关系
+&lt;img alt="" src="https://i.loli.net/2019/12/10/NPfIJqjh5CToVvp.png"&gt;
+不限定中国时, 看全世界的文章发表数量与时间的关系:
+&lt;img alt="" src="https://i.loli.net/2019/12/10/zTJDd654oL7aAX3.png"&gt;&lt;/p&gt;
+&lt;p&gt;两者的趋势很一致, 都是在2016年达到了高峰, 然后迅速回落. 如果是专利分析, 因为公开时间的关系, 会有两年左右的滞后时间, 但科学文献还算是比较及时的. 2016年后的快速回落值得注意. &lt;/p&gt;
+&lt;p&gt;这个数据的解读就需要分析具体的原因了, 有可能是出现了更好的替代治疗手段, 有可能是回顾研究发现效果不如预期的好, 有可能是其他什么原因. 需要看看近期的综述或者看看&lt;a href="https://www.uptodate.com"&gt;uptodate&lt;/a&gt;上的循证医学证据. &lt;/p&gt;
+&lt;h3&gt;结论&lt;/h3&gt;
+&lt;p&gt;这个检索只是粗略给出了大致方向, 具体的信息可能还是需要有业内人士的建议. 不过动动鼠标就有了大致方向已经很不错了, 这时候就可以考虑问问在复旦学医的同学, 哪个医院更好, 哪个医生更好, 不用全国到处找. &lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/paper_analysis/</guid><pubDate>Tue, 10 Dec 2019 02:00:00 GMT</pubDate></item><item><title>专利分析工具概述(9)总结</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;总结&lt;/h3&gt;
 &lt;p&gt;在本章中，我们介绍了一些可用于专利分析的主要免费和开源工具。 这些不是专利专用工具，但可以很容易地应用于专利分析。 除了清洗专利申请人和发明人的姓名以及相关字段以外，专利数据非常适合可视化和网络映射。 国家级数据，地址字段和地名在文本中的可用性也意味着专利数据可轻松用于地理制图。&lt;/p&gt;
 &lt;p&gt;实际上，重要的是要确定一组最适合您以及最适合您的专利分析任务的工具。&lt;/p&gt;
 &lt;!-- TEASER_END --&gt;
@@ -270,26 +312,4 @@
 &lt;p&gt;&lt;img alt="" src="https://wipo-analytics.github.io/images/overview/google_sheets_addon.png"&gt;&lt;/p&gt;
 &lt;p&gt;(在中国大陆, 使用Google Sheets需要您具有“正常访问国际互联网”的能力, 无奈的译者注)&lt;/p&gt;
 &lt;h4&gt;&lt;a href="https://support.google.com/fusiontables/answer/2571232?hl=en"&gt;Google Fusion Tables&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;(Google Fusion已经于2019年12月3日停止服务, 无奈的译者注, 于是这一段懒得翻译了)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_1/</guid><pubDate>Sat, 07 Dec 2019 04:01:00 GMT</pubDate></item><item><title>专利分析工具概述(0)</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近偶遇一个专利分析班, 在图书馆闲逛时偶遇的. 图书馆是一个偶遇好书、好课的地方. &lt;/p&gt;
-&lt;p&gt;学完课程之后, 意犹未尽. 搜索时发现了世界知识产权组织(WIPO)推出过一个&lt;a href="https://wipo-analytics.github.io/"&gt;WIPO开源专利分析手册&lt;/a&gt; 内容非常好, 而且也是开源发布的. 所以就想顺手给翻译了. &lt;/p&gt;
-&lt;p&gt;这里先捡重要的部分翻译先. 其中的&lt;a href="https://wipo-analytics.github.io/an-overview-of-tools.html"&gt;第二章 工具概述&lt;/a&gt; 里介绍了大量的专利分析工具, 这些工具不仅在专利分析, 在其他数据分析领域看起来也会很有用. &lt;/p&gt;
-&lt;p&gt;于是先翻译之.&lt;/p&gt;
-&lt;p&gt;该手册写于2016年, 其中有些外链的链接可能已经改变或者失效. 我会在翻译时尽量查找, 但也可能有所疏漏. &lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;hr&gt;
-&lt;h2&gt;工具概述&lt;/h2&gt;
-&lt;p&gt;本章概述了可用于专利分析的开源和免费软件工具。本章的目的是作为工具箱中某些主要工具的快速参考指南。 我们将在&lt;a href="https://wipo-analytics.github.io/"&gt;WIPO开源专利分析手册&lt;/a&gt;的其他地方更深入地介绍其中一些工具，让您自己探索其余工具。&lt;/p&gt;
-&lt;p&gt;在开始之前，需要注意的是，我们仅涵盖了现有工具的一小部分。我们只是试图找出一些最易于访问和有用的工具。数据挖掘和可视化正在迅速发展，有太多选择。好消息是，有一些非常高质量的免费开源工具。难点在于根据你的背景和可用的时间来确定那些最适合你的特殊需要的编程技能。这取决于您。但是，别灰心，认识到不同的工具需要花费一些时间来掌握是重要的。在某些情况下，例如R和Python，有很多免费资源，可帮助您迈出编程的第一步。在决定要使用的工具时，请仔细考虑已有的支持程度。尝试的编程工具最好是具有活跃的大型用户社区。这样，当您陷入困境的时候，总会有人能够帮助您解决类似的问题。 像&lt;a href="http://stackoverflow.com"&gt;Stack Overflow&lt;/a&gt;这样的网站非常适合解决问题。&lt;/p&gt;
-&lt;p&gt;本章分为8个部分：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_1/"&gt;通用工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_2/"&gt;数据清洗工具&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/"&gt;数据挖掘&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_4/"&gt;数据可视化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_5/"&gt;网络可视化&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_6/"&gt;信息图表&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/"&gt;地理制图&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/"&gt;文本挖掘&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;有些工具是多功能的，因此可能出现在一个部分中，也可能出现在另一部分中。我们会解释清楚, 而不反复赘述.&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_0/</guid><pubDate>Sat, 07 Dec 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;(Google Fusion已经于2019年12月3日停止服务, 无奈的译者注, 于是这一段懒得翻译了)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_1/</guid><pubDate>Sat, 07 Dec 2019 04:01:00 GMT</pubDate></item></channel></rss>
