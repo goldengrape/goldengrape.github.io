@@ -1,128 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 01 Oct 2019 11:21:49 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 ophthalmology)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_ophthalmology.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>角膜的折射率</title><link>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;如果在眼科书或者眼科设备的说明书上查找, 会发现有两种角膜折射率&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;n = 1.3375&lt;/li&gt;
 &lt;li&gt;n = 1.376&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;真实的角膜折射率是1.376, 而1.3375是一个测量角膜K值时使用的&lt;strong&gt;人为设定&lt;/strong&gt;的测量用折射率.&lt;/p&gt;
 &lt;p&gt;下面听我解释: 
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h3&gt;K值有几个&lt;/h3&gt;
-&lt;p&gt;所有计算人工晶体度数的公式, 都要用上角膜曲率K, 也就是角膜的屈光力. 比如最基本的SRK公式:&lt;/p&gt;
-&lt;p&gt;$$
-Power= A - 0.9 K - 2.5 AL
-$$&lt;/p&gt;
-&lt;p&gt;我们来看一下角膜的解剖，角膜都有两个面前表面和后表面，前后表面肯定不是完全平行的，那样的话角膜就没有屈光能力了，所以角膜前后表面是各自有一个屈光力的，那么应该有两个k值。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="p1" src="https://i.loli.net/2019/09/04/iy5URPQrwWBv8Cn.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;但我们看最简单的SRK公式，这里面只有一个K值. 是不是有矛盾? &lt;/p&gt;
-&lt;p&gt;这是因为这是一个合成的K值，是角膜前后表面的屈光力之和。&lt;/p&gt;
-&lt;h3&gt;测量设备&lt;/h3&gt;
-&lt;p&gt;对于大多数测量角膜曲率的仪器，比如角膜曲率计(我估计手动角膜曲率计的使用已经快失传了)，这里面包含了自动验光仪 和 IOL Master，都是测量角膜前表面的曲率半径，&lt;/p&gt;
-&lt;p&gt;如果用Plasicdo环原理测量的角膜地形图，就是那种可以看到一个一个圆环的那种角膜地形图，能够测量的也只是角膜的前表面。&lt;/p&gt;
-&lt;p&gt;因为他们的原理都是看一个图像在角膜前表面的反射像, 虽然角膜后表面也可能有反射像, 但是被前表面的反射像给遮挡了, 于是后表面的数据测不到.
-&lt;img alt="p2" src="https://i.loli.net/2019/09/04/xdnGSyH5Bs1WbmT.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;测能够测量角膜后表面的设备并不多，&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;基于 scheimpflug原理的PentaCam、&lt;/li&gt;
-&lt;li&gt;使用Placido环和Scheimpflug原理的SIRIUS天狼星，&lt;/li&gt;
-&lt;li&gt;基于扫描的Obscan，&lt;/li&gt;
-&lt;li&gt;用点光源的Cassini，&lt;/li&gt;
-&lt;li&gt;还有前节OCT，&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;到2019年大概也就这几种。一个设备如果能够测量角膜后表面的曲率，一定会大张旗鼓地宣传的, 所以他们的海报上一定会有一个角膜的断面图.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="PentaCam" src="https://www.pentacam.com/fileadmin/_processed_/3/c/csm_General_Overview_16_9_EN_1.21r59_b2274acd47.png"&gt;&lt;/p&gt;
-&lt;p&gt;现在问题来了，角膜实际有两个面，K值应当是综合这两个面的，而现在只能测量一个面，那怎么办呢？&lt;/p&gt;
-&lt;h3&gt;整合前后表面的K值&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.28.17" src="https://i.loli.net/2019/09/04/ikwNxTdojR51yva.png"&gt;&lt;/p&gt;
-&lt;p&gt;这是从曲率半径算角膜屈光力的公式，如果是前后两个面，那么&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.28.27" src="https://i.loli.net/2019/09/04/4S3cXB1C6FdPtvj.png"&gt;&lt;/p&gt;
-&lt;p&gt;为了只从前表面的数据得出整体的数据。人们假设前后表面的曲率半径是成比例变化的，于是可以把后表面的曲率半径写成前表面曲率半径乘个系数.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.34.18" src="https://i.loli.net/2019/09/04/sAJnFpXClGu4SBt.png"&gt;&lt;/p&gt;
-&lt;p&gt;把这个式子代入到前面公式中:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-09-04 11.28.38" src="https://i.loli.net/2019/09/04/kKx4sNUdImybvSD.png"&gt;&lt;/p&gt;
-&lt;p&gt;于是就可以把1/r提取出来，得到:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="p4" src="https://i.loli.net/2019/09/04/aQyz3riHhRweUbW.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;这里面除了1/r都是常数, 加减乘除之后当然也是得到一个常数. 那么就可以直接用数值相等的常数等效替换之. 为了跟其他的光学公式一致. 于是写成:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="p5" src="https://i.loli.net/2019/09/04/5hZfYp4V3mugeBj.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;这就是1.3375的来历. 是一个为了仅仅测量前表面就可以得到前后两个表面屈光力之和的权宜之计. &lt;/p&gt;
-&lt;p&gt;至于为何等于1.3375, 因为前表面曲率半径=7.5mm时, 算出来的K值等于45.&lt;/p&gt;
-&lt;h3&gt;1.3375的失效&lt;/h3&gt;
-&lt;p&gt;当角膜前表面进行了屈光手术以后, 之前角膜后表面曲率半径与前表面曲率半径成比例的这个假设就不成立了. 虽然你仍然可以用角膜后表面的曲率半径去除前表面, 但每个做屈光手术的人切削的程度不同, 除出来的系数不再是一个常数了. &lt;/p&gt;
-&lt;p&gt;由于基本的假设失效, 那么连带着后面的推导也就都失效了, 1.3375这个数值不再能够使用.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="p6" src="https://i.loli.net/2019/09/04/aTWvZVuxMtlDH5z.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;影响&lt;/h3&gt;
-&lt;p&gt;所以, 当一个做完了角膜屈光手术的病人来到你的面前. 即使你亲自动手给他测量了角膜曲率, 比如设备告诉你说K=40, 你也不能相信这个数据, 因为这个数据是从1.3375算出来的. 真实的K值, 很可能只有39.6左右. &lt;/p&gt;
-&lt;h3&gt;IOL Master&lt;/h3&gt;
-&lt;p&gt;研读&lt;a href="https://www.doctor-hill.com/physicians/docs/iolmaster_5-4.pdf"&gt;IOL Master的说明书&lt;/a&gt;, IOL master的测量结果可以显示为K值或者角膜曲率半径Radius.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-09-11 12.46.13" src="https://i.loli.net/2019/09/11/l3VUOfS8mXhsg92.png"&gt;&lt;/p&gt;
-&lt;h3&gt;参考文献&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt; 这是一篇2018年关于角膜屈光手术后人工晶体度数计算的综述, 作者是Giacomo Savini和 Kenneth J. Hoffer, 前面的名字可能不熟悉, 后面的Hoffer, 就是Hoffer Q公式的作者K.J. Hoffer&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</guid><pubDate>Wed, 04 Sep 2019 04:00:00 GMT</pubDate></item><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 4 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/%20refractive_index_of_cornea/</guid><pubDate>Wed, 04 Sep 2019 04:00:00 GMT</pubDate></item><item><title>角膜屈光手术后IOL计算</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;角膜屈光手术, 包括但不限于Lasik, Lasek, PRK, 半飞秒, 全飞秒……, 做完之后多年, 如果出现了白内障, 要换人工晶体. 这时直接代入常规的人工晶体公式是不行的. 要使用新的计算方法.&lt;/p&gt;
 &lt;p&gt;好在发明新的人工晶体计算公式是名利双收的好事, 于是过去15年, 至少出现有30种以上的公式. 然后还有更多的临床研究, 对比各种公式的优劣. (医学领域的“什么值得买”)&lt;/p&gt;
 &lt;p&gt;最近读了一篇这样的对比综述, &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6053834/"&gt;Intraocular lens power calculation in eyes with previous corneal refractive surgery&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;python实现&lt;/h3&gt;
 &lt;p&gt;于是把其中的各种公式重新用python写了一遍. 代码放在github上: 
 &lt;a href="https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery"&gt;https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery&lt;/a&gt;&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;而且, 这次我是练习使用ipywidget做成了交互式的jupyter笔记本. 可以使用滑动条或者填空格来填入参数, 可以实时显示出结果.&lt;/p&gt;
-&lt;p&gt;例如:
-&lt;!-- TEASER_END --&gt;&lt;img alt="屏幕快照 2019-08-19 11.54.42" src="https://i.loli.net/2019/08/19/hJucql4jdELfyxv.png"&gt;&lt;/p&gt;
-&lt;p&gt;但是要实现交互, 在github的ipynb静态渲染不行, 必须要一个能够真正计算的空间才行. 虽然理论上mybinder.org提供了从github直接导入的功能, 但实际上用起来特别慢, 还没搞定. &lt;/p&gt;
-&lt;p&gt;因此, 要想测试交互式的功能, 国内只好使用azure notebooks了. 我也放了一份: &lt;a href="https://notebooks.azure.com/goldengrape/projects/iol-calculation-lasik/html/IOL_calc.ipynb"&gt;https://notebooks.azure.com/goldengrape/projects/iol-calculation-lasik/html/IOL_calc.ipynb&lt;/a&gt; 点击硕大的&lt;strong&gt;绿色Clone按钮&lt;/strong&gt;, 给自己Clone一份, 就可以运行交互了. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-08-19 12.48.07" src="https://i.loli.net/2019/08/19/8p3TeWOG5Alfdcs.png"&gt;&lt;/p&gt;
-&lt;h3&gt;读后感&lt;/h3&gt;
-&lt;p&gt;阅读带有公式的论文, 还是应该自己亲手复现一下.即使是这个领域的经典文章, 里面也有很多错误. 比如: &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://sci-hub.tw/10.1016/j.jcrs.2006.08.037"&gt;BESSt公式&lt;/a&gt;的文献里, 这个r没有定义, 猜测应该是rF.
-&lt;img alt="BESSt公式" src="https://i.loli.net/2019/08/19/KS6T4azZOhjdLv9.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/14670413"&gt;Double K SRK/T公式&lt;/a&gt;的文献里, rpre2和Cw2的2都应该是上标, 是平方.
-&lt;img alt="double K" src="https://i.loli.net/2019/08/19/UJnhDqfbxR7eGgF.png"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;到不完全是吹毛求疵, 而是你直接对着文献敲代码运行结果肯定是错的. 也许有一天强AI能够自行阅读医学文献的时候, 一定会惊异人类的容错能力. 这也算是人类的自我保护吧.&lt;/p&gt;
-&lt;p&gt;另外, 有些公式的来源真是...我复现Hoffer Q公式的时候, 发现还有tan K这样的过程, 对角膜曲率K求正切? 什么道理, 这量纲不对啊. 是不是印错了? 于是&lt;a href="https://sci-hub.tw/10.1016/S0886-3350(13)80338-0"&gt;仔细读原文&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Haigis" src="https://i.loli.net/2019/08/19/Xch1WpuDea6kJ42.png"&gt;&lt;/p&gt;
-&lt;p&gt;原来是Hoffer老先生觉得之前的回归曲线不直, 看起来像tangent曲线, 于是用卡西欧fx-8500G图形计算器开始试, 试啊试, 直到凑出来的公式符合曲线的形态(by trial and error, until a formular produced the desired curve).&lt;/p&gt;
-&lt;p&gt;上古文献里的八卦真多.&lt;/p&gt;
-&lt;h2&gt;excel实现&lt;/h2&gt;
-&lt;!-- 考虑到真正的眼科医生, 是不大可能认真看python程序的, 也不大可能真的去点一下azure notebooks上的clone按钮, 更不可能有一天自己写个处理数据的程序, 用import把我写好的公式导入.  --&gt;
-
-&lt;!-- 
-(是的, 我了解你们, 看看“什么值得买”类的评测才是临床看病的正经事, 至于原理不重要, 实现反正机器都有内置的. 我对你们很绝望, 但我仍然爱你们) --&gt;
-
-&lt;p&gt;我还随手写了个&lt;a href="https://github.com/goldengrape/IOL_calculate_with_post_corneal_refractive_surgery/raw/master/IOL_calc.xlsx"&gt;excel文件&lt;/a&gt;.
-里面包含了Double K SRK/T、SRK/T、 Hoffer Q、Haigis、Haigis L、Shammas、BESSt公式, 以及一个简单的术后K值转换公式. (原来VB的函数和python差不多, 几乎可以复制粘贴)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="excel" src="https://i.loli.net/2019/08/19/H8hRcxvlanGTspz.png"&gt;&lt;/p&gt;
-&lt;p&gt;只要像引用普通的excel函数那样使用就可以了. 如果遇到要处理几百个病人数据, 对比上面这些公式的结果, 又懒得一个一个往IOL Master或者PentaCam机器里输入, 那么就可以用这个excel文件了. &lt;/p&gt;
-&lt;p&gt;但这些公式只是绑定到这个文件里的, 暂时我还没搞定如何弄成一个可以导入到公式库里面的东西. &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;以上开源小代码, 作为医师节小礼物送给各位同道. 祝医师节快乐.&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</guid><pubDate>Mon, 19 Aug 2019 04:00:00 GMT</pubDate></item><item><title>急诊儿童外伤缝合经验一则</title><link>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;整理网盘，发现很久很久以前我当医生时写的一则经验总结，很有趣。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</guid><pubDate>Mon, 19 Aug 2019 04:00:00 GMT</pubDate></item><item><title>急诊儿童外伤缝合经验一则</title><link>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;整理网盘，发现很久很久以前我当医生时写的一则经验总结，很有趣。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;总结一下急诊儿童缝合：
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;通常是男孩，接诊以后，如果父亲陪同，则将母亲支走。对男孩的称呼一律使用成年人称呼，如小伙子，男子汉等。检查的时候明确告诉孩子不会疼痛，若触及伤口，则事先声明可能略疼痛，检查完成后，向孩子及其父亲交待病情，需要缝合；缝合的时候要打麻药；打麻药的时候会疼；缝合的时候不疼。&lt;/p&gt;
-&lt;p&gt;反复向孩子明确：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;打麻药的时候会疼，与平时打针相似。&lt;/li&gt;
-&lt;li&gt;允许哭但绝不允许动。&lt;/li&gt;
-&lt;li&gt;缝合的时候不会疼痛。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;待孩子同意“允许哭，但不允许动”以后，带入手术室，孩子父亲控制，陪同。&lt;/p&gt;
-&lt;p&gt;消毒时事先声明，可能有不适感。打麻药前再次向孩子告知不许动。但很疼的话，可以哭。打完麻药后向孩子询问是否疼痛，并表扬，鼓励。以齿镊测试麻醉效果，再行缝合。&lt;/p&gt;
-&lt;p&gt;注意：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;明确告知何时会有疼痛，何时没有疼痛。&lt;/li&gt;
-&lt;li&gt;不要否认孩子的主观感受。&lt;/li&gt;
-&lt;li&gt;不要恐吓或欺骗孩子，任何利诱的承诺应有家长作出。&lt;/li&gt;
-&lt;li&gt;尽可能使孩子认为自己是成年人。&lt;/li&gt;
-&lt;li&gt;避免使用“快完了”“很快”等语言。直接告诉孩子还需要缝合几针，如果感觉疼痛，可以再补麻药。&lt;/li&gt;
-&lt;li&gt;语调尽可能平静、沉稳、客观，甚至可以毫无感情色彩。&lt;/li&gt;
-&lt;li&gt;缝合以后，称赞、鼓励。&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</guid><pubDate>Sat, 13 Jul 2019 04:00:00 GMT</pubDate></item><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</guid><pubDate>Sat, 13 Jul 2019 04:00:00 GMT</pubDate></item><item><title>phaco训练手册视频版开始连载</title><link>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;每年这一天，我都会发点有意义的东西作为纪念。&lt;/p&gt;
 &lt;p&gt;今年的项目是“Phaco训练手册视频版”。但我低估了工作量，光是做关于主切口的ppt，我就做了好几天，还没写完。所以到今天只能说开始连载，而无法做到完全发布。大概每周我会再继续发布一两个视频。&lt;/p&gt;
 &lt;p&gt;说是视频，更多其实是配音PPT。插图我尽量采用绘制的图像，少量使用照片，这样讲解更清楚，而且与各个厂家特定的产品关联不大。&lt;/p&gt;
 &lt;p&gt;考虑到要方便修改，所以我使用的是text to speech进行的配音，配音的文本在每个ppt的“备注”里，需要的话您也可以打开看。&lt;/p&gt;
@@ -138,94 +31,7 @@ $$&lt;/p&gt;
 &lt;p&gt;如果您对教程中的插图感兴趣，我已经做好了一份开源的图集：&lt;a href="https://github.com/goldengrape/phacoTools"&gt;https://github.com/goldengrape/phacoTools&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;如果您对给PPT自动配音感兴趣，这是我以前做好的配音程序: &lt;a href="https://github.com/goldengrape/dubbing-pptx"&gt;https://github.com/goldengrape/dubbing-pptx&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;关于此训练手册，您有什么意见建议，可以在github上提issue：&lt;a href="https://github.com/goldengrape/phaco-training-manual/issues"&gt;https://github.com/goldengrape/phaco-training-manual/issues&lt;/a&gt;, 也可以fork自行修改，这是一个开放的项目，希望能够帮助更多的医生。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/phaco-training-OCW/</guid><pubDate>Thu, 04 Jul 2019 04:00:00 GMT</pubDate></item><item><title>眼科网络资源索引贴</title><link>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近又做了一次wetlab培训，发现还是有很多同学不知道网上有哪些眼科学习资源。以前总结过，现在再补充更新，以下内容于2019年6月确认过链接有效性：&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;眼科图谱：&lt;/h2&gt;
-&lt;p&gt;眼科是看图像识别的疾病的学科。图谱的资源在眼科是最重要的了：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;眼科学数据库（Atlas of Ophthalmology）是由该领域专家编著的公开的在线免费数据库。&lt;a href="https://www.atlasophthalmology.net/"&gt;https://www.atlasophthalmology.net/&lt;/a&gt; 这个图谱之中有各种语言，其中也有中文。分类很清楚。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;哈佛大学的眼科数字期刊：&lt;a href="http://www.djo.harvard.edu/"&gt;http://www.djo.harvard.edu/&lt;/a&gt; 喜欢看各种病例的话，这里有很多。各种大查房的记录，讨论，现在还增加了许多review&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;哥伦比亚大学的眼科图谱：&lt;a href="https://www.columbiaeye.org/education/digital-reference-of-ophthalmology"&gt;https://www.columbiaeye.org/education/digital-reference-of-ophthalmology&lt;/a&gt; 
-这是我最喜欢的眼科图谱了，分类清楚，访问速度快，我曾经下载了整个网站制作成电子书收藏。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;IOWA 大学的眼科论坛也做得相当不错：&lt;a href="http://webeye.ophth.uiowa.edu/eyeforum/atlas/index.htm"&gt;http://webeye.ophth.uiowa.edu/eyeforum/atlas/index.htm&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;ICO： &lt;a href="http://www.icoph.org/"&gt;http://www.icoph.org/&lt;/a&gt; 这就是大名鼎鼎的ICO考试的网站了，不过除了考试内容，其实里面也有很多学习资源。其中要特别推荐&lt;a href="http://www.icoph.org/resources/230/Surgical-Assessment-Tool-ICO-OSCAR-in-English-and-Spanish.html"&gt;ICO OSCAR(ICO Ophthalmology Surgical Competency Assessment Rubric, ICO-OSCAR)&lt;/a&gt; 是手术技能评分系统，很细致，既可以当作自我评估工具也可以当作学习要点和大纲。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;视频资源：&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;eyetube: &lt;a href="https://eyetube.net/"&gt;https://eyetube.net/&lt;/a&gt;  这里面是分类细致的眼科视频资源，有很多手术视频可以看，也有很多讲课、发言、演示。需要注册一下，但注册是免费的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;youtube：&lt;a href="https://youtube.com/"&gt;https://youtube.com/&lt;/a&gt;  youtube是万能的，它已经是一个互联网的基础服务平台，要找视频很难忽视它，有无数的医生、学者把自己的手术视频、教学、讲课甚至论文讲解放在youtube上。比如连续环形撕囊的发明者Dr. Gimbel老爷爷亲自在黑板前讲解撕囊。不过很遗憾，youtube在国内是难以访问的，需要有"!正常访问国际互联网!"的能力。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Neuro-Ophthalmology with Dr. Andrew G. Lee: &lt;a href="https://www.youtube.com/channel/UC5HcfsELV0W9AqtvJvpQQSg"&gt;https://www.youtube.com/channel/UC5HcfsELV0W9AqtvJvpQQSg&lt;/a&gt; Dr.Lee 讲解神经眼科的视频，短小精悍清晰易懂。虽然我还是很恐惧神经眼科，但也许慢慢看会懂更多吧。&lt;/li&gt;
-&lt;li&gt;Basic Microsuture Technique:&lt;a href="https://www.youtube.com/watch?v=3tDYU3f1XfY"&gt;https://www.youtube.com/watch?v=3tDYU3f1XfY&lt;/a&gt; 非常非常非常好的显微缝合教程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;B站：&lt;a href="https://www.bilibili.com/"&gt;https://www.bilibili.com/&lt;/a&gt; 最近B站的学术氛围令人惊讶，很多具有"!正常访问国际互联网!"能力的人，把国外优秀的视频资源搬运到B站了。比如&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://space.bilibili.com/88461692"&gt;3B1B甚至开了官方镜像&lt;/a&gt; 这是一个很好的数学课程演示。据我所知，国内的医学教育数学基础极差，很多所谓知名大学一流大学连线性代数都没开，可以在这里快速补习。&lt;/li&gt;
-&lt;li&gt;搜Lynda会有惊喜&lt;/li&gt;
-&lt;li&gt;大量计算机课程。但目前眼科手术和课程比较少。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;视频下载：&lt;/h2&gt;
-&lt;p&gt;高概率你需要具有"!正常访问国际互联网!"，然后你可能需要有一定的编程基础知识。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;youtub-dl：&lt;a href="https://rg3.github.io/youtube-dl/"&gt;https://rg3.github.io/youtube-dl/&lt;/a&gt; 非常强大的命令行下载工具，可以下载很多网站的视频资源，甚至，如果你能够找到一些微信直播课程里的视频链接或者"m3u8"文件地址，也可以把很多微课下载到本地。&lt;/li&gt;
-&lt;li&gt;miku tools：&lt;a href="https://miku.tools/"&gt;https://miku.tools/&lt;/a&gt; 一个工具包网站，不要在里面迷失了自己。&lt;/li&gt;
-&lt;li&gt;eyetube的视频页面，如果查看页面源代码，可能可以找到视频的mp4文件。
-&lt;img alt="屏幕快照 2019-06-24 12.17.55" src="https://i.loli.net/2019/06/24/5d104f080ddb377256.png"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;专利资源：&lt;/h2&gt;
-&lt;p&gt;多数眼科医生对专利的知识很少。常常听到会有人说这个技术是某个公司的专利，所以我们不知道。错了！“专利”是公开的、可查阅的，“技术秘密”才是隐蔽的。眼科有很多新技术，医生接触的大多数是销售，他们对技术的解读是经过包装删减的，缺乏细节，要想直接了解技术细节，应该要看专利。&lt;/p&gt;
-&lt;p&gt;各国的专利局/知识产权局都是政府机构，都有自己的查询网站。政府网站嘛，你了解的，通常不好用。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;soopat：&lt;a href="http://www.soopat.com/"&gt;http://www.soopat.com/&lt;/a&gt; 国内比较好用的专利检索工具，下载全文要注册一下。&lt;/li&gt;
-&lt;li&gt;Google Patent：&lt;a href="https://patents.google.com/"&gt;https://patents.google.com/&lt;/a&gt; 谷歌的专利检索，国外专利最方便的检索工具。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;文献、书籍&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;sci-hub: &lt;a href="https://sci-hub.tw"&gt;https://sci-hub.tw&lt;/a&gt; 众所周知，sci-hub也是万能的。网址一段时间可能会改变，但 .tw网址已经存活了相当长的时间。&lt;/li&gt;
-&lt;li&gt;libgen：&lt;a href="http://libgen.io/"&gt;http://libgen.io/&lt;/a&gt; 大量的电子书&lt;/li&gt;
-&lt;li&gt;AAO eyewiki: &lt;a href="https://eyewiki.aao.org/Main_Page"&gt;https://eyewiki.aao.org/Main_Page&lt;/a&gt; 可以说是眼科学的维基百科了，不同的是，这是由专家编写的。&lt;/li&gt;
-&lt;li&gt;WebVision:&lt;a href="https://webvision.med.utah.edu/"&gt;https://webvision.med.utah.edu/&lt;/a&gt; 这是一本在线的视网膜生理学病理生理学教科书。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;英语辅助工具：&lt;/h2&gt;
-&lt;p&gt;"!正常访问国际互联网!"的能力和英语(至少是阅读和听力)能力，是保持先进的必备能力。&lt;/p&gt;
-&lt;p&gt;当前已经无法合法地讲解"!正常访问国际互联网!"的能力，所以只能讲解一下英语辅助工具：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;cnki的在线词典：&lt;a href="http://dict.cnki.net/"&gt;http://dict.cnki.net/&lt;/a&gt;  如果遇到某些专业词汇感觉有困难，推荐使用cnki的在线词典，专业词汇的中英互译，也可以看看同道们是怎么说的。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;彩云小译：&lt;a href="https://fanyi.caiyunapp.com/#/app"&gt;https://fanyi.caiyunapp.com/#/app&lt;/a&gt; app不错，网页翻译也不错，但网页翻译插件在官网上找不到了，不知道是否以后还会继续提供。翻译量大了要订阅付费，反正每月只要几块钱我就订了。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;transgod：&lt;a href="https://fanyi.transgod.cn/"&gt;https://fanyi.transgod.cn/&lt;/a&gt; 值得反复推荐、极端优秀的医学全文翻译工具。导致我现在很爱看文献。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;我的贡献：&lt;/h2&gt;
-&lt;p&gt;我自己也做了很多眼科教学的东西。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao/"&gt;现代眼科医生知识扩展包&lt;/a&gt; 算了，我不指望有人能看进去。&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/goldengrape/Python-for-ophthalmologist"&gt;面向眼科医生的Python教程&lt;/a&gt; 算了，我也不指望有人能看进去。&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/goldengrape/phaco-training-manual"&gt;phaco训练手册&lt;/a&gt; 我正在进行插图和ppt化，完成版本将是一个有配音的视频教程。&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/goldengrape/phacoTools"&gt;phaco手术器械插图&lt;/a&gt; 这是为了训练手册而准备的插图，可免费使用。&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://github.com/goldengrape/read_medical_device_data"&gt;医学数据读取工具&lt;/a&gt; 眼科设备很多，产生的数据也很多，大厂商还往往比较抠门，不愿意共享或者导出数据，这是我写的一个读取数据的工具包。&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</guid><pubDate>Mon, 24 Jun 2019 03:00:01 GMT</pubDate></item><item><title>文献赏析: 古代如何测视力</title><link>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;读到一篇文献, 觉得太有趣了.
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/ophthalomology-network-resources/</guid><pubDate>Mon, 24 Jun 2019 03:00:01 GMT</pubDate></item><item><title>文献赏析: 古代如何测视力</title><link>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;读到一篇文献, 觉得太有趣了.
 &lt;a href="https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;《古代如何测视力————用星星》&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;全文可以在&lt;a href="https://sci-hub.tw/https://www.ncbi.nlm.nih.gov/pubmed/18929764"&gt;sci-hub上找到&lt;/a&gt;. 在此简单叙述.&lt;/p&gt;
 &lt;p&gt;在视力表出现之前, 古代波斯/阿拉伯, 使用北斗七星勺子柄上中间的开阳星作为视力检测标准.&lt;/p&gt;
@@ -237,85 +43,12 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果能够裸眼看出两颗星, 那么就认为被试视力不错. 虽然古代文人可能对视力要求不高, 但士兵可能一直是要有严格体检的, 所以Alcor往往作为对士兵视力的检查标准.&lt;/p&gt;
 &lt;p&gt;通常天文学家/ 历史学家只讲到这里, 但这是篇眼科文献, 于是...
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;视力&lt;/h2&gt;
-&lt;p&gt;正常视力20/20, 或者说1.0, 是说视角=1分, 而开阳双星的&lt;a href="http://aeea.nmns.edu.tw/2006/0606/ap060615.html"&gt;赤经赤纬坐标&lt;/a&gt;分别是:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;开阳(13:23:55.5, +54:55:31)&lt;/li&gt;
-&lt;li&gt;辅((13:23:56.3, +54:55:18))&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;但是, 两颗星之间的视角大约是12分, 那么相当于视力20/200, 也就是0.1左右, 其实很差. 用0.1左右的视标去检查士兵, 显然并不靠谱.&lt;/p&gt;
-&lt;h2&gt;对比度与眩光&lt;/h2&gt;
-&lt;p&gt;又但是, Mizar是二等星(2.27), Alcor是四等星(3.95), 亮度差距其实很大(22:9.4), 所以这个测试除了测量视力, 还相当于糅合了对比敏感度和眩光检查.&lt;/p&gt;
-&lt;h2&gt;等效性实验&lt;/h2&gt;
-&lt;p&gt;文献中记载有好事者做了一个等效性实验,&lt;/p&gt;
-&lt;p&gt;先找了一组正视眼的人, 都能看清20/20的视标, 在冬天月亮不明显的晴天夜里去看开阳双星, 大家都能看见. 然后在眼前加正度数透镜, 一直加到看不到Alcor为止, 得到的球面镜度数范围是在+0.5到+0.75.&lt;/p&gt;
-&lt;p&gt;第二天, 还是这些人, 去看视力表20/20这一行, 也是同样加球面镜, 直到看不清这一行为止, 得到的球面镜度数范围仍然是+0.5到+0.75.&lt;/p&gt;
-&lt;p&gt;这个实验在我看来并不严谨, 但是貌似将开阳双星检查和20/20等效起来.&lt;/p&gt;
-&lt;p&gt;其中还有一个有趣的病例, 在等效实验中, 有个20/20的65岁被试, 分不出开阳双星, 考虑是因为早期白内障, 对比敏感度降低.&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</guid><pubDate>Tue, 07 May 2019 03:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;更新了自动配音幻灯视频: &lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/An_Ancient_Eye_Test/</guid><pubDate>Tue, 07 May 2019 03:00:00 GMT</pubDate></item><item><title>人工晶体轶事(1)</title><link>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;更新了自动配音幻灯视频: &lt;/p&gt;
 &lt;iframe src="//player.bilibili.com/player.html?aid=46123306&amp;amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
 
 &lt;p&gt;最近查看了一些关于人工晶体历史的资料, 其实也不是什么考据研究, 只是在wiki上乱转. 有些故事看起来很有意思.&lt;/p&gt;
 &lt;p&gt;人工晶体, 或者人工晶状体, Intraocular lens, 缩写是IOL, 是用来替换天然晶状体的一片微型的透镜, 通常用在白内障手术中.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;人工晶体轶事之一, 人工晶体发明的故事&lt;/h2&gt;
-&lt;h3&gt;Gordon Cleaver&lt;sup id="fnref-1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-1"&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
-&lt;p&gt;1940年8月15日, 伦敦西南的温切斯特, 空袭警报响起.&lt;/p&gt;
-&lt;p&gt;德军的轰炸机来得太快了, 直扑机场而来, 想在遇到拦截之前直接摧毁整个空军基地. 皇家空军601中队空军上尉(Flying Officer) Gordon Cleaver冒着硝烟, 奔向跑道上自己的飓风歼击机, 匆忙中他没有戴上护目镜, 就在敌机的轰炸中紧急起飞.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="http://d.ibtimes.co.uk/en/full/313242/hurricane.jpg"&gt;
-(https://www.ibtimes.co.uk)&lt;/p&gt;
-&lt;p&gt;Cleaver上尉参加过敦克尔克的战役, 他操纵飓风歼击机无比灵巧, 因此获得了"老鼠"的绰号, 在一年多的战斗飞行中击落了7-9架敌机. 升空后他很快抓到机会击落了一家德军飞机. 突然, Cleaver双眼一黑知道自己被击中了, 他已经无法控制飞机, 只好弃机跳伞, 降落在南安普敦.&lt;/p&gt;
-&lt;p&gt;在医院, Cleaver得知当时子弹击中了座舱盖, 将座舱盖打得粉碎, 碎片打中了自己的脸. 右眼已经完全看不见光感, 眼科医生Harold Ridley说对右眼已经无能为力了, 左眼也被弹片击中, 虽然角膜被打穿, 但弹片并没有打碎晶状体, 而是停留在了眼睛里, 而且座舱盖弹片是透明的, 视力虽然下降, 但多少还是能看清些东西. Ridley医生人很好, 经常过来看这只受伤的左眼, 他说只要不感染, 还是有希望恢复一些视力的.&lt;/p&gt;
-&lt;p&gt;也许当时戴上护目镜, 世界就会不一样吧.&lt;/p&gt;
-&lt;h3&gt;Harold Ridley&lt;sup id="fnref-2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-2"&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
-&lt;p&gt;Gordon Cleaver上尉是个坚强的军人, 头面部的创伤经过了18次的手术才算治疗完成. 他也是个有趣的病例, 飓风战斗机的座舱盖弹片居然安静地留在他的左眼里, 没有引起感染和排异反应. 最让人担心的眼内炎并没有发生.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Harold Ridley" src="https://i.loli.net/2018/06/01/5b103665eb0aa.png"&gt;
-(https://www.rayner.com/media/pdf/Invention_of_the_IOL.pdf)&lt;/p&gt;
-&lt;p&gt;Ridley医生很想知道座舱盖的材料, 战时打听战斗机的材料多多少少有些麻烦, 但后来总算查到了, 是帝国化工(ICI)生产的Perspex. 这种材料在1928年已经被制造出来, 叫做聚甲基丙烯酸甲酯, 缩写是PMMA, 也被称为有机玻璃. 1930年ICI注册了Perspex的商标. 这种材料透光性很好, 比玻璃轻很多, 有一点点弹性, 不像玻璃那么容易破碎, 即使破碎了, 碎片也一般不会那么锋利. 但显然Perspex还是无法抵抗机枪子弹的威力.&lt;/p&gt;
-&lt;p&gt;通常情况下弹片打进身体会引起严重的免疫排异反应, 毕竟这是一种异物. 但Cleaver上尉眼睛里的PMMA弹片却是个例外, 原因可能有两个, 一是PMMA是一种聚合物, 不容易释放出什么离子或者小分子, 甚至可以用来制成培养皿来饲养细胞, 后世的生物医学工程师称之为生物相容性很好; 二是眼球内血液和其他液体比如房水和玻璃体是分隔开的, 有血房水屏障, 这种屏障阻挡了免疫反应, 所以眼内也是一个免疫豁免的区域. 这两个因素在Cleaver上尉眼睛遇到了一起, 于是PMMA弹片没有产生排异反应. 他的左眼总算是保住了.&lt;/p&gt;
-&lt;p&gt;战时的临床工作忙得不可开交, Ridley医生弹片留在眼睛里的原委以后, 就记录在笔记本上, 又去忙其他病人了.&lt;/p&gt;
-&lt;h3&gt;John Pike&lt;sup id="fnref-3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-3"&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/h3&gt;
-&lt;p&gt;二战已经结束3年多了, John Pike现在是伦敦Rayner公司的光学专家. 最近他正在和Ridley医生合作研发电子眼底镜. 研发工作进展很顺利, 他也和Ridley医生成为好朋友.&lt;/p&gt;
-&lt;p&gt;一天傍晚Ridley医生打来电话, 很兴奋地说要讨论一个新项目, 还挺急, 说查房完了就过来. 在卡文迪许广场上, John Pike坐在Ridley医生的车里, 听完了8年前病例报告. Ridley医生说他打算用Perspex做一枚透镜植入到病人眼睛里, 替代天然的晶状体. John Pike觉得这事在医学上有点异想天开, 但在光学上并不困难, 不过是制造一个小一点的透镜而已. 在车里, 两个人就已经完成了大部分的设计. 这个就叫做人工晶体Intraocular lens吧.&lt;/p&gt;
-&lt;p&gt;回去以后John Pike很快就按照设计制造出了样品.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="https://www.rayner.com/en/history" src="https://www.rayner.com/skin/frontend/mtcolias/default/images/iol_box.jpg"&gt;
-https://www.rayner.com/en/history&lt;/p&gt;
-&lt;h3&gt;Harold Ridley&lt;/h3&gt;
-&lt;p&gt;1949年11月29日, 第一例人工晶体植入手术终于完成了. Ridley医生从圣托马斯医院办公室的窗户看着泰晤士河上往来的船只, 心中有些激动.&lt;/p&gt;
-&lt;p&gt;这是一个49岁&lt;sup id="fnref-4"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-4"&gt;4&lt;/a&gt;&lt;/sup&gt;的女病人名叫伊丽莎白, 她的左眼晶状体已经完全浑浊, Pike或者说Rayner公司生产的人工晶体被植入到了患者眼内. 巡台护士Doreen Clarke小姐配合得不错, 手术视野照明很清楚. 当时并没有手术显微镜, Clarke小姐用的是一把手电. 术后, Clarke小姐在记录本上记下了"Extra-capsular ext"--白内障囊外摘除术.&lt;/p&gt;
-&lt;p&gt;但其实第一例手术并不算顺利, 而且这也是第一例人工晶体手术并发症----度数算错了, 术后病人验光有高度近视, 但视力仍然提高到20/60.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Ridley's eighth IOL implantation, performed at St. Thomas' Hospital, May 8, 1951" src="https://i.loli.net/2018/06/01/5b1036f8abdf1.png"&gt;
-(https://www.rayner.com/media/pdf/Invention_of_the_IOL.pdf)&lt;/p&gt;
-&lt;p&gt;之后, Ridley医生又做了很多人工晶体植入手术, 早期的手术大约有70%的成功率. 虽然白内障病人多数是老年人, 但也有一些年轻的病人因为外伤植入人工晶体, 这些病人经过了40多年后, 仍然保持着可用的视力. &lt;sup id="fnref-5"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fn-5"&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;h3&gt;Gordon Cleaver&lt;/h3&gt;
-&lt;p&gt;Cleaver上尉因为在温切斯特保卫战中的英勇表现被授予空军功勋十字勋章, 当时他年仅30岁, 但右眼失明, 左眼破裂伤使得他无法再驾驶战斗机重回蓝天.&lt;/p&gt;
-&lt;p&gt;在他70多岁的时候, 他的左眼晶状体也终于出现了白内障, 他也接受了白内障摘除手术, 并植入了一枚人工晶体. &lt;/p&gt;
-&lt;h3&gt;Harold Ridley&lt;/h3&gt;
-&lt;p&gt;2000年2月, Ridley医生被英女王授予爵士勋衔(Knight Bachelor), 以表彰他在白内障手术中的开创性工作.&lt;/p&gt;
-&lt;p&gt;Harold Ridley爵士逝世于2001年5月25日, 享年94岁.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://images-na.ssl-images-amazon.com/images/I/51udsOifu8L._SX398_BO1,204,203,200_.jpg"&gt;&lt;/p&gt;
-&lt;!-- EOF --&gt;
-
-&lt;div class="footnote"&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id="fn-1"&gt;
-&lt;p&gt;https://en.wikipedia.org/wiki/Gordon_Cleaver &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-2"&gt;
-&lt;p&gt;https://en.wikipedia.org/wiki/Harold_Ridley_(ophthalmologist) &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-3"&gt;
-&lt;p&gt;https://en.wikipedia.org/wiki/Rayner_(company) &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-3" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-4"&gt;
-&lt;p&gt;维基百科上说年龄是45岁, 但按照"Sir Harold Ridley and His Fight for Sight"中的记录, 还是应当为49岁. &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-4" title="Jump back to footnote 4 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id="fn-5"&gt;
-&lt;p&gt;&lt;a href="https://www.sciencedirect.com/science/article/pii/S0886335099800613"&gt;Letocha, C. E.; Pavlin, C. J. (1999). "Follow-up of 3 patients with Ridley intraocular lens implantation". Journal of cataract and refractive surgery. 25 (4): 587–591.&lt;/a&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/#fnref-5" title="Jump back to footnote 5 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>IOL</category><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</guid><pubDate>Tue, 12 Mar 2019 17:00:00 GMT</pubDate></item><item><title>蓝光的故事(2): 紫外滤过还是蓝光滤过型人工晶状体: 证据是什么？</title><link>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天重读蓝光滤过人工晶体的文献, 随手翻译了一篇综述, 以机翻为主. 凑合看一下:&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 3 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>IOL</category><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/bulabula/stories_of_IOL_1/</guid><pubDate>Tue, 12 Mar 2019 17:00:00 GMT</pubDate></item><item><title>蓝光的故事(2): 紫外滤过还是蓝光滤过型人工晶状体: 证据是什么？</title><link>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天重读蓝光滤过人工晶体的文献, 随手翻译了一篇综述, 以机翻为主. 凑合看一下:&lt;/p&gt;
 &lt;p&gt;Ultraviolet or blue-filtering intraocular lenses: what is the evidence?&lt;/p&gt;
 &lt;p&gt;Eye volume30, pages215–221 (2016)
 &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4763142/"&gt;全文原文&lt;/a&gt;&lt;/p&gt;
@@ -324,43 +57,7 @@ https://www.rayner.com/en/history&lt;/p&gt;
 &lt;li&gt;摘要&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;20世纪40年代后期，现代人工晶状体的引入彻底改变了白内障手术。 到了20世纪60年代末到70年代，有证据表明短波长的光线会对视网膜和视网膜色素上皮造成光毒性。 到20世纪80年代早期，紫外线滤光片已被纳入人工晶状体。 这引起了激烈的争论，因为人们担心，过滤紫外线的发色团可能会渗入眼睛，造成毒性。 随着20世纪90年代蓝光滤过型人工晶状体(BFIOLs)的问世，人们对其安全性和潜在的不利因素展开了进一步的讨论。 对于白内障手术医生和拥有广泛IOL选择的患者来说，选择最佳的人工晶体来获得最佳的视觉效果和最少的潜在缺点已经变得复杂和具有挑战性。 现在可以选择个性化的镜片来解决散光，老花眼，球面像差，色差以及可能使视网膜免受短波长光的影响。 这些不同创新的潜在益处和可能的副作用强调评估其临床效用的证据的重要性，允许外科医生和患者权衡风险收益比并做出明智的决定。 BFIOL开发用于减少蓝视，解决色差，提高不同光照条件下的对比敏感度，以及防止短波光到达视网膜，从而潜在地降低发生年龄相关性黄斑变性的风险。 BFIOLs的进一步设计开发是模仿成年期的天然晶状体吸收和透射性质。 很多文献报道了植入蓝色滤光IOL的潜在好处和缺陷。 在过去25年的文献中提出的关于视觉功能受损和昼夜节律系统中断的潜在缺点在很大程度上被消除了。 保护视网膜免受短波长光照射的明显好处使BFIOL成为明智的选择。本文在2015年剑桥研讨会上发表，旨在回顾相关文献。
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h3&gt;引言&lt;/h3&gt;
-&lt;p&gt;蓝光滤过型人工晶状体(BFIOLs)是否可以在白内障手术后植入仍然是争论的焦点，最近发表了大约100篇关于 BFIOLs 与紫外线滤过型人工晶状体(UVFIOLs)相比的优缺点的文章，1,2,3,4,5 BFIOLs 也被称为黄色或橙色人工晶状体。 从历史上看，发展人工晶状体的动力是减少色差和蓝视症，因为有证据表明短波长的光线对视网膜和视网膜色素上皮有毒害作用。 其他建议的好处包括改善对比敏感度和减少在某些光照条件下的眩光。声称对于 BFIOL 的另一个好处包括减少血-视网膜屏障破坏。有趣的是，一些鱼，包括 masked greenling 的鱼，在暴露在明亮的光线下时，它们的角膜会从深黄色变成红色，在黑暗中变得无色; 这种特性是由角膜中可逆的色素赋予的。  滑雪者和射手经常佩戴黄色镜片以减少眩光，并减少色差. 最近，其他创新的人工晶状体设计包括研发一种称为向光性人工晶状体的人工晶状体，这种人工晶状体在没有紫外线照射的情况下是清晰的，在紫外线照射下会变黄。 [14]在过去25年中，已经提出了植入 BFIOL 与 UVFIOL 相比在理论上的缺点。 主要的问题是，植入 BFIOL 会导致色觉改变、色觉减退、暗视觉功能减退、中视觉和暗视觉条件下对比敏感度降低，以及昼夜光调节紊乱&lt;/p&gt;
-&lt;p&gt;已经有出色的综合篇审查将详细介绍这个主题, 更近的有Zhu在2012做的荟萃分析，[1, 2，3，4，5]. 从那时起有更多相关文献, BFIOL对睡眠 - 觉醒周期的影响17,18 血压，19 情绪，20 和认知功能18, 以及观察年龄相关性黄斑变性（AMD）发展早期小型研究，.21,22&lt;/p&gt;
-&lt;h3&gt;光保护与光感受器&lt;/h3&gt;
-&lt;p&gt;比较了 BFIOLs 和 UVFIOLs 的透射和吸收性能，并与天然晶状体进行了比较。 Artigas23等表明，并非所有紫外线滤光片都能提供同等的紫外线保护。 他们进一步指出，对紫外线和蓝光提供更强光保护的滤镜是黄色和橙色的，黄色和橙色的人工晶状体滤镜可能最适合需要特殊视网膜保护的情况。 Van Norren 和 Kraats 报告了以虚拟年龄表示的人工晶体的光谱透过率，这为比较不同的人工晶体不同的短波长传输和吸收特性提供了一个有用的方法。他们表明UVFIOL模拟的接近新生儿到青少年的晶状体透过率, 而BFIOL, 与晶体类型相关, 更接近中年期的晶状体通透性. 理想的人工晶状体应该是在生命中的某个时刻模仿天然的晶状体，在这个时刻有良好的传输和充分的吸收，从而平衡视觉表现和视网膜保护的需要。&lt;/p&gt;
-&lt;p&gt;光谱传输曲线应该在哪里仍然是目前争论的主题。 与自然衰老的晶状体相比，IOL可以让更多的光线进入眼睛。 人工晶体透光和吸光的好坏将影响其性能和安全性能。 Van Norren 的文章回顾了光诱导视网膜毒性的机制，这里不再回顾(Van Norren -- cambridge Symposium Paper)。 虽然关于慢性光暴露是否会引发或加重 AMD 还存在争议，但实验室和动物实验研究已经表明，短波长的光，不仅是紫外线，而且也包括蓝光也会对视网膜造成损伤。6,7(Van norren -- cambridge Symposium Paper)动物和细胞培养研究有充分的证据表明，黄色镜片可以防止光损伤。25,26,27,28,29,30,31 Tanito 等人测量了包括 BFIOLs 和 UVFIOLs 在内的54种人工晶状体的光谱传输，并估计了视网膜危害指数。 视网膜危害指数包括蓝光辐射值(其特征是一个称为危害函数的作用谱，表示每个波长对视网膜可能造成损害的相对权重)和每天观看阳光的最大允许暴露时间(tmax)。 根据特定的准则计算无晶状体眼和有晶状体眼的 tmax 值，并根据研究中使用的人工晶状体的透过率数据计算人工晶状体眼的 tmax 值。 他们的研究表明，与无晶状体眼相比，UVFIOL 的蓝光辐照度值降低了60% ，BFIOL 的蓝光辐照度值进一步降低了这个值.&lt;/p&gt;
-&lt;h3&gt;对视力的影响&lt;/h3&gt;
-&lt;p&gt;比较BFIOL和UVFIOL的临床研究发现，视力的临床表现没有差异.3 Zhu等[4]对8项关于术后最佳矫正视力（BCVA）的研究的荟萃分析显示，两组之间无显着差异。&lt;/p&gt;
-&lt;h3&gt;对明视和暗视力的影响&lt;/h3&gt;
-&lt;p&gt;关于使用BFIOL而不是UVFIOL引起的主要问题之一是暗视或低中间条件下的视觉表现可能受损.15,16,33即使在健康的眼睛中也存在与年龄相关的衰退 随着视杆细胞介导的暗适应减慢，34,35,36,37,38应该避免理论上可能加剧这种情况的任何事情，特别是因为在没有明显眼部病理的老年人群中，暗适应不良会增加跌倒的风险39&lt;/p&gt;
-&lt;p&gt;此外，在有年龄相关性黄斑变性的眼睛中，首先从旁中心丢失视杆细胞，并且视杆功能受到显著影响.40,41,42 尽管已发表实验数据表明使用BFIOL可使暗视敏感度降低14 -25％.15,43随后进行了进一步的分析，对这一原始观察结果进行了讨论，通过校正透射曲线并应用无晶状体而不是无晶状体的光谱灵敏度曲线，与有晶体的年轻受试者相比, UVFIOL和BFIOL都有暗视光谱灵敏度和可用光线的显著增加。44 此外，研究暗视敏感性的临床非理论研究未发现这两个IOL组之间存在任何差异.45,46 Kiser等人使用外部过滤器模拟蓝光过滤IOL进行了一项研究。对于平均年龄为81岁的UVFIOL双侧假性白斑患者和早期AMD患者之间进行比较。他们的表现通过观察在暗视条件下走过两个不同的移动路线来测试。那些没有戴过滤器或者带蓝色过滤器的人在表现上没有显著差异47&lt;/p&gt;
-&lt;h3&gt;对眩光的影响的临床评估&lt;/h3&gt;
-&lt;p&gt;BFIOL声称的优势是在眩光条件下具有更好的性能.48,49,50 Gray等人在驾驶模拟器中评估了33名患者的表现，其中18名患者使用BFIOL，15名患者使用UVFIOL。 与使用UVFIOL的患者相比，那些使用BFIOL患者比UVFIOL患者有更低的眩光敏感性和更大的安全边际。 然而，使用BFIOL的患者也进行了Toric矫正，而UVFIOL使用者没有，这可能会产生影响，尽管他们都完全矫正了视力.48&lt;/p&gt;
-&lt;p&gt;Hammond等人今年最近的一项研究报道了在UVFIOL患者的随机屏蔽交叉临床研究中的视觉表现。对154名参与者使用透明和蓝色过滤眼镜在强光照射后进行了光应激时间的评估。 当参与者使用蓝色滤光眼镜时，他们的光应激恢复时间和眩光失能阈值比使用非滤光眼镜时显著提高。 他的结论是 BFIOL 在强光条件下可能是有益的。50&lt;/p&gt;
-&lt;p&gt;一些研究调查了蓝光滤光片对临床测量的影响，包括神经纤维层评估，视野，视觉诱发电位和手术期间视网膜成像.51,52,53,54 使用 Cirrus SD-OCT对RNFL 的测量值和信号强度在黄色和透明人工晶状体之间没有明显的围手术期差异 [51],  Kim 等人调查了 BFIOLs 对倍频技术周期测量的影响，发现 BFIOL 患者与透明人工晶状体患者没有显著差异。
-Hoffman等人的研究通过获得所有偏心率的蓝光和中性过滤条件的多焦点VEP来评估20名患者。 他们发现没有获得对振幅的显著影响，并得出结论，使用BFIOL不会影响视觉处理。&lt;/p&gt;
-&lt;p&gt;Falkner-Radler 等报道BFIOLs对玻璃体视网膜手术、诊断或治疗没有显著影响，并得出结论 BFIOL 对视觉加工没有影响。 他们还报告说，在他们的临床试验之后，他们对所有50岁以上的患者常规使用BFIOL[54]&lt;/p&gt;
-&lt;h3&gt;对血屏障破坏的影响&lt;/h3&gt;
-&lt;p&gt;Miyake等报告说，使用UVFIOL或 BFIOL 的眼 BRB 破裂的发生率低于未经处理的人工晶状体眼睛(一个没有紫外或蓝光过滤)。 他们考虑了患者的年龄，并使用了两种临床症状: 玻璃体后部的荧光素浓度和视网膜后极部的自体荧光含量来评估长期人工晶状体眼的视网膜生理状态。 他们还指出，自体荧光随着年龄的增长而增加，即使是紫外线过滤的人工晶体也是如此，他们建议不仅要防止紫外线光线，还要防止近紫外线和蓝光到达视网膜. 55&lt;/p&gt;
-&lt;h3&gt;对色觉和色彩对比敏感度的影响&lt;/h3&gt;
-&lt;p&gt;众所周知，许多接受透明IOL治疗的患者报告说术后视觉场景呈现蓝色(蓝视症)。 一些研究已经评估了手术后患者对蓝眼症的认识，并对 BFIOL 与 UVFIOL 进行了比较。 Hayashi 等[56]报告说，BFIOL 组蓝视的发生率低于 UVFIOL 组，但有趣的是，3个月后两组都没有发现蓝视，这表明蓝视是随着时间的推移而逐渐适应的。 在朱和其他作者对比 BFIOL 和 UVFIOL 的11项研究的荟萃分析中，他们指出在术后早期总的来说 BFIOL 减少了畏光和蓝视的发生率[4], 在一组术后3个月的队列中, 患者无法确定哪只眼接受了何种IOL植入[57]. 在一个病例中, 由于颜色感知变化, BFIOL被取出. 这枚IOL是在3个月内被取出的, 这可能是适应所需要的时间[58].&lt;/p&gt;
-&lt;p&gt;有人认为 BFIOL 可以通过减少轴向色差来提高视觉质量。 Siedelecki59表明，与人类晶状体相比，透明阻挡紫外线人工晶状体的色差要高出3倍。 大多数研究表明，两种人工晶状体的色觉和对比敏感度没有差异。Zhu对11个临床试验进行了荟萃分析，比较了 BFIOL 和 UVFIOL 在术后明视条件下的色觉和对比敏感度，发现两种类型的人工晶状体具有相同的性能。 唯一的例外是 UVFIOL 在中间视觉条件下在蓝光光谱中的色觉表现更好。[4] Bandyopadhyay 等人最近的一项研究报告了他们在接受不同颜色的 BFIOL患者中的发现。 在这项研究中，33名患者接受了 BFIO-黄色型，33名患者接受了 BFIOL-橙色型，33名患者接受了 UVFIOL 型。 他们报告说，黄色或橙色的 BFIOLs 在明视和中视对比敏感度方面与透明人工晶状体相当。2004年，60 Yuan 等人对60名接受 BFIOL治疗的白内障患者与30名接受 UVFIOL 治疗的患者进行了随机对照临床试验。 发现 BFIOL 组在中低频段对比敏感度有显著提高，但不影响色觉，畏光和蓝光的发生率较低。 Niwa 等61表明 BFIOL 与中等空间频率6和12 c/deg 的对比敏感度有关。 此外，黄色人工晶状体降低了中心眩光对对比敏感度的影响。&lt;/p&gt;
-&lt;p&gt;Raj 等人报告说，有部分红绿色视力缺陷的人，植入 BFIOL 后，他们的色觉并没有恶化。&lt;/p&gt;
-&lt;h3&gt;老年黄斑变性和人工晶体类型&lt;/h3&gt;
-&lt;p&gt;关于AMD是否被白内障手术引发或加剧的争议主题在其他评论文章中有所涉及，并且几乎没有新的信息可以补充.[1,2,3] 然而，动物和细胞培养研究有很好的证据表明，BFIOL 可以发挥保护作用。25,26,27,28,29,30,31 尽管这些研究的结果表明蓝光可能造成损害, 但有人说这些研究结果可能无法直接应用于人类AMD的发展或进展。 最近，与这个问题相关的关于人类使用生殖器红细胞的早期小型研究已经发表。 Nagai等[22]观察了一小组病人，这些病人在接受眼底自体荧光造影前和2年的随访后发现，与 UVFIOLs (79只眼)相比，BFIOL 组异常AF较少(52只眼) ，并指出 BFIOL 组 AMD 的发生率较低。 Lavric 和 Pompe 报告了他们对30名一只眼睛接受了 BFIOL 和另一只眼睛接受 UVFIOL 的患者进行的为期2年的随访。 2015年，Pipis 等人报告说，BFIOL 组的地图样萎缩(GA)进展比 UVFIOL 组慢得多，当时他们检查了40名患者的66只眼睛。 其中27例植入了 BFIOL，39例植入了 UVFIOL。频域域OCT和先进的 RPE 软件分析被用来测量病变的大小和一年以上的任何进展。 比较 BFIOL 和 UVFIOL 之间 GA 区域的进展有统计学意义上的显著差异，提示 BFIOL 的保护作用.[21]&lt;/p&gt;
-&lt;h3&gt;对昼夜节律的影响, 特别是对睡眠-觉醒周期的影响&lt;/h3&gt;
-&lt;p&gt;Mainster提出了这样一种担忧，即植入BFIOL会通过阻止短波光到达视网膜来破坏昼夜节律。15由于光线不仅刺激光感受器的活动，而且直接刺激光敏视网膜神经节细胞(pRGCs) ，这种细胞对480纳米处的光线最为敏感，而且由于 BFIOL 过滤蓝光，人们担心这种人工晶体可能会破坏睡眠-觉醒周期。 pRGCs投射到大脑的多个结构，包括下丘脑前部的视交叉上核(SCN) ，起着主要昼夜节律起搏器的作用。 SCN反过来调节整个身体的昼夜生理。17,65需要从眼睛的光输入使生物钟与环境的昼夜周期同步17&lt;/p&gt;
-&lt;p&gt;许多研究已经表明，除了改善视力，白内障手术还能改善睡眠-觉醒模式[17,18,19,66]&lt;/p&gt;
-&lt;p&gt;这种好处被认为是由于到达视网膜的光量增加所致。 Landers等人[66]进行了一项横向研究睡眠质量研究，比较了31名 UVB-IOL 患者和18名 BFIOL 患者的睡眠质量。 他们表明，PSQI-衍生的睡眠质量在 UVB-IOL 和 BFIOL 晶状体类型之间没有差异。&lt;/p&gt;
-&lt;p&gt;尽管 Espindle 等人没有对睡眠进行评估，但他们调查了接受UV-IOL或 BFIOL 白内障手术治疗后257名患者的健康相关生活质量，这些患者使用视觉特异性量表(NEI VFQ-39)和一般的生理和心理健康量表(SF-12) ， 他们报告了两组术后视力相关功能的改善，但双侧 UVB-IOL 植入物和双侧 BFIOL 之间没有区别。67 Alexander 等人在一个大型的前瞻性、连续性、双点研究中，961名参与者完成了研究，显示 BFIOL 组和 UV-IOL 组之间没有区别。无论植入的晶状体类型如何，整个队列在短期内进行白内障手术后睡眠质量均有显着改善.17 Schmoll等[18]研究了睡眠 - 觉醒和认知反应时间，并表明BFIOL或UVFIOL之间没有差异。 CHUKYO研究旨在评估白内障手术中人工晶状体植入术后的血压和睡眠持续时间，并比较不同类型的人工晶状体. 使用问卷调查，以及获得血压测量和睡眠持续时间，他们从IOL植入前，IOL植入后1周和IOL植入后1个月的1367名患者（1367只眼）获得数据。他们报告说，植入后患者组的舒张压显著降低。植入后1个月收缩压的降低在接受BFIOL的患者中显着高于接受UVFIOL的患者。他们认为BFIOL对于高血压患者比UVFIOL更好。此外，他们报告说，BFIOL或UVFIOL在改善睡眠持续时间方面没有差异。他们报道IOL组之间的视力没有显着差异，但他们认为光谱透射率特性的差异可能导致对自主神经系统和褪黑激素分泌的不同影响。 他们解释说，BFIOL 患者的血压下降幅度更大，可能是因为已知正常血压的人接触蓝光后血压会升高。68 因此，未经紫外线滤光人工晶体过滤的蓝光可能抵消人工晶体植入术后的血压下降。19 Leruez 对接受 BFIOL 或 UV-IOL 植入术的患者进行了一项初步研究，以确定 BFIOLs 植入术后是否会影响情绪，或者与 UVFIOL 相比是否会诱发更多的抑郁。 他们发现 BFIOL 和 UVFIOL 之间没有区别。 术后两组患者的情绪都有所改善。20&lt;/p&gt;
-&lt;h3&gt;讨论&lt;/h3&gt;
-&lt;p&gt;人工晶状体技术有许多进步，这使得人工晶状体的选择变得复杂和具有挑战性。 在正在进行的辩论是否植入一个 BFIOL 或一个明确的人工晶体，现在有明确的证据表明，视觉表现与这两种类型的人工晶体是相似的。 临床研究表明，BFIOL 和 UVFIOL 植入物的视力、明视和暗视力和色觉性能基本相同。1,2,3,4,5,9,44,45,69&lt;/p&gt;
-&lt;p&gt;已经证明，临床成像和视野测试可能受植入BFIOL影响的担忧, 并不存在。&lt;/p&gt;
-&lt;p&gt;还有人提出使用BFIOL可以破坏昼夜节律，特别是睡眠，但这种担忧也被消除了.17,18,19,66白内障手术主要是在老年人群中进行的。老年人存在着年龄相关的视网膜光感受器和神经节细胞群的下降，以及生物钟的功能，以及随衰老变小的瞳孔。 很明显，光线的获取对这个群体很重要。 瞳孔尺寸和光线的获取比目前的人工晶体更重要.17&lt;/p&gt;
-&lt;p&gt;总的来说，使用 BFIOL 似乎没有任何缺点，而且使用人工晶体确实有好处，它可以过滤短波长的光，包括减少眩光.11,48,49,50。然而，更重要的是，短波长的光已被证明对视网膜有毒，体外试验的结果表明，动物和临床研究支持这样的假设，即保护视网膜免受短波长光的伤害是可取的，植入 BFIOL 似乎是一个明智的预防措施。 (Van norren ー cambridge Symposium Paper)6,7,25,26,27,28,29,30,31一项小型研究的早期证据表明，BFIOLs 有可能降低 GA的进展21，还有新出现的证据表明，短波长光可能对眼黑色素瘤的发展有一定作用，70以及皮肤黑色素瘤，使得保护眼睛免受短波长光的伤害成为可取的。儿童由于长期暴露在短波长光下的可能是最好接受 BFIOL 植入术的。 而且也可能最好不要在一只眼睛里植入 BFIOL，而在另一只眼睛里植入 UVFIOL，因为 Schweitzer 指出有六个病人注意到两只眼睛之间的色觉差异71。 然而，重要的是IOL设计允许光接收尽可能接近年轻成人健康晶状体，并且提供光保护以防止患者在寿命期间的收到短波长光损伤。&lt;/p&gt;
-&lt;p&gt;总之，在文献中有很好的证据表明，植入 BFIOL 不会损害视力、明视、暗视或色觉，也不会影响睡眠-觉醒周期。 此外，植入 BFIOL 有一些明确的和理论上的好处，包括改善眩光的性能，但更重要的是保护视网膜免受短波长光的伤害。&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/</guid><pubDate>Sat, 12 Jan 2019 07:00:04 GMT</pubDate></item><item><title>DIY眼底照相机</title><link>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;用这些材料:
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/story-of-blue-light-2/</guid><pubDate>Sat, 12 Jan 2019 07:00:04 GMT</pubDate></item><item><title>DIY眼底照相机</title><link>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;用这些材料:
 &lt;img alt="02" src="https://i.loli.net/2018/10/17/5bc6c82fc0ecd.jpg"&gt;
 无糖雪碧瓶(纤维+和零卡都可以), 20D lens, 有闪光灯可拍照的手机, 手机望远镜夹子, 斜口钳, 剪刀.
 
@@ -371,106 +68,6 @@ Hoffman等人的研究通过获得所有偏心率的蓝光和中性过滤条件�
 &lt;iframe src="//player.bilibili.com/player.html?aid=34023057&amp;amp;cid=59587011&amp;amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"&gt; &lt;/iframe&gt;
 
 &lt;p&gt;下面是图文教程:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;材料:&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;无糖雪碧瓶(纤维+和零卡都可以): 其他种类的瓶子不好用, 无糖雪碧瓶是因为有向内的凸起, 能够固定住镜头.&lt;/li&gt;
-&lt;li&gt;20D lens: 这是眼科医生专用的Volk Lens, 非球面, 20D, 其中一面更加凸起. 也许以后可以在淘宝上找些简单便宜的镜头, 但固定会是个问题.&lt;/li&gt;
-&lt;li&gt;有闪光灯可拍照的手机: 理论上照明光路应当尽量拍摄光轴同轴, 也就是闪光灯要尽量与摄像头靠近. 但实测发现iPhone X这种离得非常近的反而有较大的lens反光, 本例中使用的是Lumia 640, 闪光灯与摄像头之间有10mm的间距反而效果更好.&lt;/li&gt;
-&lt;li&gt;手机望远镜夹子: 淘宝以“望远镜显微镜 手机 夹子”为关键词即可搜到. 注意要是那种能够同时暴露出闪光灯和摄像头的, 淘宝有种是圆孔形状的, 不可用. 推荐使用我图中展示的这种, 结实方便, 但需要手机背面是光滑平整的, 这样才能被吸盘吸住.&lt;/li&gt;
-&lt;li&gt;斜口钳, 剪刀&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;方法:&lt;/h2&gt;
-&lt;h3&gt;剪掉瓶口边缘的棱&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="03" src="https://i.loli.net/2018/10/17/5bc6c89775806.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;剪掉最下一圈凸起&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="04" src="https://i.loli.net/2018/10/17/5bc6c82d27c40.jpg"&gt;
-&lt;img alt="05" src="https://i.loli.net/2018/10/17/5bc6c88af1ffc.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;剪掉两个凸起&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="06" src="https://i.loli.net/2018/10/17/5bc6c88593469.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;瓶子转180度, 剪掉相对的两个凸起&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="07" src="https://i.loli.net/2018/10/17/5bc6c88c90ca7.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;修剪边缘&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="08" src="https://i.loli.net/2018/10/17/5bc6c88d83561.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;把20D lens卡住&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="09" src="https://i.loli.net/2018/10/17/5bc6c831ab22a.jpg"&gt;
-之前剪掉凸起的动作, 是为了能够好安装, 好取出.&lt;/p&gt;
-&lt;h3&gt;用手机望远镜夹子夹住&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="10" src="https://i.loli.net/2018/10/17/5bc6c830b5033.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;瓶口覆盖住摄像头和闪光灯, 固定&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="11" src="https://i.loli.net/2018/10/17/5bc6c8300f0e0.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;打开相机app, 使用录像模式, 开启闪光灯&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="12" src="https://i.loli.net/2018/10/17/5bc6c82a280a7.jpg"&gt;
-&lt;img alt="13" src="https://i.loli.net/2018/10/17/5bc6c8313adfd.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;可选的改进, 用喷漆把瓶子喷成黑色&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="14" src="https://i.loli.net/2018/10/17/5bc6c8732a571.jpg"&gt;
-&lt;img alt="15" src="https://i.loli.net/2018/10/17/5bc6c82e10d76.jpg"&gt;
-但实测下来, 即使喷成黑色, 也仍然有比较明显的lens反光, 实际上是20D lens反光以后, 到瓶身发生了二次散射被相机记录下来, 这大概是使用瓶子作为固定装置的固有缺陷. 如果很想去除的话, 可以在瓶子内部一条一条粘贴黑色绒布.&lt;/p&gt;
-&lt;h2&gt;结果:&lt;/h2&gt;
-&lt;p&gt;&lt;img alt="16" src="https://i.loli.net/2018/10/17/5bc6c829cdbdd.jpg"&gt;
-照片要从视频中截图.&lt;/p&gt;
-&lt;h2&gt;讨论:&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;其实直接手持20D lens和手机, 也可以完成眼底照相(参考文献1), 缺点是容易手忙脚乱. 因为要撑开眼睑, 同时控制照明/拍摄/20D lens三者的光轴同轴, 操作还是比较困难.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;请想好如何向病人解释, 为何用一个雪碧瓶子对着他/她照相.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;雪碧瓶可能造成二次反光, 镜头反光可能扩展成圆环, 改进方法可以使用喷漆喷成黑色或者内部贴黑色绒布. 但改进效果有限. 有可能加入偏振片效果会更好.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;有文献建议在闪光灯前贴一个半透明胶布使照明光弥散(参考文献1). 实测意义不大.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;可能需要手动对焦和单独设定白平衡/亮度等, 有文献推荐使用FilMiC专业版进行拍摄.(参考文献2)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;网上亦有&lt;a href="http://www.odocs-tech.com"&gt;oDocs&lt;/a&gt;公司提供的&lt;a href="https://github.com/oDocsOphthalmicVision/odocsfundus"&gt;开源项目&lt;/a&gt; 只需下载文件, 到淘宝上找3D打印店打印然后装配即可.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;参考文献&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;Smartphone Fundus Photography, J Vis Exp. 2017; (125): 55958. Published online 2017 Jul 6.   
-有&lt;a href="https://www.jove.com/video/55958/smartphone-fundus-photography"&gt;视频讲解:&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Haddock LJ, Kim DY, Mukai S. Simple, inexpensive technique for high-quality smartphone fundus photography in human and animal eyes. J Ophthalmol 2013. 2013:518479.&lt;/li&gt;
-&lt;/ol&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</guid><pubDate>Wed, 17 Oct 2018 04:00:00 GMT</pubDate></item><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 6 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/DIY-fundus-camera/</guid><pubDate>Wed, 17 Oct 2018 04:00:00 GMT</pubDate></item><item><title>显微操作训练(4)</title><link>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;手术显微镜操作训练&lt;/p&gt;
 &lt;p&gt;这是一组操作训练作业:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;1.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;初始化手术显微镜&lt;/li&gt;
-&lt;li&gt;设置好显微镜下录像&lt;/li&gt;
-&lt;li&gt;用手机或由同伴拍摄坐姿正侧位照片&lt;ul&gt;
-&lt;li&gt;在练习0分钟后, 5分钟后, 10分钟后分别拍摄&lt;/li&gt;
-&lt;li&gt;或用手机录像拍摄坐姿&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2.
-打印下图
-&lt;img alt="幻灯片45" src="https://i.loli.net/2018/07/04/5b3ba3f920315.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;3.
-&lt;img alt="幻灯片46" src="https://i.loli.net/2018/07/04/5b3ba4254ca37.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;4.
-&lt;img alt="幻灯片47" src="https://i.loli.net/2018/07/04/5b3ba4254ef66.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;5.
-&lt;img alt="幻灯片48" src="https://i.loli.net/2018/07/04/5b3ba4254c9e5.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;6.
-&lt;img alt="幻灯片49" src="https://i.loli.net/2018/07/04/5b3ba42545a5d.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;7.
-&lt;img alt="幻灯片50" src="https://i.loli.net/2018/07/04/5b3ba4254596c.jpeg"&gt;&lt;/p&gt;
-&lt;h2&gt;参考资料&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://microsurg.hs.columbia.edu/"&gt;http://microsurg.hs.columbia.edu/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Optical Devices in Ophthalmology and Optometry: technology, Design Principles and Clinical Applications. ISBN: 978-3-527-41068-2 page 147-page 177&lt;/li&gt;
-&lt;li&gt;Coursera公开课:&lt;ul&gt;
-&lt;li&gt;台湾大学基础光学1,  第6讲
-*&lt;a href="https://www.coursera.org/learn/ji-chu-guang-xue"&gt;https://www.coursera.org/learn/ji-chu-guang-xue&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;密歇根大学白内障手术概论, week 2&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.coursera.org/course/cataractsurgery"&gt;https://www.coursera.org/course/cataractsurgery
-&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>microsurgery</category><category>ophthalmology</category><category>教程</category><guid>https://goldengrape.github.io/posts/ophthalmology/microsurgery_4/</guid><pubDate>Tue, 03 Jul 2018 16:30:00 GMT</pubDate></item></channel></rss>

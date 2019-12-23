@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1575984845.362602
+_modified_time = 1577083333.130383
 _enable_loop = True
-_template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl'
+_template_filename = '/Volumes/macTF/Application/miniconda3/lib/python3.7/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl'
 _template_uri = 'comments_helper_muut.tmpl'
 _source_encoding = 'utf-8'
 _exports = ['comment_form', 'comment_link', 'comment_link_script']
@@ -66,6 +66,6 @@ def render_comment_link_script(context):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl", "uri": "comments_helper_muut.tmpl", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 2, "22": 5, "23": 8, "24": 13, "30": 3, "35": 3, "36": 4, "37": 4, "38": 4, "39": 4, "40": 4, "41": 4, "47": 7, "51": 7, "57": 11, "61": 11, "67": 61}}
+{"filename": "/Volumes/macTF/Application/miniconda3/lib/python3.7/site-packages/nikola/data/themes/base/templates/comments_helper_muut.tmpl", "uri": "comments_helper_muut.tmpl", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 2, "22": 5, "23": 8, "24": 13, "30": 3, "35": 3, "36": 4, "37": 4, "38": 4, "39": 4, "40": 4, "41": 4, "47": 7, "51": 7, "57": 11, "61": 11, "67": 61}}
 __M_END_METADATA
 """

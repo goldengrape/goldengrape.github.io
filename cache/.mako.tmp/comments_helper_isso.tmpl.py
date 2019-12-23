@@ -5,9 +5,9 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1575984845.375627
+_modified_time = 1577083333.14191
 _enable_loop = True
-_template_filename = '/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl'
+_template_filename = '/Volumes/macTF/Application/miniconda3/lib/python3.7/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl'
 _template_uri = 'comments_helper_isso.tmpl'
 _source_encoding = 'utf-8'
 _exports = ['comment_form', 'comment_link', 'comment_link_script']
@@ -29,9 +29,9 @@ def render_body(context,**pageargs):
 def render_comment_form(context,url,title,identifier):
     __M_caller = context.caller_stack._push_frame()
     try:
-        isso_config = context.get('isso_config', UNDEFINED)
         comment_system_id = context.get('comment_system_id', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
+        isso_config = context.get('isso_config', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if comment_system_id:
@@ -61,12 +61,15 @@ def render_comment_link(context,link,identifier):
     __M_caller = context.caller_stack._push_frame()
     try:
         comment_system_id = context.get('comment_system_id', UNDEFINED)
+        messages = context.get('messages', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if comment_system_id:
             __M_writer('        <a href="')
             __M_writer(str(link))
-            __M_writer('#isso-thread">Comments</a>\n')
+            __M_writer('#isso-thread">')
+            __M_writer(str(messages("Comments")))
+            __M_writer('</a>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -76,8 +79,8 @@ def render_comment_link_script(context):
     __M_caller = context.caller_stack._push_frame()
     try:
         comment_system_id = context.get('comment_system_id', UNDEFINED)
-        pagekind = context.get('pagekind', UNDEFINED)
         lang = context.get('lang', UNDEFINED)
+        pagekind = context.get('pagekind', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if comment_system_id and 'index' in pagekind:
@@ -95,6 +98,6 @@ def render_comment_link_script(context):
 
 """
 __M_BEGIN_METADATA
-{"filename": "/Users/goldengrape/anaconda3/lib/python3.6/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl", "uri": "comments_helper_isso.tmpl", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 13, "22": 19, "23": 26, "29": 2, "36": 2, "37": 3, "38": 4, "39": 4, "40": 4, "41": 5, "42": 5, "43": 5, "44": 5, "45": 5, "46": 5, "47": 6, "48": 7, "49": 8, "50": 8, "51": 8, "52": 8, "53": 8, "54": 11, "60": 15, "65": 15, "66": 16, "67": 17, "68": 17, "69": 17, "75": 22, "82": 22, "83": 23, "84": 24, "85": 24, "86": 24, "87": 24, "88": 24, "89": 24, "90": 24, "96": 90}}
+{"filename": "/Volumes/macTF/Application/miniconda3/lib/python3.7/site-packages/nikola/data/themes/base/templates/comments_helper_isso.tmpl", "uri": "comments_helper_isso.tmpl", "source_encoding": "utf-8", "line_map": {"16": 0, "21": 13, "22": 19, "23": 26, "29": 2, "36": 2, "37": 3, "38": 4, "39": 4, "40": 4, "41": 5, "42": 5, "43": 5, "44": 5, "45": 5, "46": 5, "47": 6, "48": 7, "49": 8, "50": 8, "51": 8, "52": 8, "53": 8, "54": 11, "60": 15, "66": 15, "67": 16, "68": 17, "69": 17, "70": 17, "71": 17, "72": 17, "78": 22, "85": 22, "86": 23, "87": 24, "88": 24, "89": 24, "90": 24, "91": 24, "92": 24, "93": 24, "99": 93}}
 __M_END_METADATA
 """
