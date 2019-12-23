@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 05 Jul 2019 07:23:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>根据字幕做视频摘要续集</title><link>https://goldengrape.github.io/posts/python/video_keynote_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我又继续做奇怪的小工具了。上一次做完了&lt;a href="https://goldengrape.github.io/posts/python/video_keynote/"&gt;根据字幕做视频摘要&lt;/a&gt;之后，仍然不太满意，因为那个工具只是面向youtube的，对于本地的视频，或者是下载到本地的视频课程，仍然不够好用。所以我做了一些修改，已经&lt;a href="https://github.com/goldengrape/video_keynotes"&gt;发布到了github上&lt;/a&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>根据字幕做视频摘要续集</title><link>https://goldengrape.github.io/posts/python/video_keynote_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我又继续做奇怪的小工具了。上一次做完了&lt;a href="https://goldengrape.github.io/posts/python/video_keynote/"&gt;根据字幕做视频摘要&lt;/a&gt;之后，仍然不太满意，因为那个工具只是面向youtube的，对于本地的视频，或者是下载到本地的视频课程，仍然不够好用。所以我做了一些修改，已经&lt;a href="https://github.com/goldengrape/video_keynotes"&gt;发布到了github上&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;现在可以先通过&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;下载整个课程，然后再通过字幕划出重点，生成复习用的视频摘要。&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;使用&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;需先下载课程视频和字幕文件&lt;ul&gt;
-&lt;li&gt;coursera上的课程可以使用&lt;a href="https://github.com/coursera-dl/coursera-dl"&gt;coursera-dl&lt;/a&gt;进行下载。注意其中的&lt;a href="https://github.com/coursera-dl/coursera-dl#china-issues"&gt;china-issues&lt;/a&gt;, 可能需要通过VPN才能正常访问国际互联网。&lt;ul&gt;
-&lt;li&gt;使用coursera-dl下载出现"HTTPError:400"问题，请参考&lt;a href="https://github.com/coursera-dl/coursera-dl/issues/702#issuecomment-506929946"&gt;此解决方案&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Youtube上的课程，例如OCW，可以使用&lt;a href="https://rg3.github.io/youtube-dl/"&gt;youtube-dl&lt;/a&gt;进行下载。注意需要将对应的字幕也下载下来&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;将字幕文件处理成txt脚本&lt;ul&gt;
-&lt;li&gt;处理单个文件：&lt;code&gt;python sub2txt.py -i &amp;lt;subtitle file name&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;处理整个目录：&lt;code&gt;python sub2txt.py -p &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;手动编辑txt脚本，将你认为不重要的部分删除后保存，尽量不要修改txt文件名&lt;/li&gt;
-&lt;li&gt;按编辑后的txt脚本剪辑视频课程：&lt;ul&gt;
-&lt;li&gt;处理单个文件：&lt;code&gt;python clip_by_txt.py -t &amp;lt;txt file&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;处理整个目录：&lt;code&gt;python clip_by_txt.py -p &amp;lt;path&amp;gt;&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;剪辑完成的视频将以summary_开头，存储在视频课程原位，并且附带有srt的字幕。&lt;/p&gt;
-&lt;h2&gt;Demo&lt;/h2&gt;
-&lt;p&gt;这是一个剪辑自coursera上的learning how to learn课程第一周第一课&lt;a href="https://www.coursera.org/learn/learning-how-to-learn/lecture/75EsZ/introduction-to-the-focused-and-diffuse-modes"&gt;introduction-to-the-focused-and-diffuse-modes&lt;/a&gt; &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/embed/UjkYY6HUSyY"&gt;Youtube视频&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;其他&lt;/h2&gt;
-&lt;p&gt;似乎用来剪辑电影也会很方便吧。&lt;/p&gt;
-&lt;p&gt;说到剪辑电影，我还发现了一个有趣的工具&lt;a href="https://antiboredom.github.io/videogrep/"&gt;videogrep&lt;/a&gt;，与我做的工具类似，但他是在字幕中检索关键词或者使用正则表达式来检索，效果惊艳：
-&lt;a href="https://www.youtube.com/watch?v=PQMzOUeprlk"&gt;All the instances of the phrase “time” in the movie “In Time”&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/video_keynote_2/</guid><pubDate>Fri, 05 Jul 2019 04:00:00 GMT</pubDate></item><item><title>全自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OK, 完成了自动为PowerPoint幻灯片配音的python3程序. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/video_keynote_2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/video_keynote_2/</guid><pubDate>Fri, 05 Jul 2019 04:00:00 GMT</pubDate></item><item><title>全自动录制幻灯片配音</title><link>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OK, 完成了自动为PowerPoint幻灯片配音的python3程序. &lt;/p&gt;
 &lt;p&gt;提取每一页幻灯片中的备注, 使用语音合成(Text-To-Speech, TTS)产生配音, 并将配音音频插入到幻灯片中. 如果在PowerPoint/ Keyote中导出成视频, 可以产生自动配演讲解的视频.&lt;/p&gt;
 &lt;p&gt;当前仅仅支持mac OS.&lt;/p&gt;
 &lt;p&gt;项目页面在&lt;a href="https://github.com/goldengrape/dubbing-pptx"&gt;https://github.com/goldengrape/dubbing-pptx&lt;/a&gt;&lt;/p&gt;
@@ -43,61 +10,10 @@
 &lt;code&gt;python dubbing.py inputfile.pptx outputfile.pptx&lt;/code&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/fullautomatic_dubbing_slide/</guid><pubDate>Sat, 09 Mar 2019 16:00:00 GMT</pubDate></item><item><title>Applied Data Science with Python Specialization小结</title><link>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://www.coursera.org/specializations/data-science-python"&gt;Applied Data Science with Python Specialization&lt;/a&gt;
 五张证书拿到.&lt;/p&gt;
 &lt;p&gt;小结一下这几门课
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;第1门. Introduction to Data Science in Python
-讲Pandas基础, 严重推荐, 必学必会.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第2门. Applied Plotting, Charting &amp;amp; Data Representation in Python
-讲Matplotlib绘图, 严重推荐, 必学必会&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第3门, Applied Machine Learning in Python
-讲scikit learn, 严重不推荐, 建议上youtube随便找找教程也比那个老师讲得好,
-理解一下ROC, 知道如何评估模型.
-传统机器学习学会随机森林一项即可, 遇到问题一切默认参数先来一把梭, 效果不好就换深度学习了, 不要浪费时间.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第4门, Applied Text Mining in Python
-讲NLTK, 如果有处理自然语言的需求可以学学, 普通大众意义不大. 老师幽默风趣, 印度口音十足, 可供练习听力.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;第5门, Applied Social Network Analysis in Python
-讲networkX, 推荐, 生物医学化学领域推荐学习, 以此为基础再听听图论可能更佳.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;在图像之外的领域, 手工提取feature的技能还是有意义的, 需要借鉴前人的研究基础, 比如自然语言, 图论中的很多预处理的函数, 理解其意义\用途, 很有帮助.&lt;/p&gt;
-&lt;p&gt;但在模型构建和训练上, 线性/SVM/决策树之类, 与深度学习相比, 除了需要数据量略少, 其他看起来并没有什么优势.&lt;/p&gt;
-&lt;p&gt;随机森林搭建省力, 可以作为基准. gbdt虽然效果类似, 但..RadomForest的名字比较好记. &lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</guid><pubDate>Mon, 16 Apr 2018 17:00:00 GMT</pubDate></item><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</guid><pubDate>Mon, 16 Apr 2018 17:00:00 GMT</pubDate></item><item><title>iPad上的琴弦</title><link>https://goldengrape.github.io/posts/bulabula/string-on-pad/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;前一段时间玩Ukulele. 真不知道人类怎么想的, 用手指头去按又硬又粗的琴弦. 每次练琴都恨不得把手指勒出几个槽来. 实在是不爽, 于是放弃了, 吉他什么的也一并拉黑. 大约从小我就和弦乐或者半弦乐有仇.&lt;/p&gt;
 &lt;p&gt;不过弄出有意思的声音还是我有兴趣做的事情. 于是就有了在iPad上做一把Ukulele的项目:
 &lt;img alt="ipadminiukulele" src="https://i.loli.net/2018/03/20/5ab08921c906d.gif"&gt;&lt;/p&gt;
 &lt;p&gt;这把琴是有琴弦的, 琴弦能够给人有触觉反馈, 在乐器演奏是还是很重要的. 琴弦使用的是鱼线, 线绷紧的力度可调. 这样不至于勒手. 仅仅按住琴弦还是不响的, 要在拨弦的时候iPad才会发出声音.&lt;/p&gt;
 &lt;iframe width="560" height="315" src="https://www.youtube.com/embed/w-KjJy7J-Tw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen&gt;&lt;/iframe&gt;
 
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;硬件部分&lt;/h2&gt;
-&lt;p&gt;很简单的两个打印件, 可以卡住iPad两端.
-&lt;img alt="手机琴新版 v15" src="https://i.loli.net/2018/03/20/5ab08b60e5759.png"&gt;&lt;/p&gt;
-&lt;p&gt;从淘宝几块钱买来一个吉他调弦钮, 安在圆孔里. 把鱼线4个弦槽穿过, 然后绑在吉他调弦钮上, 线要从iPad前后绕过, 这样才能稳定. 线的长度要试试, 大约是iPad长度的7-9倍. 装上的时候可以很松, 然后通过调弦钮逐渐拉紧.&lt;/p&gt;
-&lt;p&gt;如果喜欢Ukulele/吉他这类半弦乐中横隔的手感, 可以在鱼线上打结, 或者在基本调好线的松紧之后穿入几根牙签.&lt;/p&gt;
-&lt;p&gt;琴弦应该放在iPad的右侧. 要和相应的app位置匹配.&lt;/p&gt;
-&lt;p&gt;打印件已经&lt;a href="https://www.thingiverse.com/thing:2832687"&gt;存放在Thingiverse. &lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;软件部分&lt;/h2&gt;
-&lt;p&gt;这部分代码是用的iPad上的&lt;a href="http://omz-software.com/pythonista/"&gt;Pythonista 3&lt;/a&gt;写的, 这大概是唯一能够在ipad上写出可执行python脚本的工具了.&lt;/p&gt;
-&lt;p&gt;Pythonista自带里有个钢琴的demo, 演示多点触控, Ukulele是一样的, 只是要把按键和拨弦两件事情分开, 按键的时候把音高确定好, 拨弦的时候再调出该弦的声音进行播放.&lt;/p&gt;
-&lt;p&gt;遗憾的是Pythonista里的sound库只有钢琴的声音, 音域的范围也很有限. 于是做出来的是一把拨弦钢琴了.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/code/iPad-Ukulele/Ukulele.py"&gt;代码在此&lt;/a&gt;&lt;/p&gt;
-&lt;h2&gt;成品&lt;/h2&gt;
-&lt;p&gt;正面
-&lt;img alt="" src="https://i.loli.net/2018/03/20/5ab0fdde481f8.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;背面, 调弦钮是带有一个螺丝的, 需要拧上. 另外注意调弦钮是有左右区分的.&lt;br&gt;
-&lt;img alt="" src="https://i.loli.net/2018/03/20/5ab0fdda48840.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;当把乐器软件化以后, 还可以有很多玩法, 比如音高不一定是按照顺序排列的啊, 完全可以把按得最顺手的区域放上最常用的和弦. 按电子合成器的玩法, 加入一些鼓声也可以. &lt;/p&gt;
-&lt;p&gt;等我把kivy熟练一些, 可能再写个android版本的.&lt;/p&gt;
-&lt;!-- EOF --&gt;
-
-&lt;hr&gt;
-&lt;p&gt;&lt;a href="https://press.one/file/v?s=3bf28f812a1c1308b7942dd424cf4114c7cd2241038b3df453038fcdde5f7561b345a77b2b9879b84cb6ab3601d1bce58f8e31dad3110e79912e1c179209f8811&amp;amp;h=01f31dd17b0af32cca3bc8cdb4c450b59c5c6812749b31c2e4632073cb14dcdb&amp;amp;a=79c1846bc532ec0cf61ad0f1f5604a80a1387aca&amp;amp;f=P1&amp;amp;v=2"&gt;press.one签名&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/string-on-pad/</guid><pubDate>Tue, 20 Mar 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/string-on-pad/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/string-on-pad/</guid><pubDate>Tue, 20 Mar 2018 04:00:00 GMT</pubDate></item></channel></rss>

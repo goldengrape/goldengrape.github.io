@@ -1,52 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 27 Jun 2019 11:38:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 lifescience)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/lifescience.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>拍摄开花过程</title><link>https://goldengrape.github.io/posts/bulabula/flower-blossom/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;自己养的栀子花好不容易要开花了. &lt;/p&gt;
 &lt;p&gt;于是用相机记录下来:
 &lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
 &lt;p&gt;再记录一下拍摄过程:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;h2&gt;材料与方法:&lt;/h2&gt;
-&lt;h3&gt;工具:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;待开放栀子花,&lt;/li&gt;
-&lt;li&gt;Nokia X6手机,&lt;/li&gt;
-&lt;li&gt;三脚架, 手机夹子&lt;/li&gt;
-&lt;li&gt;Android
-上的&lt;a href="https://apkpure.com/cn/open-camera/net.sourceforge.opencamera"&gt;Open Camera App&lt;/a&gt;: 这是一个很强悍的相机app, 能够自定义很多参数.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://item.taobao.com/item.htm?id=574484611225"&gt;可外接电源的LED补光灯&lt;/a&gt;, 这几天在做另一个项目, 买了一堆网红主播用品.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.ffmpeg.org/"&gt;FFmpeg&lt;/a&gt;, 这是一个开源命令行软件. 在mac上用homebrew完全安装ffmpeg要费些功夫, (开源软件嘛, 一步安装到位就太不矜持了), &lt;a href="https://trac.ffmpeg.org/wiki/CompilationGuide/macOS"&gt;要先brew tap&lt;/a&gt; 然后再&lt;a href="https://gist.github.com/Piasy/b5dfd5c048eb69d1b91719988c0325d8"&gt;安装各个options&lt;/a&gt; &lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;摆放&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="IMG_2273" src="https://i.loli.net/2019/03/05/5c7e87ec2fa1e.jpg"&gt;&lt;/p&gt;
-&lt;h3&gt;拍摄参数设定&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="Screenshot_20190305-223636" src="https://i.loli.net/2019/03/05/5c7e8ab0f22d9.png"&gt;
-&lt;em&gt; 连拍模式: 无限
-&lt;/em&gt; 连拍模式间隔: 目前我设定的是30秒&lt;/p&gt;
-&lt;h3&gt;软件处理&lt;/h3&gt;
-&lt;p&gt;使用ffmpeg合成图像.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;将目录里的所有jpg图像合成为视频, 帧速率=30&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' flower.mp4&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;实测发现画面太大, 于是只截取画面中的一部分(宽=2200, 高=2200, x起点=800, y起点=700)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -framerate 30 -pattern_type glob -i '*.jpg' -vf "crop=2200:2200:800:700" flower.mp4&lt;/code&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;微信朋友圈只有10秒, 所以提高速度, 其中setpts=10/实际时间&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;code&gt;ffmpeg -i flower.mp4 -b:v 2000k -filter:v "setpts=0.05714286*PTS" output.mp4&lt;/code&gt;&lt;/p&gt;
-&lt;h2&gt;结果与讨论&lt;/h2&gt;
-&lt;h3&gt;结果:&lt;/h3&gt;
-&lt;p&gt;未处理的拍摄样张:
-&lt;img alt="IMG_20190305_065624_DRO" src="https://i.loli.net/2019/03/05/5c7e8fbfe5da4.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;处理后的视频:&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/flower_blossom.gif"&gt;&lt;/p&gt;
-&lt;h3&gt;讨论&lt;/h3&gt;
-&lt;p&gt;花开过程大约是2天, 一共拍摄了5200多张, 照片总容量达到了12G, 原本担心ffmpeg处理这么大的量会吃力, 没想到还是很容易就完成了. &lt;/p&gt;
-&lt;p&gt;平均来说, 每30秒拍摄一张有点短, 造成数据量很大, 不过反正ffmpeg处理起来也不吃力, 但如果使用常规的软件来处理, 比如photoshop之类, 有可能会吃不消. &lt;/p&gt;
-&lt;p&gt;但花瓣并不是匀速打开的, 最外层的花瓣类似是弹开的样子, 特别是第4片花瓣, 30秒之内张开了60度以上. 所以如果拍摄间隔设定太久, 就可能捕捉不到. &lt;/p&gt;
-&lt;p&gt;关于摆放位置, 现在觉得应该把镜头正对花的中心, 而不应该从侧面拍摄, 会有一半的花瓣看不见. 还是应该尽可能把镜头靠近, 使花占主体部分, 而不是后期剪裁, 感觉花朵本身的分辨率还是欠缺. &lt;/p&gt;
-&lt;p&gt;背景颜色变化明显, 是因为日光的原因. 晚上由补光灯照明, 白天日光造成的影响很明显. 补光灯应该再亮一些, 噪点还是太明显. 我不知道如果完全遮蔽日光, 使用人造光源照明, 是否会对开花过程有影响. 毕竟LED的光谱与日光还是有很大不同. &lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/flower-blossom/</guid><pubDate>Tue, 05 Mar 2019 14:00:00 GMT</pubDate></item><item><title>我练习毛笔字的方法</title><link>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;简述一下我练习毛笔字的方法, (尚不敢称为书法):&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/flower-blossom/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/flower-blossom/</guid><pubDate>Tue, 05 Mar 2019 14:00:00 GMT</pubDate></item><item><title>我练习毛笔字的方法</title><link>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;简述一下我练习毛笔字的方法, (尚不敢称为书法):&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;至少看一遍&lt;a href="http://my.tv.sohu.com/pl/9076183/index.shtml"&gt;《黄简讲书法》的初级课程&lt;/a&gt;, 老先生说话比较慢, 用1.5x的速度听比较舒服.&lt;/li&gt;
 &lt;li&gt;用&lt;a href="https://detail.tmall.com/item.htm?id=44531148545"&gt;A4透明胶片&lt;/a&gt;打印字帖, 每个字按2寸大小的大楷进行打印, 大约一页6个字左右, 网上很容易找到这样的字帖, 比如王羲之《兰亭序》的大字字帖. 稍微调整一下颜色和对比度, 可以得到纯黑白的.&lt;/li&gt;
@@ -57,14 +14,7 @@
 &lt;li&gt;成人练习, 我觉得三天打鱼两天晒网比较好. 想写的时候就多些几天, 不想写就算了. 但是为了避免完全忘记, 建议上个闹钟, 比如每晚10点提醒一下: “要不要练练字?”, GTD那种强迫生活方式我可受不了.&lt;/li&gt;
 &lt;li&gt;写完以后拍照, 邀请几个好友/同学建群打卡或者只是留存.&lt;/li&gt;
 &lt;/ol&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;这是我个人的练习方法, 写完一个字以后再用透明胶片上的字帖拿回去比对, 看两个字的差异, 相当于做Mean Square Error. 把MSE当作loss function, 对自己的人脑神经网络进行训练, 虽然每个字都练习很多遍, 容易产生过拟合, 但是由于人脑天然具有遗忘功能, 加上三天打鱼两天晒网, 遗忘参数调得比较高, 所以个人感觉还是有不错得泛化能力.&lt;/p&gt;
-&lt;p&gt;对操作录像然后重放, 是训练手术的基本技巧. 书法也算是一种手的技术吧. 初学者通常注意力范围有限, 看不到笔锋的背面, 也看不到自己的手腕动作. 黄简老师讲吴昌硕写字偶尔还要探头看看自己笔锋的背面(为啥不用镜子?), 现在有手机录像就方便很多了.&lt;/p&gt;
-&lt;p&gt;一年不到, 练习了“永和九年，岁在癸丑，暮春之初，会于会稽山阴之兰亭，修禊事也。群贤毕至，少长咸集。此地有崇山峻岭，茂林修竹；又有清流激湍，映带左右，引以为流觞曲水，列坐其次。” 65个字, 写到后面还经常要再返回去练练前面.&lt;/p&gt;
-&lt;p&gt;偶尔一时兴起, 想写点别的, 最简单的方法是用个防水套把iPad装起来, 然后用书法字典的app(比如&lt;a href="https://itunes.apple.com/cn/app/%E4%BA%91%E7%AB%A0%E4%B9%A6%E6%B3%95%E5%AD%97%E5%85%B8/id992025786"&gt;云章书法字典&lt;/a&gt;)找到想写的字, 也可以描红, 也可以临帖后再把宣纸铺上去比对. 但防水套和宣纸比较薄, 手指有可能会触碰屏幕导致误操作, 左手可以戴个手套. 如果反复写很多次会比透明胶片字帖麻烦一些.&lt;/p&gt;
-&lt;p&gt;写好的文字可以&lt;a href="https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/"&gt;导入keynote里&lt;/a&gt;用来做Keynote/PPT幻灯, 很好玩.&lt;/p&gt;
-&lt;p&gt;据说人们容易低估自己周期性的努力, 而高估自己一次性的努力, 这是哪个推友说过来着, 我记不起来了. 感觉挺正确的.&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</guid><pubDate>Sun, 13 Jan 2019 04:00:00 GMT</pubDate></item><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>lifescience</category><guid>https://goldengrape.github.io/posts/bulabula/The-method-I-practice-calligraphy/</guid><pubDate>Sun, 13 Jan 2019 04:00:00 GMT</pubDate></item><item><title>一个闭气训练的iOS捷径</title><link>https://goldengrape.github.io/posts/bulabula/CO2-%08tolerance-shortcut/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;顺手又戳了一个iOS捷径出来:
 &lt;a href="https://www.icloud.com/shortcuts/dc244e748f3a4c79a639af520e2b05f9"&gt;点这里导入捷径&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;闭气训练:
 * 方式: CO2耐受&lt;/p&gt;
@@ -88,19 +38,4 @@
 在导入时, 可能会要求“加盐”, 也就是一段混淆用的字符串, 如果您以前用过我的密码生成器, 请和原来设定的一样, 如果没用过, 那么可以随意设定一段话, 只要在导入各个iOS设备时保持一样的输入就可以了.&lt;/p&gt;
 &lt;p&gt;然后保存到主屏幕就可以生成一个类似单独app的图标, 每次需要输入密码时打开它, 输入主密码和网站/应用名, 它就可以计算出一个子密码, 并且同时复制到剪贴板上, 只需要再粘贴到密码输入框里就可以了.&lt;/p&gt;
 &lt;p&gt;有兴趣详细了解的继续看:
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;以前的核心代码就这一小段:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;rawString&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"srcbox1"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;salt&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"srcbox2"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-            &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;$&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"version"&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;value&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="s1"&gt;''&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;str_md5&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;md5&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;rawString&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;str_base64&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nx"&gt;b64encode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;str_md5&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;密码=base64(md5( 主密码+盐+网站名+版本) )&lt;/p&gt;
-&lt;p&gt;在iOS捷径中, 变量是可以为一个列表的, 可以用“添加到变量”, 将内容加入到列表中,&lt;/p&gt;
-&lt;p&gt;字符串的合并使用的是“合并文本”, 如果传入的是一个列表变量, 就是把列表中的文本join起来.&lt;/p&gt;
-&lt;p&gt;捷径中没有找到字符串切片的函数, 但有“匹配文本”, 可以用上正则表达式, 取出前N个字符的正则表达式就是&lt;code&gt;^[0-9a-zA-Z]{1,N}&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;其他没有什么好解释的了, 为了和以前密码生成器的结果一致, 我使用的是“2012sprint/2012summer...”这样的字符串作为版本, 您可以根据自己的需求修改.&lt;/p&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</guid><pubDate>Sat, 20 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>iOS</category><category>lifescience</category><category>shortcut</category><guid>https://goldengrape.github.io/posts/bulabula/MD5-pwd-creator-iOS-shortcut/</guid><pubDate>Sat, 20 Oct 2018 04:00:00 GMT</pubDate></item></channel></rss>

@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 life science)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/life-science.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 07 May 2019 09:20:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>口算复利</title><link>https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一个常用的小技巧. 口算复利的倍增时间.&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 life science)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/life-science.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>口算复利</title><link>https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一个常用的小技巧. 口算复利的倍增时间.&lt;/p&gt;
 &lt;p&gt;$$
 time=\frac{70\%}{ROI}
 $$&lt;/p&gt;
 &lt;p&gt;例如, 以7%的利息复利存款, 存入100元, 则大约10年后变成连本带利变成200元.&lt;/p&gt;
 &lt;p&gt;证明:
-&lt;!-- TEASER_END --&gt;
-&lt;img alt="QED" src="https://i.loli.net/2018/04/13/5ad03d0219a8b.jpeg"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/</guid><pubDate>Fri, 13 Apr 2018 04:00:00 GMT</pubDate></item><item><title>折叠键盘支撑</title><link>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天不知道为什么弄伤了手腕, 在笔记本键盘上敲字的时候手腕更加不舒服.&lt;/p&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/compute-Compound-Interest/</guid><pubDate>Fri, 13 Apr 2018 04:00:00 GMT</pubDate></item><item><title>折叠键盘支撑</title><link>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天不知道为什么弄伤了手腕, 在笔记本键盘上敲字的时候手腕更加不舒服.&lt;/p&gt;
 &lt;p&gt;于是先从thingverse上找到了早已看中的&lt;a href="https://www.thingiverse.com/thing:403001"&gt;护腕&lt;/a&gt;打印了一副戴上.
 &lt;img alt="护腕" src="https://i.loli.net/2018/03/28/5abbb0913f1a9.jpeg"&gt;
 PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽然60度的水很烫, 但是拿出来的护腕放在手上并不烫, 可以趁热捏成合适的形状, 把手腕固定在功能位上.&lt;/p&gt;
 &lt;p&gt;但仍然不满足. 因为在打字时手腕是放平的, 所以相对于功能位有一点内旋. 实际上平面的键盘总是不能让手腕很舒服.&lt;/p&gt;
 &lt;p&gt;于是改造键盘.
-&lt;!-- TEASER_END --&gt;&lt;/p&gt;
-&lt;p&gt;手里有一款B.O.W. 的蓝牙折叠键盘, 型号应该是"B.O.W HB188". 正常使用时折叠方式是谷折叠, 但也可以山折叠, 使键盘离开桌面.&lt;/p&gt;
-&lt;p&gt;于是做了一组卡槽, 将键盘两端用线拉住, 键盘就形成了一个"人"字形, 可以支撑在桌面上.
-&lt;img alt="WechatIMG61" src="https://i.loli.net/2018/03/28/5abbb0928b302.jpeg"&gt;
-支撑的高度用线长来调节就可以.
-这样手在打字时, 手腕就不必内旋了.
-&lt;img alt="WechatIMG62" src="https://i.loli.net/2018/03/28/5abbb0914b2e8.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;打印出4个组件固定会比较稳定.
-&lt;img alt="WechatIMG60" src="https://i.loli.net/2018/03/28/5abbb09180420.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;之前这款折叠键盘必须放在桌面上使用, 无法放在腿上, 现在也可以直接放在推腿上用了.
-&lt;img alt="WechatIMG63" src="https://i.loli.net/2018/03/28/5abbb09273b72.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;零件不大, 方便收纳.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.thingiverse.com/thing:2843000"&gt;下载打印零件&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</guid><pubDate>Wed, 28 Mar 2018 15:00:00 GMT</pubDate></item><item><title>如何制作透明冰块</title><link>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/foldable-keyboard-supp/</guid><pubDate>Wed, 28 Mar 2018 15:00:00 GMT</pubDate></item><item><title>如何制作透明冰块</title><link>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;目的: 制作透明的冰块&lt;/p&gt;
 &lt;/li&gt;
@@ -35,118 +22,7 @@ PLA遇到60度以上的热水就软化, 这个特性还真是挺好用的. 虽�
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;教程重新撰写中
-&lt;!--
-* 材料与方法:
-&lt;!-- TEASER_END --&gt;
-0. 材料:
-&lt;em&gt; 塑料瓶
-&lt;/em&gt; 塑料袋
-&lt;em&gt; 气泡包装纸
-&lt;/em&gt; 冰箱&lt;/p&gt;
-&lt;p&gt;1.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;取塑料瓶一个, 瓶底剪掉.&lt;/li&gt;
-&lt;li&gt;瓶盖钻孔.(并非必要)&lt;/li&gt;
-&lt;li&gt;取塑料袋一只. (并非必要)
-&lt;img alt="WechatIMG9" src="https://i.loli.net/2018/03/03/5a99f82c0735c.jpeg"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;2.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;塑料袋穿过瓶盖, 盖好. (并非必要)
-&lt;img alt="WechatIMG10" src="https://i.loli.net/2018/03/03/5a99f82c2a3a4.jpeg"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;3.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;用包装气泡纸把瓶子裹起来. 注意把瓶盖一端裹好. 没有气泡纸的话下次收快递的时候记得留一些.
-&lt;img alt="WechatIMG11" src="https://i.loli.net/2018/03/03/5a99f82c1c512.jpeg"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;4.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;塞进另一个大号的杯子&lt;/li&gt;
-&lt;li&gt;倒水. 倒多少随便, 别溢出来就行.
-&lt;img alt="WechatIMG12" src="https://i.loli.net/2018/03/03/5a99f82c2aad9.jpeg"&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;5.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;放入冰箱冷冻, 至少一晚上. 这一块是大约冻了10小时才有这么大, 要想把整瓶水都冻好, 我觉得要24小时吧.
-&lt;img alt="WechatIMG13" src="https://i.loli.net/2018/03/03/5a99f82c06624.jpeg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;讨论&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;所以就显得钻瓶盖的动作有些多余了, 除非特别有耐心, 把所有的水都冻成冰, 那么杂质就会被挤到塑料袋里去. 到时候拧下瓶盖就去除了.&lt;/p&gt;
-&lt;p&gt;结冰的过程太普通了, 以至于容易忘了其实结冰就是晶体生长过程啊, 和单晶硅生长是一类的过程. --&amp;gt;&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</guid><pubDate>Sat, 03 Mar 2018 01:20:00 GMT</pubDate></item><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
+&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/how-to-make-clear-ice/</guid><pubDate>Sat, 03 Mar 2018 01:20:00 GMT</pubDate></item><item><title>极简中式低温锅</title><link>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我怎么早没想到!&lt;/p&gt;
 &lt;p&gt;两个组件, 一个是电火锅, 一个是温控继电器. 一共不超过150元人民币.
 (1月21日更新, 温控继电器应当使用PID控制器, 这样总价约200元人民币, 结尾详述)&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;h2&gt;选型&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;电火锅&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;电火锅一定要选择&lt;strong&gt;足够傻&lt;/strong&gt;的, 也就是说接通电源就进入工作状态, 断开电源就关闭, 再接通电源还回到工作状态.  &lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;万万不可&lt;/strong&gt;有什么中间的待机状态. 就是那种自作聪明的电器,  接通电源以后进入一个待机状态, 非要等人再按一下才肯工作. 特点是往往有触摸按键, 或者自称微电脑控制.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="电火锅选型" src="https://i.loli.net/2018/01/18/5a601da1737a2.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;图中红框标出的这种机械旋钮或者机械开关是最好的.&lt;/p&gt;
-&lt;p&gt;如果家里有洗碗机, 推荐使用分离式的锅, 好洗. 洗碗机是研究厨艺的必需品.&lt;/p&gt;
-&lt;p&gt;买锅的时候如果拿不准选个能够7天无理由退货的.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;温控继电器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;淘宝上直接搜索温控继电器就可以了. 有的是模组, 需要自己接线, 还有这种已经装好的, 直接可以接入插头的, 当然这种更简单.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="WechatIMG157" src="https://i.loli.net/2018/01/18/5a601da185ae6.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;温控继电器的测温头有不同种类, 我现在使用的是金属头, 可以水下测量. 还有空气测量和塑料封印的. 金属头和塑料头都可以防水, 但金属头的材质不明, 也许不适合烹饪食物使用, 以后可能换成塑料头的, 据说是医用级别. 也可能就用食品袋包裹一下金属头就是了.&lt;/p&gt;
-&lt;p&gt;金属头的好处是很细, 恰好可以从锅盖上的排气孔穿过去. 外面稍微固定一下, 探头最好悬浮在水里.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="WechatIMG155" src="https://i.loli.net/2018/01/18/5a601da1866cb.jpeg"&gt;&lt;/p&gt;
-&lt;p&gt;注意温控继电器的额定功率, 显然要大于电火锅的功率.&lt;/p&gt;
-&lt;p&gt;(1月21日更新, 温控继电器应当使用PID控制器, 结尾详述)&lt;/p&gt;
-&lt;h2&gt;缺点&lt;/h2&gt;
-&lt;p&gt;先说缺点, 这种设定下没有强制水循环的装置, 不打算放个水泵在里面了. 在没有沸腾的时候, 靠水体自身热量扩散和轻微的循环, 水温不均匀, 也不能快速达到热平衡.&lt;/p&gt;
-&lt;p&gt;结果就是控温的负反馈响应慢, 温度不能精确控制在一定范围内, 刚才测试中温度设定在60度, 实际最高可以到70度. 我估计可能以后设定温度可能应该比目标温度低上5度.&lt;/p&gt;
-&lt;p&gt;(1月21日更新, 温控继电器在更换成PID控制器以后, 误差范围在1-2摄氏度, 结尾详述)&lt;/p&gt;
-&lt;h2&gt;优点&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;可以加佐料!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这回可以直接倒卤水进去了, 传统的各种中式调料都可以方便往里加, 一切炖料都不受限制了.&lt;/p&gt;
-&lt;p&gt;靠低温烹饪作出"里嫩"的部分, 如果有必要, 可以做好后再捞出来煎炸或者烤, 处理出"外焦"的部分. 于是, 很容易做出煎卤牛肉, 或者红烧软炸里脊, 或者其他一次性制作很困难的组合.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;无需塑料袋&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;虽说理论上耐120度高温的塑料袋放入六七十度水煮没什么关系, 但总是有些别扭. 而且我发现食品塑料袋并不非常隔水, 或者容易破, 慢煮时间长了以后, 袋子里面的肉汁多多少少会泄露出一些, 用慢煮棒或者热得快的话, 这些蛋白容易粘在加热棒上或者循环水泵上. 现在加热部分是一个完整的锅, 没这些问题了.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以涮火锅&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;不做低温慢煮的时候, 还可以用来涮锅啊.&lt;/p&gt;
-&lt;h2&gt;下一步&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;低温蒸&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;我那个电蒸/烤/空气炸锅, 有"低温蒸"这个选项, 我测了一下温度, 大约是在80-85度, 还是有点高了. 我一直很想试试60度蒸出来的牛肉是怎样的.&lt;/p&gt;
-&lt;p&gt;但直接加笼屉用温控继电器来控制的话, 有问题. 加热水-&amp;gt;蒸汽, 这中间水的比热容太大, 空气又是热的不良导体. 于是负反馈控制的波动更大, 蒸汽温度一下子就升到了96度.&lt;/p&gt;
-&lt;p&gt;有可能需要+超声雾化+防水风扇, 但这样的话就需要考虑插头接线的走法了, 金属笼屉就不合适了, 有可能需要竹笼屉和盖, 比较容易走线.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;搅拌器&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;低温煮的部分, 如果加入一个搅拌装置很可能会降低负反馈的波动. 如果不用水泵, 不用塑料, 不用金属, 大概最简单的就是放个竹蜻蜓进去, 从锅盖中心穿进去, 再用电机驱动.&lt;/p&gt;
-&lt;p&gt;或者也可以找个现成的电动搅拌器, 记得宜家就有一个, 但不知道用电池能持续搅拌多久.&lt;/p&gt;
-&lt;h2&gt;Let it be&lt;/h2&gt;
-&lt;p&gt;经过一下午的测试, 发现温度的波动范围大约在10摄氏度, 波动方向以overshoot为主, 大约是高于设定温度9度.&lt;/p&gt;
-&lt;p&gt;所以其实是相当不准确啊. 因此做温泉蛋恐怕是没希望了, 那个对温度精度要求很高. 不过反正我也不爱吃.&lt;/p&gt;
-&lt;p&gt;对于鸡肉来说10度的波动没什么关系, 至少鸡翅是这样, 鸡胸可能要求高一点. 对于牛肉来说10度的波动已经是从三分熟到全熟之间的差别了.&lt;/p&gt;
-&lt;p&gt;不过, 我觉得可能只要目标温度累积到足够的时间就可以. 比如目标温度是60度, 想煮至少3小时, 那么完全可以设定温度为51度, 然后周期性地波动到60度, 煮个过夜, 那么60度的累积时间怎么样也到3小时了.&lt;/p&gt;
-&lt;p&gt;所以暂时不打算折腾搅拌器了.&lt;/p&gt;
-&lt;p&gt;我记录了一个小时的温度变化, 火力大约在"中档",
-&lt;em&gt; 设定: 启动温度57, 终止温度58,
-&lt;/em&gt; 实际: 最高温度64, 最低温度57, 4分钟从57上升到64, 然后40分钟从64下降回57.约45分钟一个周期
-&lt;img alt="" src="https://goldengrape.github.io/images/slow_cooker_temperature.png"&gt;&lt;/p&gt;
-&lt;h2&gt;更新&lt;/h2&gt;
-&lt;p&gt;在推上被科普了PID控制器, 有开放的讨论就是好啊. 等到货了以后再评测.&lt;/p&gt;
-&lt;h2&gt;PID控制器&lt;/h2&gt;
-&lt;p&gt;被科普PID控制器以后, 重新买了一个型号为XH-W2103的控制器. ~100元人民币. 利用其"自整定功能", 可以找到合适的控制参数, 现在的数据是首次"超调"的温度, 也就是从室温25度直接加热开始, 大约只高出1.8摄氏度. 然后误差就在1度之内了.&lt;/p&gt;
-&lt;p&gt;PID控制器的全程是proportional–integral–derivative controller. 比例-积分-微分控制器.&lt;/p&gt;
-&lt;p&gt;在youtube上找到了&lt;a href="https://www.youtube.com/watch?v=UR0hOmjaHp0"&gt;讲解视频&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;所以现在我推荐是使用PID控制器来控制温度.&lt;/p&gt;
-&lt;p&gt;还有一个问题, 是上次金属温度探头经过卤水煮过以后, 表面出现了深色的污渍, 刮擦不能去除, 有可能是金属表面的氧化或者腐蚀. 所以下次做卤肉可能需要用一小块塑料食品袋包裹金属温度探头了.&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>life science</category><guid>https://goldengrape.github.io/posts/bulabula/simple-Chinese-low-temperature-slow-cooker/</guid><pubDate>Thu, 18 Jan 2018 04:00:04 GMT</pubDate></item></channel></rss>

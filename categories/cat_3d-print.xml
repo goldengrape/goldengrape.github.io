@@ -1,69 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 3D print)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_3d-print.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 21 Jul 2019 14:43:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>大神面镜维修</title><link>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;今天潜水的时候，发现面镜漏水。仔细观察，发现是胶垫没有很好包裹面镜镜片的边缘。可能是挤压造成了镜片和胶套的变形，导致有一点点松脱。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 3D print)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_3d-print.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>大神面镜维修</title><link>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;今天潜水的时候，发现面镜漏水。仔细观察，发现是胶垫没有很好包裹面镜镜片的边缘。可能是挤压造成了镜片和胶套的变形，导致有一点点松脱。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IMG_20190721_214540" src="https://i.loli.net/2019/07/21/5d347437d6c0c44307.jpg"&gt;
 （事后复原出问题的部分）&lt;/p&gt;
 &lt;p&gt;在水边弄了一会儿没有搞定，反而把镜片整个给拆下来了。这面镜可是我自由潜水老师赠我的宝物，回来后经过一番努力终于修好，&lt;/p&gt;
 &lt;p&gt;大神面镜，准确的说应该是Aqua Lung Sphera Mask，&lt;/p&gt;
 &lt;p&gt;&lt;img alt="IMG_20190721_214303" src="https://i.loli.net/2019/07/21/5d34756a82b2d47149.jpg"&gt;
 拆解过程详解如下，不失一般性以右眼为例：&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;将面镜翻90度，底面(鼻孔区域)向上。
-&lt;img alt="MVIMG_20190721_212535" src="https://i.loli.net/2019/07/21/5d3476de4dc2618712.jpg"&gt;
-&lt;img alt="IMG_20190721_214343" src="https://i.loli.net/2019/07/21/5d3475f43d64398116.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;在灰黑交接处，使用一个小号的一字改锥，从此处插入。插入位置尽量靠近内侧边缘
-&lt;img alt="IMG_20190721_214359" src="https://i.loli.net/2019/07/21/5d3476548b38753663.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;改锥下压并且手轻轻向鼻侧移动，撬动灰色塑料套，面镜的下缘会松脱。
-&lt;img alt="IMG_20190721_214450" src="https://i.loli.net/2019/07/21/5d3476a1ee4aa44054.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;这张图片可以看出面镜的黑色下缘通过一个卡扣固定在灰色的塑料套内。图中绿色圆圈标出。一字改锥就是把这个卡扣给松脱了，就可以取出面镜下缘。
-&lt;img alt="MVIMG_20190721_212627" src="https://i.loli.net/2019/07/21/5d34778b13eee39262.jpg"&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;面镜下缘取出后，小心把镜片装入到胶套中，确保胶套包裹住镜片边缘的内外表面。然后再将面镜下缘重新插入回去即可。注意插入的时候，那个三角形结构的底边要紧贴面镜的上缘部分。在将面镜下缘插入时，要小心不要让胶套变形太厉害，免得好不容易插回去时镜片没有放对位置。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;学会这一招以后，似乎可以用来更换面镜的镜片了。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</guid><pubDate>Sun, 21 Jul 2019 13:00:00 GMT</pubDate></item><item><title>齿条绘制</title><link>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学会了绘制齿条rack。就是和齿轮配合，将圆周运动变换成直线运动的结构。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how_to_fix_aqua_lung_sphera_mask/</guid><pubDate>Sun, 21 Jul 2019 13:00:00 GMT</pubDate></item><item><title>齿条绘制</title><link>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学会了绘制齿条rack。就是和齿轮配合，将圆周运动变换成直线运动的结构。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="rack" src="https://i.loli.net/2019/05/12/5cd767b4bdd0f.jpg"&gt;&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;有一个&lt;a href="https://knowledge.autodesk.com/support/fusion-360/learn-explore/caas/screencast/Main/Details/a7992d99-5d4d-48c2-b971-a86ba3014608.html"&gt;fusion360官方制作教程参考&lt;/a&gt;，但是我觉得绘制过程太麻烦。而且在实际使用中，要真实确定齿条和齿轮的具体位置，否则其他支架不好安装。&lt;/p&gt;
-&lt;p&gt;所以自己学习了一下齿轮的知识，齿轮的主要参数有3个：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;module：模数，这个描述了齿的大小&lt;/li&gt;
-&lt;li&gt;齿数：很好理解，一圈有多少个齿&lt;/li&gt;
-&lt;li&gt;压力角：也就是齿轮上每个齿的斜边角度。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;module x 齿数 = 齿轮的“分度圆”直径&lt;/p&gt;
-&lt;p&gt;关于齿轮和齿条的知识，强烈推荐小原齿轮工业株式会社(暨KHK株式会社)制作的&lt;a href="https://khkgears.net/china/gearknowledge/index.html"&gt;《齿轮设计所需的齿轮基础知识》&lt;/a&gt; &lt;/p&gt;
-&lt;p&gt;这种在日常生活中无处不在，却又隐藏在后台，完全不懂也不影响工作学习生活的，无比有用又非常无用的知识，非常酷。&lt;/p&gt;
-&lt;p&gt;画齿条的原理：&lt;/p&gt;
-&lt;p&gt;两个齿轮之间的是按齿轮的“分度圆”来接触的，比如两个完全相等的齿轮互相咬合时，圆心相当于在分度圆的切线上是对称的。&lt;/p&gt;
-&lt;p&gt;如果把齿条看作一个直径无穷大的齿轮，那么也是以分度圆的切线作为对称线，将一个齿镜像即可。这就是画图的原理。&lt;/p&gt;
-&lt;p&gt;详细步骤请参考我放在SlideShare上的&lt;a href="https://www.slideshare.net/goldengrape/draw-a-rack-with-fusion-360"&gt;幻灯&lt;/a&gt;。&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</guid><pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate></item><item><title>3D打印盔甲</title><link>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;咏春拳里有大量用前臂进行格挡的动作，尺骨上也没什么肉，所以很疼啊。小腿上吃了亏，以后对练时肯定要戴上护腿板，但手臂上没有找到现成的护具。&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/rack_by_fusion360/</guid><pubDate>Sun, 12 May 2019 00:00:00 GMT</pubDate></item><item><title>3D打印盔甲</title><link>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;咏春拳里有大量用前臂进行格挡的动作，尺骨上也没什么肉，所以很疼啊。小腿上吃了亏，以后对练时肯定要戴上护腿板，但手臂上没有找到现成的护具。&lt;/p&gt;
 &lt;p&gt;遇到困难，我当然是选择投机取巧而不是勤学苦练。我只是想健身强体，没打算去打比赛和实战。&lt;/p&gt;
 &lt;p&gt;所以，按照这个&lt;a href="https://www.thingiverse.com/thing:2787803"&gt;3D打印到织物上的方法&lt;/a&gt;，制作了两片鱼鳞甲，用来保护自己的手臂。
 &lt;img alt="arm" src="https://i.loli.net/2019/05/08/5cd2ec5de5b0d.jpg"&gt;&lt;/p&gt;
-&lt;!-- TEASER_END --&gt;
-
-&lt;p&gt;打印的时候直接打印整条的。要用到打印到尼龙网上的技巧
-&lt;img alt="armor" src="https://i.loli.net/2019/05/08/5cd2ece07c48a.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;我用的方法与&lt;a href="https://www.thingiverse.com/thing:2787803"&gt;网上说的暂停打印的方法&lt;/a&gt;略有不同。因为我发现暂停打印以后，如果在铺设尼龙网时用了比较长的时间，打印机可能就休眠或者中断打印了。与其手忙脚乱地赶时间，还不如干脆分成两个文件来打印。&lt;/p&gt;
-&lt;p&gt;我用的是&lt;a href="https://www.simplify3d.com/"&gt;Simplify3D&lt;/a&gt;这个软件，可以设定一个打印process的起止高度。所以我把打印过程分成两部分，一个从0开始，打印到0.06mm，也就是2层厚度，然后另一组从0.06mm开始，到打印完成。
-&lt;img alt="屏幕快照 2019-05-08 20.05.47" src="https://i.loli.net/2019/05/08/5cd2ed0c4e581.png"&gt;&lt;/p&gt;
-&lt;p&gt;这样，先打印完第一部分，把尼龙网铺在打印好的两层上，可以用夹子或者用美工胶布固定，整理好以后再打印第二部分。我觉得比较从容。注意第一部分打印完成以后，挤出头和热床可能温度都会掉下来，赶紧手工设定到需要的温度即可。&lt;/p&gt;
-&lt;p&gt;我使用的是掺杂了碳纤维的PLA材料，比较硬。打印完成以后，可以用线缝或者用布料胶水粘到袖子上，套袖是买的自行车防晒用的袖子，有一定弹性，紧身，固定比较好。线缝可能比较耗费时间，布料胶水在淘宝就能找到，能粘上，但不知道粘好以后的强度如何，不过就算掉了几粒，也可以单独打印出单体再重新粘上。&lt;/p&gt;
-&lt;p&gt;这是由一个一个小的单体鳞片构成的，每一个鳞片受力时，能够把压力传递给3个鳞片，于是分散了压力。
-&lt;img alt="mono" src="https://i.loli.net/2019/05/08/5cd2ed34eaa92.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;做好了以后，我用刀试了试，居然可以一定程度上对抗刀砍，这是之前完全没料到的。注意是砍，不是刺，刺的话还是可能被刀尖伤到，鳞片之间没有二次重叠，是有缝隙的。&lt;/p&gt;
-&lt;p&gt;补充一下，用Fusion360画六边形平铺二维平面的方法：&lt;/p&gt;
-&lt;p&gt;本质上还是一个矩形阵列，但“矩形”的两个边并不是互相垂直的，你需要画出60度夹角的两个方向，就是画好六边形以后，画两个中点连线，然后选择矩形阵列，再方向上，按住command键选上两个方向，间距就是六边形两个平行边的宽度或者再加上空隙。注意这样平铺的结构不是矩形的，而是平行四边形，若做成矩形的样子，要勾选掉一些。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="屏幕快照 2019-05-08 21.27.14" src="https://i.loli.net/2019/05/08/5cd2d98eac1e1.png"&gt;&lt;/p&gt;
-&lt;p&gt;哦，忘了放上&lt;a href="https://www.thingiverse.com/thing:3615893"&gt;模型的链接&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</guid><pubDate>Wed, 08 May 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/3D_printed_armor/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/3D_printed_armor/</guid><pubDate>Wed, 08 May 2019 04:00:00 GMT</pubDate></item></channel></rss>
