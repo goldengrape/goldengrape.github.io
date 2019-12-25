@@ -50,10 +50,6 @@
   <lastmod>2019-12-23T06:28:00Z</lastmod>
  </sitemap>
  <sitemap>
-  <loc>https://goldengrape.github.io/categories/cat_posts.xml</loc>
-  <lastmod>2019-12-10T13:34:00Z</lastmod>
- </sitemap>
- <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_python-jiao-cheng.xml</loc>
   <lastmod>2019-12-23T06:28:00Z</lastmod>
  </sitemap>
@@ -179,10 +175,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2019-12-23T06:28:00Z</lastmod>
+  <lastmod>2019-12-25T03:09:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2019-12-23T06:40:00Z</lastmod>
+  <lastmod>2019-12-25T03:09:00Z</lastmod>
  </sitemap>
 </sitemapindex>

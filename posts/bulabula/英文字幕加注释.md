@@ -61,13 +61,15 @@ n. 偶数, 偶校验
 [代码在这里](https://github.com/goldengrape/Partial-English-Subtitle-Translation)
 需要您自己去[彩云科技开放平台](https://dashboard.caiyunapp.com/user/sign_in/)注册账号，申请开通小译Token.
 
+程序后续还会继续修改, 仅作为抛砖引玉用. 
 
-[结果样例在这里](https://github.com/goldengrape/Partial-English-Subtitle-Translation/blob/master/my_subtitles_edited.srt)
+[结果样例在这里](https://raw.githubusercontent.com/goldengrape/Partial-English-Subtitle-Translation/master/result/The.Expanse.S04E01.New.Terra.%E5%8D%95%E8%AF%8D%E7%BF%BB%E8%AF%91.srt)
 结果样例是The expanse s04e01的字幕注释, srt格式, 下载下来在播放器里播放视频时加载就好了, 其中"生词"的定义以下满足3项: 
 
-* 托福雅思GRE; 
+* 四六级托福雅思GRE; 
 * collins<=2星;
-* 英国国家语料库词频顺序bnc>5000; 
-* 当代语料库词频顺序frq>5000;
+* 英国国家语料库词频顺序bnc>3000; 
+* 当代语料库词频顺序frq>3000;
 
-程序里还有些小bug, 比如we're-> were之类, 还有可以优化的地方, 能够降低API翻译的用量.  后续还会继续修改, 仅作为抛砖引玉用. 
+然后手工修改了一下, 目测难度在大学英语4级附近, 也就是大一水平. 其实没太多困难词汇, 只是直接听经常反应不过来. 
+
