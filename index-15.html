@@ -99,393 +99,7 @@ MathJax.Hub.Config({
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/" class="u-url">人工晶体度数计算公式推导(1)</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Golden Grape
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-10-13T12:00:00+08:00" itemprop="datePublished" title="2019-10-13 12:00">2019-10-13 12:00</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>按照Thomas Olsen的综述: <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1600-0420.2007.00879.x">Calculation of intraocular lens power: a review</a> 进行推导, Thomas Olsen就是Olsen公式的作者, 算是很新的公式了. 这是他在2007年发的一篇综述.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>讲人工晶体度数计算的文章, 大概一开始都要八卦一下第一枚人工晶体植入的故事, Ridley爵士在1949年进行了第一枚人工晶体植入, 但是度数算错了, -20D! Ridley用了Gullstrand模型眼的曲率参数, 但忘了PMMA的高折射率. (<a href="https://books.google.com/books?id=tMVSVumHzHUC&amp;lpg=PP1&amp;dq=Sir%20Harold%20Ridley%20and%20his%20Fight%20for%20Sight&amp;hl=zh-CN&amp;pg=PR9#v=onepage&amp;q=Sir%20Harold%20Ridley%20and%20his%20Fight%20for%20Sight&amp;f=false">Sir Harold Ridley and his Fight for Sight</a> )</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="基础光学">基础光学<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%9F%BA%E7%A1%80%E5%85%89%E5%AD%A6">¶</a>
-</h2>
-<p>四则运算、不超过初中数学, 不必紧张</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="屈光度">屈光度<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%B1%88%E5%85%89%E5%BA%A6">¶</a>
-</h3>$$
-F=\frac{n_2-n_1}{r}
-\tag 1
-$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>一个界面的屈光度F, 定义如上单位为D, 也是$M^{-1}$, 单位要千万小心, 如果一直都是字母没什么关系, 但如果代入具体的数字时, 要小心区分毫米、米. 其中:</p>
-<ul>
-<li>$n_1$ 是光线入射到界面之前, 介质的折射率.</li>
-<li>$n_2$ 是光线从界面出射之后, 介质的折射率.</li>
-<li>r 是界面的曲率半径. 如果是向入射光方向凸起的, r的符号为正, 否则为负.</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="聚散度">聚散度<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E8%81%9A%E6%95%A3%E5%BA%A6">¶</a>
-</h3>$$
-V=\frac{n}{d}
-\tag 2
-$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>V: 光线的聚散度</li>
-<li>d: 从当前面到聚焦点的距离, 注意也是有正负的.</li>
-<li>n: 介质的折射率</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>如果聚散度为$V_1$的光线, 经过屈光度为F的透镜面, 出射光的聚散度$V_2$为
-$$
-V_2=V_1+F
-\tag 3
-$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="补充:">补充:<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E8%A1%A5%E5%85%85:">¶</a>
-</h4>
-<p>对于平行光, 聚焦于无穷远点, 也就是d=∞, 那么V=0</p>
-<p>如果聚散度为$V_0=\frac{n}{d}$的光, 在原来的介质中, 前进了$d_0$距离, 那么还剩$d-d_0$的距离就聚焦了, 所以这时候的聚散度$V=\frac{n}{d-d_0}$, 如果已知$V_0, n$, 那么:
-$$ 
-d=\frac{n}{V_0}
-\tag {3.1}
-$$</p>
-<p>将公式(3.1)代入
-$$
-V=\frac{n}{d-d_0}
-\tag {3.2}
-$$</p>
-<p>得到:
-$$
-V =\frac{n}{\frac{n}{V_0}-d_0}
-$$</p>
-<p>上下同时除以n化简, 得到
-$$
-V =\frac{1}{\frac{1}{V_0}-\frac{d_0}{n}}
-\tag {3.3}
-$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="作为“薄透镜”的人工晶体">作为“薄透镜”的人工晶体<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E4%BD%9C%E4%B8%BA%E2%80%9C%E8%96%84%E9%80%8F%E9%95%9C%E2%80%9D%E7%9A%84%E4%BA%BA%E5%B7%A5%E6%99%B6%E4%BD%93">¶</a>
-</h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>如果平行光通过曲率为<code>K</code>的角膜, 眼轴长为<code>Ax</code>, 有效晶体位置为<code>d</code>, 眼内介质的折射率为<code>n</code>, 那么要达成正视眼, IOL的度数应当是多少?</p>
-<p>原文中的推导太快, 我稍微慢一点推:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>平行光的屈光度=0, 经过曲率为K的角膜, 按照公式(3),
-$$
-V_{离开角膜}=0+K=K
-\tag {4.1}
-$$</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>光线经过距离d, 到达人工晶体的位置, 这是的聚散度$V_1$的计算, 和刚才补充公式(3.3)的过程一致, 将公式(4.1)代入到公式(3.3)中, 得到:</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-$$
-V_{进入人工晶体}=\frac{1}{\frac{1}{V_{离开角膜}}-\frac{d}{n_{房水}}}
-$$$$
-V_{进入人工晶体}=\frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}
-\tag 4
-$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>此处假设人工晶体的厚度忽略不计, 那么从人工晶体出来, 只要再走(眼轴长Ax - 人工晶体位置d)的距离就到达了视网膜. 为了能够聚焦到视网膜上, 离开人工晶体的光线, 聚散度应当满足如下公式:</p>
-$$
-V_{离开人工晶体}=\frac{n_{玻璃体}}{Ax-d}
-\tag 5
-$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>根据公式(3), 进入人工晶体和离开人工晶体的屈光度变化, 应当由人工晶体的度数$P_0$提供:
-$$
-V_{离开人工晶体}=V_{进入人工晶体}+P_0
-\tag 3
-$$</p>
-<p>将公式(4)和(5)代入:</p>
-$$
-\frac{n_{玻璃体}}{Ax-d}=\frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}+P_0
-$$$$
-P_0=\frac{n_{玻璃体}}{Ax-d} - \frac{1}{\frac{1}{K}-\frac{d}{n_{房水}}}
-\tag 6
-$$
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>这就是最简单的薄透镜公式. 里面$n_{玻璃体}, n_{房水}$ 是常数, <code>Ax, K</code>是可以测量到的, <code>d</code>在手术前其实是不知道的, 但可以通过各种方式来预测.</p>
-<p>要在薄透镜公式进化,</p>
-<ul>
-<li>将角膜和晶体作为有一定厚度的透镜, 前后表面还有着不同的曲率半径.</li>
-<li>不仅仅考虑近轴光线, 还要考虑上周边光线造成的像差.</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="对ELP的预测:">对ELP的预测:<a class="anchor-link" href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/#%E5%AF%B9ELP%E7%9A%84%E9%A2%84%E6%B5%8B:">¶</a>
-</h3>
-<p>有效人工晶体位置, ELP, 上面薄透镜中的d. 在手术之前是不知道的. 也是最关键的误差产生因素, 所以各种公式都在尽量预测ELP, 某种程度上也就是术后的前房深度ACD.</p>
-<p>Olsen在该论文里吐槽了各种角膜测量、眼轴测量、超声vs激光测量之后, 列出了一个不错的表格, 说明了各种公式中用了哪些参数来预测ELP(ACD), 并且有各个公式的文献, 我就直接把sci-hub的全文链接附上了</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<table>
-<thead><tr>
-<th style="text-align:left">ACD predictor</th>
-<th style="text-align:left">Formula ⁄ author</th>
-<th style="text-align:left"></th>
-</tr></thead>
-<tbody>
-<tr>
-<td style="text-align:left">Axial length</td>
-<td style="text-align:left">Binkhorst</td>
-<td style="text-align:left"><a href="posts/ophthalmology/Derivation-of-calculation-formula-of-intraocular-lens-1/sci-hub.tw/10.1097/00004397-197901940-00010">Binkhorst 1979</a></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Hoffer</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Hoffer 1993</a>80338-0)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">SRK T</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Sanders et al. 1990</a>80706-7)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Holladay</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/s0886-3350(88">Holladay et al. 1988</a>80059-2)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Haigis</td>
-<td style="text-align:left">
-<a href="https://books.google.com/books?id=NhWJsGFK6qgC&amp;lpg=PR5&amp;ots=j0Zry4_HKc&amp;dq=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;lr&amp;pg=PA41#v=onepage&amp;q=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;f=false">Haigis 2004</a> (原文似乎是到Shammas的书里找)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Olsen</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(87">Olsen 1987a</a>80128-1), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">2006</a>;<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Olsen &amp; Gimbel 1993</a>80337-9); <a href="https://sci-hub.tw/10.1016/s0886-3350(13">Olsen et al. 1995</a>80140-x)</td>
-</tr>
-<tr>
-<td style="text-align:left">Corneal height</td>
-<td style="text-align:left">Fyodorov</td>
-<td style="text-align:left">Fyodorov et al. 1975</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">SRK T</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Sanders et al. 1990</a>80706-7)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Holladay I + II</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/s0886-3350(88">Holladay et al. 1988</a>80059-2)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Hoffer</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(13">Hoffer 1993</a>80338-0)</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Olsen</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(86">Olsen 1986b</a>80099-2), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">2006</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left">Preoperative ACD</td>
-<td style="text-align:left">Haigis</td>
-<td style="text-align:left"><a href="https://books.google.com/books?id=NhWJsGFK6qgC&amp;lpg=PR5&amp;ots=j0Zry4_HKc&amp;dq=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;lr&amp;pg=PA41#v=onepage&amp;q=Intraocular%20Lens%20Power%20Calculations%20Haigis&amp;f=false">Haigis 2004</a></td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Holladay II, Olsen</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/S0886-3350(86">Olsen 1986b</a>80099-2), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">2006</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left">Lens thickness</td>
-<td style="text-align:left">Holladay II, Olsen</td>
-<td style="text-align:left">
-<a href="https://sci-hub.tw/10.1016/s0886-3350(13">Olsen et al. 1995</a>80140-x), <a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">Olsen 2006</a>
-</td>
-</tr>
-<tr>
-<td style="text-align:left">Others</td>
-<td style="text-align:left"></td>
-<td style="text-align:left"></td>
-</tr>
-<tr>
-<td style="text-align:left">Age</td>
-<td style="text-align:left">Holladay II</td>
-<td style="text-align:left">Unpublished data</td>
-</tr>
-<tr>
-<td style="text-align:left"></td>
-<td style="text-align:left">Olsen</td>
-<td style="text-align:left"><a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">Olsen 2006</a></td>
-</tr>
-<tr>
-<td style="text-align:left">Refraction</td>
-<td style="text-align:left">Holladay II, Olsen</td>
-<td style="text-align:left"><a href="https://sci-hub.tw/10.1016/j.jcrs.2005.12.139">Olsen 2006</a></td>
-</tr>
-</tbody>
-</table>
-<p>先贤们的文献很多, 慢慢看吧.</p>
-
-</div>
-</div>
-</div>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/Solitaire_Encryption/" class="u-url">纸牌加密</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/Solitaire_Encryption/" class="u-url">纸牌加密</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Golden Grape
@@ -761,6 +375,28 @@ $$
 <p>谢谢。学习愉快。</p>
 </div>
                 </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/how_to_fix_aqua_lung_sphera_mask/" class="u-url">大神面镜维修</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Golden Grape
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/bulabula/how_to_fix_aqua_lung_sphera_mask/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-07-21T21:00:00+08:00" itemprop="datePublished" title="2019-07-21 21:00">2019-07-21 21:00</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <div>
+<p>今天潜水的时候，发现面镜漏水。仔细观察，发现是胶垫没有很好包裹面镜镜片的边缘。可能是挤压造成了镜片和胶套的变形，导致有一点点松脱。</p>
+<p><img alt="IMG_20190721_214540" src="https://i.loli.net/2019/07/21/5d347437d6c0c44307.jpg">
+（事后复原出问题的部分）</p>
+<p>在水边弄了一会儿没有搞定，反而把镜片整个给拆下来了。这面镜可是我自由潜水老师赠我的宝物，回来后经过一番努力终于修好，</p>
+<p>大神面镜，准确的说应该是Aqua Lung Sphera Mask，</p>
+<p><img alt="IMG_20190721_214303" src="https://i.loli.net/2019/07/21/5d34756a82b2d47149.jpg">
+拆解过程详解如下，不失一般性以右眼为例：</p>
+<p class="more"><a href="posts/bulabula/how_to_fix_aqua_lung_sphera_mask/">阅读更多…</a></p>
+</div>
+                </div>
             </article>
 </div>
     
@@ -768,19 +404,7 @@ $$
 <li class="previous"><a href="index-16.html" rel="prev">较新的文章</a></li>
             <li class="next"><a href="index-14.html" rel="next">以前的文章</a></li>
         </ul>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-        processEscapes: true
-    },
-    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
-    "HTML-CSS": {
-        styles: {'.MathJax_Display': {"margin": 0}}
-    }
-});
-</script><!--End of body content--><footer id="footer">
+<!--End of body content--><footer id="footer">
             Contents © 2019         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
