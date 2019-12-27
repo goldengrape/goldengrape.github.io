@@ -1,5 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Dec 2019 08:18:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>英文字幕加单词注释</title><link>https://goldengrape.github.io/posts/bulabula/english_subtitles_with_chinese_annotations/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;写了一小段代码, 给英文字幕里的生词加上中文解释. 效果如图所示:
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Dec 2019 08:25:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>医生改行指南</title><link>https://goldengrape.github.io/posts/bulabula/guideline_of_career_change_for_medical_doctor%20/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;hr&gt;
+&lt;p&gt;……其次疾人，而今司命之所属，无奈何也。&lt;/p&gt;
+&lt;p&gt;田园将芜胡不归？既自以心为形役，奚惆怅而独悲？悟已往之不谏，知来者之可追。实迷途其未远，觉今是而昨非。&lt;/p&gt;
+&lt;p&gt;故作文。&lt;/p&gt;
+&lt;p&gt;【1. 为什么改行？】&lt;/p&gt;
+&lt;p&gt;中国大陆的医科是从大学一年级开始的，也就是说你选择从医的时间是在高三毕业18岁左右。18岁的你知道什么呢？这年龄去看儿科也不过分吧。那时候的你知道自己擅长什么，喜欢什么，兴趣爱好是什么，理想是什么么？&lt;/p&gt;
+&lt;p&gt;我自己觉得医治好一个人的疾病，改变一个人的生活并没什么成就感，我更喜欢批量去改变疾病的进程。这正是我现在做的事情——通过发明来改变世界。&lt;/p&gt;
+&lt;p&gt;@StarKnight 提出一个是否改行的检验标准：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;测定你是否热爱现在的工作，有一个指标就是：如果你中了6亿日元(约3700万rmb)彩票，你会不会马上辞职。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;【2.什么人能够改行】&lt;/p&gt;
+&lt;p&gt;先说什么人不能改行吧。如果是外科系统的医生，如果你满足以下两个条件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;碰到疑难杂症眼前一亮。&lt;/li&gt;
+&lt;li&gt;停手术以后会有戒断症状。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果你满足这两个条件，还是别改行了。你会是非常好的医生，而且你正在做你热爱的工作。很遗憾，我满足条件2，但是看见疑难杂症常常是眼前一黑。&lt;/p&gt;
+&lt;p&gt;能够改行的人最好能够满足：有理想、有道德、有知识、有纪律。其中有理想排在第一位。你真的得知道你到底想要什么。&lt;/p&gt;
+&lt;p&gt;【3. 改行前的准备】&lt;/p&gt;
+&lt;p&gt;心理准备：改行是对自己的投资，应该像对股票一样冷酷无情。你要精确的计算出投资回报率、收益率、预估风险，设定退出条件和退出途径。特别是退出条件和退出途径，要有预案。一旦满足退出条件立刻严格执行退出预案。&lt;/p&gt;
+&lt;p&gt;资金准备：改行也跟创业或者投资类似，你也需要有各种准备。一般改行找工作要3-6个月，能够骑马找马最好，但至少应该准备出半年以上的工资。&lt;/p&gt;
+&lt;p&gt;学术准备：医生改行。你是专业人士，争取要做到在同龄或者同年资中某一个区域有P&amp;lt;0.05的竞争力。&lt;/p&gt;
+&lt;p&gt;获得支持：如果已婚，至少要获得配偶的支持。这是占家庭收入一半的投资，必须获得你投资伙伴的强力支持才能撑过去。&lt;/p&gt;
+&lt;p&gt;你可能学了5-7-8-10年的医学，但这跟改行没什么关系。翅膀硬了是教育成功的标志。&lt;/p&gt;
+&lt;p&gt;引用@慕容晓舟 的话：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对年轻孩子们改行，我觉得也得沉住气，不是越早改行越好，起码得把一件事学明白了再评价自己到底是不是真不喜欢。要翅膀硬了才知道自己是善飞还是善跑。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我是当完了院总以后才出来的。院总时的训练对我非常重要。&lt;/p&gt;
+&lt;p&gt;【4.改行初期的转换】&lt;/p&gt;
+&lt;p&gt;做你喜欢的工作。做你擅长的工作。做喜欢和擅长的事情，挣钱最多。 最有可能的，你还是做医学相关的职业。这时候会有从甲方到乙方的转换，这样很好，通过角色的转换，你可以更全面的看待整个行业。你的工作可以通过医生来帮助更多的病人，这样是好的。&lt;/p&gt;
+&lt;p&gt;我觉得换工作，就像是在换银行存钱，而且是复利存钱。千万不要把利息给清零了，不要抛弃掉之前学到的知识，也不要抛弃以前的社会关系，之前的积累。&lt;/p&gt;
+&lt;p&gt;更换的工作要对自己有意义，有帮助，有提高。&lt;/p&gt;
+&lt;p&gt;换了工作以后，你会发现自己又回到了大二的状态『知道自己不知道』（不要中二）&lt;/p&gt;
+&lt;p&gt;（普通大学四年的状态分别是：不知道自己不知道，知道自己不知道，不知道自己知道，知道自己知道&lt;/p&gt;
+&lt;p&gt;医科大学5/7/8/10年制各年的状态分别是：要考试了还有很多不知道，要考试了还有很多不知道，要考试了还有很多不知道……）&lt;/p&gt;
+&lt;p&gt;【5.医学到底学的是什么】&lt;/p&gt;
+&lt;p&gt;医学是解决问题的学问，你写的那些大病历都会在脑子里留下痕迹，这就是临床思维。&lt;/p&gt;
+&lt;p&gt;临床思维是一种思维模式，一种发现问题解决问题的模式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们使用固定的顺序去观察问题，来保证没有遗漏任何细节，&lt;/li&gt;
+&lt;li&gt;我们区别每一种特征性的细节以固定的方式记录，&lt;/li&gt;
+&lt;li&gt;我们穷举出所有可能的诊断，用最有可能的诊断来解释所有的症状，（奥卡姆剃刀）&lt;/li&gt;
+&lt;li&gt;我们使用各种手段来证实或者证伪我们的假设，&lt;/li&gt;
+&lt;li&gt;我们对同一种病因比较不同的治疗方法，我们用统计方法尽可能排除干扰&lt;/li&gt;
+&lt;li&gt;我们记录、总结、归纳、提高&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这就是5-7-8-10年医学教育所教授的宝贵经验。可以用在其他各种行业中。&lt;/p&gt;
+&lt;p&gt;医学是解决问题的学问。&lt;/p&gt;
+&lt;p&gt;【6.继续教育】&lt;/p&gt;
+&lt;p&gt;逆水行舟不进则退，如果你改行了，其他的同事还在强力的CME学分压迫之中。他们在不断的进步。医学是专业教育，所谓专业，就是除了看病和手术，你其他啥也不会。改行以后就更需要学习更多的东西。比如从商的同学，需要重新学习商科的基础课。顺便推荐沃顿的四门基础课：https://www.coursera.org/penn 市场、金融、会计和运营；或者涉及到临床实验，你需要再深入学习统计学、R语言或者Matlab；还有可能你需要练习演讲技巧、PPT制作、项目管理。。。&lt;/p&gt;
+&lt;p&gt;【7.新的开始】&lt;/p&gt;
+&lt;p&gt;每个人的故事会有所不同，想清楚，开始行动吧&lt;/p&gt;
+&lt;p&gt;【8.中心思想】&lt;/p&gt;
+&lt;p&gt;差点忘了写上本文的中心思想：Fuck the Fucking World Fuckingly&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/guideline_of_career_change_for_medical_doctor%20/</guid><pubDate>Fri, 27 Dec 2019 08:00:00 GMT</pubDate></item><item><title>英文字幕加单词注释</title><link>https://goldengrape.github.io/posts/bulabula/english_subtitles_with_chinese_annotations/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;写了一小段代码, 给英文字幕里的生词加上中文解释. 效果如图所示:
 &lt;img alt="The.Expanse.S04E01.New.Terra.1080p.AMZN.WEB-DL.DDP5.1.H.264-NTG-0005" src="https://i.loli.net/2019/12/23/Dfg8w9snSizWhMk.png"&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;1,300 habitable(可居住) systems(系统) on the other side of those rings(环).&lt;/p&gt;
@@ -19,7 +74,4 @@
 &lt;p&gt;如果您不熟悉数据可视化，建议您看看耶鲁大学的Edward Tufte的著名著作&lt;a href="http://en.wikipedia.org/wiki/Edward_Tufte"&gt;《定量信息的视觉展示》&lt;/a&gt; 。 他&lt;a href="https://www.inf.ed.ac.uk/teaching/courses/pi/2016_2017/phil/tufte-powerpoint.pdf"&gt;对Powerpoint的使用和滥用的批评&lt;/a&gt; 很有趣而且很有见地。 Stephen Few的作品也很受欢迎，例如&lt;a href="http://www.analyticspress.com/smtn.php"&gt;Show Me the Numbers：Designing Tables and Graps to Enlighten&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_4/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_4/</guid><pubDate>Sat, 07 Dec 2019 04:04:00 GMT</pubDate></item><item><title>专利分析工具概述(3)数据挖掘</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;数据挖掘&lt;/h3&gt;
 &lt;p&gt;数据挖掘工具越来越多。 以下是一些引起我们注意的工具。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/</guid><pubDate>Sat, 07 Dec 2019 04:03:00 GMT</pubDate></item><item><title>专利分析工具概述(2)数据清洗工具</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;数据清洗工具&lt;/h3&gt;
-&lt;h4&gt;&lt;a href="http://openrefine.org"&gt;Open Refine&lt;/a&gt; (以前叫Google Refine)&lt;/h4&gt;
-&lt;p&gt;数据分析和可视化的基本规则是：“垃圾进=垃圾出”。 如果您的数据最初没有经过清洗，那么分析或可视化的结果很垃圾也不要感到惊讶。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_2/</guid><pubDate>Sat, 07 Dec 2019 04:02:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_3/</guid><pubDate>Sat, 07 Dec 2019 04:03:00 GMT</pubDate></item></channel></rss>

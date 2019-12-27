@@ -1,7 +1,7 @@
 <!--
 .. title: 医生改行指南
 .. slug: guideline_of_career_change_for_medical_doctor 
-.. date: 2018-12-27 16:30 UTC+08:00
+.. date: 2019-12-27 16:00 UTC+08:00
 .. tags:
 .. category:
 .. link:
