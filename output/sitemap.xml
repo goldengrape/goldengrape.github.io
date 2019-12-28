@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2019-12-07T07:10:00Z</lastmod>
+  <lastmod>2019-12-28T16:26:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -23,7 +23,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-12-28T14:00:00Z</lastmod>
+  <lastmod>2019-12-28T16:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -227,7 +227,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-16.html</loc>
-  <lastmod>2019-12-28T14:00:00Z</lastmod>
+  <lastmod>2019-12-28T16:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -350,6 +350,10 @@
   <lastmod>2019-06-27T11:39:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/Four_articles_on_health_care_reform/</loc>
+  <lastmod>2019-12-28T16:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/posts/bulabula/How_to_get_into_work_or_study_quickly/</loc>
   <lastmod>2019-08-17T07:28:00Z</lastmod>
  </url>
@@ -376,6 +380,14 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/Meaningful-criticism-is-for-variables/</loc>
   <lastmod>2019-06-11T18:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/Self_Defense_101/</loc>
+  <lastmod>2019-12-28T16:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/Self_Defense_104/</loc>
+  <lastmod>2019-12-28T16:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/Smart-home-and-evidence-of-absence/</loc>
