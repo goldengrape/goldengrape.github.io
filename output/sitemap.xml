@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2019-12-28T16:26:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -22,8 +22,12 @@
   <lastmod>2019-01-08T09:07:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/2020/</loc>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2019-12-28T16:30:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -199,67 +203,67 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-1.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-10.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-11.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-12.html</loc>
-  <lastmod>2019-12-27T08:25:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-13.html</loc>
-  <lastmod>2019-12-27T08:25:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-14.html</loc>
-  <lastmod>2019-12-27T08:25:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-15.html</loc>
-  <lastmod>2019-12-27T08:25:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-16.html</loc>
-  <lastmod>2019-12-28T16:30:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-4.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-5.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-6.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-7.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-8.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-9.html</loc>
-  <lastmod>2019-12-23T06:39:00Z</lastmod>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/pages/github-projects/</loc>
@@ -384,10 +388,6 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/Self_Defense_101/</loc>
   <lastmod>2019-12-28T16:24:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/bulabula/Self_Defense_104/</loc>
-  <lastmod>2019-12-28T16:30:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/Smart-home-and-evidence-of-absence/</loc>
@@ -708,6 +708,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</loc>
   <lastmod>2019-08-19T04:53:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</loc>
+  <lastmod>2020-01-20T13:31:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/child_trauma_suture_in_ER%20%20/</loc>
