@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SARI数据分析(1): 控制新出现流行病的非药物干预措施比较 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_1/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../SARI_data_analysis/" title="SARI数据分析(0)" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="SARI数据分析(1): 控制新出现流行病的非药物干预措施比较">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_1/">
+<meta property="og:description" content="控制新出现流行病的非药物干预措施比较¶Comparing nonpharmaceutical interventions for containing emerging epidemics
+2017年, 发在PNAS, 作者是哈佛大学公共卫生学院和哈佛医学院, 目前被引用13次,
+全文: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/
+以">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-01-22T21:00:00+08:00">
+<meta property="article:tag" content="python">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://goldengrape.github.io/">
+
+            <span id="blog-title">GoldenGrape's Blog</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.ipynb" id="sourcelink" class="nav-link">源文件</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../../../index.html" class="nav-link">首页</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../archive.html" class="nav-link">文章存档</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/" class="nav-link">标签</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/jiao-cheng/" class="nav-link">教程</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../github-projects/" class="nav-link">开源项目</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">SARI数据分析(1): 控制新出现流行病的非药物干预措施比较</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Golden Grape
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T21:00:00+08:00" itemprop="datePublished" title="2020-01-22 21:00">2020-01-22 21:00</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.ipynb" class="sourcelink">源文件</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="控制新出现流行病的非药物干预措施比较">控制新出现流行病的非药物干预措施比较<a class="anchor-link" href="#%E6%8E%A7%E5%88%B6%E6%96%B0%E5%87%BA%E7%8E%B0%E6%B5%81%E8%A1%8C%E7%97%85%E7%9A%84%E9%9D%9E%E8%8D%AF%E7%89%A9%E5%B9%B2%E9%A2%84%E6%8E%AA%E6%96%BD%E6%AF%94%E8%BE%83">¶</a>
+</h3>
+<p>Comparing nonpharmaceutical interventions for containing emerging epidemics</p>
+<p>2017年, 发在PNAS, 作者是哈佛大学公共卫生学院和哈佛医学院, 目前被引用13次,
+全文: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/</a></p>
+<p>以下先读懂原文, 然后再看看能否根据原文的模型, 拟合一个SARI的模型出来.
+<!-- TEASER_END --></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="方法">方法<a class="anchor-link" href="#%E6%96%B9%E6%B3%95">¶</a>
+</h3>
+<h4 id="定义:">定义:<a class="anchor-link" href="#%E5%AE%9A%E4%B9%89:">¶</a>
+</h4>
+<ul>
+<li>“接触者追踪”(Contact tracing)是识别和评估接触过某种疾病的人的过程。 有症状的接触者被立即隔离; 没有症状的接触者被隔离或者接受症状监测。 </li>
+<li>“隔离”(Isolation)是分离一个有症状的被确认感染的个体。 </li>
+<li>“检疫”(Quarantine) 是指被认为已暴露但目前未患病的个人的隔离(34)。 如果出现症状，他 / 她将被隔离并接受医疗护理。 </li>
+<li>“症状监测”(Symptom monitoring)是对被认为暴露但没有生病的个人定期进行的症状评估。 如果发现症状，个人被隔离。 </li>
+<li>“求医行为”(Health-seeking behavior)是指在出现症状时寻求医疗保健，导致隔离的行为。</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="模型:">模型:<a class="anchor-link" href="#%E6%A8%A1%E5%9E%8B:">¶</a>
+</h4>
+<p>个体经历“易感-暴露-传染-恢复”的疾病过程.</p>
+<p>分析集中在新兴传染病的早期流行阶段，假设在最初几代传播中没有明显的易感者的消耗(大概是早期没什么人病死的委婉说法)。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>感染后，产生传染性和出现症状前的天数分别为传染潜伏期 ($T_{LAT}$) 和症状潜伏期 ($T_{INC}$)</p>
+<p>由于症状、病原体浓度和行为可在整个病程中变化，我们允许相对传染性(βτ)随时间 τ（自传染性发生以来）变化 。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/bin/pnas.1616438114fig01.jpg" alt="Fig 1"></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/figure/fig01/">图1</a> (插图看似总是不成功, 如果图裂了, 就点击看原文的图吧)</p>
+<p>图1: 疾病自然史和干预时机示意图。从感染事件的左侧开始，进展至传染潜伏期 ($T_{LAT}$)，传染潜伏期内无传染性, 然后进入传染期 $d_{INF}$ 天，感染性晚期峰值 τβ。</p>
+<p>对于 A–C 疾病，显示症状分别出现在传染性出现之前、同时出现和之后。我们在这里展示了一个个体，其在感染后不久被追踪，并在短暂延迟 $D_{CT}$ 后被置于症状监测或检疫之下。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>最近的 SARS 和埃博拉流行病表明，医院隔离并不总是包含传播；因此，我们允许隔离有效性 (γ) 发生变化，以反映不同的环境。</li>
+<li>被追踪 ($P_{CT}$) 的接触者比例可以小于 1，包括未能回忆接触者的有症状感染者、无症状的“沉默”感染事件和识别接触者的挑战。</li>
+<li>风险分析中的缺陷和不确定性可减少真正感染的追踪接触者 ($P_{INF}$) 的比例。</li>
+<li>追踪接触者的延误 ($D_{CT}$) 可能有许多原因，包括棘手的道路和人员限制。</li>
+<li>症状发作和隔离之间的延迟 ($D_{SM}$) 特别适用于症状监测下的个体，并受监测频率、识别有时不可靠的临床特征的延迟和症状检测时及时隔离的延迟的影响。</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>干预参数:</p>
+<table>
+<thead><tr>
+<th style="text-align:left">参数名</th>
+<th style="text-align:left">变量</th>
+<th style="text-align:left">样例表现(最佳)</th>
+<th style="text-align:left">样例表现(高)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">隔离效果</td>
+<td style="text-align:left">γ</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0.9</td>
+</tr>
+<tr>
+<td style="text-align:left">追踪接触者的比例</td>
+<td style="text-align:left">$P_{CT}$</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0.9</td>
+</tr>
+<tr>
+<td style="text-align:left">被追踪接触者中真正感染的百分比</td>
+<td style="text-align:left">$P_{INF}$</td>
+<td style="text-align:left">1</td>
+<td style="text-align:left">0.5</td>
+</tr>
+<tr>
+<td style="text-align:left">追踪接触者的延迟</td>
+<td style="text-align:left">$D_{CT}$</td>
+<td style="text-align:left">0.25 ± 0.25 d</td>
+<td style="text-align:left">0.5 ± 0.5 d</td>
+</tr>
+<tr>
+<td style="text-align:left">从症状开始到隔离的延迟</td>
+<td style="text-align:left">$D_{SM}$</td>
+<td style="text-align:left">0.25 ± 0.25 d</td>
+<td style="text-align:left">0.5 ± 0.5 d</td>
+</tr>
+<tr>
+<td style="text-align:left">从症状发作到求医行为的延迟</td>
+<td style="text-align:left">$D_{HSB}$</td>
+<td style="text-align:left">Disease-dependent</td>
+<td style="text-align:left">∼unif(0, $d_{INF}$)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="模拟:">模拟:<a class="anchor-link" href="#%E6%A8%A1%E6%8B%9F:">¶</a>
+</h4>
+<p>我们从疾病特异性输入分布中绘制每个模拟个体的疾病特征。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>未完成草稿, 持续更新中</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/python/" rel="tag">python</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../SARI_data_analysis/" rel="prev" title="SARI数据分析(0)">上一篇文章</a>
+            </li>
+        </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script></article><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script>
+</body>
+</html>
