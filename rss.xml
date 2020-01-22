@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 20 Jan 2020 13:47:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>《柳叶刀》: 保护中国医生</title><link>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一篇《柳叶刀》, 发表于2020年1月11日. 我觉得有关部门领导可以把自己当作第一作者, 算作政绩.
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 22 Jan 2020 09:45:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SARI数据分析(0)</title><link>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;貌似最近只有待在家里了, 看着漫天飞舞的官方消息、民间消息. 突然有个想法, 不知道是否可以根据现有的SARI数据外推一下, 看看到底疫情能够持续多久, 高峰大概何时, 以决定何时能够自由外出就餐和游玩之类. &lt;/p&gt;
+&lt;p&gt;万事开头, 先查文献:&lt;/p&gt;
+&lt;p&gt;这一篇文献回顾了研究SARS和MERS的流行病学模型:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Epidemic Models of Contact Tracing: Systematic Review of Transmission Studies of Severe Acute Respiratory Syndrome and Middle East Respiratory Syndrome, &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6376160"&gt;全文&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;里面列出了7个模型: &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Peak C.M., Childs L.M., Grad Y.H., Buckee C.O. Comparing nonpharmaceutical interventions for containing emerging epidemics. Proc Natl Acad Sci U S A. 2017;114:4023–4028. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Feng Z., Yang Y., Xu D., Zhang P., McCauley M.M. Timely identification of optimal control strategies for emerging infectious diseases. J Theor Biol. 2009;259:165–171. &lt;a href="https://sci-hub.tw/10.1016/j.jtbi.2009.03.006"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Klinkenberg D., Fraser C., Heesterbeek H. The effectiveness of contact tracing in emerging epidemics. PLoS One. 2006;1:e12. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1762362/"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Chen S.C., Chang C.F., Liao C.M. Predictive models of control strategies involved in containing indoor airborne infections. Indoor Air. 2006;16:469–481. &lt;a href="https://sci-hub.tw/10.1111/j.1600-0668.2006.00443.x"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Fraser C., Riley S., Anderson R.M., Ferguson N.M. Factors that make an infectious disease outbreak controllable. Proc Natl Acad Sci U S A. 2004;101:6146–6151. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC395937/"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Lloyd-Smith J.O., Galvani A.P., Getz W.M. Curtailing transmission of severe acute respiratory syndrome within a community and its hospital. Proc Biol Sci. 2003;270:1979–1989. &lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1691475/"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Becker N.G., Glass K., Li Z., Aldis G.K. Controlling emerging infectious diseases like SARS. Math Biosci. 2005;193:205–221. &lt;a href="https://sci-hub.tw/10.1016/j.mbs.2004.07.006"&gt;全文&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;研究的特点概述:&lt;/p&gt;
+&lt;hr&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="left"&gt;作者&lt;/th&gt;
+&lt;th align="left"&gt;Lloyd Smith et al.&lt;/th&gt;
+&lt;th align="left"&gt;Fraser et al.&lt;/th&gt;
+&lt;th align="left"&gt;Becker et al.&lt;/th&gt;
+&lt;th align="left"&gt;Chen et al.&lt;/th&gt;
+&lt;th align="left"&gt;Klinkenberg et al.&lt;/th&gt;
+&lt;th align="left"&gt;Feng et al.&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;年份&lt;/td&gt;
+&lt;td align="left"&gt;2003&lt;/td&gt;
+&lt;td align="left"&gt;2004&lt;/td&gt;
+&lt;td align="left"&gt;2005&lt;/td&gt;
+&lt;td align="left"&gt;2006&lt;/td&gt;
+&lt;td align="left"&gt;2006&lt;/td&gt;
+&lt;td align="left"&gt;2009&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;模型&lt;/td&gt;
+&lt;td align="left"&gt;基于人口的随机 SEIR 区间模型&lt;/td&gt;
+&lt;td align="left"&gt;基于 Agent 的离散时间仿真模型&lt;/td&gt;
+&lt;td align="left"&gt;基于 Agent 的分支过程与家庭层传递模型&lt;/td&gt;
+&lt;td align="left"&gt;基于人口的: 基于 Von Foerster 方程的控制模型&lt;/td&gt;
+&lt;td align="left"&gt;基于 Agent 的离散时间仿真模型&lt;/td&gt;
+&lt;td align="left"&gt;基于人口: SEIR 区域模型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;研究的 Co-V&lt;/td&gt;
+&lt;td align="left"&gt;SARS&lt;/td&gt;
+&lt;td align="left"&gt;SARS&lt;/td&gt;
+&lt;td align="left"&gt;SARS&lt;/td&gt;
+&lt;td align="left"&gt;SARS&lt;/td&gt;
+&lt;td align="left"&gt;SARS&lt;/td&gt;
+&lt;td align="left"&gt;SARS&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="left"&gt;自我报告的局限性&lt;/td&gt;
+&lt;td align="left"&gt;1. 模型中没有考虑超级扩散事件, 2. 模型中没有考虑医院中的非感染病人&lt;/td&gt;
+&lt;td align="left"&gt;由于未能通过接触追踪确定疾病发生之间的相关结构，导致接触追踪效力的过高估计&lt;/td&gt;
+&lt;td align="left"&gt;未考虑不同干预措施对感染动态的影响&lt;/td&gt;
+&lt;td align="left"&gt;模型没有考虑传播异质性，如不同的社会接触混合等&lt;/td&gt;
+&lt;td align="left"&gt;1. 模型在追踪或隔离之前只考虑传播,  2. 这种模式没有将医院和社区的环境结合起来&lt;/td&gt;
+&lt;td align="left"&gt;1. 将就诊率与诊断概率相结合,2. 被隔离的个体被假定在整个潜伏期的一半时间。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;p&gt;立个Flag,&lt;/p&gt;
+&lt;p&gt;接下来我将试着研读这些文献, 重现其中的模型, 并按照新公布的数据进行参数估计和外推. 本人并非公共卫生专业, 数学也一般, 仅供自娱自乐. 完成不了, 就算了.&lt;/p&gt;&lt;/div&gt;</description><category>SARI</category><guid>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis/</guid><pubDate>Wed, 22 Jan 2020 04:00:00 GMT</pubDate></item><item><title>《柳叶刀》: 保护中国医生</title><link>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一篇《柳叶刀》, 发表于2020年1月11日. 我觉得有关部门领导可以把自己当作第一作者, 算作政绩.
 &lt;a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30003-9/fulltext"&gt;https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30003-9/fulltext&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;全文翻译如下:&lt;/p&gt;
 &lt;p&gt;12月24日，当北京民航总医院急诊医生杨文被患者儿子刺死时，中国的医患关系似乎跌到了谷底。这起杀戮事件受到中国医师协会的谴责，并引发了公众的愤怒情绪。12月28日，中国最高立法者批准了第一部保护卫生工作者的基础性和综合性&lt;a href="https://www.globaltimes.cn/content/1175034.shtml"&gt;法律&lt;/a&gt;，该法律将于今年6月1日生效。法律禁止任何组织或个人威胁或损害卫生工作者的人身安全或尊严。尽管值得称赞，但单靠法律方法不可能充分解决这一复杂问题。&lt;/p&gt;
@@ -49,6 +120,4 @@
 &lt;p&gt;在本章中，我们介绍了一些可用于专利分析的主要免费和开源工具。 这些不是专利专用工具，但可以很容易地应用于专利分析。 除了清洗专利申请人和发明人的姓名以及相关字段以外，专利数据非常适合可视化和网络映射。 国家级数据，地址字段和地名在文本中的可用性也意味着专利数据可轻松用于地理制图。&lt;/p&gt;
 &lt;p&gt;实际上，重要的是要确定一组最适合您以及最适合您的专利分析任务的工具。&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_9/</guid><pubDate>Sat, 07 Dec 2019 04:09:00 GMT</pubDate></item><item><title>专利分析工具概述(8)文本挖掘</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;那里有很多文本挖掘工具，其中许多是免费或开源的。 这是我们发现的一些。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/</guid><pubDate>Sat, 07 Dec 2019 04:08:00 GMT</pubDate></item><item><title>专利分析工具概述(7)地理信息制图</title><link>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;地理信息制图&lt;/h3&gt;
-&lt;p&gt;除了无所不在的&lt;a href="https://www.google.com/maps/"&gt;Google地图&lt;/a&gt; 或众所周知的&lt;a href="https://www.google.co.uk/intl/en_uk/earth/"&gt;Google 地球&lt;/a&gt; 我们认为值得仔细研究其他服务。
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 4 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/</guid><pubDate>Sat, 07 Dec 2019 04:07:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>patent</category><category>WIPO_analytics_tools</category><guid>https://goldengrape.github.io/posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/</guid><pubDate>Sat, 07 Dec 2019 04:08:00 GMT</pubDate></item></channel></rss>

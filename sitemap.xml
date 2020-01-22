@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2020-01-20T13:31:00Z</lastmod>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -27,11 +27,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-01-20T13:31:00Z</lastmod>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2019-12-23T06:42:00Z</lastmod>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -178,6 +178,10 @@
   <lastmod>2017-12-28T17:24:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/sari/</loc>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/sheng-huo-fang-shi/</loc>
   <lastmod>2018-01-14T17:08:00Z</lastmod>
  </url>
@@ -231,7 +235,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-16.html</loc>
-  <lastmod>2020-01-20T13:31:00Z</lastmod>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-17.html</loc>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -832,6 +840,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/PatentIn-To-JSON/</loc>
   <lastmod>2017-12-28T17:24:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis/</loc>
+  <lastmod>2020-01-22T09:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Ukraine-reduce-tax-problem/</loc>

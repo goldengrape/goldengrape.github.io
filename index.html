@@ -13,7 +13,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://goldengrape.github.io/">
-<link rel="next" href="index-16.html" type="text/html">
+<link rel="next" href="index-17.html" type="text/html">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -26,7 +26,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ophthalmology/Protecting_Chinese_doctors/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/SARI/SARI_data_analysis/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -98,7 +98,98 @@ MathJax.Hub.Config({
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ophthalmology/Protecting_Chinese_doctors/" class="u-url">《柳叶刀》: 保护中国医生</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python/SARI/SARI_data_analysis/" class="u-url">SARI数据分析(0)</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Golden Grape
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/python/SARI/SARI_data_analysis/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-01-22T12:00:00+08:00" itemprop="datePublished" title="2020-01-22 12:00">2020-01-22 12:00</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <div>
+<p>貌似最近只有待在家里了, 看着漫天飞舞的官方消息、民间消息. 突然有个想法, 不知道是否可以根据现有的SARI数据外推一下, 看看到底疫情能够持续多久, 高峰大概何时, 以决定何时能够自由外出就餐和游玩之类. </p>
+<p>万事开头, 先查文献:</p>
+<p>这一篇文献回顾了研究SARS和MERS的流行病学模型:</p>
+<blockquote>
+<p>Epidemic Models of Contact Tracing: Systematic Review of Transmission Studies of Severe Acute Respiratory Syndrome and Middle East Respiratory Syndrome, <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6376160">全文</a></p>
+</blockquote>
+<p>里面列出了7个模型: </p>
+<ol>
+<li>Peak C.M., Childs L.M., Grad Y.H., Buckee C.O. Comparing nonpharmaceutical interventions for containing emerging epidemics. Proc Natl Acad Sci U S A. 2017;114:4023–4028. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/">全文</a>
+</li>
+<li>Feng Z., Yang Y., Xu D., Zhang P., McCauley M.M. Timely identification of optimal control strategies for emerging infectious diseases. J Theor Biol. 2009;259:165–171. <a href="https://sci-hub.tw/10.1016/j.jtbi.2009.03.006">全文</a>
+</li>
+<li>Klinkenberg D., Fraser C., Heesterbeek H. The effectiveness of contact tracing in emerging epidemics. PLoS One. 2006;1:e12. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1762362/">全文</a>
+</li>
+<li>Chen S.C., Chang C.F., Liao C.M. Predictive models of control strategies involved in containing indoor airborne infections. Indoor Air. 2006;16:469–481. <a href="https://sci-hub.tw/10.1111/j.1600-0668.2006.00443.x">全文</a>
+</li>
+<li>Fraser C., Riley S., Anderson R.M., Ferguson N.M. Factors that make an infectious disease outbreak controllable. Proc Natl Acad Sci U S A. 2004;101:6146–6151. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC395937/">全文</a>
+</li>
+<li>Lloyd-Smith J.O., Galvani A.P., Getz W.M. Curtailing transmission of severe acute respiratory syndrome within a community and its hospital. Proc Biol Sci. 2003;270:1979–1989. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1691475/">全文</a>
+</li>
+<li>Becker N.G., Glass K., Li Z., Aldis G.K. Controlling emerging infectious diseases like SARS. Math Biosci. 2005;193:205–221. <a href="https://sci-hub.tw/10.1016/j.mbs.2004.07.006">全文</a>
+</li>
+</ol>
+<p>研究的特点概述:</p>
+<hr>
+<table>
+<thead><tr>
+<th align="left">作者</th>
+<th align="left">Lloyd Smith et al.</th>
+<th align="left">Fraser et al.</th>
+<th align="left">Becker et al.</th>
+<th align="left">Chen et al.</th>
+<th align="left">Klinkenberg et al.</th>
+<th align="left">Feng et al.</th>
+</tr></thead>
+<tbody>
+<tr>
+<td align="left">年份</td>
+<td align="left">2003</td>
+<td align="left">2004</td>
+<td align="left">2005</td>
+<td align="left">2006</td>
+<td align="left">2006</td>
+<td align="left">2009</td>
+</tr>
+<tr>
+<td align="left">模型</td>
+<td align="left">基于人口的随机 SEIR 区间模型</td>
+<td align="left">基于 Agent 的离散时间仿真模型</td>
+<td align="left">基于 Agent 的分支过程与家庭层传递模型</td>
+<td align="left">基于人口的: 基于 Von Foerster 方程的控制模型</td>
+<td align="left">基于 Agent 的离散时间仿真模型</td>
+<td align="left">基于人口: SEIR 区域模型</td>
+</tr>
+<tr>
+<td align="left">研究的 Co-V</td>
+<td align="left">SARS</td>
+<td align="left">SARS</td>
+<td align="left">SARS</td>
+<td align="left">SARS</td>
+<td align="left">SARS</td>
+<td align="left">SARS</td>
+</tr>
+<tr>
+<td align="left">自我报告的局限性</td>
+<td align="left">1. 模型中没有考虑超级扩散事件, 2. 模型中没有考虑医院中的非感染病人</td>
+<td align="left">由于未能通过接触追踪确定疾病发生之间的相关结构，导致接触追踪效力的过高估计</td>
+<td align="left">未考虑不同干预措施对感染动态的影响</td>
+<td align="left">模型没有考虑传播异质性，如不同的社会接触混合等</td>
+<td align="left">1. 模型在追踪或隔离之前只考虑传播,  2. 这种模式没有将医院和社区的环境结合起来</td>
+<td align="left">1. 将就诊率与诊断概率相结合,2. 被隔离的个体被假定在整个潜伏期的一半时间。</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>立个Flag,</p>
+<p>接下来我将试着研读这些文献, 重现其中的模型, 并按照新公布的数据进行参数估计和外推. 本人并非公共卫生专业, 数学也一般, 仅供自娱自乐. 完成不了, 就算了.</p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ophthalmology/Protecting_Chinese_doctors/" class="u-url">《柳叶刀》: 保护中国医生</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Golden Grape
@@ -289,29 +380,11 @@ MathJax.Hub.Config({
 <p class="more"><a href="posts/bulabula/wipo_analytics/WIPO_analytics_tools_8/">阅读更多…</a></p>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/" class="u-url">专利分析工具概述(7)地理信息制图</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Golden Grape
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-12-07T12:07:00+08:00" itemprop="datePublished" title="2019-12-07 12:07">2019-12-07 12:07</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<h3>地理信息制图</h3>
-<p>除了无所不在的<a href="https://www.google.com/maps/">Google地图</a> 或众所周知的<a href="https://www.google.co.uk/intl/en_uk/earth/">Google 地球</a> 我们认为值得仔细研究其他服务。
-</p>
-<p class="more"><a href="posts/bulabula/wipo_analytics/WIPO_analytics_tools_7/">阅读更多…</a></p>
-</div>
-                </div>
             </article>
 </div>
     
         <ul class="pager postindexpager clearfix">
-<li class="next"><a href="index-16.html" rel="next">以前的文章</a></li>
+<li class="next"><a href="index-17.html" rel="next">以前的文章</a></li>
         </ul>
 <!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
