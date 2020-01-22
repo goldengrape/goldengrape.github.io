@@ -29,7 +29,8 @@ MathJax.Hub.Config({
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="SARI数据分析(1): 控制新出现流行病的非药物干预措施比较">
 <meta property="og:url" content="https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_1/">
-<meta property="og:description" content="控制新出现流行病的非药物干预措施比较¶Comparing nonpharmaceutical interventions for containing emerging epidemics
+<meta property="og:description" content="控制新出现流行病的非药物干预措施比较
+Comparing nonpharmaceutical interventions for containing emerging epidemics
 2017年, 发在PNAS, 作者是哈佛大学公共卫生学院和哈佛医学院, 目前被引用13次,
 全文: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/
 以">
@@ -131,8 +132,7 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="控制新出现流行病的非药物干预措施比较">控制新出现流行病的非药物干预措施比较<a class="anchor-link" href="#%E6%8E%A7%E5%88%B6%E6%96%B0%E5%87%BA%E7%8E%B0%E6%B5%81%E8%A1%8C%E7%97%85%E7%9A%84%E9%9D%9E%E8%8D%AF%E7%89%A9%E5%B9%B2%E9%A2%84%E6%8E%AA%E6%96%BD%E6%AF%94%E8%BE%83">¶</a>
-</h3>
+<p>控制新出现流行病的非药物干预措施比较</p>
 <p>Comparing nonpharmaceutical interventions for containing emerging epidemics</p>
 <p>2017年, 发在PNAS, 作者是哈佛大学公共卫生学院和哈佛医学院, 目前被引用13次,
 全文: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/</a></p>
@@ -147,10 +147,10 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="方法">方法<a class="anchor-link" href="#%E6%96%B9%E6%B3%95">¶</a>
+<h2 id="方法">方法<a class="anchor-link" href="#%E6%96%B9%E6%B3%95">¶</a>
+</h2>
+<h3 id="定义:">定义:<a class="anchor-link" href="#%E5%AE%9A%E4%B9%89:">¶</a>
 </h3>
-<h4 id="定义:">定义:<a class="anchor-link" href="#%E5%AE%9A%E4%B9%89:">¶</a>
-</h4>
 <ul>
 <li>“接触者追踪”(Contact tracing)是识别和评估接触过某种疾病的人的过程。 有症状的接触者被立即隔离; 没有症状的接触者被隔离或者接受症状监测。 </li>
 <li>“隔离”(Isolation)是分离一个有症状的被确认感染的个体。 </li>
@@ -166,8 +166,8 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="模型:">模型:<a class="anchor-link" href="#%E6%A8%A1%E5%9E%8B:">¶</a>
-</h4>
+<h3 id="模型:">模型:<a class="anchor-link" href="#%E6%A8%A1%E5%9E%8B:">¶</a>
+</h3>
 <p>个体经历“易感-暴露-传染-恢复”的疾病过程.</p>
 <p>分析集中在新兴传染病的早期流行阶段，假设在最初几代传播中没有明显的易感者的消耗(大概是早期没什么人病死的委婉说法)。</p>
 
@@ -273,8 +273,8 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="模拟:">模拟:<a class="anchor-link" href="#%E6%A8%A1%E6%8B%9F:">¶</a>
-</h4>
+<h3 id="模拟:">模拟:<a class="anchor-link" href="#%E6%A8%A1%E6%8B%9F:">¶</a>
+</h3>
 <p>我们从疾病特异性输入分布中绘制每个模拟个体的疾病特征。</p>
 <p>然后大概是说: 每小时的传染性τ, 定义为一个人新传染其他人的数量服从泊松分布, (如果是超级传播者,  κ &lt; 1, 就服从<a href="https://zh.wikipedia.org/zh-hans/%E8%B4%9F%E4%BA%8C%E9%A1%B9%E5%88%86%E5%B8%83">负二项分布</a>) ,</p>
 <p>该泊松分布的期望 = 个体产生的继续感染人数 (R0) x 相对传染性 βτ</p>
@@ -329,8 +329,8 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="参数化">参数化<a class="anchor-link" href="#%E5%8F%82%E6%95%B0%E5%8C%96">¶</a>
-</h4>
+<h3 id="参数化">参数化<a class="anchor-link" href="#%E5%8F%82%E6%95%B0%E5%8C%96">¶</a>
+</h3>
 </div>
 </div>
 </div>
