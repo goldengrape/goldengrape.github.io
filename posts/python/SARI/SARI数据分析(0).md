@@ -31,11 +31,11 @@
 
 ---
 
-|作者|	Lloyd Smith et al. | Fraser et al. | Becker et al. | Chen et al. |Klinkenberg et al. | Feng et al. |
-|:--|:--|:--|:--|:--|:--|:--|
-|年份|2003|2004|2005|2006|2006|2009|
-|模型|基于人口的随机 SEIR 区间模型|基于 Agent 的离散时间仿真模型|基于 Agent 的分支过程与家庭层传递模型|基于人口的: 基于 Von Foerster 方程的控制模型|基于 Agent 的离散时间仿真模型|基于人口: SEIR 区域模型|
-|研究的 Co-V|SARS|SARS|SARS|SARS|SARS|SARS|SARS|
+|作者|	Lloyd Smith et al. | Fraser et al. | Becker et al. | Chen et al. |Klinkenberg et al. | Feng et al. |Peak et al. |
+|:--|:--|:--|:--|:--|:--|:--|:--|
+|年份|2003|2004|2005|2006|2006|2009|2017|
+|模型|基于人口的随机 SEIR 区间模型|基于 Agent 的离散时间仿真模型|基于 Agent 的分支过程与家庭层传递模型|基于人口的: 基于 Von Foerster 方程的控制模型|基于 Agent 的离散时间仿真模型|基于人口: SEIR 区域模型|基于 Agent 的 SEIR 区域分支模型|
+|研究的 Co-V|SARS|SARS|SARS|SARS|SARS|SARS|MERS|
 |自我报告的局限性|1. 模型中没有考虑超级扩散事件, 2. 模型中没有考虑医院中的非感染病人|由于未能通过接触追踪确定疾病发生之间的相关结构，导致接触追踪效力的过高估计|未考虑不同干预措施对感染动态的影响|模型没有考虑传播异质性，如不同的社会接触混合等|1. 模型在追踪或隔离之前只考虑传播,  2. 这种模式没有将医院和社区的环境结合起来|1. 将就诊率与诊断概率相结合,2. 被隔离的个体被假定在整个潜伏期的一半时间。| 研究重点关注疫情的早期阶段。|
 
 ---
