@@ -489,7 +489,20 @@ Comparing nonpharmaceutical interventions for containing emerging epidemics
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>未完成草稿, 持续更新中</p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5393248/figure/sfig06/?report=objectonly">图S6</a>(点击打开图片)
+演示用SMC 参数化方法的 KS 距离.
+A 中的参数集生成的序列间隔（bar；蓝线）不能用参考序列间隔分布（绿线）来解释，KS 得分为 0.25。(B) SMC 算法生成的参数集的后续迭代，其中生成的串行间隔与参考串行间隔（相同的绿线）更一致。</p>
+<p>(所以虽然方法没看懂, 但可能有现成的PySMC工具包可用<a href="https://predictivesciencelab.github.io/pysmc/">https://predictivesciencelab.github.io/pysmc/</a> 我猜是某种贝叶斯参数估计的方法, 一会儿实在搞不定, 就先把MERS、SARS的参数先借来用用)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>保持潜伏期分布恒定，我们拟合了潜伏期的偏移 ($T_{OFFSET}$)，原因如下，包括与疾病表征 CDC 方法的一致性 这些时间的生物学预期均与病原体负荷相关，并简约地将每个特征限制为一个可解释的参数。对于传染性持续时间 (dINF)，我们拟合了均匀分布的上限和下限 1 天。考虑到在此期间传染性的可变性，我们假设相对传染性 βτ 的三角形分布，并拟合了传染性峰值的时间 (τβ)。模型参数化的完整描述可以在 SI 文本中找到，通过 SMC 的参数化。</p>
 
 </div>
 </div>
@@ -506,6 +519,16 @@ Comparing nonpharmaceutical interventions for containing emerging epidemics
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>未完成草稿, 持续更新中</p>
+
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
