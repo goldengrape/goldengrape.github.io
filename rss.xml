@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 23 Jan 2020 14:04:56 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SARI数据分析(2): 使传染病疫情可以控制的因素</title><link>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 23 Jan 2020 14:10:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SARI数据分析(2): 使传染病疫情可以控制的因素</title><link>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;使传染病疫情可以控制的因素&lt;/p&gt;
@@ -38,7 +38,8 @@
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC395937/figure/fig1/?report=objectonly"&gt;图1&lt;/a&gt; 「点击显示原文图片」&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/SARI/PMC395937_fig1.jpg" alt="图1"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC395937/figure/fig1/?report=objectonly"&gt;点击显示原文图片&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;关键流行病学决定因素。这些决定因素将个体患者的典型疾病进展模式.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;描述为从感染后时间的函数（以任意单位测量）。&lt;/li&gt;
@@ -124,8 +125,8 @@
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img src="https://goldengrape.github.io/posts/images/SARI/PMC395937_fig2.jpg" alt="图2"&gt;
-参数估计值。4 种公众关注的病毒感染的关键参数 R0 和 θ（来源见正文）的合理范围显示为阴影区域。阴影区域的大小反映了参数估计值的不确定性。对这些区域进行颜色编码，以匹配图 1 中适用于每种疾病的 β (τ) 和 S (τ) 的假定方差值，原因在图 1 中很明显。 3.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/SARI/PMC395937_fig2.jpg" alt="图2"&gt;&lt;/p&gt;
+&lt;p&gt;参数估计值。4 种公众关注的病毒感染的关键参数 R0 和 θ（来源见正文）的合理范围显示为阴影区域。阴影区域的大小反映了参数估计值的不确定性。对这些区域进行颜色编码，以匹配图 1 中适用于每种疾病的 β (τ) 和 S (τ) 的假定方差值，原因在图 1 中很明显。 3.&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;
