@@ -26,6 +26,7 @@ MathJax.Hub.Config({
 });
 </script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
 <link rel="prev" href="../SARI_data_analysis_1/" title="SARI数据分析(1): 控制新出现流行病的非药物干预措施比较" type="text/html">
+<link rel="next" href="../../../bulabula/Discussion_on_diagnostic_criteria_of_new_infectious/" title="新发传染病的诊断标准讨论" type="text/html">
 <meta property="og:site_name" content="GoldenGrape's Blog">
 <meta property="og:title" content="SARI数据分析(2): 使传染病疫情可以控制的因素">
 <meta property="og:url" content="https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_2/">
@@ -295,6 +296,158 @@ Factors that make an infectious disease outbreak controllable
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="数学模型的建立和分析">数学模型的建立和分析<a class="anchor-link" href="#%E6%95%B0%E5%AD%A6%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%BB%BA%E7%AB%8B%E5%92%8C%E5%88%86%E6%9E%90">¶</a>
+</h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The basic model of disease transmission determines the dynamics of Y (t,τ), the current number of people, at time t, who were infected time c ago. The cumulative epidemic size by time t is given by Y(t) = ∫∞0 Y(t, τ) dτ, whereas the incidence of infection (i.e., rate of people acquiring infection) at time t is Λ(t) = Y(t, 0). The model predicts that an outbreak will be controlled if the incidence declines to zero, i.e., Λ(t) → 0 as t becomes large. The model of disease spread is determined by the Von Foerster equations (15),</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>疾病传播的基本模型决定了 Y(t,τ) 的动力学，</p>
+<p>Y(t,τ): 在t时刻, 当前被感染的人数, 这些人是在τ时间之前被感染的.</p>
+<p>到时间 t 的累积流行规模由$ Y(t)=\int_{0}^{\infty }{Y (t,τ) dτ}$ 给出, 而时间 t 的感染率（即获得感染的人比率）为$Λ(t) = Y(t,0)$。该模型预测，如果发病率降至零，即随着 t 变大 ∧ (t) → 0，疫情将得到控制。通过 Von Foerster 方程确定疾病传播模型，</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+\frac{\partial Y(t, \tau)}{\partial t}+\frac{\partial Y(t, \tau)}{\partial \tau}=0
+\tag 1
+$$$$
+Y(t, 0)=\int_{0}^{t} \beta(\tau) Y(t, \tau) d \tau 
+\tag 2
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>同时给出了边界条件: 当 t&lt;τ 时 $Y(0,0)= Y_i $ 并且 $Y(t,τ)=0$ 。 
+这里β(τ)代表感染后τ时间的传染性。 该模型的复制数定义为</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+R_0=\int_{0}^{\infty} \beta(\tau) d \tau
+\tag 3
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>生成时间(或序列间隔) ，表示为 Tg，是由感染性β(τ)分布的平均值给出的</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+T_g=\frac{\int_{0}^{\infty} \tau \beta(\tau) d \tau}{\int_{0}^{\infty} \beta(\tau) d \tau}
+\tag 4
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>模型的渐近行为(在极限 t →∞)要么是指数增长要么是指数衰减衰退: 用指数函数Y(t, τ) = K(τ)exp(rt)代入到公式1和2，我们看到 r&gt;0，即流行性增长，发生在R0 &gt; 1; 而r&lt;0，即流行性下降，发生在R0&lt;1. 以此确认了 R0在 公式3 中的经验性定义.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>其他定量参数在确定控制疫情所需的控制措施的程度和速度方面具有实际意义。</p>
+<p>在任何新的爆发中，应尽快宣传临床症状的详细描述，以促进有症状个体的快速隔离（自我强加或其他）。</p>
+<p>我们将 εI 定义为该隔离措施的有效性，可同样视为隔离人群的分数或其传染性降低的程度。隔离有症状的个体通过改变方程2修改模型</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$
+Y(t, 0)=\int_{0}^{t} \beta(\tau) [1-ε_I+ε_I S(\tau)]   Y(t, \tau) d \tau 
+\tag 5
+$$
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
@@ -339,6 +492,9 @@ Factors that make an infectious disease outbreak controllable
 <ul class="pager hidden-print">
 <li class="previous">
                 <a href="../SARI_data_analysis_1/" rel="prev" title="SARI数据分析(1): 控制新出现流行病的非药物干预措施比较">上一篇文章</a>
+            </li>
+            <li class="next">
+                <a href="../../../bulabula/Discussion_on_diagnostic_criteria_of_new_infectious/" rel="next" title="新发传染病的诊断标准讨论">下一篇文章</a>
             </li>
         </ul></nav></aside><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({
