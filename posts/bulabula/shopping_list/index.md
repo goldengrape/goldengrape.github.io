@@ -30,7 +30,7 @@
     * 已发货, 尚未收到
 * 红烧肉罐头
     * [https://detail.tmall.com/item.htm?id=608100115542](https://detail.tmall.com/item.htm?id=608100115542)
-    * 尚未发货, 联系店家, 预计2月14日左右发货
+    * 尚未发货, 联系店家, 预计2月14日左右发货. 更新, 对方拟发韵达, 但我最近收到的东西只有邮政、顺丰和京东还在工作, 估计韵达这边已经不行了. 所以协商以后申请了退款.
 * 脱水果蔬干
     * [https://detail.tmall.com/item.htm?id=600821045838](https://detail.tmall.com/item.htm?id=600821045838)
     * 已发货, 已收到
