@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 12 Feb 2020 07:23:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>近期采购单</title><link>https://goldengrape.github.io/posts/bulabula/shopping_list/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;哈利波特与理性之道, 第6章, 计划谬误理论
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Feb 2020 06:53:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>避免新冠肺炎恐慌</title><link>https://goldengrape.github.io/posts/bulabula/avoid_panic/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;不必恐慌&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;这个病人群 &lt;strong&gt;普遍&lt;/strong&gt; 易感, 所以如果放弃抵抗的话, 大家 &lt;strong&gt;都能&lt;/strong&gt; 得上, ————因此不必恐慌. &lt;/li&gt;
+&lt;li&gt;这个病虽然 &lt;strong&gt;没有&lt;/strong&gt; 特效药也 &lt;strong&gt;没有&lt;/strong&gt; 疫苗, 但 &lt;strong&gt;看起来&lt;/strong&gt; 是个自限性疾病, 目前得上以后现在有 &lt;strong&gt;高达&lt;/strong&gt; 6842/55713=12.3% &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; 的概率可以治愈出院, ————因此不必恐慌.&lt;/li&gt;
+&lt;li&gt;这个病目前 &lt;strong&gt;只有&lt;/strong&gt; 10204/55713=18.3% &lt;sup id="fnref2:1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; 的重症概率, ————因此不必恐慌.&lt;/li&gt;
+&lt;li&gt;重症也不过就是呼吸困难 &lt;strong&gt;而已&lt;/strong&gt; , 不信你试试闭气两分钟, 血氧都不一定能掉到95%以下. 当二氧化碳浓度超过阈值( ~4%, 约闭气1分半时), 你的膈肌会开始抽动, 注意体验那种快憋死的感觉, 半分钟就够了. 重症病人经历几天而已. ————因此不必恐慌.&lt;/li&gt;
+&lt;li&gt;即使是重症也不一定进ICU, 即使进了ICU, 也不一定特别贵, &lt;strong&gt;不一定&lt;/strong&gt; 要耗费一套房, 可能 &lt;strong&gt;只是&lt;/strong&gt; 一辆车而已. 而且今年国家还给报销呢. 如果明年还这样, 还有一年的时间可以攒钱. ————因此不必恐慌.&lt;/li&gt;
+&lt;li&gt;最后, 这个病的死亡率目前只有1381/55713=2.48% &lt;sup id="fnref3:1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; , 
+“根据目前观察的情况，新冠肺炎的病死率约为2.7%，且患者大多为中老年人，病死率虽然比普通流感强，但远比SARS冠状病毒、埃博拉病毒或H7N9流感病毒低” 
+————因此不必恐慌&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;如何避免恐慌&lt;/h3&gt;
+&lt;p&gt;你经历过哪些恐慌呢? 比如考试, 突然发现几道题没见过、没背过, 就可以触发恐慌. 那么, 这些题目你以前见过么:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;如果&lt;/strong&gt; 发生类似&lt;a href="https://zh.wikipedia.org/zh-hans/2003%E5%B9%B4%E7%BE%8E%E5%8A%A0%E5%A4%A7%E5%81%9C%E7%94%B5"&gt;2003年美加大停电&lt;/a&gt; 的停电事故&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; 持续10天, 电力公司的部分工作人员恰好还被隔离, 问这些天吃什么? &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果&lt;/strong&gt; 楼下突然着火&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;, 问能否安全逃出?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些只是简单的题目, 难题我还没出呢. 你会觉得这些事情怎么可能发生呢? &lt;/p&gt;
+&lt;p&gt;但是, &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你想过建好4小时传染病直报系统以后, 最快的预警是微信群么? &lt;/li&gt;
+&lt;li&gt;你想过红十字会, 可能是救灾时的瓶颈么?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所以, 如何避免恐慌?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;意识到: 一定会有下一次! 一定会有下一次! 一定会有下一次!  &lt;/li&gt;
+&lt;li&gt;能背曹刿老师的名言: &lt;a href="https://ctext.org/chun-qiu-zuo-zhuan/zhuang-gong-shi-nian"&gt;肉食者鄙, 未能远谋&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;会唱刀疤老师的名曲: &lt;a href="https://music.163.com/#/song?id=1377408858"&gt;Be Prepared&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;最后才跟丁满同学和蓬蓬同学一起跳: &lt;a href="https://music.163.com/#/song?id=5057942"&gt;Hakuna Matata&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnote"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;数据引自2020年2月14日&lt;a href="https://ncov.dxy.cn/ncovh5/view/pneumonia"&gt;丁香园展示的统计数据&lt;/a&gt;: 现存确诊=55713, 治愈=6842, 现存重症=10204, 死亡=1381 &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref2:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref3:1" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;类似还有1977年纽约大停电、&lt;a href="https://zh.wikipedia.org/zh-hans/2019%E5%B9%B47%E6%9C%88%E6%9B%BC%E5%93%88%E9%A1%BF%E5%81%9C%E7%94%B5"&gt;2019年7月曼哈顿停电&lt;/a&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref:2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;根据当事人陈述，家中无酒精。目前火灾原因还在调查中。 https://news.163.com/20/0212/17/F571B89U0001899O.html &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref:3" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/avoid_panic/</guid><pubDate>Fri, 14 Feb 2020 04:00:00 GMT</pubDate></item><item><title>近期采购单</title><link>https://goldengrape.github.io/posts/bulabula/shopping_list/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;哈利波特与理性之道, 第6章, 计划谬误理论
 &lt;a href="http://hpmor.lofter.com/post/382652_1367422"&gt;http://hpmor.lofter.com/post/382652_1367422&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;现实的结果总是比‘最坏的预计’还要差一点。这个叫做计划谬误理论，最好的纠正的办法是想想上次做类似的事情花了多少时间，也就是说，用客观而不是主观的方式来做出预计。但是当你在做一件新的事，没有历史可以借鉴的时候，你就需要非常非常非常地悲观。要悲观到这样的程度，以至于实际的情况能有50%的机率比你预计的情况要好。&lt;/p&gt;
@@ -137,6 +180,4 @@
 &lt;p&gt;据说在2020年2月2日, github要把所有的代码保存一份到北极, &lt;a href="https://archiveprogram.github.com/"&gt;能保存上千年&lt;/a&gt;. 这四篇文章现在也存储在github上了, 让未来的历史学家来嘲笑这些文章吧.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Four_articles_on_health_care_reform/</guid><pubDate>Sat, 28 Dec 2019 16:00:00 GMT</pubDate></item><item><title>防身术概述</title><link>https://goldengrape.github.io/posts/bulabula/Self_Defense_101/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这篇也是很久以前写的, 2012-03-24, &lt;/p&gt;
 &lt;p&gt;但看下文之前我非常建议您仔细看一下这个&lt;a href="https://www.youtube.com/watch?v=Qa69ZbsLfFQ"&gt;Special Forces Knife Defense Tactics的视频&lt;/a&gt; . (&lt;a href="https://goldengrape.github.io/video/Special_Forces_Knife_Defense_Tactics.mp4"&gt;本地链接&lt;/a&gt; )  这个视频讲解了正确的对刀防御战术, 非常实际, 非常有意义. &lt;/p&gt;
 &lt;p&gt;当面对刀时, 以下的原理仅仅是为了您能够用上视频中的战术. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Self_Defense_101/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Self_Defense_101/</guid><pubDate>Sat, 28 Dec 2019 15:00:00 GMT</pubDate></item><item><title>现场临床心理学</title><link>https://goldengrape.github.io/posts/bulabula/clinical_psychology_in_field/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这篇更早了, 2011-09-23写的, 原载于&lt;a href="http://www.dxy.cn/bbs/topic/21164441"&gt;丁香园&lt;/a&gt;. 当时第一句写的是“考虑到最近恶性的医患矛盾频发”, 过了8年半, 比那会儿更差了.&lt;/p&gt;
-&lt;p&gt;考虑到最近恶性的医患矛盾频发，有可能类似自杀报道那样引起新一轮的暴力事件。为了各位学弟学妹们的安全，把以前写的临床心理学整理一下，皆为纯现场经验，只传术，不传道。&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/clinical_psychology_in_field/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/clinical_psychology_in_field/</guid><pubDate>Sat, 28 Dec 2019 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Self_Defense_101/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Self_Defense_101/</guid><pubDate>Sat, 28 Dec 2019 15:00:00 GMT</pubDate></item></channel></rss>
