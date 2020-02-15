@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 14 Feb 2020 06:53:28 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>避免新冠肺炎恐慌</title><link>https://goldengrape.github.io/posts/bulabula/avoid_panic/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;不必恐慌&lt;/h3&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sat, 15 Feb 2020 01:20:33 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>避免新冠肺炎恐慌</title><link>https://goldengrape.github.io/posts/bulabula/avoid_panic/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;不必恐慌&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;这个病人群 &lt;strong&gt;普遍&lt;/strong&gt; 易感, 所以如果放弃抵抗的话, 大家 &lt;strong&gt;都能&lt;/strong&gt; 得上, ————因此不必恐慌. &lt;/li&gt;
 &lt;li&gt;这个病虽然 &lt;strong&gt;没有&lt;/strong&gt; 特效药也 &lt;strong&gt;没有&lt;/strong&gt; 疫苗, 但 &lt;strong&gt;看起来&lt;/strong&gt; 是个自限性疾病, 目前得上以后现在有 &lt;strong&gt;高达&lt;/strong&gt; 6842/55713=12.3% &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; 的概率可以治愈出院, ————因此不必恐慌.&lt;/li&gt;
@@ -14,7 +14,9 @@
 &lt;p&gt;你经历过哪些恐慌呢? 比如考试, 突然发现几道题没见过、没背过, 就可以触发恐慌. 那么, 这些题目你以前见过么:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;如果&lt;/strong&gt; 发生类似&lt;a href="https://zh.wikipedia.org/zh-hans/2003%E5%B9%B4%E7%BE%8E%E5%8A%A0%E5%A4%A7%E5%81%9C%E7%94%B5"&gt;2003年美加大停电&lt;/a&gt; 的停电事故&lt;sup id="fnref:2"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:2"&gt;2&lt;/a&gt;&lt;/sup&gt; 持续10天, 电力公司的部分工作人员恰好还被隔离, 问这些天吃什么? &lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果&lt;/strong&gt; 突然无法长时间出门, 对, 连出门买菜都不行的时候, 问这些天吃什么?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;如果&lt;/strong&gt; 楼下突然着火&lt;sup id="fnref:3"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:3"&gt;3&lt;/a&gt;&lt;/sup&gt;, 问能否安全逃出?&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;如果&lt;/strong&gt; 小区主要路口被封闭, 消防车也进不来呢? &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;这些只是简单的题目, 难题我还没出呢. 你会觉得这些事情怎么可能发生呢? &lt;/p&gt;
 &lt;p&gt;但是, &lt;/p&gt;
@@ -39,7 +41,7 @@
 &lt;p&gt;类似还有1977年纽约大停电、&lt;a href="https://zh.wikipedia.org/zh-hans/2019%E5%B9%B47%E6%9C%88%E6%9B%BC%E5%93%88%E9%A1%BF%E5%81%9C%E7%94%B5"&gt;2019年7月曼哈顿停电&lt;/a&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref:2" title="Jump back to footnote 2 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li id="fn:3"&gt;
-&lt;p&gt;根据当事人陈述，家中无酒精。目前火灾原因还在调查中。 https://news.163.com/20/0212/17/F571B89U0001899O.html &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref:3" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;根据当事人陈述，家中无酒精。目前火灾原因还在调查中。 &lt;a href="https://news.163.com/20/0212/17/F571B89U0001899O.html"&gt;https://news.163.com/20/0212/17/F571B89U0001899O.html&lt;/a&gt; &lt;a class="footnote-backref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fnref:3" title="Jump back to footnote 3 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/div&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/avoid_panic/</guid><pubDate>Fri, 14 Feb 2020 04:00:00 GMT</pubDate></item><item><title>近期采购单</title><link>https://goldengrape.github.io/posts/bulabula/shopping_list/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;哈利波特与理性之道, 第6章, 计划谬误理论
