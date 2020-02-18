@@ -38,7 +38,7 @@
     * [https://www.ruffood.com/](https://www.ruffood.com/)
     * 已发货, 尚未收到. 继续补货中.
 * 红焖牛肉, 红烧肉, 五香肉丁, 肉铺, 扎肉
-    * [https://diyisp.tmall.com/shop/view_shop.htm?user_number_id=2065839106](https://diyisp.tmall.com/shop/view_shop.htm?user_number_id=2065839106)
+    * [https://diyisp.tmall.com](https://diyisp.tmall.com)
     * 之前红烧肉罐头没发货, 只好另外找了一家店, 结果发现了好多好吃的. 
 
 ## 食品加工
