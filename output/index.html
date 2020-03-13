@@ -26,7 +26,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/avoid_panic/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/A_Brief_History_of_BrushStroke_equations/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -98,7 +98,79 @@ MathJax.Hub.Config({
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/avoid_panic/" class="u-url">避免新冠肺炎恐慌</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/A_Brief_History_of_BrushStroke_equations/" class="u-url">笔法方程略史</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Golden Grape
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/bulabula/A_Brief_History_of_BrushStroke_equations/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-03-13T10:00:00+08:00" itemprop="datePublished" title="2020-03-13 10:00">2020-03-13 10:00</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <div>
+<p>书法是物理学, 有1个基本定律, 剩下的可以推导的。</p>
+<blockquote>
+<p>基本定理：写完一笔以后, 笔应该恢复到能够写下一笔的状态。</p>
+</blockquote>
+<p>也就是说, 一笔写完以后, 由于笔的弹性, 笔应该回到初始状态, 笔锋是处于聚拢状态的。不妨称为“回归律”</p>
+<p>化简毛笔的模型, 比如只有5根笔毛或者只有9根笔毛, 中间一根是笔芯, 周围的是副毫, 就可以用有限元方法去分析如何行笔能够在转弯后仍然可以满足“回归律”</p>
+<p><img alt="侧锋" src="images/%E4%BE%A7%E9%94%8B.png"></p>
+<p>这是一组微分方程。</p>
+<p><img alt="平衡方程" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/73f442cfbeea809acf608ff41224843fb3183855"></p>
+<p><img alt="几何方程" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/31a8b23ce59e2b417a7d0a560909a9ccbc78b2c1"></p>
+<p><img alt="本构方程" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/163451c0ebe1094a548260aee0d59fc9ab074add"></p>
+<p><img alt="摩擦力" src="https://wikimedia.org/api/rest_v1/media/math/render/svg/9f03be93e92e75d6d0fcf50266ef23199d147762"></p>
+<p>...</p>
+<p>一个平凡解是转向时笔回到垂直状态, 再转向.
+<img alt="正锋" src="images/%E6%AD%A3%E9%94%8B.png"></p>
+<blockquote>
+<p>这些微分方程的可行解, 就叫做笔法. </p>
+</blockquote>
+<p>王羲之一共解出了9个!</p>
+<p>这9个解一直秘不传人, 就好像3次方程求根公式，只在家族中一代一代流传。一直传到王羲之的第七代孙王法极, 也就是智永禅师，智永是和尚, 没有子嗣, 所以把9个解传给了虞世南. 从此把笔法方程传给了外人. </p>
+<p>虞世南-&gt;陆柬之-&gt;陆彦远-&gt;张旭</p>
+<p>张旭是关键节点, 收了很多学生</p>
+<p><img alt="屏幕快照 2020-03-13 09.50.31" src="https://i.loli.net/2020/03/13/pjtBUFfI251KMXo.png"></p>
+<p>其中还有一个分支是空海, 空海又将笔法方程式带到了日本. </p>
+<p>最后这9个解函数, 用<a href="https://wy-lang.org/">文言文编程</a>记载在韩方明《授笔要说》和张怀瓘《玉堂禁经》里面, 叫做“九用”, 但可惜这只是头文件, 仅仅定义了函数声明的基本信息和测试样例. 函数文件还没有被发现. </p>
+<blockquote>
+<p>一曰頓筆，摧鋒驟衄是也，則努法下腳用之。</p>
+<p>二曰挫筆，挨鋒捷進是也，下三點皆用之。</p>
+<p>三曰馭鋒，直撞是也；有點連物則名暗築，「目」、「其」是也。</p>
+<p>四曰蹲鋒，緩毫蹲節，輕重有準是也，「一」、「乙」等用之。</p>
+<p>五曰 𨀛鋒，駐筆下衄是也；夫有趯者，必先𨀛之，「刀」、「﹝橫勾﹞」是也。</p>
+<p>六曰衄鋒，住鋒暗挼是也；烈火用之。</p>
+<p>七曰趯鋒，緊御澀進，如錐畫石是也。</p>
+<p>八曰按鋒，囊鋒虛闊，章草磔法用之。</p>
+<p>九曰揭筆，側鋒平發。「人」、「天」腳是也，如鳥爪形。</p>
+</blockquote>
+<p>九用除去平凡解，剩下的如果手工解非常复杂，所以张旭建立了八个神经网络训练模型, 史称“始弘八法”.</p>
+<p>这八个训练模型分别叫：侧，勒，努，趯，策，掠，啄，磔.</p>
+<blockquote>
+<p>側不得平其筆，</p>
+<p>勒不得臥其筆，</p>
+<p>弩不得直，</p>
+<p>趯須𨀛其鋒，</p>
+<p>策須背筆，</p>
+<p>掠須筆鋒，</p>
+<p>啄須臥筆疾罨，</p>
+<p>磔須【走歷】筆。</p>
+</blockquote>
+<p>后世尊为“永字八法”</p>
+<p>参考资料:</p>
+<ul>
+<li>
+<p>聚焦王羲之﹝下﹞: <a href="https://www.youtube.com/watch?v=S_b9NXsWOaU">https://www.youtube.com/watch?v=S_b9NXsWOaU</a> 或 <a href="https://www.bilibili.com/video/av40312839?p=5">https://www.bilibili.com/video/av40312839?p=5</a></p>
+</li>
+<li>
+<p>張旭的筆法: <a href="http://www.chinese-artists.net/huangjian/works/19860205zhangxu/index.html">http://www.chinese-artists.net/huangjian/works/19860205zhangxu/index.html</a></p>
+</li>
+</ul>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/avoid_panic/" class="u-url">避免新冠肺炎恐慌</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Golden Grape
@@ -434,24 +506,6 @@ MathJax.Hub.Config({
 </ul>
 <p>前三篇是给医生看的, 最后一篇是给病人和家属看的. 都是写于多年以前, 到现在也还不过时. </p>
 <p>据说在2020年2月2日, github要把所有的代码保存一份到北极, <a href="https://archiveprogram.github.com/">能保存上千年</a>. 这四篇文章现在也存储在github上了, 让未来的历史学家来嘲笑这些文章吧.</p>
-</div>
-                </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/Self_Defense_101/" class="u-url">防身术概述</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Golden Grape
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/bulabula/Self_Defense_101/" rel="bookmark">
-            <time class="published dt-published" datetime="2019-12-28T23:00:00+08:00" itemprop="datePublished" title="2019-12-28 23:00">2019-12-28 23:00</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<p>这篇也是很久以前写的, 2012-03-24, </p>
-<p>但看下文之前我非常建议您仔细看一下这个<a href="https://www.youtube.com/watch?v=Qa69ZbsLfFQ">Special Forces Knife Defense Tactics的视频</a> . (<a href="video/Special_Forces_Knife_Defense_Tactics.mp4">本地链接</a> )  这个视频讲解了正确的对刀防御战术, 非常实际, 非常有意义. </p>
-<p>当面对刀时, 以下的原理仅仅是为了您能够用上视频中的战术. </p>
-<p class="more"><a href="posts/bulabula/Self_Defense_101/">阅读更多…</a></p>
 </div>
                 </div>
             </article>
