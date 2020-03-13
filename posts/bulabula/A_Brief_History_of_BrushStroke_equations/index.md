@@ -96,3 +96,17 @@
 
 * 張旭的筆法: [http://www.chinese-artists.net/huangjian/works/19860205zhangxu/index.html](http://www.chinese-artists.net/huangjian/works/19860205zhangxu/index.html)
 
+----
+
+ps
+
+仅仅从这个基本定理, 就可以推导出哪些书法视频是很惨的. 不需要额外的书法鉴赏能力. 这就是所谓的“first principle”.
+
+比如同样是临摹智永的千字文.
+
+陳忠建的字, 每写一两笔, 笔就离开画面, 要去重新reset, 因为他喜欢用偏锋, 笔尖两侧笔毛受到的摩擦力不同, 导致笔毛在行进时会绞在一起, 无法保持初始聚拢的状态. [视频](https://www.bilibili.com/video/av19273304)
+
+对照组, 这位“老尘”. 即使完全不懂书法, 看这个笔尖, 在整个字的书写过程中, 一直在画面之内, 没有离开, 并且每写完一笔, 直到最后一笔完成, 笔尖都一直保持聚拢的状态, 也就是说, 如果能够持续保证墨水的供应, 他是可以一直写下去的. [视频](https://www.bilibili.com/video/av85626451)
+
+客气说, 这位陳忠建, 就是不会用毛笔写字. 
+

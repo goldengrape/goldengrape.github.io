@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 Mar 2020 03:19:00 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>笔法方程略史</title><link>https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;书法是物理学, 有1个基本定律, 剩下的可以推导的。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 Mar 2020 05:47:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>笔法方程略史</title><link>https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;书法是物理学, 有1个基本定律, 剩下的可以推导的。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;基本定理：写完一笔以后, 笔应该恢复到能够写下一笔的状态。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -56,7 +56,14 @@
 &lt;li&gt;
 &lt;p&gt;張旭的筆法: &lt;a href="http://www.chinese-artists.net/huangjian/works/19860205zhangxu/index.html"&gt;http://www.chinese-artists.net/huangjian/works/19860205zhangxu/index.html&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/</guid><pubDate>Fri, 13 Mar 2020 02:00:00 GMT</pubDate></item><item><title>避免新冠肺炎恐慌</title><link>https://goldengrape.github.io/posts/bulabula/avoid_panic/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;不必恐慌&lt;/h3&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;ps&lt;/p&gt;
+&lt;p&gt;仅仅从这个基本定理, 就可以推导出哪些书法视频是很惨的. 不需要额外的书法鉴赏能力. 这就是所谓的“first principle”.&lt;/p&gt;
+&lt;p&gt;比如同样是临摹智永的千字文.&lt;/p&gt;
+&lt;p&gt;陳忠建的字, 每写一两笔, 笔就离开画面, 要去重新reset, 因为他喜欢用偏锋, 笔尖两侧笔毛受到的摩擦力不同, 导致笔毛在行进时会绞在一起, 无法保持初始聚拢的状态. &lt;a href="https://www.bilibili.com/video/av19273304"&gt;视频&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;对照组, 这位“老尘”. 即使完全不懂书法, 看这个笔尖, 在整个字的书写过程中, 一直在画面之内, 没有离开, 并且每写完一笔, 直到最后一笔完成, 笔尖都一直保持聚拢的状态, 也就是说, 如果能够持续保证墨水的供应, 他是可以一直写下去的. &lt;a href="https://www.bilibili.com/video/av85626451"&gt;视频&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;客气说, 这位陳忠建, 就是不会用毛笔写字. &lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/</guid><pubDate>Fri, 13 Mar 2020 02:00:00 GMT</pubDate></item><item><title>避免新冠肺炎恐慌</title><link>https://goldengrape.github.io/posts/bulabula/avoid_panic/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h3&gt;不必恐慌&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;这个病人群 &lt;strong&gt;普遍&lt;/strong&gt; 易感, 所以如果放弃抵抗的话, 大家 &lt;strong&gt;都能&lt;/strong&gt; 得上, ————因此不必恐慌. &lt;/li&gt;
 &lt;li&gt;这个病虽然 &lt;strong&gt;没有&lt;/strong&gt; 特效药也 &lt;strong&gt;没有&lt;/strong&gt; 疫苗, 但 &lt;strong&gt;看起来&lt;/strong&gt; 是个自限性疾病, 目前得上以后现在有 &lt;strong&gt;高达&lt;/strong&gt; 6842/55713=12.3% &lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="https://goldengrape.github.io/posts/bulabula/avoid_panic/#fn:1"&gt;1&lt;/a&gt;&lt;/sup&gt; 的概率可以治愈出院, ————因此不必恐慌.&lt;/li&gt;
