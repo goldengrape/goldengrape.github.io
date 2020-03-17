@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 13 Mar 2020 05:47:24 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>笔法方程略史</title><link>https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;书法是物理学, 有1个基本定律, 剩下的可以推导的。&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 17 Mar 2020 02:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>uptodate汉化方法</title><link>https://goldengrape.github.io/posts/bulabula/uptodate-zh-Hans/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;有个小技巧, 时间一长自己也容易忘, 所以记录下来:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;登陆英文版uptodate, 查询到需要的文章以后, 点击share, 然后发送给自己.&lt;/li&gt;
+&lt;li&gt;收到email以后, 复制链接, 会得到这样的链接:
+https://www.uptodate.com/contents/pathophysiology-clinical-manifestations-and-diagnosis-of-migraine-in-adults?csi=abcdabcd-1111-2222-3333-abcdabcdabcd&amp;amp;source=contentShare&lt;/li&gt;
+&lt;li&gt;在contents/后面加入zh-Hans/, 得到:
+https://www.uptodate.com/contents/zh-Hans/pathophysiology-clinical-manifestations-and-diagnosis-of-migraine-in-adults?csi=abcdabcd-1111-2222-3333-abcdabcdabcd&amp;amp;source=contentShare&lt;/li&gt;
+&lt;li&gt;开启一个无痕浏览模式的页面, 将修改好的链接贴进去打开, 得到中文版. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;解释: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;zh-Hans是简体中文, 如果需要其他语言, 如果有的话, 可以更换成其他语言代码, 参考&lt;a href="https://www.w3schools.com/tags/ref_language_codes.asp"&gt;ISO 639-1 Language Codes&lt;/a&gt;, 但我测试繁体中文zh-Hant失败. &lt;/li&gt;
+&lt;li&gt;中文版的结果不是机器翻译得到, 是人工翻译后的结果, 与uptodate.cn相同. &lt;/li&gt;
+&lt;li&gt;链接是静态的, 可以在微信或其他社交次网络上分享, 并且接收方可以直接打开看到内容, 但是,&lt;/li&gt;
+&lt;li&gt;csi=后面的一串数字显然是对分享认证的32位Hash代码, 可能每个人每个内容都会不同, 其中可能带有与注册身份相关的信息. &lt;/li&gt;
+&lt;li&gt;如果在英文版状态下登陆, 打开中文版的链接仍然显示是英文, 所以需要切换到一个无痕模式, 相当于未登陆. &lt;/li&gt;
+&lt;/ul&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/uptodate-zh-Hans/</guid><pubDate>Tue, 17 Mar 2020 02:00:00 GMT</pubDate></item><item><title>笔法方程略史</title><link>https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;书法是物理学, 有1个基本定律, 剩下的可以推导的。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;基本定理：写完一笔以后, 笔应该恢复到能够写下一笔的状态。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -235,12 +251,4 @@
 &lt;li&gt;2001年10月，42岁的马晓伟任卫生部副部长、党组成员，晋升副部级。2013年4月任国家卫生和计划生育委员会副主任、党组成员，2015年5月当选中国红十字会副会长。2018年3月19日，在十三届人大一次会议上，被任命为国家卫生健康委员会主任。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</guid><pubDate>Mon, 20 Jan 2020 12:00:00 GMT</pubDate></item><item><title>医改四篇</title><link>https://goldengrape.github.io/posts/bulabula/Four_articles_on_health_care_reform/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这四篇分别是:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/clinical_psychology_in_field/"&gt;现场临床心理学&lt;/a&gt; (2011年)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/guideline_of_career_change_for_medical_doctor%20/"&gt;医生改行指南&lt;/a&gt; (2013年)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Self_Defense_101/"&gt;防身术概述&lt;/a&gt; (2012年)&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/How-to-see-a-doctor/"&gt;如何看病&lt;/a&gt; (2011年)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;前三篇是给医生看的, 最后一篇是给病人和家属看的. 都是写于多年以前, 到现在也还不过时. &lt;/p&gt;
-&lt;p&gt;据说在2020年2月2日, github要把所有的代码保存一份到北极, &lt;a href="https://archiveprogram.github.com/"&gt;能保存上千年&lt;/a&gt;. 这四篇文章现在也存储在github上了, 让未来的历史学家来嘲笑这些文章吧.&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Four_articles_on_health_care_reform/</guid><pubDate>Sat, 28 Dec 2019 16:00:00 GMT</pubDate></item></channel></rss>
+&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</guid><pubDate>Mon, 20 Jan 2020 12:00:00 GMT</pubDate></item></channel></rss>
