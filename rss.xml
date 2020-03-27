@@ -1,5 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 17 Mar 2020 02:27:27 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>uptodate汉化方法</title><link>https://goldengrape.github.io/posts/bulabula/uptodate-zh-Hans/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;有个小技巧, 时间一长自己也容易忘, 所以记录下来:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 27 Mar 2020 08:24:51 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>疫情中的3D打印</title><link>https://goldengrape.github.io/posts/bulabula/3d-print-in-plague/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在瘟疫中, 很多医疗相关的设备可能不够用, 生产又跟不上, 这时候用3D打印机制造一些零部件, 将现有替代品改造利用起来, 是一件好事. &lt;/p&gt;
+&lt;p&gt;但是...&lt;/p&gt;
+&lt;h3&gt;关于3D打印呼吸机面罩&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.isinnova.it/wp-content/uploads/2020/03/DSC3147-scaled.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;不久前看到isinnova用浮潜面镜做的呼吸机面罩&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网: https://www.isinnova.it/easy-covid19-eng/&lt;/li&gt;
+&lt;li&gt;中文报道: https://www.nanjixiong.com/thread-140539-1-1.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我也有疑虑:&lt;/p&gt;
+&lt;p&gt;如果使用的是浮潜面镜原来的设计, 从顶部进入空气, 从下巴附近排出空气, 那么这种设计并不能提供吸气和呼气时的正压, 跟一个纸杯的区别不大.&lt;/p&gt;
+&lt;p&gt;如果是堵住原本的出气口, 并且拆除眼前到口鼻之间的单向阀,
+在头顶同时接入进气口和出气口, 并且令呼吸机控制吸气和呼气压力, 那么在那个3D打印阀门的位置会出现进气和出气的短路, 即使不在那个点发生, 也会在面罩眼睛附近的区域发生气流的短路,&lt;/p&gt;
+&lt;p&gt;那么在口鼻处的气体交换就不充分, 会造成二氧化碳潴留和氧气供应量不足, 当然可以通过氧气浓度来调整, 但二氧化碳潴留仍然存在. 进一步造成呼吸性酸中毒.&lt;/p&gt;
+&lt;p&gt;带着疑虑, 我去isinnova的官网 https://isinnova.it/easy-covid19-eng/ 确认了一下:&lt;/p&gt;
+&lt;p&gt;操作视频中(https://youtu.be/w4Csqdxkrfw)是把出气口的单向阀门进行了反向.
+在头顶入口处只是两根联通的管道.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2020-03-27 15.37.33" src="https://i.loli.net/2020/03/27/uNfdO8IiqJVBsmy.png"&gt;&lt;/p&gt;
+&lt;p&gt;这个设计大致等效于对着纸袋呼吸, 只不过纸袋另一端有个孔.
+最终的结果是吸入的气体中, 达不到呼吸机设定的氧气浓度, 而呼出的二氧化碳会存留在口鼻附近. 将造成&lt;strong&gt;低氧和呼吸性酸中毒&lt;/strong&gt; . &lt;/p&gt;
+&lt;p&gt;但愿不要有医院真的疯到用这种东西.&lt;/p&gt;
+&lt;h3&gt;关于3D打印口罩&lt;/h3&gt;
+&lt;p&gt;3D打印机只能打印出一个框架, 过滤的部分仍然需要使用滤棉或者现有的口罩. 而这两种东西在真正需要的地区, 显然还是不足的. &lt;/p&gt;
+&lt;p&gt;当然, 3D打印后, 可以缩小过滤面积, 可以将一片口罩切成N块来使用, 但这样会造成呼吸阻力增大N倍, 受潮时间减少N倍, 对于需要长时间工作的一线医护仍然危险.&lt;/p&gt;
+&lt;p&gt;如果制造一个口罩就要消耗一个口罩, 显然没有意义. 为了降低呼吸阻力, 有使用较小的过滤面积, 就要使用外源的动力, 这个我已经设计过了https://thingiverse.com/thing:4141738&lt;/p&gt;
+&lt;p&gt;但是, 我无法对自制口罩的安全性进行测量, 自己使用还可以, 如果拿出来量产给其他人用, 就太危险了.&lt;/p&gt;
+&lt;p&gt;如果是在短时间使用, 那么呼吸阻力大一点也没什么, 比如旧国标里外科口罩的呼吸阻力约50pa, 而N95约350pa, 也就是说, 把一片外科口罩切成7块来使用, 也就相当于N95的阻力. 对于短时间, 比如通勤或者短时间执勤是可行的.&lt;/p&gt;
+&lt;p&gt;这种情况3D打印框架也不是必须的.&lt;/p&gt;
+&lt;p&gt;你所需要的只是一个替代大部分口罩面积的东西, &lt;/p&gt;
+&lt;p&gt;比如, 纸, &lt;/p&gt;
+&lt;p&gt;用纸是非常简单的, 按照N95半片外形画出来, 然后剪裁, 用宽胶带在纸面上贴满, 然后剪出一个大约1/4口罩大小的孔, 再剪出一片口罩继续用胶带贴上就可以了.&lt;/p&gt;
+&lt;p&gt;还可以使用的方案是直接用输液贴膜, (一种类似透明胶的东西, 更薄, 更软), 直接将一小片口罩贴在口鼻附近, 也可以达到非常好的气密效果.&lt;/p&gt;
+&lt;p&gt;当然所有这些DIY, 都难以进行检测, 难以保证安全性, 自己做来玩, 甚至自己用可以. 但给别人使用, 甚至自称是N95口罩, 哪怕是免费捐助, 我认为也是不道德的.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;综上, 我认为即使在危机时刻, 工程伦理、医学伦理仍然很重要, 不应当带给人们错误的设计和错误的希望.&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/3d-print-in-plague/</guid><pubDate>Fri, 27 Mar 2020 08:00:00 GMT</pubDate></item><item><title>uptodate汉化方法</title><link>https://goldengrape.github.io/posts/bulabula/uptodate-zh-Hans/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;有个小技巧, 时间一长自己也容易忘, 所以记录下来:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;登陆英文版uptodate, 查询到需要的文章以后, 点击share, 然后发送给自己.&lt;/li&gt;
 &lt;li&gt;收到email以后, 复制链接, 会得到这样的链接:
@@ -226,29 +259,4 @@ https://www.uptodate.com/contents/zh-Hans/pathophysiology-clinical-manifestation
 &lt;/table&gt;
 &lt;hr&gt;
 &lt;p&gt;立个Flag,&lt;/p&gt;
-&lt;p&gt;接下来我将试着研读这些文献, 重现其中的模型, 并按照新公布的数据进行参数估计和外推. 本人并非公共卫生专业, 数学也一般, 仅供自娱自乐. 完成不了, 就算了.&lt;/p&gt;&lt;/div&gt;</description><category>SARI</category><guid>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis/</guid><pubDate>Wed, 22 Jan 2020 04:00:00 GMT</pubDate></item><item><title>《柳叶刀》: 保护中国医生</title><link>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一篇《柳叶刀》, 发表于2020年1月11日. 我觉得有关部门领导可以把自己当作第一作者, 算作政绩.
-&lt;a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30003-9/fulltext"&gt;https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)30003-9/fulltext&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;全文翻译如下:&lt;/p&gt;
-&lt;p&gt;12月24日，当北京民航总医院急诊医生杨文被患者儿子刺死时，中国的医患关系似乎跌到了谷底。这起杀戮事件受到中国医师协会的谴责，并引发了公众的愤怒情绪。12月28日，中国最高立法者批准了第一部保护卫生工作者的基础性和综合性&lt;a href="https://www.globaltimes.cn/content/1175034.shtml"&gt;法律&lt;/a&gt;，该法律将于今年6月1日生效。法律禁止任何组织或个人威胁或损害卫生工作者的人身安全或尊严。尽管值得称赞，但单靠法律方法不可能充分解决这一复杂问题。&lt;/p&gt;
-&lt;p&gt;针对卫生专业人员的暴力行为是一个全球性问题，影响到几乎所有卫生机构的保健工作者。 然而，在中国，袭击医务人员的规模、频率和凶残程度尤为严重。 在中国, 暴力侵害卫生工作者的原因很多，包括基本卫生保健制度不健全和医患沟通不畅。试图解决日益恶化局势的举措，例如加强安全措施，收效甚微。&lt;/p&gt;
-&lt;p&gt;《柳叶刀》长期以来一直支持中国的卫生工作者和&lt;a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(19)32210-X/fulltext"&gt;医疗体系改革&lt;/a&gt;，我们计划在2020年与中国的合作伙伴进一步合作。重点将包括一篇关于提高中国初级卫生保健质量的综述，第二届Wakley-Wu Lien Teh(威克利—伍连德)奖，让中国医生分享他们的故事，以及一个以中国为主题的专刊，展示高质量的研究，以改善中国的临床实践和卫生政策。 在中国，不能仅仅通过执法和惩罚措施来制止针对卫生工作者的暴力行为; 需要进行文化转变，但这需要时间。卫生保健专业人员需要得到信任和尊重。 获得信任的最佳途径是建立一个有效的、可信的和受到尊重的卫生系统。&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://marlin-prod.literatumonline.com/cms/attachment/4dcff3df-cea9-4444-8b36-9f8555bb5c97/fx1_lrg.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;注释: 有关部门&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;中华人民共和国国家卫生和计划生育委员会:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主任, 党委书记: 李斌（2013年3月16日—2018年3月）&lt;/li&gt;
-&lt;li&gt;李斌（1954年10月4日－），汉族，女，辽宁省抚顺市人。吉林大学经济系毕业，经济学博士，研究员。1974年7月参加工作，1981年6月加入中国共产党，是中共第十七届、十八届、十九届中央委员。曾任国家人口和计划生育委员会主任，中共安徽省委副书记、安徽省人民政府省长、国家卫生和计划生育委员会主任。现任第十三届全国政协副主席、党组成员。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;中华人民共和国国家卫生健康委员会&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;主任, 党委书记: 马晓伟（2018年3月19日—)&lt;/li&gt;
-&lt;li&gt;马晓伟（1959年12月－），男，汉族，山西省忻州市五台县人。1977年8月参加工作，1982年10月加入中国共产党。中华人民共和国官员，首任国家卫生健康委员会主任。&lt;/li&gt;
-&lt;li&gt;马晓伟1978年4月至1982年12月在中国医科大学医疗系学习，毕业后历任卫生部科学教育司干部、办公厅秘书，中国医科大学附属第一医院副研究员、研究员、副院长、院长、党委书记，中国医科大学副校长，辽宁省卫生厅厅长、党组书记等职务。&lt;/li&gt;
-&lt;li&gt;2001年10月，42岁的马晓伟任卫生部副部长、党组成员，晋升副部级。2013年4月任国家卫生和计划生育委员会副主任、党组成员，2015年5月当选中国红十字会副会长。2018年3月19日，在十三届人大一次会议上，被任命为国家卫生健康委员会主任。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;/div&gt;</description><category>ophthalmology</category><guid>https://goldengrape.github.io/posts/ophthalmology/Protecting_Chinese_doctors/</guid><pubDate>Mon, 20 Jan 2020 12:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;接下来我将试着研读这些文献, 重现其中的模型, 并按照新公布的数据进行参数估计和外推. 本人并非公共卫生专业, 数学也一般, 仅供自娱自乐. 完成不了, 就算了.&lt;/p&gt;&lt;/div&gt;</description><category>SARI</category><guid>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis/</guid><pubDate>Wed, 22 Jan 2020 04:00:00 GMT</pubDate></item></channel></rss>
