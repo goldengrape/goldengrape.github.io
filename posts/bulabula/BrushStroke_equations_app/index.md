@@ -62,11 +62,11 @@
     <iframe src="//player.bilibili.com/player.html?aid=370215231&bvid=BV1HZ4y1x7p1&cid=174604428&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
 最后, 看一下好的书法的示范视频:
-[書法教學：黃簡先生草書示範](https://www.bilibili.com/video/BV1zs41157Fv)
 
-<iframe src="//player.bilibili.com/player.html?aid=25868529&bvid=BV1zs41157Fv&cid=44216663&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-* 每写三四个字才会有一次蘸墨, 也只是蘸一下墨而已, 根本不需要更多动作. 笔与笔之间, 字与字之间是有联系的, 不会中断.
-* 一分二分三分笔各自出现, 哪怕写完三分笔的粗重笔画, 收笔时仍然是一个尖尖细细的牵丝连到下一个字. 
-* 调整笔锋靠手腕的摇动, 毛笔在手里抓得紧紧的, 不会转动.
-* 笔在转向时经过复杂的摇动, 甚至可能要摇动三四次调整好笔锋以后才会继续下一笔. 
+* [書法教學：黃簡先生草書示範](https://www.bilibili.com/video/BV1zs41157Fv)
+    * 每写三四个字才会有一次蘸墨, 也只是蘸一下墨而已, 根本不需要更多动作. 笔与笔之间, 字与字之间是有联系的, 不会中断.
+    * 一分二分三分笔各自出现, 哪怕写完三分笔的粗重笔画, 收笔时仍然是一个尖尖细细的牵丝连到下一个字. 
+    * 调整笔锋靠手腕的摇动, 毛笔在手里抓得紧紧的, 不会转动.
+    * 笔在转向时经过复杂的摇动, 甚至可能要摇动三四次调整好笔锋以后才会继续下一笔. 
+    
+    <iframe src="//player.bilibili.com/player.html?aid=25868529&bvid=BV1zs41157Fv&cid=44216663&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
