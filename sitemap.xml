@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2020-02-09T01:25:00Z</lastmod>
+  <lastmod>2020-04-23T05:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -27,11 +27,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-03-27T08:20:00Z</lastmod>
+  <lastmod>2020-04-23T06:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2020-01-22T09:15:00Z</lastmod>
+  <lastmod>2020-04-23T05:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -40,6 +40,10 @@
  <url>
   <loc>https://goldengrape.github.io/categories/3d_print/</loc>
   <lastmod>2018-01-05T18:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/categories/ai4med/</loc>
+  <lastmod>2020-04-23T05:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/applescript/</loc>
@@ -239,7 +243,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-17.html</loc>
-  <lastmod>2020-03-27T08:20:00Z</lastmod>
+  <lastmod>2020-04-23T05:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-18.html</loc>
+  <lastmod>2020-04-23T06:49:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -812,6 +820,18 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/15_pages_python_tutorial_translated/</loc>
   <lastmod>2019-08-03T03:02:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_0/</loc>
+  <lastmod>2020-04-23T05:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1/</loc>
+  <lastmod>2020-04-23T05:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_1/</loc>
+  <lastmod>2020-04-23T08:04:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Alpha_tear/</loc>

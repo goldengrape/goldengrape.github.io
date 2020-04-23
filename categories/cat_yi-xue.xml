@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 医学)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_yi-xue.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>病例一则：夜间睡眠时疼痛</title><link>https://goldengrape.github.io/posts/bulabula/case-report/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 医学)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_yi-xue.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 23 Apr 2020 09:03:16 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI 4 Med 笔记(1.1)胸片诊断</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;第一门课叫AI For Medical Diagnosis, 也就是用于诊断的AI. 有三周的课程&lt;/p&gt;
+&lt;p&gt;用于诊断一般就是图像识别, 看胸片、眼底照片、CT、核磁. 其中MRI是3D数据, 其他一般是二维. &lt;/p&gt;
+&lt;p&gt;诊断问题一般就是二分类, 有病或者没病.  &lt;/p&gt;
+&lt;p&gt;二分类的loss很简单:&lt;/p&gt;
+&lt;p&gt;L(X,y)=&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;-log(P(Y=1|X)) if y==1&lt;/li&gt;
+&lt;li&gt;-log(P(Y=0|X)) if y==0&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;就是把卷积神经网络CNN最后一步的激活函数设成sigmoid, 得到一个在[0,1]之间的概率, 对这个数字求-log. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>AI4med</category><guid>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_1/</guid><pubDate>Thu, 23 Apr 2020 04:01:00 GMT</pubDate></item><item><title>AI 4 Med 笔记(0)总体印象</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;最近选了deeplearning.ai在coursera上开设的[AI for Medicine Specialization], 有三门课:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.coursera.org/learn/ai-for-medical-diagnosis/home/welcome"&gt;AI for Medical Diagnosis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.coursera.org/learn/ai-for-medical-prognosis/home/welcome"&gt;AI for Medical Prognosis&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.coursera.org/learn/ai-for-medical-treatment/home/welcome"&gt;AI For Medical Treatment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;目前我已经通过了前两门, AI For Medical Treatment要到5月才能开课. &lt;/p&gt;
+&lt;p&gt;本来想在7天免费期内一口气刷完三门课通关, 可惜因为开课时间所限, 无法达成此成就了. 
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_0/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>AI4med</category><guid>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_0/</guid><pubDate>Thu, 23 Apr 2020 04:00:00 GMT</pubDate></item><item><title>病例一则：夜间睡眠时疼痛</title><link>https://goldengrape.github.io/posts/bulabula/case-report/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;blockquote&gt;
 &lt;p&gt;警告：文中这样擅自修改医嘱的行为是非常危险的，仅由专业人士进行，或在专业人士指导下进行。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;我平时对疾病诊断没什么兴趣，碰到病例讨论查房，往往处于神游乃至半昏迷状态。在我看来诊断更多像是在抽屉里找卡片，缺乏连续的推理过程。不过这次遇到的这个病例引起了我的极大兴趣。&lt;/p&gt;

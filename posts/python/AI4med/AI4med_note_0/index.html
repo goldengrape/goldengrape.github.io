@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 4 Med 笔记(0)总体印象 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_0/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../../bulabula/3d-print-in-plague/" title="疫情中的3D打印" type="text/html">
+<link rel="next" href="../AI4med_note_1_1/" title="AI 4 Med 笔记(1.1)胸片诊断" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="AI 4 Med 笔记(0)总体印象">
+<meta property="og:url" content="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_0/">
+<meta property="og:description" content="最近选了deeplearning.ai在coursera上开设的[AI for Medicine Specialization], 有三门课:
+
+AI for Medical Diagnosis
+AI for Medical Prognosis
+AI For Medical Treatment
+
+目前我已经通过了前两门, AI For Medical Treatment要到5月才能开课. 
+本来想">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-04-23T12:00:00+08:00">
+<meta property="article:tag" content="AI4med">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://goldengrape.github.io/">
+
+            <span id="blog-title">GoldenGrape's Blog</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.md" id="sourcelink" class="nav-link">源文件</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../../../index.html" class="nav-link">首页</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../archive.html" class="nav-link">文章存档</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/" class="nav-link">标签</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/jiao-cheng/" class="nav-link">教程</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../github-projects/" class="nav-link">开源项目</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">AI 4 Med 笔记(0)总体印象</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Golden Grape
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-04-23T12:00:00+08:00" itemprop="datePublished" title="2020-04-23 12:00">2020-04-23 12:00</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.md" class="sourcelink">源文件</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>最近选了deeplearning.ai在coursera上开设的[AI for Medicine Specialization], 有三门课:</p>
+<ul>
+<li><a href="https://www.coursera.org/learn/ai-for-medical-diagnosis/home/welcome">AI for Medical Diagnosis</a></li>
+<li><a href="https://www.coursera.org/learn/ai-for-medical-prognosis/home/welcome">AI for Medical Prognosis</a></li>
+<li><a href="https://www.coursera.org/learn/ai-for-medical-treatment/home/welcome">AI For Medical Treatment</a></li>
+</ul>
+<p>目前我已经通过了前两门, AI For Medical Treatment要到5月才能开课. </p>
+<p>本来想在7天免费期内一口气刷完三门课通关, 可惜因为开课时间所限, 无法达成此成就了. 
+<!-- TEASER_END --></p>
+<p>感觉:</p>
+<ol>
+<li>
+<p><a href="https://www.coursera.org/learn/ai-for-medical-diagnosis/home/welcome">AI for Medical Diagnosis</a> 一般. 不是不实用, 而是实用的成本太高. 如果实际操作, 要么是万到十万的病例量, 要么是几十GB的数据量, 个人都玩不起. 于是只能用老师已经做好的. 作业就是一些预处理和修修补补的东西. 类似学法拉利跑车设计与制造, 最后练的是贴膜.</p>
+</li>
+<li>
+<p><a href="https://www.coursera.org/learn/ai-for-medical-prognosis/home/welcome">AI for Medical Prognosis</a> 盛赞! 介绍了很多实用技巧, 数据补全之类. 还有生存分析, 这个我以前学医学统计的时候, 老师没讲过, 眼科病人基本没什么生命危险, 所以之前没接触过. 现在想想只要是不可逆的事件发生, 都可以使用生存分析的. 青光眼预后的判定也可以使用. 如果没学过生存分析, 就非常推荐, 即使是旁听不写作业, 仅仅是听听视频课程, 也非常有帮助. </p>
+</li>
+<li>
+<p><a href="https://www.coursera.org/learn/ai-for-medical-treatment/home/welcome">AI For Medical Treatment</a> 未知</p>
+</li>
+</ol>
+<p>关于作业:</p>
+<p>作业是要付费才能做的, 或者是在7天免费期之内刷完. 从前两门课来看, 讲课只占了内容理解的1/3, 作业中自己要写的代码大概占1/6, 还有1/2是老师已经写好部分. 大概可以把作业代码当作是一份参考资料, 或者攻略, 如果自己要做相似的项目, 就在此基础上修改. </p>
+<p>所以这个专题课没拿到作业是比较亏的. 如果不想花钱, 我觉得可以先旁听, 把课程和课堂练习都做完, 大致理解以后, 集中时间一口气把作业题刷完. 目前作业的评分系统可能还有bug, 估计等三门课都开了, 运行一段时间以后, 就可以比较顺畅. 而且那时候论坛里常见的问题也都有了解答, 刷题比较快. 7天完成不困难, 而且这种感觉非常刺激, 有活血化淤之功效. </p>
+<p>另外, 老师长得像《生活大爆炸》里面的Raj, 语速略慢, 加到1.25x的速度听比较舒服. </p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../../../categories/ai4med/" rel="tag">AI4med</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../../bulabula/3d-print-in-plague/" rel="prev" title="疫情中的3D打印">上一篇文章</a>
+            </li>
+            <li class="next">
+                <a href="../AI4med_note_1_1/" rel="next" title="AI 4 Med 笔记(1.1)胸片诊断">下一篇文章</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script>
+</body>
+</html>
