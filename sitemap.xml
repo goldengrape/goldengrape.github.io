@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-04-23T13:42:00Z</lastmod>
+  <lastmod>2020-05-03T14:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -247,7 +247,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-18.html</loc>
-  <lastmod>2020-04-23T13:42:00Z</lastmod>
+  <lastmod>2020-05-03T14:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -570,6 +570,10 @@
   <lastmod>2018-08-23T04:15:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/instruments/</loc>
+  <lastmod>2020-05-03T14:18:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</loc>
   <lastmod>2018-03-01T08:20:00Z</lastmod>
  </url>
@@ -832,6 +836,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_1/</loc>
   <lastmod>2020-04-23T08:04:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/AI4med_note_0/</loc>
+  <lastmod>2020-05-03T14:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Alpha_tear/</loc>

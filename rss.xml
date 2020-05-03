@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Thu, 23 Apr 2020 15:59:54 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>笔法方程的应用: 怎样算写字不好</title><link>https://goldengrape.github.io/posts/bulabula/BrushStroke_equations_app/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在&lt;a href="https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/"&gt;《笔法方程略史》&lt;/a&gt;里面提到了书法的first principle:&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 03 May 2020 14:28:01 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI 4 Med 笔记(0)总体印象</title><link>https://goldengrape.github.io/posts/python/AI4med_note_0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;突然翻出了9年前给自己熬的鸡汤, 味道很不错. 一下子已经过去9年了呢. 能够以发明作为职业, 实在是非常幸福. &lt;/p&gt;
+&lt;h3&gt;第14个月的总结&lt;/h3&gt;
+&lt;p&gt;想着在12个月的时候总结一下，结果一不留神，日子滑到了14个月。
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/AI4med_note_0/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/python/AI4med_note_0/</guid><pubDate>Sun, 03 May 2020 04:00:00 GMT</pubDate></item><item><title>几种乐器</title><link>https://goldengrape.github.io/posts/bulabula/instruments/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;大家都在家里蹲, 反正邻居跑不了, 不妨制造点噪音吧. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;乐器只是为了表达情感, 乐趣是必须的, 勤奋练习只是为了体验更高乐趣的副产品. 如果因为练琴哭鼻子, 不如把乐器砸了换回些欢笑. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下面介绍几种好玩的软件硬件乐器, mac OS下都可以使用, windows/ linux有些可以用. &lt;/p&gt;
+&lt;h3&gt;准备工作&lt;/h3&gt;
+&lt;p&gt;在mac下, 至少要配置一个能够让midi输入发声的软件, &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://help.apple.com/garageband/mac/10.3/zh_CN.lproj/GlobalArt/AppLanding_GarageBand.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;库乐队(garage band), 是苹果免费的软件, 在mac OS, iOS下都有. &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果只是为了演奏玩, 那么打开以后直接新建一个“空项目”, 然后要选择“软件乐器”&lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2020-03-27 11.58.07" src="https://i.loli.net/2020/03/27/Q1rfuNDYjp9gldk.png"&gt;&lt;/p&gt;
+&lt;p&gt;接着就可以&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/instruments/</guid><pubDate>Tue, 28 Apr 2020 04:00:00 GMT</pubDate></item><item><title>笔法方程的应用: 怎样算写字不好</title><link>https://goldengrape.github.io/posts/bulabula/BrushStroke_equations_app/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我在&lt;a href="https://goldengrape.github.io/posts/bulabula/A_Brief_History_of_BrushStroke_equations/"&gt;《笔法方程略史》&lt;/a&gt;里面提到了书法的first principle:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;基本定理：写完一笔以后, 笔应该恢复到能够写下一笔的状态。&lt;/p&gt;
 &lt;p&gt;也就是说, 一笔写完以后, 由于笔的弹性, 笔应该回到初始状态, 笔锋是处于聚拢状态的。不妨称为“回归律”&lt;/p&gt;
@@ -194,7 +210,4 @@ https://www.uptodate.com/contents/zh-Hans/pathophysiology-clinical-manifestation
 &lt;/blockquote&gt;
 &lt;p&gt;上一次是SARS, 结束是在6月份.&lt;/p&gt;
 &lt;p&gt;以下是近期采购单:&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/shopping_list/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/shopping_list/</guid><pubDate>Tue, 11 Feb 2020 04:00:00 GMT</pubDate></item><item><title>口罩倍增器</title><link>https://goldengrape.github.io/posts/bulabula/mask_amplifier/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/mask_amp/mask_amp.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/mask_amplifier/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/mask_amplifier/</guid><pubDate>Sun, 09 Feb 2020 00:00:00 GMT</pubDate></item><item><title>新发传染病的诊断标准讨论</title><link>https://goldengrape.github.io/posts/bulabula/Discussion_on_diagnostic_criteria_of_new_infectious/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这几天宅在家, 看学堂在线的&lt;a href="https://next.xuetangx.com/course/CCMU10041001419/1511117"&gt;《传染病学》&lt;/a&gt;, 先看完了总论, 然后看完第5章非典, 唏嘘不已. 看着看着觉得有点问题. &lt;/p&gt;
-&lt;p&gt;对于一个新发传染病, 现在的诊断标准可能设计得有缺陷. 我不是流行病学专业, 也不是呼吸科或者放射科的医生, 更没有第一手的数据. 所以也只能是提出问题, 无法验证假设. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Discussion_on_diagnostic_criteria_of_new_infectious/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Discussion_on_diagnostic_criteria_of_new_infectious/</guid><pubDate>Tue, 28 Jan 2020 15:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/shopping_list/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/shopping_list/</guid><pubDate>Tue, 11 Feb 2020 04:00:00 GMT</pubDate></item></channel></rss>
