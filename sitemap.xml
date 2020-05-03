@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-05-03T14:18:00Z</lastmod>
+  <lastmod>2020-05-03T14:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -247,7 +247,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-18.html</loc>
-  <lastmod>2020-05-03T14:18:00Z</lastmod>
+  <lastmod>2020-05-03T14:32:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -568,10 +568,6 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</loc>
   <lastmod>2018-08-23T04:15:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/bulabula/instruments/</loc>
-  <lastmod>2020-05-03T14:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</loc>
@@ -1008,6 +1004,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/shi-yong-pythonjin-xing-bei-xie-si-tong-ji-fen-xi/</loc>
   <lastmod>2017-12-29T04:07:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/soup_9_years/</loc>
+  <lastmod>2020-05-03T14:29:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/video_keynote/</loc>
