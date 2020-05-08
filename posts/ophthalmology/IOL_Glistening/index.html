@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>人工晶体闪辉Glistening | GoldenGrape's Blog</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/ophthalmology/IOL_Glistening/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../../python/soup_9_years/" title="9年前的鸡汤" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="人工晶体闪辉Glistening">
+<meta property="og:url" content="https://goldengrape.github.io/posts/ophthalmology/IOL_Glistening/">
+<meta property="og:description" content="近期认真读了一下关于人工晶体Glistening(闪辉)的文献, 连带读了相关的专利. 很有意思, 写出来供眼科同道观赏. (专业文章讲解惯例, 专业名词第一次出现时使用中文译名, 此后持续使用英文原名.)
+临床部分比较无聊, 但原理部分相当有趣.
+
+
+定义
+2018 AAO BCSC Section 11 Lens and Cataract中的定义是这样的: 
+
+Glistenings are ">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-05-09T00:00:00+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://goldengrape.github.io/">
+
+            <span id="blog-title">GoldenGrape's Blog</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.md" id="sourcelink" class="nav-link">源文件</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../../index.html" class="nav-link">首页</a>
+                </li>
+<li class="nav-item">
+<a href="../../../archive.html" class="nav-link">文章存档</a>
+                </li>
+<li class="nav-item">
+<a href="../../../categories/" class="nav-link">标签</a>
+                </li>
+<li class="nav-item">
+<a href="../../../categories/jiao-cheng/" class="nav-link">教程</a>
+                </li>
+<li class="nav-item">
+<a href="../../../github-projects/" class="nav-link">开源项目</a>
+                </li>
+<li class="nav-item">
+<a href="../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">人工晶体闪辉Glistening</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Golden Grape
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-05-09T00:00:00+08:00" itemprop="datePublished" title="2020-05-09 00:00">2020-05-09 00:00</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.md" class="sourcelink">源文件</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>近期认真读了一下关于人工晶体Glistening(闪辉)的文献, 连带读了相关的专利. 很有意思, 写出来供眼科同道观赏. (专业文章讲解惯例, 专业名词第一次出现时使用中文译名, 此后持续使用英文原名.)</p>
+<p>临床部分比较无聊, 但原理部分相当有趣.</p>
+<!-- TEASER_END -->
+
+<h3>定义</h3>
+<p>2018 AAO BCSC Section 11 Lens and Cataract中的定义是这样的: </p>
+<blockquote>
+<p>Glistenings are fluid-filled microvacuoles that form within an IOL optic when it is in an aqueous environment. They are observed within all types of IOL material but are associated primarily with certain hydrophobic acrylic IOLs.</p>
+<p>Glistenings是在房水环境中 IOL 光学部内形成的充满液体的微空泡。在所有类型的 IOL 材料中均可观察到，但主要与某些疏水性丙烯酸 IOL 相关。</p>
+</blockquote>
+<h3>什么样子</h3>
+<p>在裂隙灯下观察, 可见遍布IOL内, 直径越为10-20 µm左右的圆形空泡, 反光明显.  </p>
+<p><img alt="" src="http://about-eyes.com/wp-content/uploads/2018/01/Alcon-AcrySof-lens-implant-with-glistenings.jpg"><img alt="" src="https://eyeworld-websupport911.netdna-ssl.com/images/New_Articles/2014/08/15.jpg"></p>
+<h3>分级</h3>
+<h4>裂隙灯分级</h4>
+<p><img alt="" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4067657/bin/ijo-07-03-446-g001.jpg"></p>
+<p>裂隙灯下的分级:</p>
+<ul>
+<li>0级: 啥也没有(图A)</li>
+<li>1级: 痕量, 寥寥数个(图B)</li>
+<li>2级: 中度, 比较多, 数不过来了, 但是密度还不算高(图C)</li>
+<li>3级: 重度, 高密度, 不计其数(图D)</li>
+</ul>
+<h4>客观分级</h4>
+<p><img alt="" src="https://i.loli.net/2020/05/08/TLczvUbgIP6XtWr.png"></p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/26796445">《Objective classification of glistenings in implanted intraocular lenses using Scheimpflug tomography》</a>里面用Scheimpflug照相来拍摄, 然后用ImageJ去数. </p>
+<h3>发生率</h3>
+<p>不同作者, 不同时期统计的发生率不等, 跟品牌有很强的关系. 2002年的<a href="https://www.ncbi.nlm.nih.gov/pubmed/12106730/">《Glistenings in foldable intraocular lenses》</a>中统计的发生率在40.0% - 67.5%, </p>
+<p>作为应用最广泛的疏水性丙烯酸酯人工晶体之一的Alcon Acrysof SN60WF发生率很高:</p>
+<ul>
+<li>在2012年<a href="https://www.ncbi.nlm.nih.gov/pubmed/22727284">《Incidence of glistenings with the latest generation of yellow-tinted hydrophobic acrylic intraocular lenses》</a>的统计里Acrysof SN60WF达到96/111 (86.5%), </li>
+<li>在2013年的文章<a href="https://www.ncbi.nlm.nih.gov/pubmed/23677137/">《Posterior capsule opacification with the iMics1 NY-60 and AcrySof SN60WF 1-piece hydrophobic acrylic intraocular lenses: 3-year results of a randomized trial》</a>里AcrySof SN60WF达到了97/100(97%)</li>
+</ul>
+<h3>视觉影响</h3>
+<p>虽然在裂隙灯下看起来很明显, 但对 <strong>视觉质量影响不大.</strong></p>
+<p>比如<a href="https://www.ncbi.nlm.nih.gov/pubmed/29587977">《Influence of surface light scattering and glistenings of intraocular lenses on visual function 15 to 20 years after surgery》</a>追踪了术后15-20年, 对视力没影响. </p>
+<p>但是如果特别仔细去分析, 3级的glistenings, 就是微泡特多特多的那种, 可能影响对比敏感度和视野MD.</p>
+<p><img alt="" src="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4067657/bin/ijo-07-03-446-g004.jpg"></p>
+<p>这张图里Grade 3中, 高频对比敏感度中出现异常的患者比例更高一些. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4067657/">《Analysis of glistenings in hydrophobic acrylic intraocular lenses on visual performance》</a></p>
+<p>各个等级对视野MD值的影响: -2.14±2.31, -1.97±2.23, -3.02±3.17 and -4.12±3.38, 也是Grade 3有统计学意义. </p>
+<h3>产生Glistening的因素</h3>
+<h4>生产</h4>
+<h5>材料</h5>
+<p>各种材料都有可能, PMMA、硅胶、疏水性丙烯酸酯, 但疏水性丙烯酸酯里面尤其明显, 而疏水性丙烯酸酯里又是AcrySof遭黑最多. 亲水性丙烯酸酯里通常罕见, 亲水性晶体的问题是钙质沉着, 那种不是空泡样的, 浑浊起来更猛. </p>
+<h5>加工方式</h5>
+<p>切削出来的少, 模铸的多. 此处又黑一遍AcrySof. </p>
+<h5>抛光</h5>
+<p>有可能抛光时发热, 产生的热冲击, 能够加剧Glistening. 所以有些厂商使用低温抛光技术. </p>
+<h5>度数</h5>
+<p>度数越厚, 材料越多, 里面的Glistening也可能更多. 这个符合直觉</p>
+<h4>临床因素</h4>
+<p><a href="https://www.ncbi.nlm.nih.gov/pubmed/14604721">《Clinical factors related to the frequency and intensity of glistenings in AcrySof intraocular lenses》</a>里面总结如果血房水屏障破坏, 发生率就高, 比如: 手术时间长或者Phaco+小梁切除术后. </p>
+<p><img alt="" src="https://i.loli.net/2020/05/08/R3nFObTpl2Vrqcj.png"></p>
+<p>还有就是时间因素, 随时间增加, 直到半年以后逐渐稳定下来, 然后AcrySof继续招黑, 半年后其他家都稳定了, AcrySof仍然增长, 数量也涨分级也涨. </p>
+<p><img alt="图片 3.png" src="https://i.loli.net/2020/05/08/Y5QMlbEoskdJVjx.png">
+(半年以后其他家数量稳定了, AcrySof继续涨 )</p>
+<p><img alt="图片 4" src="https://i.loli.net/2020/05/08/ABODdptzhV2J9aR.png">
+(分级也是)</p>
+<p>临床部分比较无聊. 总的来说, 很少听见有病人抱怨. 基本上属于民不告官不究的问题. 主要是厂商之间拿来互相攻击用的, 不过厂商互黑才是IOL技术研发的动力啊. </p>
+<hr>
+<h3>发生原理</h3>
+<p>要讲发生原理, 得先复习材料学. </p>
+<h4>人工晶体材料</h4>
+<p>人工晶体的材料经常会听到聚-xx丙烯酸-x酯这样的名词. </p>
+<ul>
+<li>聚: 好多个</li>
+<li>丙: 3个碳C</li>
+<li>烯酸: 碳和氧之间是双键, (如果是单键叫烷, 如果是三键叫炔)</li>
+<li>酯: 本来有个-OH, 但H被脂肪链取代了.</li>
+</ul>
+<p>练一练1: </p>
+<p><img alt="PMA" src="https://i.loli.net/2020/05/08/jDxgQGvisputTqW.png"></p>
+<ul>
+<li>聚: 有n个,</li>
+<li>丙: 黄色圆标出了3个碳</li>
+<li>烯酸: C=O-O</li>
+<li>甲酯: -CH3, 甲基取代了COOH上的H.
+所以是聚丙烯酸甲酯</li>
+</ul>
+<p>练一练2: </p>
+<p><img alt="PMMA" src="https://i.loli.net/2020/05/08/9rVLcxiEdMUZCpl.png"></p>
+<p>把PMA上2号C上再连上一个甲基-CH3, 就得到了聚<strong>甲基</strong>丙烯酸甲酯, 这就是大名鼎鼎的PMMA了, 硬晶体就是它, 非眼科同学, PMMA就是亚克力、有机玻璃.</p>
+<p>练一练3:</p>
+<p><img alt="HEMA" src="https://i.loli.net/2020/05/08/xSoPsfwbERmqcHz.png"></p>
+<p>把PMMA顶上的脂肪取代基-CH3, 替换成羟乙酯-CH2-CH2-OH, 就是聚甲基丙烯酸<strong>羟</strong>乙酯, poly-HEMA, 这就是水凝胶了, 常常用在隐形眼镜上, 但如果直接用在人工晶体上实在太软了. </p>
+<p>注意HEMA上有个羟基, 凡事带有羟基的位置, 都亲水, 能够吸附水分子. </p>
+<p>练一练4、5:</p>
+<p><img alt="PEA" src="https://i.loli.net/2020/05/08/WvrcLPmXgQhSoaN.png"><img alt="PEMA" src="https://i.loli.net/2020/05/08/CBkrFVb5Nzi7upd.png"></p>
+<p>PEA和PEMA, 这两个取代基是苯乙酯, PEMA有一个第2号C上的甲基, </p>
+<p>注意, 有苯环出现, 苯环代表两件事情:</p>
+<ul>
+<li>强疏水性, 水分子非常怕苯环, 都躲得远远的.</li>
+<li>高屈光指数, 苯环越多折射率越高. </li>
+</ul>
+<p>好了, 主要嘉宾都出场完毕. 各种人工晶体材料, 不过是从这些聚合物里找出两种或者多种, 按一定比例聚合在一起. </p>
+<h5>亲水性丙烯酸酯</h5>
+<p>典型如博士伦公司的Hydroview, 是由HEMA和HOHEXMA组成, HOHEXMA刚才没出现过, 跟HEMA(甲基丙烯酸-
+羟-乙酯)差不多, 只是脂肪链更长一些, 它是甲基丙烯酸-羟<strong>己</strong>酯, 甲乙丙丁戊己, 6个碳.</p>
+<p>这俩都有羟基, 强吸水, 所以是亲水性的. 含水量达到18%-38%. </p>
+<p>亲水晶体在折叠的时候, 是把水挤出去, 体积就变化了, 能对折, 放进眼内再吸水, 就恢复形状了. </p>
+<h5>疏水性丙烯酸酯</h5>
+<p>典型如刚才一直招黑的AcrySof, 主要是PEA和PEMA组成. 两个都带有苯环, 所以是强疏水, 高折射率. 内部的含水量只有0.1%-0.5%</p>
+<p>PEA, PEMA会形成长链, 链和链之间还有交联剂, 但也不是整个就一条链, IOL还是由互相交织在一起的多个分子构成的. 所以才能够变形, 从某种程度上来说, “非晶态的物质是流体”. </p>
+<h3>为什么产生Glistening</h3>
+<p>终于回到正题, 为什么会产生Glistening? </p>
+<p>比如AcrySof, 虽然只有0.1%-0.5%的含水量, 里面也还是多多少少有点水的, 而且物体的疏水性是表面性质, 物体内部是否能把水吸进来, 是吸湿性hygroscopy. </p>
+<p>这0.1%-0.5%的水, 在满是强疏水苯环的IOL里非常可怜. 所以, 一旦有机会她们就尽可能要挤在一起, 这种机会可以是长链分子在旋转或者热运动时暴露出的一点通道, 相应的, 水如果集中了, 周围就会形成疏水的聚集, 也就是一圈强疏水的笼子, 把水关在里面. 这种过程叫做Spinodal decomposition(失稳相分离). </p>
+<p>有点像, 给手机贴膜时有几个气泡, 如果总有滑动按动, 气泡就慢慢聚到了一起. 或者是油里有几滴水, 逐渐稳定以后, 水也倾向聚合到一起. </p>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6484980/">《Experimental study of the mechanisms leading to the formation of glistenings in intraocular lenses by Raman spectroscopy》</a>对Glistening的小泡做拉曼光谱分析, </p>
+<p><img alt="laman" src="https://i.loli.net/2020/05/08/W9CVkEeOA7TMHyq.png"></p>
+<p>内部的含水量高达23%, 是平均含水量的200多倍, 外圈还有一层苯环的强信号. 所以是苯环构成了一个疏水笼子, 把水关在了里面. </p>
+<h3>Glistening-free材料</h3>
+<p>目前有三个号称自己是完全没有Glistening的IOL, 是Glistening-free材料. </p>
+<ol>
+<li>一个是日本参天Santen旗下的Advanced Vision Science研发出的AVS材料, 这款材料做出了<a href="https://www.advancedvisionscience.com/productsrd/">Eternity IOL</a>, </li>
+</ol>
+<p><img alt="" src="https://www.advancedvisionscience.com/wp-content/uploads/2016/01/3P7.jpg"><img alt="" src="https://www.advancedvisionscience.com/wp-content/uploads/2016/01/3P7.jpg"><img alt="" src="https://www.advancedvisionscience.com/wp-content/uploads/2016/01/SP6.jpg"></p>
+<ol>
+<li>然后在2009年的时候参天将这个材料<a href="https://www.santen.com/en/news/20090303-3.pdf">授权许可给博士伦公司使用</a>, 博士伦在日本以外的区域推出了<a href="https://www.bausch.com/ecp/our-products/cataract-surgery/lens-systems/envista-iol">enVista</a>
+</li>
+</ol>
+<p><img alt="" src="https://www.bausch.com/portals/77/-/m/BL/United%20States/Images/ECP/Products/Surgical/enVista.jpg?ver=2016-05-07-214426-403"></p>
+<p>我开始用bausch&amp;lomb+glistening, 和Santen+glistening都没有找到专利信息, 后来发现用Advanced Vision Science+glistening是可以找到相关专利的. 是2007年提交的<a href="https://patents.google.com/patent/CN101484091B/zh">CN101484091B 《不反光或反光减少的人工晶状体及其制造方法》</a></p>
+<ol>
+<li>还有一种是HOYA产的<a href="https://hoyasurgicaloptics.com/html/page.php?page_id=9">vivinex</a>, HOYA这一款的研发可能还要早一些, 是2006年提交的<a href="https://patents.google.com/patent/CN101137684B/zh">CN101137684B 《(甲基)丙烯酸酯化合物及其制备方法、(甲基)丙烯酸酯共聚物及其制备方法以及软性眼内透镜》</a>
+</li>
+</ol>
+<p>上面提到的专利其实都是专利家族, 里面欧、美、日、中、韩各地的专利都有, 但内容是一致的, 所以只列出了中文的. </p>
+<p>关于AVS材料(enVista/ Eternity), 有一篇很棒的文章详细进行了讲解<a href="https://www.tandfonline.com/doi/abs/10.3109/02713683.2014.978476">《New Hydrophobic IOL Materials and Understanding the Science of Glistenings》</a>, 相似的原理也适用于HOYA vivinex.</p>
+<p>从上面的分析可知, glistening小泡的内部是水, 外部是苯环形成的疏水笼子, 两边互相敌视互相隔离开来. 那么解决的方案就是令水分子能够自由移动, 即使在遇到苯环的围追堵截时, 仍然能够有亲水的通道供水分子移动. 如果能够移动, 水分子就倾向于均匀分布, 不至于形成水泡了. </p>
+<p><img alt="PHS" src="https://i.loli.net/2020/05/08/BoxWa8D9yUAkcQp.png"></p>
+<p>enVista里面有30%的HEMA, 之前说过HEMA里是含有羟基-OH的, 是亲水基团, 含量高达30%意味着疏水基团很难形成一个比较大的全包围结构, 总会有些地方能够让水分子顺着亲水基团流动, 于是就不至于形成水分聚集的区域, 光学的事, 只要均匀就好了. enVista的含水量达到了4%, 折射率1.53</p>
+<p>对于vivinex, 方案很可能是相似的, 但目前缺乏文献分析, 也没有足够的公司公开资料, 只有专利. 不过专利也说得很多啦. </p>
+<p>关键的分子是HE<strong>P</strong>A.
+<img alt="HEPA" src="https://i.loli.net/2020/05/08/fQidVbZEpPOSwqX.png"></p>
+<p>这个比用HE<strong>M</strong>A还要精彩一些, HEPA里不但带有羟基, 还自带一个苯环, 所以当一堆苯环围在一起的时候, 中间非常可能至少有一个叛徒, 能够偷偷放走水分子. 而把羟基和苯环放在一个单体上, 似乎还能省点东西, 含水量可能要更低一些, 折射率也能更高, 能够达到1.548. </p>
+<p>但由于没有其他资料, 我无法确切知道HEPA的含量, 以及其他的成分. 但如果根据专利大胆猜一下</p>
+<p><img alt="" src="https://i.loli.net/2020/05/08/OhkYvustf5LXUMg.jpg"></p>
+<p>看起来很像是实施例12哦, 因为HOYA是有黄晶体的, 黄色染料暴露了秘密. </p>
+<p>如果是实施例12, 那么就可能是18%的HEPA, 77%的PEA, 两组苯环在其中. 专利中的折射率能够达到1.554, 当然生产时可能还会有些调整, 往下调总归容易些. </p>
+<h3>参考文献</h3>
+<p>杂七杂八的参考文献都已经直接列在前面了, 懒得整理. 比较重要的有四篇, 文献和专利一起看, 交叉验证, 很有意思. </p>
+<ol>
+<li>
+<p><a href="https://www.tandfonline.com/doi/abs/10.3109/02713683.2014.978476">《New Hydrophobic IOL Materials and Understanding the Science of Glistenings》</a> 这篇综述不错, 仔细讲解了Glistenings形成的原理和利用亲水基团制作Glistenings-free材料的原理.<a href="https://sci-hub.tw/10.3109/02713683.2014.978476">全文</a></p>
+</li>
+<li>
+<p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6484980/">《Experimental study of the mechanisms leading to the formation of glistenings in intraocular lenses by Raman spectroscopy》</a> 这一篇用拉曼光谱分析Glistenings水泡的成分. </p>
+</li>
+<li>
+<p><a href="https://patents.google.com/patent/CN101484091B/zh">CN101484091B 《不反光或反光减少的人工晶状体及其制造方法》</a> 这很可能是博士伦enVista/ Santen Eternit的专利</p>
+</li>
+<li>
+<p><a href="https://patents.google.com/patent/CN101137684B/zh">CN101137684B 《(甲基)丙烯酸酯化合物及其制备方法、(甲基)丙烯酸酯共聚物及其制备方法以及软性眼内透镜》</a>这很可能是HOYA vivinex的专利. </p>
+</li>
+</ol>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../../python/soup_9_years/" rel="prev" title="9年前的鸡汤">上一篇文章</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script>
+</body>
+</html>

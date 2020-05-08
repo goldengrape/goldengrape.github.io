@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-05-03T14:32:00Z</lastmod>
+  <lastmod>2020-05-08T16:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -247,7 +247,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-18.html</loc>
-  <lastmod>2020-05-03T14:32:00Z</lastmod>
+  <lastmod>2020-05-08T16:12:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -754,6 +754,10 @@
   <lastmod>2018-01-11T07:37:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/posts/ophthalmology/IOL_Glistening/</loc>
+  <lastmod>2020-05-08T16:12:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/posts/ophthalmology/IOL_calculate_with_post_conrea_refractive_surgery/</loc>
   <lastmod>2019-08-19T04:53:00Z</lastmod>
  </url>
@@ -832,10 +836,6 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_1/</loc>
   <lastmod>2020-04-23T08:04:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/python/AI4med_note_0/</loc>
-  <lastmod>2020-05-03T14:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/Alpha_tear/</loc>
