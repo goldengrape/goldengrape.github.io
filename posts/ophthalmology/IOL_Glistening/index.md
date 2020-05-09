@@ -199,17 +199,19 @@ PEA, PEMA会形成长链, 链和链之间还有交联剂, 但也不是整个就�
 
 目前有三个号称自己是完全没有Glistening的IOL, 是Glistening-free材料. 
 
-1. 一个是日本参天Santen旗下的Advanced Vision Science研发出的AVS材料, 这款材料做出了[Eternity IOL](https://www.advancedvisionscience.com/productsrd/), 
+* 一个是日本参天Santen旗下的Advanced Vision Science研发出的AVS材料, 这款材料做出了[Eternity IOL](https://www.advancedvisionscience.com/productsrd/), 
 
 ![](https://www.advancedvisionscience.com/wp-content/uploads/2016/01/3P7.jpg)![](https://www.advancedvisionscience.com/wp-content/uploads/2016/01/3P7.jpg)![](https://www.advancedvisionscience.com/wp-content/uploads/2016/01/SP6.jpg)
 
-2. 然后在2009年的时候参天将这个材料[授权许可给博士伦公司使用](https://www.santen.com/en/news/20090303-3.pdf), 博士伦在日本以外的区域推出了[enVista](https://www.bausch.com/ecp/our-products/cataract-surgery/lens-systems/envista-iol)
+* 然后在2009年的时候参天将这个材料[授权许可给博士伦公司使用](https://www.santen.com/en/news/20090303-3.pdf), 博士伦在日本以外的区域推出了[enVista](https://www.bausch.com/ecp/our-products/cataract-surgery/lens-systems/envista-iol)
 
 ![](https://www.bausch.com/portals/77/-/m/BL/United%20States/Images/ECP/Products/Surgical/enVista.jpg?ver=2016-05-07-214426-403)
 
-我开始用bausch&lomb+glistening, 和Santen+glistening都没有找到专利信息, 后来发现用Advanced Vision Science+glistening是可以找到相关专利的. 是2007年提交的[CN101484091B 《不反光或反光减少的人工晶状体及其制造方法》](https://patents.google.com/patent/CN101484091B/zh)
+* 还有一种是HOYA产的[vivinex](https://hoyasurgicaloptics.com/html/page.php?page_id=9), HOYA这一款的研发可能还要早一些. 
 
-3. 还有一种是HOYA产的[vivinex](https://hoyasurgicaloptics.com/html/page.php?page_id=9), HOYA这一款的研发可能还要早一些, 是2006年提交的[CN101137684B 《(甲基)丙烯酸酯化合物及其制备方法、(甲基)丙烯酸酯共聚物及其制备方法以及软性眼内透镜》](https://patents.google.com/patent/CN101137684B/zh)
+这几种产品都还能找到可能对应的专利, 我开始用bausch&lomb+glistening, 和Santen+glistening都没有找到专利信息, 后来发现用Advanced Vision Science+glistening是可以找到相关专利的. enVista是2007年提交的[CN101484091B 《不反光或反光减少的人工晶状体及其制造方法》](https://patents.google.com/patent/CN101484091B/zh)
+
+HOYA vivinex的专利应该是2006年提交的[CN101137684B 《(甲基)丙烯酸酯化合物及其制备方法、(甲基)丙烯酸酯共聚物及其制备方法以及软性眼内透镜》](https://patents.google.com/patent/CN101137684B/zh)
 
 上面提到的专利其实都是专利家族, 里面欧、美、日、中、韩各地的专利都有, 但内容是一致的, 所以只列出了中文的. 
 
@@ -235,6 +237,16 @@ enVista里面有30%的HEMA, 之前说过HEMA里是含有羟基-OH的, 是亲水�
 看起来很像是实施例12哦, 因为HOYA是有黄晶体的, 黄色染料暴露了秘密. 
 
 如果是实施例12, 那么就可能是18%的HEPA, 77%的PEA, 两组苯环在其中. 专利中的折射率能够达到1.554, 当然生产时可能还会有些调整, 往下调总归容易些. 
+
+## AcrySof的改进
+
+补充一下, 虽然AcrySof被黑了很久, 但是人家还是有改进的, 这篇[《Evaluation of in vitro glistening formation in hydrophobic acrylic intraocular lenses》](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3732199/)比较了2003年产的AcrySof和2012年产的型号, 
+
+![](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3732199/bin/opth-7-1529f2.jpg)
+
+图中显示, 经过多年的工艺改进，2003年和2012年生产的 AcrySof 人工晶状体的平均微空泡密度。
+
+人工晶体材料是整个人工晶体生产平台里最底层的基础之一, 材料的变化会带来一系列的变化, 比如如果为了完全消除Glistening, 引入羟基, 就可能增加含水量, 相应可能会降低折射率, (AcrySof的折射率高达1.55), 折射率降低晶体可能就要更厚, 厚度增加植入器尖端就要更粗, 于是角膜切口可能就需要更大. 本来Glistening只是个民不告官不究的问题, 如果为了消除这个问题导致切口增大, 大夫可能就要翻脸了. 如果要维持切口大小不变, 又是一组要改进植入器的过程. 环环相扣, 研发不易.
 
 ## 参考文献
 
