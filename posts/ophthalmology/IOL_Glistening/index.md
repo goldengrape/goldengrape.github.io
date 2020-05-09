@@ -72,6 +72,8 @@
 
 各个等级对视野MD值的影响: -2.14±2.31, -1.97±2.23, -3.02±3.17 and -4.12±3.38, 也是Grade 3有统计学意义. 
 
+如果患者真的出现了比较严重的影响, 比如炫光(glare)或者看东西有光晕(halo), 这篇文章 [《Polarized glasses may help in symptomatic cases of intraocular lens glistenings》](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6511652/)建议使用偏振眼镜. 注意线性偏振镜能够把入射光能量直接降低50%+, 我不确定夜间适合使用. 我不是很相信这篇文章的结论. 
+
 ## 产生Glistening的因素
 
 ### 生产
