@@ -1,5 +1,190 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 28 Jan 2020 16:32:41 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>SARI数据分析(2): 使传染病疫情可以控制的因素</title><link>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 03:41:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI 4 Med 笔记(1.2)各种率</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;第一门课第二周, 主要讲&lt;/p&gt;
+&lt;h3 id="各种率"&gt;各种率&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E5%90%84%E7%A7%8D%E7%8E%87"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;真假阴阳各种率&lt;/li&gt;
+&lt;li&gt;敏感性和特异性&lt;/li&gt;
+&lt;li&gt;阳性预测率(PPV)和阴性预测率&lt;/li&gt;
+&lt;li&gt;置信区间, ROC曲线, F1 score&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;我之前学Scikit-learn的时候, 笔记记得挺清楚的.&lt;/p&gt;
+&lt;p&gt;参考&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/"&gt;Scikit-learn笔记2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-3/"&gt;Scikit-learn笔记3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/"&gt;Scikit-learn笔记4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;而且这张图做得很好, 一张图说明问题, 先看图, 再看后面的计算方式:&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ratios.png" alt=""&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="真假阴阳性"&gt;真假阴阳性&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E7%9C%9F%E5%81%87%E9%98%B4%E9%98%B3%E6%80%A7"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th style="text-align:left"&gt;&lt;/th&gt;
+&lt;th style="text-align:left"&gt;预测为(-)&lt;/th&gt;
+&lt;th style="text-align:left"&gt;预测为(+)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;实际为(-)&lt;/td&gt;
+&lt;td style="text-align:left"&gt;TN&lt;/td&gt;
+&lt;td style="text-align:left"&gt;FP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align:left"&gt;实际为(+)&lt;/td&gt;
+&lt;td style="text-align:left"&gt;FN&lt;/td&gt;
+&lt;td style="text-align:left"&gt;TP&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;TP = true positive 真阳性&lt;/li&gt;
+&lt;li&gt;FP = false positive (Type I error) 假阳性(Type I错误) , 印象里就是P&amp;lt;0.05的0.05&lt;/li&gt;
+&lt;li&gt;TN = true negative 真阴性&lt;/li&gt;
+&lt;li&gt;FN = false negative (Type II error)假阴性(Type II错误)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="敏感特异性"&gt;敏感特异性&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E6%95%8F%E6%84%9F%E7%89%B9%E5%BC%82%E6%80%A7"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Accuracy: 分类正确的概率. 实际为(-)预测为(-), 实际为(+)预测为(+)叫做正确. 
+$$
+Accuracy=\frac{TP + TN}{TP + TN + FP + FN}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Classification error: (1-Accuracy), 分类错误的概率
+$$
+Classification\;  error=\frac{FP + FN}{TP + TN + FP + FN}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Recall, 真阳性率: 实际上为(+), 能够被预测成(+)的概率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Recall又叫 &lt;/li&gt;
+&lt;li&gt;True Positive Rate (TPR): 真阳性率&lt;/li&gt;
+&lt;li&gt;Sensitivity: 敏感性&lt;/li&gt;
+&lt;li&gt;Probability of detection: 检出率
+$$
+Recall=\frac{TP}{TP+FN}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Precision: 如果预测为(+), 那么预测正确的概率
+$$
+Precision=\frac{TP}{TP+FP}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;又叫做: Specificity, 特异性
+$$
+False positive rate=\frac{FP}{TN+FP}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="F1-score:-结合precision与recall"&gt;F1-score: 结合precision与recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall"&gt;¶&lt;/a&gt;&lt;/h3&gt;$$
+F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
+$$&lt;h3 id="F-score:-更一般地将precision与recall结合成单独一个数"&gt;F-score: 更一般地将precision与recall结合成单独一个数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;$$
+F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
+$$&lt;p&gt;𝛽用来调整recall vs precision之间的重要程度:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Precision-oriented users: 𝜷 = 0.5 &lt;/li&gt;
+&lt;li&gt;Recall-oriented users: 𝜷 = 2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="阳性预测率-PPV"&gt;阳性预测率 PPV&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E9%98%B3%E6%80%A7%E9%A2%84%E6%B5%8B%E7%8E%87-PPV"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;实际上就是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Precision: 如果预测为(+), 那么预测正确的概率
+$$
+Precision=\frac{TP}{TP+FP}
+$$&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+$$ 
+PPV = Precision = \frac{sensitivity \times prevalence}{sensitivity  \times  prevalence+(1 - specificity) \times (1 - prevalence)}
+$$&lt;p&gt;其中 prevalence=P(pos), 阳性结果的发生率. 如果自己都知道TP、FP的数据, 当然用简单的公式计算, 如果拿到的是一个标记好各种率的试剂盒, 或者是看一篇新闻报道, 对方把各种率搅合在一起, 那么可能就要通过后一种公式来计算&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="置信区间"&gt;置信区间&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;比如某个概率p=0.80(95% CI 0.78, 0.82),&lt;/p&gt;
+&lt;p&gt;是说, 真实的概率p, 谁知道是啥, 有95%的概率, 会落在[0.78, 0.82]的范围内. 置信区间的范围和样本量有关, 样本量越大, 置信区间的宽度越窄.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h3 id="ROC曲线"&gt;ROC曲线&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#ROC%E6%9B%B2%E7%BA%BF"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;X轴: False Positive Rate 假阳性率&lt;/li&gt;
+&lt;li&gt;Y轴: True Positive Rate  真阳性率&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;左上顶点:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;理想点&lt;/li&gt;
+&lt;li&gt;False positive rate 假阳性率=0 &lt;/li&gt;
+&lt;li&gt;True positive rate 真阳性率=1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c250b9182.png" alt="ROC.png"&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ROC曲线越往左上, 越好. &lt;/li&gt;
+&lt;li&gt;曲线下面积(AUC), 越大越好&lt;/li&gt;
+&lt;li&gt;45度线是随机瞎猜线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c511e280e.png" alt="ROC-2.png"&gt;&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</guid><pubDate>Mon, 11 May 2020 02:00:00 GMT</pubDate></item><item><title>SARI数据分析(2): 使传染病疫情可以控制的因素</title><link>https://goldengrape.github.io/posts/python/SARI/SARI_data_analysis_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;使传染病疫情可以控制的因素&lt;/p&gt;
@@ -188,7 +373,4 @@ including Python, R, Julia, and Scala.
 &lt;/ul&gt;
 &lt;p&gt;这就是一颗"决策树", 就是一堆判断题, 一层一层筛选, 最终将数据(病人)分成几类(急闭, 其他)&lt;/p&gt;
 &lt;p&gt;"随机森林"就是由一组这样的"决策树"组成的分类器.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item><item><title>Applied Data Science with Python Specialization小结</title><link>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://www.coursera.org/specializations/data-science-python"&gt;Applied Data Science with Python Specialization&lt;/a&gt;
-五张证书拿到.&lt;/p&gt;
-&lt;p&gt;小结一下这几门课
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/bulabula/Applied-Data-Science-with-Python-Specialization-summary/</guid><pubDate>Mon, 16 Apr 2018 17:00:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item></channel></rss>

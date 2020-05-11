@@ -46,9 +46,8 @@ MathJax.Hub.Config({
 
 
 
-
 我上大学时上毛泽东思想概论和邓小平理论的课听着都比这舒坦.
-作为报复, 我决定把第三周的p">
+作为报复, 我决定把第三周的pp">
 <meta property="og:type" content="article">
 <meta property="article:published_time" content="2018-03-31T20:30:00+08:00">
 <meta property="article:tag" content="python">
@@ -142,9 +141,7 @@ MathJax.Hub.Config({
         
 
     </header><div class="e-content entry-content" itemprop="articleBody text">
-    <div tabindex="-1" id="notebook" class="border-box-sizing">
-    <div class="container" id="notebook-container">
-
+    <div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -211,10 +208,9 @@ MathJax.Hub.Config({
 </ul>
 </li>
 </ul>
-<p>$$
+$$
 Accuracy = \frac{正确预测的数量}{总量}
-$$</p>
-<p>你建了一个分类器, 在test set上测试后发现accuracy=99.9%</p>
+$$<p>你建了一个分类器, 在test set上测试后发现accuracy=99.9%</p>
 <ul>
 <li>Wow! Amazingly good! 是不是? </li>
 <li>为了比较, 假定我们有一个"dummy"分类器, 就是个假分类器, 不管输入是什么, 都预测是最多频率的类别, 比如N</li>
@@ -398,16 +394,12 @@ $$</li>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="F1-score:-结合precision与recall">F1-score: 结合precision与recall<a class="anchor-link" href="#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall">¶</a>
-</h3>
-<p>$$
+</h3>$$
 F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
-$$</p>
-<h3 id="F-score:-更一般地将precision与recall结合成单独一个数">F-score: 更一般地将precision与recall结合成单独一个数<a class="anchor-link" href="#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0">¶</a>
-</h3>
-<p>$$
+$$<h3 id="F-score:-更一般地将precision与recall结合成单独一个数">F-score: 更一般地将precision与recall结合成单独一个数<a class="anchor-link" href="#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0">¶</a>
+</h3>$$
 F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
-$$</p>
-<p>𝛽用来调整recall vs precision之间的重要程度:</p>
+$$<p>𝛽用来调整recall vs precision之间的重要程度:</p>
 <ul>
 <li>Precision-oriented users: 𝜷 = 0.5 </li>
 <li>Recall-oriented users: 𝜷 = 2</li>
@@ -434,7 +426,7 @@ $$</p>
     <span class="k">return</span> <span class="n">scores_dict</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -449,7 +441,7 @@ $$</p>
 <span class="n">compute_scores</span><span class="p">(</span><span class="mi">96</span><span class="p">,</span><span class="mi">19</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
 </pre></div>
 
-</div>
+    </div>
 </div>
 </div>
 
@@ -459,7 +451,7 @@ $$</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[5]:</div>
+    <div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -487,9 +479,20 @@ $$</p>
 </div>
 </div>
 </div>
-    </div>
-  </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
 
+    </div>
+</div>
+</div>
+
+</div>
+</div>
     </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
 <li><a class="tag p-category" href="../../../categories/python/" rel="tag">python</a></li>

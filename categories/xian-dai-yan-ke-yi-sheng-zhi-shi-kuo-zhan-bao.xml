@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2019 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 23 Dec 2019 06:28:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 现代眼科医生知识扩展包)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/xian-dai-yan-ke-yi-sheng-zhi-shi-kuo-zhan-bao.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 03:40:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>那些在线的jupyter</title><link>https://goldengrape.github.io/posts/python/na-xie-zai-xian-de-jupyter/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;h4&gt;update:&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Data School有一篇非常好的评测，写了6个在线的Jupyter服务，建议去看看。
 &lt;a href="https://www.dataschool.io/cloud-services-for-jupyter-notebook/"&gt;Six easy ways to run your Jupyter Notebook in the cloud&lt;/a&gt;&lt;/p&gt;
@@ -50,12 +50,8 @@ including Python, R, Julia, and Scala.
 &lt;/ul&gt;
 &lt;p&gt;这就是一颗"决策树", 就是一堆判断题, 一层一层筛选, 最终将数据(病人)分成几类(急闭, 其他)&lt;/p&gt;
 &lt;p&gt;"随机森林"就是由一组这样的"决策树"组成的分类器.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记4(ROC曲线)</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记4(ROC曲线)</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-machine-learning"&gt;Applied Machine Learning in Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这门课实在是太差了. 严重差评:&lt;/p&gt;
@@ -64,21 +60,16 @@ including Python, R, Julia, and Scala.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;"所谓私人恩怨，跟政治就是一回事。所以，如果有哪个白痴政客或者哪个大人物想要推行一项法令或政策，伤害到你或者你亲人朋友的利益，那就是私人恩怨。点燃你的怒火吧。" ----奎尔&lt;/p&gt;
 &lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</guid><pubDate>Sun, 01 Apr 2018 11:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记3(各种率)</title><link>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;关于precision, recall的定义, 关于假阳性, 假阴性, 真阳性, 真阴性之类的定义, 我以后一定还是会忘记的.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-4/</guid><pubDate>Sun, 01 Apr 2018 11:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记3(各种率)</title><link>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;关于precision, recall的定义, 关于假阳性, 假阴性, 真阳性, 真阴性之类的定义, 我以后一定还是会忘记的.&lt;/p&gt;
 &lt;p&gt;而且鉴于我以前凡是两个能够弄混的事情一定可以弄混的特性,&lt;/p&gt;
 &lt;p&gt;于是把什么真假阴性阳性扩展到更多的情况, 画了张图&lt;/p&gt;
 &lt;p&gt;红色是分子, 灰色是分母. (灰色区域都是包含红色的)&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/ratios.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</guid><pubDate>Sun, 01 Apr 2018 04:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记2</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
-    &lt;div class="container" id="notebook-container"&gt;
-
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;p&gt;&lt;img alt="" src="https://goldengrape.github.io/images/ratios.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/%08scikit-learn-note-3/</guid><pubDate>Sun, 01 Apr 2018 04:00:00 GMT</pubDate></item><item><title>Scikit-learn笔记2</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;&lt;a href="https://www.coursera.org/learn/python-machine-learning"&gt;Applied Machine Learning in Python&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这门课实在是太差了. 严重差评:&lt;/p&gt;
@@ -94,11 +85,10 @@ including Python, R, Julia, and Scala.
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;我上大学时上毛泽东思想概论和邓小平理论的课听着都比这舒坦.&lt;/p&gt;
-&lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</guid><pubDate>Sat, 31 Mar 2018 12:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
+&lt;p&gt;作为报复, 我决定把第三周的ppt给丫翻译了!&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/scikit-learn-note-2/</guid><pubDate>Sat, 31 Mar 2018 12:30:00 GMT</pubDate></item><item><title>Scikit-learn笔记</title><link>https://goldengrape.github.io/posts/python/scikit-learn-note/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div tabindex="-1" id="notebook" class="border-box-sizing"&gt;
     &lt;div class="container" id="notebook-container"&gt;
 
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;

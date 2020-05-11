@@ -26,7 +26,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/ophthalmology/IOL_Glistening/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/AI4med/AI4med_note_1_2/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -98,7 +98,239 @@ MathJax.Hub.Config({
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ophthalmology/IOL_Glistening/" class="u-url">人工晶体闪辉Glistening</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python/AI4med/AI4med_note_1_2/" class="u-url">AI 4 Med 笔记(1.2)各种率</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Golden Grape
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/python/AI4med/AI4med_note_1_2/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-05-11T10:00:00+08:00" itemprop="datePublished" title="2020-05-11 10:00">2020-05-11 10:00</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>第一门课第二周, 主要讲</p>
+<h3 id="各种率">各种率<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#%E5%90%84%E7%A7%8D%E7%8E%87">¶</a>
+</h3>
+<ul>
+<li>真假阴阳各种率</li>
+<li>敏感性和特异性</li>
+<li>阳性预测率(PPV)和阴性预测率</li>
+<li>置信区间, ROC曲线, F1 score</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>我之前学Scikit-learn的时候, 笔记记得挺清楚的.</p>
+<p>参考</p>
+<ul>
+<li><a href="posts/python/scikit-learn-note-2/">Scikit-learn笔记2</a></li>
+<li><a href="posts/python/scikit-learn-note-3/">Scikit-learn笔记3</a></li>
+<li><a href="posts/python/scikit-learn-note-4/">Scikit-learn笔记4</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>而且这张图做得很好, 一张图说明问题, 先看图, 再看后面的计算方式:</p>
+<p><img src="images/ratios.png" alt=""></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="真假阴阳性">真假阴阳性<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#%E7%9C%9F%E5%81%87%E9%98%B4%E9%98%B3%E6%80%A7">¶</a>
+</h3>
+<table>
+<thead><tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">预测为(-)</th>
+<th style="text-align:left">预测为(+)</th>
+</tr></thead>
+<tbody>
+<tr>
+<td style="text-align:left">实际为(-)</td>
+<td style="text-align:left">TN</td>
+<td style="text-align:left">FP</td>
+</tr>
+<tr>
+<td style="text-align:left">实际为(+)</td>
+<td style="text-align:left">FN</td>
+<td style="text-align:left">TP</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>TP = true positive 真阳性</li>
+<li>FP = false positive (Type I error) 假阳性(Type I错误) , 印象里就是P&lt;0.05的0.05</li>
+<li>TN = true negative 真阴性</li>
+<li>FN = false negative (Type II error)假阴性(Type II错误)</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="敏感特异性">敏感特异性<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#%E6%95%8F%E6%84%9F%E7%89%B9%E5%BC%82%E6%80%A7">¶</a>
+</h3>
+<ul>
+<li>
+<p>Accuracy: 分类正确的概率. 实际为(-)预测为(-), 实际为(+)预测为(+)叫做正确. 
+$$
+Accuracy=\frac{TP + TN}{TP + TN + FP + FN}
+$$</p>
+</li>
+<li>
+<p>Classification error: (1-Accuracy), 分类错误的概率
+$$
+Classification\;  error=\frac{FP + FN}{TP + TN + FP + FN}
+$$</p>
+</li>
+<li>
+<p>Recall, 真阳性率: 实际上为(+), 能够被预测成(+)的概率</p>
+<ul>
+<li>Recall又叫 </li>
+<li>True Positive Rate (TPR): 真阳性率</li>
+<li>Sensitivity: 敏感性</li>
+<li>Probability of detection: 检出率
+$$
+Recall=\frac{TP}{TP+FN}
+$$</li>
+</ul>
+</li>
+<li>
+<p>Precision: 如果预测为(+), 那么预测正确的概率
+$$
+Precision=\frac{TP}{TP+FP}
+$$</p>
+</li>
+<li>
+<p>False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率</p>
+<ul>
+<li>又叫做: Specificity, 特异性
+$$
+False positive rate=\frac{FP}{TN+FP}
+$$</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="F1-score:-结合precision与recall">F1-score: 结合precision与recall<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall">¶</a>
+</h3>$$
+F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
+$$<h3 id="F-score:-更一般地将precision与recall结合成单独一个数">F-score: 更一般地将precision与recall结合成单独一个数<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0">¶</a>
+</h3>$$
+F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
+$$<p>𝛽用来调整recall vs precision之间的重要程度:</p>
+<ul>
+<li>Precision-oriented users: 𝜷 = 0.5 </li>
+<li>Recall-oriented users: 𝜷 = 2</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="阳性预测率-PPV">阳性预测率 PPV<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#%E9%98%B3%E6%80%A7%E9%A2%84%E6%B5%8B%E7%8E%87-PPV">¶</a>
+</h3>
+<p>实际上就是</p>
+<ul>
+<li>Precision: 如果预测为(+), 那么预测正确的概率
+$$
+Precision=\frac{TP}{TP+FP}
+$$</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+$$ 
+PPV = Precision = \frac{sensitivity \times prevalence}{sensitivity  \times  prevalence+(1 - specificity) \times (1 - prevalence)}
+$$<p>其中 prevalence=P(pos), 阳性结果的发生率. 如果自己都知道TP、FP的数据, 当然用简单的公式计算, 如果拿到的是一个标记好各种率的试剂盒, 或者是看一篇新闻报道, 对方把各种率搅合在一起, 那么可能就要通过后一种公式来计算</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="置信区间">置信区间<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4">¶</a>
+</h3>
+<p>比如某个概率p=0.80(95% CI 0.78, 0.82),</p>
+<p>是说, 真实的概率p, 谁知道是啥, 有95%的概率, 会落在[0.78, 0.82]的范围内. 置信区间的范围和样本量有关, 样本量越大, 置信区间的宽度越窄.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="ROC曲线">ROC曲线<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#ROC%E6%9B%B2%E7%BA%BF">¶</a>
+</h3>
+<ul>
+<li>X轴: False Positive Rate 假阳性率</li>
+<li>Y轴: True Positive Rate  真阳性率</li>
+</ul>
+<p>左上顶点:</p>
+<ul>
+<li>理想点</li>
+<li>False positive rate 假阳性率=0 </li>
+<li>True positive rate 真阳性率=1</li>
+</ul>
+<p><img src="https://i.loli.net/2018/04/01/5ac0c250b9182.png" alt="ROC.png"></p>
+<ul>
+<li>ROC曲线越往左上, 越好. </li>
+<li>曲线下面积(AUC), 越大越好</li>
+<li>45度线是随机瞎猜线</li>
+</ul>
+<p><img src="https://i.loli.net/2018/04/01/5ac0c511e280e.png" alt="ROC-2.png"></p>
+
+</div>
+</div>
+</div>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/ophthalmology/IOL_Glistening/" class="u-url">人工晶体闪辉Glistening</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Golden Grape
@@ -434,35 +666,25 @@ https://www.uptodate.com/contents/zh-Hans/pathophysiology-clinical-manifestation
 </div>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/shopping_list/" class="u-url">近期采购单</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Golden Grape
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/bulabula/shopping_list/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-02-11T12:00:00+08:00" itemprop="datePublished" title="2020-02-11 12:00">2020-02-11 12:00</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<p>哈利波特与理性之道, 第6章, 计划谬误理论
-<a href="http://hpmor.lofter.com/post/382652_1367422">http://hpmor.lofter.com/post/382652_1367422</a></p>
-<blockquote>
-<p>现实的结果总是比‘最坏的预计’还要差一点。这个叫做计划谬误理论，最好的纠正的办法是想想上次做类似的事情花了多少时间，也就是说，用客观而不是主观的方式来做出预计。但是当你在做一件新的事，没有历史可以借鉴的时候，你就需要非常非常非常地悲观。要悲观到这样的程度，以至于实际的情况能有50%的机率比你预计的情况要好。</p>
-</blockquote>
-<p>上一次是SARS, 结束是在6月份.</p>
-<p>以下是近期采购单:</p>
-<p class="more"><a href="posts/bulabula/shopping_list/">阅读更多…</a></p>
-</div>
-                </div>
             </article>
 </div>
     
         <ul class="pager postindexpager clearfix">
 <li class="next"><a href="index-18.html" rel="next">以前的文章</a></li>
         </ul>
-<!--End of body content--><footer id="footer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             
