@@ -225,10 +225,196 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="再复习一下各种率">再复习一下各种率<a class="anchor-link" href="#%E5%86%8D%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%87">¶</a>
+<h2 id="复习一下各种率">复习一下各种率<a class="anchor-link" href="#%E5%A4%8D%E4%B9%A0%E4%B8%80%E4%B8%8B%E5%90%84%E7%A7%8D%E7%8E%87">¶</a>
 </h2>
-<p><img src="https://goldengrape.github.io/images/ratios.png" alt=""></p>
-
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Accuracy">Accuracy<a class="anchor-link" href="#Accuracy">¶</a>
+</h3>
+<ul>
+<li>正确率</li>
+<li>有病没病都说对了的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: yellow; color:red;">100</td>
+            <td style="background-color: yellow; color:black;">6</td>
+            <td style="background-color: yellow; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: yellow; color:black;">1</td>
+            <td style="background-color: yellow; color:red;">110</td>
+            <td style="background-color: yellow; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: yellow; color:black;">2</td>
+            <td style="background-color: yellow; color:black;">7</td>
+            <td style="background-color: yellow; color:red;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Accuracy=\frac{100+110+120}{100+6+11+1+110+12+2+7+120}
+$$<hr>
+<h3 id="Recall">Recall<a class="anchor-link" href="#Recall">¶</a>
+</h3>
+<ul>
+<li>敏感性, 检出率, 真阳性率.</li>
+<li>实际有病, 测出有病的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: white; color:black;">100</td>
+            <td style="background-color: white; color:black;">6</td>
+            <td style="background-color: white; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: white; color:black;">1</td>
+            <td style="background-color: white; color:black;">110</td>
+            <td style="background-color: white; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: yellow; color:black;">2</td>
+            <td style="background-color: yellow; color:black;">7</td>
+            <td style="background-color: yellow; color:red;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Recall=\frac{120}{2+7+120}
+$$<hr>
+<h3 id="Precision">Precision<a class="anchor-link" href="#Precision">¶</a>
+</h3>
+<ul>
+<li>精确度, 阳性预测率, PPV</li>
+<li>测出有病, 还说对了的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: white; color:black;">100</td>
+            <td style="background-color: white; color:black;">6</td>
+            <td style="background-color: yellow; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: white; color:black;">1</td>
+            <td style="background-color: white; color:black;">110</td>
+            <td style="background-color: yellow; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: white; color:black;">2</td>
+            <td style="background-color: white; color:black;">7</td>
+            <td style="background-color: yellow; color:red;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Precision=\frac{120}{11+12+120}
+$$<hr>
+<h3 id="Specificity">Specificity<a class="anchor-link" href="#Specificity">¶</a>
+</h3>
+<ul>
+<li>特异性, 真阴性率</li>
+<li>测出没病, 还说对了的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: yellow; color:red;">100</td>
+            <td style="background-color: yellow; color:red;">6</td>
+            <td style="background-color: white; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: yellow; color:red;">1</td>
+            <td style="background-color: yellow; color:red;">110</td>
+            <td style="background-color: white; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: yellow; color:black;">2</td>
+            <td style="background-color: yellow; color:black;">7</td>
+            <td style="background-color: white; color:black;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Specificity=\frac{100+6+1+110}{100+6+1+110+2+7}
+$$<hr>
+<h3 id="False-Positive-Rate">False Positive Rate<a class="anchor-link" href="#False-Positive-Rate">¶</a>
+</h3>
+<ul>
+<li>假阳性率, 误报率</li>
+<li>本来没病, 测出有病的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: yellow; color:black;">100</td>
+            <td style="background-color: yellow; color:black;">6</td>
+            <td style="background-color: yellow; color:red;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: yellow; color:black;">1</td>
+            <td style="background-color: yellow; color:black;">110</td>
+            <td style="background-color: yellow; color:red;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: white; color:black;">2</td>
+            <td style="background-color: white; color:black;">7</td>
+            <td style="background-color: white; color:black;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+False Positive Rate=\frac{11+12}{100+6+11+1+110+12}
+$$<hr>
 </div>
 </div>
 </div>

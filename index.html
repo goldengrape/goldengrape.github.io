@@ -148,7 +148,53 @@ MathJax.Hub.Config({
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>而且这张图做得很好, 一张图说明问题, 先看图, 再看后面的计算方式:</p>
-<p><img src="images/ratios.png" alt=""></p>
+<!-- ![](/images/ratios.png) -->
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>例如有这样的结果:</p>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+<td>100</td>
+<td>6</td>
+<td>11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+<td>1</td>
+<td>110</td>
+<td>12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+<td>2</td>
+<td>7</td>
+<td>120</td> 
+        </tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>以下表格中, 分子是红字, 分母是黄色背景, 考虑C的情况</p>
 
 </div>
 </div>
@@ -158,18 +204,186 @@ MathJax.Hub.Config({
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Accuracy">Accuracy<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#Accuracy">¶</a>
+</h3>
+<ul>
+<li>正确率</li>
+<li>有病没病都说对了的概率</li>
+</ul>
 <table>
 <thead><tr>
 <th></th>
-            <th>预测=0</th>
-            <th>预测=1</th>
-            <th>预测=2</th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
         </tr></thead>
-<tbody><tr>
-<td>The table body</td>
-            <td>with two columns</td>
-        </tr></tbody>
-</table>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: yellow; color:red;">100</td>
+            <td style="background-color: yellow; color:black;">6</td>
+            <td style="background-color: yellow; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: yellow; color:black;">1</td>
+            <td style="background-color: yellow; color:red;">110</td>
+            <td style="background-color: yellow; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: yellow; color:black;">2</td>
+            <td style="background-color: yellow; color:black;">7</td>
+            <td style="background-color: yellow; color:red;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Accuracy=\frac{100+110+120}{100+6+11+1+110+12+2+7+120}
+$$<hr>
+<h3 id="Recall">Recall<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#Recall">¶</a>
+</h3>
+<ul>
+<li>敏感性, 检出率, 真阳性率.</li>
+<li>实际有病, 测出有病的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: white; color:black;">100</td>
+            <td style="background-color: white; color:black;">6</td>
+            <td style="background-color: white; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: white; color:black;">1</td>
+            <td style="background-color: white; color:black;">110</td>
+            <td style="background-color: white; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: yellow; color:black;">2</td>
+            <td style="background-color: yellow; color:black;">7</td>
+            <td style="background-color: yellow; color:red;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Recall=\frac{120}{2+7+120}
+$$<hr>
+<h3 id="Precision">Precision<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#Precision">¶</a>
+</h3>
+<ul>
+<li>精确度, 阳性预测率, PPV</li>
+<li>测出有病, 还说对了的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: white; color:black;">100</td>
+            <td style="background-color: white; color:black;">6</td>
+            <td style="background-color: yellow; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: white; color:black;">1</td>
+            <td style="background-color: white; color:black;">110</td>
+            <td style="background-color: yellow; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: white; color:black;">2</td>
+            <td style="background-color: white; color:black;">7</td>
+            <td style="background-color: yellow; color:red;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Precision=\frac{120}{11+12+120}
+$$<hr>
+<h3 id="Specificity">Specificity<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#Specificity">¶</a>
+</h3>
+<ul>
+<li>特异性, 真阴性率</li>
+<li>测出没病, 还说对了的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: yellow; color:red;">100</td>
+            <td style="background-color: yellow; color:red;">6</td>
+            <td style="background-color: white; color:black;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: yellow; color:red;">1</td>
+            <td style="background-color: yellow; color:red;">110</td>
+            <td style="background-color: white; color:black;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: yellow; color:black;">2</td>
+            <td style="background-color: yellow; color:black;">7</td>
+            <td style="background-color: white; color:black;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+Specificity=\frac{100+6+1+110}{100+6+1+110+2+7}
+$$<hr>
+<h3 id="False-Positive-Rate">False Positive Rate<a class="anchor-link" href="posts/python/AI4med/AI4med_note_1_2/#False-Positive-Rate">¶</a>
+</h3>
+<ul>
+<li>假阳性率, 误报率</li>
+<li>本来没病, 测出有病的概率</li>
+</ul>
+<table>
+<thead><tr>
+<th></th>
+<th>预测=A</th>
+<th>预测=B</th>
+<th>预测=C</th>
+        </tr></thead>
+<tbody>
+<tr>
+<td>实际=A</td>
+            <td style="background-color: yellow; color:black;">100</td>
+            <td style="background-color: yellow; color:black;">6</td>
+            <td style="background-color: yellow; color:red;">11</td> 
+        </tr>
+<tr>
+<td>实际=B</td>
+            <td style="background-color: yellow; color:black;">1</td>
+            <td style="background-color: yellow; color:black;">110</td>
+            <td style="background-color: yellow; color:red;">12</td> 
+        </tr>
+<tr>
+<td>实际=C</td>
+            <td style="background-color: white; color:black;">2</td>
+            <td style="background-color: white; color:black;">7</td>
+            <td style="background-color: white; color:black;">120</td> 
+        </tr>
+</tbody>
+</table>$$
+False Positive Rate=\frac{11+12}{100+6+11+1+110+12}
+$$<hr>
 </div>
 </div>
 </div>
