@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 03:41:36 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI 4 Med 笔记(1.2)各种率</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 05:42:12 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI 4 Med 笔记(1.2)各种率</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;第一门课第二周, 主要讲&lt;/p&gt;
@@ -33,6 +33,28 @@
 &lt;p&gt;而且这张图做得很好, 一张图说明问题, 先看图, 再看后面的计算方式:&lt;/p&gt;
 &lt;p&gt;&lt;img src="https://goldengrape.github.io/images/ratios.png" alt=""&gt;&lt;/p&gt;
 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+            &lt;th&gt;预测=0&lt;/th&gt;
+            &lt;th&gt;预测=1&lt;/th&gt;
+            &lt;th&gt;预测=2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;The table body&lt;/td&gt;
+            &lt;td&gt;with two columns&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -100,14 +122,17 @@ Precision=\frac{TP}{TP+FP}
 $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;又叫做: Specificity, 特异性
-$$
-False positive rate=\frac{FP}{TN+FP}
-$$&lt;/li&gt;
-&lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+$$
+False Positive Rate=\frac{FP}{TN+FP}
+$$&lt;ul&gt;
+&lt;li&gt;Specificity, 特异性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应该是真阴性率(之前写错了), TNR, 实际上为(-), 能够被测成(-)的概率
+$$
+Specificity=\frac{TN}{TN+FN}
+$$&lt;/p&gt;
 
 &lt;/div&gt;
 &lt;/div&gt;

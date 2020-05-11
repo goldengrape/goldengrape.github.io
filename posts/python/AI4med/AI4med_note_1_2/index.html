@@ -199,6 +199,26 @@ Scikit-learn笔记4
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<table>
+<thead><tr>
+<th></th>
+            <th>预测=0</th>
+            <th>预测=1</th>
+            <th>预测=2</th>
+        </tr></thead>
+<tbody><tr>
+<td>The table body</td>
+            <td>with two columns</td>
+        </tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="真假阴阳性">真假阴阳性<a class="anchor-link" href="#%E7%9C%9F%E5%81%87%E9%98%B4%E9%98%B3%E6%80%A7">¶</a>
 </h3>
 <table>
@@ -269,14 +289,18 @@ $$</p>
 </li>
 <li>
 <p>False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率</p>
-<ul>
-<li>又叫做: Specificity, 特异性
-$$
-False positive rate=\frac{FP}{TN+FP}
-$$</li>
-</ul>
 </li>
 </ul>
+$$
+False Positive Rate=\frac{FP}{TN+FP}
+$$<ul>
+<li>Specificity, 特异性</li>
+</ul>
+<p>应该是真阴性率(之前写错了), TNR, 实际上为(-), 能够被测成(-)的概率
+$$
+Specificity=\frac{TN}{TN+FN}
+$$</p>
+
 </div>
 </div>
 </div>
