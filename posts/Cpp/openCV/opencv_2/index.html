@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCV C++学习笔记(2): Mat数据结构 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../opencv_1/" title="OpenCV C++学习笔记(1): 读/写图像" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="OpenCV C++学习笔记(2): Mat数据结构">
+<meta property="og:url" content="https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/">
+<meta property="og:description" content="opencv用了一种Mat的矩阵来存储图像数据, Mat看起来很神秘, 尤其是在处理图片局部的时候, 很神秘, 我一直想把两个摄像头拍摄的画面合并到一张图上显示, 查了很多, 才大概弄明白一点. 
+
+
+Mat
+图像数据都是存储在矩阵里的, 或者说是二维数组, OpenCV中封装在Mat里. 
+Mat里可以装一张图, 也可以装视频中的一帧. 
+初始化一个Mat: 
+Mat two_cap=Mat::">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-06-04T12:00:00+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://goldengrape.github.io/">
+
+            <span id="blog-title">GoldenGrape's Blog</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.md" id="sourcelink" class="nav-link">源文件</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../../../index.html" class="nav-link">首页</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../archive.html" class="nav-link">文章存档</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/" class="nav-link">标签</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/jiao-cheng/" class="nav-link">教程</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../github-projects/" class="nav-link">开源项目</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">OpenCV C++学习笔记(2): Mat数据结构</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Golden Grape
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-06-04T12:00:00+08:00" itemprop="datePublished" title="2020-06-04 12:00">2020-06-04 12:00</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.md" class="sourcelink">源文件</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p>opencv用了一种Mat的矩阵来存储图像数据, Mat看起来很神秘, 尤其是在处理图片局部的时候, 很神秘, 我一直想把两个摄像头拍摄的画面合并到一张图上显示, 查了很多, 才大概弄明白一点. </p>
+<!-- TEASER_END -->
+
+<h3>Mat</h3>
+<p>图像数据都是存储在矩阵里的, 或者说是二维数组, OpenCV中封装在Mat里. </p>
+<p>Mat里可以装一张图, 也可以装视频中的一帧. </p>
+<p>初始化一个Mat: </p>
+<pre class="code literal-block"><span></span><code><span class="n">Mat</span> <span class="n">two_cap</span><span class="o">=</span><span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">Size</span><span class="p">(</span><span class="n">frame_width</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="n">frame_height</span><span class="p">),</span> <span class="n">CV_8UC3</span><span class="p">);</span>
+</code></pre>
+
+
+<ul>
+<li>语法和matlab里的zeros初始化差不多, 虽然还有其他的初始化方式, 但一开始就赋上初始值, 把0都填上还是好习惯, </li>
+<li>用<code>Size(宽, 高)</code>来定义比较容易按图片来理解, 否则row和col每次搞得我很晕, 横竖经常分不清楚. </li>
+<li>
+<code>CV_8UC3</code>是最常用的0-255整数, 三种颜色.</li>
+</ul>
+<h3>ROI</h3>
+<p>感兴趣区域, 最简单的是矩形区域:</p>
+<pre class="code literal-block"><span></span><code><span class="n">Rect</span> <span class="n">r1</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">frame_width</span><span class="p">,</span><span class="n">frame_height</span><span class="p">);</span>
+<span class="n">Rect</span> <span class="n">r2</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">(</span><span class="n">frame_width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">frame_width</span><span class="p">,</span> <span class="n">frame_height</span><span class="p">);</span>
+</code></pre>
+
+
+<p>定义了感兴趣区以后, 就可以直接调用这一块位置, 有点类似于数组的切片. </p>
+<p>这时候, Mat作为左值也可以, 作为右值也可以. </p>
+<p>比如可以</p>
+<pre class="code literal-block"><span></span><code><span class="n">two_cap</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+</code></pre>
+
+
+<p>也可以</p>
+<pre class="code literal-block"><span></span><code><span class="n">Mat</span> <span class="n">frame</span><span class="o">=</span><span class="n">two_cap</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span>
+</code></pre>
+
+
+<h3>但是!</h3>
+<p>Mat在复制的时候是浅复制, </p>
+<pre class="code literal-block"><span></span><code><span class="n">mat_target</span><span class="p">(</span><span class="n">r1</span><span class="p">)</span><span class="o">=</span><span class="n">mat_source</span><span class="p">;</span>
+</code></pre>
+
+
+<p>mat_target里面并没有好好被mat_source中的数据替换. 要达成目的, 应该使用copyTo,</p>
+<pre class="code literal-block"><span></span><code><span class="n">mat_source</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">mat_target</span><span class="p">(</span><span class="n">r1</span><span class="p">))</span>
+</code></pre>
+
+
+<h3>demo</h3>
+<p>以下是照着各种demo简单写的一个双摄像头显示, 本来是想写个简单的video see through, usb摄像头的延时居然达到了200ms, copyTo的速度不影响, 可能是OpenCV里套了太多GUI的锅, 也可能是硬件的问题. </p>
+<pre class="code literal-block"><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sstream&gt;</span><span class="cp"></span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">// OpenCV includes</span>
+<span class="cp">#include</span> <span class="cpf">&lt;opencv2/opencv.hpp&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;opencv2/core.hpp&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">cv</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span><span class="o">**</span> <span class="n">argv</span> <span class="p">)</span>
+<span class="p">{</span>
+
+    <span class="kt">int</span> <span class="n">frame_width</span><span class="o">=</span><span class="mi">640</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">frame_height</span><span class="o">=</span><span class="mi">480</span><span class="p">;</span>
+
+    <span class="n">VideoCapture</span> <span class="n">capA</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">capB</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">capA</span><span class="p">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span> <span class="o">||</span> <span class="n">capB</span><span class="p">.</span><span class="n">isOpened</span><span class="p">()</span> <span class="o">==</span> <span class="nb">false</span><span class="p">)</span>
+    <span class="p">{</span>
+     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Cannot open the video cameras"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+     <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span> <span class="c1">//wait for any key press</span>
+     <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">capA</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FOURCC</span><span class="p">,</span> <span class="n">cv</span><span class="o">::</span><span class="n">VideoWriter</span><span class="o">::</span><span class="n">fourcc</span><span class="p">(</span><span class="sc">'M'</span><span class="p">,</span> <span class="sc">'J'</span><span class="p">,</span> <span class="sc">'P'</span><span class="p">,</span> <span class="sc">'G'</span><span class="p">));</span>
+    <span class="n">capB</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FOURCC</span><span class="p">,</span> <span class="n">cv</span><span class="o">::</span><span class="n">VideoWriter</span><span class="o">::</span><span class="n">fourcc</span><span class="p">(</span><span class="sc">'M'</span><span class="p">,</span> <span class="sc">'J'</span><span class="p">,</span> <span class="sc">'P'</span><span class="p">,</span> <span class="sc">'G'</span><span class="p">));</span>
+    <span class="n">capA</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FPS</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+    <span class="n">capA</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">,</span><span class="n">frame_width</span><span class="p">);</span>
+    <span class="n">capA</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">,</span><span class="n">frame_height</span><span class="p">);</span>
+    <span class="n">capB</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FPS</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+    <span class="n">capB</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FRAME_WIDTH</span><span class="p">,</span><span class="n">frame_width</span><span class="p">);</span>
+    <span class="n">capB</span><span class="p">.</span><span class="n">set</span><span class="p">(</span><span class="n">CAP_PROP_FRAME_HEIGHT</span><span class="p">,</span><span class="n">frame_height</span><span class="p">);</span>
+
+
+    <span class="n">Mat</span> <span class="n">two_cap</span><span class="o">=</span><span class="n">Mat</span><span class="o">::</span><span class="n">zeros</span><span class="p">(</span><span class="n">Size</span><span class="p">(</span><span class="n">frame_width</span><span class="o">*</span><span class="mi">2</span><span class="p">,</span><span class="n">frame_height</span><span class="p">),</span> <span class="n">CV_8UC3</span><span class="p">);</span>
+    <span class="n">Rect</span> <span class="n">r1</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="n">frame_width</span><span class="p">,</span><span class="n">frame_height</span><span class="p">);</span>
+    <span class="n">Rect</span> <span class="n">r2</span> <span class="o">=</span> <span class="n">Rect</span><span class="p">(</span><span class="n">frame_width</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">frame_width</span><span class="p">,</span> <span class="n">frame_height</span><span class="p">);</span>
+
+    <span class="n">string</span> <span class="n">window_name</span><span class="o">=</span><span class="s">"double webcam"</span><span class="p">;</span>
+    <span class="n">namedWindow</span><span class="p">(</span><span class="n">window_name</span><span class="p">);</span>
+    <span class="n">Mat</span> <span class="n">frameA</span><span class="p">;</span>
+    <span class="n">Mat</span> <span class="n">frameB</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="nb">true</span><span class="p">)</span>
+    <span class="p">{</span>
+<span class="c1">//     read frame from webcam</span>
+     <span class="kt">bool</span> <span class="n">bASuccess</span> <span class="o">=</span> <span class="n">capA</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">frameA</span><span class="p">);</span>
+     <span class="kt">bool</span> <span class="n">bBSuccess</span> <span class="o">=</span> <span class="n">capB</span><span class="p">.</span><span class="n">read</span><span class="p">(</span><span class="n">frameB</span><span class="p">);</span>
+
+     <span class="c1">//Breaking the while loop if the frames cannot be captured</span>
+     <span class="k">if</span> <span class="p">(</span><span class="n">bASuccess</span> <span class="o">==</span> <span class="nb">false</span> <span class="o">||</span> <span class="n">bBSuccess</span> <span class="o">==</span> <span class="nb">false</span> <span class="p">)</span>
+     <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Video cameras are disconnected"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span> <span class="c1">//Wait for any key press</span>
+      <span class="k">break</span><span class="p">;</span>
+     <span class="p">}</span>
+
+     <span class="c1">//show the frame in the created window</span>
+        <span class="n">frameA</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">two_cap</span><span class="p">(</span><span class="n">r1</span><span class="p">));</span>
+        <span class="n">frameB</span><span class="p">.</span><span class="n">copyTo</span><span class="p">(</span><span class="n">two_cap</span><span class="p">(</span><span class="n">r2</span><span class="p">));</span>
+     <span class="n">imshow</span><span class="p">(</span><span class="n">window_name</span><span class="p">,</span> <span class="n">two_cap</span><span class="p">);</span>
+
+     <span class="k">if</span> <span class="p">(</span><span class="n">waitKey</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">27</span><span class="p">)</span>
+     <span class="p">{</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Esc key is pressed by user. Stop the video"</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+      <span class="k">break</span><span class="p">;</span>
+     <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">capA</span><span class="p">.</span><span class="n">release</span><span class="p">();</span>
+    <span class="n">capB</span><span class="p">.</span><span class="n">release</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../opencv_1/" rel="prev" title="OpenCV C++学习笔记(1): 读/写图像">上一篇文章</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script>
+</body>
+</html>
