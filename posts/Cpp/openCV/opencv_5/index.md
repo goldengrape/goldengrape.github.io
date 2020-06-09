@@ -62,8 +62,10 @@ void point_warp(
 其中Mat类里, 要访问单个元素(像素)的数值, 可以使用```.at<类型>(行, 列)```的方式来访问. 因为之前使用findHomography求出来的H矩阵似乎是一个double类型的, 所以这里其他的向量最好也先使用double类型. 如果使用float会出错. 
 
 所以流程就是:
+
 * 鼠标在变形图上(x,y)点按下,
 ```d_corner[selected_corner_i]=Point2f(x,y);```
+
 * 计算出原始图上的对应点位置
 ```C++
 point_warp(
@@ -71,13 +73,16 @@ point_warp(
     d_corner[selected_corner_i],
     H_inv);
 ```
+
 * 鼠标开始拖动, 移动到新的(x,y)位置, 此时新的: 
 ```d_corner[selected_corner_i]=Point2f(x,y);```
+
 * 根据新的o_corner和d_corner分别计算映射矩阵H和逆矩阵H_inv:
 ```C++
 H = findHomography(o_corner, d_corner);
 H_inv= findHomography(d_corner, o_corner);
 ```
+
 * 在根据映射矩阵H, 将原始图映射到变形图上
 ```C++
 Mat warped_image;

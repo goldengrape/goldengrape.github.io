@@ -167,10 +167,16 @@ vector&lt;Point2f&gt; d_corner(">
 <p>其中s是一个归一化系数, 就是第三项. 这是要反过来求的, 要用上H的逆矩阵H_inv, 所以实际上是:
 <code>s[o_x, o_y, 1] = H_inv * [d_x, d_y, 1]</code></p>
 <p>其中Mat类里, 要访问单个元素(像素)的数值, 可以使用<code>.at&lt;类型&gt;(行, 列)</code>的方式来访问. 因为之前使用findHomography求出来的H矩阵似乎是一个double类型的, 所以这里其他的向量最好也先使用double类型. 如果使用float会出错. </p>
-<p>所以流程就是:
-* 鼠标在变形图上(x,y)点按下,
-<code>d_corner[selected_corner_i]=Point2f(x,y);</code>
-* 计算出原始图上的对应点位置</p>
+<p>所以流程就是:</p>
+<ul>
+<li>
+<p>鼠标在变形图上(x,y)点按下,
+<code>d_corner[selected_corner_i]=Point2f(x,y);</code></p>
+</li>
+<li>
+<p>计算出原始图上的对应点位置</p>
+</li>
+</ul>
 <pre class="code literal-block"><span></span><code><span class="n">point_warp</span><span class="p">(</span>
     <span class="n">o_corner</span><span class="p">[</span><span class="n">selected_corner_i</span><span class="p">],</span>
     <span class="n">d_corner</span><span class="p">[</span><span class="n">selected_corner_i</span><span class="p">],</span>
@@ -179,10 +185,13 @@ vector&lt;Point2f&gt; d_corner(">
 
 
 <ul>
-<li>鼠标开始拖动, 移动到新的(x,y)位置, 此时新的: 
-<code>d_corner[selected_corner_i]=Point2f(x,y);</code>
+<li>
+<p>鼠标开始拖动, 移动到新的(x,y)位置, 此时新的: 
+<code>d_corner[selected_corner_i]=Point2f(x,y);</code></p>
 </li>
-<li>根据新的o_corner和d_corner分别计算映射矩阵H和逆矩阵H_inv:</li>
+<li>
+<p>根据新的o_corner和d_corner分别计算映射矩阵H和逆矩阵H_inv:</p>
+</li>
 </ul>
 <pre class="code literal-block"><span></span><code><span class="n">H</span> <span class="o">=</span> <span class="n">findHomography</span><span class="p">(</span><span class="n">o_corner</span><span class="p">,</span> <span class="n">d_corner</span><span class="p">);</span>
 <span class="n">H_inv</span><span class="o">=</span> <span class="n">findHomography</span><span class="p">(</span><span class="n">d_corner</span><span class="p">,</span> <span class="n">o_corner</span><span class="p">);</span>
