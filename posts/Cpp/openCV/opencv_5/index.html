@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="zh_cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCV C++学习笔记(5): 原位做4点投影变换 | GoldenGrape's Blog</title>
+<link href="../../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/ipython.min.css" rel="stylesheet" type="text/css">
+<link href="../../../../assets/css/nikola_ipython.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../rss.xml">
+<link rel="canonical" href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Golden Grape">
+<link rel="prev" href="../opencv_4/" title="OpenCV C++学习笔记(4): 4点投影变换" type="text/html">
+<meta property="og:site_name" content="GoldenGrape's Blog">
+<meta property="og:title" content="OpenCV C++学习笔记(5): 原位做4点投影变换">
+<meta property="og:url" content="https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/">
+<meta property="og:description" content="OpenCV官方的warpPerspective示例用一个窗口进行选区, 用另一个窗口进行显示: 
+
+但我觉得这样有点麻烦, 不太适合移动端、小屏幕的操作. 于是做了一点改进, 使我可以在一个窗口内直接操作图像.
+
+
+
+下面的过程说起来有点绕. 反正变换的控制在于找到两组对应点, 在原始图上的o_corner, 和在变形图上的d_corner. 
+vector&lt;Point2f&gt; d_corner(">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2020-06-09T11:00:00+08:00">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+<!-- DuckDuckGo custom search -->
+<form method="get" id="search" action="https://duckduckgo.com/" class="navbar-form pull-left">
+<input type="hidden" name="sites" value="https://goldengrape.github.io/"><input type="hidden" name="k8" value="#444444"><input type="hidden" name="k9" value="#D51920"><input type="hidden" name="kt" value="h"><input type="text" name="q" maxlength="255" placeholder="Search…" class="span2" style="margin-top: 4px;"><input type="submit" value="DuckDuckGo Search" style="visibility: hidden;">
+</form>
+<!-- End of custom search -->
+
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="https://goldengrape.github.io/">
+
+            <span id="blog-title">GoldenGrape's Blog</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item">
+    <a href="index.md" id="sourcelink" class="nav-link">源文件</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="../../../../index.html" class="nav-link">首页</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../archive.html" class="nav-link">文章存档</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/" class="nav-link">标签</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../categories/jiao-cheng/" class="nav-link">教程</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../github-projects/" class="nav-link">开源项目</a>
+                </li>
+<li class="nav-item">
+<a href="../../../../rss.xml" class="nav-link">RSS feed</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">OpenCV C++学习笔记(5): 原位做4点投影变换</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Golden Grape
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2020-06-09T11:00:00+08:00" itemprop="datePublished" title="2020-06-09 11:00">2020-06-09 11:00</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.md" class="sourcelink">源文件</a></p>
+
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <div>
+<p><a href="https://docs.opencv.org/master/de/dd4/samples_2cpp_2warpPerspective_demo_8cpp-example.html">OpenCV官方的warpPerspective示例</a>用一个窗口进行选区, 用另一个窗口进行显示: </p>
+<p><img alt="trans" src="https://i.loli.net/2020/06/09/SK6PBipY4jnOWTR.jpg"></p>
+<p>但我觉得这样有点麻烦, 不太适合移动端、小屏幕的操作. 于是做了一点改进, 使我可以在一个窗口内直接操作图像.</p>
+<!-- TEASER_END -->
+
+<p><img alt="2020-06-09 13-14-58.2020-06-09 13_17_31" src="https://i.loli.net/2020/06/09/gDPiLcaWx9UMKZ2.gif"></p>
+<p>下面的过程说起来有点绕. 反正变换的控制在于找到两组对应点, 在原始图上的o_corner, 和在变形图上的d_corner. </p>
+<pre class="code literal-block"><span></span><code><span class="err">vector&lt;Point2f&gt; d_corner(4);</span>
+<span class="err">vector&lt;Point2f&gt; o_corner(4);</span>
+</code></pre>
+
+
+<p>在使用两个窗口进行控制+显示时, 变形图上的d_corner就是4个角, 是不变的. 但如果在一个窗口内控制, 就不能是不变的点了. </p>
+<p>先假定已经有一个映射矩阵H, 和它的逆矩阵H_inv, 一开始的时候, 原始图像和变形图像是相等的, 那么这两个矩阵就都是单位矩阵. </p>
+<p>现在用鼠标点中变形图中的位置(x,y), 那么就可以找到在原始图中这个点对应的位置(ox, oy), 当鼠标按住拖动到(xt, yt)时, 含义就是将原始图中的(ox,oy)映射到了(xt,yt).</p>
+<p>比如, 鼠标控制的是<code>vector&lt;Point2f&gt; d_corner;</code>中的第3点, 那么<code>d_corner[3]=Point2f(x,y);</code>, 我写了一个函数来求对应的<code>o_corner[3]</code></p>
+<pre class="code literal-block"><span></span><code><span class="kt">void</span> <span class="nf">point_warp</span><span class="p">(</span>
+    <span class="n">Point2f</span> <span class="o">&amp;</span><span class="n">p_target</span><span class="p">,</span> 
+    <span class="k">const</span> <span class="n">Point2f</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">,</span> 
+    <span class="k">const</span> <span class="n">Mat</span> <span class="o">&amp;</span><span class="n">H</span><span class="p">){</span>
+<span class="c1">//    映射矩阵H是一个3x3的矩阵,</span>
+<span class="c1">//    s*[p_target.x, p_target.y, 1]= H * [p.x, p.y, 1]</span>
+<span class="c1">//    乘出来以后要对第三项归一化</span>
+    <span class="n">Mat</span> <span class="n">p_vector</span> <span class="o">=</span> <span class="p">(</span><span class="n">Mat_</span> <span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="n">p</span><span class="p">.</span><span class="n">x</span><span class="p">,</span><span class="n">p</span><span class="p">.</span><span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="n">p_vector</span> <span class="o">=</span> <span class="n">H</span> <span class="o">*</span> <span class="n">p_vector</span><span class="p">;</span>
+    <span class="n">p_target</span><span class="p">.</span><span class="n">x</span><span class="o">=</span><span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">p_vector</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span>
+                       <span class="n">p_vector</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+    <span class="n">p_target</span><span class="p">.</span><span class="n">y</span><span class="o">=</span><span class="p">(</span><span class="kt">float</span><span class="p">)(</span><span class="n">p_vector</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span>
+                       <span class="n">p_vector</span><span class="p">.</span><span class="n">at</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">2</span><span class="p">));</span>
+<span class="p">}</span>
+</code></pre>
+
+
+<p>这里用到的公式就是
+<code>s[d_x, d_y, 1] = H * [o_x, o_y, 1]</code></p>
+<p>其中s是一个归一化系数, 就是第三项. 这是要反过来求的, 要用上H的逆矩阵H_inv, 所以实际上是:
+<code>s[o_x, o_y, 1] = H_inv * [d_x, d_y, 1]</code></p>
+<p>其中Mat类里, 要访问单个元素(像素)的数值, 可以使用<code>.at&lt;类型&gt;(行, 列)</code>的方式来访问. 因为之前使用findHomography求出来的H矩阵似乎是一个double类型的, 所以这里其他的向量最好也先使用double类型. 如果使用float会出错. </p>
+<p>所以流程就是:
+* 鼠标在变形图上(x,y)点按下,
+<code>d_corner[selected_corner_i]=Point2f(x,y);</code>
+* 计算出原始图上的对应点位置</p>
+<pre class="code literal-block"><span></span><code><span class="n">point_warp</span><span class="p">(</span>
+    <span class="n">o_corner</span><span class="p">[</span><span class="n">selected_corner_i</span><span class="p">],</span>
+    <span class="n">d_corner</span><span class="p">[</span><span class="n">selected_corner_i</span><span class="p">],</span>
+    <span class="n">H_inv</span><span class="p">);</span>
+</code></pre>
+
+
+<ul>
+<li>鼠标开始拖动, 移动到新的(x,y)位置, 此时新的: 
+<code>d_corner[selected_corner_i]=Point2f(x,y);</code>
+</li>
+<li>根据新的o_corner和d_corner分别计算映射矩阵H和逆矩阵H_inv:</li>
+</ul>
+<pre class="code literal-block"><span></span><code><span class="n">H</span> <span class="o">=</span> <span class="n">findHomography</span><span class="p">(</span><span class="n">o_corner</span><span class="p">,</span> <span class="n">d_corner</span><span class="p">);</span>
+<span class="n">H_inv</span><span class="o">=</span> <span class="n">findHomography</span><span class="p">(</span><span class="n">d_corner</span><span class="p">,</span> <span class="n">o_corner</span><span class="p">);</span>
+</code></pre>
+
+
+<ul>
+<li>在根据映射矩阵H, 将原始图映射到变形图上</li>
+</ul>
+<pre class="code literal-block"><span></span><code><span class="n">Mat</span> <span class="n">warped_image</span><span class="p">;</span>
+<span class="n">warpPerspective</span><span class="p">(</span><span class="n">img</span><span class="p">,</span> <span class="n">warped_image</span><span class="p">,</span> <span class="n">H</span><span class="p">,</span> <span class="n">Size</span><span class="p">(</span><span class="n">width</span><span class="p">,</span><span class="n">height</span><span class="p">));</span>
+</code></pre>
+
+
+<p>完整的代码, 放在<a href="https://gist.github.com/goldengrape/b666a0e822f6da7b56c0c626b7b140a5">gist中</a></p>
+</div>
+    </div>
+    <aside class="postpromonav"><nav><ul class="pager hidden-print">
+<li class="previous">
+                <a href="../opencv_4/" rel="prev" title="OpenCV C++学习笔记(4): 4点投影变换">上一篇文章</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element) {
+            return element.getElementsByTagName('img')[0].alt;
+    }});
+    </script><script src="https://hypothes.is/embed.js" async></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-113165714-1"></script><script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113165714-1');
+</script>
+</body>
+</html>

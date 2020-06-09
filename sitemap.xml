@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2020-04-23T05:05:00Z</lastmod>
+  <lastmod>2020-06-09T04:42:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-06-08T18:43:00Z</lastmod>
+  <lastmod>2020-06-09T05:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -251,7 +251,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-18.html</loc>
-  <lastmod>2020-06-08T18:43:00Z</lastmod>
+  <lastmod>2020-06-09T04:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-19.html</loc>
+  <lastmod>2020-06-09T05:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -300,6 +304,18 @@
  <url>
   <loc>https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/</loc>
   <lastmod>2020-06-08T18:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/</loc>
+  <lastmod>2020-06-09T04:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/Cpp/openCV/opencv_4/</loc>
+  <lastmod>2020-06-09T04:42:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</loc>
+  <lastmod>2020-06-09T05:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/Invention/air-vortex-AC/</loc>
@@ -584,10 +600,6 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/import_calligraphy_to_keynote_as_shape/</loc>
   <lastmod>2018-08-23T04:15:00Z</lastmod>
- </url>
- <url>
-  <loc>https://goldengrape.github.io/posts/bulabula/instruments/</loc>
-  <lastmod>2020-06-08T18:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</loc>
