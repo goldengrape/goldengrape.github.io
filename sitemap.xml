@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-06-09T07:02:00Z</lastmod>
+  <lastmod>2020-06-15T08:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -255,7 +255,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-19.html</loc>
-  <lastmod>2020-06-09T07:02:00Z</lastmod>
+  <lastmod>2020-06-15T08:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -320,6 +320,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</loc>
   <lastmod>2020-06-09T06:51:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</loc>
+  <lastmod>2020-06-15T08:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/Invention/air-vortex-AC/</loc>
@@ -676,6 +680,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/string-on-pad/</loc>
   <lastmod>2018-03-20T04:45:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/stroke_seq/</loc>
+  <lastmod>2020-06-15T08:48:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/uptodate-zh-Hans/</loc>

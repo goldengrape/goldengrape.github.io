@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 教程, opencv, cpp)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_jiao-cheng-opencv-cpp.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 09 Jun 2020 07:42:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>OpenCV C++学习笔记(6): 颜色识别定位</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在 opencv-srf 网站上, 有一个&lt;a href="https://www.opencv-srf.com/2010/09/object-detection-using-color-seperation.html"&gt;颜色检测和物体跟踪&lt;/a&gt;的示例. 使用inRange来检测颜色, 并且Moments类来追踪这个颜色的物体. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 教程, opencv, cpp)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/cat_jiao-cheng-opencv-cpp.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jun 2020 08:48:15 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>OpenCV C++学习笔记(7): 命令行解析</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OpenCV里有个CommandLineParser, 可以用来解析命令行, 方便不少.&lt;/p&gt;
+&lt;p&gt;首先要定义一个keys:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;"{help      |   | print this message}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{@input i  |   | input video file}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{@output o |   | output video file}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{low       |35 | low value}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{high      |100| high value}"&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;两根竖线里面是默认值&lt;/p&gt;
+&lt;p&gt;然后在&lt;code&gt;int main(int argc, const char * argv[])&lt;/code&gt;里面, 要声明一个&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="n"&gt;CommandLineParser&lt;/span&gt; &lt;span class="nf"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;接着就可以处理parser里的东西了, &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断一个参数有没有, 可以用&lt;code&gt;parser.has(参数名)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;取得参数值, 可以用&lt;code&gt;parser.get&amp;lt;类型&amp;gt;(参数名或者序号)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如, 单独写一个函数来处理这些参数, 用传引用的方法来传递获取的参数值. &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;get_CLI&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CommandLineParser&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+
+    &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"change video color and contrast"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="c1"&gt;//If requires help show&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"help"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printMessage&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"@input"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"@output"&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+        &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
+        &lt;span class="s"&gt;"_changed.MP4"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</guid><pubDate>Wed, 10 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(6): 颜色识别定位</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在 opencv-srf 网站上, 有一个&lt;a href="https://www.opencv-srf.com/2010/09/object-detection-using-color-seperation.html"&gt;颜色检测和物体跟踪&lt;/a&gt;的示例. 使用inRange来检测颜色, 并且Moments类来追踪这个颜色的物体. &lt;/p&gt;
 &lt;p&gt;这个例子只能追踪&lt;strong&gt;一个&lt;/strong&gt;物体, 如果有多个同样颜色的物体, 用Moments只能找到这些物体最外面的框, 把这些物体当作一个, 找到他们的中心. 但这不是我想要的. 所以只好临摹了另外一个示例, 将两个凑在一起, 达成了目的.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</guid><pubDate>Tue, 09 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(5): 原位做4点投影变换</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://docs.opencv.org/master/de/dd4/samples_2cpp_2warpPerspective_demo_8cpp-example.html"&gt;OpenCV官方的warpPerspective示例&lt;/a&gt;用一个窗口进行选区, 用另一个窗口进行显示: &lt;/p&gt;
 &lt;p&gt;&lt;img alt="trans" src="https://i.loli.net/2020/06/09/SK6PBipY4jnOWTR.jpg"&gt;&lt;/p&gt;

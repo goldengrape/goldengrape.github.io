@@ -1,5 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 09 Jun 2020 07:42:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>练字录像</title><link>https://goldengrape.github.io/posts/bulabula/record_my_practice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学习了几天OpenCV以后, 我终于可以在练毛笔字时方便地录像了. 我这种Nerd, 练个毛笔字也要搞得像全栈开发的样子. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 15 Jun 2020 08:50:53 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>笔顺</title><link>https://goldengrape.github.io/posts/bulabula/stroke_seq/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我记得小学的时候, 曾经为笔顺的问题苦恼过, 这好像还考试过. 后来长大以后发现, 连会写字的人都不多了, 哪里还顾及什么写字的笔顺. 笔顺这种事情, 在现代社会就像是茴香豆的四种写法, 无用. 但偶尔考据一下也挺有趣的. &lt;/p&gt;
+&lt;p&gt;在说笔顺的时候&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;是针对手写的, 印刷的字没有笔顺的意义. &lt;/li&gt;
+&lt;li&gt;是针对古代人手写的, 也就是用毛笔, 写繁体字. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;毛笔有毛笔的特点, 它是软的, 它是离散的笔毛构成的, 跟硬笔完全不同, (当然硬笔中钢笔和圆珠笔、铅笔也有不同). &lt;/p&gt;
+&lt;p&gt;比如, 现代人用硬笔可以很方便用力画出一个圆圈或者方块, 但用毛笔就很麻烦. 毛笔如果用力画一个完整圆周, 笔毛会搅乱, 这样就没法再继续写下一笔了, 所以毛笔写字里要么分开画两个半周; 要么在画了180度以后要做个调锋的动作把笔毛顺回来, 再继续; 要么就要改变力度, 使用比较细的笔画画出一半圆. &lt;/p&gt;
+&lt;p&gt;黄简老师讲过, 在手写的时候, 汉字的基本组成部分不是偏旁部首, 而是“笔势”. 基础的笔势有5个, 奋笔势、竖笔势、勾裹势、勾努势和衮笔势. 从这基础的五势出发, 还可以细分出更多的笔势, 名字都很帅气, 比如凤翅势、顾盼势、连波势...&lt;/p&gt;
+&lt;p&gt;有一天我跟淳子小姐聊天时, 不慎把“势”写成了“式”, 她说这些名字颇有武侠之风. 一下子令人茅塞顿开, 我理解, 笔势, 就是常见的一些小的笔画组合, 这些笔画以这样的方式组合起来, 写得顺滑方便. 有点像武技中的小组合, 两个直拳以后近身一个勾拳再接一个横摆, 就很顺手, 也容易得手. 也和武技类似, 一个一个小组合按不同时间顺序连接起来就成了套路. 而一个一个笔势, 放在不同空间位置“裹束”起来就成了手写的字.&lt;/p&gt;
+&lt;p&gt;手写是依照笔势来组织笔画, 因此笔顺是按照笔势来的, 不完全是按照偏旁部首来安排的. &lt;/p&gt;
+&lt;p&gt;那么, 如何区分笔势, 或者如何知道一个字的笔顺呢? 我觉得可以去看那些写字好的人是怎么写的, 而且要找到能够看出他们笔画顺序的字. &lt;/p&gt;
+&lt;p&gt;写字好的人自然是找书法家的字. 要看出笔画顺序, 则是应该找到行书. 篆隶、楷书(真书)太规整, 草书跟现代使用的文字差别又太大. 行书是最好, 笔画之间往往有牵丝或者飞渡, 能够看出笔尖行走的路径. 而且如果有墨迹本是最佳, 看得清楚. &lt;/p&gt;
+&lt;p&gt;现在有很多书法辞典、网站、app, 可以一口气查到很多书法家所写的. 我喜欢&lt;a href="https://apps.apple.com/cn/app/%E4%B8%8D%E5%8E%8C%E4%B9%A6%E6%B3%95/id999813374"&gt;“不厌书法”&lt;/a&gt;这个app. 练字时还可以拍照对比. 随手查一下的话, 网站也不错. 比如&lt;a href="http://www.shufazidian.com/"&gt;书法字典&lt;/a&gt;. 注意, 书法家也有不同, 通常还是越有名、越古老的书法家越好. 王羲之是首选权威, 晋唐优先, 宋元次之, 明清就仅供参考了.&lt;/p&gt;
+&lt;p&gt;好了, 来练习一下, 震惊语文老师的笔顺题.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;集的笔顺是怎样的?&lt;/li&gt;
+&lt;li&gt;盛的笔顺是怎样的?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/stroke_seq/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 3 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/stroke_seq/</guid><pubDate>Mon, 15 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(7): 命令行解析</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OpenCV里有个CommandLineParser, 可以用来解析命令行, 方便不少.&lt;/p&gt;
+&lt;p&gt;首先要定义一个keys:&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="s"&gt;"{help      |   | print this message}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{@input i  |   | input video file}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{@output o |   | output video file}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{low       |35 | low value}"&lt;/span&gt;
+    &lt;span class="s"&gt;"{high      |100| high value}"&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;两根竖线里面是默认值&lt;/p&gt;
+&lt;p&gt;然后在&lt;code&gt;int main(int argc, const char * argv[])&lt;/code&gt;里面, 要声明一个&lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="n"&gt;CommandLineParser&lt;/span&gt; &lt;span class="nf"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+&lt;p&gt;接着就可以处理parser里的东西了, &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;判断一个参数有没有, 可以用&lt;code&gt;parser.has(参数名)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;取得参数值, 可以用&lt;code&gt;parser.get&amp;lt;类型&amp;gt;(参数名或者序号)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;比如, 单独写一个函数来处理这些参数, 用传引用的方法来传递获取的参数值. &lt;/p&gt;
+&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;get_CLI&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CommandLineParser&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
+
+    &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"change video color and contrast"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="c1"&gt;//If requires help show&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"help"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printMessage&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+
+    &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"@input"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"@output"&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
+        &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
+        &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
+        &lt;span class="s"&gt;"_changed.MP4"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</guid><pubDate>Wed, 10 Jun 2020 04:00:00 GMT</pubDate></item><item><title>练字录像</title><link>https://goldengrape.github.io/posts/bulabula/record_my_practice/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;学习了几天OpenCV以后, 我终于可以在练毛笔字时方便地录像了. 我这种Nerd, 练个毛笔字也要搞得像全栈开发的样子. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="兴_原本_small.2020-06-09 15_00_43" src="https://i.loli.net/2020/06/09/RmewGt4gHLrfFhP.gif"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/record_my_practice/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/record_my_practice/</guid><pubDate>Tue, 09 Jun 2020 05:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(6): 颜色识别定位</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在 opencv-srf 网站上, 有一个&lt;a href="https://www.opencv-srf.com/2010/09/object-detection-using-color-seperation.html"&gt;颜色检测和物体跟踪&lt;/a&gt;的示例. 使用inRange来检测颜色, 并且Moments类来追踪这个颜色的物体. &lt;/p&gt;
 &lt;p&gt;这个例子只能追踪&lt;strong&gt;一个&lt;/strong&gt;物体, 如果有多个同样颜色的物体, 用Moments只能找到这些物体最外面的框, 把这些物体当作一个, 找到他们的中心. 但这不是我想要的. 所以只好临摹了另外一个示例, 将两个凑在一起, 达成了目的.&lt;/p&gt;
@@ -18,398 +84,4 @@
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_1/</guid><pubDate>Tue, 02 Jun 2020 15:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(0): Mac下安装</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_0/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;一直想写一个video see-through的程序, 用头戴显示器通过摄像头看外面, 以前用python写过, 但是延迟太明显. 于是去学了C++, 但也一直没有动手, 最近写毛笔字时开始给自己录像, 于是又有了很多视频需要剪切、调整、变形, 这些操作肯定是不愿意手动的, 于是打算用OpenCV, 然后继续嫌弃python太慢, 既然已经学了C++, 那干脆把OpenCV的C++版本学会好了. &lt;/p&gt;
 &lt;p&gt;于是一边查一边写, 写一句查一句, 觉得效率太低, 反正磨刀不误砍柴工, 干脆找本书认真学OpenCV好了, 目前买了本&lt;a href="https://www.amazon.cn/dp/B07VDQ2BMT"&gt;《OpenCV 4计算机视觉项目实战》&lt;/a&gt; 来看. &lt;/p&gt;
 &lt;p&gt;首先是安装. 我觉得开源软件如果提供一个远程安装指导的付费服务, 一定能产生巨巨巨巨巨大的GDP. 一开始折腾了一整天, 也没搞定一句&lt;code&gt;#include &amp;lt;opencv2/opencv.hpp&amp;gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_0/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_0/</guid><pubDate>Tue, 02 Jun 2020 13:00:00 GMT</pubDate></item><item><title>AI 4 Med 笔记(1.2)各种率</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;第一门课第二周, 主要讲&lt;/p&gt;
-&lt;h3 id="各种率"&gt;各种率&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E5%90%84%E7%A7%8D%E7%8E%87"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;真假阴阳各种率&lt;/li&gt;
-&lt;li&gt;敏感性和特异性&lt;/li&gt;
-&lt;li&gt;阳性预测率(PPV)和阴性预测率&lt;/li&gt;
-&lt;li&gt;置信区间, ROC曲线, F1 score&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;我之前学Scikit-learn的时候, 笔记记得挺清楚的.&lt;/p&gt;
-&lt;p&gt;参考&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-2/"&gt;Scikit-learn笔记2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-3/"&gt;Scikit-learn笔记3&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://goldengrape.github.io/posts/python/scikit-learn-note-4/"&gt;Scikit-learn笔记4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;而且这张图做得很好, 一张图说明问题, 先看图, 再看后面的计算方式:&lt;/p&gt;
-&lt;!-- ![](/images/ratios.png) --&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;例如有这样的结果:&lt;/p&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;/th&gt;&lt;th&gt;预测=A&lt;/th&gt;&lt;th&gt;预测=B&lt;/th&gt;&lt;th&gt;预测=C&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=A&lt;/td&gt;&lt;td&gt;100&lt;/td&gt;&lt;td&gt;6&lt;/td&gt;&lt;td&gt;11&lt;/td&gt; 
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=B&lt;/td&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;110&lt;/td&gt;&lt;td&gt;12&lt;/td&gt; 
-        &lt;/tr&gt;        
-        &lt;tr&gt;
-            &lt;td&gt;实际=C&lt;/td&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;7&lt;/td&gt;&lt;td&gt;120&lt;/td&gt; 
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;以下表格中, 分子是红字, 分母是黄色背景, 考虑C的情况&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="Accuracy"&gt;Accuracy&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#Accuracy"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;正确率&lt;/li&gt;
-&lt;li&gt;有病没病都说对了的概率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;/th&gt;&lt;th&gt;预测=A&lt;/th&gt;&lt;th&gt;预测=B&lt;/th&gt;&lt;th&gt;预测=C&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=A&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;100&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;6&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;11&lt;/td&gt; 
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=B&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;1&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;110&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;12&lt;/td&gt; 
-        &lt;/tr&gt;        
-        &lt;tr&gt;
-            &lt;td&gt;实际=C&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;2&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;7&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;120&lt;/td&gt; 
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;$$
-Accuracy=\frac{100+110+120}{100+6+11+1+110+12+2+7+120}
-$$&lt;hr&gt;
-&lt;h3 id="Recall"&gt;Recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#Recall"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;敏感性, 检出率, 真阳性率.&lt;/li&gt;
-&lt;li&gt;实际有病, 测出有病的概率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;/th&gt;&lt;th&gt;预测=A&lt;/th&gt;&lt;th&gt;预测=B&lt;/th&gt;&lt;th&gt;预测=C&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=A&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;100&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;6&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;11&lt;/td&gt; 
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=B&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;1&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;110&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;12&lt;/td&gt; 
-        &lt;/tr&gt;        
-        &lt;tr&gt;
-            &lt;td&gt;实际=C&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;2&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;7&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;120&lt;/td&gt; 
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;$$
-Recall=\frac{120}{2+7+120}
-$$&lt;hr&gt;
-&lt;h3 id="Precision"&gt;Precision&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#Precision"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;精确度, 阳性预测率, PPV&lt;/li&gt;
-&lt;li&gt;测出有病, 还说对了的概率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;/th&gt;&lt;th&gt;预测=A&lt;/th&gt;&lt;th&gt;预测=B&lt;/th&gt;&lt;th&gt;预测=C&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=A&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;100&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;6&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;11&lt;/td&gt; 
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=B&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;1&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;110&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;12&lt;/td&gt; 
-        &lt;/tr&gt;        
-        &lt;tr&gt;
-            &lt;td&gt;实际=C&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;2&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;7&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;120&lt;/td&gt; 
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;$$
-Precision=\frac{120}{11+12+120}
-$$&lt;hr&gt;
-&lt;h3 id="Specificity"&gt;Specificity&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#Specificity"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;特异性, 真阴性率&lt;/li&gt;
-&lt;li&gt;测出没病, 还说对了的概率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;/th&gt;&lt;th&gt;预测=A&lt;/th&gt;&lt;th&gt;预测=B&lt;/th&gt;&lt;th&gt;预测=C&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=A&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;100&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;6&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;11&lt;/td&gt; 
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=B&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;1&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;110&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;12&lt;/td&gt; 
-        &lt;/tr&gt;        
-        &lt;tr&gt;
-            &lt;td&gt;实际=C&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;2&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;7&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;120&lt;/td&gt; 
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;$$
-Specificity=\frac{100+6+1+110}{100+6+1+110+2+7}
-$$&lt;hr&gt;
-&lt;h3 id="False-Positive-Rate"&gt;False Positive Rate&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#False-Positive-Rate"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;假阳性率, 误报率&lt;/li&gt;
-&lt;li&gt;本来没病, 测出有病的概率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;&lt;/th&gt;&lt;th&gt;预测=A&lt;/th&gt;&lt;th&gt;预测=B&lt;/th&gt;&lt;th&gt;预测=C&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=A&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;100&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;6&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;11&lt;/td&gt; 
-        &lt;/tr&gt;
-        &lt;tr&gt;
-            &lt;td&gt;实际=B&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;1&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:black;"&gt;110&lt;/td&gt;
-            &lt;td style="background-color: yellow; color:red;"&gt;12&lt;/td&gt; 
-        &lt;/tr&gt;        
-        &lt;tr&gt;
-            &lt;td&gt;实际=C&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;2&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;7&lt;/td&gt;
-            &lt;td style="background-color: white; color:black;"&gt;120&lt;/td&gt; 
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;$$
-False Positive Rate=\frac{11+12}{100+6+11+1+110+12}
-$$&lt;hr&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="真假阴阳性"&gt;真假阴阳性&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E7%9C%9F%E5%81%87%E9%98%B4%E9%98%B3%E6%80%A7"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
-&lt;thead&gt;&lt;tr&gt;
-&lt;th style="text-align:left"&gt;&lt;/th&gt;
-&lt;th style="text-align:left"&gt;预测为(-)&lt;/th&gt;
-&lt;th style="text-align:left"&gt;预测为(+)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;实际为(-)&lt;/td&gt;
-&lt;td style="text-align:left"&gt;TN&lt;/td&gt;
-&lt;td style="text-align:left"&gt;FP&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td style="text-align:left"&gt;实际为(+)&lt;/td&gt;
-&lt;td style="text-align:left"&gt;FN&lt;/td&gt;
-&lt;td style="text-align:left"&gt;TP&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;ul&gt;
-&lt;li&gt;TP = true positive 真阳性&lt;/li&gt;
-&lt;li&gt;FP = false positive (Type I error) 假阳性(Type I错误) , 印象里就是P&amp;lt;0.05的0.05&lt;/li&gt;
-&lt;li&gt;TN = true negative 真阴性&lt;/li&gt;
-&lt;li&gt;FN = false negative (Type II error)假阴性(Type II错误)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="敏感特异性"&gt;敏感特异性&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E6%95%8F%E6%84%9F%E7%89%B9%E5%BC%82%E6%80%A7"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Accuracy: 分类正确的概率. 实际为(-)预测为(-), 实际为(+)预测为(+)叫做正确. 
-$$
-Accuracy=\frac{TP + TN}{TP + TN + FP + FN}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Classification error: (1-Accuracy), 分类错误的概率
-$$
-Classification\;  error=\frac{FP + FN}{TP + TN + FP + FN}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Recall, 真阳性率: 实际上为(+), 能够被预测成(+)的概率&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Recall又叫 &lt;/li&gt;
-&lt;li&gt;True Positive Rate (TPR): 真阳性率&lt;/li&gt;
-&lt;li&gt;Sensitivity: 敏感性&lt;/li&gt;
-&lt;li&gt;Probability of detection: 检出率
-$$
-Recall=\frac{TP}{TP+FN}
-$$&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;Precision: 如果预测为(+), 那么预测正确的概率
-$$
-Precision=\frac{TP}{TP+FP}
-$$&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;False positive rate (FPR): 假阳性率, 误报率. 本来实际上是(-)的, 结果分类器报告成(+)的概率&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-$$
-False Positive Rate=\frac{FP}{TN+FP}
-$$&lt;ul&gt;
-&lt;li&gt;Specificity, 特异性&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;应该是真阴性率(之前写错了), TNR, 实际上为(-), 能够被测成(-)的概率
-$$
-Specificity=\frac{TN}{TN+FN}
-$$&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="F1-score:-结合precision与recall"&gt;F1-score: 结合precision与recall&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#F1-score:-%E7%BB%93%E5%90%88precision%E4%B8%8Erecall"&gt;¶&lt;/a&gt;&lt;/h3&gt;$$
-F_1=2\frac{precision \times recall}{precision+recall}=\frac{2TP}{2TP+FN+FP}
-$$&lt;h3 id="F-score:-更一般地将precision与recall结合成单独一个数"&gt;F-score: 更一般地将precision与recall结合成单独一个数&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#F-score:-%E6%9B%B4%E4%B8%80%E8%88%AC%E5%9C%B0%E5%B0%86precision%E4%B8%8Erecall%E7%BB%93%E5%90%88%E6%88%90%E5%8D%95%E7%8B%AC%E4%B8%80%E4%B8%AA%E6%95%B0"&gt;¶&lt;/a&gt;&lt;/h3&gt;$$
-F_\beta=(1+\beta^2)\frac{precision \times recall}{\beta^2\times precision+recall}=\frac{(1+\beta^2)TP}{(1+\beta^2)TP+FN+FP}
-$$&lt;p&gt;𝛽用来调整recall vs precision之间的重要程度:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Precision-oriented users: 𝜷 = 0.5 &lt;/li&gt;
-&lt;li&gt;Recall-oriented users: 𝜷 = 2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="阳性预测率-PPV"&gt;阳性预测率 PPV&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E9%98%B3%E6%80%A7%E9%A2%84%E6%B5%8B%E7%8E%87-PPV"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;实际上就是&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Precision: 如果预测为(+), 那么预测正确的概率
-$$
-Precision=\frac{TP}{TP+FP}
-$$&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-$$ 
-PPV = Precision = \frac{sensitivity \times prevalence}{sensitivity  \times  prevalence+(1 - specificity) \times (1 - prevalence)}
-$$&lt;p&gt;其中 prevalence=P(pos), 阳性结果的发生率. 如果自己都知道TP、FP的数据, 当然用简单的公式计算, 如果拿到的是一个标记好各种率的试剂盒, 或者是看一篇新闻报道, 对方把各种率搅合在一起, 那么可能就要通过后一种公式来计算&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="置信区间"&gt;置信区间&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#%E7%BD%AE%E4%BF%A1%E5%8C%BA%E9%97%B4"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;比如某个概率p=0.80(95% CI 0.78, 0.82),&lt;/p&gt;
-&lt;p&gt;是说, 真实的概率p, 谁知道是啥, 有95%的概率, 会落在[0.78, 0.82]的范围内. 置信区间的范围和样本量有关, 样本量越大, 置信区间的宽度越窄.&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h3 id="ROC曲线"&gt;ROC曲线&lt;a class="anchor-link" href="https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/#ROC%E6%9B%B2%E7%BA%BF"&gt;¶&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;X轴: False Positive Rate 假阳性率&lt;/li&gt;
-&lt;li&gt;Y轴: True Positive Rate  真阳性率&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;左上顶点:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;理想点&lt;/li&gt;
-&lt;li&gt;False positive rate 假阳性率=0 &lt;/li&gt;
-&lt;li&gt;True positive rate 真阳性率=1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c250b9182.png" alt="ROC.png"&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;ROC曲线越往左上, 越好. &lt;/li&gt;
-&lt;li&gt;曲线下面积(AUC), 越大越好&lt;/li&gt;
-&lt;li&gt;45度线是随机瞎猜线&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://i.loli.net/2018/04/01/5ac0c511e280e.png" alt="ROC-2.png"&gt;&lt;/p&gt;
-
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</guid><pubDate>Mon, 11 May 2020 02:00:00 GMT</pubDate></item><item><title>人工晶体闪辉Glistening</title><link>https://goldengrape.github.io/posts/ophthalmology/IOL_Glistening/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;近期认真读了一下关于人工晶体Glistening(闪辉)的文献, 连带读了相关的专利. 很有意思, 写出来供眼科同道观赏. (专业文章讲解惯例, 专业名词第一次出现时使用中文译名, 此后持续使用英文原名.)&lt;/p&gt;
-&lt;p&gt;临床部分比较无聊, 但原理部分相当有趣.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/IOL_Glistening/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 10 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/IOL_Glistening/</guid><pubDate>Fri, 08 May 2020 16:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_0/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_0/</guid><pubDate>Tue, 02 Jun 2020 13:00:00 GMT</pubDate></item></channel></rss>
