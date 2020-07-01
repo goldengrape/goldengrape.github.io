@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 11 May 2020 06:40:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>AI 4 Med 笔记(1.2)各种率</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 python)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/python.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jul 2020 15:44:55 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pancake光路</title><link>https://goldengrape.github.io/posts/python/pancake-optics/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;p&gt;Facebook发了一篇&lt;a href="https://research.fb.com/blog/2020/06/holographic-optics-for-thin-and-lightweight-virtual-reality/"&gt;非常华丽的paper&lt;/a&gt;, 里面用全息(Holographic, 原教旨意义的全息, 不是各种市场部吹嘘的引申假借)做了一个超薄的VR眼镜.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://research.fb.com/wp-content/uploads/2020/06/Holographic-optics_hero.png" alt="Holographic-optics"&gt;&lt;/p&gt;
+&lt;p&gt;完全是一副未来已来的样子.&lt;/p&gt;
+&lt;p&gt;不过我在看文献的时候, 却对里面回顾的另一个光路很感兴趣.&lt;/p&gt;
+&lt;p&gt;&lt;img src="https://i.loli.net/2020/07/01/jEaQNwtJFv2MspS.png" alt=""&gt;&lt;/p&gt;
+&lt;p&gt;这个光路令光线往返了3次, 可以将光程缩短为原来的1/3, 当然也是有代价的, 代价是亮度降低到原来的25%, 不过看起来很有趣, 而且是一种通用的方案, 在其他的光路设计上也很有可能使用到. 同时, 对于其中元件的微小移动都可能造成3倍的光程变化, 对于调焦可能也很有用.&lt;/p&gt;
+&lt;p&gt;于是我就决定用Jones矢量和Jones矩阵推导一下, 看看光路中到底发生了什么.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/pancake-optics/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 3 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/pancake-optics/</guid><pubDate>Wed, 01 Jul 2020 10:30:00 GMT</pubDate></item><item><title>AI 4 Med 笔记(1.2)各种率</title><link>https://goldengrape.github.io/posts/python/AI4med/AI4med_note_1_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;第一门课第二周, 主要讲&lt;/p&gt;
@@ -559,25 +569,4 @@ including Python, R, Julia, and Scala.
 &lt;p&gt;项目文件开源, 放在在&lt;a href="https://github.com/goldengrape/read_medical_device_data/blob/master/python/pdf_parser/Octopus_VF.ipynb"&gt;github&lt;/a&gt;上, 如果已经比较熟悉github, python和jupyter, 打开看看就很容易理解.  &lt;/p&gt;
 &lt;p&gt;&lt;em&gt;注意: 目前我还只能处理未加密的PDF, 并且PDF的页面大小必须严格是A4, 否则无法取得数据. 切记切记.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;但如果以前没怎么接触过python, 又临时需要处理些数据, 那么以下是使用教程:
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/octopus-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 12 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item><item><title>眼科数据随机森林</title><link>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;要讲解"随机森林", 先要简介一下"决策树". 各位眼科大夫在眼科门诊每天都在用"决策树", 比如一位单侧眼痛伴同侧头痛的病人进入门诊:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;眼压&amp;gt;21mmHg吗?&lt;ul&gt;
-&lt;li&gt;不是, 考虑其他可能&lt;/li&gt;
-&lt;li&gt;是的, 考虑青光眼可能, 还有鉴别诊断1, 2, 3..., 进入下一题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;前房浅吗?&lt;ul&gt;
-&lt;li&gt;不是, 考虑其他可能&lt;/li&gt;
-&lt;li&gt;是的, 考虑急性闭角型青光眼发作, 还有鉴别诊断x,y,z...,, 进入下一题&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;瞳孔光反射存在吗?&lt;ul&gt;
-&lt;li&gt;存在, 考虑其他可能&lt;/li&gt;
-&lt;li&gt;瞳孔固定, 考虑急性闭角型青光眼发作, 进入下一题
-. . . .&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;这就是一颗"决策树", 就是一堆判断题, 一层一层筛选, 最终将数据(病人)分成几类(急闭, 其他)&lt;/p&gt;
-&lt;p&gt;"随机森林"就是由一组这样的"决策树"组成的分类器.
-&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>ophthalmology</category><category>python</category><category>现代眼科医生知识扩展包</category><guid>https://goldengrape.github.io/posts/python/random-forest-for-ophthalmology-data/</guid><pubDate>Mon, 14 May 2018 14:00:00 GMT</pubDate></item></channel></rss>
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/octopus-data/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 12 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/octopus-data/</guid><pubDate>Mon, 09 Jul 2018 13:00:00 GMT</pubDate></item></channel></rss>

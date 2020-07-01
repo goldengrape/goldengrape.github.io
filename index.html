@@ -26,7 +26,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/stroke_seq/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/python/pancake-optics/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -98,7 +98,35 @@ MathJax.Hub.Config({
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/stroke_seq/" class="u-url">笔顺</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/python/pancake-optics/" class="u-url">Pancake光路</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Golden Grape
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/python/pancake-optics/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-07-01T18:30:00+08:00" itemprop="datePublished" title="2020-07-01 18:30">2020-07-01 18:30</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Facebook发了一篇<a href="https://research.fb.com/blog/2020/06/holographic-optics-for-thin-and-lightweight-virtual-reality/">非常华丽的paper</a>, 里面用全息(Holographic, 原教旨意义的全息, 不是各种市场部吹嘘的引申假借)做了一个超薄的VR眼镜.</p>
+<p><img src="https://research.fb.com/wp-content/uploads/2020/06/Holographic-optics_hero.png" alt="Holographic-optics"></p>
+<p>完全是一副未来已来的样子.</p>
+<p>不过我在看文献的时候, 却对里面回顾的另一个光路很感兴趣.</p>
+<p><img src="https://i.loli.net/2020/07/01/jEaQNwtJFv2MspS.png" alt=""></p>
+<p>这个光路令光线往返了3次, 可以将光程缩短为原来的1/3, 当然也是有代价的, 代价是亮度降低到原来的25%, 不过看起来很有趣, 而且是一种通用的方案, 在其他的光路设计上也很有可能使用到. 同时, 对于其中元件的微小移动都可能造成3倍的光程变化, 对于调焦可能也很有用.</p>
+<p>于是我就决定用Jones矢量和Jones矩阵推导一下, 看看光路中到底发生了什么.</p>
+<p class="more"><a href="posts/python/pancake-optics/">阅读更多…</a></p>
+</div>
+</div>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/stroke_seq/" class="u-url">笔顺</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Golden Grape
@@ -122,7 +150,7 @@ MathJax.Hub.Config({
 <p>有一天我跟淳子小姐聊天时, 不慎把“势”写成了“式”, 她说这些名字颇有武侠之风. 一下子令人茅塞顿开, 我理解, 笔势, 就是常见的一些小的笔画组合, 这些笔画以这样的方式组合起来, 写得顺滑方便. 有点像武技中的小组合, 两个直拳以后近身一个勾拳再接一个横摆, 就很顺手, 也容易得手. 也和武技类似, 一个一个小组合按不同时间顺序连接起来就成了套路. 而一个一个笔势, 放在不同空间位置“裹束”起来就成了手写的字.</p>
 <p>手写是依照笔势来组织笔画, 因此笔顺是按照笔势来的, 不完全是按照偏旁部首来安排的. </p>
 <p>那么, 如何区分笔势, 或者如何知道一个字的笔顺呢? 我觉得可以去看那些写字好的人是怎么写的, 而且要找到能够看出他们笔画顺序的字. </p>
-<p>写字好的人自然是找书法家的字. 要看出笔画顺序, 则是应该找到行书. 篆隶、楷书(真书)太规整, 草书跟现代使用的文字差别又太大. 行书是最好, 笔画之间往往有牵丝或者飞渡, 能够看出笔尖行走的路径. 而且如果有墨迹本是最佳, 看得清楚. </p>
+<p>写字好的人自然是找书法家. 要看出字的笔画顺序, 则是应该找到行书. 篆隶、楷书(真书)太规整, 草书跟现代使用的文字差别又太大. 行书是最好, 笔画之间往往有牵丝或者飞渡, 能够看出笔尖行走的路径. 而且如果有墨迹本是最佳, 看得清楚. </p>
 <p>现在有很多书法辞典、网站、app, 可以一口气查到很多书法家所写的. 我喜欢<a href="https://apps.apple.com/cn/app/%E4%B8%8D%E5%8E%8C%E4%B9%A6%E6%B3%95/id999813374">“不厌书法”</a>这个app. 练字时还可以拍照对比. 随手查一下的话, 网站也不错. 比如<a href="http://www.shufazidian.com/">书法字典</a>. 注意, 书法家也有不同, 通常还是越有名、越古老的书法家越好. 王羲之是首选权威, 晋唐优先, 宋元次之, 明清就仅供参考了.</p>
 <p>好了, 来练习一下, 震惊语文老师的笔顺题.</p>
 <ul>
@@ -317,31 +345,25 @@ MathJax.Hub.Config({
 <p class="more"><a href="posts/Cpp/openCV/opencv_1/">阅读更多…</a></p>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/Cpp/openCV/opencv_0/" class="u-url">OpenCV C++学习笔记(0): Mac下安装</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Golden Grape
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/Cpp/openCV/opencv_0/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-06-02T21:00:00+08:00" itemprop="datePublished" title="2020-06-02 21:00">2020-06-02 21:00</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<p>一直想写一个video see-through的程序, 用头戴显示器通过摄像头看外面, 以前用python写过, 但是延迟太明显. 于是去学了C++, 但也一直没有动手, 最近写毛笔字时开始给自己录像, 于是又有了很多视频需要剪切、调整、变形, 这些操作肯定是不愿意手动的, 于是打算用OpenCV, 然后继续嫌弃python太慢, 既然已经学了C++, 那干脆把OpenCV的C++版本学会好了. </p>
-<p>于是一边查一边写, 写一句查一句, 觉得效率太低, 反正磨刀不误砍柴工, 干脆找本书认真学OpenCV好了, 目前买了本<a href="https://www.amazon.cn/dp/B07VDQ2BMT">《OpenCV 4计算机视觉项目实战》</a> 来看. </p>
-<p>首先是安装. 我觉得开源软件如果提供一个远程安装指导的付费服务, 一定能产生巨巨巨巨巨大的GDP. 一开始折腾了一整天, 也没搞定一句<code>#include &lt;opencv2/opencv.hpp&gt;</code></p>
-<p class="more"><a href="posts/Cpp/openCV/opencv_0/">阅读更多…</a></p>
-</div>
-                </div>
             </article>
 </div>
     
         <ul class="pager postindexpager clearfix">
 <li class="next"><a href="index-19.html" rel="next">以前的文章</a></li>
         </ul>
-<!--End of body content--><footer id="footer">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+        processEscapes: true
+    },
+    displayAlign: 'center', // Change this to 'left' if you want left-aligned equations.
+    "HTML-CSS": {
+        styles: {'.MathJax_Display': {"margin": 0}}
+    }
+});
+</script><!--End of body content--><footer id="footer">
             Contents © 2020         <a href="mailto:https://twitter.com/goldengrape">Golden Grape</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
             
             

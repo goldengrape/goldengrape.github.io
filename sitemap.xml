@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-06-15T08:48:00Z</lastmod>
+  <lastmod>2020-07-01T15:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -255,7 +255,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-19.html</loc>
-  <lastmod>2020-06-15T08:48:00Z</lastmod>
+  <lastmod>2020-07-01T15:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -1008,6 +1008,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/python/octopus-data/</loc>
   <lastmod>2018-07-09T15:11:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/python/pancake-optics/</loc>
+  <lastmod>2020-07-01T15:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/python/pandaszhong-ji-he-de-yun-suan/</loc>
