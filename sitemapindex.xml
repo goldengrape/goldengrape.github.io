@@ -155,7 +155,7 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/python.xml</loc>
-  <lastmod>2020-07-01T15:07:00Z</lastmod>
+  <lastmod>2020-07-01T16:07:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/sari.xml</loc>
@@ -168,6 +168,10 @@
  <sitemap>
   <loc>https://goldengrape.github.io/categories/shortcut.xml</loc>
   <lastmod>2019-12-23T06:28:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://goldengrape.github.io/categories/shu-fa.xml</loc>
+  <lastmod>2020-07-26T12:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/categories/thinking.xml</loc>
@@ -187,10 +191,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2020-07-01T15:07:00Z</lastmod>
+  <lastmod>2020-07-26T12:57:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2020-07-01T15:07:00Z</lastmod>
+  <lastmod>2020-07-26T12:57:00Z</lastmod>
  </sitemap>
 </sitemapindex>

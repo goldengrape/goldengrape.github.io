@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Wed, 01 Jul 2020 16:07:25 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Pancake光路</title><link>https://goldengrape.github.io/posts/python/pancake-optics/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Jul 2020 13:10:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>一种判定用笔正确与否的定量方法</title><link>https://goldengrape.github.io/posts/bulabula/A_quantitative_method_for%20determining_the_correct_use_of%20brush/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;据说是开尔文勋爵的语录: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;度量就是了解。如果你不能测量它，你就不能改善它。
+To measure is to know. If you can not measure it, you can not improve it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;唐代张怀瓘说: “夫书，第一用笔，第二识势，第三裹束“&lt;/p&gt;
+&lt;p&gt;我以为:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用笔是&lt;strong&gt;科学&lt;/strong&gt;问题, 关注对不对: 如何行笔可以保持笔尖能够回复到初始状态; &lt;/li&gt;
+&lt;li&gt;识势是&lt;strong&gt;技术&lt;/strong&gt;问题, 关注好不好: 按什么loss可以求最优解, 哪些常用解是独立的, 哪些是耦合的;&lt;/li&gt;
+&lt;li&gt;裹束是&lt;strong&gt;艺术&lt;/strong&gt;问题, 关注美不美: 我不懂.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;现在练字只关心科学问题. 最近发现了定量度量用笔对不对的方法.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/A_quantitative_method_for%20determining_the_correct_use_of%20brush/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 2 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>书法</category><guid>https://goldengrape.github.io/posts/bulabula/A_quantitative_method_for%20determining_the_correct_use_of%20brush/</guid><pubDate>Sun, 26 Jul 2020 04:00:00 GMT</pubDate></item><item><title>Pancake光路</title><link>https://goldengrape.github.io/posts/python/pancake-optics/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;&lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
 &lt;p&gt;Facebook发了一篇&lt;a href="https://research.fb.com/blog/2020/06/holographic-optics-for-thin-and-lightweight-virtual-reality/"&gt;非常华丽的paper&lt;/a&gt;, 里面用全息(Holographic, 原教旨意义的全息, 不是各种市场部吹嘘的引申假借)做了一个超薄的VR眼镜.&lt;/p&gt;
@@ -90,5 +103,4 @@
 
 
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/</guid><pubDate>Tue, 09 Jun 2020 01:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(2): Mat数据结构</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;opencv用了一种Mat的矩阵来存储图像数据, Mat看起来很神秘, 尤其是在处理图片局部的时候, 很神秘, 我一直想把两个摄像头拍摄的画面合并到一张图上显示, 查了很多, 才大概弄明白一点. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/</guid><pubDate>Thu, 04 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(1): 读/写图像</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;《OpenCV 4计算机视觉项目实战》第二章, 代码在&lt;a href="https://github.com/PacktPublishing/Learn-OpenCV-4-By-Building-Projects-Second-Edition/tree/master/Chapter_02"&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_1/</guid><pubDate>Tue, 02 Jun 2020 15:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/</guid><pubDate>Thu, 04 Jun 2020 04:00:00 GMT</pubDate></item></channel></rss>
