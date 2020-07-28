@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Sun, 26 Jul 2020 13:10:30 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>一种判定用笔正确与否的定量方法</title><link>https://goldengrape.github.io/posts/bulabula/A_quantitative_method_for%20determining_the_correct_use_of%20brush/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;据说是开尔文勋爵的语录: &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 28 Jul 2020 04:18:40 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>坚决地无痛</title><link>https://goldengrape.github.io/posts/bulabula/Resolutely_painless/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一个关于&lt;strong&gt;特定类型&lt;/strong&gt;运动损伤后的&lt;strong&gt;个人&lt;/strong&gt;经验:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;坚决&lt;/strong&gt;地无痛, 保持连续6-8小时&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这完全是个人经验, 我不是骨科或运动医学专业医生、这个经验不是任何专家推荐, 没有经过临床试验验证, 据我所知没有记录在教科书中, 也没有指南推荐. &lt;/p&gt;
+&lt;p&gt;应用这个经验的风险, 需您自己承担. &lt;/p&gt;
+&lt;p&gt;但据我所知, 这个经验并不违背常见的运动损伤处理原则. &lt;/p&gt;
+&lt;p&gt;以下详细解释:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Resolutely_painless/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Resolutely_painless/</guid><pubDate>Tue, 28 Jul 2020 04:00:00 GMT</pubDate></item><item><title>一种判定用笔正确与否的定量方法</title><link>https://goldengrape.github.io/posts/bulabula/A_quantitative_method_for%20determining_the_correct_use_of%20brush/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;据说是开尔文勋爵的语录: &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;度量就是了解。如果你不能测量它，你就不能改善它。
 To measure is to know. If you can not measure it, you can not improve it.&lt;/p&gt;
@@ -102,5 +110,4 @@ To measure is to know. If you can not measure it, you can not improve it.&lt;/p&
 &lt;/code&gt;&lt;/pre&gt;
 
 
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/</guid><pubDate>Tue, 09 Jun 2020 01:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(2): Mat数据结构</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;opencv用了一种Mat的矩阵来存储图像数据, Mat看起来很神秘, 尤其是在处理图片局部的时候, 很神秘, 我一直想把两个摄像头拍摄的画面合并到一张图上显示, 查了很多, 才大概弄明白一点. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_2/</guid><pubDate>Thu, 04 Jun 2020 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_3/</guid><pubDate>Tue, 09 Jun 2020 01:00:00 GMT</pubDate></item></channel></rss>
