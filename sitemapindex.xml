@@ -150,6 +150,10 @@
   <lastmod>2020-01-20T13:47:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/optics.xml</loc>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/patent.xml</loc>
   <lastmod>2019-12-23T06:28:00Z</lastmod>
  </sitemap>
@@ -191,10 +195,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2020-07-28T04:16:00Z</lastmod>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2020-07-28T04:16:00Z</lastmod>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
  </sitemap>
 </sitemapindex>

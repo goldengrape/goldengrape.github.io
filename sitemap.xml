@@ -27,11 +27,11 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-07-28T04:16:00Z</lastmod>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
-  <lastmod>2020-07-26T12:57:00Z</lastmod>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/3d-print/</loc>
@@ -178,6 +178,10 @@
   <lastmod>2018-01-05T18:57:00Z</lastmod>
  </url>
  <url>
+  <loc>https://goldengrape.github.io/categories/optics/</loc>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://goldengrape.github.io/categories/patent/</loc>
   <lastmod>2019-12-07T06:55:00Z</lastmod>
  </url>
@@ -259,7 +263,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-19.html</loc>
-  <lastmod>2020-07-28T04:16:00Z</lastmod>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
@@ -552,6 +556,10 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/copybook-for-shufa/</loc>
   <lastmod>2018-05-26T15:55:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</loc>
+  <lastmod>2020-07-31T07:41:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/double-click-open-ipynb/</loc>

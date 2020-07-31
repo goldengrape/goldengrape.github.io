@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog (关于文章 optics)</title><link>https://goldengrape.github.io/</link><description></description><atom:link href="https://goldengrape.github.io/categories/optics.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 31 Jul 2020 07:49:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简metalens(1)</title><link>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这篇极简科普是关于: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;metalens&lt;/li&gt;
+&lt;li&gt;metasurface, 超表面, 超颖表面&lt;/li&gt;
+&lt;li&gt;Pancharatnam Berry Phase&lt;/li&gt;
+&lt;li&gt;几何相位, 贝里相位&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这些都是一个领域的东西. &lt;/p&gt;
+&lt;p&gt;近期研读VR文献和专利, 反复发现Pancharatnam Berry Phase透镜这个东西, 如果入射光是圆偏振光, 可以产生相反的屈光度, 比如对于右旋圆偏振光(RCP)是+3D的透镜, 对于左旋圆偏振光(LCP)的就是-3D, 实在是非常魔法. 
+&lt;img alt="" src="https://i.loli.net/2020/07/31/ml56zOgr1SfiKuJ.png"&gt;&lt;/p&gt;
+&lt;p&gt;作为一个已经认真学习本领域技术1整天, 认识本领域专家的学生的师兄的哥们的, 不写剧情与人物的科幻小说(发明专利)作家. 我认为自己已经有足够的资格来撰写一篇极简科普. (没错我就是在黑各种极简).&lt;/p&gt;
+&lt;p&gt;本极简科普是以临床眼科医生为假设读者撰写的, 就是那些听见“像差”就呵呵, 看见公式就晕过去的家伙们. &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 4 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>optics</category><guid>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</guid><pubDate>Fri, 31 Jul 2020 04:00:00 GMT</pubDate></item></channel></rss>
