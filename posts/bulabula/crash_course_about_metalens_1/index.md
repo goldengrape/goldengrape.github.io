@@ -43,35 +43,47 @@
 A点接触到界面时, 同相位的B点还没到, 如果在介质1里的速度是V1=C/n1, 经过t时间B才走到界面上的点O,
 那么:
 
-$$
-BO=V1*t=AO*sin(θ1)
-$$
+<!-- $$ 
+BO=V1*t=AO*sin(\theta_1)
+$$ --> 
+
+![](https://render.githubusercontent.com/render/math?math=BO=V_1\times%20t=AO\times%20sin(\theta_1))
 
 当B到达O点的时候, A点的波已经继续走了, 按照介质2中的速度V2=C/n2, 走到了C点, 那么:
 
-$$
+<!-- $$
 AC=V2*t=AO*sin(θ2)
-$$
+$$ --> 
+
+![](https://render.githubusercontent.com/render/math?math=AC=V_2\times%20t=AO\times%20sin(\theta_2))
 
 两个式子中的t是一样的, AO是一样的, 所以整理一下:
 
-$$
-sin(θ1)/V1= sin(θ2) /V2
-$$
+<!-- $$
+\frac{sin(\theta_1)}{V_1}= \frac{sin(\theta_2)}{V_2}
+$$ --> 
+
+<div align="center"><img height="50" src="https://render.githubusercontent.com/render/math?math=%5Cfrac%7Bsin(%5Ctheta_1)%7D%7BV_1%7D%3D%20%5Cfrac%7Bsin(%5Ctheta_2)%7D%7BV_2%7D"></div> 
+
 
 再把V1=C/n1, V2=C/n2代入, 得到:
 
-$$
-sin(θ1) * n1 =sin(θ2) * n2
-$$
+<!-- $$
+sin(\theta_1) \times n_1 =sin(\theta_2) \times n_2
+$$ --> 
+
+<div align="center"><img src="https://render.githubusercontent.com/render/math?math=sin(%5Ctheta_1)%20%5Ctimes%20n_1%20%3Dsin(%5Ctheta_2)%20%5Ctimes%20n_2"></div>
 
 这就是中学就学过的折射定律, 又叫Snell定律.
 
 注意在界面折射时, 我用的颜色深浅两侧是一样的. 也就是说在界面上, 相位是不变的, 两侧是连续的. 
 
-$$
-sin(θ2) * n2 - sin(θ1) * n1 = 0
-$$
+<!-- $$
+sin(\theta_2) \times n_2 - sin(\theta_1) \times n_1 = 0
+$$ --> 
+
+<div align="center"><img src="https://render.githubusercontent.com/render/math?math=sin(%5Ctheta_2)%20%5Ctimes%20n_2%20-%20sin(%5Ctheta_1)%20%5Ctimes%20n_1%20%3D%200"></div>
+
 
 ![连续的波](https://i.loli.net/2020/07/31/CPNuEDqUQ3Zm1oW.png)
 
@@ -91,9 +103,12 @@ $$
 
 如果在AO界面上, 有一个能够改变相位东西, 不同位置x, 对应的改变量是Φ(x), 那么snell定律就重新写成了:
 
-$$
-sin(θ2) * n2 - sin(θ1) * n1 = 1/k0 * dΦ/dx 
-$$
+<!-- $$
+sin(\theta_2) \times n_2 - sin(\theta_1) \times n_1 = \frac{1}{k_0} \times \frac{d\Phi}{dx} 
+$$ --> 
+
+<div align="center"><img height="50" src="https://render.githubusercontent.com/render/math?math=sin(%5Ctheta_2)%20%5Ctimes%20n_2%20-%20sin(%5Ctheta_1)%20%5Ctimes%20n_1%20%3D%20%5Cfrac%7B1%7D%7Bk_0%7D%20%5Ctimes%20%5Cfrac%7Bd%5CPhi%7D%7Bdx%7D%20"></div>
+
 
 总之如果你能够在界面上把相位随意调整0~2π, 那就可以随心所欲控制光的传播方向了.  
 

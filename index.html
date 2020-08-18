@@ -13,7 +13,7 @@
 <meta name="generator" content="Nikola (getnikola.com)">
 <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
 <link rel="canonical" href="https://goldengrape.github.io/">
-<link rel="next" href="index-19.html" type="text/html">
+<link rel="next" href="index-20.html" type="text/html">
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
     tex2jax: {
@@ -26,7 +26,7 @@ MathJax.Hub.Config({
         styles: {'.MathJax_Display': {"margin": 0}}
     }
 });
-</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/crash_course_about_metalens_1/" type="text/html">
+</script><!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/bulabula/learn-sth-about-bedside-MRI/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">跳到主内容</a>
@@ -98,7 +98,51 @@ MathJax.Hub.Config({
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/crash_course_about_metalens_1/" class="u-url">极简metalens(1)</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/learn-sth-about-bedside-MRI/" class="u-url">学习床旁核磁的知识</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Golden Grape
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/bulabula/learn-sth-about-bedside-MRI/" rel="bookmark">
+            <time class="published dt-published" datetime="2020-08-18T12:00:00+08:00" itemprop="datePublished" title="2020-08-18 12:00">2020-08-18 12:00</time></a>
+            </p>
+                </div>
+            </header><div class="p-summary entry-summary">
+                    <div>
+<p>在medgadget看到床旁核磁的新闻: <a href="https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html">https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html</a></p>
+<p><img alt="" src="https://www.medgadget.com/wp-content/uploads/2020/08/hyperfine.jpg"></p>
+<p>这家叫<a href="https://www.hyperfine.io/">HyperRefine</a>的机器通过了FDA的认证. </p>
+<p>真是很厉害, 印象中做核磁还必须是在一间电磁屏蔽的屋子里, 现在居然已经可以推到床旁去做了. </p>
+<p>其他科的同学也觉得不错:</p>
+<blockquote>
+<p>“神经内外科的兄弟们不用再抬着气管插管的昏迷病人过床了”</p>
+<p>“移动CT、核磁对于急性卒中救治非常重要，尤其是院前转运途中就可以实施，将大大节省时间，增加时间窗内溶栓和取栓受益人群。值得期待。”</p>
+</blockquote>
+<p>和放射科的同学聊了聊. </p>
+<blockquote>
+<p>“这款hyperfine用的是0.06T的永磁体, 成像效果可能和我们熟悉的超高场强相去甚远“
+“最早普及的mr也需要0.2T吧，很模糊，扫描时间也长。但是1.5T以上的超高场强肉眼看上去都差不多了。“
+“目前hyperfine的策略貌似是先训练AI识别图像“</p>
+</blockquote>
+<p>感觉这才是深度学习的正道, 用算法弥补硬件, 产生曾经不可能的应用场景.</p>
+<h3>原理资料</h3>
+<p>于是来了兴趣. 简单检索了一下. </p>
+<p>Hyperfine的主要技术方案在WO2020028257A2 这个专利里, 
+全文:
+<a href="https://worldwide.espacenet.com/patent/search/family/067659966/publication/WO2020028257A2?q=pn%3DWO2020028257A2">https://worldwide.espacenet.com/patent/search/family/067659966/publication/WO2020028257A2?q=pn%3DWO2020028257A2</a></p>
+<p>用了U-net, NVN, GNVN几个深度学习网络, U-net以前见过, 是先压缩, 然后再展开成高分辨率, 在AI for Medical Diagnosis课程里提到过:  <a href="https://www.bilibili.com/video/BV1JT4y1g74P?p=34">https://www.bilibili.com/video/BV1JT4y1g74P?p=34</a></p>
+<p>GNVN具体的算法描述在这篇论文: <a href="https://msofka.github.io/pdfs/schlemper-miccai19.pdf">https://msofka.github.io/pdfs/schlemper-miccai19.pdf</a></p>
+<p>类似的技术还可以用在超声和CT上, 发明人之一Michal Sofka, 同时还在给其他几个公司提供算法. <a href="https://msofka.github.io/">https://msofka.github.io/</a></p>
+<p>采样扫描的顺序不是横竖扫, 可能是三角形或者其他什么形状的网格.</p>
+<p>专利中提到用来训练的数据集其实不大, 只有1200个 https://www.humanconnectome.org/study/hcp-young-adult/document/1200-subjects-data-release 当然可能在实际上市之前还能再找到些数据. </p>
+<h3>潜在的局限</h3>
+<p>虽然觉得是很了不起的事情, 但对临床医生提示一下: 小心使用了机器学习、深度学习、AI的设备, 所见到的图像不一定是“真实”获得的, 有可能是机器“<strong>脑补</strong>”的. 比如之前说华为的手机可以拍到月亮, 但是拿着对着盘子拍, 也能补上月亮的环形山. </p>
+<p>类似的, 如果在训练用的高清数据集里, 眼球的图像都是完整的, 在眼眶附近出现的总是一个完整的圆环, 在低分辨率的情况下, 比如有几个像素缺失了, 或者这个区域看不清楚, 机器可能就按照高清数据集里常见的方式进行填补, 于是就把眼眶附近“画”出一个完整的圆环. 但如果这个病人有个穿通伤, 恰好就在一两个像素的范围内有异常, 而在训练用的数据集里这种情况很少, 或者压根没出现过, 深度学习就会把这一两个像素当作是噪声, 用一个完整的眼环给替代掉.</p>
+<p>目前已知它的数据集只用了1200张, 即使是大量也只可能是几万张十几万张图, 毕竟放射科大夫们很贵. 分配到每一个病种、或者说每一种图像细节的数量会更低一些. 比如十万张核磁, 里面有1千张眼球破裂伤的, (其实就不少了, 每天1个得收集3年多呢), 对于AI来说, 如果看不清楚, 就蒙一个完整眼球, 这样的准确率还可以高达99%. 如果是疾病诊断之类, 可以用ROC曲线来矫正准确率, 但如果是图像细节恢复, 可能挺难的. 还只能用类似准确率的方式描述, 那么面对发生率较低的细节判读时, 临床医生要小心. </p>
+</div>
+                </div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/bulabula/crash_course_about_metalens_1/" class="u-url">极简metalens(1)</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Golden Grape
@@ -354,28 +398,11 @@ To measure is to know. If you can not measure it, you can not improve it.</p>
 <p class="more"><a href="posts/Cpp/openCV/opencv_5/">阅读更多…</a></p>
 </div>
                 </div>
-            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/Cpp/openCV/opencv_4/" class="u-url">OpenCV C++学习笔记(4): 4点投影变换</a></h1>
-                <div class="metadata">
-                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
-                        Golden Grape
-                    </span></p>
-            <p class="dateline">
-            <a href="posts/Cpp/openCV/opencv_4/" rel="bookmark">
-            <time class="published dt-published" datetime="2020-06-09T10:00:00+08:00" itemprop="datePublished" title="2020-06-09 10:00">2020-06-09 10:00</time></a>
-            </p>
-                </div>
-            </header><div class="p-summary entry-summary">
-                    <div>
-<p>真正有趣的东西来了, 总算开始学到了用ffmpeg搞不定的事情. 就是用OpenCV写个类似office lens那样的东西, 把倾斜的平面给抻直. 或者准确的说, 是把源图上的4个点, 映射到目标图上的4个点. </p>
-<p><img alt="trans" src="https://i.loli.net/2020/06/09/SK6PBipY4jnOWTR.jpg"></p>
-<p class="more"><a href="posts/Cpp/openCV/opencv_4/">阅读更多…</a></p>
-</div>
-                </div>
             </article>
 </div>
     
         <ul class="pager postindexpager clearfix">
-<li class="next"><a href="index-19.html" rel="next">以前的文章</a></li>
+<li class="next"><a href="index-20.html" rel="next">以前的文章</a></li>
         </ul>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" integrity="sha384-3lJUsx1TJHt7BA4udB5KPnDrlkO8T6J6v/op7ui0BbCjvZ9WqV4Xm6DTP6kQ/iBH" crossorigin="anonymous"></script><script type="text/x-mathjax-config">
 MathJax.Hub.Config({

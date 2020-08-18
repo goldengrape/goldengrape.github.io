@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 31 Jul 2020 07:49:26 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>极简metalens(1)</title><link>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这篇极简科普是关于: &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 Aug 2020 06:07:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>学习床旁核磁的知识</title><link>https://goldengrape.github.io/posts/bulabula/learn-sth-about-bedside-MRI/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在medgadget看到床旁核磁的新闻: &lt;a href="https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html"&gt;https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="https://www.medgadget.com/wp-content/uploads/2020/08/hyperfine.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;这家叫&lt;a href="https://www.hyperfine.io/"&gt;HyperRefine&lt;/a&gt;的机器通过了FDA的认证. &lt;/p&gt;
+&lt;p&gt;真是很厉害, 印象中做核磁还必须是在一间电磁屏蔽的屋子里, 现在居然已经可以推到床旁去做了. &lt;/p&gt;
+&lt;p&gt;其他科的同学也觉得不错:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“神经内外科的兄弟们不用再抬着气管插管的昏迷病人过床了”&lt;/p&gt;
+&lt;p&gt;“移动CT、核磁对于急性卒中救治非常重要，尤其是院前转运途中就可以实施，将大大节省时间，增加时间窗内溶栓和取栓受益人群。值得期待。”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;和放射科的同学聊了聊. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“这款hyperfine用的是0.06T的永磁体, 成像效果可能和我们熟悉的超高场强相去甚远“
+“最早普及的mr也需要0.2T吧，很模糊，扫描时间也长。但是1.5T以上的超高场强肉眼看上去都差不多了。“
+“目前hyperfine的策略貌似是先训练AI识别图像“&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;感觉这才是深度学习的正道, 用算法弥补硬件, 产生曾经不可能的应用场景.&lt;/p&gt;
+&lt;h3&gt;原理资料&lt;/h3&gt;
+&lt;p&gt;于是来了兴趣. 简单检索了一下. &lt;/p&gt;
+&lt;p&gt;Hyperfine的主要技术方案在WO2020028257A2 这个专利里, 
+全文:
+&lt;a href="https://worldwide.espacenet.com/patent/search/family/067659966/publication/WO2020028257A2?q=pn%3DWO2020028257A2"&gt;https://worldwide.espacenet.com/patent/search/family/067659966/publication/WO2020028257A2?q=pn%3DWO2020028257A2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;用了U-net, NVN, GNVN几个深度学习网络, U-net以前见过, 是先压缩, 然后再展开成高分辨率, 在AI for Medical Diagnosis课程里提到过:  &lt;a href="https://www.bilibili.com/video/BV1JT4y1g74P?p=34"&gt;https://www.bilibili.com/video/BV1JT4y1g74P?p=34&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;GNVN具体的算法描述在这篇论文: &lt;a href="https://msofka.github.io/pdfs/schlemper-miccai19.pdf"&gt;https://msofka.github.io/pdfs/schlemper-miccai19.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;类似的技术还可以用在超声和CT上, 发明人之一Michal Sofka, 同时还在给其他几个公司提供算法. &lt;a href="https://msofka.github.io/"&gt;https://msofka.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;采样扫描的顺序不是横竖扫, 可能是三角形或者其他什么形状的网格.&lt;/p&gt;
+&lt;p&gt;专利中提到用来训练的数据集其实不大, 只有1200个 https://www.humanconnectome.org/study/hcp-young-adult/document/1200-subjects-data-release 当然可能在实际上市之前还能再找到些数据. &lt;/p&gt;
+&lt;h3&gt;潜在的局限&lt;/h3&gt;
+&lt;p&gt;虽然觉得是很了不起的事情, 但对临床医生提示一下: 小心使用了机器学习、深度学习、AI的设备, 所见到的图像不一定是“真实”获得的, 有可能是机器“&lt;strong&gt;脑补&lt;/strong&gt;”的. 比如之前说华为的手机可以拍到月亮, 但是拿着对着盘子拍, 也能补上月亮的环形山. &lt;/p&gt;
+&lt;p&gt;类似的, 如果在训练用的高清数据集里, 眼球的图像都是完整的, 在眼眶附近出现的总是一个完整的圆环, 在低分辨率的情况下, 比如有几个像素缺失了, 或者这个区域看不清楚, 机器可能就按照高清数据集里常见的方式进行填补, 于是就把眼眶附近“画”出一个完整的圆环. 但如果这个病人有个穿通伤, 恰好就在一两个像素的范围内有异常, 而在训练用的数据集里这种情况很少, 或者压根没出现过, 深度学习就会把这一两个像素当作是噪声, 用一个完整的眼环给替代掉.&lt;/p&gt;
+&lt;p&gt;目前已知它的数据集只用了1200张, 即使是大量也只可能是几万张十几万张图, 毕竟放射科大夫们很贵. 分配到每一个病种、或者说每一种图像细节的数量会更低一些. 比如十万张核磁, 里面有1千张眼球破裂伤的, (其实就不少了, 每天1个得收集3年多呢), 对于AI来说, 如果看不清楚, 就蒙一个完整眼球, 这样的准确率还可以高达99%. 如果是疾病诊断之类, 可以用ROC曲线来矫正准确率, 但如果是图像细节恢复, 可能挺难的. 还只能用类似准确率的方式描述, 那么面对发生率较低的细节判读时, 临床医生要小心. &lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/learn-sth-about-bedside-MRI/</guid><pubDate>Tue, 18 Aug 2020 04:00:00 GMT</pubDate></item><item><title>极简metalens(1)</title><link>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这篇极简科普是关于: &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;metalens&lt;/li&gt;
 &lt;li&gt;metasurface, 超表面, 超颖表面&lt;/li&gt;
@@ -11,7 +40,7 @@
 &lt;img alt="" src="https://i.loli.net/2020/07/31/ml56zOgr1SfiKuJ.png"&gt;&lt;/p&gt;
 &lt;p&gt;作为一个已经认真学习本领域技术1整天, 认识本领域专家的学生的师兄的哥们的, 不写剧情与人物的科幻小说(发明专利)作家. 我认为自己已经有足够的资格来撰写一篇极简科普. (没错我就是在黑各种极简).&lt;/p&gt;
 &lt;p&gt;本极简科普是以临床眼科医生为假设读者撰写的, 就是那些听见“像差”就呵呵, 看见公式就晕过去的家伙们. &lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 4 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>optics</category><guid>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</guid><pubDate>Fri, 31 Jul 2020 04:00:00 GMT</pubDate></item><item><title>坚决地无痛</title><link>https://goldengrape.github.io/posts/bulabula/Resolutely_painless/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一个关于&lt;strong&gt;特定类型&lt;/strong&gt;运动损伤后的&lt;strong&gt;个人&lt;/strong&gt;经验:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 6 分钟)&lt;/p&gt;&lt;/div&gt;</description><category>optics</category><guid>https://goldengrape.github.io/posts/bulabula/crash_course_about_metalens_1/</guid><pubDate>Fri, 31 Jul 2020 04:00:00 GMT</pubDate></item><item><title>坚决地无痛</title><link>https://goldengrape.github.io/posts/bulabula/Resolutely_painless/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;这是一个关于&lt;strong&gt;特定类型&lt;/strong&gt;运动损伤后的&lt;strong&gt;个人&lt;/strong&gt;经验:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;坚决&lt;/strong&gt;地无痛, 保持连续6-8小时&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -115,6 +144,4 @@ To measure is to know. If you can not measure it, you can not improve it.&lt;/p&
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</guid><pubDate>Tue, 09 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(5): 原位做4点投影变换</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://docs.opencv.org/master/de/dd4/samples_2cpp_2warpPerspective_demo_8cpp-example.html"&gt;OpenCV官方的warpPerspective示例&lt;/a&gt;用一个窗口进行选区, 用另一个窗口进行显示: &lt;/p&gt;
 &lt;p&gt;&lt;img alt="trans" src="https://i.loli.net/2020/06/09/SK6PBipY4jnOWTR.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;但我觉得这样有点麻烦, 不太适合移动端、小屏幕的操作. 于是做了一点改进, 使我可以在一个窗口内直接操作图像.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</guid><pubDate>Tue, 09 Jun 2020 03:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(4): 4点投影变换</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_4/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;真正有趣的东西来了, 总算开始学到了用ffmpeg搞不定的事情. 就是用OpenCV写个类似office lens那样的东西, 把倾斜的平面给抻直. 或者准确的说, 是把源图上的4个点, 映射到目标图上的4个点. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="trans" src="https://i.loli.net/2020/06/09/SK6PBipY4jnOWTR.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_4/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_4/</guid><pubDate>Tue, 09 Jun 2020 02:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</guid><pubDate>Tue, 09 Jun 2020 03:00:00 GMT</pubDate></item></channel></rss>

@@ -7,7 +7,7 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://goldengrape.github.io/</loc>
-  <lastmod>2020-06-09T04:42:00Z</lastmod>
+  <lastmod>2020-08-18T06:03:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/2017/</loc>
@@ -27,7 +27,7 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/archive.html</loc>
-  <lastmod>2020-07-31T07:41:00Z</lastmod>
+  <lastmod>2020-08-18T06:03:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/categories/</loc>
@@ -263,11 +263,15 @@
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-19.html</loc>
-  <lastmod>2020-07-31T07:41:00Z</lastmod>
+  <lastmod>2020-08-18T06:03:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-2.html</loc>
   <lastmod>2020-06-08T18:41:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/index-20.html</loc>
+  <lastmod>2020-08-18T06:03:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/index-3.html</loc>
@@ -632,6 +636,14 @@
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/learn-exp-design-from-zhenhuan/</loc>
   <lastmod>2018-03-01T08:20:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/learn-sth-about-bed-side-MRI/</loc>
+  <lastmod>2020-08-18T06:03:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://goldengrape.github.io/posts/bulabula/learn-sth-about-bedside-MRI/</loc>
+  <lastmod>2020-08-18T06:07:00Z</lastmod>
  </url>
  <url>
   <loc>https://goldengrape.github.io/posts/bulabula/learn_sonic_pi_and_music_with_nicechord/</loc>
