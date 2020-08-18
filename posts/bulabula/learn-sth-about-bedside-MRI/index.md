@@ -9,6 +9,8 @@
 .. type: text
 -->
 
+**要经常欣赏人类的智慧**
+
 在medgadget看到床旁核磁的新闻: [https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html](https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html)
 
 ![](https://www.medgadget.com/wp-content/uploads/2020/08/hyperfine.jpg)
