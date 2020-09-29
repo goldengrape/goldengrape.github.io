@@ -1,6 +1,6 @@
 <!--
-.. title: 如何拒绝进入美丽新世界
-.. slug: how-to-refuse-brave-new-world
+.. title: 如何拒绝进入美丽新世界(1)
+.. slug: how-to-refuse-brave-new-world-part-1
 .. date: 2018-01-11 15:13:24 UTC+08:00
 .. tags:
 .. category:

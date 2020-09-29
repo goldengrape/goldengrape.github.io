@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 18 Aug 2020 09:06:44 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>学习床旁核磁的知识</title><link>https://goldengrape.github.io/posts/bulabula/learn-sth-about-bedside-MRI/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;要经常欣赏人类的智慧&lt;/strong&gt;&lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 29 Sep 2020 04:48:19 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>如何拒绝进入美丽新世界(2)</title><link>https://goldengrape.github.io/posts/bulabula/how-to-refuse-brave-new-world-part-2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;上一次写&lt;a href="https://goldengrape.github.io/posts/bulabula/how-to-refuse-brave-new-world-part-1"&gt;《如何拒绝进入美丽新世界(1)》&lt;/a&gt;还是在8年前, 这世界还真是改变了不少. 所以, 续写一下. &lt;/p&gt;
+&lt;h3&gt;选择可以自己控制的框架&lt;/h3&gt;
+&lt;p&gt;如果有一个异世界是由另一个生物创造的, 它在这个世界中享有绝对的控制权, 它可以控制包括但不限于物理定律的所有事情, 那么你敢进入这样一个世界么? &lt;/p&gt;
+&lt;p&gt;听起来很危险吧. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;但现实中就有这样的类比, 开放的网页vs App. 从网页中获取信息, 你可以选择不同的浏览器, 可以控制流入的信息, 可以对显示的内容进行加工、提取、转换等等, 也可以控制流出的信息. 在App中, 特别是手机app上, 你没有能力加入自己的组件, 你只能被动接受产品经理提供的“功能”. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对于近未来, 但愿我们还能继续使用现金. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再远一点的未来, 或者科幻小说中, 也可能会有这样的类比. 用脑机界面接管大脑所有的神经活动, 然后将意识数字化, “上传”到某个网络中. 嗯, 听起来这就是最可能的永生方案了. 永生啊, 谁不想呢? 不过, 在此之前, 一定要看看上传的那个框架是怎样的, 是独立实体么? 它建立在哪些系统之上? 受到哪些控制? &lt;strong&gt;能够退出么? 能够退出么? 能够退出么?&lt;/strong&gt; 死亡是最后的自由. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;剪裁&lt;/h3&gt;
+&lt;p&gt;如果你选择了一个可以自己控制的框架, 就有可能控制自己的生存环境了. &lt;/p&gt;
+&lt;p&gt;举例:&lt;/p&gt;
+&lt;p&gt;你已经知道可以使用ublock origin &lt;a href="https://ublockorigin.com/"&gt;https://ublockorigin.com/&lt;/a&gt;, 但其实广告拦截插件不仅仅能够拦截广告, 或者说广告的定义可以被修改, 网页上任何你觉得不想要的模块都可以被拦截掉. &lt;/p&gt;
+&lt;p&gt;比如淘宝的首页, 完全可以打扫成google首页一般清爽. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2020-09-29 12.26.02" src="https://i.loli.net/2020/09/29/sk4Pj1izboLFvOR.png"&gt;&lt;/p&gt;
+&lt;h3&gt;Pull, No Push&lt;/h3&gt;
+&lt;p&gt;信息尽量少从推送获得, 而是自己主动去获取信息. &lt;/p&gt;
+&lt;p&gt;用上面的裁剪工具, 你可以把所有推送来的“推荐”信息给拦截掉, 当然还有用户评论. &lt;/p&gt;
+&lt;p&gt;需要什么信息我自己搜索, 自己去看, 不要给我推荐. 我的评价我自己体验, 不需要别人先说. 类似的, 对于纸质书, 书的序、前言什么的, 我都先直接撕掉. &lt;/p&gt;
+&lt;h3&gt;不, 我不喜欢&lt;/h3&gt;
+&lt;p&gt;但如果还是需要一些推荐呢? 如果一定要表明自己的喜好, 那么, 透露出我不喜欢的信息更高效一些. &lt;/p&gt;
+&lt;p&gt;比如对&lt;a href="https://douban.fm/"&gt;豆瓣FM&lt;/a&gt;, 我非常喜欢播放器里那个“垃圾桶”按钮, 
+&lt;img alt="屏幕快照 2020-09-29 12.32.36" src="https://i.loli.net/2020/09/29/kWRGUvayrnJqu25.png"&gt;&lt;/p&gt;
+&lt;p&gt;没有“不喜欢”按钮的流媒体是不值得使用的. &lt;/p&gt;
+&lt;p&gt;一旦发现一个歌手自己不喜欢, 一定要坚持追杀, 追杀到该歌手的页面, 把他所有的精选歌曲送进垃圾桶, 这个操作其实非常快捷, 快速连续点击就可以了. 然后要株连, 与该歌手相似的前三位, 也应该照此办理, 再多诛杀一层, 九族. &lt;/p&gt;
+&lt;p&gt;这样的结果就是我目前使用豆瓣FM可以放心开一整天, 不会有什么刺耳的声音出现. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="屏幕快照 2020-09-29 12.29.30" src="https://i.loli.net/2020/09/29/ZngibBrOY1cIDue.png"&gt;&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/how-to-refuse-brave-new-world-part-2/</guid><pubDate>Tue, 29 Sep 2020 04:00:00 GMT</pubDate></item><item><title>学习床旁核磁的知识</title><link>https://goldengrape.github.io/posts/bulabula/learn-sth-about-bedside-MRI/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;strong&gt;要经常欣赏人类的智慧&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;在medgadget看到床旁核磁的新闻: &lt;a href="https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html"&gt;https://www.medgadget.com/2020/08/swoop-portable-mri-cleared-in-u-s-for-bedside-scans.html&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="https://www.medgadget.com/wp-content/uploads/2020/08/hyperfine.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;这家叫&lt;a href="https://www.hyperfine.io/"&gt;HyperRefine&lt;/a&gt;的机器通过了FDA的认证. &lt;/p&gt;
@@ -142,7 +174,4 @@ To measure is to know. If you can not measure it, you can not improve it.&lt;/p&
 &lt;p&gt;&lt;img alt="兴_原本_small.2020-06-09 15_00_43" src="https://i.loli.net/2020/06/09/RmewGt4gHLrfFhP.gif"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/record_my_practice/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/record_my_practice/</guid><pubDate>Tue, 09 Jun 2020 05:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(6): 颜色识别定位</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;在 opencv-srf 网站上, 有一个&lt;a href="https://www.opencv-srf.com/2010/09/object-detection-using-color-seperation.html"&gt;颜色检测和物体跟踪&lt;/a&gt;的示例. 使用inRange来检测颜色, 并且Moments类来追踪这个颜色的物体. &lt;/p&gt;
 &lt;p&gt;这个例子只能追踪&lt;strong&gt;一个&lt;/strong&gt;物体, 如果有多个同样颜色的物体, 用Moments只能找到这些物体最外面的框, 把这些物体当作一个, 找到他们的中心. 但这不是我想要的. 所以只好临摹了另外一个示例, 将两个凑在一起, 达成了目的.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</guid><pubDate>Tue, 09 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(5): 原位做4点投影变换</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;&lt;a href="https://docs.opencv.org/master/de/dd4/samples_2cpp_2warpPerspective_demo_8cpp-example.html"&gt;OpenCV官方的warpPerspective示例&lt;/a&gt;用一个窗口进行选区, 用另一个窗口进行显示: &lt;/p&gt;
-&lt;p&gt;&lt;img alt="trans" src="https://i.loli.net/2020/06/09/SK6PBipY4jnOWTR.jpg"&gt;&lt;/p&gt;
-&lt;p&gt;但我觉得这样有点麻烦, 不太适合移动端、小屏幕的操作. 于是做了一点改进, 使我可以在一个窗口内直接操作图像.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_5/</guid><pubDate>Tue, 09 Jun 2020 03:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_6/</guid><pubDate>Tue, 09 Jun 2020 04:00:00 GMT</pubDate></item></channel></rss>
