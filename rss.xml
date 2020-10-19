@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Fri, 02 Oct 2020 02:56:34 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>加快咖啡因清除的方法</title><link>https://goldengrape.github.io/posts/bulabula/Methods_of_accelerating_caffeine_clearance/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;理想的提神醒脑工具, 最好能够招之即来挥之即去, 能够在需要的时候保持清醒, 在不需要的时候又不至于影响睡眠. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Oct 2020 08:21:58 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>儿童眼保健</title><link>https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;几个问题反复被问到, 为了自己方便, 所以干脆写在一起, 以后直接转发就好了. &lt;/p&gt;
+&lt;p&gt;就我多年被咨询的经验, 以及非正式不严谨的统计, 得到的感觉是, 儿童眼疾最常见三大问题: 近视、眼皮长包、外伤. 这三个问题也是能够在家长的努力下得到预防或者控制的事情. 所以还是值得拿出来说一说. &lt;/p&gt;
+&lt;p&gt;按照严重性依次说明:&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/</guid><pubDate>Mon, 19 Oct 2020 04:00:00 GMT</pubDate></item><item><title>加快咖啡因清除的方法</title><link>https://goldengrape.github.io/posts/bulabula/Methods_of_accelerating_caffeine_clearance/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;理想的提神醒脑工具, 最好能够招之即来挥之即去, 能够在需要的时候保持清醒, 在不需要的时候又不至于影响睡眠. &lt;/p&gt;
 &lt;p&gt;没有. &lt;/p&gt;
 &lt;p&gt;对于我, 比较接近的工具是咖啡因. 或者说含有咖啡因的零度可乐. 喝完以后很快可以提神, 但我无法快速清除它, 所以哪怕只有200ml的可乐也能让我失眠到3点. 平时可以睡到自然醒所以也无妨.&lt;/p&gt;
 &lt;p&gt;最近需要连续两天长途开车, 不得不连续大量服用零度可乐, 夜里的失眠也不可接受. 所以只好查找能够快速清除咖啡因的方式. &lt;/p&gt;
@@ -136,51 +139,4 @@ To measure is to know. If you can not measure it, you can not improve it.&lt;/p&
 &lt;li&gt;集的笔顺是怎样的?&lt;/li&gt;
 &lt;li&gt;盛的笔顺是怎样的?&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/stroke_seq/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 3 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/stroke_seq/</guid><pubDate>Mon, 15 Jun 2020 04:00:00 GMT</pubDate></item><item><title>OpenCV C++学习笔记(7): 命令行解析</title><link>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;OpenCV里有个CommandLineParser, 可以用来解析命令行, 方便不少.&lt;/p&gt;
-&lt;p&gt;首先要定义一个keys:&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="kt"&gt;char&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;
-&lt;span class="p"&gt;{&lt;/span&gt;
-    &lt;span class="s"&gt;"{help      |   | print this message}"&lt;/span&gt;
-    &lt;span class="s"&gt;"{@input i  |   | input video file}"&lt;/span&gt;
-    &lt;span class="s"&gt;"{@output o |   | output video file}"&lt;/span&gt;
-    &lt;span class="s"&gt;"{low       |35 | low value}"&lt;/span&gt;
-    &lt;span class="s"&gt;"{high      |100| high value}"&lt;/span&gt;
-&lt;span class="p"&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
-&lt;p&gt;两根竖线里面是默认值&lt;/p&gt;
-&lt;p&gt;然后在&lt;code&gt;int main(int argc, const char * argv[])&lt;/code&gt;里面, 要声明一个&lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;    &lt;span class="n"&gt;CommandLineParser&lt;/span&gt; &lt;span class="nf"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;argc&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-
-&lt;p&gt;接着就可以处理parser里的东西了, &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;判断一个参数有没有, 可以用&lt;code&gt;parser.has(参数名)&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;取得参数值, 可以用&lt;code&gt;parser.get&amp;lt;类型&amp;gt;(参数名或者序号)&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;比如, 单独写一个函数来处理这些参数, 用传引用的方法来传递获取的参数值. &lt;/p&gt;
-&lt;pre class="code literal-block"&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="kt"&gt;bool&lt;/span&gt; &lt;span class="nf"&gt;get_CLI&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;CommandLineParser&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-             &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="p"&gt;){&lt;/span&gt;
-
-    &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"change video color and contrast"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="c1"&gt;//If requires help show&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"help"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-    &lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;printMessage&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-
-    &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"@input"&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;has&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;"@output"&lt;/span&gt;&lt;span class="p"&gt;)){&lt;/span&gt;
-        &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;parser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;
-        &lt;span class="n"&gt;output_filename&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;
-        &lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;substr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;filename&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;
-        &lt;span class="s"&gt;"_changed.MP4"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-    &lt;span class="p"&gt;}&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-&lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/Cpp/openCV/opencv_7/</guid><pubDate>Wed, 10 Jun 2020 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/stroke_seq/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 3 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/stroke_seq/</guid><pubDate>Mon, 15 Jun 2020 04:00:00 GMT</pubDate></item></channel></rss>
