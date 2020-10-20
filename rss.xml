@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Mon, 19 Oct 2020 08:30:47 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>儿童眼保健</title><link>https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;几个问题反复被问到, 为了自己方便, 所以干脆写在一起, 以后直接转发就好了. &lt;/p&gt;
+<?xml-stylesheet type="text/xsl" href="assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GoldenGrape's Blog</title><link>https://goldengrape.github.io/</link><description>This is a blog site for GoldenGrape.</description><atom:link href="https://goldengrape.github.io/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>zh_cn</language><copyright>Contents © 2020 &lt;a href="mailto:https://twitter.com/goldengrape"&gt;Golden Grape&lt;/a&gt; </copyright><lastBuildDate>Tue, 20 Oct 2020 02:57:31 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>收纳学应用: 层次索引与LRU断舍离(下)</title><link>https://goldengrape.github.io/posts/bulabula/Applications_of_shouna_2/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;按照上集的方式进行收纳, 将所有的零碎物品装入同一型号的纸盒、纸箱, 并且建立索引文档以后, 就可以开始LRU收纳和LRU断舍离了. &lt;/p&gt;
+&lt;p&gt;LRU, 是Least Recently Used的缩写, 即最近最少使用, 是一种缓存清理算法, 将闲置不用时间最长的内容清理掉. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;尽管创新性高速缓存方案品种繁多，其中一些在适当的条件下甚至可以击败最近最少使用法，但是最近最少使用法（以及在该策略基础上做出的一些细微调整）仍然深受计算机科学家们的喜爱，并且在开发各种应用程序时得到不同程度的应用。----&lt;a href="https://book.douban.com/subject/30155731/"&gt;《算法之美--指导工作与生活的算法》&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/Applications_of_shouna_2/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/Applications_of_shouna_2/</guid><pubDate>Mon, 19 Oct 2020 16:00:06 GMT</pubDate></item><item><title>儿童眼保健</title><link>https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;几个问题反复被问到, 为了自己方便, 所以干脆写在一起, 以后直接转发就好了. &lt;/p&gt;
 &lt;p&gt;就我多年被咨询的经验, 以及非正式不严谨的统计, 得到的感觉是, 儿童眼疾最常见三大问题: 近视、眼皮长包、外伤. 这三个问题也是能够在家长的努力下得到预防或者控制的事情. 所以还是值得拿出来说一说. &lt;/p&gt;
 &lt;p&gt;按照严重性依次说明:&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 1 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/ophthalmology/Eye_care_for_children/</guid><pubDate>Mon, 19 Oct 2020 04:00:00 GMT</pubDate></item><item><title>加快咖啡因清除的方法</title><link>https://goldengrape.github.io/posts/bulabula/Methods_of_accelerating_caffeine_clearance/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;理想的提神醒脑工具, 最好能够招之即来挥之即去, 能够在需要的时候保持清醒, 在不需要的时候又不至于影响睡眠. &lt;/p&gt;
@@ -120,23 +125,4 @@ To measure is to know. If you can not measure it, you can not improve it.&lt;/p&
 &lt;p&gt;&lt;img src="https://i.loli.net/2020/07/01/jEaQNwtJFv2MspS.png" alt=""&gt;&lt;/p&gt;
 &lt;p&gt;这个光路令光线往返了3次, 可以将光程缩短为原来的1/3, 当然也是有代价的, 代价是亮度降低到原来的25%, 不过看起来很有趣, 而且是一种通用的方案, 在其他的光路设计上也很有可能使用到. 同时, 对于其中元件的微小移动都可能造成3倍的光程变化, 对于调焦可能也很有用.&lt;/p&gt;
 &lt;p&gt;于是我就决定用Jones矢量和Jones矩阵推导一下, 看看光路中到底发生了什么.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/pancake-optics/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 4 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/pancake-optics/</guid><pubDate>Wed, 01 Jul 2020 10:30:00 GMT</pubDate></item><item><title>笔顺</title><link>https://goldengrape.github.io/posts/bulabula/stroke_seq/</link><dc:creator>Golden Grape</dc:creator><description>&lt;div&gt;&lt;p&gt;我记得小学的时候, 曾经为笔顺的问题苦恼过, 这好像还考试过. 后来长大以后发现, 连会写字的人都不多了, 哪里还顾及什么写字的笔顺. 笔顺这种事情, 在现代社会就像是茴香豆的四种写法, 无用. 但偶尔考据一下也挺有趣的. &lt;/p&gt;
-&lt;p&gt;在说笔顺的时候&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;是针对手写的, 印刷的字没有笔顺的意义. &lt;/li&gt;
-&lt;li&gt;是针对古代人手写的, 也就是用毛笔, 写繁体字. &lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;毛笔有毛笔的特点, 它是软的, 它是离散的笔毛构成的, 跟硬笔完全不同, (当然硬笔中钢笔和圆珠笔、铅笔也有不同). &lt;/p&gt;
-&lt;p&gt;比如, 现代人用硬笔可以很方便用力画出一个圆圈或者方块, 但用毛笔就很麻烦. 毛笔如果用力画一个完整圆周, 笔毛会搅乱, 这样就没法再继续写下一笔了, 所以毛笔写字里要么分开画两个半周; 要么在画了180度以后要做个调锋的动作把笔毛顺回来, 再继续; 要么就要改变力度, 使用比较细的笔画画出一半圆. &lt;/p&gt;
-&lt;p&gt;黄简老师讲过, 在手写的时候, 汉字的基本组成部分不是偏旁部首, 而是“笔势”. 基础的笔势有5个, 奋笔势、竖笔势、勾裹势、勾努势和衮笔势. 从这基础的五势出发, 还可以细分出更多的笔势, 名字都很帅气, 比如凤翅势、顾盼势、连波势...&lt;/p&gt;
-&lt;p&gt;有一天我跟淳子小姐聊天时, 不慎把“势”写成了“式”, 她说这些名字颇有武侠之风. 一下子令人茅塞顿开, 我理解, 笔势, 就是常见的一些小的笔画组合, 这些笔画以这样的方式组合起来, 写得顺滑方便. 有点像武技中的小组合, 两个直拳以后近身一个勾拳再接一个横摆, 就很顺手, 也容易得手. 也和武技类似, 一个一个小组合按不同时间顺序连接起来就成了套路. 而一个一个笔势, 放在不同空间位置“裹束”起来就成了手写的字.&lt;/p&gt;
-&lt;p&gt;手写是依照笔势来组织笔画, 因此笔顺是按照笔势来的, 不完全是按照偏旁部首来安排的. &lt;/p&gt;
-&lt;p&gt;那么, 如何区分笔势, 或者如何知道一个字的笔顺呢? 我觉得可以去看那些写字好的人是怎么写的, 而且要找到能够看出他们笔画顺序的字. &lt;/p&gt;
-&lt;p&gt;写字好的人自然是找书法家. 要看出字的笔画顺序, 则是应该找到行书. 篆隶、楷书(真书)太规整, 草书跟现代使用的文字差别又太大. 行书是最好, 笔画之间往往有牵丝或者飞渡, 能够看出笔尖行走的路径. 而且如果有墨迹本是最佳, 看得清楚. &lt;/p&gt;
-&lt;p&gt;现在有很多书法辞典、网站、app, 可以一口气查到很多书法家所写的. 我喜欢&lt;a href="https://apps.apple.com/cn/app/%E4%B8%8D%E5%8E%8C%E4%B9%A6%E6%B3%95/id999813374"&gt;“不厌书法”&lt;/a&gt;这个app. 练字时还可以拍照对比. 随手查一下的话, 网站也不错. 比如&lt;a href="http://www.shufazidian.com/"&gt;书法字典&lt;/a&gt;. 注意, 书法家也有不同, 通常还是越有名、越古老的书法家越好. 王羲之是首选权威, 晋唐优先, 宋元次之, 明清就仅供参考了.&lt;/p&gt;
-&lt;p&gt;好了, 来练习一下, 震惊语文老师的笔顺题.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;集的笔顺是怎样的?&lt;/li&gt;
-&lt;li&gt;盛的笔顺是怎样的?&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/bulabula/stroke_seq/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 3 分钟)&lt;/p&gt;&lt;/div&gt;</description><guid>https://goldengrape.github.io/posts/bulabula/stroke_seq/</guid><pubDate>Mon, 15 Jun 2020 04:00:00 GMT</pubDate></item></channel></rss>
+&lt;p&gt;&lt;a href="https://goldengrape.github.io/posts/python/pancake-optics/"&gt;阅读更多…&lt;/a&gt; (剩余阅读时间 4 分钟)&lt;/p&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</description><category>python</category><guid>https://goldengrape.github.io/posts/python/pancake-optics/</guid><pubDate>Wed, 01 Jul 2020 10:30:00 GMT</pubDate></item></channel></rss>
