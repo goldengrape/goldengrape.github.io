@@ -50,6 +50,10 @@
   <lastmod>2019-12-23T06:28:00Z</lastmod>
  </sitemap>
  <sitemap>
+  <loc>https://goldengrape.github.io/categories/cat_music.xml</loc>
+  <lastmod>2020-11-24T07:22:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://goldengrape.github.io/categories/cat_ophthalmology.xml</loc>
   <lastmod>2020-05-09T05:08:00Z</lastmod>
  </sitemap>
@@ -195,10 +199,10 @@
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/rss.xml</loc>
-  <lastmod>2020-10-20T02:54:00Z</lastmod>
+  <lastmod>2020-11-24T07:22:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://goldengrape.github.io/sitemap.xml</loc>
-  <lastmod>2020-10-20T02:54:00Z</lastmod>
+  <lastmod>2020-11-24T07:22:00Z</lastmod>
  </sitemap>
 </sitemapindex>
